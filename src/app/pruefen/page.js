@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import SiteHeader from '../../components/SiteHeader';
 import SiteFooter from '../../components/SiteFooter';
 import { getSupabaseBrowserClient } from '../../lib/supabase';
@@ -60,14 +61,14 @@ export default function VerifyPage() {
       <SiteHeader />
 
       <section className="pageHero shell verifyHero">
-        <div className="eyebrow">ZERTIFIZIERUNG VERIFIZIEREN</div>
-        <h1>Ein Zeichen ist nur so gut wie <em>seine Prüfung.</em></h1>
-        <p className="lead">Gib die Zertifizierungs-ID ein. Der öffentliche Datensatz zeigt dir Produkt, Hersteller, Standardversion, Status und Gültigkeit.</p>
+        <div className="eyebrow">VERIFY CERTIFICATION</div>
+        <h1>Ein Zertifizierungszeichen ist nur so glaubwürdig wie <em>sein öffentlicher Nachweis.</em></h1>
+        <p className="lead">Zertifizierungs-ID eingeben und Hersteller, Produkt, Standardversion, Status und Gültigkeit direkt prüfen.</p>
       </section>
 
       <section className="shell verifyWorkspace">
         <form onSubmit={verify} className="verifyForm">
-          <label htmlFor="certificate-id">ZERTIFIZIERUNGS-ID</label>
+          <label htmlFor="certificate-id">CERTIFICATION ID</label>
           <div>
             <input id="certificate-id" value={value} onChange={(e) => setValue(e.target.value)} placeholder="z. B. HC-DEMO-0001" />
             <button className="button primary" disabled={state.loading}>{state.loading ? 'Prüfe …' : 'Jetzt prüfen'}</button>
@@ -84,15 +85,15 @@ export default function VerifyPage() {
                 <small>STATUS</small>
                 <strong>{statusText[state.record.status] ?? state.record.status}</strong>
               </div>
-              <span className={`statusBadge ${state.record.status === 'active' ? 'active' : ''}`}>● {state.record.status.toUpperCase()}</span>
+              <span className={`statusBadge ${state.record.status === 'active' ? 'active' : ''}`}>{state.record.status.toUpperCase()}</span>
             </div>
 
             <div className="verificationIdentity">
-              <div className="verificationSeal">H</div>
               <div>
-                <small>ZERTIFIZIERUNGS-ID</small>
+                <small>CERTIFICATION ID</small>
                 <h2>{state.record.public_id}</h2>
               </div>
+              <Link className="recordOpenLink" href={`/c/${encodeURIComponent(state.record.public_id)}`}>Öffentlichen Datensatz öffnen →</Link>
             </div>
 
             <dl className="verificationDetails">
@@ -103,7 +104,7 @@ export default function VerifyPage() {
               <div><dt>Gültig bis</dt><dd>{state.record.valid_until ? new Date(state.record.valid_until).toLocaleDateString('de-DE') : '—'}</dd></div>
             </dl>
 
-            {state.record.public_note && <div className="publicNote"><strong>Öffentlicher Hinweis</strong><p>{state.record.public_note}</p></div>}
+            {state.record.public_note && <div className="publicNote"><strong>PUBLIC NOTE</strong><p>{state.record.public_note}</p></div>}
           </article>
         )}
       </section>
