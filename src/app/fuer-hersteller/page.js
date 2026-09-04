@@ -62,24 +62,27 @@ export default function ManufacturerPage() {
       <SiteHeader />
 
       <section className="pageHero shell manufacturerHero">
-        <div className="eyebrow">PILOTPHASE · FÜR HERSTELLER</div>
-        <h1>Gute Fertigung verdient <em>mehr als eine Behauptung.</em></h1>
-        <p className="lead">Wir suchen erste Unternehmen, mit denen wir Standard, Nachweise und Prüfprozess an realen Produkten validieren können.</p>
+        <div className="eyebrow">PILOT PROGRAM · MANUFACTURERS</div>
+        <h1>Reale Fertigung. <em>Nachvollziehbar zertifiziert.</em></h1>
+        <p className="lead">Für die Pilotphase suchen wir Unternehmen, mit denen Standard, Nachweise und Auditprozess an realen Produkten und Produktionsabläufen validiert werden können.</p>
       </section>
 
       <section className="shell pilotGrid">
         <div className="pilotInfo">
-          <div className="sectionNo">WAS DIE PILOTPHASE LEISTEN SOLL</div>
-          <h2>Gemeinsam prüfen, ob der Standard in der Praxis trägt.</h2>
+          <div className="sectionNo">PILOT OBJECTIVE</div>
+          <h2>Der Standard muss in der Praxis funktionieren.</h2>
+          <p className="pilotLead">Nicht nur in Manufakturen. Auch dort, wo menschliche Arbeit, Maschinen und industrielle Prozesse ineinandergreifen.</p>
+
           <div className="pilotPoints">
-            <p><span>01</span>Produkt und Fertigungsprozess verstehen</p>
-            <p><span>02</span>notwendige Nachweise realistisch definieren</p>
-            <p><span>03</span>Auditablauf an echten Fällen testen</p>
-            <p><span>04</span>öffentliche Darstellung im Register validieren</p>
+            <p><span>01</span>Produkt und Wertschöpfungskette verstehen</p>
+            <p><span>02</span>relevante menschliche Tätigkeiten abgrenzen</p>
+            <p><span>03</span>geeignete Nachweise und Traceability definieren</p>
+            <p><span>04</span>Audit und öffentliche Registerdarstellung validieren</p>
           </div>
+
           <div className="pilotNote">
-            <strong>Wichtig:</strong>
-            <p>Eine Vormerkung ist noch kein Zertifizierungsantrag und keine Zusage. Sie hilft uns, geeignete Pilotfälle auszuwählen.</p>
+            <strong>HINWEIS</strong>
+            <p>Eine Vormerkung ist noch kein Zertifizierungsantrag und keine Zusage. Sie dient ausschließlich der Auswahl geeigneter Pilotfälle.</p>
           </div>
         </div>
 
@@ -112,13 +115,13 @@ export default function ManufacturerPage() {
             </label>
             <label>
               Produkt / Kategorie
-              <input name="product_category" value={form.product_category} onChange={change} placeholder="z. B. Möbel, Textil, Keramik" />
+              <input name="product_category" value={form.product_category} onChange={change} placeholder="z. B. Möbel, Textil, Industrieprodukt" />
             </label>
           </div>
 
           <label>
             Kurz zum Produkt oder Fertigungsprozess
-            <textarea name="message" value={form.message} onChange={change} rows="5" placeholder="Was wird hergestellt und welche Arbeitsschritte werden durch Menschen ausgeführt?" />
+            <textarea name="message" value={form.message} onChange={change} rows="5" placeholder="Was wird hergestellt und welche menschlichen Arbeitsschritte sind relevant?" />
           </label>
 
           <label className="honeypot" aria-hidden="true">
