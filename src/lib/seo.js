@@ -4,6 +4,10 @@ export const DEFAULT_DESCRIPTION =
   'Standard und öffentliches Register für physische Produkte, deren wesentliche Herstellungsschritte nachweislich durch Menschen ausgeführt werden.';
 
 export function canonical(path = '/') {
-  const clean = path === '/' ? '/' : '/' + path.replace(/^\/+|\/+$/g, '') + '/';
-  return SITE_URL + clean;
+  if (path === '/') return SITE_URL + '/';
+
+  const clean = path.replace(/^\/+|\/+$/g, '');
+  const isFile = /\.[a-z0-9]{2,6}$/i.test(clean);
+
+  return SITE_URL + '/' + clean + (isFile ? '' : '/');
 }
