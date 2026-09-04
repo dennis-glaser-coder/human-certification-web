@@ -56,7 +56,6 @@ export default function Home() {
               Made by Humans entwickelt einen branchenübergreifenden Standard für physische Produkte,
               deren wesentliche Herstellungsschritte nachweislich von Menschen ausgeführt werden.
             </p>
-            <p className="heroStatus">Pilotphase · Arbeitsstandard in Validierung</p>
             <div className="actions">
               <Link className="button primary" href="/standard">Standard ansehen</Link>
               <Link className="button secondary" href="/fuer-hersteller">Für Hersteller</Link>
@@ -154,13 +153,13 @@ export default function Home() {
       <section className="manufacturerSection shell">
         <div className="manufacturerGrid">
           <div>
-            <div className="sectionNo">PILOTUNTERNEHMEN</div>
+            <div className="sectionNo">FÜR HERSTELLER</div>
             <h2>Gesucht werden reale Produkte und nachvollziehbare Herstellungsprozesse.</h2>
             <p>
               Die erste Validierung konzentriert sich auf Produktkategorien, in denen menschliche Herstellung
               klar abgrenzbar und für Käufer relevant ist.
             </p>
-            <Link className="button primary" href="/fuer-hersteller">Pilotphase für Hersteller</Link>
+            <Link className="button primary" href="/fuer-hersteller">Für Hersteller</Link>
           </div>
 
           <div className="segmentList">
