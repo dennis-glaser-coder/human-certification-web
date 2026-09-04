@@ -2,10 +2,10 @@ import './globals.css';
 
 export const metadata = {
   title: {
-    default: 'Human Certification — Standardprojekt',
-    template: '%s · Human Certification',
+    default: 'Made by Humans — Independent Certification Standard',
+    template: '%s · Made by Humans',
   },
-  description: 'Ein unabhängiges Standardprojekt für nachvollziehbar menschlich gefertigte physische Produkte.',
+  description: 'Ein moderner, überprüfbarer Zertifizierungsstandard für nachvollziehbare menschliche Wertschöpfung.',
 };
 
 export default function RootLayout({ children }) {
