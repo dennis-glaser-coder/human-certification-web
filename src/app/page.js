@@ -14,12 +14,12 @@ const qualifies = [
   ['Transformation', 'Das Endprodukt entsteht erst durch wesentliche menschliche Arbeit an Materialien oder Komponenten.'],
   ['Fähigkeit', 'Produktprägende Schritte erfordern Erfahrung, Können oder bewusste menschliche Entscheidungen.'],
   ['Ausführung', 'Menschen führen die relevanten Herstellungsschritte tatsächlich selbst aus.'],
-  ['Maschine als Werkzeug', 'Maschinen dürfen unterstützen. Sie dürfen die produktprägende menschliche Herstellung nicht vollständig ersetzen.'],
+  ['Nachweisbarkeit', 'Die relevanten Herstellungsschritte müssen durch geeignete Unterlagen und Informationen nachvollziehbar belegt werden können.'],
 ];
 
 const doesNotQualify = [
   'Ein fertiges Produkt wird lediglich importiert, etikettiert oder neu verpackt.',
-  'Eine automatisierte Linie erzeugt das fertige Produkt; Menschen überwachen oder verpacken nur.',
+  'Wesentliche menschliche Herstellungsschritte können nicht nachvollziehbar belegt werden.',
   'Eine minimale manuelle Veredelung soll ein ansonsten fertiges Industrieprodukt zum „Human Made“-Produkt machen.',
 ];
 
@@ -28,8 +28,6 @@ const notAssessed = [
   'Bio oder Fairtrade',
   'pauschale Nachhaltigkeit',
   'Unternehmensgröße',
-  'Verzicht auf Maschinen',
-  'moralische Bewertung von Technologie',
 ];
 
 export default function Home() {
@@ -147,7 +145,7 @@ export default function Home() {
           </div>
           <div>
             <p className="scopeBoundaryLead">
-              Made by Humans ist kein Herkunfts-, Nachhaltigkeits- oder Anti-Technologie-Siegel.
+              Made by Humans bewertet ausschließlich die definierte Eigenschaft menschlich geprägter Herstellung.
             </p>
             <div className="scopeBoundaryList">
               {notAssessed.map((item) => <span key={item}>{item}</span>)}
@@ -193,8 +191,8 @@ export default function Home() {
       <section className="pilotRealitySection">
         <div className="shell pilotRealityGrid">
           <div>
-            <div className="sectionNo light">PILOTPHASE</div>
-            <h2>Pilotphase vor Skalierung.</h2>
+            <div className="sectionNo light">AKTUELLER PROJEKTSTAND</div>
+            <h2>Validierung mit realen Produktionsfällen.</h2>
           </div>
           <div>
             <p>
