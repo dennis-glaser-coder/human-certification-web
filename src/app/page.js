@@ -43,7 +43,7 @@ export default function Home() {
             <div className="eyebrow">STANDARD FÜR NACHWEISBAR MENSCHLICH GEPRÄGTE HERSTELLUNG</div>
             <h1>Menschliche Herstellung. <em>Überprüfbar.</em></h1>
             <p className="lead">
-              Made by Humans entwickelt einen Standard für physische Produkte, deren wesentliche Herstellungsschritte nachweislich durch Menschen ausgeführt werden. Maschinen können Teil des Prozesses sein – entscheidend ist, ob menschliche Arbeit das Endprodukt tatsächlich prägt.
+              Made by Humans entwickelt einen Standard für physische Produkte, deren wesentliche Herstellungsschritte nachweislich durch Menschen ausgeführt werden.
             </p>
             <div className="actions">
               <Link className="button primary" href="/standard">Standard ansehen</Link>
@@ -90,10 +90,10 @@ export default function Home() {
         <div className="sectionHeading split">
           <div>
             <div className="sectionNo">WAS „MENSCHLICH GEPRÄGT“ BEDEUTET</div>
-            <h2>Maschinenunterstützung ist mit dem Standard vereinbar.</h2>
+            <h2>Wann menschliche Herstellung als prägend gilt.</h2>
           </div>
           <p>
-            Der Standard bewertet nicht, ob ein Produkt vollständig von Hand entsteht. Er prüft, ob Menschen die wesentlichen, produktprägenden Herstellungsschritte tatsächlich ausführen.
+            Der Standard prüft, ob menschliche Arbeit für die Entstehung des Endprodukts wesentlich ist, tatsächlich ausgeführt wird und durch geeignete Nachweise belegt werden kann.
           </p>
         </div>
 
