@@ -65,7 +65,7 @@ export default function VerifyPage() {
           <div className="eyebrow">ZERTIFIZIERUNGS-ID PRÜFEN</div>
           <h1>Öffentlichen Datensatz aufrufen.</h1>
           <p>
-            In der Pilotphase kann die Verifizierungslogik mit dem Beispieldatensatz HC-DEMO-0001 getestet werden.
+            Die Verifizierungslogik kann aktuell mit dem Beispieldatensatz HC-DEMO-0001 getestet werden.
           </p>
         </div>
 
