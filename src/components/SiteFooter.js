@@ -27,7 +27,7 @@ export default function SiteFooter() {
           </div>
           <div>
             <strong>HERSTELLER</strong>
-            <Link href="/fuer-hersteller">Pilotphase</Link>
+            <Link href="/fuer-hersteller">Für Hersteller</Link>
           </div>
           <div>
             <strong>VERIFIZIERUNG</strong>
@@ -38,8 +38,8 @@ export default function SiteFooter() {
       </div>
 
       <div className="shell footerMeta">
-        <span>Aktueller Projektstatus: Pilot- und Validierungsphase.</span>
-        <span>Finales Zertifizierungszeichen und finaler Markenname noch nicht festgelegt.</span>
+        <span>Arbeitsstandard und Registermodell in Validierung.</span>
+        <span>Öffentliche Zertifikatsvergabe noch nicht gestartet.</span>
       </div>
     </footer>
   );
