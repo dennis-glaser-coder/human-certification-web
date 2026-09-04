@@ -137,7 +137,7 @@ export default function Home() {
             <div><dt>Standard</dt><dd>0.1-DEMO</dd></div>
             <div><dt>Hinweis</dt><dd>Keine echte Zertifizierung</dd></div>
           </dl>
-          <Link href="/pruefen">Demodatensatz prüfen →</Link>
+          <Link href="/c/HC-DEMO-0001">Demodatensatz prüfen →</Link>
         </div>
       </section>
 
