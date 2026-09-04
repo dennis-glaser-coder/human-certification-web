@@ -2222,3 +2222,62 @@ h1 em,h2 em,.statementGrid em{
     gap:8px;
   }
 }
+
+
+/* ===== Temporary certification seal ===== */
+.brandLockupWithSeal{
+  flex-direction:row;
+  align-items:center;
+  gap:12px;
+}
+.brandTextStack{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+.brandSealTemporary{
+  width:48px;
+  height:48px;
+  flex:none;
+  display:block;
+  object-fit:cover;
+  border-radius:50%;
+  transition:transform .18s ease;
+}
+.brandLockupWithSeal:hover .brandSealTemporary{
+  transform:translateY(-1px) scale(1.015);
+}
+.compactFooterBrandWithSeal{
+  flex-direction:row;
+  align-items:center;
+  gap:12px;
+}
+.compactFooterBrandText{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.footerSealTemporary{
+  width:42px;
+  height:42px;
+  flex:none;
+  display:block;
+  object-fit:cover;
+  border-radius:50%;
+  opacity:.94;
+}
+@media(max-width:760px){
+  .brandSealTemporary{
+    width:40px;
+    height:40px;
+  }
+  .footerSealTemporary{
+    width:38px;
+    height:38px;
+  }
+}
+@media(max-width:520px){
+  .brandDescriptor{
+    display:none;
+  }
+}
