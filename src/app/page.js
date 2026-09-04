@@ -188,21 +188,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="pilotRealitySection">
-        <div className="shell pilotRealityGrid">
-          <div>
-            <div className="sectionNo light">AKTUELLER PROJEKTSTAND</div>
-            <h2>Validierung mit realen Produktionsfällen.</h2>
-          </div>
-          <div>
-            <p>
-              Standard, Auditprozess und Register werden zunächst an realen Produkten validiert. Gesucht werden Hersteller, die ihre tatsächlichen Produktionsabläufe offenlegen und gemeinsam prüfen wollen, ob die Kriterien in der Praxis tragen.
-            </p>
-            <Link className="button lightButton" href="/fuer-hersteller">Pilotphase ansehen</Link>
-          </div>
-        </div>
-      </section>
-
       <SiteFooter />
     </main>
   );
