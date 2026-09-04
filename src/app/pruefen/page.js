@@ -62,10 +62,10 @@ export default function VerifyPage() {
 
       <section className="verifyPage shell">
         <div className="verifyPageIntro">
-          <div className="eyebrow">ZERTIFIZIERUNGS-ID PRÜFEN</div>
-          <h1>Öffentlichen Datensatz aufrufen.</h1>
+          <div className="eyebrow">VERIFIZIERUNG</div>
+          <h1>Zertifizierungs-ID prüfen.</h1>
           <p>
-            Die Verifizierungslogik kann aktuell mit dem Beispieldatensatz HC-DEMO-0001 getestet werden.
+            Geben Sie die ID einer Kennzeichnung ein, um den zugehörigen öffentlichen Datensatz aufzurufen.
           </p>
         </div>
 
@@ -75,19 +75,19 @@ export default function VerifyPage() {
             <input id="certificate-id" value={value} onChange={(e) => setValue(e.target.value)} placeholder="HC-DEMO-0001" />
             <button className="button primary" disabled={state.loading}>{state.loading ? 'Prüfe …' : 'Prüfen'}</button>
           </div>
-          <button type="button" className="demoButton" onClick={() => { setValue('HC-DEMO-0001'); verifyId('HC-DEMO-0001'); }}>Beispiel-ID einsetzen</button>
+          <button type="button" className="demoButton" onClick={() => { setValue('HC-DEMO-0001'); verifyId('HC-DEMO-0001'); }}>Beispieldatensatz HC-DEMO-0001 testen</button>
         </form>
 
         {state.message && <div className="verificationEmpty">{state.message}</div>}
 
         {state.record && (
-          <article className={`verificationRecord status-${state.record.status}`}>
+          <article className={\`verificationRecord status-\${state.record.status}\`}>
             <div className="verificationTop">
               <div>
                 <small>STATUS</small>
                 <strong>{statusText[state.record.status] ?? state.record.status}</strong>
               </div>
-              <span className={`statusBadge ${state.record.status === 'active' ? 'active' : ''}`}>{statusText[state.record.status] ?? state.record.status}</span>
+              <span className={\`statusBadge \${state.record.status === 'active' ? 'active' : ''}\`}>{statusText[state.record.status] ?? state.record.status}</span>
             </div>
 
             <div className="verificationIdentity">
@@ -95,7 +95,7 @@ export default function VerifyPage() {
                 <small>ZERTIFIZIERUNGS-ID</small>
                 <h2>{state.record.public_id}</h2>
               </div>
-              <Link className="recordOpenLink" href={`/c/${encodeURIComponent(state.record.public_id)}`}>Vollständigen Datensatz öffnen →</Link>
+              <Link className="recordOpenLink" href={\`/c/\${encodeURIComponent(state.record.public_id)}\`}>Vollständigen Datensatz öffnen →</Link>
             </div>
 
             <dl className="verificationDetails">

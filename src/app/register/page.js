@@ -59,10 +59,10 @@ export default function RegisterPage() {
 
       <section className="pageHero shell registerHero">
         <div className="eyebrow">PUBLIC REGISTER</div>
-        <h1>Zertifizierungsdaten öffentlich auffindbar machen.</h1>
+        <h1>Öffentliche Zertifizierungsdaten.</h1>
         <p className="lead">
-          Das Register bildet den öffentlichen Nachweis zur Kennzeichnung ab. Aktuell ist ausschließlich
-          ein technischer Beispieldatensatz hinterlegt.
+          Über das Register lassen sich Zertifizierungs-ID, Hersteller, Produkt und aktueller Status
+          eines veröffentlichten Datensatzes prüfen.
         </p>
       </section>
 
@@ -94,9 +94,9 @@ export default function RegisterPage() {
               </div>
               <div>
                 <small>STATUS</small>
-                <span className={`statusBadge ${record.status === 'active' ? 'active' : ''}`}>{labels[record.status] ?? record.status}</span>
+                <span className={\`statusBadge \${record.status === 'active' ? 'active' : ''}\`}>{labels[record.status] ?? record.status}</span>
               </div>
-              <Link href={`/c/${encodeURIComponent(record.public_id)}`} aria-label={`${record.public_id} öffnen`}>Öffnen →</Link>
+              <Link href={\`/c/\${encodeURIComponent(record.public_id)}\`} aria-label={\`\${record.public_id} öffnen\`}>Öffnen →</Link>
             </article>
           ))}
         </div>
@@ -104,8 +104,8 @@ export default function RegisterPage() {
         {!message && filtered.length === 0 && <div className="registerMessage">Keine passenden Datensätze gefunden.</div>}
 
         <div className="registerDisclosure">
-          <strong>Hinweis zum Beispieldatensatz</strong>
-          <p>HC-DEMO-0001 ist ein technischer Beispieldatensatz und keine reale Zertifizierung.</p>
+          <strong>Beispieldatensatz</strong>
+          <p>HC-DEMO-0001 dient ausschließlich zur technischen Demonstration des Registermodells und ist keine reale Zertifizierung.</p>
         </div>
       </section>
 

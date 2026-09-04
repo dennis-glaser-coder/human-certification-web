@@ -9,9 +9,11 @@ export default function SiteFooter() {
         <div className="footerBrand">
           <img
             className="footerSealTemporary"
-            src={`${assetBase}/brand/made-by-humans-seal.png`}
+            src={\`\${assetBase}/brand/made-by-humans-seal.png\`}
             alt=""
             aria-hidden="true"
+            width="46"
+            height="46"
           />
           <div>
             <strong>MADE BY HUMANS</strong>
@@ -22,7 +24,7 @@ export default function SiteFooter() {
         <div className="footerNav">
           <div>
             <strong>STANDARD</strong>
-            <Link href="/standard">Arbeitsstandard</Link>
+            <Link href="/standard">Kriterien</Link>
             <Link href="/transparenz">Transparenz & Governance</Link>
           </div>
           <div>
@@ -38,8 +40,7 @@ export default function SiteFooter() {
       </div>
 
       <div className="shell footerMeta">
-        <span>Arbeitsstandard und Registermodell in Validierung.</span>
-        <span>Öffentliche Zertifikatsvergabe noch nicht gestartet.</span>
+        <span>STANDARD · AUDIT · TRACEABILITY · PUBLIC REGISTER</span>
       </div>
     </footer>
   );

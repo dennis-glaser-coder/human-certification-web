@@ -16,18 +16,18 @@ const initialForm = {
 };
 
 const suitable = [
-  'physisches Produkt mit nachvollziehbarem Herstellungsprozess',
-  'wesentliche eigene oder transparent dokumentierte Fertigungsschritte',
-  'Bereitschaft, Produktionsablauf und Nachweise offenzulegen',
-  'Produkt aus einer für den Pilot geeigneten Kategorie',
+  'physisches Produkt mit klar beschreibbarem Herstellungsprozess',
+  'wesentliche menschliche Herstellungsschritte sind nachvollziehbar',
+  'Produktionsorte und relevante Fremdfertigung können offengelegt werden',
+  'geeignete Informationen oder Unterlagen zum Herstellungsprozess sind vorhanden',
 ];
 
-const pilotFlow = [
-  ['Erstgespräch', 'Produkt und Herstellungsprozess grob einordnen.'],
-  ['Prozessaufnahme', 'Wesentliche Arbeitsschritte, Standorte und Fremdfertigung erfassen.'],
-  ['Nachweise', 'Geeignete Unterlagen und Informationen zum Herstellungsprozess zusammenstellen.'],
-  ['Probeaudit', 'Arbeitsstandard am realen Produkt testen und Aufwand messen.'],
-  ['Auswertung', 'Erkenntnisse für Standard, Preislogik und Register übernehmen.'],
+const process = [
+  ['Einordnung', 'Produkt, Produktfamilie und Herstellungsprozess werden zunächst abgegrenzt.'],
+  ['Prozessaufnahme', 'Wesentliche Arbeitsschritte, Standorte und relevante Fremdfertigung werden erfasst.'],
+  ['Nachweise', 'Die zum Herstellungsprozess vorliegenden Informationen und Unterlagen werden geprüft.'],
+  ['Prüfung', 'Der konkrete Produktionsfall wird gegen die Kriterien des Standards bewertet.'],
+  ['Auswertung', 'Ergebnis, offene Punkte und Erkenntnisse für die weitere Standardentwicklung werden dokumentiert.'],
 ];
 
 export default function ManufacturerPage() {
@@ -78,36 +78,44 @@ export default function ManufacturerPage() {
 
       <section className="pageHero shell">
         <div className="eyebrow">FÜR HERSTELLER</div>
-        <h1>Hersteller für die Validierung des Standards gesucht.</h1>
+        <h1>Produkte und Herstellungsprozesse zur Validierung vorstellen.</h1>
         <p className="lead">
-          Gemeinsam mit ausgewählten Herstellern wird geprüft, ob der Arbeitsstandard über unterschiedliche Produktkategorien hinweg
-          verständlich, prüfbar und wirtschaftlich anwendbar ist.
+          Ausgewählte Produktionsfälle werden genutzt, um Kriterien, Nachweisanforderungen und Prüfablauf
+          über unterschiedliche Produktkategorien hinweg unter realen Bedingungen zu validieren.
         </p>
       </section>
 
       <section className="shell manufacturerFit">
         <div className="sectionIntro compact">
-          <div className="sectionNo">TEILNAHME</div>
-          <h2>Geeignet sind Hersteller mit einem klar nachvollziehbaren Produktprozess.</h2>
+          <div>
+            <div className="sectionNo">TEILNAHME</div>
+            <h2>Geeignet sind Produkte mit einem nachvollziehbaren Herstellungsprozess.</h2>
+          </div>
+          <p>
+            Für die erste Validierung stehen Produktkategorien im Vordergrund, bei denen die wesentlichen
+            Herstellungsschritte klar abgrenzbar und praktisch prüfbar sind.
+          </p>
         </div>
 
         <div className="fitGrid">
           {suitable.map((item) => <div key={item}>{item}</div>)}
         </div>
         <p className="fitNote">
-          Lebensmittel, Medizinprodukte und andere stark regulierte Kategorien sind für die erste Validierungsphase nicht vorgesehen.
+          Lebensmittel, Medizinprodukte und andere stark regulierte Kategorien sind für die erste Validierung nicht vorgesehen.
         </p>
       </section>
 
-      <section className="pilotProcess">
+      <section className="processSection">
         <div className="shell">
           <div className="sectionIntro compact">
-            <div className="sectionNo">ABLAUF</div>
-            <h2>So ist ein Probeaudit derzeit aufgebaut.</h2>
+            <div>
+              <div className="sectionNo">ABLAUF</div>
+              <h2>So wird ein Produktionsfall derzeit geprüft.</h2>
+            </div>
           </div>
 
-          <div className="pilotFlow">
-            {pilotFlow.map(([title, copy]) => (
+          <div className="processGrid">
+            {process.map(([title, copy]) => (
               <article key={title}>
                 <strong>{title}</strong>
                 <p>{copy}</p>
@@ -120,9 +128,9 @@ export default function ManufacturerPage() {
       <section className="shell interestSection">
         <div className="interestIntro">
           <div className="sectionNo">VORMERKUNG</div>
-          <h2>Produkt zur Validierung vorstellen.</h2>
+          <h2>Produkt vorstellen.</h2>
           <p>
-            Die Vormerkung ist unverbindlich. Sie ist noch kein Zertifizierungsantrag und enthält keine Zusage
+            Die Vormerkung ist unverbindlich. Sie ist kein Zertifizierungsantrag und enthält keine Zusage
             zur späteren Nutzung des Zeichens.
           </p>
         </div>

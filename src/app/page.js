@@ -4,34 +4,19 @@ import SiteFooter from '../components/SiteFooter';
 import HeroVerify from '../components/HeroVerify';
 
 const system = [
-  ['STANDARD', 'legt die Anforderungen an die menschlich geprägte Herstellung fest.'],
+  ['STANDARD', 'definiert die Anforderungen an die zertifizierte Eigenschaft.'],
   ['AUDIT', 'prüft Herstellungsprozess und Nachweise gegen den Standard.'],
-  ['TRACEABILITY', 'macht relevante Produktionsschritte und Fremdfertigung nachvollziehbar.'],
-  ['PUBLIC REGISTER', 'verknüpft Kennzeichnung, Zertifizierungs-ID und aktuellen Status.'],
+  ['TRACEABILITY', 'ordnet relevante Produktionsschritte, Standorte und Fremdfertigung zu.'],
+  ['PUBLIC REGISTER', 'verknüpft Kennzeichnung, Zertifizierungs-ID und öffentlichen Status.'],
 ];
 
-const examples = [
-  {
-    title: 'Ledertasche',
-    process: 'Zuschnitt, Nähen, Formgebung, Montage und Finish werden durch Menschen ausgeführt.',
-    result: 'Grundsätzlich zertifizierbar',
-    positive: true,
-  },
-  {
-    title: 'Tisch mit CNC-Zuschnitt',
-    process: 'Zuschnitt digital; Anpassung, Verbindung, Montage, Schleifen und Finish erfolgen durch Menschen.',
-    result: 'Grundsätzlich zertifizierbar',
-    positive: true,
-  },
-  {
-    title: 'Fertig importiertes Produkt',
-    process: 'Das verkaufsfertige Produkt wird nur noch etikettiert, verpackt oder mit einem eigenen Logo versehen.',
-    result: 'Nicht zertifizierbar',
-    positive: false,
-  },
+const scope = [
+  ['Produktbezug', 'Die Zertifizierung bezieht sich auf ein definiertes physisches Produkt oder eine klar abgegrenzte Produktfamilie.'],
+  ['Herstellungsbezug', 'Geprüft werden die wesentlichen Schritte, durch die aus Materialien und Komponenten das Endprodukt entsteht.'],
+  ['Nachweisbarkeit', 'Die Angaben zum Herstellungsprozess müssen durch geeignete Unterlagen und Informationen nachvollziehbar belegt werden.'],
 ];
 
-const pilotSegments = [
+const focus = [
   'Taschen & Lederwaren',
   'Schmuck',
   'Möbel & Holz',
@@ -51,10 +36,10 @@ export default function Home() {
         <div className="shell homeHeroGrid">
           <div className="homeHeroCopy">
             <div className="eyebrow">STANDARD FÜR MENSCHLICHE HERSTELLUNG</div>
-            <h1>Menschliche Herstellung nachweisbar machen.</h1>
+            <h1>Ein Standard für nachweisbar menschlich gefertigte Produkte.</h1>
             <p className="lead">
-              Made by Humans entwickelt einen branchenübergreifenden Standard für physische Produkte,
-              deren wesentliche Herstellungsschritte nachweislich von Menschen ausgeführt werden.
+              Made by Humans definiert, wann die wesentlichen Herstellungsschritte eines physischen Produkts
+              tatsächlich durch Menschen ausgeführt wurden – und wie diese Eigenschaft geprüft und öffentlich verifiziert wird.
             </p>
             <div className="actions">
               <Link className="button primary" href="/standard">Standard ansehen</Link>
@@ -67,16 +52,18 @@ export default function Home() {
             <div className="markPanelBody">
               <img
                 className="heroSeal"
-                src={`${assetBase}/brand/made-by-humans-seal.png`}
-                alt="Temporäres Made by Humans Zertifizierungszeichen"
+                src={\`\${assetBase}/brand/made-by-humans-seal.png\`}
+                alt="Made by Humans Zertifizierungszeichen"
+                width="188"
+                height="188"
               />
               <blockquote>
                 Dieses Produkt wurde in seinen wesentlichen Herstellungsschritten nachweislich durch Menschen gefertigt.
               </blockquote>
             </div>
             <div className="markPanelMeta">
-              <span>Zertifizierungs-ID</span>
-              <span>Öffentlicher Nachweis</span>
+              <span>Eindeutige Zertifizierungs-ID</span>
+              <span>Öffentlicher Registereintrag</span>
             </div>
           </aside>
         </div>
@@ -95,40 +82,36 @@ export default function Home() {
 
       <section className="homeSection shell">
         <div className="sectionIntro">
-          <div className="sectionNo">PRÜFGEGENSTAND</div>
-          <h2>Zertifiziert wird ein konkretes Produkt und sein Herstellungsprozess.</h2>
+          <div>
+            <div className="sectionNo">WAS GEPRÜFT WIRD</div>
+            <h2>Geprüft wird eine klar abgegrenzte Eigenschaft des Produkts.</h2>
+          </div>
           <p>
-            Entscheidend ist, ob menschliche Arbeit für die Entstehung des Endprodukts wesentlich ist,
-            tatsächlich ausgeführt wird und durch belastbare Informationen nachgewiesen werden kann.
+            Die Kennzeichnung ist keine allgemeine Aussage über ein Unternehmen. Sie bezieht sich darauf,
+            ob die menschliche Arbeit für die tatsächliche Herstellung des Endprodukts wesentlich und belegbar ist.
           </p>
         </div>
 
-        <div className="exampleTable">
-          <div className="exampleTableHead">
-            <span>BEISPIEL</span>
-            <span>HERSTELLUNG</span>
-            <span>EINORDNUNG</span>
-          </div>
-          {examples.map((example) => (
-            <article className="exampleRow" key={example.title}>
-              <strong>{example.title}</strong>
-              <p>{example.process}</p>
-              <span className={example.positive ? 'decision yes' : 'decision no'}>{example.result}</span>
+        <div className="scopeGrid">
+          {scope.map(([title, copy]) => (
+            <article key={title}>
+              <h3>{title}</h3>
+              <p>{copy}</p>
             </article>
           ))}
         </div>
 
-        <Link className="textLink sectionLink" href="/standard">Prüfkriterien und weitere Grenzfälle ansehen →</Link>
+        <Link className="textLink sectionLink" href="/standard">Kriterien und Abgrenzungen ansehen →</Link>
       </section>
 
       <section className="proofSection">
         <div className="shell proofGrid">
           <div className="proofCopy">
             <div className="sectionNo light">PUBLIC REGISTER</div>
-            <h2>Die Kennzeichnung ist mit einem öffentlichen Datensatz verknüpft.</h2>
+            <h2>Jede Kennzeichnung muss öffentlich verifizierbar sein.</h2>
             <p>
-              Der öffentliche Nachweis soll zeigen, welches Produkt geprüft wurde, welcher Standard zugrunde lag,
-              wie lange die Zertifizierung gültig ist und ob sich ihr Status geändert hat.
+              Der Registereintrag ordnet die Zertifizierungs-ID einem Hersteller, einem Produkt,
+              der zugrunde liegenden Standardfassung und dem aktuellen Status zu.
             </p>
             <HeroVerify />
           </div>
@@ -154,16 +137,17 @@ export default function Home() {
         <div className="manufacturerGrid">
           <div>
             <div className="sectionNo">FÜR HERSTELLER</div>
-            <h2>Gesucht werden reale Produkte und nachvollziehbare Herstellungsprozesse.</h2>
+            <h2>Für Hersteller mit nachvollziehbaren Produktionsprozessen.</h2>
             <p>
-              Die erste Validierung konzentriert sich auf Produktkategorien, in denen menschliche Herstellung
-              klar abgrenzbar und für Käufer relevant ist.
+              Produkte können zur Validierung des Standards vorgestellt werden, wenn wesentliche Herstellungsschritte
+              nachvollziehbar beschrieben und durch geeignete Informationen belegt werden können.
             </p>
-            <Link className="button primary" href="/fuer-hersteller">Für Hersteller</Link>
+            <Link className="button primary" href="/fuer-hersteller">Produkt vorstellen</Link>
           </div>
 
-          <div className="segmentList">
-            {pilotSegments.map((segment) => <span key={segment}>{segment}</span>)}
+          <div className="focusList">
+            <span className="focusLabel">STARTFOKUS</span>
+            {focus.map((item) => <span className="focusItem" key={item}>{item}</span>)}
           </div>
         </div>
       </section>
