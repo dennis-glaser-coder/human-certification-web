@@ -6,7 +6,7 @@ export default function SiteFooter() {
       <div className="shell footerTop footerTopV2">
         <div>
           <div className="footerBrand">MADE BY HUMANS</div>
-          <p className="footerClaim">Ein unabhängiger Zertifizierungsstandard für nachvollziehbare menschliche Wertschöpfung.</p>
+          <p className="footerClaim">Ein Standard für nachweisbar menschlich geprägte Herstellung physischer Produkte.</p>
         </div>
 
         <div className="footerNavV2">
@@ -25,7 +25,7 @@ export default function SiteFooter() {
 
       <div className="shell footerBottom">
         <div className="footerMeta footerMetaV2">
-          <span>Independent · Transparent · Verifiable</span>
+          <span>Standard · Traceability · Public Register</span>
           <span>Finales Zertifizierungszeichen in Entwicklung.</span>
         </div>
       </div>
