@@ -106,3 +106,14 @@ Every public website decision must remain compatible with the business plan:
 - No commercial certification claims before legal, governance and independence structure is ready.
 - Long-term value sits in brand, standard, certificate base, register, trade integration and trust — not in selling audit hours alone.
 - Long-term model should remain compatible with a scheme/standard-owner role and independent approved auditors/certifiers.
+
+
+### Copy rule: no constructed slogan syntax
+Avoid copy patterns that sound generated or agency-written, especially:
+- "Nicht X. Aber Y."
+- "X. Y." short contrast slogans used only for effect
+- artificial rhetorical questions
+- generic "Erst X. Dann Y." formulations
+- repeated three-part value claims without concrete evidence
+
+Headlines should read like something a credible standard organization would publish: precise, calm and specific.
