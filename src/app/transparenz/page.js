@@ -19,7 +19,7 @@ export default function TransparencyPage() {
         <div className="eyebrow">TRANSPARENZ & GOVERNANCE</div>
         <h1>Vertrauen setzt nachvollziehbare Regeln voraus.</h1>
         <p className="lead">
-          Made by Humans befindet sich in der Pilot- und Validierungsphase. Die folgenden Grundsätze zeigen,
+          Die folgenden Grundsätze zeigen,
           wie Standard, Prüfung und öffentliche Nachweise für den späteren kommerziellen Betrieb aufgebaut werden sollen.
         </p>
       </section>
