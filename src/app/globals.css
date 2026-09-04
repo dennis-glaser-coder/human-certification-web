@@ -1430,3 +1430,40 @@ p{line-height:1.7}
   .contextList span,.contextList span:not(:first-child){padding:15px 0;border-right:0}
   .procedureGrid h2{font-size:24px}
 }
+
+
+/* ===== Final QA: accessibility, governance balance and mobile targets ===== */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible{
+  outline:2px solid var(--blue);
+  outline-offset:3px;
+}
+
+@media(min-width:1021px){
+  .rolesGrid{grid-template-columns:repeat(5,1fr)}
+  .rolesGrid article{padding-left:18px;padding-right:18px}
+  .rolesGrid article:first-child{padding-left:0}
+  .rolesGrid article:last-child{padding-right:0}
+}
+
+@media(max-width:760px){
+  .mobileMenuToggle{
+    width:42px;
+    height:42px;
+  }
+  .mobileVerify{
+    min-height:42px;
+    display:inline-flex;
+    align-items:center;
+  }
+}
+
+@media(max-width:480px){
+  .mobileMenuToggle{
+    width:40px;
+    height:40px;
+  }
+  .mobileVerify{min-height:40px}
+}
