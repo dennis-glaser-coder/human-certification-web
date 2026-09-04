@@ -66,3 +66,43 @@ Within seconds the website must communicate:
 The final logo / certification mark is not yet defined.
 
 Do not invent a provisional seal or make the website dependent on one. Until the final mark exists, **MADE BY HUMANS** is used typographically only.
+
+
+## Non-negotiable authenticity rules
+
+### No AI imagery
+- No AI-generated people, factories, workshops, machinery, products or documentary scenes on the public website.
+- No generated "placeholder documentary photography".
+- If authentic imagery is not available, use no image rather than a fake one.
+- Preferred source: real pilot manufacturers, real production sites, real work processes, real quality checks.
+- Stock imagery may only be used exceptionally when it is clearly documentary, non-staged and not visually generic.
+
+### No AI-sounding copy
+Public-facing copy must not read like generic generated marketing text.
+
+Avoid:
+- "In einer Welt, die sich immer schneller verändert ..."
+- "Wir revolutionieren ..."
+- "Wir glauben an eine Zukunft ..."
+- exaggerated three-part slogans without factual content
+- unsupported global leadership claims
+- emotional claims that cannot be evidenced
+
+Prefer:
+- concrete statements
+- defined terms
+- real examples
+- clear limits
+- explicit pilot/prototype status where applicable
+- wording that can be defended in an audit, legal review or press interview
+
+## Business-plan guardrails
+Every public website decision must remain compatible with the business plan:
+
+- Scope: physical products with materially human-shaped manufacturing.
+- Not an origin, sustainability, bio, fair-trade or anti-technology label.
+- Machinery can be compatible when it supports rather than replaces the product-defining human work.
+- Pilot first, then invest and scale.
+- No commercial certification claims before legal, governance and independence structure is ready.
+- Long-term value sits in brand, standard, certificate base, register, trade integration and trust — not in selling audit hours alone.
+- Long-term model should remain compatible with a scheme/standard-owner role and independent approved auditors/certifiers.
