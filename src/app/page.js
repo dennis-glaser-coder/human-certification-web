@@ -10,18 +10,10 @@ const system = [
   ['PUBLIC REGISTER', 'verknüpft Kennzeichnung, Zertifizierungs-ID und öffentlichen Status.'],
 ];
 
-const value = [
-  ['HERSTELLER', 'Eine belegte Herstellungsangabe kann eindeutig einem Produkt zugeordnet und gegenüber ungeprüften Eigenclaims abgegrenzt werden.'],
-  ['HANDEL', 'Eine definierte Produkteigenschaft kann über Zertifizierungs-ID, Standardversion und Status nachvollziehbar referenziert werden.'],
-  ['KÄUFER', 'ID oder QR-Code führen zum öffentlichen Nachweis des konkreten Produkts und seines aktuellen Zertifizierungsstatus.'],
-];
-
-const journey = [
-  ['Produkt definieren', 'Produkt oder Produktfamilie und relevante Herstellungsorte werden eindeutig abgegrenzt.'],
-  ['Herstellung prüfen', 'Wesentliche Arbeitsschritte, menschliche Ausführung und Fremdfertigung werden bewertet.'],
-  ['Entscheidung dokumentieren', 'Prüfergebnis, Scope und angewendete Standardversion werden nachvollziehbar festgehalten.'],
-  ['Kennzeichnung zuordnen', 'Ein freigegebenes Produkt erhält Zeichen und eindeutige Zertifizierungs-ID.'],
-  ['Öffentlich verifizieren', 'ID oder QR-Code führen zum Registereintrag und aktuellen Status.'],
+const scope = [
+  ['Produktbezug', 'Die Zertifizierung bezieht sich auf ein definiertes physisches Produkt oder eine klar abgegrenzte Produktfamilie.'],
+  ['Herstellungsbezug', 'Geprüft werden die wesentlichen Schritte, durch die aus Materialien und Komponenten das Endprodukt entsteht.'],
+  ['Nachweisbarkeit', 'Die Angaben zum Herstellungsprozess müssen durch geeignete Unterlagen und Informationen nachvollziehbar belegt werden.'],
 ];
 
 const focus = [
@@ -65,14 +57,14 @@ export default function Home() {
         <div className="shell homeHeroGrid">
           <div className="homeHeroCopy">
             <div className="eyebrow">STANDARD FÜR MENSCHLICHE HERSTELLUNG</div>
-            <h1>Menschliche Herstellung als überprüfbare Produkteigenschaft.</h1>
+            <h1>Menschliche Herstellung. Nachweisbar am Produkt.</h1>
             <p className="lead">
-              Made by Humans definiert, wann wesentliche Herstellungsschritte eines physischen Produkts
-              tatsächlich durch Menschen ausgeführt wurden – und verbindet die geprüfte Aussage mit einer eindeutigen ID und einem öffentlichen Nachweis.
+              Made by Humans prüft, ob die wesentlichen Herstellungsschritte eines physischen Produkts tatsächlich
+              durch Menschen ausgeführt werden. Eine eindeutige ID verbindet das Zeichen mit dem öffentlichen Register.
             </p>
             <div className="actions">
               <Link className="button primary" href="/standard">Standard ansehen</Link>
-              <Link className="button secondary" href="/fuer-hersteller">Für Hersteller</Link>
+              <Link className="button secondary" href="/fuer-hersteller">Produkt vorstellen</Link>
             </div>
           </div>
 
@@ -117,56 +109,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="valueSection shell">
-        <div className="sectionIntro">
-          <div>
-            <div className="sectionNo">WAS EINE ZERTIFIZIERUNG LEISTEN SOLL</div>
-            <h2>Aus einer Herstellungsangabe wird ein überprüfbarer Produktclaim.</h2>
-          </div>
-          <p>
-            Der Standard konzentriert sich bewusst auf eine eng definierte Aussage zur tatsächlichen Herstellung.
-            Dadurch kann sie produktbezogen geprüft, kommuniziert und öffentlich verifiziert werden.
-          </p>
-        </div>
-
-        <div className="valueGrid">
-          {value.map(([title, copy]) => (
-            <article key={title}>
-              <span>{title}</span>
-              <p>{copy}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="journeySection">
-        <div className="shell">
-          <div className="sectionIntro compact">
-            <div>
-              <div className="sectionNo">VOM PROZESS ZUR KENNZEICHNUNG</div>
-              <h2>Ein klarer Weg vom Herstellungsprozess zum öffentlichen Nachweis.</h2>
-            </div>
-          </div>
-
-          <div className="journeyGrid">
-            {journey.map(([title, copy]) => (
-              <article key={title}>
-                <strong>{title}</strong>
-                <p>{copy}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="documentarySection">
         <div className="shell documentaryIntro">
           <div>
             <div className="sectionNo">TATSÄCHLICHE HERSTELLUNG</div>
-            <h2>Der Prüfgegenstand ist der reale Produktionsprozess.</h2>
+            <h2>Geprüft wird der reale Produktionsprozess.</h2>
           </div>
           <p>
-            Entscheidend ist nicht die Darstellung eines Produkts, sondern welche Arbeitsschritte für seine Entstehung wesentlich sind,
+            Entscheidend ist, welche Arbeitsschritte für die Entstehung des Produkts wesentlich sind,
             wo sie stattfinden und wie sie tatsächlich ausgeführt werden.
           </p>
         </div>
@@ -196,14 +146,38 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="homeSection shell">
+        <div className="sectionIntro">
+          <div>
+            <div className="sectionNo">WAS GEPRÜFT WIRD</div>
+            <h2>Eine klar abgegrenzte Eigenschaft des Produkts.</h2>
+          </div>
+          <p>
+            Die Kennzeichnung ist keine allgemeine Aussage über das Unternehmen.
+            Sie bezieht sich auf die tatsächliche Herstellung des geprüften Produkts.
+          </p>
+        </div>
+
+        <div className="scopeGrid">
+          {scope.map(([title, copy]) => (
+            <article key={title}>
+              <h3>{title}</h3>
+              <p>{copy}</p>
+            </article>
+          ))}
+        </div>
+
+        <Link className="textLink sectionLink" href="/standard">Kriterien und Abgrenzungen ansehen →</Link>
+      </section>
+
       <section className="proofSection">
         <div className="shell proofGrid">
           <div className="proofCopy">
             <div className="sectionNo light">PUBLIC REGISTER</div>
-            <h2>Eine Kennzeichnung endet nicht auf der Verpackung.</h2>
+            <h2>Jede Kennzeichnung muss öffentlich verifizierbar sein.</h2>
             <p>
-              Der öffentliche Datensatz soll zeigen, welchem Hersteller und Produkt die Kennzeichnung zugeordnet ist,
-              welche Standardfassung angewendet wurde und welchen aktuellen Status die Zertifizierung hat.
+              Der Registereintrag ordnet die Zertifizierungs-ID einem Hersteller, einem Produkt,
+              der angewendeten Standardfassung und dem aktuellen Status zu.
             </p>
             <HeroVerify />
           </div>
@@ -229,12 +203,12 @@ export default function Home() {
         <div className="manufacturerGrid">
           <div>
             <div className="sectionNo">FÜR HERSTELLER</div>
-            <h2>Eine belegbare Herstellungsangabe direkt am Produkt nutzbar machen.</h2>
+            <h2>Menschliche Herstellung überprüfbar am Produkt ausweisen.</h2>
             <p>
-              Das System ist darauf ausgelegt, erfolgreiche Prüfungen mit einer eindeutigen Produktkennzeichnung,
-              einem öffentlichen Nachweis und klaren Regeln für die produktbezogene Kommunikation zu verbinden.
+              Das System ist darauf ausgelegt, eine erfolgreiche Prüfung mit Produktkennzeichnung,
+              eindeutiger ID und öffentlichem Nachweis zu verbinden.
             </p>
-            <Link className="button primary" href="/fuer-hersteller">Für Hersteller</Link>
+            <Link className="button primary" href="/fuer-hersteller">Produkt vorstellen</Link>
           </div>
 
           <div className="focusList">
