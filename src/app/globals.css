@@ -1786,3 +1786,79 @@ h1 em,h2 em,.statementGrid em{
   }
   .systemStripGrid>div:first-child{border-top:0}
 }
+
+
+/* ===== Hero precision pass ===== */
+.heroV2{
+  padding-top:74px;
+  padding-bottom:92px;
+}
+.heroV2Grid{
+  grid-template-columns:minmax(0,1.12fr) minmax(360px,.68fr);
+  gap:82px;
+  align-items:center;
+}
+.heroV2Copy{
+  padding-top:0;
+}
+.heroV2Copy h1{
+  font-size:clamp(58px,4.75vw,78px);
+  line-height:.99;
+  max-width:760px;
+  margin-top:24px;
+  margin-bottom:28px;
+}
+.heroV2Copy .lead{
+  font-size:16px;
+  line-height:1.72;
+  max-width:700px;
+}
+.heroV2Copy .actions{
+  margin-top:32px;
+}
+.heroVerify{
+  max-width:500px;
+  justify-self:end;
+  width:100%;
+}
+.heroVerifyHeader{
+  min-height:44px;
+}
+.heroVerifyBody{
+  padding:28px 28px 26px;
+}
+.heroVerifyKicker{
+  margin-bottom:12px;
+  font-size:8px;
+  letter-spacing:.15em;
+  font-weight:700;
+  color:var(--standard-blue);
+}
+.heroVerifyBody h2{
+  font-size:31px;
+  line-height:1.08;
+  margin-bottom:12px;
+}
+.heroVerifyBody>p{
+  font-size:12px;
+  line-height:1.68;
+  margin-bottom:24px;
+}
+.heroVerifyFooter{
+  padding-top:14px;
+  padding-bottom:14px;
+}
+@media(max-width:1020px){
+  .heroV2Grid{align-items:start}
+  .heroVerify{justify-self:start}
+}
+@media(max-width:760px){
+  .heroV2{
+    padding-top:52px;
+    padding-bottom:64px;
+  }
+  .heroV2Copy h1{
+    font-size:50px;
+    max-width:100%;
+  }
+}
