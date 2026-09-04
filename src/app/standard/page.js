@@ -1,20 +1,19 @@
 import SiteHeader from '../../components/SiteHeader';
 import SiteFooter from '../../components/SiteFooter';
 
-const blocks = [
-  ['Geltungsbereich', 'Der Standard richtet sich an physische Produkte. Entscheidend ist nicht eine pauschale Handarbeitsbehauptung, sondern ob relevante menschliche Tätigkeiten tatsächlich ein wesentlicher Teil der Wertschöpfung sind.'],
-  ['Nachweise', 'Aussagen müssen auf strukturierten Prozessinformationen, geeigneten Belegen und einer dokumentierten Prüfentscheidung beruhen.'],
-  ['Prüfbarkeit', 'Jede Zertifizierungsentscheidung muss gegen die jeweils gültige Standardversion nachvollzogen werden können.'],
-  ['Öffentlicher Status', 'Aktiv, ausgesetzt, abgelaufen oder widerrufen: Der Status einer Zertifizierung bleibt öffentlich unterscheidbar.'],
+const criteria = [
+  ['Transformation', 'Durch menschliche Arbeit entsteht aus Materialien oder Komponenten erst das verkaufsfertige Endprodukt.'],
+  ['Human Skill', 'Wesentliche Herstellungsschritte erfordern Erfahrung, Fähigkeit oder bewusste menschliche Entscheidungen.'],
+  ['Human Execution', 'Die produktprägenden Schritte werden tatsächlich unmittelbar von Menschen ausgeführt.'],
+  ['Automation Limit', 'Maschinen dürfen unterstützen. Sie dürfen die produktprägende menschliche Herstellung nicht vollständig ersetzen.'],
+  ['Traceability', 'Relevante Produktionsorte, Zulieferer und wesentliche Fremdfertigung müssen nachvollziehbar sein.'],
+  ['Verification', 'Die Angaben müssen durch geeignete Evidenz objektiv prüfbar und dokumentierbar sein.'],
 ];
 
-const dimensions = [
-  'Produkt und Produktionsschritte',
-  'Menschliche Tätigkeiten und Verantwortlichkeiten',
-  'Automatisierungs- und Maschinenanteile',
-  'Nachweise und Plausibilität',
-  'Traceability relevanter Wertschöpfungsschritte',
-  'Status, Verlängerung, Aussetzung und Widerruf',
+const exclusions = [
+  'fertige Ware wird nur etikettiert oder neu verpackt',
+  'Menschen überwachen lediglich eine vollautomatische Produktentstehung',
+  'eine minimale manuelle Veredelung soll ein fertiges Produkt nachträglich „human made“ machen',
 ];
 
 export default function StandardPage() {
@@ -23,52 +22,78 @@ export default function StandardPage() {
       <SiteHeader />
 
       <section className="pageHero shell">
-        <div className="eyebrow">STANDARD</div>
-        <h1>Klare Kriterien. <em>Nachvollziehbare Entscheidungen.</em></h1>
+        <div className="eyebrow">STANDARD IN ENTWICKLUNG</div>
+        <h1>Klare Kriterien. <em>Keine wohlwollende Auslegung.</em></h1>
         <p className="lead">
-          Der Standard definiert, wann menschliche Wertschöpfung an einem physischen Produkt so wesentlich, dokumentiert und überprüfbar ist, dass sie zertifiziert kommuniziert werden kann.
+          Der Standard soll prüfen, ob ein physisches Produkt in seinen wesentlichen, produktprägenden Herstellungsschritten tatsächlich durch menschliche Arbeit, Fähigkeiten und Entscheidungen entsteht.
         </p>
 
         <div className="draftNotice">
-          <strong>STANDARD IN ENTWICKLUNG</strong>
-          <p>Die Kriterien werden derzeit mit Blick auf reale Produkte und Produktionsprozesse validiert. Die Struktur und das Prüfprinzip stehen bereits fest.</p>
+          <strong>PILOTSTATUS</strong>
+          <p>Die Kriterien werden derzeit an realen Produktionsfällen validiert. Vor einer öffentlichen kommerziellen Siegelvergabe werden Standard, Rechtsrahmen und Governance-Struktur final geprüft.</p>
         </div>
       </section>
 
-      <section className="shell standardBlocks">
-        {blocks.map(([title, copy]) => (
-          <article key={title} className="standardBlock standardBlockV2">
-            <div>
-              <h2>{title}</h2>
+      <section className="shell criteriaSection">
+        <div className="sectionHeading split">
+          <div>
+            <div className="sectionNo">ARBEITSSTANDARD</div>
+            <h2>Sechs Fragen entscheiden über die grundsätzliche Zertifizierbarkeit.</h2>
+          </div>
+          <p>
+            Die Kriterien sollen Grenzfälle nicht weichzeichnen. Fehlt belastbare Evidenz oder ersetzt Automation die produktprägende menschliche Herstellung, soll keine Zertifizierung erfolgen.
+          </p>
+        </div>
+
+        <div className="criteriaGrid">
+          {criteria.map(([title, copy]) => (
+            <article key={title}>
+              <strong>{title}</strong>
               <p>{copy}</p>
-            </div>
-          </article>
-        ))}
+            </article>
+          ))}
+        </div>
       </section>
 
       <section className="standardStatement">
         <div className="shell">
-          <div className="sectionNo light">DIE ZENTRALE FRAGE</div>
-          <p>Ist der menschliche Anteil am Produkt <em>wesentlich, dokumentiert und überprüfbar</em> genug, um die Aussage gegenüber dem Käufer zu tragen?</p>
+          <div className="sectionNo light">PRAXISTEST</div>
+          <p>Wenn sämtliche menschlichen Arbeitsschritte entfernt werden: Existiert danach bereits im Wesentlichen dasselbe verkaufsfertige Produkt?</p>
         </div>
       </section>
 
-      <section className="shell scopeGrid">
+      <section className="shell exclusionSection">
         <div>
-          <div className="sectionNo">PRÜFDIMENSIONEN</div>
-          <h2>Was im Audit betrachtet werden soll.</h2>
+          <div className="sectionNo">TYPISCHE ABLEHNUNGSGRÜNDE</div>
+          <h2>Ein manueller Restschritt reicht nicht.</h2>
         </div>
+        <div className="exclusionList">
+          {exclusions.map((item) => <p key={item}>{item}</p>)}
+        </div>
+      </section>
 
-        <div className="scopeList scopeListV2">
-          {dimensions.map((item) => <p key={item}>{item}</p>)}
+      <section className="governanceSection">
+        <div className="shell governanceGrid">
+          <div>
+            <div className="sectionNo">UNABHÄNGIGKEIT & GOVERNANCE</div>
+            <h2>Die Prüfentscheidung darf nicht vom Verkauf des Siegels abhängen.</h2>
+          </div>
+          <div>
+            <p>
+              Für den kommerziellen Start ist eine rechtlich und wirtschaftlich saubere Trennung der Rollen vorgesehen. Audit, Review, Zertifizierungsentscheidung und Markennutzung sollen so organisiert werden, dass Interessenkonflikte vermieden und Entscheidungen nachvollziehbar bleiben.
+            </p>
+            <p>
+              Langfristig ist das Modell darauf ausgelegt, Marke, Standard und Register als Scheme zu führen und Prüfungen auch durch zugelassene unabhängige Stellen durchführen zu lassen.
+            </p>
+          </div>
         </div>
       </section>
 
       <section className="systemReminder">
         <div className="shell systemReminderGrid">
           <div><strong>STANDARD</strong><span>definiert die Anforderungen</span></div>
-          <div><strong>AUDIT</strong><span>prüft die Erfüllung</span></div>
-          <div><strong>TRACEABILITY</strong><span>dokumentiert die Herkunft</span></div>
+          <div><strong>AUDIT</strong><span>prüft Prozess und Evidenz</span></div>
+          <div><strong>TRACEABILITY</strong><span>macht Herstellung nachvollziehbar</span></div>
           <div><strong>PUBLIC REGISTER</strong><span>macht den Status überprüfbar</span></div>
         </div>
       </section>
