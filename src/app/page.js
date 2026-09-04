@@ -50,12 +50,13 @@ export default function Home() {
       <section className="homeHero">
         <div className="shell homeHeroGrid">
           <div className="homeHeroCopy">
-            <div className="eyebrow">PILOTPHASE · STANDARD IN ENTWICKLUNG</div>
-            <h1>Menschliche Herstellung sichtbar und überprüfbar machen.</h1>
+            <div className="eyebrow">STANDARD FÜR MENSCHLICHE HERSTELLUNG</div>
+            <h1>Menschliche Herstellung nachweisbar machen.</h1>
             <p className="lead">
               Made by Humans entwickelt einen branchenübergreifenden Standard für physische Produkte,
               deren wesentliche Herstellungsschritte nachweislich von Menschen ausgeführt werden.
             </p>
+            <p className="heroStatus">Pilotphase · Arbeitsstandard in Validierung</p>
             <div className="actions">
               <Link className="button primary" href="/standard">Standard ansehen</Link>
               <Link className="button secondary" href="/fuer-hersteller">Für Hersteller</Link>
@@ -64,14 +65,16 @@ export default function Home() {
 
           <aside className="markPanel">
             <div className="markPanelLabel">AUSSAGE DES ZEICHENS</div>
-            <img
-              className="heroSeal"
-              src={`${assetBase}/brand/made-by-humans-seal.png`}
-              alt="Temporäres Made by Humans Zertifizierungszeichen"
-            />
-            <blockquote>
-              Dieses Produkt wurde in seinen wesentlichen Herstellungsschritten nachweislich durch Menschen gefertigt.
-            </blockquote>
+            <div className="markPanelBody">
+              <img
+                className="heroSeal"
+                src={`${assetBase}/brand/made-by-humans-seal.png`}
+                alt="Temporäres Made by Humans Zertifizierungszeichen"
+              />
+              <blockquote>
+                Dieses Produkt wurde in seinen wesentlichen Herstellungsschritten nachweislich durch Menschen gefertigt.
+              </blockquote>
+            </div>
             <div className="markPanelMeta">
               <span>Zertifizierungs-ID</span>
               <span>Öffentlicher Nachweis</span>
