@@ -9,7 +9,7 @@ export default function SiteFooter() {
         <div className="footerBrand">
           <img
             className="footerSealTemporary"
-            src={\`\${assetBase}/brand/made-by-humans-seal.png\`}
+            src={assetBase + '/brand/made-by-humans-seal.png'}
             alt=""
             aria-hidden="true"
             width="46"
