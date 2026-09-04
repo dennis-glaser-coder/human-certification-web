@@ -93,7 +93,7 @@ export default function RegisterPage() {
                 <small>STATUS</small>
                 <span className={`statusBadge ${record.status === 'active' ? 'active' : ''}`}>{labels[record.status] ?? record.status}</span>
               </div>
-              <Link href={`/pruefen?id=${encodeURIComponent(record.public_id)}`} aria-label={`${record.public_id} prüfen`}>→</Link>
+              <Link href={`/c/${encodeURIComponent(record.public_id)}`} aria-label={`${record.public_id} prüfen`}>→</Link>
             </article>
           ))}
         </div>
