@@ -7,10 +7,10 @@ import SiteFooter from '../../components/SiteFooter';
 import { getSupabaseBrowserClient } from '../../lib/supabase';
 
 const statusText = {
-  active: 'Zertifizierung aktiv',
-  suspended: 'Zertifizierung ausgesetzt',
-  expired: 'Zertifizierung abgelaufen',
-  revoked: 'Zertifizierung widerrufen',
+  active: 'Aktiv',
+  suspended: 'Ausgesetzt',
+  expired: 'Abgelaufen',
+  revoked: 'Widerrufen',
 };
 
 export default function VerifyPage() {
@@ -31,7 +31,7 @@ export default function VerifyPage() {
 
     const supabase = getSupabaseBrowserClient();
     if (!supabase) {
-      setState({ loading: false, record: null, message: 'Die Datenbankverbindung ist in dieser Vorschau noch nicht konfiguriert.' });
+      setState({ loading: false, record: null, message: 'Die Verifizierung ist derzeit nicht erreichbar.' });
       return;
     }
 
@@ -44,7 +44,7 @@ export default function VerifyPage() {
       .maybeSingle();
 
     if (error || !data) {
-      setState({ loading: false, record: null, message: 'Zu dieser ID wurde kein öffentlicher Beispieldatensatz gefunden.' });
+      setState({ loading: false, record: null, message: 'Zu dieser ID wurde kein öffentlicher Datensatz gefunden.' });
       return;
     }
 
@@ -57,23 +57,25 @@ export default function VerifyPage() {
   }
 
   return (
-    <main className="verifyPage">
+    <main>
       <SiteHeader />
 
-      <section className="pageHero shell verifyHero">
-        <div className="eyebrow">VERIFIZIERUNG · PROTOTYP</div>
-        <h1>Ein Zertifizierungszeichen ist nur so glaubwürdig wie <em>sein öffentlicher Nachweis.</em></h1>
-        <p className="lead">Der Verifizierungs-Prototyp zeigt, welche Informationen später über eine Zertifizierungs-ID öffentlich abrufbar sein sollen.</p>
-      </section>
+      <section className="verifyPage shell">
+        <div className="verifyPageIntro">
+          <div className="eyebrow">ZERTIFIZIERUNGS-ID PRÜFEN</div>
+          <h1>Öffentlichen Datensatz aufrufen.</h1>
+          <p>
+            In der Pilotphase kann die Verifizierungslogik mit dem Beispieldatensatz HC-DEMO-0001 getestet werden.
+          </p>
+        </div>
 
-      <section className="shell verifyWorkspace">
-        <form onSubmit={verify} className="verifyForm">
-          <label htmlFor="certificate-id">ZERTIFIZIERUNGS-ID</label>
+        <form onSubmit={verify} className="verifySearch">
+          <label htmlFor="certificate-id">Zertifizierungs-ID</label>
           <div>
-            <input id="certificate-id" value={value} onChange={(e) => setValue(e.target.value)} placeholder="z. B. HC-DEMO-0001" />
-            <button className="button primary" disabled={state.loading}>{state.loading ? 'Prüfe …' : 'Jetzt prüfen'}</button>
+            <input id="certificate-id" value={value} onChange={(e) => setValue(e.target.value)} placeholder="HC-DEMO-0001" />
+            <button className="button primary" disabled={state.loading}>{state.loading ? 'Prüfe …' : 'Prüfen'}</button>
           </div>
-          <button type="button" className="demoButton" onClick={() => { setValue('HC-DEMO-0001'); verifyId('HC-DEMO-0001'); }}>Beispiel-ID testen: HC-DEMO-0001</button>
+          <button type="button" className="demoButton" onClick={() => { setValue('HC-DEMO-0001'); verifyId('HC-DEMO-0001'); }}>Beispiel-ID einsetzen</button>
         </form>
 
         {state.message && <div className="verificationEmpty">{state.message}</div>}
@@ -85,7 +87,7 @@ export default function VerifyPage() {
                 <small>STATUS</small>
                 <strong>{statusText[state.record.status] ?? state.record.status}</strong>
               </div>
-              <span className={`statusBadge ${state.record.status === 'active' ? 'active' : ''}`}>{state.record.status.toUpperCase()}</span>
+              <span className={`statusBadge ${state.record.status === 'active' ? 'active' : ''}`}>{statusText[state.record.status] ?? state.record.status}</span>
             </div>
 
             <div className="verificationIdentity">
@@ -93,7 +95,7 @@ export default function VerifyPage() {
                 <small>ZERTIFIZIERUNGS-ID</small>
                 <h2>{state.record.public_id}</h2>
               </div>
-              <Link className="recordOpenLink" href={`/c/${encodeURIComponent(state.record.public_id)}`}>Öffentlichen Datensatz öffnen →</Link>
+              <Link className="recordOpenLink" href={`/c/${encodeURIComponent(state.record.public_id)}`}>Vollständigen Datensatz öffnen →</Link>
             </div>
 
             <dl className="verificationDetails">
@@ -104,7 +106,7 @@ export default function VerifyPage() {
               <div><dt>Gültig bis</dt><dd>{state.record.valid_until ? new Date(state.record.valid_until).toLocaleDateString('de-DE') : '—'}</dd></div>
             </dl>
 
-            {state.record.public_note && <div className="publicNote"><strong>ÖFFENTLICHER HINWEIS</strong><p>{state.record.public_note}</p></div>}
+            {state.record.public_note && <div className="publicNote"><strong>HINWEIS</strong><p>{state.record.public_note}</p></div>}
           </article>
         )}
       </section>
