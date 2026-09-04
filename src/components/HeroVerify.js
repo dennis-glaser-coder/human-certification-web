@@ -29,7 +29,7 @@ export default function HeroVerify() {
             id="hero-certificate-id"
             value={value}
             onChange={(event) => setValue(event.target.value)}
-            placeholder="z. B. HC-DEMO-0001"
+            placeholder="Zertifizierungs-ID"
             autoComplete="off"
           />
           <button type="submit">Prüfen</button>
@@ -37,8 +37,8 @@ export default function HeroVerify() {
       </form>
 
       <div className="verifyModuleFoot">
-        <span>Aktuell ist ein technischer Beispieldatensatz hinterlegt.</span>
-        <Link href="/c/HC-DEMO-0001">Beispiel öffnen →</Link>
+        <span>Technischer Testdatensatz verfügbar: HC-DEMO-0001</span>
+        <Link href="/c/HC-DEMO-0001">Test öffnen →</Link>
       </div>
     </div>
   );
