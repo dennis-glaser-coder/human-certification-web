@@ -10,5 +10,8 @@ export default function sitemap() {
     { url: canonical('/register') },
     { url: canonical('/pruefen') },
     { url: canonical('/transparenz') },
+    { url: canonical('/ueber-uns') },
+    { url: canonical('/dokumente') },
+    { url: canonical('/dokumente/standard-0-1') },
   ];
 }

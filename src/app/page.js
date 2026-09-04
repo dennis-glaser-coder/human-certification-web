@@ -80,6 +80,43 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="documentarySection">
+        <div className="shell documentaryIntro">
+          <div>
+            <div className="sectionNo">REALE HERSTELLUNG</div>
+            <h2>Der Prüfgegenstand ist ein tatsächlicher Produktionsprozess.</h2>
+          </div>
+          <p>
+            Die Bildwelt zeigt reale Arbeit in realen Produktionsumgebungen. Sie dient der sachlichen Einordnung
+            von Herstellung und Qualitätskontrolle und wird später durch dokumentierte Aufnahmen aus eigenen Validierungsfällen ersetzt.
+          </p>
+        </div>
+
+        <div className="shell documentaryGrid">
+          <figure className="documentaryFigure documentaryWide">
+            <img
+              src="https://images.unsplash.com/photo-1745571479548-7e8c708c4eb0?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=80&w=1800"
+              alt="Mitarbeiter prüft ein Metallteil mit einem Messschieber"
+              loading="lazy"
+            />
+            <figcaption>
+              Qualitätsprüfung in einem realen Produktionsprozess · Foto: Maxim Tolchinskiy / Unsplash · keine Aussage über einen Zertifizierungsstatus
+            </figcaption>
+          </figure>
+
+          <figure className="documentaryFigure">
+            <img
+              src="https://images.unsplash.com/photo-1770196009760-bead9eb10514?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=80&w=1400"
+              alt="Mitarbeiterin kontrolliert Textilien in einer Fabrik"
+              loading="lazy"
+            />
+            <figcaption>
+              Textilkontrolle in realer Produktion · Foto: Shanjir H / Unsplash · keine Aussage über einen Zertifizierungsstatus
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
       <section className="homeSection shell">
         <div className="sectionIntro">
           <div>
@@ -149,6 +186,26 @@ export default function Home() {
             <span className="focusLabel">STARTFOKUS</span>
             {focus.map((item) => <span className="focusItem" key={item}>{item}</span>)}
           </div>
+        </div>
+      </section>
+
+      <section className="institutionalSection">
+        <div className="shell institutionalGrid">
+          <Link href="/dokumente">
+            <span>DOKUMENTE</span>
+            <strong>Standardversionen und öffentliche Arbeitsfassungen</strong>
+            <small>Dokumentation öffnen →</small>
+          </Link>
+          <Link href="/transparenz">
+            <span>TRANSPARENZ</span>
+            <strong>Prüfrollen, Statusverwaltung und Markennutzung</strong>
+            <small>Governance ansehen →</small>
+          </Link>
+          <Link href="/ueber-uns">
+            <span>ÜBER MADE BY HUMANS</span>
+            <strong>Zweck, Abgrenzung und aktueller Entwicklungsstand</strong>
+            <small>Mehr erfahren →</small>
+          </Link>
         </div>
       </section>
 

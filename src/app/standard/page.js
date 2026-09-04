@@ -62,6 +62,30 @@ export default function StandardPage() {
         </div>
       </section>
 
+      <section className="auditProcessSection">
+        <div className="shell">
+          <div className="sectionIntro compact">
+            <div>
+              <div className="sectionNo">PRÜFPROZESS</div>
+              <h2>Von der Produktabgrenzung bis zum Registereintrag.</h2>
+            </div>
+            <p>
+              Eine spätere Zertifizierung soll nicht auf einer einzelnen Selbstauskunft beruhen,
+              sondern auf einem dokumentierten Prüf- und Entscheidungsprozess.
+            </p>
+          </div>
+
+          <div className="auditProcessGrid">
+            <article><strong>Scope</strong><p>Produkt oder Produktfamilie und relevante Herstellungsorte festlegen.</p></article>
+            <article><strong>Prozessaufnahme</strong><p>Wesentliche Herstellungsschritte und Fremdfertigung erfassen.</p></article>
+            <article><strong>Nachweise</strong><p>Unterlagen und Informationen zur tatsächlichen Ausführung prüfen.</p></article>
+            <article><strong>Audit</strong><p>Produktionsfall gegen die Kriterien des Standards bewerten.</p></article>
+            <article><strong>Review</strong><p>Prüfergebnis fachlich kontrollieren und offene Punkte dokumentieren.</p></article>
+            <article><strong>Entscheidung</strong><p>Zertifizierungsstatus festlegen und bei Freigabe öffentlich registrieren.</p></article>
+          </div>
+        </div>
+      </section>
+
       <section className="decisionRule">
         <div className="shell decisionRuleInner">
           <div className="sectionNo">ENTSCHEIDUNGSREGEL</div>
@@ -110,10 +134,16 @@ export default function StandardPage() {
       </section>
 
       <section className="standardClose shell">
-        <p>
-          Regeln zu Standardversionen, Prüfrollen, Statusänderungen und Markennutzung werden unter Transparenz & Governance dokumentiert.
-        </p>
-        <Link className="textLink" href="/transparenz">Transparenz & Governance ansehen →</Link>
+        <div>
+          <p>
+            Die öffentliche Arbeitsfassung des Standards ist versioniert dokumentiert.
+            Regeln zu Prüfrollen, Statusänderungen und Markennutzung werden unter Transparenz & Governance geführt.
+          </p>
+        </div>
+        <div className="standardCloseLinks">
+          <Link className="textLink" href="/dokumente/standard-0-1">Arbeitsstandard 0.1 öffnen →</Link>
+          <Link className="textLink" href="/transparenz">Transparenz & Governance →</Link>
+        </div>
       </section>
 
       <SiteFooter />

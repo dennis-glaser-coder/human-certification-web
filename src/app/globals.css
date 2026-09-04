@@ -1093,3 +1093,223 @@ p{line-height:1.7}
   .verifyModuleForm button{width:100%;height:42px}
   .footerNav{grid-template-columns:1fr}
 }
+
+
+/* ===== Trust architecture & real documentary imagery ===== */
+.documentarySection{
+  padding:88px 0;
+  background:var(--white);
+  border-bottom:1px solid var(--stone);
+}
+.documentaryIntro{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:84px;
+  margin-bottom:42px;
+}
+.documentaryIntro h2{
+  margin:14px 0 0;
+  max-width:650px;
+  font-size:clamp(38px,3.8vw,53px);
+  line-height:1.06;
+}
+.documentaryIntro>p{margin:0;max-width:560px;color:var(--muted);font-size:12px}
+.documentaryGrid{
+  display:grid;
+  grid-template-columns:1.45fr .75fr;
+  gap:18px;
+}
+.documentaryFigure{margin:0}
+.documentaryFigure img{
+  width:100%;
+  height:410px;
+  object-fit:cover;
+  filter:saturate(.78) contrast(1.02);
+}
+.documentaryFigure:not(.documentaryWide) img{height:410px}
+.documentaryFigure figcaption{
+  padding-top:9px;
+  color:var(--muted-soft);
+  font-size:7px;
+  line-height:1.5;
+}
+
+.institutionalSection{
+  border-top:1px solid var(--stone);
+  background:var(--white);
+}
+.institutionalGrid{display:grid;grid-template-columns:repeat(3,1fr)}
+.institutionalGrid>a{
+  min-height:158px;
+  padding:25px 26px 22px 0;
+  border-right:1px solid var(--stone);
+  text-decoration:none;
+}
+.institutionalGrid>a:not(:first-child){padding-left:26px}
+.institutionalGrid>a:last-child{border-right:0}
+.institutionalGrid span{
+  display:block;
+  margin-bottom:26px;
+  color:var(--blue);
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.12em;
+}
+.institutionalGrid strong{
+  display:block;
+  max-width:320px;
+  margin-bottom:15px;
+  font-family:"Source Serif 4",Georgia,serif;
+  font-size:20px;
+  line-height:1.25;
+  font-weight:400;
+}
+.institutionalGrid small{color:var(--muted-soft);font-size:8px}
+.institutionalGrid>a:hover small{color:var(--blue)}
+
+.auditProcessSection{
+  padding:78px 0;
+  background:var(--white);
+  border-top:1px solid var(--stone);
+  border-bottom:1px solid var(--stone);
+}
+.auditProcessGrid{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  border-top:1px solid var(--ink);
+}
+.auditProcessGrid article{
+  min-height:168px;
+  padding:21px 18px 18px 0;
+  border-right:1px solid var(--stone);
+}
+.auditProcessGrid article:not(:first-child){padding-left:18px}
+.auditProcessGrid article:last-child{border-right:0}
+.auditProcessGrid strong{display:block;margin-bottom:24px;font-size:10px}
+.auditProcessGrid p{margin:0;color:var(--muted);font-size:9px}
+.standardCloseLinks{display:flex;gap:26px;flex-wrap:wrap}
+
+.aboutPurpose{padding:78px 0;background:var(--white);border-top:1px solid var(--stone);border-bottom:1px solid var(--stone)}
+.aboutPurposeGrid,.aboutStatusGrid,.versionPolicyGrid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:84px;
+  align-items:start;
+}
+.aboutPurposeGrid h2,.aboutStatusGrid h2,.versionPolicyGrid h2{
+  margin:14px 0 0;
+  max-width:650px;
+  font-size:clamp(38px,3.8vw,53px);
+  line-height:1.06;
+}
+.aboutPurposeGrid>div:last-child p,.aboutStatusGrid>div:last-child p,.versionPolicyGrid>p{
+  color:var(--muted);
+  font-size:12px;
+}
+.aboutPrinciples{padding:78px 0}
+.aboutPrinciplesGrid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink)}
+.aboutPrinciplesGrid article{
+  min-height:145px;
+  padding:22px 28px 20px 0;
+  border-bottom:1px solid var(--stone);
+}
+.aboutPrinciplesGrid article:nth-child(odd){padding-right:34px;border-right:1px solid var(--stone)}
+.aboutPrinciplesGrid article:nth-child(even){padding-left:34px}
+.aboutPrinciplesGrid strong{display:block;margin-bottom:10px;font-size:11px}
+.aboutPrinciplesGrid p{margin:0;color:var(--muted);font-size:10px}
+.aboutStatus{padding:78px 0;background:var(--ink);color:var(--white)}
+.aboutStatusGrid>div:last-child p{color:rgba(255,255,255,.66)}
+.aboutStatusLinks{display:flex;gap:25px;flex-wrap:wrap;margin-top:20px}
+
+.documentsSection{padding:8px 0 88px}
+.documentList{border-top:1px solid var(--ink)}
+.documentListHead,.documentRow{
+  display:grid;
+  grid-template-columns:1.8fr .7fr .5fr .35fr;
+  gap:24px;
+}
+.documentListHead{
+  padding:11px 0;
+  border-bottom:1px solid var(--stone);
+  color:var(--muted-soft);
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:.11em;
+}
+.documentRow{padding:23px 0;border-bottom:1px solid var(--stone);align-items:start}
+.documentRow small{display:block;margin-bottom:6px;color:var(--blue);font-size:7px;font-weight:700;letter-spacing:.1em}
+.documentRow strong{font-size:12px}
+.documentRow p{margin:7px 0 0;max-width:600px;color:var(--muted);font-size:9px}
+.documentRow>span,.documentRow time{font-size:9px;color:var(--muted)}
+.documentRow>a{justify-self:end;color:var(--blue);font-size:9px;font-weight:700;text-decoration:none}
+.versionPolicy{padding:72px 0;background:var(--white);border-top:1px solid var(--stone)}
+
+.standardDocument{padding:58px 0 88px;max-width:940px}
+.standardDocumentHeader{
+  padding-bottom:27px;
+  border-bottom:2px solid var(--ink);
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:55px;
+}
+.standardDocumentHeader>div>span{font-size:8px;font-weight:700;letter-spacing:.13em;color:var(--blue)}
+.standardDocumentHeader h1{margin:8px 0 0;font-size:58px}
+.standardDocumentHeader dl{margin:0}
+.standardDocumentHeader dl div{display:grid;grid-template-columns:105px 1fr;gap:20px;padding:7px 0;border-top:1px solid var(--stone)}
+.standardDocumentHeader dt{font-size:8px;color:var(--muted-soft)}
+.standardDocumentHeader dd{margin:0;font-size:9px;font-weight:600}
+.standardDocument>section{padding:34px 0;border-bottom:1px solid var(--stone)}
+.standardDocument>section h2{margin:0 0 16px;font-size:27px}
+.standardDocument>section>p{max-width:760px;color:var(--muted);font-size:11px}
+.standardDocument>section blockquote{
+  margin:0;
+  max-width:780px;
+  font-size:27px;
+  line-height:1.32;
+}
+.standardDocumentCriteria{border-top:1px solid var(--ink)}
+.standardDocumentCriteria>div{display:grid;grid-template-columns:180px 1fr;gap:28px;padding:14px 0;border-bottom:1px solid var(--stone)}
+.standardDocumentCriteria strong{font-size:10px}
+.standardDocumentCriteria p{margin:0;color:var(--muted);font-size:10px}
+
+.footerNav{grid-template-columns:repeat(4,1fr)}
+
+@media(max-width:1020px){
+  .documentaryIntro,.aboutPurposeGrid,.aboutStatusGrid,.versionPolicyGrid{grid-template-columns:1fr;gap:30px}
+  .documentaryGrid{grid-template-columns:1fr 1fr}
+  .documentaryFigure img,.documentaryFigure:not(.documentaryWide) img{height:330px}
+  .auditProcessGrid{grid-template-columns:1fr 1fr 1fr}
+  .auditProcessGrid article:nth-child(3n){border-right:0}
+  .auditProcessGrid article:nth-child(n+4){border-top:1px solid var(--stone)}
+  .institutionalGrid{grid-template-columns:1fr}
+  .institutionalGrid>a,.institutionalGrid>a:not(:first-child){min-height:auto;padding:20px 0;border-right:0;border-top:1px solid var(--stone)}
+  .institutionalGrid>a:first-child{border-top:0}
+  .institutionalGrid span{margin-bottom:10px}
+  .footerNav{grid-template-columns:1fr 1fr}
+}
+@media(max-width:760px){
+  .documentarySection{padding:60px 0}
+  .documentaryIntro{margin-bottom:28px}
+  .documentaryIntro h2,.aboutPurposeGrid h2,.aboutStatusGrid h2,.versionPolicyGrid h2{font-size:34px}
+  .documentaryGrid{grid-template-columns:1fr}
+  .documentaryFigure img,.documentaryFigure:not(.documentaryWide) img{height:270px}
+  .auditProcessSection{padding:58px 0}
+  .auditProcessGrid{grid-template-columns:1fr}
+  .auditProcessGrid article,.auditProcessGrid article:not(:first-child){
+    min-height:auto;padding:16px 0;border-right:0;border-top:1px solid var(--stone)
+  }
+  .auditProcessGrid article:first-child{border-top:0}
+  .auditProcessGrid strong{margin-bottom:6px}
+  .aboutPurpose,.aboutPrinciples,.aboutStatus,.versionPolicy{padding:58px 0}
+  .aboutPrinciplesGrid{grid-template-columns:1fr}
+  .aboutPrinciplesGrid article,.aboutPrinciplesGrid article:nth-child(odd),.aboutPrinciplesGrid article:nth-child(even){
+    min-height:auto;padding:17px 0;border-right:0
+  }
+  .documentListHead{display:none}
+  .documentRow{grid-template-columns:1fr;gap:8px}
+  .documentRow>a{justify-self:start}
+  .standardDocument{padding:42px 0 64px}
+  .standardDocumentHeader{grid-template-columns:1fr;gap:24px}
+  .standardDocumentHeader h1{font-size:46px}
+  .standardDocumentCriteria>div{grid-template-columns:1fr;gap:5px}
+}
