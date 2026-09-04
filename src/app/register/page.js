@@ -94,9 +94,9 @@ export default function RegisterPage() {
               </div>
               <div>
                 <small>STATUS</small>
-                <span className={\`statusBadge \${record.status === 'active' ? 'active' : ''}\`}>{labels[record.status] ?? record.status}</span>
+                <span className={'statusBadge ' + (record.status === 'active' ? 'active' : '')}>{labels[record.status] ?? record.status}</span>
               </div>
-              <Link href={\`/c/\${encodeURIComponent(record.public_id)}\`} aria-label={\`\${record.public_id} öffnen\`}>Öffnen →</Link>
+              <Link href={'/c/' + encodeURIComponent(record.public_id)} aria-label={record.public_id + ' öffnen'}>Öffnen →</Link>
             </article>
           ))}
         </div>
