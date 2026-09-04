@@ -72,7 +72,7 @@ export default function ManufacturerPage() {
         <div className="eyebrow">FÜR HERSTELLER · PILOTPHASE</div>
         <h1>Menschliche Wertschöpfung <em>glaubwürdig belegen.</em></h1>
         <p className="lead">
-          Wir suchen Unternehmen, mit denen wir Standard, Nachweise und Auditprozess an realen Produkten und Produktionsabläufen validieren – von der Manufaktur bis zur Industrie.
+          Wir suchen Unternehmen, mit denen wir Standard, Nachweise und Auditprozess an realen Produkten und Produktionsabläufen validieren – von der Manufaktur bis zu menschlich geprägten Produktionsprozessen mit Maschinenunterstützung.
         </p>
       </section>
 
@@ -129,7 +129,7 @@ export default function ManufacturerPage() {
 
           <label>
             Kurz zum Produkt oder Fertigungsprozess
-            <textarea name="message" value={form.message} onChange={change} rows="5" placeholder="Was wird hergestellt und welche menschlichen Arbeitsschritte sind relevant?" />
+            <textarea name="message" value={form.message} onChange={change} rows="5" placeholder="Was wird hergestellt? Welche Arbeitsschritte führen Menschen tatsächlich aus? Welche Maschinen oder automatisierten Prozesse sind beteiligt?" />
           </label>
 
           <label className="honeypot" aria-hidden="true">
