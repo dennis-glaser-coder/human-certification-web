@@ -4,32 +4,42 @@ export default function SiteFooter() {
   const assetBase = process.env.GITHUB_PAGES === 'true' ? '/human-certification-web' : '';
 
   return (
-    <footer className="siteFooter compactFooter">
-      <div className="shell compactFooterMain">
-        <div className="compactFooterBrand compactFooterBrandWithSeal">
+    <footer className="siteFooter">
+      <div className="shell footerMain">
+        <div className="footerBrand">
           <img
             className="footerSealTemporary"
             src={`${assetBase}/brand/made-by-humans-seal.png`}
             alt=""
             aria-hidden="true"
           />
-          <span className="compactFooterBrandText">
+          <div>
             <strong>MADE BY HUMANS</strong>
-            <span>Human-Made Product Standard</span>
-          </span>
+            <span>Standard für menschliche Herstellung</span>
+          </div>
         </div>
 
-        <nav className="compactFooterNav" aria-label="Footer Navigation">
-          <Link href="/standard">Standard</Link>
-          <Link href="/fuer-hersteller">Für Hersteller</Link>
-          <Link href="/register">Public Register</Link>
-          <Link href="/pruefen">Zertifizierung prüfen</Link>
-        </nav>
+        <div className="footerNav">
+          <div>
+            <strong>STANDARD</strong>
+            <Link href="/standard">Arbeitsstandard</Link>
+            <Link href="/transparenz">Transparenz & Governance</Link>
+          </div>
+          <div>
+            <strong>HERSTELLER</strong>
+            <Link href="/fuer-hersteller">Pilotphase</Link>
+          </div>
+          <div>
+            <strong>VERIFIZIERUNG</strong>
+            <Link href="/register">Public Register</Link>
+            <Link href="/pruefen">Zertifizierungs-ID prüfen</Link>
+          </div>
+        </div>
       </div>
 
-      <div className="shell compactFooterMeta">
-        <span>Standard · Audit · Traceability · Public Register</span>
-        <span>Finales Zertifizierungszeichen in Entwicklung.</span>
+      <div className="shell footerMeta">
+        <span>Aktueller Projektstatus: Pilot- und Validierungsphase.</span>
+        <span>Finales Zertifizierungszeichen und finaler Markenname noch nicht festgelegt.</span>
       </div>
     </footer>
   );
