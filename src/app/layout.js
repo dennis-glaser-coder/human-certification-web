@@ -1,8 +1,11 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'Human Certification — nachweisbar menschlich gefertigt',
-  description: 'Ein unabhängiger Standard für nachvollziehbar menschlich gefertigte Produkte.',
+  title: {
+    default: 'Human Certification — Standardprojekt',
+    template: '%s · Human Certification',
+  },
+  description: 'Ein unabhängiges Standardprojekt für nachvollziehbar menschlich gefertigte physische Produkte.',
 };
 
 export default function RootLayout({ children }) {
