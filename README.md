@@ -55,3 +55,11 @@ Neutraler technischer Arbeitstitel für das Siegelprojekt. Der finale Markenname
 
 ## Demo
 `HC-DEMO-0001` ist ausschließlich ein technischer Demodatensatz und ausdrücklich keine echte Zertifizierung.
+
+
+## Corporate Identity
+Die verbindliche Web-CI liegt unter `docs/CI.md`.
+
+Richtung: **Modern Human Standard / Editorial Certification**
+
+Die Website darf nicht von einem provisorischen Logo oder Zertifizierungszeichen abhängig gemacht werden. Bis zur finalen Markenentscheidung wird `MADE BY HUMANS` ausschließlich typografisch geführt.
