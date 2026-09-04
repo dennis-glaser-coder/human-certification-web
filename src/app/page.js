@@ -52,7 +52,7 @@ export default function Home() {
             <div className="markPanelBody">
               <img
                 className="heroSeal"
-                src={\`\${assetBase}/brand/made-by-humans-seal.png\`}
+                src={assetBase + '/brand/made-by-humans-seal.png'}
                 alt="Made by Humans Zertifizierungszeichen"
                 width="188"
                 height="188"
