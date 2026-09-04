@@ -26,7 +26,7 @@ export default function StandardPage() {
       <SiteHeader />
 
       <section className="pageHero shell">
-        <div className="eyebrow">ARBEITSSTANDARD · PILOTPHASE</div>
+        <div className="eyebrow">ARBEITSSTANDARD</div>
         <h1>Wann gilt ein Produkt als nachweisbar menschlich gefertigt?</h1>
         <p className="lead">
           Der Arbeitsstandard legt fest, welche menschlichen Herstellungsschritte wesentlich sein müssen
