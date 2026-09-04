@@ -71,8 +71,8 @@ export default function PublicCertificatePage() {
 
       <section className="certificatePage shell">
         <div className="certificateEyebrow">
-          <span>ÖFFENTLICHER ZERTIFIKATSDATENSATZ</span>
-          <Link href="/register">Zum Register →</Link>
+          <span>PUBLIC CERTIFICATION RECORD</span>
+          <Link href="/register">Public Register →</Link>
         </div>
 
         {state.loading && <div className="certificateMessage">Zertifikat wird geladen …</div>}
@@ -83,17 +83,19 @@ export default function PublicCertificatePage() {
             <section className={`certificateSummary status-${state.record.status}`}>
               <div className="certificateSummaryTop">
                 <div>
-                  <small>ZERTIFIZIERUNGS-ID</small>
+                  <small>CERTIFICATION ID</small>
                   <h1>{state.record.public_id}</h1>
                 </div>
                 <span className={`statusBadge ${state.record.status === 'active' ? 'active' : ''}`}>
-                  ● {statusLabels[state.record.status] ?? state.record.status}
+                  {statusLabels[state.record.status] ?? state.record.status}
                 </span>
               </div>
 
               <div className="certificateMainGrid">
-                <div className="certificateSealLarge" aria-hidden="true">
-                  <span>H</span>
+                <div className="certificateMetaPanel">
+                  <span>MADE BY HUMANS</span>
+                  <strong>PUBLIC RECORD</strong>
+                  <p>Dieser Datensatz ist das öffentliche Gegenstück zur Zertifizierungskennzeichnung auf dem Produkt.</p>
                 </div>
 
                 <dl className="certificateFacts">
@@ -126,7 +128,7 @@ export default function PublicCertificatePage() {
 
               {state.record.public_note && (
                 <div className="certificatePublicNote">
-                  <small>ÖFFENTLICHER HINWEIS</small>
+                  <small>PUBLIC NOTE</small>
                   <p>{state.record.public_note}</p>
                 </div>
               )}
@@ -134,9 +136,9 @@ export default function PublicCertificatePage() {
 
             <section className="certificateHistory">
               <div className="certificateHistoryIntro">
-                <div className="sectionNo">STATUS-HISTORIE</div>
-                <h2>Was mit dieser Zertifizierung passiert ist.</h2>
-                <p>Öffentliche Statusänderungen bleiben sichtbar. So ist nicht nur der heutige Zustand, sondern auch die Entwicklung der Zertifizierung nachvollziehbar.</p>
+                <div className="sectionNo">TRACEABILITY · STATUS HISTORY</div>
+                <h2>Die Zertifizierung bleibt über ihren gesamten Lebenszyklus nachvollziehbar.</h2>
+                <p>Öffentliche Statusänderungen werden dokumentiert. So ist nicht nur der aktuelle Zustand, sondern auch die Entwicklung der Zertifizierung überprüfbar.</p>
               </div>
 
               <div className="certificateTimeline">
@@ -146,10 +148,8 @@ export default function PublicCertificatePage() {
 
                 {state.events.map((event) => (
                   <article className="timelineEvent" key={event.id}>
-                    <div className="timelineDate">
-                      {new Date(event.occurred_at).toLocaleDateString('de-DE')}
-                    </div>
-                    <div className="timelineDot" aria-hidden="true"></div>
+                    <div className="timelineDate">{new Date(event.occurred_at).toLocaleDateString('de-DE')}</div>
+                    <div className="timelineRule" aria-hidden="true"></div>
                     <div>
                       <strong>{event.title}</strong>
                       {event.status_after && <span>{statusLabels[event.status_after] ?? event.status_after}</span>}
