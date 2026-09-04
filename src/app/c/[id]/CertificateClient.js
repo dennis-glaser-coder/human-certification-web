@@ -68,7 +68,7 @@ export default function CertificateClient({ id }) {
 
       <section className="certificatePage shell">
         <div className="certificateEyebrow">
-          <span>PUBLIC CERTIFICATION RECORD</span>
+          <span>ÖFFENTLICHER ZERTIFIKATSDATENSATZ</span>
           <Link href="/register">Public Register →</Link>
         </div>
 
@@ -80,7 +80,7 @@ export default function CertificateClient({ id }) {
             <section className={`certificateSummary status-${state.record.status}`}>
               <div className="certificateSummaryTop">
                 <div>
-                  <small>CERTIFICATION ID</small>
+                  <small>ZERTIFIZIERUNGS-ID</small>
                   <h1>{state.record.public_id}</h1>
                 </div>
                 <span className={`statusBadge ${state.record.status === 'active' ? 'active' : ''}`}>
@@ -91,14 +91,14 @@ export default function CertificateClient({ id }) {
               <div className="certificateMainGrid">
                 <div className="certificateMetaPanel">
                   <span>MADE BY HUMANS</span>
-                  <strong>PUBLIC RECORD</strong>
+                  <strong>ÖFFENTLICHER NACHWEIS</strong>
                   <p>Dieser Datensatz ist das öffentliche Gegenstück zur Zertifizierungskennzeichnung auf dem Produkt.</p>
                 </div>
 
                 <dl className="certificateFacts">
                   <div><dt>Hersteller</dt><dd>{state.record.products?.manufacturers?.name ?? '—'}</dd></div>
                   <div><dt>Produkt</dt><dd>{state.record.products?.name ?? '—'}</dd></div>
-                  <div><dt>Standardversion</dt><dd>{state.record.standard_versions?.version ?? '—'}</dd></div>
+                  <div><dt>Standard</dt><dd>{state.record.standard_versions?.title ?? state.record.standard_versions?.version ?? '—'}</dd></div>
                   <div><dt>Ausgestellt</dt><dd>{state.record.issued_at ? new Date(state.record.issued_at).toLocaleDateString('de-DE') : '—'}</dd></div>
                   <div><dt>Gültig bis</dt><dd>{state.record.valid_until ? new Date(state.record.valid_until).toLocaleDateString('de-DE') : '—'}</dd></div>
                   <div><dt>Zuletzt verifiziert</dt><dd>{state.record.last_verified_at ? new Date(state.record.last_verified_at).toLocaleDateString('de-DE') : '—'}</dd></div>
@@ -107,7 +107,7 @@ export default function CertificateClient({ id }) {
 
               {state.record.public_note && (
                 <div className="certificatePublicNote">
-                  <small>PUBLIC NOTE</small>
+                  <small>ÖFFENTLICHER HINWEIS</small>
                   <p>{state.record.public_note}</p>
                 </div>
               )}
@@ -115,7 +115,7 @@ export default function CertificateClient({ id }) {
 
             <section className="certificateHistory">
               <div className="certificateHistoryIntro">
-                <div className="sectionNo">TRACEABILITY · STATUS HISTORY</div>
+                <div className="sectionNo">TRACEABILITY · STATUSVERLAUF</div>
                 <h2>Die Zertifizierung bleibt über ihren gesamten Lebenszyklus nachvollziehbar.</h2>
                 <p>Öffentliche Statusänderungen werden dokumentiert. So ist nicht nur der aktuelle Zustand, sondern auch die Entwicklung der Zertifizierung überprüfbar.</p>
               </div>
