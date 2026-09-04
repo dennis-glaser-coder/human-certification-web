@@ -15,11 +15,19 @@ const initialForm = {
   company_website: '',
 };
 
-const pilotSteps = [
-  'Produkt und Wertschöpfungskette verstehen',
-  'relevante menschliche Tätigkeiten sauber abgrenzen',
-  'geeignete Nachweise und Traceability definieren',
-  'Audit und öffentliche Registerdarstellung validieren',
+const suitable = [
+  'physisches Produkt mit nachvollziehbarem Herstellungsprozess',
+  'wesentliche eigene oder transparent dokumentierte Fertigungsschritte',
+  'Bereitschaft, Produktionsablauf und Nachweise offenzulegen',
+  'Produkt aus einer für den Pilot geeigneten Kategorie',
+];
+
+const pilotFlow = [
+  ['Erstgespräch', 'Produkt und Herstellungsprozess grob einordnen.'],
+  ['Prozessaufnahme', 'Wesentliche Arbeitsschritte, Standorte und Fremdfertigung erfassen.'],
+  ['Nachweise', 'Geeignete Unterlagen und Informationen zum Herstellungsprozess zusammenstellen.'],
+  ['Probeaudit', 'Arbeitsstandard am realen Produkt testen und Aufwand messen.'],
+  ['Auswertung', 'Erkenntnisse für Standard, Preislogik und Register übernehmen.'],
 ];
 
 export default function ManufacturerPage() {
@@ -40,7 +48,7 @@ export default function ManufacturerPage() {
 
     const supabase = getSupabaseBrowserClient();
     if (!supabase) {
-      setState({ loading: false, success: false, message: 'Die Formularanbindung ist in dieser Vorschau noch nicht konfiguriert.' });
+      setState({ loading: false, success: false, message: 'Das Formular ist derzeit nicht erreichbar.' });
       return;
     }
 
@@ -61,45 +69,65 @@ export default function ManufacturerPage() {
     }
 
     setForm(initialForm);
-    setState({ loading: false, success: true, message: 'Vielen Dank. Wir haben Ihr Interesse an der Pilotphase vorgemerkt.' });
+    setState({ loading: false, success: true, message: 'Vielen Dank. Wir haben Ihre Vormerkung erhalten.' });
   }
 
   return (
     <main>
       <SiteHeader />
 
-      <section className="pageHero shell manufacturerHero">
+      <section className="pageHero shell">
         <div className="eyebrow">FÜR HERSTELLER · PILOTPHASE</div>
-        <h1>Menschliche Wertschöpfung <em>glaubwürdig belegen.</em></h1>
+        <h1>Pilotunternehmen für reale Produktionsfälle gesucht.</h1>
         <p className="lead">
-          Wir suchen Unternehmen, mit denen wir Standard, Nachweise und Auditprozess an realen Produkten und Produktionsabläufen validieren – von der Manufaktur bis zu menschlich geprägten Produktionsprozessen mit Maschinenunterstützung.
+          In der Pilotphase wird geprüft, ob der Arbeitsstandard über unterschiedliche Produktkategorien hinweg
+          verständlich, prüfbar und wirtschaftlich anwendbar ist.
         </p>
       </section>
 
-      <section className="shell pilotGrid">
-        <div className="pilotInfo">
-          <div className="sectionNo">WAS WIR IN DER PILOTPHASE PRÜFEN</div>
-          <h2>Der Standard muss unter realen Bedingungen funktionieren.</h2>
-          <p className="pilotLead">
-            Entscheidend ist nicht, ob ein Produkt vollständig von Hand entsteht. Entscheidend ist, welche menschlichen Tätigkeiten für seine Wertschöpfung wesentlich sind und wie sich diese nachvollziehbar belegen lassen.
+      <section className="shell manufacturerFit">
+        <div className="sectionIntro compact">
+          <div className="sectionNo">WANN EIN PILOT SINNVOLL IST</div>
+          <h2>Geeignet sind Hersteller mit einem klar nachvollziehbaren Produktprozess.</h2>
+        </div>
+
+        <div className="fitGrid">
+          {suitable.map((item) => <div key={item}>{item}</div>)}
+        </div>
+        <p className="fitNote">
+          Lebensmittel, Medizinprodukte und andere stark regulierte Kategorien sind für die erste Validierungsphase nicht vorgesehen.
+        </p>
+      </section>
+
+      <section className="pilotProcess">
+        <div className="shell">
+          <div className="sectionIntro compact">
+            <div className="sectionNo">ABLAUF</div>
+            <h2>So ist ein Probeaudit derzeit aufgebaut.</h2>
+          </div>
+
+          <div className="pilotFlow">
+            {pilotFlow.map(([title, copy]) => (
+              <article key={title}>
+                <strong>{title}</strong>
+                <p>{copy}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="shell interestSection">
+        <div className="interestIntro">
+          <div className="sectionNo">VORMERKUNG</div>
+          <h2>Produkt für die Pilotphase vorstellen.</h2>
+          <p>
+            Die Vormerkung ist unverbindlich. Sie ist noch kein Zertifizierungsantrag und enthält keine Zusage
+            zur späteren Nutzung des Zeichens.
           </p>
-
-          <div className="pilotPoints pilotPointsV2">
-            {pilotSteps.map((item) => <p key={item}>{item}</p>)}
-          </div>
-
-          <div className="pilotNote">
-            <strong>UNVERBINDLICHE VORMERKUNG</strong>
-            <p>Eine Vormerkung ist noch kein Zertifizierungsantrag und keine Zusage. Sie dient der Auswahl geeigneter Pilotfälle.</p>
-          </div>
         </div>
 
         <form className="interestForm" onSubmit={submit}>
-          <div className="formTop">
-            <span>PILOTPHASE</span>
-            <strong>Interesse vormerken</strong>
-          </div>
-
           <label>
             Unternehmen *
             <input required minLength="2" maxLength="180" name="company_name" value={form.company_name} onChange={change} placeholder="Unternehmensname" />
@@ -123,13 +151,13 @@ export default function ManufacturerPage() {
             </label>
             <label>
               Produkt / Kategorie
-              <input name="product_category" value={form.product_category} onChange={change} placeholder="z. B. Möbel, Textil, Industrieprodukt" />
+              <input name="product_category" value={form.product_category} onChange={change} placeholder="z. B. Lederwaren, Möbel, Keramik" />
             </label>
           </div>
 
           <label>
-            Kurz zum Produkt oder Fertigungsprozess
-            <textarea name="message" value={form.message} onChange={change} rows="5" placeholder="Was wird hergestellt? Welche Arbeitsschritte führen Menschen tatsächlich aus? Welche Maschinen oder automatisierten Prozesse sind beteiligt?" />
+            Produkt und Herstellung kurz beschreiben
+            <textarea name="message" value={form.message} onChange={change} rows="6" placeholder="Was wird hergestellt? Welche wesentlichen Herstellungsschritte erfolgen durch Menschen? Wo findet die Fertigung statt?" />
           </label>
 
           <label className="honeypot" aria-hidden="true">
@@ -142,7 +170,7 @@ export default function ManufacturerPage() {
           </button>
 
           {state.message && <p className={state.success ? 'formMessage success' : 'formMessage'}>{state.message}</p>}
-          <small className="formLegal">Die Angaben werden ausschließlich zur Kontaktaufnahme im Rahmen der Pilotphase gespeichert. Eine verbindliche Zertifizierung entsteht dadurch nicht.</small>
+          <small className="formLegal">Die Angaben werden ausschließlich zur Kontaktaufnahme im Rahmen der Pilotphase gespeichert.</small>
         </form>
       </section>
 
