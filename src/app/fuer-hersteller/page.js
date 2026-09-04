@@ -15,6 +15,14 @@ const initialForm = {
   company_website: '',
 };
 
+const benefits = [
+  ['Produktbezogenes Zeichen', 'Die Kennzeichnung bezieht sich auf ein klar abgegrenztes geprüftes Produkt oder eine Produktfamilie.'],
+  ['Eindeutige ID', 'Eine Zertifizierungs-ID verbindet die Kennzeichnung mit dem zugehörigen öffentlichen Datensatz.'],
+  ['QR-Verifizierung', 'Der öffentliche Nachweis kann direkt von Verpackung, Produktseite oder Verkaufsunterlagen erreichbar gemacht werden.'],
+  ['Public Register', 'Hersteller, Produkt, Standardversion und aktueller Status werden nachvollziehbar zugeordnet.'],
+  ['Freigegebene Kommunikation', 'Regeln legen fest, wie die geprüfte Aussage auf Produkt, Verpackung und in produktbezogener Werbung verwendet werden darf.'],
+];
+
 const suitable = [
   'physisches Produkt mit klar beschreibbarem Herstellungsprozess',
   'wesentliche menschliche Herstellungsschritte sind nachvollziehbar',
@@ -42,7 +50,7 @@ export default function ManufacturerPage() {
     event.preventDefault();
 
     if (form.company_website) {
-      setState({ loading: false, success: true, message: 'Vielen Dank. Ihre Anfrage wurde vorgemerkt.' });
+      setState({ loading: false, success: true, message: 'Vielen Dank. Ihre Anfrage wurde erhalten.' });
       return;
     }
 
@@ -69,7 +77,7 @@ export default function ManufacturerPage() {
     }
 
     setForm(initialForm);
-    setState({ loading: false, success: true, message: 'Vielen Dank. Wir haben Ihre Vormerkung erhalten.' });
+    setState({ loading: false, success: true, message: 'Vielen Dank. Wir haben Ihre Anfrage erhalten.' });
   }
 
   return (
@@ -78,22 +86,46 @@ export default function ManufacturerPage() {
 
       <section className="pageHero shell">
         <div className="eyebrow">FÜR HERSTELLER</div>
-        <h1>Produkte und Herstellungsprozesse zur Validierung vorstellen.</h1>
+        <h1>Ein überprüfbarer Produktclaim für menschliche Herstellung.</h1>
         <p className="lead">
-          Ausgewählte Produktionsfälle werden genutzt, um Kriterien, Nachweisanforderungen und Prüfablauf
-          über unterschiedliche Produktkategorien hinweg unter realen Bedingungen zu validieren.
+          Das Made by Humans System ist darauf ausgelegt, eine erfolgreiche Produktprüfung mit Kennzeichnung,
+          eindeutiger Zertifizierungs-ID, öffentlichem Registereintrag und klaren Markennutzungsregeln zu verbinden.
         </p>
+      </section>
+
+      <section className="manufacturerBenefits">
+        <div className="shell">
+          <div className="sectionIntro compact">
+            <div>
+              <div className="sectionNo">WAS DAS SYSTEM BEREITSTELLEN SOLL</div>
+              <h2>Die Prüfung soll am Produkt sichtbar und überprüfbar werden.</h2>
+            </div>
+            <p>
+              Die Zertifizierung ist nicht als internes Audit-Endprodukt gedacht.
+              Ihr Wert entsteht erst, wenn die geprüfte Aussage eindeutig kommuniziert und öffentlich verifiziert werden kann.
+            </p>
+          </div>
+
+          <div className="manufacturerBenefitGrid">
+            {benefits.map(([title, copy]) => (
+              <article key={title}>
+                <strong>{title}</strong>
+                <p>{copy}</p>
+              </article>
+            ))}
+          </div>
+        </div>
       </section>
 
       <section className="shell manufacturerFit">
         <div className="sectionIntro compact">
           <div>
-            <div className="sectionNo">TEILNAHME</div>
-            <h2>Geeignet sind Produkte mit einem nachvollziehbaren Herstellungsprozess.</h2>
+            <div className="sectionNo">AKTUELLE VALIDIERUNG</div>
+            <h2>Gesucht werden reale Produkte mit nachvollziehbaren Herstellungsprozessen.</h2>
           </div>
           <p>
-            Für die erste Validierung stehen Produktkategorien im Vordergrund, bei denen die wesentlichen
-            Herstellungsschritte klar abgrenzbar und praktisch prüfbar sind.
+            Ausgewählte Produktionsfälle werden genutzt, um Kriterien, Nachweisanforderungen und Prüfablauf
+            unter realen Bedingungen zu testen und vor einer kommerziellen Zertifikatsvergabe zu schärfen.
           </p>
         </div>
 
@@ -127,10 +159,10 @@ export default function ManufacturerPage() {
 
       <section className="shell interestSection">
         <div className="interestIntro">
-          <div className="sectionNo">VORMERKUNG</div>
-          <h2>Produkt vorstellen.</h2>
+          <div className="sectionNo">PRODUKT VORSTELLEN</div>
+          <h2>Produkt zur Validierung einreichen.</h2>
           <p>
-            Die Vormerkung ist unverbindlich. Sie ist kein Zertifizierungsantrag und enthält keine Zusage
+            Die Anfrage ist unverbindlich. Sie ist kein Zertifizierungsantrag und enthält keine Zusage
             zur späteren Nutzung des Zeichens.
           </p>
         </div>
@@ -174,7 +206,7 @@ export default function ManufacturerPage() {
           </label>
 
           <button className="button primary formButton" disabled={state.loading}>
-            {state.loading ? 'Wird gesendet …' : 'Unverbindlich vormerken'}
+            {state.loading ? 'Wird gesendet …' : 'Produkt zur Validierung vorstellen'}
           </button>
 
           {state.message && <p className={state.success ? 'formMessage success' : 'formMessage'}>{state.message}</p>}
