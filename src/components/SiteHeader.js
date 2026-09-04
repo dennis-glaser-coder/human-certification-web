@@ -5,7 +5,7 @@ export default function SiteHeader() {
     <header className="siteHeader shell">
       <Link className="brandLockup" href="/" aria-label="Made by Humans Startseite">
         <span className="brandName">MADE BY HUMANS</span>
-        <span className="brandDescriptor">Independent Certification Standard</span>
+        <span className="brandDescriptor">Human-Made Product Standard</span>
       </Link>
 
       <nav className="mainNav" aria-label="Hauptnavigation">
