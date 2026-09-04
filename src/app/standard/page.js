@@ -12,11 +12,11 @@ const criteria = [
 ];
 
 const cases = [
-  ['Ledertasche: Zuschnitt und Fertigung durch Menschen', 'Grundsätzlich ja', 'Die menschliche Herstellung prägt die Entstehung des Endprodukts.'],
-  ['Ledertasche: digitaler Zuschnitt, manuelle Montage und Finish', 'Einzelfall grundsätzlich ja', 'Der digitale Teilprozess ersetzt nicht die wesentlichen weiteren Herstellungsschritte.'],
-  ['Fertige Importtasche mit eigenem Label', 'Nein', 'Das verkaufsfertige Produkt existiert bereits vor dem eigenen Arbeitsschritt.'],
+  ['Ledertasche: Zuschnitt und Fertigung durch Menschen', 'Grundsätzlich zertifizierbar', 'Die menschliche Herstellung prägt die Entstehung des Endprodukts.'],
+  ['Ledertasche: digitaler Zuschnitt, manuelle Montage und Finish', 'Einzelfall grundsätzlich zertifizierbar', 'Der digitale Teilprozess ersetzt nicht die wesentlichen weiteren Herstellungsschritte.'],
+  ['Fertige Importtasche mit eigenem Label', 'Nicht zertifizierbar', 'Das verkaufsfertige Produkt existiert bereits vor dem eigenen Arbeitsschritt.'],
   ['Tisch: CNC-Zuschnitt, manuelle Anpassung, Montage und Finish', 'Grundsätzlich ja', 'Der automatisierte Zuschnitt ist ein Teilprozess; weitere wesentliche Herstellungsschritte erfolgen durch Menschen.'],
-  ['Tisch weitgehend automatisch gefertigt, nur Finish von Hand', 'Nein', 'Die verbleibende menschliche Tätigkeit ist für die Produktentstehung nicht mehr wesentlich.'],
+  ['Tisch weitgehend automatisch gefertigt, nur Finish von Hand', 'Nicht zertifizierbar', 'Die verbleibende menschliche Tätigkeit ist für die Produktentstehung nicht mehr wesentlich.'],
 ];
 
 const exclusions = [
