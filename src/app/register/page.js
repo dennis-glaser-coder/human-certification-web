@@ -58,10 +58,10 @@ export default function RegisterPage() {
       <SiteHeader />
 
       <section className="pageHero shell registerHero">
-        <div className="eyebrow">PUBLIC REGISTER · PILOTPHASE</div>
+        <div className="eyebrow">PUBLIC REGISTER</div>
         <h1>Zertifizierungsdaten öffentlich auffindbar machen.</h1>
         <p className="lead">
-          Das Register ist der öffentliche Nachweis zur Kennzeichnung. Während der Pilotphase ist ausschließlich
+          Das Register bildet den öffentlichen Nachweis zur Kennzeichnung ab. Aktuell ist ausschließlich
           ein technischer Beispieldatensatz hinterlegt.
         </p>
       </section>
@@ -104,7 +104,7 @@ export default function RegisterPage() {
         {!message && filtered.length === 0 && <div className="registerMessage">Keine passenden Datensätze gefunden.</div>}
 
         <div className="registerDisclosure">
-          <strong>Hinweis zur Pilotphase</strong>
+          <strong>Hinweis zum Beispieldatensatz</strong>
           <p>HC-DEMO-0001 ist ein technischer Beispieldatensatz und keine reale Zertifizierung.</p>
         </div>
       </section>
