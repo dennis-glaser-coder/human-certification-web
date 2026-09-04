@@ -70,7 +70,7 @@ export default function Home() {
         <div className="shell credibilityGrid">
           <div>
             <div className="sectionNo light">DIE GRUNDIDEE</div>
-            <p className="credibilityKicker">Ein einfaches Zeichen. Eine klare Aussage.</p>
+            <p className="credibilityKicker">Die zertifizierte Eigenschaft</p>
           </div>
           <div>
             <h2>Dieses Produkt wurde in seinen wesentlichen Herstellungsschritten durch Menschen gefertigt.</h2>
@@ -90,7 +90,7 @@ export default function Home() {
         <div className="sectionHeading split">
           <div>
             <div className="sectionNo">WAS „MENSCHLICH GEPRÄGT“ BEDEUTET</div>
-            <h2>Nicht ohne Maschinen. Aber auch nicht nur danebenstehen.</h2>
+            <h2>Maschinenunterstützung ist mit dem Standard vereinbar.</h2>
           </div>
           <p>
             Der Standard bewertet nicht, ob ein Produkt vollständig von Hand entsteht. Er prüft, ob Menschen die wesentlichen, produktprägenden Herstellungsschritte tatsächlich ausführen.
@@ -160,7 +160,7 @@ export default function Home() {
         <div className="shell registerProofGrid">
           <div className="registerProofCopy">
             <div className="sectionNo">PUBLIC REGISTER</div>
-            <h2>Das Zeichen auf dem Produkt braucht einen überprüfbaren Gegenpart.</h2>
+            <h2>Jede Kennzeichnung muss auf einen überprüfbaren öffentlichen Datensatz verweisen.</h2>
             <p>
               Jede spätere freigegebene Zertifizierung soll eine eindeutige ID und einen öffentlichen Datensatz erhalten. Dort werden Produkt, Hersteller, Standard, Status, Gültigkeit und relevante Statusänderungen nachvollziehbar.
             </p>
@@ -194,7 +194,7 @@ export default function Home() {
         <div className="shell pilotRealityGrid">
           <div>
             <div className="sectionNo light">PILOTPHASE</div>
-            <h2>Erst beweisen. Dann skalieren.</h2>
+            <h2>Pilotphase vor Skalierung.</h2>
           </div>
           <div>
             <p>
