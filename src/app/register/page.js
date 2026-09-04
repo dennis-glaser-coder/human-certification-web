@@ -58,15 +58,15 @@ export default function RegisterPage() {
       <SiteHeader />
 
       <section className="pageHero shell registerHero">
-        <div className="eyebrow">ÖFFENTLICHES ZERTIFIZIERUNGSREGISTER</div>
-        <h1>Prüfbar.<br /><em>Auch nach dem Kauf.</em></h1>
-        <p className="lead">Das Register macht sichtbar, welches Produkt nach welcher Standardversion zertifiziert wurde und welchen Status die Zertifizierung aktuell hat.</p>
+        <div className="eyebrow">PUBLIC REGISTER</div>
+        <h1>Öffentlich überprüfbar. <em>Nicht nur behauptet.</em></h1>
+        <p className="lead">Das Register zeigt, welches Produkt nach welcher Standardversion zertifiziert wurde und welchen Status die Zertifizierung aktuell hat.</p>
       </section>
 
       <section className="shell registerSection">
         <div className="registerToolbar">
           <div>
-            <span className="sectionNo">REGISTER</span>
+            <span className="sectionNo">CERTIFICATION RECORDS</span>
             <strong>{records.length} öffentlicher Datensatz{records.length === 1 ? '' : 'e'}</strong>
           </div>
           <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="ID, Hersteller oder Produkt suchen" aria-label="Register durchsuchen" />
@@ -78,29 +78,29 @@ export default function RegisterPage() {
           {filtered.map((record) => (
             <article className="registerRow" key={record.public_id}>
               <div className="registerId">
-                <small>ZERTIFIZIERUNGS-ID</small>
+                <small>CERTIFICATION ID</small>
                 <strong>{record.public_id}</strong>
               </div>
               <div>
-                <small>HERSTELLER</small>
+                <small>MANUFACTURER</small>
                 <strong>{record.products?.manufacturers?.name ?? '—'}</strong>
               </div>
               <div>
-                <small>PRODUKT</small>
+                <small>PRODUCT</small>
                 <strong>{record.products?.name ?? '—'}</strong>
               </div>
               <div>
                 <small>STATUS</small>
                 <span className={`statusBadge ${record.status === 'active' ? 'active' : ''}`}>{labels[record.status] ?? record.status}</span>
               </div>
-              <Link href={`/c/${encodeURIComponent(record.public_id)}`} aria-label={`${record.public_id} prüfen`}>→</Link>
+              <Link href={`/c/${encodeURIComponent(record.public_id)}`} aria-label={`${record.public_id} öffnen`}>→</Link>
             </article>
           ))}
         </div>
 
         {!message && filtered.length === 0 && <div className="registerMessage">Keine passenden öffentlichen Zertifizierungen gefunden.</div>}
 
-        <p className="demoDisclosure">Hinweis: <strong>HC-DEMO-0001</strong> ist ausdrücklich ein technischer Demodatensatz und keine echte Zertifizierung.</p>
+        <p className="demoDisclosure"><strong>HC-DEMO-0001</strong> ist ausschließlich ein technischer Demodatensatz und keine echte Zertifizierung.</p>
       </section>
 
       <SiteFooter />
