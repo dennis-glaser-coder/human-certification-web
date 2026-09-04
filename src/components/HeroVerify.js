@@ -37,8 +37,8 @@ export default function HeroVerify() {
       </form>
 
       <div className="verifyModuleFoot">
-        <span>Technischer Testdatensatz verfügbar: HC-DEMO-0001</span>
-        <Link href="/c/HC-DEMO-0001">Test öffnen →</Link>
+        <span>Öffentliche Verifizierung über eindeutige Zertifizierungs-ID.</span>
+        <Link href="/register">Zum Register →</Link>
       </div>
     </div>
   );
