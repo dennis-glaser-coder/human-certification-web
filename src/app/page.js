@@ -95,23 +95,23 @@ export default function Home() {
         <div className="shell documentaryGrid">
           <figure className="documentaryFigure documentaryWide">
             <img
-              src="https://images.unsplash.com/photo-1745571479548-7e8c708c4eb0?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=80&w=1800"
-              alt="Mitarbeiter prüft ein Metallteil mit einem Messschieber"
+              src="https://images.unsplash.com/photo-1772442126046-29faff1ad234?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=80&w=1800"
+              alt="Goldschmiedin arbeitet an einem Schmuckstück am Werktisch"
               loading="lazy"
             />
             <figcaption>
-              Qualitätsprüfung in einem realen Produktionsprozess · Foto: Maxim Tolchinskiy / Unsplash · keine Aussage über einen Zertifizierungsstatus
+              Schmuckfertigung am Werktisch · Foto: Johanna / Unsplash · keine Aussage über einen Zertifizierungsstatus
             </figcaption>
           </figure>
 
           <figure className="documentaryFigure">
             <img
-              src="https://images.unsplash.com/photo-1770196009760-bead9eb10514?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=80&w=1400"
-              alt="Mitarbeiterin kontrolliert Textilien in einer Fabrik"
+              src="https://images.unsplash.com/photo-1773511237767-0e324389922a?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=80&w=1400"
+              alt="Hände führen Stoff an einer Nähmaschine"
               loading="lazy"
             />
             <figcaption>
-              Textilkontrolle in realer Produktion · Foto: Shanjir H / Unsplash · keine Aussage über einen Zertifizierungsstatus
+              Textile Fertigung an der Nähmaschine · Foto: Phil Hearing / Unsplash · keine Aussage über einen Zertifizierungsstatus
             </figcaption>
           </figure>
         </div>
