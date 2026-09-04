@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useSearchParams } from 'next/navigation';
 import SiteHeader from '../../components/SiteHeader';
 import SiteFooter from '../../components/SiteFooter';
 import { getSupabaseBrowserClient } from '../../lib/supabase';
@@ -14,17 +13,16 @@ const statusText = {
 };
 
 export default function VerifyPage() {
-  const params = useSearchParams();
   const [value, setValue] = useState('');
   const [state, setState] = useState({ loading: false, record: null, message: '' });
 
   useEffect(() => {
-    const id = params.get('id');
+    const id = new URLSearchParams(window.location.search).get('id');
     if (id) {
       setValue(id.toUpperCase());
       verifyId(id);
     }
-  }, [params]);
+  }, []);
 
   async function verifyId(rawValue) {
     const publicId = rawValue.trim().toUpperCase();
