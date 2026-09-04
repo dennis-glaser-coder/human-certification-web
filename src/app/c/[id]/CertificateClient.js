@@ -14,6 +14,7 @@ const statusLabels = {
 };
 
 export default function CertificateClient({ id }) {
+  const assetBase = process.env.GITHUB_PAGES === 'true' ? '/human-certification-web' : '';
   const [state, setState] = useState({
     loading: true,
     record: null,
@@ -30,7 +31,7 @@ export default function CertificateClient({ id }) {
 
       const supabase = getSupabaseBrowserClient();
       if (!supabase) {
-        setState({ loading: false, record: null, events: [], message: 'Die Registeranbindung ist in dieser Vorschau noch nicht konfiguriert.' });
+        setState({ loading: false, record: null, events: [], message: 'Das Register ist derzeit nicht erreichbar.' });
         return;
       }
 
@@ -41,7 +42,7 @@ export default function CertificateClient({ id }) {
         .maybeSingle();
 
       if (error || !record) {
-        setState({ loading: false, record: null, events: [], message: 'Zu dieser ID wurde keine öffentliche Zertifizierung gefunden.' });
+        setState({ loading: false, record: null, events: [], message: 'Zu dieser ID wurde kein öffentlicher Datensatz gefunden.' });
         return;
       }
 
@@ -51,12 +52,7 @@ export default function CertificateClient({ id }) {
         .eq('certification_id', record.id)
         .order('occurred_at', { ascending: false });
 
-      setState({
-        loading: false,
-        record,
-        events: events ?? [],
-        message: '',
-      });
+      setState({ loading: false, record, events: events ?? [], message: '' });
     }
 
     load();
@@ -67,47 +63,47 @@ export default function CertificateClient({ id }) {
       <SiteHeader />
 
       <section className="certificatePage shell">
-        <div className="certificateEyebrow">
-          <span>ÖFFENTLICHER ZERTIFIKATSDATENSATZ</span>
-          <Link href="/register">Public Register →</Link>
+        <div className="certificateBar">
+          <span>PUBLIC REGISTER</span>
+          <Link href="/register">Zur Registersuche →</Link>
         </div>
 
-        {state.loading && <div className="certificateMessage">Zertifikat wird geladen …</div>}
+        {state.loading && <div className="certificateMessage">Datensatz wird geladen …</div>}
         {state.message && <div className="certificateMessage">{state.message}</div>}
 
         {state.record && (
           <>
             <section className={`certificateSummary status-${state.record.status}`}>
-              <div className="certificateSummaryTop">
-                <div>
-                  <small>ZERTIFIZIERUNGS-ID</small>
-                  <h1>{state.record.public_id}</h1>
+              <div className="certificateHeader">
+                <div className="certificateBrand">
+                  <img src={`${assetBase}/brand/made-by-humans-seal.png`} alt="" aria-hidden="true" />
+                  <div>
+                    <small>ZERTIFIZIERUNGS-ID</small>
+                    <h1>{state.record.public_id}</h1>
+                  </div>
                 </div>
                 <span className={`statusBadge ${state.record.status === 'active' ? 'active' : ''}`}>
                   {statusLabels[state.record.status] ?? state.record.status}
                 </span>
               </div>
 
-              <div className="certificateMainGrid">
-                <div className="certificateMetaPanel">
-                  <span>MADE BY HUMANS</span>
-                  <strong>ÖFFENTLICHER NACHWEIS</strong>
-                  <p>Dieser Datensatz ist das öffentliche Gegenstück zur Zertifizierungskennzeichnung auf dem Produkt.</p>
-                </div>
-
-                <dl className="certificateFacts">
-                  <div><dt>Hersteller</dt><dd>{state.record.products?.manufacturers?.name ?? '—'}</dd></div>
-                  <div><dt>Produkt</dt><dd>{state.record.products?.name ?? '—'}</dd></div>
-                  <div><dt>Standard</dt><dd>{state.record.standard_versions?.title ?? state.record.standard_versions?.version ?? '—'}</dd></div>
-                  <div><dt>Ausgestellt</dt><dd>{state.record.issued_at ? new Date(state.record.issued_at).toLocaleDateString('de-DE') : '—'}</dd></div>
-                  <div><dt>Gültig bis</dt><dd>{state.record.valid_until ? new Date(state.record.valid_until).toLocaleDateString('de-DE') : '—'}</dd></div>
-                  <div><dt>Zuletzt verifiziert</dt><dd>{state.record.last_verified_at ? new Date(state.record.last_verified_at).toLocaleDateString('de-DE') : '—'}</dd></div>
-                </dl>
+              <div className="certificateClaim">
+                <span>ZERTIFIZIERTE AUSSAGE</span>
+                <p>Dieses Produkt wurde in seinen wesentlichen Herstellungsschritten nachweislich durch Menschen gefertigt.</p>
               </div>
+
+              <dl className="certificateFacts">
+                <div><dt>Hersteller</dt><dd>{state.record.products?.manufacturers?.name ?? '—'}</dd></div>
+                <div><dt>Produkt</dt><dd>{state.record.products?.name ?? '—'}</dd></div>
+                <div><dt>Standard</dt><dd>{state.record.standard_versions?.title ?? state.record.standard_versions?.version ?? '—'}</dd></div>
+                <div><dt>Ausgestellt</dt><dd>{state.record.issued_at ? new Date(state.record.issued_at).toLocaleDateString('de-DE') : '—'}</dd></div>
+                <div><dt>Gültig bis</dt><dd>{state.record.valid_until ? new Date(state.record.valid_until).toLocaleDateString('de-DE') : '—'}</dd></div>
+                <div><dt>Zuletzt verifiziert</dt><dd>{state.record.last_verified_at ? new Date(state.record.last_verified_at).toLocaleDateString('de-DE') : '—'}</dd></div>
+              </dl>
 
               {state.record.public_note && (
                 <div className="certificatePublicNote">
-                  <small>ÖFFENTLICHER HINWEIS</small>
+                  <small>HINWEIS ZUM DATENSATZ</small>
                   <p>{state.record.public_note}</p>
                 </div>
               )}
@@ -115,20 +111,22 @@ export default function CertificateClient({ id }) {
 
             <section className="certificateHistory">
               <div className="certificateHistoryIntro">
-                <div className="sectionNo">TRACEABILITY · STATUSVERLAUF</div>
-                <h2>Die Zertifizierung bleibt über ihren gesamten Lebenszyklus nachvollziehbar.</h2>
-                <p>Öffentliche Statusänderungen werden dokumentiert. So ist nicht nur der aktuelle Zustand, sondern auch die Entwicklung der Zertifizierung überprüfbar.</p>
+                <div className="sectionNo">STATUSVERLAUF</div>
+                <h2>Öffentliche Änderungen am Zertifizierungsstatus.</h2>
+                <p>
+                  Statusänderungen bleiben im Datensatz sichtbar. Damit kann auch nachträglich geprüft werden,
+                  ob eine Zertifizierung ausgesetzt, erneuert oder widerrufen wurde.
+                </p>
               </div>
 
               <div className="certificateTimeline">
                 {state.events.length === 0 && (
-                  <div className="timelineEmpty">Für diesen Datensatz sind noch keine öffentlichen Ereignisse hinterlegt.</div>
+                  <div className="timelineEmpty">Für diesen Datensatz sind keine öffentlichen Ereignisse hinterlegt.</div>
                 )}
 
                 {state.events.map((event) => (
                   <article className="timelineEvent" key={event.id}>
-                    <div className="timelineDate">{new Date(event.occurred_at).toLocaleDateString('de-DE')}</div>
-                    <div className="timelineRule" aria-hidden="true"></div>
+                    <time>{new Date(event.occurred_at).toLocaleDateString('de-DE')}</time>
                     <div>
                       <strong>{event.title}</strong>
                       {event.status_after && <span>{statusLabels[event.status_after] ?? event.status_after}</span>}
