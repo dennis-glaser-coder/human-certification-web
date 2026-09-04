@@ -58,15 +58,15 @@ export default function RegisterPage() {
       <SiteHeader />
 
       <section className="pageHero shell registerHero">
-        <div className="eyebrow">PUBLIC REGISTER</div>
+        <div className="eyebrow">PUBLIC REGISTER · PROTOTYP</div>
         <h1>Öffentlich überprüfbar. <em>Nicht nur behauptet.</em></h1>
-        <p className="lead">Das Register zeigt, welches Produkt nach welcher Standardversion zertifiziert wurde und welchen Status die Zertifizierung aktuell hat.</p>
+        <p className="lead">Der Register-Prototyp zeigt, wie spätere Zertifizierungen öffentlich überprüfbar werden sollen. Aktuell ist ausschließlich ein technischer Beispieldatensatz hinterlegt.</p>
       </section>
 
       <section className="shell registerSection">
         <div className="registerToolbar">
           <div>
-            <span className="sectionNo">CERTIFICATION RECORDS</span>
+            <span className="sectionNo">BEISPIEL-DATENSÄTZE</span>
             <strong>{records.length} öffentlicher Datensatz{records.length === 1 ? '' : 'e'}</strong>
           </div>
           <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="ID, Hersteller oder Produkt suchen" aria-label="Register durchsuchen" />
@@ -98,9 +98,9 @@ export default function RegisterPage() {
           ))}
         </div>
 
-        {!message && filtered.length === 0 && <div className="registerMessage">Keine passenden öffentlichen Zertifizierungen gefunden.</div>}
+        {!message && filtered.length === 0 && <div className="registerMessage">Keine passenden Beispieldatensätze gefunden.</div>}
 
-        <p className="demoDisclosure"><strong>HC-DEMO-0001</strong> ist ausschließlich ein technischer Demodatensatz und keine echte Zertifizierung.</p>
+        <p className="demoDisclosure"><strong>HC-DEMO-0001</strong> dient ausschließlich zur technischen Demonstration des Registermodells. Es handelt sich nicht um eine reale Zertifizierung.</p>
       </section>
 
       <SiteFooter />
