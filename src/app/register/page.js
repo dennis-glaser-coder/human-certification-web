@@ -22,7 +22,7 @@ export default function RegisterPage() {
     async function load() {
       const supabase = getSupabaseBrowserClient();
       if (!supabase) {
-        setMessage('Die Registeranbindung ist in dieser Vorschau noch nicht konfiguriert.');
+        setMessage('Das Register ist derzeit nicht erreichbar.');
         return;
       }
 
@@ -58,16 +58,19 @@ export default function RegisterPage() {
       <SiteHeader />
 
       <section className="pageHero shell registerHero">
-        <div className="eyebrow">PUBLIC REGISTER · PROTOTYP</div>
-        <h1>Öffentlich überprüfbar. <em>Nicht nur behauptet.</em></h1>
-        <p className="lead">Der Register-Prototyp zeigt, wie spätere Zertifizierungen öffentlich überprüfbar werden sollen. Aktuell ist ausschließlich ein technischer Beispieldatensatz hinterlegt.</p>
+        <div className="eyebrow">PUBLIC REGISTER · PILOTPHASE</div>
+        <h1>Zertifizierungsdaten öffentlich auffindbar machen.</h1>
+        <p className="lead">
+          Das Register ist der öffentliche Nachweis zur Kennzeichnung. Während der Pilotphase ist ausschließlich
+          ein technischer Beispieldatensatz hinterlegt.
+        </p>
       </section>
 
       <section className="shell registerSection">
         <div className="registerToolbar">
           <div>
-            <span className="sectionNo">BEISPIEL-DATENSÄTZE</span>
-            <strong>{records.length} öffentlicher Datensatz{records.length === 1 ? '' : 'e'}</strong>
+            <span className="sectionNo">REGISTER</span>
+            <strong>{records.length} Datensatz{records.length === 1 ? '' : 'e'}</strong>
           </div>
           <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="ID, Hersteller oder Produkt suchen" aria-label="Register durchsuchen" />
         </div>
@@ -78,29 +81,32 @@ export default function RegisterPage() {
           {filtered.map((record) => (
             <article className="registerRow" key={record.public_id}>
               <div className="registerId">
-                <small>CERTIFICATION ID</small>
+                <small>ZERTIFIZIERUNGS-ID</small>
                 <strong>{record.public_id}</strong>
               </div>
               <div>
-                <small>MANUFACTURER</small>
+                <small>HERSTELLER</small>
                 <strong>{record.products?.manufacturers?.name ?? '—'}</strong>
               </div>
               <div>
-                <small>PRODUCT</small>
+                <small>PRODUKT</small>
                 <strong>{record.products?.name ?? '—'}</strong>
               </div>
               <div>
                 <small>STATUS</small>
                 <span className={`statusBadge ${record.status === 'active' ? 'active' : ''}`}>{labels[record.status] ?? record.status}</span>
               </div>
-              <Link href={`/c/${encodeURIComponent(record.public_id)}`} aria-label={`${record.public_id} öffnen`}>→</Link>
+              <Link href={`/c/${encodeURIComponent(record.public_id)}`} aria-label={`${record.public_id} öffnen`}>Öffnen →</Link>
             </article>
           ))}
         </div>
 
-        {!message && filtered.length === 0 && <div className="registerMessage">Keine passenden Beispieldatensätze gefunden.</div>}
+        {!message && filtered.length === 0 && <div className="registerMessage">Keine passenden Datensätze gefunden.</div>}
 
-        <p className="demoDisclosure"><strong>HC-DEMO-0001</strong> dient ausschließlich zur technischen Demonstration des Registermodells. Es handelt sich nicht um eine reale Zertifizierung.</p>
+        <div className="registerDisclosure">
+          <strong>Hinweis zur Pilotphase</strong>
+          <p>HC-DEMO-0001 ist ein technischer Beispieldatensatz und keine reale Zertifizierung.</p>
+        </div>
       </section>
 
       <SiteFooter />
