@@ -4,19 +4,32 @@ import SiteFooter from '../components/SiteFooter';
 import HeroVerify from '../components/HeroVerify';
 
 const system = [
-  ['STANDARD', 'Klare Kriterien', 'Definiert, welche Anforderungen ein Produkt erfüllen muss.'],
-  ['AUDIT', 'Unabhängige Prüfung', 'Bewertet Produkt, Prozess und Nachweise gegen den Standard.'],
-  ['TRACEABILITY', 'Dokumentierte Herkunft', 'Macht relevante Wertschöpfungsschritte nachvollziehbar.'],
-  ['PUBLIC REGISTER', 'Öffentlich überprüfbar', 'Zeigt Status, Gültigkeit und Zertifizierungshistorie.'],
+  ['STANDARD', 'Klare Kriterien', 'Definiert, welche menschlich geprägten Herstellungsschritte für die Zertifizierung erforderlich sind.'],
+  ['AUDIT', 'Unabhängige Prüfung', 'Prüft Prozess, Nachweise und Abgrenzung gegen den jeweils gültigen Standard.'],
+  ['TRACEABILITY', 'Dokumentierte Herkunft', 'Macht relevante Produktionsorte, Fremdfertigung und Wertschöpfungsschritte nachvollziehbar.'],
+  ['PUBLIC REGISTER', 'Öffentlich überprüfbar', 'Zeigt Zertifizierungsstatus, Gültigkeit und öffentliche Historie.'],
 ];
 
-const humanScope = [
-  'Manufaktur',
-  'Produktion',
-  'Maschinenbedienung',
-  'Verarbeitung',
-  'Montage',
-  'Qualitätskontrolle',
+const qualifies = [
+  ['Transformation', 'Das Endprodukt entsteht erst durch wesentliche menschliche Arbeit an Materialien oder Komponenten.'],
+  ['Fähigkeit', 'Produktprägende Schritte erfordern Erfahrung, Können oder bewusste menschliche Entscheidungen.'],
+  ['Ausführung', 'Menschen führen die relevanten Herstellungsschritte tatsächlich selbst aus.'],
+  ['Maschine als Werkzeug', 'Maschinen dürfen unterstützen. Sie dürfen die produktprägende menschliche Herstellung nicht vollständig ersetzen.'],
+];
+
+const doesNotQualify = [
+  'Ein fertiges Produkt wird lediglich importiert, etikettiert oder neu verpackt.',
+  'Eine automatisierte Linie erzeugt das fertige Produkt; Menschen überwachen oder verpacken nur.',
+  'Eine minimale manuelle Veredelung soll ein ansonsten fertiges Industrieprodukt zum „Human Made“-Produkt machen.',
+];
+
+const notAssessed = [
+  'Herkunftsland',
+  'Bio oder Fairtrade',
+  'pauschale Nachhaltigkeit',
+  'Unternehmensgröße',
+  'Verzicht auf Maschinen',
+  'moralische Bewertung von Technologie',
 ];
 
 export default function Home() {
@@ -27,14 +40,14 @@ export default function Home() {
       <section className="heroV2 shell">
         <div className="heroV2Grid">
           <div className="heroV2Copy">
-            <div className="eyebrow">UNABHÄNGIGER ZERTIFIZIERUNGSSTANDARD</div>
-            <h1>Menschliche Wertschöpfung. <em>Nachweisbar.</em></h1>
+            <div className="eyebrow">STANDARD FÜR NACHWEISBAR MENSCHLICH GEPRÄGTE HERSTELLUNG</div>
+            <h1>Menschliche Herstellung. <em>Überprüfbar.</em></h1>
             <p className="lead">
-              Made by Humans zertifiziert physische Produkte, bei denen menschliche Arbeit ein wesentlicher Teil der Wertschöpfung ist – anhand klarer Kriterien, dokumentierter Nachweise, unabhängiger Prüfung und eines öffentlichen Registers.
+              Made by Humans entwickelt einen Standard für physische Produkte, deren wesentliche Herstellungsschritte nachweislich durch Menschen ausgeführt werden. Maschinen können Teil des Prozesses sein – entscheidend ist, ob menschliche Arbeit das Endprodukt tatsächlich prägt.
             </p>
             <div className="actions">
               <Link className="button primary" href="/standard">Standard ansehen</Link>
-              <Link className="button secondary" href="/pruefen">Zertifizierung prüfen</Link>
+              <Link className="button secondary" href="/fuer-hersteller">Pilotphase für Hersteller</Link>
             </div>
           </div>
 
@@ -56,19 +69,50 @@ export default function Home() {
       <section className="credibilityBand">
         <div className="shell credibilityGrid">
           <div>
-            <div className="sectionNo light">WORUM ES GEHT</div>
-            <p className="credibilityKicker">Kein Marketing-Badge.</p>
+            <div className="sectionNo light">DIE GRUNDIDEE</div>
+            <p className="credibilityKicker">Ein einfaches Zeichen. Eine klare Aussage.</p>
           </div>
           <div>
-            <h2>Was auf einem Produkt steht, muss sich belegen lassen.</h2>
+            <h2>Dieses Produkt wurde in seinen wesentlichen Herstellungsschritten durch Menschen gefertigt.</h2>
             <p>
-              Made by Humans macht menschliche Wertschöpfung nicht zum Werbeversprechen, sondern zu einer überprüfbaren Aussage. Zertifiziert wird ein konkretes Produkt auf Basis definierter Kriterien, dokumentierter Nachweise und einer nachvollziehbaren Prüfentscheidung.
+              Genau diese Aussage soll später überprüfbar sein. Nicht über Selbstauskunft oder eine Marketingformulierung, sondern über einen definierten Standard, dokumentierte Evidenz, einen Prüfprozess und einen öffentlichen Nachweis.
             </p>
             <div className="credibilityFacts">
               <span>Produktbezogen</span>
-              <span>Standardgebunden</span>
+              <span>Nachweisbasiert</span>
               <span>Öffentlich verifizierbar</span>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="qualificationSection shell">
+        <div className="sectionHeading split">
+          <div>
+            <div className="sectionNo">WAS „MENSCHLICH GEPRÄGT“ BEDEUTET</div>
+            <h2>Nicht ohne Maschinen. Aber auch nicht nur danebenstehen.</h2>
+          </div>
+          <p>
+            Der Standard bewertet nicht, ob ein Produkt vollständig von Hand entsteht. Er prüft, ob Menschen die wesentlichen, produktprägenden Herstellungsschritte tatsächlich ausführen.
+          </p>
+        </div>
+
+        <div className="qualificationGrid">
+          <div className="qualificationPositive">
+            <div className="qualificationLabel">ENTSCHEIDEND FÜR DIE ZERTIFIZIERUNG</div>
+            {qualifies.map(([title, copy]) => (
+              <article key={title}>
+                <h3>{title}</h3>
+                <p>{copy}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="qualificationNegative">
+            <div className="qualificationLabel">NICHT AUSREICHEND</div>
+            {doesNotQualify.map((copy) => (
+              <p key={copy}>{copy}</p>
+            ))}
           </div>
         </div>
       </section>
@@ -77,10 +121,10 @@ export default function Home() {
         <div className="sectionHeading split">
           <div>
             <div className="sectionNo">DAS ZERTIFIZIERUNGSSYSTEM</div>
-            <h2>Vom Nachweis zur öffentlichen Zertifizierung.</h2>
+            <h2>Vom Herstellungsprozess zum öffentlichen Nachweis.</h2>
           </div>
           <p>
-            Glaubwürdigkeit entsteht nicht durch ein Zeichen allein. Sie entsteht durch einen klaren Standard, eine unabhängige Prüfung, nachvollziehbare Herkunft und einen öffentlich überprüfbaren Status.
+            Das sichtbare Zeichen ist nur die Oberfläche. Der eigentliche Wert entsteht aus Standard, Prüfung, nachvollziehbaren Produktionsinformationen und einem öffentlichen Zertifikatsbestand.
           </p>
         </div>
 
@@ -95,21 +139,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="humanScopeSection">
-        <div className="shell humanScopeGrid">
+      <section className="scopeBoundary">
+        <div className="shell scopeBoundaryGrid">
           <div>
-            <div className="sectionNo">HUMAN VALUE CREATION</div>
-            <h2>Menschliche Wertschöpfung ist mehr als Handarbeit.</h2>
+            <div className="sectionNo">KLARE ABGRENZUNG</div>
+            <h2>Was der Standard bewusst nicht bewertet.</h2>
           </div>
-
-          <div className="humanScopeCopy">
-            <p className="valueLead">Von der Manufaktur bis zur industriellen Produktion.</p>
-            <p>
-              Der Standard soll dort greifen, wo Menschen für Ausführung, Qualität, Steuerung oder relevante Prozessentscheidungen verantwortlich sind. Maschinen schließen menschliche Wertschöpfung nicht automatisch aus.
+          <div>
+            <p className="scopeBoundaryLead">
+              Made by Humans ist kein Herkunfts-, Nachhaltigkeits- oder Anti-Technologie-Siegel.
             </p>
-
-            <div className="humanScopeList">
-              {humanScope.map((item) => <span key={item}>{item}</span>)}
+            <div className="scopeBoundaryList">
+              {notAssessed.map((item) => <span key={item}>{item}</span>)}
             </div>
           </div>
         </div>
@@ -119,20 +160,20 @@ export default function Home() {
         <div className="shell registerProofGrid">
           <div className="registerProofCopy">
             <div className="sectionNo">PUBLIC REGISTER</div>
-            <h2>Eine Zertifizierung endet nicht beim Zeichen auf dem Produkt.</h2>
+            <h2>Das Zeichen auf dem Produkt braucht einen überprüfbaren Gegenpart.</h2>
             <p>
-              Jede freigegebene Zertifizierung erhält einen öffentlichen Datensatz. Käufer, Handelspartner und Hersteller können jederzeit prüfen, ob ein Produkt aktuell zertifiziert ist und nach welchem Standard die Entscheidung getroffen wurde.
+              Jede spätere freigegebene Zertifizierung soll eine eindeutige ID und einen öffentlichen Datensatz erhalten. Dort werden Produkt, Hersteller, Standard, Status, Gültigkeit und relevante Statusänderungen nachvollziehbar.
             </p>
             <div className="actions">
-              <Link className="button primary" href="/register">Public Register öffnen</Link>
-              <Link className="textLink" href="/pruefen">ID direkt prüfen →</Link>
+              <Link className="button primary" href="/register">Register-Prototyp öffnen</Link>
+              <Link className="textLink" href="/pruefen">Beispiel-ID prüfen →</Link>
             </div>
           </div>
 
           <article className="publicRecord refinedRecord">
             <div className="publicRecordTop">
-              <span>ÖFFENTLICHER ZERTIFIKATSDATENSATZ</span>
-              <span className="statusBadge active">AKTIV · DEMO</span>
+              <span>BEISPIEL EINES ÖFFENTLICHEN DATENSATZES</span>
+              <span className="statusBadge active">DEMO</span>
             </div>
 
             <div className="recordId">HC-DEMO-0001</div>
@@ -141,25 +182,25 @@ export default function Home() {
               <div><dt>Hersteller</dt><dd>Demo Manufaktur GmbH</dd></div>
               <div><dt>Produkt</dt><dd>Demo Produkt</dd></div>
               <div><dt>Standard</dt><dd>Demo-Standard</dd></div>
-              <div><dt>Status</dt><dd>Technischer Demodatensatz</dd></div>
+              <div><dt>Status</dt><dd>Technischer Beispieldatensatz</dd></div>
             </dl>
 
-            <Link href="/c/HC-DEMO-0001">Öffentlichen Datensatz ansehen →</Link>
+            <Link href="/c/HC-DEMO-0001">Beispiel-Datensatz ansehen →</Link>
           </article>
         </div>
       </section>
 
-      <section className="manufacturerCtaV2">
-        <div className="shell manufacturerCtaV2Grid">
+      <section className="pilotRealitySection">
+        <div className="shell pilotRealityGrid">
           <div>
-            <div className="sectionNo">FÜR HERSTELLER</div>
-            <h2>Sie wollen menschliche Wertschöpfung glaubwürdig belegen?</h2>
+            <div className="sectionNo light">PILOTPHASE</div>
+            <h2>Erst beweisen. Dann skalieren.</h2>
           </div>
           <div>
             <p>
-              Für die Pilotphase suchen wir Unternehmen, mit denen wir Standard, Nachweise und Auditprozess an realen Produkten und Produktionsabläufen validieren.
+              Standard, Auditprozess und Register werden zunächst an realen Produkten validiert. Gesucht werden Hersteller, die ihre tatsächlichen Produktionsabläufe offenlegen und gemeinsam prüfen wollen, ob die Kriterien in der Praxis tragen.
             </p>
-            <Link className="button primary" href="/fuer-hersteller">Pilotphase ansehen</Link>
+            <Link className="button lightButton" href="/fuer-hersteller">Pilotphase ansehen</Link>
           </div>
         </div>
       </section>
