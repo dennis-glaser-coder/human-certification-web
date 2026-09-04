@@ -16,15 +16,16 @@ export default function HeroVerify() {
   }
 
   return (
-    <aside className="heroVerify" aria-label="Zertifizierung prüfen">
+    <aside className="heroVerify" aria-label="Zertifizierung verifizieren">
       <div className="heroVerifyHeader">
-        <span>ZERTIFIZIERUNG PRÜFEN</span>
+        <span>VERIFIZIERUNG</span>
         <span>PUBLIC REGISTER</span>
       </div>
 
       <div className="heroVerifyBody">
-        <h2>Ist ein Produkt wirklich zertifiziert?</h2>
-        <p>Jede öffentliche Zertifizierung kann über ihre eindeutige ID überprüft werden.</p>
+        <div className="heroVerifyKicker">ZERTIFIZIERUNGSSTATUS</div>
+        <h2>Zertifizierung verifizieren.</h2>
+        <p>Über die eindeutige Zertifizierungs-ID lassen sich Status, Produkt, Hersteller und Gültigkeit öffentlich prüfen.</p>
 
         <form onSubmit={submit} className="heroVerifyForm">
           <label htmlFor="hero-certificate-id">Zertifizierungs-ID</label>
@@ -41,12 +42,12 @@ export default function HeroVerify() {
         </form>
 
         <Link className="heroDemoLink" href="/c/HC-DEMO-0001">
-          Demo-Datensatz ansehen →
+          Beispiel-Datensatz öffnen →
         </Link>
       </div>
 
       <div className="heroVerifyFooter">
-        <strong>ÖFFENTLICH SICHTBAR</strong>
+        <strong>ÖFFENTLICH NACHVOLLZIEHBAR</strong>
         <span>Hersteller · Produkt · Standard · Status · Gültigkeit · Historie</span>
       </div>
     </aside>
