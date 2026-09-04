@@ -10,6 +10,8 @@ Neutraler technischer Arbeitstitel für das Siegelprojekt. Der finale Markenname
 - Herstellerseite mit Pilot-Interessentenformular
 - öffentliches Zertifizierungsregister
 - einzelne Zertifizierungs-ID prüfen
+- eigene öffentliche Zertifikatsseite unter `/c/[id]`
+- öffentliche Status-Historie je Zertifizierung
 - vollständig responsive Grundgestaltung
 
 ### Supabase
@@ -18,6 +20,7 @@ Neutraler technischer Arbeitstitel für das Siegelprojekt. Der finale Markenname
 - `products`
 - `certifications`
 - `manufacturer_interests`
+- `certification_events`
 - Row Level Security aktiv
 - öffentliche Registerdaten lesbar
 - Hersteller-Anfragen nur schreibbar, nicht öffentlich lesbar
