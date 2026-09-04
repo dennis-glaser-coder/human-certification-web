@@ -10,7 +10,7 @@ export default function SiteHeader() {
         <Link className="brandLockup" href="/" aria-label="Made by Humans Startseite">
           <img
             className="brandSealTemporary"
-            src={\`\${assetBase}/brand/made-by-humans-seal.png\`}
+            src={assetBase + '/brand/made-by-humans-seal.png'}
             alt=""
             aria-hidden="true"
             width="46"
