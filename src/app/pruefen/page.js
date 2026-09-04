@@ -44,7 +44,7 @@ export default function VerifyPage() {
       .maybeSingle();
 
     if (error || !data) {
-      setState({ loading: false, record: null, message: 'Zu dieser ID wurde keine öffentliche Zertifizierung gefunden.' });
+      setState({ loading: false, record: null, message: 'Zu dieser ID wurde kein öffentlicher Beispieldatensatz gefunden.' });
       return;
     }
 
@@ -61,9 +61,9 @@ export default function VerifyPage() {
       <SiteHeader />
 
       <section className="pageHero shell verifyHero">
-        <div className="eyebrow">ZERTIFIZIERUNG PRÜFEN</div>
+        <div className="eyebrow">VERIFIZIERUNG · PROTOTYP</div>
         <h1>Ein Zertifizierungszeichen ist nur so glaubwürdig wie <em>sein öffentlicher Nachweis.</em></h1>
-        <p className="lead">Zertifizierungs-ID eingeben und Hersteller, Produkt, Standardversion, Status und Gültigkeit direkt prüfen.</p>
+        <p className="lead">Der Verifizierungs-Prototyp zeigt, welche Informationen später über eine Zertifizierungs-ID öffentlich abrufbar sein sollen.</p>
       </section>
 
       <section className="shell verifyWorkspace">
@@ -73,7 +73,7 @@ export default function VerifyPage() {
             <input id="certificate-id" value={value} onChange={(e) => setValue(e.target.value)} placeholder="z. B. HC-DEMO-0001" />
             <button className="button primary" disabled={state.loading}>{state.loading ? 'Prüfe …' : 'Jetzt prüfen'}</button>
           </div>
-          <button type="button" className="demoButton" onClick={() => { setValue('HC-DEMO-0001'); verifyId('HC-DEMO-0001'); }}>Demo-ID testen: HC-DEMO-0001</button>
+          <button type="button" className="demoButton" onClick={() => { setValue('HC-DEMO-0001'); verifyId('HC-DEMO-0001'); }}>Beispiel-ID testen: HC-DEMO-0001</button>
         </form>
 
         {state.message && <div className="verificationEmpty">{state.message}</div>}
