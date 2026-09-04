@@ -77,17 +77,17 @@ export default function ManufacturerPage() {
       <SiteHeader />
 
       <section className="pageHero shell">
-        <div className="eyebrow">FÜR HERSTELLER · PILOTPHASE</div>
-        <h1>Pilotunternehmen für reale Produktionsfälle gesucht.</h1>
+        <div className="eyebrow">FÜR HERSTELLER</div>
+        <h1>Hersteller für die Validierung des Standards gesucht.</h1>
         <p className="lead">
-          In der Pilotphase wird geprüft, ob der Arbeitsstandard über unterschiedliche Produktkategorien hinweg
+          Gemeinsam mit ausgewählten Herstellern wird geprüft, ob der Arbeitsstandard über unterschiedliche Produktkategorien hinweg
           verständlich, prüfbar und wirtschaftlich anwendbar ist.
         </p>
       </section>
 
       <section className="shell manufacturerFit">
         <div className="sectionIntro compact">
-          <div className="sectionNo">WANN EIN PILOT SINNVOLL IST</div>
+          <div className="sectionNo">TEILNAHME</div>
           <h2>Geeignet sind Hersteller mit einem klar nachvollziehbaren Produktprozess.</h2>
         </div>
 
@@ -120,7 +120,7 @@ export default function ManufacturerPage() {
       <section className="shell interestSection">
         <div className="interestIntro">
           <div className="sectionNo">VORMERKUNG</div>
-          <h2>Produkt für die Pilotphase vorstellen.</h2>
+          <h2>Produkt zur Validierung vorstellen.</h2>
           <p>
             Die Vormerkung ist unverbindlich. Sie ist noch kein Zertifizierungsantrag und enthält keine Zusage
             zur späteren Nutzung des Zeichens.
@@ -170,7 +170,7 @@ export default function ManufacturerPage() {
           </button>
 
           {state.message && <p className={state.success ? 'formMessage success' : 'formMessage'}>{state.message}</p>}
-          <small className="formLegal">Die Angaben werden ausschließlich zur Kontaktaufnahme im Rahmen der Pilotphase gespeichert.</small>
+          <small className="formLegal">Die Angaben werden ausschließlich zur Kontaktaufnahme im Rahmen der Validierung gespeichert.</small>
         </form>
       </section>
 
