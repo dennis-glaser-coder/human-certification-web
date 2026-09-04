@@ -15,6 +15,13 @@ const initialForm = {
   company_website: '',
 };
 
+const pilotSteps = [
+  'Produkt und Wertschöpfungskette verstehen',
+  'relevante menschliche Tätigkeiten sauber abgrenzen',
+  'geeignete Nachweise und Traceability definieren',
+  'Audit und öffentliche Registerdarstellung validieren',
+];
+
 export default function ManufacturerPage() {
   const [form, setForm] = useState(initialForm);
   const [state, setState] = useState({ loading: false, success: false, message: '' });
@@ -62,33 +69,34 @@ export default function ManufacturerPage() {
       <SiteHeader />
 
       <section className="pageHero shell manufacturerHero">
-        <div className="eyebrow">PILOT PROGRAM · MANUFACTURERS</div>
-        <h1>Reale Fertigung. <em>Nachvollziehbar zertifiziert.</em></h1>
-        <p className="lead">Für die Pilotphase suchen wir Unternehmen, mit denen Standard, Nachweise und Auditprozess an realen Produkten und Produktionsabläufen validiert werden können.</p>
+        <div className="eyebrow">FÜR HERSTELLER · PILOTPHASE</div>
+        <h1>Menschliche Wertschöpfung <em>glaubwürdig belegen.</em></h1>
+        <p className="lead">
+          Wir suchen Unternehmen, mit denen wir Standard, Nachweise und Auditprozess an realen Produkten und Produktionsabläufen validieren – von der Manufaktur bis zur Industrie.
+        </p>
       </section>
 
       <section className="shell pilotGrid">
         <div className="pilotInfo">
-          <div className="sectionNo">PILOT OBJECTIVE</div>
-          <h2>Der Standard muss in der Praxis funktionieren.</h2>
-          <p className="pilotLead">Nicht nur in Manufakturen. Auch dort, wo menschliche Arbeit, Maschinen und industrielle Prozesse ineinandergreifen.</p>
+          <div className="sectionNo">WAS WIR IN DER PILOTPHASE PRÜFEN</div>
+          <h2>Der Standard muss unter realen Bedingungen funktionieren.</h2>
+          <p className="pilotLead">
+            Entscheidend ist nicht, ob ein Produkt vollständig von Hand entsteht. Entscheidend ist, welche menschlichen Tätigkeiten für seine Wertschöpfung wesentlich sind und wie sich diese nachvollziehbar belegen lassen.
+          </p>
 
-          <div className="pilotPoints">
-            <p><span>01</span>Produkt und Wertschöpfungskette verstehen</p>
-            <p><span>02</span>relevante menschliche Tätigkeiten abgrenzen</p>
-            <p><span>03</span>geeignete Nachweise und Traceability definieren</p>
-            <p><span>04</span>Audit und öffentliche Registerdarstellung validieren</p>
+          <div className="pilotPoints pilotPointsV2">
+            {pilotSteps.map((item) => <p key={item}>{item}</p>)}
           </div>
 
           <div className="pilotNote">
-            <strong>HINWEIS</strong>
-            <p>Eine Vormerkung ist noch kein Zertifizierungsantrag und keine Zusage. Sie dient ausschließlich der Auswahl geeigneter Pilotfälle.</p>
+            <strong>UNVERBINDLICHE VORMERKUNG</strong>
+            <p>Eine Vormerkung ist noch kein Zertifizierungsantrag und keine Zusage. Sie dient der Auswahl geeigneter Pilotfälle.</p>
           </div>
         </div>
 
         <form className="interestForm" onSubmit={submit}>
           <div className="formTop">
-            <span>PILOT INTEREST</span>
+            <span>PILOTPHASE</span>
             <strong>Interesse vormerken</strong>
           </div>
 
