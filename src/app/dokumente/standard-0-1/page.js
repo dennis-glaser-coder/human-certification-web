@@ -19,17 +19,25 @@ const criteria = [
 ];
 
 export default function StandardDocumentPage() {
+  const assetBase = process.env.GITHUB_PAGES === 'true' ? '/human-certification-web' : '';
+
   return (
     <main className="standardDocumentPage">
       <SiteHeader />
 
       <article className="shell standardDocument">
+        <div className="controlledDocumentActions">
+          <a className="button primary" href={assetBase + '/documents/made-by-humans-standard-0-1.pdf'}>PDF herunterladen</a>
+          <Link className="button secondary" href="/dokumente">Dokumentenregister</Link>
+        </div>
+
         <header className="standardDocumentHeader">
           <div>
             <span>MADE BY HUMANS · ARBEITSSTANDARD</span>
             <h1>Standard 0.1</h1>
           </div>
           <dl>
+            <div><dt>Dokument-ID</dt><dd>MBH-STD-0.1</dd></div>
             <div><dt>Status</dt><dd>Arbeitsfassung · in Validierung</dd></div>
             <div><dt>Stand</dt><dd>04.09.2026</dd></div>
             <div><dt>Geltungsbereich</dt><dd>Physische Produkte</dd></div>

@@ -13,5 +13,8 @@ export default function sitemap() {
     { url: canonical('/ueber-uns') },
     { url: canonical('/dokumente') },
     { url: canonical('/dokumente/standard-0-1') },
+    { url: canonical('/dokumente/certification-scheme-0-1') },
+    { url: canonical('/markennutzung') },
+    { url: canonical('/verfahren') },
   ];
 }

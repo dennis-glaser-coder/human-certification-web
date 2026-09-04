@@ -25,12 +25,14 @@ export default function SiteFooter() {
           <div>
             <strong>STANDARD</strong>
             <Link href="/standard">Kriterien</Link>
-            <Link href="/dokumente">Dokumente</Link>
+            <Link href="/dokumente">Dokumentenregister</Link>
           </div>
           <div>
             <strong>ORGANISATION</strong>
             <Link href="/ueber-uns">Über Made by Humans</Link>
             <Link href="/transparenz">Transparenz & Governance</Link>
+            <Link href="/markennutzung">Markennutzung</Link>
+            <Link href="/verfahren">Beschwerden & Einsprüche</Link>
           </div>
           <div>
             <strong>HERSTELLER</strong>

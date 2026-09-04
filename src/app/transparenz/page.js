@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import SiteHeader from '../../components/SiteHeader';
 import SiteFooter from '../../components/SiteFooter';
 
@@ -6,14 +7,15 @@ const principles = [
   ['Prüfnachweise', 'Die Bewertung eines Produkts soll auf dokumentierten Informationen und nachvollziehbaren Prüfunterlagen beruhen.'],
   ['Review und Entscheidung', 'Prüfung, fachliches Review und Zertifizierungsentscheidung sollen mit klaren Zuständigkeiten dokumentiert werden.'],
   ['Statusänderungen', 'Aktiv, ausgesetzt, abgelaufen oder widerrufen: Änderungen am Zertifizierungsstatus sollen im öffentlichen Register nachvollziehbar bleiben.'],
-  ['Markennutzung', 'Für die Nutzung des Zeichens werden verbindliche Regeln vorgesehen. Veränderungen des Zeichens oder irreführende Aussagen sollen unzulässig sein.'],
-  ['Beschwerden und Einsprüche', 'Für den kommerziellen Betrieb werden dokumentierte Verfahren für Beschwerden, Einsprüche und möglichen Zeichenmissbrauch vorgesehen.'],
+  ['Markennutzung', 'Die Nutzung des Zeichens soll an Zertifizierungsumfang, Status und öffentliche Verifizierbarkeit gebunden sein.'],
+  ['Beschwerden und Einsprüche', 'Beschwerden, Einsprüche gegen Entscheidungen und Zeichenmissbrauch werden als getrennte Verfahren dokumentiert.'],
 ];
 
 const roles = [
   ['Scheme-Inhaber', 'verantwortet Standard, Marke, Register und die Regeln des Zertifizierungssystems.'],
   ['Prüfung', 'bewertet Herstellungsprozess und Nachweise gegen die festgelegten Anforderungen.'],
-  ['Zertifizierungsentscheidung', 'überführt die Prüfergebnisse in eine dokumentierte Entscheidung zum Zertifizierungsstatus.'],
+  ['Review', 'prüft die fachliche Plausibilität und Vollständigkeit des dokumentierten Prüfergebnisses.'],
+  ['Zertifizierungsentscheidung', 'überführt das geprüfte Ergebnis in eine dokumentierte Entscheidung zum Zertifizierungsstatus.'],
   ['Public Register', 'veröffentlicht die für Käufer und Geschäftspartner relevanten Zertifizierungsinformationen.'],
 ];
 
@@ -69,7 +71,7 @@ export default function TransparencyPage() {
             </div>
             <p>
               Die endgültige rechtliche und organisatorische Ausgestaltung wird vor dem kommerziellen Start festgelegt.
-              Das System soll jedoch so aufgebaut sein, dass Standardverantwortung und Prüfrollen klar voneinander unterscheidbar sind.
+              Das System soll jedoch so aufgebaut sein, dass Standardverantwortung, Prüfung, Review und Entscheidung klar unterscheidbar sind.
             </p>
           </div>
 
@@ -82,6 +84,34 @@ export default function TransparencyPage() {
             ))}
           </div>
         </div>
+      </section>
+
+      <section className="governanceDocuments">
+        <div className="shell governanceDocumentsGrid">
+          <Link href="/dokumente/certification-scheme-0-1">
+            <span>CERTIFICATION SCHEME</span>
+            <strong>Rollen, Review, Entscheidung und Statusverwaltung</strong>
+            <small>Scheme 0.1 öffnen →</small>
+          </Link>
+          <Link href="/markennutzung">
+            <span>MARK USE</span>
+            <strong>Grundsätze zur Nutzung des Zertifizierungszeichens</strong>
+            <small>Markennutzung öffnen →</small>
+          </Link>
+          <Link href="/verfahren">
+            <span>GOVERNANCE</span>
+            <strong>Beschwerden, Einsprüche und Zeichenmissbrauch</strong>
+            <small>Verfahren öffnen →</small>
+          </Link>
+        </div>
+      </section>
+
+      <section className="shell transparencyIntegrity">
+        <strong>Keine vorgetäuschte Unabhängigkeit</strong>
+        <p>
+          Die endgültige organisatorische und rechtliche Governance-Struktur ist noch nicht eingerichtet.
+          Made by Humans behauptet deshalb derzeit weder Akkreditierung noch eine bereits bestehende unabhängige externe Entscheidungsinstanz.
+        </p>
       </section>
 
       <SiteFooter />

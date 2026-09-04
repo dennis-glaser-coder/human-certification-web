@@ -27,8 +27,18 @@ jobs:
           node-version: 22
           cache: npm
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
+
+      - name: Generate controlled PDF documents
+        run: |
+          python -m pip install --quiet reportlab==4.4.9
+          python scripts/generate_public_documents.py
 
       - name: Build static site
         env:

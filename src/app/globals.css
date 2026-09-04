@@ -1313,3 +1313,120 @@ p{line-height:1.7}
   .standardDocumentHeader h1{font-size:46px}
   .standardDocumentCriteria>div{grid-template-columns:1fr;gap:5px}
 }
+
+
+/* ===== Controlled documents, mark use and governance procedures ===== */
+.documentRegistry{border-top:1px solid var(--ink)}
+.documentRegistryHead,.documentRegistryRow{display:grid;grid-template-columns:1.55fr .35fr .7fr .42fr .55fr;gap:22px}
+.documentRegistryHead{padding:11px 0;border-bottom:1px solid var(--stone);color:var(--muted-soft);font-size:7px;font-weight:700;letter-spacing:.11em}
+.documentRegistryRow{padding:22px 0;border-bottom:1px solid var(--stone);align-items:start}
+.documentRegistryRow small{display:block;margin-bottom:6px;color:var(--blue);font-size:7px;font-weight:700;letter-spacing:.08em}
+.documentRegistryRow strong{font-size:12px}
+.documentRegistryRow p{margin:7px 0 0;max-width:580px;color:var(--muted);font-size:9px}
+.documentRegistryRow>span,.documentRegistryRow>time{color:var(--muted);font-size:9px}
+.documentActions{display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+.documentActions a{color:var(--blue);font-size:9px;font-weight:700;text-decoration:none}
+
+.controlledDocument{padding:54px 0 88px;max-width:980px}
+.controlledDocumentHeader{display:grid;grid-template-columns:1.2fr .8fr;gap:55px;padding-bottom:26px;border-bottom:2px solid var(--ink)}
+.controlledDocumentHeader>div>span{color:var(--blue);font-size:8px;font-weight:700;letter-spacing:.12em}
+.controlledDocumentHeader h1{margin:8px 0 12px;font-size:clamp(46px,4.6vw,64px)}
+.controlledDocumentHeader>div>p{max-width:620px;color:var(--muted);font-size:11px}
+.controlledDocumentHeader dl{margin:0}
+.controlledDocumentHeader dl div{display:grid;grid-template-columns:105px 1fr;gap:18px;padding:8px 0;border-top:1px solid var(--stone)}
+.controlledDocumentHeader dt{color:var(--muted-soft);font-size:8px}
+.controlledDocumentHeader dd{margin:0;font-size:9px;font-weight:600}
+.controlledDocumentActions{display:flex;gap:10px;flex-wrap:wrap;padding:22px 0 6px}
+.controlledDocument>section{padding:31px 0;border-bottom:1px solid var(--stone)}
+.controlledDocument>section h2{margin:0 0 16px;font-size:28px}
+.controlledDocument>section>p{max-width:780px;color:var(--muted);font-size:11px}
+
+.schemeRoleGrid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink)}
+.schemeRoleGrid article{min-height:130px;padding:20px 26px 18px 0;border-bottom:1px solid var(--stone)}
+.schemeRoleGrid article:nth-child(odd){padding-right:30px;border-right:1px solid var(--stone)}
+.schemeRoleGrid article:nth-child(even){padding-left:30px}
+.schemeRoleGrid strong{display:block;margin-bottom:9px;font-size:10px;color:var(--blue)}
+.schemeRoleGrid p{margin:0;color:var(--muted);font-size:9px}
+.documentNotice{margin-top:22px;padding:15px 17px;border-left:2px solid var(--accent);background:var(--white);color:var(--muted);font-size:10px;line-height:1.65}
+.schemeProcessGrid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink)}
+.schemeProcessGrid article{min-height:135px;padding:18px 20px 16px 0;border-right:1px solid var(--stone);border-bottom:1px solid var(--stone)}
+.schemeProcessGrid article:nth-child(3n){border-right:0}
+.schemeProcessGrid article:not(:nth-child(3n+1)){padding-left:20px}
+.schemeProcessGrid strong{display:block;margin-bottom:18px;font-size:10px}
+.schemeProcessGrid p{margin:0;color:var(--muted);font-size:9px}
+.controlledDefinitionList{border-top:1px solid var(--ink)}
+.controlledDefinitionList>div{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:13px 0;border-bottom:1px solid var(--stone)}
+.controlledDefinitionList strong{font-size:10px;color:var(--blue)}
+.controlledDefinitionList p{margin:0;color:var(--muted);font-size:9px}
+.inlineDocLinks{display:flex;gap:24px;flex-wrap:wrap;margin-top:20px}
+.inlineDocLinks a{color:var(--blue);font-size:9px;font-weight:700;text-decoration:none}
+
+.markUseSection{padding:78px 0}
+.markUseGrid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink)}
+.markUseGrid article{min-height:142px;padding:21px 28px 19px 0;border-bottom:1px solid var(--stone)}
+.markUseGrid article:nth-child(odd){padding-right:34px;border-right:1px solid var(--stone)}
+.markUseGrid article:nth-child(even){padding-left:34px}
+.markUseGrid strong{display:block;margin-bottom:10px;font-size:11px;color:var(--blue)}
+.markUseGrid p{margin:0;color:var(--muted);font-size:10px}
+.markUseContexts{padding:72px 0;background:var(--white);border-top:1px solid var(--stone);border-bottom:1px solid var(--stone)}
+.contextList{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink)}
+.contextList span{padding:18px 20px 16px 0;border-right:1px solid var(--stone);border-bottom:1px solid var(--stone);font-size:10px;font-weight:600}
+.contextList span:not(:first-child){padding-left:20px}
+.contextList span:last-child{border-right:0}
+
+.procedureSection{padding:18px 0 82px}
+.procedureGrid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink)}
+.procedureGrid article{min-height:410px;padding:24px 28px 24px 0;border-right:1px solid var(--stone)}
+.procedureGrid article:not(:first-child){padding-left:28px}
+.procedureGrid article:last-child{border-right:0}
+.procedureGrid article>span{color:var(--blue);font-size:8px;font-weight:700;letter-spacing:.11em}
+.procedureGrid h2{margin:18px 0 14px;font-size:28px;line-height:1.08}
+.procedureGrid p{color:var(--muted);font-size:10px}
+.procedureGrid ol{margin:24px 0 0;padding:0;list-style-position:inside;border-top:1px solid var(--stone)}
+.procedureGrid li{padding:11px 0;border-bottom:1px solid var(--stone);font-size:9px}
+.procedureIntegrity{padding:72px 0;background:var(--ink);color:var(--white)}
+.procedureIntegrityGrid,.procedureChannel{display:grid;grid-template-columns:1fr 1fr;gap:84px;align-items:start}
+.procedureIntegrityGrid h2,.procedureChannel h2{margin:14px 0 0;font-size:clamp(36px,3.7vw,50px);line-height:1.07}
+.procedureIntegrityGrid p{margin:0;color:rgba(255,255,255,.66);font-size:11px}
+.procedureChannel{padding:72px 0}
+.procedureChannel>p{margin:0;color:var(--muted);font-size:11px}
+
+.governanceDocuments{background:var(--white);border-top:1px solid var(--stone);border-bottom:1px solid var(--stone)}
+.governanceDocumentsGrid{display:grid;grid-template-columns:repeat(3,1fr)}
+.governanceDocumentsGrid>a{min-height:170px;padding:24px 27px 22px 0;border-right:1px solid var(--stone);text-decoration:none}
+.governanceDocumentsGrid>a:not(:first-child){padding-left:27px}
+.governanceDocumentsGrid>a:last-child{border-right:0}
+.governanceDocumentsGrid span{display:block;margin-bottom:24px;color:var(--blue);font-size:8px;font-weight:700;letter-spacing:.11em}
+.governanceDocumentsGrid strong{display:block;margin-bottom:14px;font-family:"Source Serif 4",Georgia,serif;font-size:20px;line-height:1.25;font-weight:400}
+.governanceDocumentsGrid small{color:var(--muted-soft);font-size:8px}
+.transparencyIntegrity{padding:34px 0 54px}
+.transparencyIntegrity strong{display:block;margin-bottom:7px;font-size:9px;color:var(--blue);letter-spacing:.07em;text-transform:uppercase}
+.transparencyIntegrity p{margin:0;max-width:780px;color:var(--muted);font-size:10px}
+
+@media(max-width:1020px){
+  .documentRegistryHead{display:none}
+  .documentRegistryRow{grid-template-columns:1fr .35fr .7fr .42fr}
+  .documentActions{grid-column:1/-1;align-items:flex-start;flex-direction:row}
+  .controlledDocumentHeader,.procedureIntegrityGrid,.procedureChannel{grid-template-columns:1fr;gap:28px}
+  .schemeProcessGrid,.procedureGrid{grid-template-columns:1fr}
+  .schemeProcessGrid article,.schemeProcessGrid article:not(:nth-child(3n+1)),.procedureGrid article,.procedureGrid article:not(:first-child){min-height:auto;padding:18px 0;border-right:0;border-top:1px solid var(--stone)}
+  .schemeProcessGrid article:first-child,.procedureGrid article:first-child{border-top:0}
+  .governanceDocumentsGrid{grid-template-columns:1fr}
+  .governanceDocumentsGrid>a,.governanceDocumentsGrid>a:not(:first-child){min-height:auto;padding:20px 0;border-right:0;border-top:1px solid var(--stone)}
+  .governanceDocumentsGrid>a:first-child{border-top:0}
+  .contextList{grid-template-columns:1fr 1fr}
+  .contextList span:nth-child(2){border-right:0}
+}
+@media(max-width:760px){
+  .documentRegistryRow{grid-template-columns:1fr;gap:8px}
+  .documentActions{grid-column:auto}
+  .controlledDocument{padding:42px 0 64px}
+  .controlledDocumentHeader h1{font-size:42px}
+  .schemeRoleGrid,.markUseGrid{grid-template-columns:1fr}
+  .schemeRoleGrid article,.schemeRoleGrid article:nth-child(odd),.schemeRoleGrid article:nth-child(even),.markUseGrid article,.markUseGrid article:nth-child(odd),.markUseGrid article:nth-child(even){min-height:auto;padding:17px 0;border-right:0}
+  .controlledDefinitionList>div{grid-template-columns:1fr;gap:5px}
+  .markUseSection,.markUseContexts,.procedureIntegrity,.procedureChannel{padding:58px 0}
+  .contextList{grid-template-columns:1fr}
+  .contextList span,.contextList span:not(:first-child){padding:15px 0;border-right:0}
+  .procedureGrid h2{font-size:24px}
+}
