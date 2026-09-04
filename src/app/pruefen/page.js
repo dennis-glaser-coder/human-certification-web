@@ -81,13 +81,13 @@ export default function VerifyPage() {
         {state.message && <div className="verificationEmpty">{state.message}</div>}
 
         {state.record && (
-          <article className={\`verificationRecord status-\${state.record.status}\`}>
+          <article className={'verificationRecord status-' + state.record.status}>
             <div className="verificationTop">
               <div>
                 <small>STATUS</small>
                 <strong>{statusText[state.record.status] ?? state.record.status}</strong>
               </div>
-              <span className={\`statusBadge \${state.record.status === 'active' ? 'active' : ''}\`}>{statusText[state.record.status] ?? state.record.status}</span>
+              <span className={'statusBadge ' + (state.record.status === 'active' ? 'active' : '')}>{statusText[state.record.status] ?? state.record.status}</span>
             </div>
 
             <div className="verificationIdentity">
@@ -95,7 +95,7 @@ export default function VerifyPage() {
                 <small>ZERTIFIZIERUNGS-ID</small>
                 <h2>{state.record.public_id}</h2>
               </div>
-              <Link className="recordOpenLink" href={\`/c/\${encodeURIComponent(state.record.public_id)}\`}>Vollständigen Datensatz öffnen →</Link>
+              <Link className="recordOpenLink" href={'/c/' + encodeURIComponent(state.record.public_id)}>Vollständigen Datensatz öffnen →</Link>
             </div>
 
             <dl className="verificationDetails">
