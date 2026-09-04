@@ -2,32 +2,24 @@ import Link from 'next/link';
 
 export default function SiteFooter() {
   return (
-    <footer className="siteFooter">
-      <div className="shell footerTop footerTopV2">
-        <div>
-          <div className="footerBrand">MADE BY HUMANS</div>
-          <p className="footerClaim">Ein Standard für nachweisbar menschlich geprägte Herstellung physischer Produkte.</p>
+    <footer className="siteFooter compactFooter">
+      <div className="shell compactFooterMain">
+        <div className="compactFooterBrand">
+          <strong>MADE BY HUMANS</strong>
+          <span>Human-Made Product Standard</span>
         </div>
 
-        <div className="footerNavV2">
-          <div>
-            <strong>INFORMATION</strong>
-            <Link href="/standard">Standard</Link>
-            <Link href="/fuer-hersteller">Für Hersteller</Link>
-          </div>
-          <div>
-            <strong>VERIFIZIERUNG</strong>
-            <Link href="/register">Public Register</Link>
-            <Link href="/pruefen">Zertifizierung prüfen</Link>
-          </div>
-        </div>
+        <nav className="compactFooterNav" aria-label="Footer Navigation">
+          <Link href="/standard">Standard</Link>
+          <Link href="/fuer-hersteller">Für Hersteller</Link>
+          <Link href="/register">Public Register</Link>
+          <Link href="/pruefen">Zertifizierung prüfen</Link>
+        </nav>
       </div>
 
-      <div className="shell footerBottom">
-        <div className="footerMeta footerMetaV2">
-          <span>Standard · Traceability · Public Register</span>
-          <span>Finales Zertifizierungszeichen in Entwicklung.</span>
-        </div>
+      <div className="shell compactFooterMeta">
+        <span>Standard · Audit · Traceability · Public Register</span>
+        <span>Finales Zertifizierungszeichen in Entwicklung.</span>
       </div>
     </footer>
   );
