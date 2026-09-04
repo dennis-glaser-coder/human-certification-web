@@ -61,14 +61,14 @@ export default function VerifyPage() {
       <SiteHeader />
 
       <section className="pageHero shell verifyHero">
-        <div className="eyebrow">VERIFY CERTIFICATION</div>
+        <div className="eyebrow">ZERTIFIZIERUNG PRÜFEN</div>
         <h1>Ein Zertifizierungszeichen ist nur so glaubwürdig wie <em>sein öffentlicher Nachweis.</em></h1>
         <p className="lead">Zertifizierungs-ID eingeben und Hersteller, Produkt, Standardversion, Status und Gültigkeit direkt prüfen.</p>
       </section>
 
       <section className="shell verifyWorkspace">
         <form onSubmit={verify} className="verifyForm">
-          <label htmlFor="certificate-id">CERTIFICATION ID</label>
+          <label htmlFor="certificate-id">ZERTIFIZIERUNGS-ID</label>
           <div>
             <input id="certificate-id" value={value} onChange={(e) => setValue(e.target.value)} placeholder="z. B. HC-DEMO-0001" />
             <button className="button primary" disabled={state.loading}>{state.loading ? 'Prüfe …' : 'Jetzt prüfen'}</button>
@@ -90,7 +90,7 @@ export default function VerifyPage() {
 
             <div className="verificationIdentity">
               <div>
-                <small>CERTIFICATION ID</small>
+                <small>ZERTIFIZIERUNGS-ID</small>
                 <h2>{state.record.public_id}</h2>
               </div>
               <Link className="recordOpenLink" href={`/c/${encodeURIComponent(state.record.public_id)}`}>Öffentlichen Datensatz öffnen →</Link>
@@ -99,12 +99,12 @@ export default function VerifyPage() {
             <dl className="verificationDetails">
               <div><dt>Hersteller</dt><dd>{state.record.products?.manufacturers?.name ?? '—'}</dd></div>
               <div><dt>Produkt</dt><dd>{state.record.products?.name ?? '—'}</dd></div>
-              <div><dt>Standardversion</dt><dd>{state.record.standard_versions?.version ?? '—'}</dd></div>
+              <div><dt>Standard</dt><dd>{state.record.standard_versions?.title ?? state.record.standard_versions?.version ?? '—'}</dd></div>
               <div><dt>Ausgestellt</dt><dd>{state.record.issued_at ? new Date(state.record.issued_at).toLocaleDateString('de-DE') : '—'}</dd></div>
               <div><dt>Gültig bis</dt><dd>{state.record.valid_until ? new Date(state.record.valid_until).toLocaleDateString('de-DE') : '—'}</dd></div>
             </dl>
 
-            {state.record.public_note && <div className="publicNote"><strong>PUBLIC NOTE</strong><p>{state.record.public_note}</p></div>}
+            {state.record.public_note && <div className="publicNote"><strong>ÖFFENTLICHER HINWEIS</strong><p>{state.record.public_note}</p></div>}
           </article>
         )}
       </section>
