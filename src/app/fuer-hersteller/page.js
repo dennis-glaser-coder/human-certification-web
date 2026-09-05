@@ -40,7 +40,7 @@ const evidence = [
   ['Nachweise', 'Geeignete Unterlagen oder Informationen, die die tatsächliche Ausführung des beschriebenen Herstellungsprozesses belegen.'],
 ];
 
-const process = [
+const certificationProcess = [
   ['Anfrage', 'Produkt, Hersteller und Herstellungsprozess werden für die fachliche Vorprüfung erfasst.'],
   ['Zertifizierungsumfang', 'Produkt oder Produktfamilie, Standorte und relevante Fremdfertigung werden eindeutig abgegrenzt.'],
   ['Vor-Ort-Audit', 'Herstellung, menschliche Arbeit, Maschineneinsatz, relevante Standorte und Fremdfertigung werden beim Hersteller vor Ort geprüft.'],
@@ -246,7 +246,7 @@ export default function ManufacturerPage() {
           </div>
 
           <div className="manufacturerProcessGrid">
-            {process.map(([title, copy]) => (
+            {certificationProcess.map(([title, copy]) => (
               <article key={title}>
                 <strong>{title}</strong>
                 <p>{copy}</p>
