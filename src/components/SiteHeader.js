@@ -18,11 +18,11 @@ export default function SiteHeader() {
           <Link href="/register">Register</Link>
           <Link href="/dokumente">Dokumente</Link>
           <Link href="/ueber-uns">Über uns</Link>
-          <Link className="navVerify" href="/pruefen">ID prüfen</Link>
+          <Link className="navVerify" href="/pruefen">Zertifizierung prüfen</Link>
         </nav>
 
         <div className="mobileHeaderActions premiumMobileHeaderActions">
-          <Link className="mobileVerify" href="/pruefen">ID prüfen</Link>
+          <Link className="mobileVerify" href="/pruefen">Prüfen</Link>
           <MobileNav />
         </div>
       </div>
