@@ -6744,3 +6744,487 @@ textarea:focus-visible{
     gap:28px;
   }
 }
+
+
+/* ===== Why Made by Humans sales page 2026-09-05 ===== */
+.salesValueMore{
+  margin-top:24px;
+  text-align:right;
+}
+.salesValueMore a{
+  color:var(--blue);
+  font-size:9px;
+  font-weight:700;
+  text-decoration:none;
+  border-bottom:1px solid currentColor;
+  padding-bottom:3px;
+}
+
+.whyHero{
+  background:var(--white);
+  border-bottom:1px solid var(--stone);
+}
+.whyHeroGrid{
+  min-height:690px;
+  display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(360px,.85fr);
+  gap:92px;
+  align-items:center;
+}
+.whyHeroCopy{
+  padding:92px 0 86px;
+}
+.whyHeroCopy h1{
+  max-width:820px;
+  margin:18px 0 26px;
+  font-size:clamp(58px,5.4vw,80px);
+  line-height:.97;
+  letter-spacing:-.05em;
+}
+.whyHeroLead{
+  max-width:690px;
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.76;
+}
+.whyHeroActions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:34px;
+}
+.whyHeroMark{
+  min-height:510px;
+  padding:34px 44px;
+  border-left:1px solid var(--stone);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+.whyHeroMarkLabel{
+  width:100%;
+  padding-bottom:12px;
+  border-bottom:1px solid var(--stone);
+  color:var(--blue);
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:.13em;
+}
+.whyHeroMark img{
+  width:min(300px,82%);
+  margin:32px auto;
+}
+.whyHeroMark blockquote{
+  margin:0;
+  max-width:420px;
+  font-size:24px;
+  line-height:1.28;
+  text-align:center;
+}
+
+.whyThesis{
+  padding:88px 0 94px;
+  background:var(--paper);
+}
+.whyThesisGrid{
+  display:grid;
+  grid-template-columns:.55fr 1.45fr;
+  gap:90px;
+  align-items:start;
+}
+.whyThesis h2{
+  margin:0 0 22px;
+  max-width:900px;
+  font-size:clamp(43px,4.5vw,62px);
+  line-height:1.02;
+}
+.whyThesisGrid>div>p{
+  max-width:720px;
+  margin:0;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.8;
+}
+
+.whyManufacturers,
+.whyComparison,
+.whyUse,
+.whyProof{
+  padding:92px 0 98px;
+}
+.whyManufacturers{
+  background:var(--white);
+  border-top:1px solid var(--stone);
+  border-bottom:1px solid var(--stone);
+}
+.whySectionHead{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:100px;
+  align-items:end;
+}
+.whySectionHead h2{
+  margin:15px 0 0;
+  max-width:760px;
+  font-size:clamp(42px,4.2vw,58px);
+  line-height:1.03;
+}
+.whySectionHead>p{
+  margin:0;
+  max-width:540px;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.78;
+}
+.whyBenefitGrid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  margin-top:54px;
+  border-top:2px solid var(--ink);
+}
+.whyBenefitGrid article{
+  min-height:214px;
+  padding:22px 28px 22px 0;
+  border-right:1px solid var(--stone);
+  border-bottom:1px solid var(--stone);
+}
+.whyBenefitGrid article:nth-child(3n){
+  border-right:0;
+}
+.whyBenefitGrid article:not(:nth-child(3n+1)){
+  padding-left:28px;
+}
+.whyBenefitGrid span,
+.whyUseGrid span{
+  display:block;
+  margin-bottom:40px;
+  color:var(--blue);
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:.13em;
+}
+.whyBenefitGrid strong,
+.whyUseGrid strong{
+  display:block;
+  margin-bottom:11px;
+  font-size:11px;
+}
+.whyBenefitGrid p,
+.whyUseGrid p{
+  margin:0;
+  color:var(--muted);
+  font-size:10px;
+  line-height:1.67;
+}
+
+.whyCustomers{
+  padding:94px 0 98px;
+  background:var(--ink);
+  color:var(--white);
+}
+.whyCustomersGrid{
+  display:grid;
+  grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+  gap:110px;
+}
+.whyCustomersIntro h2{
+  margin:15px 0 24px;
+  max-width:650px;
+  color:var(--white);
+  font-size:clamp(42px,4.2vw,58px);
+  line-height:1.03;
+}
+.whyCustomersIntro>p:last-child{
+  max-width:610px;
+  color:rgba(255,255,255,.64);
+  font-size:11px;
+  line-height:1.8;
+}
+.whyCustomerList{
+  border-top:1px solid rgba(255,255,255,.5);
+}
+.whyCustomerList article{
+  display:grid;
+  grid-template-columns:52px 1fr;
+  gap:10px;
+  padding:22px 0;
+  border-bottom:1px solid rgba(255,255,255,.18);
+}
+.whyCustomerList article>span{
+  color:#AFC1D8;
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.12em;
+}
+.whyCustomerList strong{
+  display:block;
+  margin-bottom:8px;
+  font-size:11px;
+}
+.whyCustomerList p{
+  margin:0;
+  color:rgba(255,255,255,.64);
+  font-size:10px;
+  line-height:1.65;
+}
+
+.whyComparison{
+  background:var(--paper);
+}
+.whyComparisonTable{
+  margin-top:54px;
+  border-top:2px solid var(--ink);
+}
+.whyComparisonHead,
+.whyComparisonRow{
+  display:grid;
+  grid-template-columns:.7fr 1fr 1.15fr 1.15fr;
+  gap:26px;
+  align-items:start;
+}
+.whyComparisonHead{
+  padding:12px 0;
+  border-bottom:1px solid var(--ink);
+}
+.whyComparisonHead span{
+  color:var(--muted-soft);
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:.12em;
+}
+.whyComparisonRow{
+  min-height:92px;
+  padding:20px 0;
+  border-bottom:1px solid var(--stone);
+}
+.whyComparisonRow strong{
+  font-family:"Source Serif 4",Georgia,serif;
+  font-size:20px;
+  font-weight:500;
+}
+.whyComparisonRow span{
+  color:var(--muted);
+  font-size:10px;
+  line-height:1.6;
+}
+
+.whyUse{
+  background:var(--white);
+  border-top:1px solid var(--stone);
+  border-bottom:1px solid var(--stone);
+}
+.whyUseGrid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  margin-top:54px;
+  border-top:2px solid var(--ink);
+}
+.whyUseGrid article{
+  min-height:205px;
+  padding:22px 24px 20px 0;
+  border-right:1px solid var(--stone);
+  border-bottom:1px solid var(--stone);
+}
+.whyUseGrid article:not(:first-child){
+  padding-left:24px;
+}
+.whyUseGrid article:last-child{
+  border-right:0;
+}
+
+.whyBrandValue{
+  padding:92px 0 98px;
+  background:var(--blue);
+  color:var(--white);
+}
+.whyBrandValueGrid{
+  display:grid;
+  grid-template-columns:minmax(280px,.65fr) minmax(0,1.35fr);
+  gap:100px;
+  align-items:center;
+}
+.whyBrandValueMark{
+  min-height:380px;
+  border:1px solid rgba(255,255,255,.25);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.whyBrandValueMark img{
+  width:min(250px,76%);
+}
+.whyBrandValue h2{
+  margin:15px 0 24px;
+  max-width:760px;
+  color:var(--white);
+  font-size:clamp(42px,4.2vw,58px);
+  line-height:1.03;
+}
+.whyBrandValueGrid>div:last-child>p:last-child{
+  max-width:690px;
+  color:rgba(255,255,255,.72);
+  font-size:11px;
+  line-height:1.8;
+}
+
+.whyProof{
+  background:var(--paper);
+}
+.whyProofGrid{
+  display:grid;
+  grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);
+  gap:100px;
+  align-items:start;
+}
+.whyProof h2{
+  margin:15px 0 0;
+  max-width:550px;
+  font-size:clamp(42px,4.1vw,56px);
+  line-height:1.03;
+}
+.whyProofList{
+  border-top:2px solid var(--ink);
+}
+.whyProofList>div{
+  display:grid;
+  grid-template-columns:52px 1fr;
+  gap:14px;
+  padding:18px 0;
+  border-bottom:1px solid var(--stone);
+}
+.whyProofList span{
+  color:var(--blue);
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.12em;
+}
+.whyProofList strong{
+  font-size:11px;
+}
+.whyFinalCta{
+  border-top:1px solid rgba(255,255,255,.18);
+}
+
+@media(max-width:1120px){
+  .premiumMainNav{
+    gap:16px;
+  }
+  .premiumMainNav a{
+    font-size:8px;
+  }
+}
+
+@media(max-width:900px){
+  .whyHeroGrid,
+  .whyThesisGrid,
+  .whyCustomersGrid,
+  .whyBrandValueGrid,
+  .whyProofGrid,
+  .whySectionHead{
+    grid-template-columns:1fr;
+  }
+  .whyHeroGrid{
+    gap:0;
+  }
+  .whyHeroMark{
+    border-left:0;
+    border-top:1px solid var(--stone);
+  }
+  .whyThesisGrid,
+  .whyCustomersGrid,
+  .whyBrandValueGrid,
+  .whyProofGrid,
+  .whySectionHead{
+    gap:34px;
+  }
+  .whyBenefitGrid{
+    grid-template-columns:1fr 1fr;
+  }
+  .whyUseGrid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:760px){
+  .salesValueMore{
+    text-align:left;
+  }
+  .whyHeroCopy{
+    padding-top:56px;
+    padding-bottom:46px;
+  }
+  .whyHeroCopy h1{
+    font-size:clamp(43px,11vw,52px);
+  }
+  .whyHeroLead{
+    font-size:12px;
+  }
+  .whyHeroActions{
+    display:grid;
+    grid-template-columns:1fr;
+  }
+  .whyHeroActions .salesPrimary,
+  .whyHeroActions .salesSecondary{
+    width:100%;
+  }
+  .whyHeroMark{
+    min-height:430px;
+    padding:32px 0 40px;
+  }
+  .whyHeroMark blockquote{
+    font-size:22px;
+  }
+  .whyThesis,
+  .whyManufacturers,
+  .whyCustomers,
+  .whyComparison,
+  .whyUse,
+  .whyBrandValue,
+  .whyProof{
+    padding-top:68px;
+    padding-bottom:72px;
+  }
+  .whyThesis h2,
+  .whySectionHead h2,
+  .whyCustomersIntro h2,
+  .whyBrandValue h2,
+  .whyProof h2{
+    font-size:35px;
+  }
+  .whyBenefitGrid,
+  .whyUseGrid{
+    grid-template-columns:1fr;
+    margin-top:36px;
+  }
+  .whyBenefitGrid article,
+  .whyBenefitGrid article:not(:nth-child(3n+1)),
+  .whyUseGrid article,
+  .whyUseGrid article:not(:first-child){
+    min-height:0;
+    padding:18px 0;
+    border-right:0;
+  }
+  .whyBenefitGrid span,
+  .whyUseGrid span{
+    margin-bottom:12px;
+  }
+  .whyCustomerList article{
+    grid-template-columns:38px 1fr;
+  }
+  .whyComparisonHead{
+    display:none;
+  }
+  .whyComparisonRow{
+    grid-template-columns:1fr;
+    gap:8px;
+    padding:20px 0;
+  }
+  .whyComparisonRow span{
+    padding-left:0;
+  }
+  .whyBrandValueMark{
+    min-height:320px;
+  }
+}
