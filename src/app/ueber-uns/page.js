@@ -40,10 +40,10 @@ export default function AboutPage() {
 
       <section className="aboutMetaBand" aria-label="Grundprinzipien von Made by Humans">
         <div className="shell aboutMetaGrid">
-          <div><span>01</span><strong>Produktfokus</strong><p>Geprüft wird ein klar abgegrenztes physisches Produkt.</p></div>
-          <div><span>02</span><strong>Klare Aussage</strong><p>Bewertet wird ausschließlich die menschliche Herstellung.</p></div>
-          <div><span>03</span><strong>Nachweise</strong><p>Die Aussage muss anhand geeigneter Informationen prüfbar sein.</p></div>
-          <div><span>04</span><strong>Verifizierung</strong><p>Zertifizierungsstatus und Standardfassung bleiben nachvollziehbar.</p></div>
+          <div><strong>Produktfokus</strong><p>Geprüft wird ein klar abgegrenztes physisches Produkt.</p></div>
+          <div><strong>Klare Aussage</strong><p>Bewertet wird ausschließlich die menschliche Herstellung.</p></div>
+          <div><strong>Nachweise</strong><p>Die Aussage muss anhand geeigneter Informationen prüfbar sein.</p></div>
+          <div><strong>Verifizierung</strong><p>Zertifizierungsstatus und Standardfassung bleiben nachvollziehbar.</p></div>
         </div>
       </section>
 
@@ -80,9 +80,8 @@ export default function AboutPage() {
         </div>
 
         <div className="aboutPrinciplesGrid">
-          {principles.map(([title, copy], index) => (
+          {principles.map(([title, copy]) => (
             <article key={title}>
-              <span>{String(index + 1).padStart(2, '0')}</span>
               <strong>{title}</strong>
               <p>{copy}</p>
             </article>
@@ -104,9 +103,8 @@ export default function AboutPage() {
           </div>
 
           <div className="aboutArchitectureGrid">
-            {architecture.map(([number, title, copy]) => (
-              <article key={number}>
-                <span>{number}</span>
+            {architecture.map(([, title, copy]) => (
+              <article key={title}>
                 <strong>{title}</strong>
                 <p>{copy}</p>
               </article>
