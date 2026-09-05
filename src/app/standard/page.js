@@ -40,6 +40,15 @@ export default function StandardPage() {
         </p>
       </section>
 
+      <section className="standardMetaBand" aria-label="Metadaten zum Standard">
+        <div className="shell standardMetaBar">
+          <div><span>STANDARDVERSION</span><strong>0.1</strong></div>
+          <div><span>GELTUNGSBEREICH</span><strong>Physische Produkte</strong></div>
+          <div><span>PRÜFBEREICHE</span><strong>6 Kriterienbereiche</strong></div>
+          <div><span>DOKUMENTATION</span><strong>Versioniert & öffentlich</strong></div>
+        </div>
+      </section>
+
       <section className="shell standardCriteriaSection">
         <div className="sectionIntro compact">
           <div>
