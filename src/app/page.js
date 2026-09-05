@@ -170,7 +170,7 @@ export default function Home() {
         <div className="shell desireAuditGrid">
           <figure>
             <img
-              src={assetBase + '/brand/IMG_1049.png'}
+              src={assetBase + '/brand/IMG_1053.png'}
               alt="Vor-Ort-Audit während eines produktprägenden menschlichen Herstellungsschritts"
               loading="lazy"
             />
