@@ -1,24 +1,17 @@
 import Link from 'next/link';
 import SiteHeader from '../components/SiteHeader';
 import SiteFooter from '../components/SiteFooter';
-import HeroVerify from '../components/HeroVerify';
 
-const valuePoints = [
-  ['Differenzierung', 'Machen Sie einen realen Unterschied zur weitgehend automatisierten Herstellung sichtbar.'],
-  ['Wert erklären', 'Zeigen Sie nachvollziehbar, warum menschliche Arbeit ein wesentlicher Teil Ihres Produktes ist.'],
-  ['Vertrauen schaffen', 'Verweisen Sie auf eine dokumentierte Zertifizierung statt nur auf eine Eigenangabe.'],
+const homeStory = [
+  ['Sichtbar machen', 'Menschliche Herstellung wird zu einem klaren, produktbezogenen Unterschied.'],
+  ['Vor Ort prüfen', 'Die tatsächliche Herstellung wird beim Hersteller nachvollzogen.'],
+  ['Öffentlich verifizieren', 'Zertifizierungs-ID, Status und Produktbezug bleiben überprüfbar.'],
 ];
 
 const auditFacts = [
   ['Herstellung nachvollziehen', 'Die reale Produktion wird dort betrachtet, wo die relevanten Arbeitsschritte stattfinden.'],
   ['Maschineneinsatz bewerten', 'Geprüft wird, wo Technik unterstützt und wo menschliche Arbeit wesentlich bleibt.'],
   ['Umfang eindeutig halten', 'Produkt, relevante Standorte und Fremdfertigung werden klar zugeordnet.'],
-];
-
-const proofFlow = [
-  ['Produkt einordnen', 'Zertifizierungsumfang, Standorte und relevante Fremdfertigung festlegen.'],
-  ['Vor Ort prüfen', 'Tatsächliche Herstellung und menschliche Arbeit beim Hersteller nachvollziehen.'],
-  ['Freigeben & verifizieren', 'Entscheidung dokumentieren und den freigegebenen Umfang öffentlich prüfbar machen.'],
 ];
 
 export default function Home() {
@@ -146,33 +139,29 @@ export default function Home() {
 
           <div className="compactApplicationFooter">
             <span>Produktfokus · statusgebunden · öffentlich verifizierbar</span>
+            <span className="applicationSwipeHint">Wischen für weitere Anwendung →</span>
             <Link href="/markennutzung">Markennutzung im Detail →</Link>
           </div>
         </div>
       </section>
 
       <section className="homeValueProof">
-        <div className="shell homeValueProofGrid">
-          <div className="homeValueSide">
-            <p className="premiumSectionLabel premiumSectionLabelLight">WARUM HERSTELLER ES NUTZEN</p>
-            <h2>Ein Unterschied, der sichtbar wird.</h2>
-            <div className="homeValueRows">
-              {valuePoints.map(([title, copy]) => (
-                <article key={title}><strong>{title}</strong><p>{copy}</p></article>
-              ))}
-            </div>
-            <Link className="desireTextLink desireTextLinkLight" href="/warum-made-by-humans">Alle Vorteile ansehen →</Link>
+        <div className="shell homeValueStory">
+          <div className="homeValueStoryHead">
+            <p className="premiumSectionLabel premiumSectionLabelLight">WERT & VERTRAUEN</p>
+            <h2>Ein Unterschied, den man sehen – und prüfen – kann.</h2>
+            <p>
+              Made by Humans verbindet den Nutzen für Hersteller mit einem nachvollziehbaren Prüf- und Verifizierungssystem.
+            </p>
           </div>
-
-          <div className="homeProofSide">
-            <p className="premiumSectionLabel premiumSectionLabelLight">WARUM MAN IHM VERTRAUEN KANN</p>
-            <h2>Ein Zeichen, das nicht einfach vergeben wird.</h2>
-            <div className="homeProofFlow">
-              {proofFlow.map(([title, copy]) => (
-                <article key={title}><strong>{title}</strong><p>{copy}</p></article>
-              ))}
-            </div>
-            <Link className="desireTextLink desireTextLinkLight" href="/fuer-hersteller#ablauf">Zertifizierungsverfahren →</Link>
+          <div className="homeStoryRows">
+            {homeStory.map(([title, copy]) => (
+              <article key={title}><strong>{title}</strong><p>{copy}</p></article>
+            ))}
+          </div>
+          <div className="homeStoryLinks">
+            <Link href="/warum-made-by-humans">Vorteile ansehen →</Link>
+            <Link href="/fuer-hersteller#ablauf">Zertifizierungsverfahren →</Link>
           </div>
         </div>
       </section>
@@ -207,15 +196,18 @@ export default function Home() {
             <p className="premiumSectionLabel premiumSectionLabelLight">FÜR KÄUFER</p>
             <h2>Verständlich am Produkt. Überprüfbar im Register.</h2>
             <blockquote>
-              Dieses Produkt wurde darauf geprüft, ob seine wesentlichen Herstellungsschritte
-              nachweislich durch Menschen ausgeführt werden.
+              Geprüfte menschliche Herstellung – klar einem Produkt zugeordnet und öffentlich verifizierbar.
             </blockquote>
-            <div className="homeConsumerLinks">
-              <Link href="/fuer-kaeufer">Was das Zeichen bedeutet →</Link>
-              <Link href="/register">Öffentliches Register →</Link>
+          </div>
+          <div className="homeVerifyCompact">
+            <span>ZERTIFIZIERUNGS-ID ODER QR VORHANDEN?</span>
+            <strong>Nachweis direkt prüfen.</strong>
+            <p>Produkt, Hersteller, Umfang, Status und Standardfassung im öffentlichen Datensatz ansehen.</p>
+            <div>
+              <Link className="homeVerifyPrimary" href="/pruefen">Zertifizierung prüfen</Link>
+              <Link className="homeVerifySecondary" href="/fuer-kaeufer">Was das Zeichen bedeutet →</Link>
             </div>
           </div>
-          <div className="homeVerifyTool"><HeroVerify /></div>
         </div>
       </section>
 
@@ -226,16 +218,14 @@ export default function Home() {
               <p className="premiumSectionLabel">NACH POSITIVER ZERTIFIZIERUNG</p>
               <h2>Mehr als ein Zertifikat.</h2>
             </div>
-            <div className="homeFinalBenefits">
-              <span>Zertifizierungszeichen</span>
-              <span>QR & Registerlink</span>
-              <span>Verpackung & Digitalbadge</span>
-              <span>geregelte Claims</span>
+            <div className="homeFinalSummary">
+              <p>Zertifizierungszeichen · QR & Registerlink · Verpackungs- und Digitalanwendung · geregelte Claims</p>
+              <Link href="/markennutzung">Markennutzung ansehen →</Link>
             </div>
           </div>
 
           <div className="homeStandardLine">
-            <span>Auf einem veröffentlichten, versionierten Standard aufgebaut.</span>
+            <span>Veröffentlicht. Versioniert. Öffentlich nachvollziehbar.</span>
             <Link href="/standard">Standard ansehen →</Link>
           </div>
 
