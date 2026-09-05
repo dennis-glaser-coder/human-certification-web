@@ -3475,3 +3475,147 @@ textarea:focus-visible{
     font-size:20px;
   }
 }
+
+
+/* ===== Institutional authority pass 2026-09-05 ===== */
+.premiumSiteHeader{
+  background:var(--paper);
+  backdrop-filter:none;
+  border-bottom:1px solid rgba(17,24,32,.22);
+}
+.premiumHeaderInner{
+  min-height:72px;
+}
+.premiumBrandLockup .brandName{
+  font-size:12px;
+  letter-spacing:.205em;
+}
+.premiumBrandLockup .brandDescriptor{
+  color:rgba(17,24,32,.52);
+  letter-spacing:.115em;
+}
+.premiumMainNav a{
+  position:relative;
+  font-weight:600;
+  letter-spacing:.01em;
+}
+.premiumMainNav a:not(.navVerify)::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:100%;
+  bottom:-7px;
+  height:1px;
+  background:var(--ink);
+  transition:right .16s ease;
+}
+.premiumMainNav a:not(.navVerify):hover{
+  color:var(--ink);
+}
+.premiumMainNav a:not(.navVerify):hover::after{
+  right:0;
+}
+.premiumMainNav .navVerify{
+  min-height:36px;
+  padding:0 15px;
+  border-color:var(--ink);
+  background:var(--ink);
+  color:var(--white);
+  display:inline-flex;
+  align-items:center;
+}
+.premiumMainNav .navVerify:hover{
+  background:var(--blue);
+  border-color:var(--blue);
+  color:var(--white);
+}
+.premiumMobileHeaderActions .mobileVerify{
+  min-height:34px;
+  padding:0 11px;
+  border-color:var(--ink);
+  background:var(--ink);
+  color:var(--white);
+  display:inline-flex;
+  align-items:center;
+}
+
+.premiumHeroLinks{
+  align-items:center;
+  gap:12px;
+}
+.premiumHeroLinks a{
+  border-bottom:0;
+}
+.premiumHeroLinks .premiumHeroPrimary{
+  min-height:44px;
+  padding:0 18px;
+  background:var(--ink);
+  color:var(--white);
+  border:1px solid var(--ink);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  transition:background .16s ease,border-color .16s ease;
+}
+.premiumHeroLinks .premiumHeroPrimary:hover{
+  background:var(--blue);
+  border-color:var(--blue);
+  color:var(--white);
+}
+.premiumHeroLinks .premiumHeroSecondary{
+  min-height:44px;
+  padding:0 16px;
+  border:1px solid rgba(17,24,32,.28);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  transition:border-color .16s ease,color .16s ease;
+}
+.premiumHeroLinks .premiumHeroSecondary:hover{
+  border-color:var(--ink);
+  color:var(--ink);
+}
+
+.premiumSealField::before{
+  background:transparent;
+  box-shadow:none;
+  border-left:1px solid rgba(17,24,32,.12);
+}
+.premiumSealField img{
+  filter:none;
+  transform:none;
+}
+.premiumClaim{
+  box-shadow:none;
+}
+.premiumVerify,
+.verifyModule,
+.interestForm,
+.verificationRecord,
+.certificateSummary{
+  box-shadow:none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible{
+  outline:2px solid var(--blue);
+  outline-offset:3px;
+}
+
+@media(max-width:760px){
+  .premiumHeroLinks{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:9px;
+  }
+  .premiumHeroLinks .premiumHeroPrimary,
+  .premiumHeroLinks .premiumHeroSecondary{
+    width:100%;
+    min-height:46px;
+  }
+  .premiumMobileHeaderActions .mobileVerify{
+    min-height:32px;
+  }
+}
