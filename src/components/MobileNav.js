@@ -29,7 +29,8 @@ export default function MobileNav() {
           <Link href="/dokumente" onClick={close}>Dokumente</Link>
           <Link href="/ueber-uns" onClick={close}>Über uns</Link>
           <Link href="/transparenz" onClick={close}>Transparenz & Integrität</Link>
-          <Link className="mobileMenuVerify" href="/pruefen" onClick={close}>Zertifizierungs-ID prüfen</Link>
+          <Link href="/pruefen" onClick={close}>Zertifizierungs-ID prüfen</Link>
+          <Link className="mobileMenuVerify" href="/fuer-hersteller#zertifizierungsanfrage" onClick={close}>Zertifizierung anfragen</Link>
         </nav>
       )}
     </div>
