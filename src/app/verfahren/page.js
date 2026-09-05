@@ -36,7 +36,7 @@ export default function ProceduresPage() {
       <SiteHeader />
 
       <section className="pageHero shell">
-        <div className="eyebrow">GOVERNANCE · MBH-GOV-0.1</div>
+        <div className="eyebrow">VERFAHRENSREGELN · MBH-GOV-0.1</div>
         <h1>Drei unterschiedliche Fälle. Drei klar getrennte Verfahren.</h1>
         <p className="lead">
           Beschwerden, Einsprüche und Zeichenmissbrauch dürfen nicht in einem unscharfen Sammelprozess verschwinden.
@@ -67,7 +67,7 @@ export default function ProceduresPage() {
           </div>
           <div>
             <p>
-              Solange die endgültige Governance-Struktur nicht eingerichtet ist, behauptet Made by Humans nicht,
+              Solange die endgültige Organisations- und Integritätsstruktur nicht eingerichtet ist, behauptet Made by Humans nicht,
               dass Beschwerden oder Einsprüche bereits durch eine unabhängige externe Instanz entschieden werden.
               Für den kommerziellen Betrieb werden Zuständigkeiten und Regeln zur Vermeidung von Interessenkonflikten vorab veröffentlicht.
             </p>
@@ -90,7 +90,7 @@ export default function ProceduresPage() {
         <p>Die Verfahrensgrundsätze werden versioniert geführt und vor dem kommerziellen Start in eine verbindliche Fassung überführt.</p>
         <div className="standardCloseLinks">
           <Link className="textLink" href="/dokumente">Dokumentenregister →</Link>
-          <Link className="textLink" href="/transparenz">Transparenz & Governance →</Link>
+          <Link className="textLink" href="/transparenz">Transparenz & Integrität →</Link>
         </div>
       </section>
 
