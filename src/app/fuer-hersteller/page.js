@@ -162,8 +162,8 @@ export default function ManufacturerPage() {
           <div className="sectionNo">PRODUKT EINORDNEN</div>
           <h2>Passt Ihr Produkt zum Standard?</h2>
           <p>
-            Die Anfrage ist unverbindlich und noch kein formeller Zertifizierungsantrag.
-            Sie dient der ersten fachlichen Einordnung von Produkt und Herstellungsprozess.
+            Die Anfrage dient der fachlichen Vorprüfung von Produkt und Herstellungsprozess.
+            Bei grundsätzlicher Eignung wird der erforderliche Zertifizierungsumfang im nächsten Schritt festgelegt.
           </p>
         </div>
 
@@ -206,7 +206,7 @@ export default function ManufacturerPage() {
           </label>
 
           <button className="button primary formButton" disabled={state.loading}>
-            {state.loading ? 'Wird gesendet …' : 'Produkt einordnen lassen'}
+            {state.loading ? 'Wird gesendet …' : 'Zertifizierung anfragen'}
           </button>
 
           {state.message && <p className={state.success ? 'formMessage success' : 'formMessage'}>{state.message}</p>}
