@@ -11,9 +11,9 @@ export const metadata = {
 
 const principles = [
   ['Enger Prüfgegenstand', 'Bewertet wird die definierte Eigenschaft menschlich geprägter Herstellung – nicht pauschal die Qualität oder Moral eines Unternehmens.'],
-  ['Öffentliche Verifizierung', 'Eine Kennzeichnung soll über eine eindeutige ID mit einem öffentlichen Zertifizierungsdatensatz verbunden sein.'],
-  ['Versionierter Standard', 'Zertifizierungsentscheidungen sollen immer auf eine eindeutig bezeichnete Standardfassung zurückgeführt werden können.'],
-  ['Nachvollziehbare Zuständigkeiten', 'Prüfung, fachliche Kontrolle, Zertifizierungsentscheidung und Markennutzung sollen mit klaren Rollen dokumentiert werden.'],
+  ['Öffentliche Verifizierung', 'Eine Kennzeichnung ist über eine eindeutige ID mit einem öffentlichen Zertifizierungsdatensatz verbunden.'],
+  ['Versionierter Standard', 'Zertifizierungsentscheidungen lassen sich auf eine eindeutig bezeichnete Standardfassung zurückführen.'],
+  ['Nachvollziehbare Zuständigkeiten', 'Prüfung, fachliche Kontrolle, Zertifizierungsentscheidung und Markennutzung werden mit klaren Rollen dokumentiert.'],
 ];
 
 export default function AboutPage() {
@@ -25,7 +25,7 @@ export default function AboutPage() {
         <div className="eyebrow">ÜBER MADE BY HUMANS</div>
         <h1>Ein Zertifizierungssystem für eine klar definierte Produkteigenschaft.</h1>
         <p className="lead">
-          Made by Humans wird als branchenübergreifender Standard für physische Produkte entwickelt,
+          Made by Humans ist ein branchenübergreifender Standard für physische Produkte,
           deren wesentliche Herstellungsschritte nachweislich von Menschen ausgeführt werden.
         </p>
       </section>
@@ -39,7 +39,7 @@ export default function AboutPage() {
           <div>
             <p>
               Begriffe wie handgefertigt oder menschlich gefertigt werden heute unterschiedlich verwendet.
-              Made by Humans soll deshalb nicht bewerten, ob eine Formulierung sympathisch klingt, sondern ob die zugrunde liegende
+              Made by Humans bewertet deshalb nicht, ob eine Formulierung sympathisch klingt, sondern ob die zugrunde liegende
               Herstellungsrealität anhand definierter Kriterien und Nachweise überprüft werden kann.
             </p>
             <p>
@@ -67,13 +67,13 @@ export default function AboutPage() {
       <section className="aboutStatus">
         <div className="shell aboutStatusGrid">
           <div>
-            <div className="sectionNo light">AKTUELLER STAND</div>
-            <h2>Standard, Prüfprozess und Registermodell werden derzeit validiert.</h2>
+            <div className="sectionNo light">SYSTEMARCHITEKTUR</div>
+            <h2>Standard, Prüfung, Register und Markennutzung greifen ineinander.</h2>
           </div>
           <div>
             <p>
-              Eine öffentliche kommerzielle Zertifikatsvergabe ist noch nicht gestartet.
-              Vor dem Start werden Rechtsrahmen, Organisations- und Integritätsstruktur, Markennutzungsregeln und Prüfverantwortlichkeiten final festgelegt und veröffentlicht.
+              Die Aussage am Produkt ist nur so belastbar wie das System dahinter. Deshalb werden Kriterien,
+              Nachweise, Zertifizierungsentscheidung, Statusverwaltung und öffentliche Verifizierung miteinander verknüpft.
             </p>
             <div className="aboutStatusLinks">
               <Link className="textLink lightTextLink" href="/dokumente">Dokumente ansehen →</Link>
