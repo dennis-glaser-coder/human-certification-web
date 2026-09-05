@@ -58,10 +58,10 @@ export default function ProceduresPage() {
 
       <section className="procedureMetaBand" aria-label="Verfahrensgrundsätze">
         <div className="shell procedureMetaGrid">
-          <div><span>01</span><strong>Kategorisiert</strong><p>Jeder Vorgang wird eindeutig eingeordnet.</p></div>
-          <div><span>02</span><strong>Dokumentiert</strong><p>Sachverhalt, Belege und Bewertung bleiben nachvollziehbar.</p></div>
-          <div><span>03</span><strong>Zuständigkeitsklar</strong><p>Bearbeitende Rollen werden dem Vorgang zugeordnet.</p></div>
-          <div><span>04</span><strong>Abschlussfähig</strong><p>Entscheidung und Maßnahmen werden dokumentiert.</p></div>
+          <div><strong>Kategorisiert</strong><p>Jeder Vorgang wird eindeutig eingeordnet.</p></div>
+          <div><strong>Dokumentiert</strong><p>Sachverhalt, Belege und Bewertung bleiben nachvollziehbar.</p></div>
+          <div><strong>Zuständigkeitsklar</strong><p>Bearbeitende Rollen werden dem Vorgang zugeordnet.</p></div>
+          <div><strong>Abschlussfähig</strong><p>Entscheidung und Maßnahmen werden dokumentiert.</p></div>
         </div>
       </section>
 
@@ -80,7 +80,7 @@ export default function ProceduresPage() {
         <div className="procedureGrid">
           {procedures.map((procedure) => (
             <article key={procedure.type}>
-              <span>{procedure.code} · {procedure.type}</span>
+              <span>{procedure.type}</span>
               <h2>{procedure.title}</h2>
               <p>{procedure.copy}</p>
               <ol>
@@ -114,9 +114,8 @@ export default function ProceduresPage() {
             <h2>Fünf Angaben machen einen Vorgang nachvollziehbar.</h2>
           </div>
           <div className="procedureRecordList">
-            {recordFields.map(([title, copy], index) => (
+            {recordFields.map(([title, copy]) => (
               <article key={title}>
-                <span>{String(index + 1).padStart(2, '0')}</span>
                 <div><strong>{title}</strong><p>{copy}</p></div>
               </article>
             ))}
