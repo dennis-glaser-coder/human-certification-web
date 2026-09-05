@@ -64,7 +64,7 @@ export default function CertificateClient({ id }) {
 
       <section className="certificatePage shell">
         <div className="certificateBar">
-          <span>PUBLIC REGISTER</span>
+          <span>ÖFFENTLICHES REGISTER</span>
           <Link href="/register">Zur Registersuche →</Link>
         </div>
 
@@ -74,6 +74,10 @@ export default function CertificateClient({ id }) {
         {state.record && (
           <>
             <section className={`certificateSummary status-${state.record.status}`}>
+              <div className="certificateAuthorityLine">
+                <span>ÖFFENTLICHER ZERTIFIZIERUNGSDATENSATZ</span>
+                <span>STANDARDGEBUNDEN · STATUSVERFOLGBAR</span>
+              </div>
               <div className="certificateHeader">
                 <div className="certificateBrand">
                   <img src={`${assetBase}/brand/made-by-humans-seal.png`} alt="" aria-hidden="true" />
