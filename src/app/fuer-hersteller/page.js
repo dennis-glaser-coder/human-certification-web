@@ -43,8 +43,8 @@ const evidence = [
 const process = [
   ['01', 'Anfrage', 'Produkt, Hersteller und Herstellungsprozess werden für die fachliche Vorprüfung erfasst.'],
   ['02', 'Zertifizierungsumfang', 'Produkt oder Produktfamilie, Standorte und relevante Fremdfertigung werden eindeutig abgegrenzt.'],
-  ['03', 'Nachweisprüfung', 'Herstellungsinformationen und geeignete Belege werden gegen die Anforderungen des Standards bewertet.'],
-  ['04', 'Fachprüfung & Entscheidung', 'Prüfergebnis, offene Punkte und Zertifizierungsentscheidung werden nachvollziehbar dokumentiert.'],
+  ['03', 'Vor-Ort-Audit', 'Herstellung, menschliche Arbeit, Maschineneinsatz, relevante Standorte und Fremdfertigung werden beim Hersteller vor Ort geprüft.'],
+  ['04', 'Bewertung & Entscheidung', 'Auditfeststellungen, Nachweise und offene Punkte werden gegen den Standard bewertet und die Zertifizierungsentscheidung dokumentiert.'],
   ['05', 'Register & Markennutzung', 'Freigegebene Zertifizierungen erhalten eine ID, öffentlichen Status und klar geregelte Zeichennutzung.'],
 ];
 
@@ -114,7 +114,7 @@ export default function ManufacturerPage() {
         <h1>Menschliche Herstellung nachvollziehbar zertifizieren.</h1>
         <p className="lead">
           Made by Humans prüft ein konkret abgegrenztes physisches Produkt und den zugehörigen Herstellungsprozess
-          anhand definierter Kriterien, dokumentierter Nachweise und eines nachvollziehbaren Zertifizierungsverfahrens.
+          anhand definierter Kriterien, dokumentierter Nachweise und eines Vor-Ort-Audits beim Hersteller.
         </p>
         <div className="manufacturerHeroActions">
           <a className="button primary" href="#zertifizierungsanfrage">Zertifizierung anfragen</a>
@@ -190,7 +190,7 @@ export default function ManufacturerPage() {
             <h2>Diese Informationen sollten für die Prüfung vorliegen.</h2>
             <p>
               Nicht jeder Nachweis muss bereits mit der ersten Anfrage vollständig eingereicht werden.
-              Für eine belastbare Prüfung müssen die relevanten Produktionsinformationen jedoch nachvollziehbar verfügbar sein.
+              Die Informationen dienen der Vorbereitung des Vor-Ort-Audits und werden dort mit der tatsächlichen Produktion abgeglichen.
             </p>
           </div>
 
@@ -246,8 +246,8 @@ export default function ManufacturerPage() {
             <h2>Starten Sie mit der fachlichen Vorprüfung.</h2>
             <p>
               Mit den folgenden Angaben erfassen wir Produkt, Herstellungsprozess und die wesentlichen Rahmenbedingungen.
-              Daraus lässt sich ableiten, ob das Produkt grundsätzlich in den Geltungsbereich des Standards fällt
-              und welche Informationen für die weitere Prüfung benötigt werden.
+              Daraus lässt sich ableiten, ob das Produkt grundsätzlich in den Geltungsbereich des Standards fällt,
+              welche Informationen benötigt werden und wie das Vor-Ort-Audit vorbereitet werden kann.
             </p>
             <div className="applicationReference">
               <span>GEPRÜFT WERDEN</span>
