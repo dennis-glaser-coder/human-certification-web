@@ -75,10 +75,10 @@ export default function RegisterPage() {
 
       <section className="shell registerSection">
         <div className="registerTrustBar" aria-label="Inhalte eines Registereintrags">
-          <div><span>01</span><strong>Zertifizierungs-ID</strong><p>Eindeutige Zuordnung des Datensatzes.</p></div>
-          <div><span>02</span><strong>Produkt & Umfang</strong><p>Hersteller, Produkt und veröffentlichter Zertifizierungsumfang.</p></div>
-          <div><span>03</span><strong>Produktion & Standard</strong><p>Relevante Produktionsstandorte und angewendetes Regelwerk.</p></div>
-          <div><span>04</span><strong>Status & Gültigkeit</strong><p>Aktueller Zertifizierungsstatus und Laufzeit.</p></div>
+          <div><strong>Zertifizierungs-ID</strong><p>Eindeutige Zuordnung des Datensatzes.</p></div>
+          <div><strong>Produkt & Umfang</strong><p>Hersteller, Produkt und veröffentlichter Zertifizierungsumfang.</p></div>
+          <div><strong>Produktion & Standard</strong><p>Relevante Produktionsstandorte und angewendetes Regelwerk.</p></div>
+          <div><strong>Status & Gültigkeit</strong><p>Aktueller Zertifizierungsstatus und Laufzeit.</p></div>
         </div>
 
         <div className="registerToolbar">
