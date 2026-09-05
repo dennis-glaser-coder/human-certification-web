@@ -68,8 +68,8 @@ export default function WhyPage() {
           <div className="whyHeroVisual">
             <figure>
               <img
-                src="https://images.unsplash.com/photo-1774282557812-6182cc59f638?auto=format&fit=crop&w=1800&q=84"
-                alt="Menschliche Arbeit in einer Produktionswerkstatt"
+                src="https://images.unsplash.com/photo-1771523350488-32af5ba560e6?auto=format&fit=crop&w=1800&q=84"
+                alt="Hände bei der Formgebung eines keramischen Produktes"
               />
               <figcaption>Produktionsaufnahme · Maksim Shiriagin / Unsplash</figcaption>
             </figure>
@@ -101,6 +101,10 @@ export default function WhyPage() {
               Made by Humans übersetzt diesen Herstellungsunterschied in eine klar definierte,
               produktbezogene und öffentlich überprüfbare Aussage.
             </p>
+            <div className="whyThesisSignature">
+              <span>NICHT GEGEN TECHNOLOGIE.</span>
+              <strong>Für Sichtbarkeit dort, wo Menschen den Unterschied machen.</strong>
+            </div>
           </div>
         </div>
       </section>
@@ -219,8 +223,8 @@ export default function WhyPage() {
         <div className="shell whyBrandValueGrid">
           <div className="whyBrandValueVisual">
             <img
-              src="https://images.unsplash.com/photo-1748347084012-075796185d56?auto=format&fit=crop&w=1200&q=84"
-              alt="Produktion in einer modernen Fertigungsumgebung"
+              src="https://images.unsplash.com/photo-1463082459669-fd1ca1692fea?auto=format&fit=crop&w=1400&q=84"
+              alt="Handwerkliche Bearbeitung eines Werkstücks in einer Werkstatt"
               loading="lazy"
             />
             <div className="whyBrandSeal">
