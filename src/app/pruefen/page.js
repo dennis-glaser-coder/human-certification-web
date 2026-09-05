@@ -64,7 +64,7 @@ export default function VerifyPage() {
       <section className="verifyPage shell">
         <div className="verifyPageIntro">
           <div className="eyebrow">VERIFIZIERUNG</div>
-          <h1>Zertifizierungs-ID prüfen.</h1>
+          <h1>Zertifizierung über ID prüfen.</h1>
           <p>
             Geben Sie die ID einer Kennzeichnung ein, um den zugehörigen öffentlichen Datensatz aufzurufen.
           </p>
