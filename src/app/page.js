@@ -236,7 +236,7 @@ export default function Home() {
               <h2>Prüfen Sie, ob Ihr Produkt zum Standard passt.</h2>
             </div>
             <div>
-              <p>Dann klären wir, ob Ihr Produkt grundsätzlich zum Standard passt und welcher Zertifizierungsumfang sinnvoll ist.</p>
+              <p>In der fachlichen Vorprüfung grenzen wir Produkt, Herstellungsprozess und den sinnvollen Zertifizierungsumfang gemeinsam ein.</p>
               <Link className="desireFinalButton" href="/fuer-hersteller#zertifizierungsanfrage">Zertifizierung anfragen</Link>
             </div>
           </div>
