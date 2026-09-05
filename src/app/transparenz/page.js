@@ -15,47 +15,61 @@ export const metadata = {
 };
 
 const principles = [
-  ['Standardversionen', 'Jede Zertifizierung verweist eindeutig auf die zugrunde liegende Standardfassung. Änderungen am Regelwerk bleiben dadurch zeitlich nachvollziehbar.'],
+  ['Standardversionen', 'Jede Zertifizierung verweist eindeutig auf die zugrunde liegende Standardfassung. Änderungen am Regelwerk bleiben zeitlich nachvollziehbar.'],
   ['Prüfnachweise', 'Die Bewertung eines Produkts beruht auf dokumentierten Informationen und nachvollziehbaren Prüfunterlagen.'],
-  ['Fachprüfung und Entscheidung', 'Prüfung, fachliche Kontrolle und Zertifizierungsentscheidung werden mit klaren Zuständigkeiten dokumentiert.'],
+  ['Fachprüfung & Entscheidung', 'Prüfung, fachliche Kontrolle und Zertifizierungsentscheidung werden mit klar unterscheidbaren Zuständigkeiten dokumentiert.'],
   ['Statusänderungen', 'Aktiv, ausgesetzt, abgelaufen oder widerrufen: Änderungen am Zertifizierungsstatus bleiben im öffentlichen Register nachvollziehbar.'],
   ['Markennutzung', 'Die Nutzung des Zeichens ist an Zertifizierungsumfang, Status und öffentliche Verifizierbarkeit gebunden.'],
-  ['Beschwerden und Einsprüche', 'Beschwerden, Einsprüche gegen Entscheidungen und Zeichenmissbrauch werden als getrennte Verfahren dokumentiert.'],
+  ['Beschwerden & Einsprüche', 'Beschwerden, Einsprüche gegen Entscheidungen und Zeichenmissbrauch werden als getrennte Verfahren behandelt.'],
 ];
 
 const roles = [
-  ['Systeminhaber', 'verantwortet Standard, Marke, Register und die Regeln des Zertifizierungssystems.'],
-  ['Prüfung', 'bewertet Herstellungsprozess und Nachweise gegen die festgelegten Anforderungen.'],
-  ['Fachprüfung', 'prüft die fachliche Plausibilität und Vollständigkeit des dokumentierten Prüfergebnisses.'],
-  ['Zertifizierungsentscheidung', 'überführt das geprüfte Ergebnis in eine dokumentierte Entscheidung zum Zertifizierungsstatus.'],
-  ['Öffentliches Register', 'veröffentlicht die für Käufer und Geschäftspartner relevanten Zertifizierungsinformationen.'],
+  ['01', 'Systeminhaber', 'verantwortet Standard, Marke, Dokumentenlenkung, Register und die Regeln des Zertifizierungssystems.'],
+  ['02', 'Prüfung', 'bewertet Herstellungsprozess und Nachweise gegen die festgelegten Anforderungen.'],
+  ['03', 'Fachprüfung', 'prüft Plausibilität, Vollständigkeit und offene Punkte des dokumentierten Prüfergebnisses.'],
+  ['04', 'Zertifizierungsentscheidung', 'überführt das geprüfte Ergebnis in eine dokumentierte Entscheidung zum Zertifizierungsstatus.'],
+  ['05', 'Öffentliches Register', 'veröffentlicht die für Käufer und Geschäftspartner relevanten Zertifizierungsinformationen.'],
 ];
 
 export default function TransparencyPage() {
   return (
-    <main>
+    <main className="transparencyInstitution">
       <SiteHeader />
 
       <section className="pageHero shell">
         <div className="eyebrow">TRANSPARENZ & INTEGRITÄT</div>
-        <h1>Regeln für Standard, Prüfung und Markennutzung.</h1>
+        <h1>Vertrauen braucht nachvollziehbare Regeln.</h1>
         <p className="lead">
-          Die Glaubwürdigkeit der Kennzeichnung hängt nicht allein vom sichtbaren Zeichen ab,
-          sondern von nachvollziehbaren Regeln für Prüfung, Entscheidung, Statusverwaltung und öffentliche Verifizierung.
+          Die Glaubwürdigkeit der Kennzeichnung entsteht durch klare Standardversionen,
+          dokumentierte Prüfungen, definierte Zuständigkeiten und einen öffentlich nachvollziehbaren Zertifizierungsstatus.
         </p>
       </section>
 
-            <section className="shell transparencySection">
+      <section className="integrityMetaBand" aria-label="Integritätsprinzipien">
+        <div className="shell integrityMetaGrid">
+          <div><span>01</span><strong>Versioniert</strong><p>Regelwerke und Entscheidungen bleiben referenzierbar.</p></div>
+          <div><span>02</span><strong>Dokumentiert</strong><p>Prüfnachweise und Entscheidungen sind nachvollziehbar.</p></div>
+          <div><span>03</span><strong>Rollenklar</strong><p>Prüfung, Fachprüfung und Entscheidung sind unterscheidbar.</p></div>
+          <div><span>04</span><strong>Öffentlich prüfbar</strong><p>Status und Produktbezug werden über das Register verifiziert.</p></div>
+        </div>
+      </section>
+
+      <section className="shell transparencySection">
         <div className="sectionIntro compact">
           <div>
-            <div className="sectionNo">GRUNDSÄTZE</div>
-            <h2>Was das Zertifizierungssystem nachvollziehbar machen muss.</h2>
+            <div className="sectionNo">INTEGRITÄTSPRINZIPIEN</div>
+            <h2>Sechs Regeln sichern die Nachvollziehbarkeit.</h2>
           </div>
+          <p>
+            Integrität bedeutet hier vor allem, dass eine Zertifizierung nicht nur ausgesprochen,
+            sondern anhand von Regelwerk, Nachweisen, Zuständigkeiten und Status nachvollzogen werden kann.
+          </p>
         </div>
 
-        <div className="transparencyGrid">
-          {principles.map(([title, copy]) => (
+        <div className="transparencyPrinciplesGrid">
+          {principles.map(([title, copy], index) => (
             <article key={title}>
+              <span>{String(index + 1).padStart(2, '0')}</span>
               <h3>{title}</h3>
               <p>{copy}</p>
             </article>
@@ -63,21 +77,23 @@ export default function TransparencyPage() {
         </div>
       </section>
 
-      <section className="rolesSection">
+      <section className="integrityRoles">
         <div className="shell">
-          <div className="sectionIntro compact">
+          <div className="sectionIntro compact integrityRolesIntro">
             <div>
-              <div className="sectionNo">ROLLENTRENNUNG</div>
-              <h2>Klare Verantwortlichkeiten im Zertifizierungssystem.</h2>
+              <div className="sectionNo light">ROLLEN & VERANTWORTUNG</div>
+              <h2>Klare Funktionen statt unscharfer Zuständigkeiten.</h2>
             </div>
             <p>
-              Standardverantwortung, Prüfung, fachliche Kontrolle und Zertifizierungsentscheidung sind als klar unterscheidbare Funktionen dokumentiert.
+              Die Rollen im Zertifizierungssystem werden getrennt beschrieben, damit Prüfung,
+              fachliche Kontrolle, Entscheidung und öffentliche Verifizierung voneinander nachvollziehbar bleiben.
             </p>
           </div>
 
-          <div className="rolesGrid">
-            {roles.map(([title, copy]) => (
-              <article key={title}>
+          <div className="integrityRolesGrid">
+            {roles.map(([number, title, copy]) => (
+              <article key={number}>
+                <span>{number}</span>
                 <strong>{title}</strong>
                 <p>{copy}</p>
               </article>
@@ -87,31 +103,52 @@ export default function TransparencyPage() {
       </section>
 
       <section className="governanceDocuments">
-        <div className="shell governanceDocumentsGrid">
-          <Link href="/dokumente/certification-scheme-0-1">
-            <span>ZERTIFIZIERUNGSSCHEMA</span>
-            <strong>Rollen, Fachprüfung, Entscheidung und Statusverwaltung</strong>
-            <small>Schema 0.1 öffnen →</small>
-          </Link>
-          <Link href="/markennutzung">
-            <span>MARKENNUTZUNG</span>
-            <strong>Grundsätze zur Nutzung des Zertifizierungszeichens</strong>
-            <small>Markennutzung öffnen →</small>
-          </Link>
-          <Link href="/verfahren">
-            <span>BESCHWERDEN & EINSPRÜCHE</span>
-            <strong>Verfahren für Beschwerden, Einsprüche und Zeichenmissbrauch</strong>
-            <small>Verfahren öffnen →</small>
-          </Link>
+        <div className="shell">
+          <div className="sectionIntro compact">
+            <div>
+              <div className="sectionNo">KONTROLLIERTE REGELWERKE</div>
+              <h2>Integrität wird in Dokumenten festgehalten.</h2>
+            </div>
+            <p>
+              Die Regeln zu Zertifizierungsverfahren, Markennutzung, Beschwerden und Einsprüchen
+              werden versioniert geführt und sind öffentlich einsehbar.
+            </p>
+          </div>
+
+          <div className="governanceDocumentsGrid">
+            <Link href="/dokumente/certification-scheme-0-1">
+              <span>ZERTIFIZIERUNGSSCHEMA</span>
+              <strong>Rollen, Fachprüfung, Entscheidung und Statusverwaltung</strong>
+              <small>Schema 0.1 öffnen →</small>
+            </Link>
+            <Link href="/markennutzung">
+              <span>MARKENNUTZUNG</span>
+              <strong>Regeln für Produktbezug, Status und Verwendung des Zeichens</strong>
+              <small>Markennutzung öffnen →</small>
+            </Link>
+            <Link href="/verfahren">
+              <span>BESCHWERDEN & EINSPRÜCHE</span>
+              <strong>Verfahren für Beschwerden, Einsprüche und Zeichenmissbrauch</strong>
+              <small>Verfahren öffnen →</small>
+            </Link>
+          </div>
         </div>
       </section>
 
-      <section className="shell transparencyIntegrity">
-        <strong>Unabhängigkeit nur dort behaupten, wo sie organisatorisch besteht.</strong>
-        <p>
-          Die endgültige organisatorische und rechtliche Struktur ist noch nicht eingerichtet.
-          Made by Humans behauptet deshalb derzeit weder Akkreditierung noch eine bereits bestehende unabhängige externe Entscheidungsinstanz.
-        </p>
+      <section className="integrityClaimBoundary">
+        <div className="shell integrityClaimBoundaryGrid">
+          <div>
+            <div className="sectionNo">NACHWEISBARE AUSSAGEN</div>
+            <h2>Keine weitergehende Behauptung ohne belastbaren Nachweis.</h2>
+          </div>
+          <div>
+            <p>
+              Begriffe wie Akkreditierung, externe Unabhängigkeit oder unabhängige Zertifizierungsentscheidung
+              werden ausschließlich verwendet, wenn die jeweilige Eigenschaft organisatorisch besteht und nachweisbar belegt werden kann.
+            </p>
+            <Link className="textLink" href="/dokumente">Dokumentenregister ansehen →</Link>
+          </div>
+        </div>
       </section>
 
       <SiteFooter />
