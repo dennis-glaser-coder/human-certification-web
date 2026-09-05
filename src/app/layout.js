@@ -1,4 +1,6 @@
+import { IBM_Plex_Sans, Source_Serif_4 } from 'next/font/google';
 import './globals.css';
+import './final.css';
 import { canonical, DEFAULT_DESCRIPTION, SITE_NAME, SITE_URL } from '../lib/seo';
 
 export const metadata = {
@@ -46,6 +48,20 @@ export const metadata = {
   },
 };
 
+const ibmPlexSans = IBM_Plex_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-sans',
+  display: 'swap',
+});
+
+const sourceSerif = Source_Serif_4({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--font-serif',
+  display: 'swap',
+});
+
 const websiteJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
@@ -58,7 +74,7 @@ const websiteJsonLd = {
 export default function RootLayout({ children }) {
   return (
     <html lang="de">
-      <body>
+      <body className={`${ibmPlexSans.variable} ${sourceSerif.variable}`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd).replace(/</g, '\\u003c') }}
