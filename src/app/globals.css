@@ -2528,3 +2528,209 @@ textarea:focus-visible{
     height:44px;
   }
 }
+
+
+/* ===== Spatial editorial refinement 2026-09-05 ===== */
+.premiumHero{
+  position:relative;
+  overflow:visible;
+}
+.premiumHeroGrid{
+  position:relative;
+  isolation:isolate;
+}
+.premiumHeroCopy{
+  position:relative;
+  z-index:2;
+  padding-top:110px;
+  padding-bottom:110px;
+}
+.premiumHero h1{
+  max-width:820px;
+}
+.premiumSealField{
+  position:relative;
+  z-index:1;
+  padding-left:62px;
+  border-left:0;
+}
+.premiumSealField::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  top:34px;
+  bottom:34px;
+  left:0;
+  right:-100vw;
+  background:var(--white);
+  border-left:1px solid rgba(17,24,32,.10);
+  box-shadow:-18px 0 34px rgba(17,24,32,.035);
+}
+.premiumSealField img{
+  position:relative;
+  width:min(350px,92%);
+  filter:drop-shadow(0 18px 18px rgba(17,24,32,.10));
+  transform:translateY(-4px);
+}
+.premiumSealRule{
+  position:relative;
+  z-index:1;
+}
+.premiumSealField p{
+  position:relative;
+  z-index:1;
+}
+
+.premiumClaim{
+  position:relative;
+  z-index:3;
+  width:min(1320px,calc(100% - 36px));
+  margin:-28px auto 0;
+  box-shadow:0 22px 54px rgba(17,24,32,.045);
+}
+.premiumClaimGrid{
+  grid-template-columns:170px 1fr;
+  gap:92px;
+}
+.premiumClaim blockquote{
+  max-width:960px;
+}
+.premiumClaimGrid>div{
+  padding-right:4vw;
+}
+
+.premiumStandard{
+  padding-top:118px;
+  padding-bottom:118px;
+}
+.premiumStandardGrid{
+  grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);
+  gap:128px;
+}
+.premiumStandardIntro{
+  padding-top:10px;
+}
+.premiumPrinciples{
+  margin-top:58px;
+}
+.premiumPrinciple{
+  padding-top:26px;
+  padding-bottom:26px;
+}
+.premiumPrinciple:first-child{
+  border-top:0;
+}
+
+.premiumRegister{
+  position:relative;
+  overflow:hidden;
+}
+.premiumRegister::before{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:50%;
+  width:1px;
+  background:rgba(255,255,255,.08);
+}
+.premiumRegisterGrid{
+  position:relative;
+  grid-template-columns:minmax(0,.74fr) minmax(0,1.26fr);
+  gap:120px;
+}
+.premiumVerify{
+  padding-top:74px;
+}
+.premiumRegister .verifyModule{
+  padding:0 0 6px;
+}
+.premiumRegister .verifyModuleForm input{
+  background:rgba(255,255,255,.025);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.04);
+}
+.premiumRegister .verifyModuleForm button{
+  box-shadow:0 10px 22px rgba(0,0,0,.12);
+}
+
+.premiumManufacturer{
+  padding-top:116px;
+  padding-bottom:122px;
+}
+.premiumManufacturerGrid{
+  grid-template-columns:minmax(0,1.08fr) minmax(0,.72fr);
+  gap:132px;
+}
+.premiumManufacturerGrid>div:last-child{
+  padding-top:78px;
+}
+
+.premiumClosingLinks{
+  position:relative;
+  z-index:2;
+}
+.premiumFooter{
+  position:relative;
+}
+
+@media(max-width:1020px){
+  .premiumSealField{
+    padding-left:44px;
+  }
+  .premiumClaimGrid{
+    grid-template-columns:150px 1fr;
+    gap:54px;
+  }
+  .premiumStandardGrid,
+  .premiumRegisterGrid,
+  .premiumManufacturerGrid{
+    gap:72px;
+  }
+}
+
+@media(max-width:760px){
+  .premiumHeroCopy{
+    padding-top:72px;
+    padding-bottom:54px;
+  }
+  .premiumSealField{
+    padding-left:0;
+    border-top:0;
+  }
+  .premiumSealField::before{
+    top:0;
+    bottom:0;
+    left:-24px;
+    right:-24px;
+    border-left:0;
+    box-shadow:0 -12px 28px rgba(17,24,32,.035);
+  }
+  .premiumSealField img{
+    width:238px;
+    filter:drop-shadow(0 14px 14px rgba(17,24,32,.09));
+  }
+  .premiumClaim{
+    width:100%;
+    margin:0;
+    box-shadow:none;
+  }
+  .premiumClaimGrid{
+    grid-template-columns:1fr;
+    gap:22px;
+  }
+  .premiumClaimGrid>div{
+    padding-right:0;
+  }
+  .premiumPrinciples{
+    margin-top:34px;
+  }
+  .premiumRegister::before{
+    display:none;
+  }
+  .premiumVerify{
+    padding-top:38px;
+  }
+  .premiumManufacturerGrid>div:last-child{
+    padding-top:38px;
+  }
+}
