@@ -3373,3 +3373,105 @@ textarea:focus-visible{
     font-size:35px;
   }
 }
+
+
+/* ===== Public register authority pass 2026-09-05 ===== */
+.registerTrustBar{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--ink);
+  border-bottom:1px solid var(--stone);
+  margin-bottom:44px;
+}
+.registerTrustBar>div{
+  min-height:132px;
+  padding:20px 22px 20px 0;
+  border-right:1px solid var(--stone);
+}
+.registerTrustBar>div:not(:first-child){padding-left:22px}
+.registerTrustBar>div:last-child{border-right:0}
+.registerTrustBar span{
+  display:block;
+  margin-bottom:25px;
+  color:var(--blue);
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:.12em;
+}
+.registerTrustBar strong{
+  display:block;
+  margin-bottom:9px;
+  font-size:10px;
+}
+.registerTrustBar p{
+  margin:0;
+  color:var(--muted);
+  font-size:9px;
+  line-height:1.6;
+}
+.registerRow{
+  grid-template-columns:1.12fr 1.08fr 1.08fr .62fr .86fr .48fr;
+}
+.registerStatusCell{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+.registerStatusCell em{
+  margin-top:7px;
+  color:var(--muted-soft);
+  font-size:8px;
+  font-style:normal;
+}
+@media(max-width:900px){
+  .registerTrustBar{
+    grid-template-columns:1fr 1fr;
+  }
+  .registerTrustBar>div:nth-child(2){border-right:0}
+  .registerTrustBar>div:nth-child(-n+2){border-bottom:1px solid var(--stone)}
+  .registerRow{
+    grid-template-columns:1fr 1fr;
+    gap:18px 26px;
+  }
+  .registerRow>a{
+    justify-self:start;
+  }
+}
+@media(max-width:620px){
+  .registerTrustBar{
+    grid-template-columns:1fr;
+    margin-bottom:32px;
+  }
+  .registerTrustBar>div,
+  .registerTrustBar>div:not(:first-child){
+    min-height:0;
+    padding:15px 0;
+    border-right:0;
+    border-bottom:1px solid var(--stone);
+  }
+  .registerTrustBar>div:last-child{border-bottom:0}
+  .registerTrustBar span{
+    margin-bottom:8px;
+  }
+  .registerToolbar{
+    align-items:stretch;
+    flex-direction:column;
+    gap:16px;
+  }
+  .registerToolbar input{
+    max-width:none;
+    min-height:46px;
+    font-size:16px;
+  }
+  .registerRow{
+    grid-template-columns:1fr;
+    gap:14px;
+    padding:22px 0;
+  }
+  .registerRow>a{
+    margin-top:3px;
+  }
+  .registerId strong{
+    font-size:20px;
+  }
+}
