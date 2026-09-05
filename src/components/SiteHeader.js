@@ -14,7 +14,7 @@ export default function SiteHeader() {
 
         <nav className="mainNav premiumMainNav" aria-label="Hauptnavigation">
           <Link href="/warum-made-by-humans">Warum Made by Humans</Link>
-          <Link href="/fuer-hersteller">Zertifizierung</Link>
+          <Link href="/fuer-hersteller">Für Hersteller</Link>
           <Link href="/fuer-kaeufer">Für Käufer</Link>
           <Link href="/register">Register</Link>
           <Link href="/standard">Standard</Link>
