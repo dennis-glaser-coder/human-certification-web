@@ -51,20 +51,16 @@ const certificationProcess = [
 const markUseBenefits = [
   ['Zertifizierungszeichen', 'Kennzeichnung für den freigegebenen Produktumfang.'],
   ['QR & Registerlink', 'Direkte Verbindung zum öffentlichen Zertifizierungsdatensatz.'],
-  ['Verpackungsanwendung', 'Klare Verbindung aus Zeichen, Produktaussage und Verifizierung.'],
-  ['Digitales Badge', 'Für Produktseiten, Kataloge und digitale Verkaufsunterlagen.'],
-  ['Zulässige Formulierungen', 'Konsistente Kommunikation ohne Erweiterung auf ungeprüfte Eigenschaften.'],
-  ['B2B-Nachweis', 'Verweis auf Produktumfang, Status und angewendete Standardfassung.'],
+  ['Verpackung & Digital', 'Freigegebene Anwendungen für Verpackung, Produktseiten, Kataloge und Verkaufsunterlagen.'],
+  ['Claims & B2B-Nachweis', 'Konsistente Formulierungen mit Verweis auf Produktumfang, Status und Standardfassung.'],
 ];
 
 const manufacturerFaq = [
   ['Dürfen Maschinen eingesetzt werden?', 'Ja. Maschinen können menschliche Arbeit unterstützen. Entscheidend ist, ob die wesentlichen produktprägenden Herstellungsschritte weiterhin tatsächlich durch Menschen ausgeführt werden.'],
-  ['Können mehrere Produktvarianten gemeinsam zertifiziert werden?', 'Vergleichbare Varianten können als Produktfamilie zusammengefasst werden, wenn Herstellungsprozess und relevanter Zertifizierungsumfang ausreichend übereinstimmen.'],
-  ['Was passiert bei mehreren Produktionsstandorten?', 'Alle für den Zertifizierungsumfang relevanten Produktionsstandorte werden erfasst und in die Prüfung einbezogen.'],
-  ['Ist Fremdfertigung grundsätzlich ausgeschlossen?', 'Nein. Relevante Fremdfertigung muss offengelegt, dem Produkt eindeutig zugeordnet und in den Zertifizierungsumfang einbezogen werden.'],
-  ['Welche Unterlagen werden benötigt?', 'Erforderlich sind geeignete Informationen zur tatsächlichen Herstellung, zu Standorten, Fremdfertigung und den wesentlichen Prozessschritten. Welche Nachweise im Einzelfall sinnvoll sind, wird in der Vorbereitung eingegrenzt.'],
+  ['Können mehrere Produktvarianten gemeinsam zertifiziert werden?', 'Vergleichbare Varianten können als Produktfamilie zusammengefasst werden, wenn Herstellungsprozess und Zertifizierungsumfang ausreichend übereinstimmen.'],
+  ['Wie werden mehrere Standorte oder Fremdfertigung behandelt?', 'Alle relevanten Produktionsstandorte und wesentliche Fremdfertigung werden offengelegt, dem Produkt zugeordnet und in den Zertifizierungsumfang einbezogen.'],
+  ['Welche Unterlagen werden benötigt?', 'Benötigt werden geeignete Informationen zur tatsächlichen Herstellung, zu Standorten, Fremdfertigung und den wesentlichen Prozessschritten. Die konkrete Nachweisanforderung wird in der Vorbereitung eingegrenzt.'],
   ['Was passiert bei Änderungen an Produkt oder Produktion?', 'Wesentliche Änderungen am Prozess, an relevanten Standorten oder an Fremdfertigung können eine erneute Bewertung des Zertifizierungsumfangs erforderlich machen.'],
-  ['Wie wird der konkrete Auditaufwand festgelegt?', 'Der Umfang ergibt sich aus Produkt, Herstellungsprozess, Produktionsstandorten und relevanter Fremdfertigung. Diese Punkte werden vor dem Vor-Ort-Audit fachlich abgegrenzt.'],
 ];
 
 export default function ManufacturerPage() {
@@ -134,7 +130,7 @@ export default function ManufacturerPage() {
           <div className="manufacturerHeroArtCopy">
             <div className="eyebrow">ZERTIFIZIERUNG FÜR HERSTELLER</div>
             <div className="brandTrace" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
-            <h1>Ihr Produkt. Ihre Herstellung. Nachvollziehbar zertifiziert.</h1>
+            <h1>Menschliche Herstellung für Ihr Produkt nachvollziehbar zertifizieren.</h1>
             <p className="lead">
               Made by Humans macht menschliche Herstellung sichtbar und überprüfbar: mit klar abgegrenztem Produktumfang,
               Vor-Ort-Audit beim Hersteller, dokumentierter Entscheidung und öffentlicher Verifizierung.
@@ -174,7 +170,7 @@ export default function ManufacturerPage() {
           <div className="sectionIntro compact">
             <div>
               <div className="sectionNo">ZERTIFIZIERUNGSSYSTEM</div>
-              <h2>Mehr als ein Zeichen auf dem Produkt.</h2>
+              <h2>Die Zertifizierung schafft einen überprüfbaren Produktnachweis.</h2>
             </div>
             <p>
               Die Kennzeichnung erhält ihren Wert durch die Verbindung von abgegrenztem Produktumfang,
@@ -197,7 +193,7 @@ export default function ManufacturerPage() {
         <div className="sectionIntro compact">
           <div>
             <div className="sectionNo">EIGNUNG FÜR DEN STANDARD</div>
-            <h2>Vier Voraussetzungen für eine belastbare Prüfung.</h2>
+            <h2>Wann ein Produkt grundsätzlich für die Prüfung geeignet ist.</h2>
           </div>
           <p>
             Entscheidend ist nicht, ob ein Produkt handwerklich aussieht. Entscheidend ist,
@@ -263,7 +259,7 @@ export default function ManufacturerPage() {
           <div className="sectionIntro compact">
             <div>
               <div className="sectionNo">ZERTIFIZIERUNGSVERFAHREN</div>
-              <h2>Vom Produkt zur öffentlichen Verifizierung.</h2>
+              <h2>So läuft die Zertifizierung ab.</h2>
             </div>
             <p>
               Jeder Schritt baut auf dem vorherigen auf. Dadurch bleiben Zertifizierungsumfang,
@@ -288,7 +284,7 @@ export default function ManufacturerPage() {
           <div className="sectionIntro compact">
             <div>
               <div className="sectionNo">NACH POSITIVER ZERTIFIZIERUNG</div>
-              <h2>Mehr als ein Zertifikat: ein nutzbarer Nachweis für Produkt und Vertrieb.</h2>
+              <h2>Was nach positiver Zertifizierung genutzt werden kann.</h2>
             </div>
             <p>
               Die Markennutzung verbindet den geprüften Produktumfang mit klaren Anwendungen für Verpackung,
@@ -348,7 +344,7 @@ export default function ManufacturerPage() {
         <div className="shell manufacturerApplicationGrid">
           <div className="manufacturerApplicationIntro">
             <div className="sectionNo">ZERTIFIZIERUNGSANFRAGE</div>
-            <h2>Starten Sie mit der fachlichen Vorprüfung.</h2>
+            <h2>Zertifizierungsanfrage stellen.</h2>
             <p>
               Mit den folgenden Angaben erfassen wir Produkt, Herstellungsprozess und die wesentlichen Rahmenbedingungen.
               Daraus lässt sich ableiten, ob das Produkt grundsätzlich in den Geltungsbereich des Standards fällt,
