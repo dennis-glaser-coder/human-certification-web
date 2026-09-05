@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import SiteHeader from '../components/SiteHeader';
 import SiteFooter from '../components/SiteFooter';
+import { CERTIFIED_STATEMENT } from '../lib/brand';
 
 const homeStory = [
   ['Sichtbar machen', 'Menschliche Herstellung wird zu einem klaren, produktbezogenen Unterschied.'],
@@ -92,7 +93,7 @@ export default function Home() {
           <div className="desireSectionHead">
             <div>
               <p className="premiumSectionLabel">DAS ZEICHEN IM EINSATZ</p>
-              <h2>Ein Nachweis. Dort sichtbar, wo Entscheidungen fallen.</h2>
+              <h2>Der Nachweis kann direkt am Produkt und im Verkauf eingesetzt werden.</h2>
             </div>
             <p>
               Das Zeichen ergänzt die Herstellermarke und verweist immer auf den konkret zertifizierten Produktumfang.
@@ -149,7 +150,7 @@ export default function Home() {
         <div className="shell homeValueStory">
           <div className="homeValueStoryHead">
             <p className="premiumSectionLabel premiumSectionLabelLight">WERT & VERTRAUEN</p>
-            <h2>Ein Unterschied, den man sehen – und prüfen – kann.</h2>
+            <h2>Herstellungsunterschiede sichtbar machen und nachvollziehbar belegen.</h2>
             <p>
               Made by Humans verbindet den Nutzen für Hersteller mit einem nachvollziehbaren Prüf- und Verifizierungssystem.
             </p>
@@ -194,9 +195,9 @@ export default function Home() {
         <div className="shell homeConsumerVerifyGrid">
           <div className="homeConsumerCopy">
             <p className="premiumSectionLabel premiumSectionLabelLight">FÜR KÄUFER</p>
-            <h2>Verständlich am Produkt. Überprüfbar im Register.</h2>
+            <h2>Für Käufer klar erklärt und öffentlich überprüfbar.</h2>
             <blockquote>
-              Geprüfte menschliche Herstellung – klar einem Produkt zugeordnet und öffentlich verifizierbar.
+              {CERTIFIED_STATEMENT}
             </blockquote>
           </div>
           <div className="homeVerifyCompact">
@@ -216,7 +217,7 @@ export default function Home() {
           <div className="homeFinalTop">
             <div>
               <p className="premiumSectionLabel">NACH POSITIVER ZERTIFIZIERUNG</p>
-              <h2>Mehr als ein Zertifikat.</h2>
+              <h2>Was Hersteller nach positiver Zertifizierung nutzen können.</h2>
             </div>
             <div className="homeFinalSummary">
               <p>Zertifizierungszeichen · QR & Registerlink · Verpackungs- und Digitalanwendung · geregelte Claims</p>
@@ -232,7 +233,7 @@ export default function Home() {
           <div className="homeFinalCta">
             <div>
               <p className="premiumSectionLabel premiumSectionLabelLight">FÜR HERSTELLER</p>
-              <h2>Ist menschliche Arbeit ein wesentlicher Teil Ihres Produktes?</h2>
+              <h2>Prüfen Sie, ob Ihr Produkt zum Standard passt.</h2>
             </div>
             <div>
               <p>Dann klären wir, ob Ihr Produkt grundsätzlich zum Standard passt und welcher Zertifizierungsumfang sinnvoll ist.</p>
