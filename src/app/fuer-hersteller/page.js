@@ -129,16 +129,33 @@ export default function ManufacturerPage() {
     <main className="manufacturerJourney">
       <SiteHeader />
 
-      <section className="pageHero shell manufacturerHero">
-        <div className="eyebrow">ZERTIFIZIERUNG FÜR HERSTELLER</div>
-        <h1>Ihr Produkt. Ihre Herstellung. Nachvollziehbar zertifiziert.</h1>
-        <p className="lead">
-          Made by Humans macht menschliche Herstellung sichtbar und überprüfbar: mit klar abgegrenztem Produktumfang,
-          Vor-Ort-Audit beim Hersteller, dokumentierter Entscheidung und öffentlicher Verifizierung.
-        </p>
-        <div className="manufacturerHeroActions">
-          <a className="button primary" href="#zertifizierungsanfrage">Zertifizierung anfragen</a>
-          <a className="button secondary" href="#ablauf">Ablauf ansehen</a>
+      <section className="manufacturerHeroArt">
+        <div className="shell manufacturerHeroArtGrid">
+          <div className="manufacturerHeroArtCopy">
+            <div className="eyebrow">ZERTIFIZIERUNG FÜR HERSTELLER</div>
+            <h1>Ihr Produkt. Ihre Herstellung. Nachvollziehbar zertifiziert.</h1>
+            <p className="lead">
+              Made by Humans macht menschliche Herstellung sichtbar und überprüfbar: mit klar abgegrenztem Produktumfang,
+              Vor-Ort-Audit beim Hersteller, dokumentierter Entscheidung und öffentlicher Verifizierung.
+            </p>
+            <div className="manufacturerHeroActions">
+              <a className="button primary" href="#zertifizierungsanfrage">Zertifizierung anfragen</a>
+              <a className="button secondary" href="#ablauf">Ablauf ansehen</a>
+            </div>
+          </div>
+          <div className="manufacturerHeroArtVisual">
+            <img
+              src="https://images.unsplash.com/photo-1631396326646-c06a935ff3a6?auto=format&fit=crop&w=1600&q=84"
+              alt="Handwerkliche Bearbeitung eines Möbelstücks in einer Werkstatt"
+            />
+            <div className="manufacturerHeroCredential">
+              <img src={assetBase + '/brand/made-by-humans-seal.png'} alt="Made by Humans Zertifizierungszeichen" />
+              <div>
+                <span>NACH POSITIVER ENTSCHEIDUNG</span>
+                <strong>Ein sichtbarer Nachweis für einen realen Herstellungsunterschied.</strong>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -211,6 +228,14 @@ export default function ManufacturerPage() {
               Nicht jeder Nachweis muss bereits mit der ersten Anfrage vollständig eingereicht werden.
               Die Informationen dienen der Vorbereitung des Vor-Ort-Audits und werden dort mit der tatsächlichen Produktion abgeglichen.
             </p>
+            <figure className="manufacturerEvidencePhoto">
+              <img
+                src="https://images.unsplash.com/photo-1781389005078-d9e413d89c94?auto=format&fit=crop&w=1400&q=82"
+                alt="Hände bei der manuellen Formgebung eines Produktes"
+                loading="lazy"
+              />
+              <figcaption>Tatsächliche Herstellung statt bloßer Selbstauskunft</figcaption>
+            </figure>
           </div>
 
           <div>
@@ -280,13 +305,18 @@ export default function ManufacturerPage() {
           </div>
 
           <div className="manufacturerMarkPreview">
-            <div className="manufacturerMarkPreviewSeal">
-              <img src={assetBase + '/brand/made-by-humans-seal.png'} alt="Made by Humans Zertifizierungszeichen" />
+            <div className="manufacturerMarkPack">
+              <span className="manufacturerMarkPackBrand">PRODUKTMARKE</span>
+              <span className="manufacturerMarkPackProduct">Produktname</span>
+              <div className="manufacturerMarkPackSeal">
+                <img src={assetBase + '/brand/made-by-humans-seal.png'} alt="Made by Humans Zertifizierungszeichen" />
+                <span>Von Menschen gemacht.<br />Vor Ort geprüft.</span>
+              </div>
             </div>
             <div>
               <span>MADE BY HUMANS MARKENNUTZUNG</span>
-              <strong>Von Menschen gemacht. Vor Ort geprüft. Öffentlich verifizierbar.</strong>
-              <p>Das Zeichen ergänzt die Herstellermarke – es ersetzt sie nicht.</p>
+              <strong>Die Herstellermarke bleibt im Vordergrund. Der Nachweis gibt ihr zusätzliche Substanz.</strong>
+              <p>Produktfokus · Zertifizierungs-ID · QR · öffentliches Register</p>
             </div>
           </div>
         </div>
