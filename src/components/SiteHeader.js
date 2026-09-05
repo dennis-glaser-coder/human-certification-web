@@ -18,7 +18,6 @@ export default function SiteHeader() {
           <Link href="/fuer-kaeufer">Für Käufer</Link>
           <Link href="/register">Register</Link>
           <Link href="/standard">Standard</Link>
-          <Link href="/ueber-uns">Über uns</Link>
           <Link className="navVerify" href="/fuer-hersteller#zertifizierungsanfrage">Zertifizierung anfragen</Link>
         </nav>
 
