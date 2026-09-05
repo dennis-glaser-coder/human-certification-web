@@ -10205,3 +10205,38 @@ textarea:focus-visible{
     object-position:68% 50%;
   }
 }
+
+
+/* ===== Final mobile audit composition fix 2026-09-05 ===== */
+@media(max-width:760px){
+  .compactHome .compactAudit .desireAuditGrid{
+    width:100%;
+    max-width:none;
+    margin-left:0;
+    margin-right:0;
+  }
+
+  .compactHome .compactAudit .desireAudit figure{
+    position:relative;
+    width:100%;
+    height:auto;
+    min-height:0;
+    margin:0;
+    background:var(--ink);
+    overflow:hidden;
+  }
+
+  .compactHome .compactAudit .desireAudit figure img{
+    display:block;
+    width:100%;
+    height:auto;
+    min-height:0;
+    object-fit:contain;
+    object-position:center center;
+  }
+
+  .compactHome .compactAudit .desireAuditCopy{
+    width:auto;
+    padding:34px 6vw 38px;
+  }
+}
