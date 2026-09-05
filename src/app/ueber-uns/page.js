@@ -43,29 +43,24 @@ export default function AboutPage() {
         <div className="shell aboutOriginGrid">
           <div className="aboutOriginStatement">
             <div className="sectionNo light">DIE IDEE</div>
-            <h2>Je mehr automatisiert wird, desto wichtiger wird sichtbar, wo Menschen den Unterschied machen.</h2>
+            <h2>Menschliche Arbeit ist ein Unterschied – aber nur, wenn er nachvollziehbar ist.</h2>
           </div>
 
           <div className="aboutOriginStory">
             <p>
-              Automatisierung, moderne Maschinen und künstliche Intelligenz verändern, wie Produkte
-              entwickelt, hergestellt und vermarktet werden. Das ist kein Widerspruch zu Made by Humans.
-              Technologie kann sinnvoll unterstützen und Prozesse verbessern.
+              Automatisierung, moderne Maschinen und künstliche Intelligenz verändern, wie Produkte entstehen.
+              Das ist kein Widerspruch zu Made by Humans: Technologie kann sinnvoll unterstützen.
+              Gleichzeitig wird für Käufer schwerer erkennbar, wo menschliche Arbeit ein Produkt tatsächlich wesentlich prägt.
             </p>
             <p>
-              Gleichzeitig entsteht eine neue Vertrauenslücke: Begriffe wie „handgemacht“,
-              „handcrafted“ oder „manufakturgefertigt“ erzeugen ein bestimmtes Bild – wie viel
-              tatsächliche menschliche Arbeit dahintersteht, bleibt für Käufer aber häufig unsichtbar.
-            </p>
-            <p>
-              Genau hier setzt Made by Humans an. Wenn Erfahrung, Können und unmittelbare menschliche
-              Arbeit wesentliche Bestandteile eines Produktes sind, soll dieser Unterschied nicht nur
-              erzählt, sondern nachvollziehbar geprüft und öffentlich verifizierbar gemacht werden.
+              Begriffe wie „handgemacht“ oder „manufakturgefertigt“ schaffen zwar ein bestimmtes Bild,
+              sagen aber oft wenig darüber aus, wie ein Produkt wirklich hergestellt wurde.
+              Genau diese Lücke schließt Made by Humans: aus einer Behauptung wird ein nachvollziehbarer, geprüfter Produktbezug.
             </p>
 
-            <div className="aboutOriginThesis">
+            <div className="aboutOriginThesis compact">
               <span>NICHT GEGEN TECHNOLOGIE.</span>
-              <strong>Für Sichtbarkeit dort, wo Menschen den Unterschied machen.</strong>
+              <strong>Für Sichtbarkeit dort, wo menschliche Arbeit wesentlich ist.</strong>
             </div>
           </div>
         </div>
