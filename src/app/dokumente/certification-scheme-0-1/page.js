@@ -4,25 +4,25 @@ import SiteFooter from '../../../components/SiteFooter';
 import { canonical } from '../../../lib/seo';
 
 export const metadata = {
-  title: 'Certification Scheme 0.1',
-  description: 'Arbeitsfassung für Rollen, Prüfprozess, Zertifizierungsentscheidung, Statusverwaltung, Public Register und Governance bei Made by Humans.',
+  title: 'Zertifizierungsschema 0.1',
+  description: 'Arbeitsfassung für Rollen, Prüfprozess, Zertifizierungsentscheidung, Statusverwaltung, öffentliches Register und Verfahrensregeln bei Made by Humans.',
   alternates: { canonical: canonical('/dokumente/certification-scheme-0-1') },
 };
 
 const roles = [
-  ['Scheme-Inhaber', 'verantwortet Standard, Marke, Dokumentenlenkung, Registermodell und Regeln des Zertifizierungssystems.'],
-  ['Prüfung / Audit', 'bewertet Produkt und Herstellungsprozess gegen die anwendbaren Anforderungen und dokumentiert die Nachweise.'],
-  ['Review', 'prüft Vollständigkeit und fachliche Plausibilität des Prüfergebnisses und dokumentiert offene Punkte.'],
+  ['Systeminhaber', 'verantwortet Standard, Marke, Dokumentenlenkung, Registermodell und Regeln des Zertifizierungssystems.'],
+  ['Prüfung', 'bewertet Produkt und Herstellungsprozess gegen die anwendbaren Anforderungen und dokumentiert die Nachweise.'],
+  ['Fachprüfung', 'prüft Vollständigkeit und fachliche Plausibilität des Prüfergebnisses und dokumentiert offene Punkte.'],
   ['Zertifizierungsentscheidung', 'überführt das geprüfte Ergebnis in eine dokumentierte Entscheidung über Freigabe, Ablehnung, Aussetzung, Erneuerung oder Widerruf.'],
-  ['Public Register', 'veröffentlicht die für Käufer und Geschäftspartner relevanten Zertifizierungsinformationen und den aktuellen Status.'],
+  ['Öffentliches Register', 'veröffentlicht die für Käufer und Geschäftspartner relevanten Zertifizierungsinformationen und den aktuellen Status.'],
 ];
 
 const steps = [
-  ['Scope', 'Produkt, Produktfamilie und Herstellungsorte abgrenzen.'],
+  ['Zertifizierungsumfang', 'Produkt, Produktfamilie und Herstellungsorte abgrenzen.'],
   ['Prozessaufnahme', 'Wesentliche Herstellungsschritte und Fremdfertigung erfassen.'],
   ['Nachweise', 'Unterlagen und Informationen zur tatsächlichen Ausführung prüfen.'],
-  ['Audit', 'Produktionsfall gegen die Kriterien des Standards bewerten.'],
-  ['Review', 'Prüfergebnis fachlich kontrollieren und offene Punkte klären.'],
+  ['Prüfung', 'Produktionsfall gegen die Kriterien des Standards bewerten.'],
+  ['Fachprüfung', 'Prüfergebnis fachlich kontrollieren und offene Punkte klären.'],
   ['Entscheidung', 'Zertifizierungsstatus dokumentiert festlegen und bei Freigabe registrieren.'],
 ];
 
@@ -36,8 +36,8 @@ export default function SchemeDocumentPage() {
       <article className="shell controlledDocument">
         <header className="controlledDocumentHeader">
           <div>
-            <span>CERTIFICATION SCHEME · MBH-SCH-0.1</span>
-            <h1>Certification Scheme 0.1</h1>
+            <span>ZERTIFIZIERUNGSSCHEMA · MBH-SCH-0.1</span>
+            <h1>Zertifizierungsschema 0.1</h1>
             <p>Arbeitsfassung für die vorgesehene Funktionsweise des Zertifizierungssystems.</p>
           </div>
           <dl>
@@ -55,8 +55,8 @@ export default function SchemeDocumentPage() {
         <section>
           <h2>Zweck</h2>
           <p>
-            Der Produktstandard beschreibt, welche Eigenschaft erfüllt sein muss. Das Certification Scheme beschreibt getrennt davon,
-            wie Antrag, Prüfung, Review, Entscheidung, Register, Statusänderungen und Markennutzung strukturiert werden sollen.
+            Der Produktstandard beschreibt, welche Eigenschaft erfüllt sein muss. Das Zertifizierungsschema beschreibt getrennt davon,
+            wie Antrag, Prüfung, fachliche Kontrolle, Entscheidung, Register, Statusänderungen und Markennutzung strukturiert werden sollen.
           </p>
         </section>
 
@@ -84,12 +84,12 @@ export default function SchemeDocumentPage() {
             <div><strong>Aktiv</strong><p>innerhalb des festgelegten Umfangs und Zeitraums gültig.</p></div>
             <div><strong>Ausgesetzt</strong><p>Zeichennutzung vorübergehend eingeschränkt oder untersagt, bis die Ursache geklärt ist.</p></div>
             <div><strong>Abgelaufen</strong><p>Gültigkeitszeitraum beendet und nicht rechtzeitig erneuert.</p></div>
-            <div><strong>Widerrufen</strong><p>Zertifizierung beendet; weitere Zeichennutzung für den betroffenen Scope unzulässig.</p></div>
+            <div><strong>Widerrufen</strong><p>Zertifizierung beendet; weitere Zeichennutzung für den betroffenen Zertifizierungsumfang unzulässig.</p></div>
           </div>
         </section>
 
         <section>
-          <h2>Governance</h2>
+          <h2>Integrität und Verfahren</h2>
           <p>
             Markennutzung, Beschwerden, Einsprüche, Zeichenmissbrauch und potenzielle Interessenkonflikte werden in separaten,
             versionierten Regelwerken geführt. Die endgültige organisatorische und rechtliche Ausgestaltung erfolgt vor dem kommerziellen Start.
@@ -97,7 +97,7 @@ export default function SchemeDocumentPage() {
           <div className="inlineDocLinks">
             <Link href="/markennutzung">Markennutzungsgrundsätze →</Link>
             <Link href="/verfahren">Beschwerden, Einsprüche & Zeichenmissbrauch →</Link>
-            <Link href="/transparenz">Transparenz & Governance →</Link>
+            <Link href="/transparenz">Transparenz & Integrität →</Link>
           </div>
         </section>
 
