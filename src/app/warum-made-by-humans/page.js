@@ -65,18 +65,27 @@ export default function WhyPage() {
             </div>
           </div>
 
-          <div className="whyHeroMark">
-            <div className="whyHeroMarkLabel">ZERTIFIZIERUNGSZEICHEN</div>
-            <img
-              src={assetBase + '/brand/made-by-humans-seal.png'}
-              alt="Made by Humans Zertifizierungszeichen"
-              width="360"
-              height="360"
-            />
-            <blockquote>
-              Ein sichtbarer Nachweis für Produkte, deren wesentliche Herstellungsschritte
-              nachweislich durch Menschen ausgeführt werden.
-            </blockquote>
+          <div className="whyHeroVisual">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1774282557812-6182cc59f638?auto=format&fit=crop&w=1800&q=84"
+                alt="Menschliche Arbeit in einer Produktionswerkstatt"
+              />
+              <figcaption>Produktionsaufnahme · Maksim Shiriagin / Unsplash</figcaption>
+            </figure>
+            <div className="whySealTag">
+              <img
+                src={assetBase + '/brand/made-by-humans-seal.png'}
+                alt="Made by Humans Zertifizierungszeichen"
+                width="96"
+                height="96"
+              />
+              <div>
+                <span>AM PRODUKT SICHTBAR</span>
+                <strong>Geprüfte Herstellung. Öffentlich verifizierbar.</strong>
+                <p>Produktfokus · Zertifizierungs-ID · QR · Register</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -111,9 +120,8 @@ export default function WhyPage() {
           </div>
 
           <div className="whyBenefitGrid">
-            {manufacturerBenefits.map(([title, copy], index) => (
+            {manufacturerBenefits.map(([title, copy]) => (
               <article key={title}>
-                <span>{String(index + 1).padStart(2, '0')}</span>
                 <strong>{title}</strong>
                 <p>{copy}</p>
               </article>
@@ -135,9 +143,8 @@ export default function WhyPage() {
           </div>
 
           <div className="whyCustomerList">
-            {customerBenefits.map(([title, copy], index) => (
+            {customerBenefits.map(([title, copy]) => (
               <article key={title}>
-                <span>{String(index + 1).padStart(2, '0')}</span>
                 <div>
                   <strong>{title}</strong>
                   <p>{copy}</p>
@@ -195,9 +202,8 @@ export default function WhyPage() {
           </div>
 
           <div className="whyUseGrid">
-            {useCases.map(([title, copy], index) => (
+            {useCases.map(([title, copy]) => (
               <article key={title}>
-                <span>{String(index + 1).padStart(2, '0')}</span>
                 <strong>{title}</strong>
                 <p>{copy}</p>
               </article>
@@ -208,14 +214,22 @@ export default function WhyPage() {
 
       <section className="whyBrandValue">
         <div className="shell whyBrandValueGrid">
-          <div className="whyBrandValueMark">
+          <div className="whyBrandValueVisual">
             <img
-              src={assetBase + '/brand/made-by-humans-seal.png'}
-              alt=""
-              aria-hidden="true"
-              width="260"
-              height="260"
+              src="https://images.unsplash.com/photo-1748347084012-075796185d56?auto=format&fit=crop&w=1200&q=84"
+              alt="Produktion in einer modernen Fertigungsumgebung"
+              loading="lazy"
             />
+            <div className="whyBrandSeal">
+              <img
+                src={assetBase + '/brand/made-by-humans-seal.png'}
+                alt=""
+                aria-hidden="true"
+                width="78"
+                height="78"
+              />
+              <span>Nachweis direkt mit der Produktkommunikation verbinden</span>
+            </div>
           </div>
           <div>
             <p className="premiumSectionLabel premiumSectionLabelLight">FÜR DIE MARKE</p>
@@ -237,11 +251,11 @@ export default function WhyPage() {
             <h2>Kein reines Marketinglogo.</h2>
           </div>
           <div className="whyProofList">
-            <div><span>01</span><strong>Definierter Standard</strong></div>
-            <div><span>02</span><strong>Vor-Ort-Audit beim Hersteller</strong></div>
-            <div><span>03</span><strong>Dokumentierte Zertifizierungsentscheidung</strong></div>
-            <div><span>04</span><strong>Produktbezogener Zertifizierungsumfang</strong></div>
-            <div><span>05</span><strong>ID, QR-Code und öffentliches Register</strong></div>
+            <div><strong>Definierter Standard</strong></div>
+            <div><strong>Vor-Ort-Audit beim Hersteller</strong></div>
+            <div><strong>Dokumentierte Zertifizierungsentscheidung</strong></div>
+            <div><strong>Produktbezogener Zertifizierungsumfang</strong></div>
+            <div><strong>ID, QR-Code und öffentliches Register</strong></div>
           </div>
         </div>
       </section>
