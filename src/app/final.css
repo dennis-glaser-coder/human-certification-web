@@ -238,3 +238,53 @@ summary:focus-visible {
     font-size: 13px;
   }
 }
+
+
+/* Manufacturer mark-use close: factual instead of a synthetic mockup. */
+.manufacturerMarkClose {
+  margin-top: 34px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(17,24,32,.24);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.manufacturerMarkClose p {
+  max-width: 680px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.manufacturerMarkClose a {
+  flex: none;
+  color: var(--blue);
+  font-size: 9px;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 3px;
+}
+
+@media (max-width: 760px) {
+  .manufacturerMarkClose {
+    margin-top: 24px;
+    padding-top: 16px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .manufacturerMarkClose p {
+    max-width: 94%;
+    font-size: 13px;
+  }
+
+  .manufacturerMarkClose a {
+    width: fit-content;
+    font-size: 12px;
+  }
+}
