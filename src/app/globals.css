@@ -7517,3 +7517,37 @@ textarea:focus-visible{
     grid-column:auto;
   }
 }
+
+
+/* ===== Final visible-number cleanup 2026-09-05 ===== */
+.salesProcessGrid article::before,
+.manufacturerProcessGrid article::before{
+  content:"";
+  display:block;
+  width:24px;
+  height:2px;
+  margin-bottom:18px;
+  background:var(--blue);
+}
+.salesProcessGrid strong,
+.manufacturerProcessGrid strong{
+  display:block;
+  margin-bottom:12px;
+}
+.formSectionLabel{
+  gap:0;
+}
+.formSectionLabel strong{
+  position:relative;
+  padding-left:18px;
+}
+.formSectionLabel strong::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:50%;
+  width:8px;
+  height:2px;
+  background:var(--blue);
+  transform:translateY(-50%);
+}
