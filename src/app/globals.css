@@ -7847,3 +7847,49 @@ textarea:focus-visible{
   .buyerAudit figure,.buyerAudit figure img{min-height:400px;}
   .buyerAudit figure{margin-left:calc((100vw - 100%)/-2);margin-right:calc((100vw - 100%)/-2);}
 }
+
+
+/* ===== Manufacturer value & FAQ pass 2026-09-05 ===== */
+.manufacturerMarkValue{padding:92px 0 98px;background:var(--white);border-top:1px solid var(--stone);border-bottom:1px solid var(--stone);}
+.manufacturerMarkGrid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:50px;border-top:2px solid var(--ink);}
+.manufacturerMarkGrid article{min-height:150px;padding:24px 26px 20px 0;border-right:1px solid var(--stone);border-bottom:1px solid var(--stone);}
+.manufacturerMarkGrid article:nth-child(3n){border-right:0;}
+.manufacturerMarkGrid article:not(:nth-child(3n+1)){padding-left:26px;}
+.manufacturerMarkGrid article::before{content:"";display:block;width:24px;height:2px;margin-bottom:20px;background:var(--blue);}
+.manufacturerMarkGrid strong{display:block;margin-bottom:8px;font-size:11px;}
+.manufacturerMarkGrid p{margin:0;color:var(--muted);font-size:9px;line-height:1.62;}
+.manufacturerMarkPreview{margin-top:42px;padding:26px 30px;background:var(--paper);border:1px solid var(--stone);display:grid;grid-template-columns:110px 1fr;gap:28px;align-items:center;}
+.manufacturerMarkPreviewSeal img{width:110px;height:110px;object-fit:contain;}
+.manufacturerMarkPreview span{display:block;margin-bottom:8px;color:var(--blue);font-size:7px;font-weight:700;letter-spacing:.13em;}
+.manufacturerMarkPreview strong{display:block;max-width:760px;font-family:"Source Serif 4",Georgia,serif;font-size:28px;font-weight:500;line-height:1.18;}
+.manufacturerMarkPreview p{margin:8px 0 0;color:var(--muted);font-size:9px;line-height:1.55;}
+
+.manufacturerFaq{padding:92px 0 98px;background:var(--paper);}
+.manufacturerFaqGrid{display:grid;grid-template-columns:.72fr 1.28fr;gap:100px;align-items:start;}
+.manufacturerFaq h2{max-width:600px;margin:14px 0 20px;font-size:clamp(42px,4vw,56px);line-height:1.04;}
+.manufacturerFaqGrid>div:first-child>p{max-width:560px;color:var(--muted);font-size:11px;line-height:1.8;}
+.manufacturerFaqList{border-top:2px solid var(--ink);}
+.manufacturerFaqList details{border-bottom:1px solid var(--stone);}
+.manufacturerFaqList summary{padding:20px 34px 20px 0;cursor:pointer;list-style:none;position:relative;font-size:11px;font-weight:700;}
+.manufacturerFaqList summary::-webkit-details-marker{display:none;}
+.manufacturerFaqList summary::after{content:"+";position:absolute;right:0;top:17px;color:var(--blue);font-size:19px;font-weight:400;}
+.manufacturerFaqList details[open] summary::after{content:"–";}
+.manufacturerFaqList details p{max-width:760px;margin:0;padding:0 34px 20px 0;color:var(--muted);font-size:10px;line-height:1.72;}
+
+@media(max-width:920px){
+  .manufacturerMarkGrid{grid-template-columns:1fr 1fr;}
+  .manufacturerMarkGrid article:nth-child(3n){border-right:1px solid var(--stone);}
+  .manufacturerMarkGrid article:nth-child(2n){border-right:0;}
+  .manufacturerMarkGrid article:not(:nth-child(3n+1)){padding-left:0;}
+  .manufacturerMarkGrid article:nth-child(even){padding-left:24px;}
+  .manufacturerFaqGrid{grid-template-columns:1fr;gap:34px;}
+}
+@media(max-width:760px){
+  .manufacturerMarkValue,.manufacturerFaq{padding-top:66px;padding-bottom:70px;}
+  .manufacturerMarkGrid{grid-template-columns:1fr;margin-top:34px;}
+  .manufacturerMarkGrid article,.manufacturerMarkGrid article:nth-child(2n),.manufacturerMarkGrid article:nth-child(3n),.manufacturerMarkGrid article:not(:nth-child(3n+1)){min-height:0;padding:19px 0;border-right:0;}
+  .manufacturerMarkPreview{grid-template-columns:74px 1fr;gap:16px;padding:18px;}
+  .manufacturerMarkPreviewSeal img{width:74px;height:74px;}
+  .manufacturerMarkPreview strong{font-size:20px;}
+  .manufacturerFaq h2{font-size:35px;}
+}
