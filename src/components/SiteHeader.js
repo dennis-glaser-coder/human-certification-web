@@ -8,16 +8,16 @@ export default function SiteHeader() {
         <Link className="brandLockup premiumBrandLockup" href="/" aria-label="Made by Humans Startseite">
           <span className="brandTextStack">
             <span className="brandName">MADE BY HUMANS</span>
-            <span className="brandDescriptor">Standard für menschliche Herstellung</span>
+            <span className="brandDescriptor">Zertifizierung für menschliche Herstellung</span>
           </span>
         </Link>
 
         <nav className="mainNav premiumMainNav" aria-label="Hauptnavigation">
-          <Link href="/standard">Standard</Link>
-          <Link href="/warum-made-by-humans">Warum?</Link>
-          <Link href="/fuer-hersteller">Für Hersteller</Link>
+          <Link href="/warum-made-by-humans">Warum Made by Humans</Link>
+          <Link href="/fuer-hersteller">Zertifizierung</Link>
+          <Link href="/fuer-kaeufer">Für Käufer</Link>
           <Link href="/register">Register</Link>
-          <Link href="/dokumente">Dokumente</Link>
+          <Link href="/standard">Standard</Link>
           <Link href="/ueber-uns">Über uns</Link>
           <Link className="navVerify" href="/fuer-hersteller#zertifizierungsanfrage">Zertifizierung anfragen</Link>
         </nav>
