@@ -103,7 +103,7 @@ export default function VerifyPage() {
                 <small>ZERTIFIZIERUNGS-ID</small>
                 <h2>{state.record.public_id}</h2>
               </div>
-              <Link className="recordOpenLink" href={'/c/' + encodeURIComponent(state.record.public_id)}>Vollständigen Datensatz öffnen →</Link>
+              <Link className="recordOpenLink" href={'/zertifikat?id=' + encodeURIComponent(state.record.public_id)}>Vollständigen Datensatz öffnen →</Link>
             </div>
 
             <dl className="verificationDetails">
