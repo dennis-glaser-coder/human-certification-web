@@ -142,8 +142,8 @@ export default function ManufacturerPage() {
           </div>
           <div className="manufacturerHeroArtVisual">
             <img
-              src="https://images.unsplash.com/photo-1631396326646-c06a935ff3a6?auto=format&fit=crop&w=1600&q=84"
-              alt="Handwerkliche Bearbeitung eines Möbelstücks in einer Werkstatt"
+              src={assetBase + '/brand/IMG_1039.png'}
+              alt="Menschliche Holzbearbeitung an einer Bandsäge in einer Werkstatt"
             />
             <div className="manufacturerHeroCredential">
               <img src={assetBase + '/brand/made-by-humans-seal.png'} alt="Made by Humans Zertifizierungszeichen" />
