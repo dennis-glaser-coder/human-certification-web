@@ -3,7 +3,9 @@
 ## Direction
 **Modern Human Standard / Editorial Certification**
 
-The brand should feel like a modern, independent international certification organization: high-quality, trustworthy, clear and human. It must not look like a handmade shop, a typical eco/bio label, or a playful startup.
+Made by Humans should feel like a modern certification and trust-mark system: high-quality, trustworthy, clear and human. It must not look like a handmade shop, a typical eco/bio label, a playful startup or a generic SaaS product.
+
+Public copy must never imply accreditation, external independence, scale, customers or maturity that cannot be demonstrated.
 
 ## Colors
 - Authority Ink: `#111820`
@@ -20,100 +22,126 @@ Primary surfaces use Authority Ink, Human Paper and white. Standard Blue and Hum
 
 ## Visual language
 - strict grid
-- generous whitespace
+- generous but controlled whitespace
 - thin rules
 - clear surfaces
 - almost no shadows
-- no gradients
-- no 3D icons
+- no glassmorphism
+- no glossy gradients
+- no fake 3D objects
 - no playful decoration
 - reduced line iconography only when useful
 - editorial, institutional presentation
+- no decorative 01 / 02 / 03 numbering
 
 ## Photography
 Only realistic documentary imagery of real people in production, manufacturing, craft, quality control, machine operation and processing.
 
-The visual narrative must cover the full spectrum of human value creation — from manufactory to industry.
+The visual narrative must cover the full spectrum of human value creation — from manufactory to technically advanced production.
 
 Avoid:
 - generic stock-photo smiles
-- obvious AI imagery
+- AI-generated documentary imagery
 - romanticized craft clichés
 - purely eco/bio imagery
+- fake audit situations
+- people merely standing beside automated machinery
+
+## Public brand hierarchy
+The public website has three distinct language levels:
+
+### Brand claim
+**Von Menschen gemacht. Vor Ort geprüft.**
+
+This is the short brand-facing statement.
+
+### Certified statement
+**Dieses Produkt wurde in seinen wesentlichen Herstellungsschritten nachweislich durch Menschen gefertigt.**
+
+This is the precise public certification statement and should remain consistent wherever the certified meaning is explained.
+
+### Technical language
+The standard may use more precise process, scope, evidence and decision terminology. Technical definitions must not be weakened to sound more marketable.
 
 ## Core system language
-The following four terms must recur throughout the website:
-
+The following German terms should recur consistently:
 1. **STANDARD** — klare Kriterien
-2. **AUDIT** — unabhängige Prüfung
-3. **TRACEABILITY** — dokumentierte Herkunft
-4. **PUBLIC REGISTER** — öffentlich überprüfbar
+2. **VOR-ORT-AUDIT** — Prüfung der tatsächlichen Herstellung
+3. **NACHWEISE** — dokumentierter Produkt- und Prozessbezug
+4. **ÖFFENTLICHES REGISTER** — Zertifizierungsstatus und Umfang überprüfbar
 
 ## Brand character
-- Human
-- Independent
-- Transparent
-- Verifiable
-- International
-- Forward-looking
+- human
+- precise
+- transparent
+- verifiable
+- international in ambition, without unsupported scale claims
+- forward-looking
+- technology-neutral
 
 ## Immediate message
-Within seconds the website must communicate:
+Within seconds the website should communicate:
 
-> Kein Marketing-Badge. Dahinter steht ein echter Standard und eine überprüfbare Zertifizierung.
+> Das Zeichen steht für eine klar definierte, produktbezogene und überprüfbare Zertifizierung menschlicher Herstellung.
 
-## Logo rule
-The final logo / certification mark is not yet defined.
+## Certification mark rule
+The Made by Humans certification mark is used as a functional endorsement mark, not as decoration.
 
-Do not invent a provisional seal or make the website dependent on one. Until the final mark exists, **MADE BY HUMANS** is used typographically only.
-
+- manufacturer / product brand remains visually primary
+- mark is used sparingly
+- small applications must remain legible
+- use must remain linked to certified scope and current status
+- no invented customer, certification or partner applications
 
 ## Non-negotiable authenticity rules
 
-### No AI imagery
+### No AI documentary imagery
 - No AI-generated people, factories, workshops, machinery, products or documentary scenes on the public website.
-- No generated "placeholder documentary photography".
-- If authentic imagery is not available, use no image rather than a fake one.
-- Preferred source: real pilot manufacturers, real production sites, real work processes, real quality checks.
-- Stock imagery may only be used exceptionally when it is clearly documentary, non-staged and not visually generic.
+- No generated placeholder photography presented as real production.
+- Preferred source: real manufacturers, real production sites, real work processes, real quality checks.
+- Stock imagery may only be used when provenance and usage rights are clear and the scene credibly documents real work.
 
-### No AI-sounding copy
-Public-facing copy must not read like generic generated marketing text.
+### Public-stage language
+Do not publish language that exposes an internal development stage or implies unfinished public operations.
 
+Avoid public wording such as:
+- Pilotphase
+- Pilotpartner
+- Early adopter
+- Validierung
+- Arbeitsfassung
+- Arbeitsstandard
+- im Aufbau
+- vor dem Start
+- vor kommerziellem Start
+- Entwicklungsstand
+
+Document versioning such as **Standard 0.1**, document IDs, dates and certification status is permitted and required where relevant.
+
+### No AI-/agency-sounding copy
 Avoid:
-- "In einer Welt, die sich immer schneller verändert ..."
-- "Wir revolutionieren ..."
-- "Wir glauben an eine Zukunft ..."
-- exaggerated three-part slogans without factual content
-- unsupported global leadership claims
-- emotional claims that cannot be evidenced
+- generic future rhetoric
+- unsupported superlatives
+- artificial question headlines
+- repeated "Nicht X. Sondern Y." constructions
+- repeated short two-part slogan syntax
+- repeated three-part value claims without concrete evidence
 
 Prefer:
 - concrete statements
 - defined terms
 - real examples
 - clear limits
-- explicit pilot/prototype status where applicable
+- restrained manufacturer benefit language
 - wording that can be defended in an audit, legal review or press interview
 
 ## Business-plan guardrails
 Every public website decision must remain compatible with the business plan:
 
 - Scope: physical products with materially human-shaped manufacturing.
-- Not an origin, sustainability, bio, fair-trade or anti-technology label.
-- Machinery can be compatible when it supports rather than replaces the product-defining human work.
-- Pilot first, then invest and scale.
-- No commercial certification claims before legal, governance and independence structure is ready.
+- Not an origin, sustainability, bio, fair-trade, quality or anti-technology label.
+- Machinery can be compatible when it supports rather than replaces the essential product-defining human work.
+- The public claim remains product-specific.
+- Standard, audit, certification decision, public register and mark-use rules form one connected trust system.
+- No public accreditation or independence claim unless demonstrably true.
 - Long-term value sits in brand, standard, certificate base, register, trade integration and trust — not in selling audit hours alone.
-- Long-term model should remain compatible with a scheme/standard-owner role and independent approved auditors/certifiers.
-
-
-### Copy rule: no constructed slogan syntax
-Avoid copy patterns that sound generated or agency-written, especially:
-- "Nicht X. Aber Y."
-- "X. Y." short contrast slogans used only for effect
-- artificial rhetorical questions
-- generic "Erst X. Dann Y." formulations
-- repeated three-part value claims without concrete evidence
-
-Headlines should read like something a credible standard organization would publish: precise, calm and specific.
