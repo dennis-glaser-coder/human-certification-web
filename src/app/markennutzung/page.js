@@ -10,11 +10,11 @@ export const metadata = {
 };
 
 const rules = [
-  ['Nur zertifizierter Scope', 'Das Zeichen darf nur für Produkte oder Produktfamilien verwendet werden, die vom veröffentlichten Zertifizierungsumfang erfasst sind.'],
+  ['Nur zertifizierter Umfang', 'Das Zeichen darf nur für Produkte oder Produktfamilien verwendet werden, die vom veröffentlichten Zertifizierungsumfang erfasst sind.'],
   ['Kein Unternehmens-Siegel', 'Die Verwendung darf nicht den Eindruck erwecken, das gesamte Unternehmen oder nicht erfasste Produkte seien zertifiziert.'],
   ['Aussage nicht verändern', 'Die zertifizierte Aussage darf nicht erweitert, relativiert oder mit zusätzlichen ungeprüften Eigenschaften vermischt werden.'],
   ['Registerbezug erhalten', 'Zertifizierungs-ID und öffentlicher Registerbezug müssen der Kennzeichnung eindeutig zugeordnet bleiben.'],
-  ['Status ist bindend', 'Bei Aussetzung, Ablauf oder Widerruf endet oder ruht die Berechtigung zur Zeichennutzung für den betroffenen Scope.'],
+  ['Status ist bindend', 'Bei Aussetzung, Ablauf oder Widerruf endet oder ruht die Berechtigung zur Zeichennutzung für den betroffenen Zertifizierungsumfang.'],
   ['Werbung muss eindeutig bleiben', 'In Webshop, Produktseiten, Anzeigen und Verkaufsunterlagen muss klar erkennbar sein, welches konkrete Produkt zertifiziert ist.'],
 ];
 
@@ -24,7 +24,7 @@ export default function MarkUsePage() {
       <SiteHeader />
 
       <section className="pageHero shell">
-        <div className="eyebrow">MARK USE · MBH-MARK-0.1</div>
+        <div className="eyebrow">MARKENNUTZUNG · MBH-MARK-0.1</div>
         <h1>Grundsätze zur Nutzung des Zertifizierungszeichens.</h1>
         <p className="lead">
           Das Zeichen ist kein frei verwendbares Marketingelement. Seine Nutzung soll an einen definierten Zertifizierungsumfang,
@@ -47,7 +47,7 @@ export default function MarkUsePage() {
         <div className="sectionIntro compact">
           <div>
             <div className="sectionNo">GRUNDREGELN</div>
-            <h2>Die Kennzeichnung bleibt an Produkt, Scope und Status gebunden.</h2>
+            <h2>Die Kennzeichnung bleibt an Produkt, Zertifizierungsumfang und Status gebunden.</h2>
           </div>
         </div>
 
