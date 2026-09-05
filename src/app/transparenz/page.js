@@ -3,11 +3,11 @@ import SiteHeader from '../../components/SiteHeader';
 import SiteFooter from '../../components/SiteFooter';
 
 const principles = [
-  ['Standardversionen', 'Jede Zertifizierung soll eindeutig auf die zugrunde liegende Standardfassung verweisen. Änderungen am Regelwerk bleiben dadurch zeitlich nachvollziehbar.'],
-  ['Prüfnachweise', 'Die Bewertung eines Produkts soll auf dokumentierten Informationen und nachvollziehbaren Prüfunterlagen beruhen.'],
-  ['Fachprüfung und Entscheidung', 'Prüfung, fachliche Kontrolle und Zertifizierungsentscheidung sollen mit klaren Zuständigkeiten dokumentiert werden.'],
-  ['Statusänderungen', 'Aktiv, ausgesetzt, abgelaufen oder widerrufen: Änderungen am Zertifizierungsstatus sollen im öffentlichen Register nachvollziehbar bleiben.'],
-  ['Markennutzung', 'Die Nutzung des Zeichens soll an Zertifizierungsumfang, Status und öffentliche Verifizierbarkeit gebunden sein.'],
+  ['Standardversionen', 'Jede Zertifizierung verweist eindeutig auf die zugrunde liegende Standardfassung. Änderungen am Regelwerk bleiben dadurch zeitlich nachvollziehbar.'],
+  ['Prüfnachweise', 'Die Bewertung eines Produkts beruht auf dokumentierten Informationen und nachvollziehbaren Prüfunterlagen.'],
+  ['Fachprüfung und Entscheidung', 'Prüfung, fachliche Kontrolle und Zertifizierungsentscheidung werden mit klaren Zuständigkeiten dokumentiert.'],
+  ['Statusänderungen', 'Aktiv, ausgesetzt, abgelaufen oder widerrufen: Änderungen am Zertifizierungsstatus bleiben im öffentlichen Register nachvollziehbar.'],
+  ['Markennutzung', 'Die Nutzung des Zeichens ist an Zertifizierungsumfang, Status und öffentliche Verifizierbarkeit gebunden.'],
   ['Beschwerden und Einsprüche', 'Beschwerden, Einsprüche gegen Entscheidungen und Zeichenmissbrauch werden als getrennte Verfahren dokumentiert.'],
 ];
 
@@ -33,18 +33,7 @@ export default function TransparencyPage() {
         </p>
       </section>
 
-      <section className="statusPanel shell">
-        <div>
-          <span>STATUS DES ZERTIFIZIERUNGSSYSTEMS</span>
-          <strong>Standard 0.1 und Registerstruktur im Aufbau</strong>
-        </div>
-        <p>
-          Die öffentliche kommerzielle Zertifikatsvergabe ist noch nicht gestartet.
-          Dieser Status wird hier bewusst transparent ausgewiesen; Rechtsrahmen, Rollen und endgültiger Prüfprozess werden vor dem Start festgelegt.
-        </p>
-      </section>
-
-      <section className="shell transparencySection">
+            <section className="shell transparencySection">
         <div className="sectionIntro compact">
           <div>
             <div className="sectionNo">GRUNDSÄTZE</div>
@@ -66,12 +55,11 @@ export default function TransparencyPage() {
         <div className="shell">
           <div className="sectionIntro compact">
             <div>
-              <div className="sectionNo">VORGESEHENE ROLLENTRENNUNG</div>
+              <div className="sectionNo">ROLLENTRENNUNG</div>
               <h2>Klare Verantwortlichkeiten im Zertifizierungssystem.</h2>
             </div>
             <p>
-              Die endgültige rechtliche und organisatorische Ausgestaltung wird vor dem kommerziellen Start festgelegt.
-              Das System ist so konzipiert, dass Standardverantwortung, Prüfung, fachliche Kontrolle und Entscheidung klar unterscheidbar sind.
+              Standardverantwortung, Prüfung, fachliche Kontrolle und Zertifizierungsentscheidung sind als klar unterscheidbare Funktionen dokumentiert.
             </p>
           </div>
 
