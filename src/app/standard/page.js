@@ -70,17 +70,17 @@ export default function StandardPage() {
               <h2>Von der Produktabgrenzung bis zum Registereintrag.</h2>
             </div>
             <p>
-              Eine spätere Zertifizierung soll nicht auf einer einzelnen Selbstauskunft beruhen,
-              sondern auf einem dokumentierten Prüf- und Entscheidungsprozess.
+              Das Zertifizierungsverfahren ist so angelegt, dass die Entscheidung nicht auf einer einzelnen Selbstauskunft,
+              sondern auf einem dokumentierten Prüf- und Entscheidungsprozess beruht.
             </p>
           </div>
 
           <div className="auditProcessGrid">
-            <article><strong>Scope</strong><p>Produkt oder Produktfamilie und relevante Herstellungsorte festlegen.</p></article>
+            <article><strong>Produktumfang</strong><p>Produkt oder Produktfamilie und relevante Herstellungsorte festlegen.</p></article>
             <article><strong>Prozessaufnahme</strong><p>Wesentliche Herstellungsschritte und Fremdfertigung erfassen.</p></article>
             <article><strong>Nachweise</strong><p>Unterlagen und Informationen zur tatsächlichen Ausführung prüfen.</p></article>
-            <article><strong>Audit</strong><p>Produktionsfall gegen die Kriterien des Standards bewerten.</p></article>
-            <article><strong>Review</strong><p>Prüfergebnis fachlich kontrollieren und offene Punkte dokumentieren.</p></article>
+            <article><strong>Prüfung</strong><p>Produktionsfall gegen die Kriterien des Standards bewerten.</p></article>
+            <article><strong>Fachprüfung</strong><p>Prüfergebnis kontrollieren und offene Punkte dokumentieren.</p></article>
             <article><strong>Entscheidung</strong><p>Zertifizierungsstatus festlegen und bei Freigabe öffentlich registrieren.</p></article>
           </div>
         </div>
@@ -137,12 +137,12 @@ export default function StandardPage() {
         <div>
           <p>
             Die öffentliche Arbeitsfassung des Standards ist versioniert dokumentiert.
-            Regeln zu Prüfrollen, Statusänderungen und Markennutzung werden unter Transparenz & Governance geführt.
+            Regeln zu Prüfrollen, Statusänderungen und Markennutzung werden unter Transparenz & Integrität geführt.
           </p>
         </div>
         <div className="standardCloseLinks">
           <Link className="textLink" href="/dokumente/standard-0-1">Arbeitsstandard 0.1 öffnen →</Link>
-          <Link className="textLink" href="/transparenz">Transparenz & Governance →</Link>
+          <Link className="textLink" href="/transparenz">Transparenz & Integrität →</Link>
         </div>
       </section>
 
