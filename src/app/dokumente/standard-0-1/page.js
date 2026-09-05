@@ -4,8 +4,8 @@ import SiteFooter from '../../../components/SiteFooter';
 import { canonical } from '../../../lib/seo';
 
 export const metadata = {
-  title: 'Arbeitsstandard 0.1',
-  description: 'Öffentliche Arbeitsfassung 0.1 des Made by Humans Standards für nachweisbar menschlich gefertigte physische Produkte.',
+  title: 'Standard 0.1',
+  description: 'Version 0.1 des Made by Humans Standards für nachweisbar menschlich gefertigte physische Produkte.',
   alternates: { canonical: canonical('/dokumente/standard-0-1') },
 };
 
@@ -33,12 +33,12 @@ export default function StandardDocumentPage() {
 
         <header className="standardDocumentHeader">
           <div>
-            <span>MADE BY HUMANS · ARBEITSSTANDARD</span>
+            <span>MADE BY HUMANS · STANDARD</span>
             <h1>Standard 0.1</h1>
           </div>
           <dl>
             <div><dt>Dokument-ID</dt><dd>MBH-STD-0.1</dd></div>
-            <div><dt>Status</dt><dd>Arbeitsfassung · in Validierung</dd></div>
+            <div><dt>Version</dt><dd>0.1</dd></div>
             <div><dt>Stand</dt><dd>04.09.2026</dd></div>
             <div><dt>Geltungsbereich</dt><dd>Physische Produkte</dd></div>
           </dl>
@@ -86,10 +86,10 @@ export default function StandardDocumentPage() {
         </section>
 
         <section>
-          <h2>Status dieser Fassung</h2>
+          <h2>Dokumentenlenkung</h2>
           <p>
-            Version 0.1 ist eine öffentliche Arbeitsfassung. Sie dient der Validierung an realen Produktionsfällen
-            und stellt noch keine endgültige kommerzielle Zertifizierungsnorm dar.
+            Standardversion, Dokument-ID und Stand werden kontrolliert geführt. Änderungen an Kriterien,
+            Nachweisanforderungen oder Entscheidungsregeln werden in einer neuen Version nachvollziehbar dokumentiert.
           </p>
           <Link className="textLink" href="/dokumente">Zur Dokumentenübersicht →</Link>
         </section>
