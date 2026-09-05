@@ -47,10 +47,10 @@ export default function TransparencyPage() {
 
       <section className="integrityMetaBand" aria-label="Integritätsprinzipien">
         <div className="shell integrityMetaGrid">
-          <div><span>01</span><strong>Versioniert</strong><p>Regelwerke und Entscheidungen bleiben referenzierbar.</p></div>
-          <div><span>02</span><strong>Dokumentiert</strong><p>Prüfnachweise und Entscheidungen sind nachvollziehbar.</p></div>
-          <div><span>03</span><strong>Rollenklar</strong><p>Prüfung, Fachprüfung und Entscheidung sind unterscheidbar.</p></div>
-          <div><span>04</span><strong>Öffentlich prüfbar</strong><p>Status und Produktbezug werden über das Register verifiziert.</p></div>
+          <div><strong>Versioniert</strong><p>Regelwerke und Entscheidungen bleiben referenzierbar.</p></div>
+          <div><strong>Dokumentiert</strong><p>Prüfnachweise und Entscheidungen sind nachvollziehbar.</p></div>
+          <div><strong>Rollenklar</strong><p>Prüfung, Fachprüfung und Entscheidung sind unterscheidbar.</p></div>
+          <div><strong>Öffentlich prüfbar</strong><p>Status und Produktbezug werden über das Register verifiziert.</p></div>
         </div>
       </section>
 
@@ -67,9 +67,8 @@ export default function TransparencyPage() {
         </div>
 
         <div className="transparencyPrinciplesGrid">
-          {principles.map(([title, copy], index) => (
+          {principles.map(([title, copy]) => (
             <article key={title}>
-              <span>{String(index + 1).padStart(2, '0')}</span>
               <h3>{title}</h3>
               <p>{copy}</p>
             </article>
@@ -91,9 +90,8 @@ export default function TransparencyPage() {
           </div>
 
           <div className="integrityRolesGrid">
-            {roles.map(([number, title, copy]) => (
-              <article key={number}>
-                <span>{number}</span>
+            {roles.map(([, title, copy]) => (
+              <article key={title}>
                 <strong>{title}</strong>
                 <p>{copy}</p>
               </article>
