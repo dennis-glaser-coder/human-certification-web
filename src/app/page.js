@@ -5,17 +5,29 @@ import HeroVerify from '../components/HeroVerify';
 
 const principles = [
   {
-    term: 'Produktbezogen',
+    term: 'Geltungsbereich',
     text: 'Die Zertifizierung bezieht sich auf ein eindeutig definiertes physisches Produkt oder eine klar abgegrenzte Produktfamilie.'
   },
   {
-    term: 'Herstellungsbezogen',
-    text: 'Geprüft werden die wesentlichen Arbeitsschritte, durch die aus Materialien und Komponenten das Endprodukt entsteht.'
+    term: 'Menschliche Ausführung',
+    text: 'Geprüft wird, ob die wesentlichen produktprägenden Herstellungsschritte tatsächlich durch Menschen ausgeführt werden.'
   },
   {
-    term: 'Nachweisbar',
-    text: 'Herstellungsorte, relevante Fremdfertigung und geeignete Nachweise müssen dem geprüften Produkt nachvollziehbar zugeordnet werden können.'
+    term: 'Nachweise',
+    text: 'Herstellungsorte, relevante Fremdfertigung und geeignete Unterlagen müssen dem geprüften Produkt nachvollziehbar zugeordnet werden können.'
+  },
+  {
+    term: 'Entscheidung & Status',
+    text: 'Prüfergebnis, angewendete Standardfassung und Zertifizierungsstatus werden dokumentiert und öffentlich verifizierbar gemacht.'
   }
+];
+
+const process = [
+  ['01', 'Produkt abgrenzen', 'Produkt oder Produktfamilie und relevante Herstellungsorte eindeutig festlegen.'],
+  ['02', 'Herstellung dokumentieren', 'Wesentliche Arbeitsschritte, Standorte und relevante Fremdfertigung erfassen.'],
+  ['03', 'Nachweise prüfen', 'Unterlagen und Informationen zur tatsächlichen Ausführung bewerten.'],
+  ['04', 'Entscheidung dokumentieren', 'Prüfergebnis fachlich nachvollziehbar festhalten und den Zertifizierungsstatus bestimmen.'],
+  ['05', 'Status veröffentlichen', 'Freigegebene Zertifizierungen erhalten eine eindeutige ID und einen öffentlich prüfbaren Datensatz.']
 ];
 
 export default function Home() {
@@ -28,22 +40,27 @@ export default function Home() {
       <section className="premiumHero">
         <div className="shell premiumHeroGrid">
           <div className="premiumHeroCopy">
-            <p className="premiumEyebrow">STANDARD FÜR MENSCHLICHE HERSTELLUNG</p>
-            <h1>Menschliche Herstellung, überprüfbar am Produkt.</h1>
+            <p className="premiumEyebrow">STANDARD FÜR NACHWEISBAR MENSCHLICHE HERSTELLUNG</p>
+            <h1>Menschliche Arbeit. Sichtbar. Nachweisbar.</h1>
             <p className="premiumLead">
-              Made by Humans entwickelt einen branchenübergreifenden Standard für physische Produkte,
-              deren wesentliche Herstellungsschritte nachweislich durch Menschen ausgeführt werden.
+              Made by Humans definiert, wann ein physisches Produkt in seinen wesentlichen Herstellungsschritten
+              durch Menschen gefertigt wurde – und wie diese Aussage dokumentiert, geprüft und öffentlich verifiziert werden kann.
             </p>
             <div className="premiumHeroLinks">
               <Link href="/standard">Standard ansehen</Link>
-              <Link href="/fuer-hersteller">Produkt vorstellen</Link>
+              <Link href="/fuer-hersteller">Produkt einordnen</Link>
+            </div>
+            <div className="premiumHeroProof" aria-label="Grundprinzipien des Standards">
+              <span>Definierte Kriterien</span>
+              <span>Dokumentierte Nachweise</span>
+              <span>Öffentliche Verifizierung</span>
             </div>
           </div>
 
           <div className="premiumSealField" aria-label="Made by Humans Zertifizierungszeichen">
             <div className="premiumSealRule">
               <span>ZERTIFIZIERUNGSZEICHEN</span>
-              <span>MADE BY HUMANS</span>
+              <span>PRODUKTBEZOGEN</span>
             </div>
             <img
               src={assetBase + '/brand/made-by-humans-seal.png'}
@@ -51,22 +68,25 @@ export default function Home() {
               width="360"
               height="360"
             />
-            <p>Für Produkte, deren wesentliche Herstellungsschritte nach dem Standard geprüft wurden.</p>
+            <p>
+              Das Zeichen ist an ein konkret geprüftes Produkt, eine Standardfassung
+              und einen überprüfbaren Zertifizierungsstatus gebunden.
+            </p>
           </div>
         </div>
       </section>
 
       <section className="premiumClaim">
         <div className="shell premiumClaimGrid">
-          <p className="premiumSectionLabel">AUSSAGE DES ZEICHENS</p>
+          <p className="premiumSectionLabel">WAS DAS ZEICHEN AUSSAGT</p>
           <div>
             <blockquote>
               Dieses Produkt wurde in seinen wesentlichen Herstellungsschritten
               nachweislich durch Menschen gefertigt.
             </blockquote>
             <p>
-              Die Aussage ist produktbezogen. Sie soll nicht auf Selbstauskunft beruhen,
-              sondern auf definierten Kriterien, prüfbaren Nachweisen und einer nachvollziehbaren Entscheidung.
+              Die Aussage gilt ausschließlich für den zertifizierten Produktumfang.
+              Sie trifft keine Aussage zu Herkunftsland, Nachhaltigkeit, Bio-, Fairtrade- oder anderen Produkteigenschaften.
             </p>
           </div>
         </div>
@@ -76,10 +96,10 @@ export default function Home() {
         <div className="shell premiumStandardGrid">
           <div className="premiumStandardIntro">
             <p className="premiumSectionLabel">DER STANDARD</p>
-            <h2>Ein klar abgegrenzter Prüfgegenstand.</h2>
+            <h2>Eine klare Aussage braucht klare Grenzen.</h2>
             <p>
-              Made by Humans bewertet nicht pauschal ein Unternehmen und ersetzt keine Herkunfts-,
-              Nachhaltigkeits-, Bio- oder Fairtrade-Kennzeichnung.
+              Der Standard legt fest, was geprüft wird, welche menschlichen Herstellungsschritte wesentlich sind,
+              welche Nachweise erforderlich sind und wie eine Entscheidung dokumentiert wird.
             </p>
           </div>
 
@@ -90,7 +110,32 @@ export default function Home() {
                 <p>{item.text}</p>
               </div>
             ))}
-            <Link className="premiumInlineLink" href="/standard">Kriterien und Abgrenzungen</Link>
+            <Link className="premiumInlineLink" href="/standard">Standard und Kriterien ansehen</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="premiumProcess">
+        <div className="shell">
+          <div className="premiumProcessHead">
+            <div>
+              <p className="premiumSectionLabel">ZERTIFIZIERUNGSWEG</p>
+              <h2>Vom Produkt zum überprüfbaren Status.</h2>
+            </div>
+            <p>
+              Der Zertifizierungsweg ist so aufgebaut, dass Produktumfang, Herstellungsprozess,
+              Nachweise, Entscheidung und öffentlicher Status voneinander nachvollziehbar bleiben.
+            </p>
+          </div>
+
+          <div className="premiumProcessSteps">
+            {process.map(([number, title, copy]) => (
+              <article key={number}>
+                <span>{number}</span>
+                <strong>{title}</strong>
+                <p>{copy}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -98,11 +143,11 @@ export default function Home() {
       <section className="premiumRegister">
         <div className="shell premiumRegisterGrid">
           <div>
-            <p className="premiumSectionLabel premiumSectionLabelLight">PUBLIC REGISTER</p>
-            <h2>Eine Kennzeichnung muss überprüfbar bleiben.</h2>
+            <p className="premiumSectionLabel premiumSectionLabelLight">ÖFFENTLICHES REGISTER</p>
+            <h2>Zertifizierungsstatus öffentlich prüfen.</h2>
             <p className="premiumRegisterIntro">
-              Der öffentliche Datensatz ordnet eine Zertifizierungs-ID dem Hersteller, dem geprüften Produkt,
-              der angewendeten Standardfassung und dem aktuellen Status zu.
+              Jede veröffentlichte Zertifizierung wird über eine eindeutige ID dem Hersteller,
+              dem geprüften Produkt, der angewendeten Standardfassung und dem aktuellen Status zugeordnet.
             </p>
           </div>
 
@@ -116,17 +161,17 @@ export default function Home() {
         <div className="shell premiumManufacturerGrid">
           <div>
             <p className="premiumSectionLabel">FÜR HERSTELLER</p>
-            <h2>Produkte und Herstellungsprozesse zur Validierung vorstellen.</h2>
+            <h2>Passt Ihr Produkt zum Standard?</h2>
           </div>
           <div>
             <p>
-              Für die aktuelle Validierung werden physische Produkte gesucht, deren wesentliche Herstellungsschritte
-              klar beschrieben und praktisch geprüft werden können.
+              Hersteller können ihr Produkt und den zugehörigen Herstellungsprozess zunächst einordnen lassen.
+              Entscheidend sind ein klar abgrenzbares physisches Produkt, nachvollziehbare Arbeitsschritte und geeignete Nachweise.
             </p>
             <p>
-              Die Vorstellung ist unverbindlich und noch kein Zertifizierungsantrag.
+              Die Anfrage dient der ersten fachlichen Einordnung und ist noch kein formeller Zertifizierungsantrag.
             </p>
-            <Link className="premiumInlineLink" href="/fuer-hersteller">Produkt vorstellen</Link>
+            <Link className="premiumInlineLink" href="/fuer-hersteller">Produkt einordnen</Link>
           </div>
         </div>
       </section>
@@ -134,7 +179,7 @@ export default function Home() {
       <section className="premiumClosingLinks">
         <div className="shell">
           <Link href="/dokumente">Dokumente</Link>
-          <Link href="/transparenz">Transparenz & Governance</Link>
+          <Link href="/transparenz">Transparenz & Integrität</Link>
           <Link href="/ueber-uns">Über Made by Humans</Link>
         </div>
       </section>
