@@ -7,6 +7,7 @@ import SiteFooter from '../../components/SiteFooter';
 import { getSupabaseBrowserClient } from '../../lib/supabase';
 
 const labels = {
+  under_review: 'In Prüfung',
   active: 'Aktiv',
   suspended: 'Ausgesetzt',
   expired: 'Abgelaufen',
@@ -33,7 +34,7 @@ export default function RegisterPage() {
 
       const { data, error } = await supabase
         .from('certifications')
-        .select('public_id,status,issued_at,valid_until,public_note,created_at,products(name,manufacturers(name)),standard_versions(version,title)')
+        .select('public_id,status,issued_at,valid_until,public_note,created_at,certification_scope,production_locations,products(name,manufacturers(name)),standard_versions(version,title)')
         .order('created_at', { ascending: false });
 
       if (error) {
@@ -55,6 +56,8 @@ export default function RegisterPage() {
       record.public_id,
       record.products?.name,
       record.products?.manufacturers?.name,
+      record.certification_scope,
+      ...(record.production_locations ?? []),
     ].filter(Boolean).some((value) => value.toLowerCase().includes(needle)));
   }, [query, records]);
 
@@ -66,15 +69,15 @@ export default function RegisterPage() {
         <div className="eyebrow">ÖFFENTLICHES REGISTER</div>
         <h1>Zertifizierungen öffentlich prüfen.</h1>
         <p className="lead">
-          Das Register macht Zertifizierungs-ID, Hersteller, Produkt, angewendete Standardfassung, Gültigkeit und aktuellen Status eines veröffentlichten Datensatzes nachvollziehbar.
+          Das Register macht Zertifizierungs-ID, Hersteller, Produkt, Zertifizierungsumfang, relevante Produktionsstandorte, Standardfassung, Gültigkeit und aktuellen Status eines veröffentlichten Datensatzes nachvollziehbar.
         </p>
       </section>
 
       <section className="shell registerSection">
         <div className="registerTrustBar" aria-label="Inhalte eines Registereintrags">
           <div><span>01</span><strong>Zertifizierungs-ID</strong><p>Eindeutige Zuordnung des Datensatzes.</p></div>
-          <div><span>02</span><strong>Produktbezug</strong><p>Hersteller und geprüftes Produkt.</p></div>
-          <div><span>03</span><strong>Standardfassung</strong><p>Version des angewendeten Regelwerks.</p></div>
+          <div><span>02</span><strong>Produkt & Umfang</strong><p>Hersteller, Produkt und veröffentlichter Zertifizierungsumfang.</p></div>
+          <div><span>03</span><strong>Produktion & Standard</strong><p>Relevante Produktionsstandorte und angewendetes Regelwerk.</p></div>
           <div><span>04</span><strong>Status & Gültigkeit</strong><p>Aktueller Zertifizierungsstatus und Laufzeit.</p></div>
         </div>
 
@@ -83,7 +86,7 @@ export default function RegisterPage() {
             <span className="sectionNo">REGISTER</span>
             <strong>{records.length} Datensatz{records.length === 1 ? '' : 'e'}</strong>
           </div>
-          <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="ID, Hersteller oder Produkt suchen" aria-label="Register durchsuchen" />
+          <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="ID, Hersteller, Produkt oder Standort suchen" aria-label="Register durchsuchen" />
         </div>
 
         {message && <div className="registerMessage">{message}</div>}
@@ -98,10 +101,12 @@ export default function RegisterPage() {
               <div>
                 <small>HERSTELLER</small>
                 <strong>{record.products?.manufacturers?.name ?? '—'}</strong>
+                {record.production_locations?.length > 0 && <em className="registerSubline">{record.production_locations.join(' · ')}</em>}
               </div>
               <div>
                 <small>PRODUKT</small>
                 <strong>{record.products?.name ?? '—'}</strong>
+                {record.certification_scope && <em className="registerSubline">{record.certification_scope}</em>}
               </div>
               <div>
                 <small>STANDARD</small>
@@ -109,7 +114,7 @@ export default function RegisterPage() {
               </div>
               <div className="registerStatusCell">
                 <small>STATUS / GÜLTIG BIS</small>
-                <span className={'statusBadge ' + (record.status === 'active' ? 'active' : '')}>{labels[record.status] ?? record.status}</span>
+                <span className={'statusBadge status-' + record.status + (record.status === 'active' ? ' active' : '')}>{labels[record.status] ?? record.status}</span>
                 <em>{formatDate(record.valid_until)}</em>
               </div>
               <Link href={'/c/' + encodeURIComponent(record.public_id)} aria-label={record.public_id + ' öffnen'}>Datensatz →</Link>
