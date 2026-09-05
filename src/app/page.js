@@ -55,8 +55,8 @@ export default function Home() {
 
           <div className="desireHeroVisual">
             <img
-              src="https://images.unsplash.com/photo-1774282557812-6182cc59f638?auto=format&fit=crop&w=1800&q=86"
-              alt="Menschliche Arbeit in einer Produktionswerkstatt"
+              src="https://images.unsplash.com/photo-1463082459669-fd1ca1692fea?auto=format&fit=crop&w=1800&q=86"
+              alt="Holzhandwerker bei der manuellen Bearbeitung eines Werkstücks"
             />
             <div className="desireHeroOverlay">
               <img
@@ -86,6 +86,14 @@ export default function Home() {
               der für Käufer häufig nicht mehr erkennbar ist. Made by Humans macht genau diesen Unterschied
               sichtbar – ohne mehr zu behaupten, als tatsächlich geprüft wurde.
             </p>
+            <figure className="manifestoMaterial">
+              <img
+                src="https://images.unsplash.com/photo-1781389005078-d9e413d89c94?auto=format&fit=crop&w=1600&q=84"
+                alt="Hände bei der manuellen Formgebung von Keramik"
+                loading="lazy"
+              />
+              <figcaption>Material · Können · Ausführung · Nachweis</figcaption>
+            </figure>
           </div>
         </div>
       </section>
@@ -105,7 +113,9 @@ export default function Home() {
 
           <div className="sealApplicationGrid">
             <article className="sealApplicationCard applicationPackage">
-              <div className="applicationStage">
+              <div className="applicationStage applicationStagePhoto">
+                <img className="applicationPhoto" src="https://images.unsplash.com/photo-1771523350488-32af5ba560e6?auto=format&fit=crop&w=1400&q=82" alt="" aria-hidden="true" />
+                <div className="applicationPhotoShade"></div>
                 <div className="mockPackage">
                   <span className="mockBrand">PRODUKT</span>
                   <span className="mockDescriptor">BEISPIELANWENDUNG</span>
@@ -119,7 +129,9 @@ export default function Home() {
             </article>
 
             <article className="sealApplicationCard applicationTag">
-              <div className="applicationStage">
+              <div className="applicationStage applicationStagePhoto">
+                <img className="applicationPhoto" src="https://images.unsplash.com/photo-1631396326646-c06a935ff3a6?auto=format&fit=crop&w=1400&q=82" alt="" aria-hidden="true" />
+                <div className="applicationPhotoShade"></div>
                 <div className="mockTag">
                   <div className="mockTagHole"></div>
                   <img src={assetBase + '/brand/made-by-humans-seal.png'} alt="" aria-hidden="true" />
@@ -131,7 +143,7 @@ export default function Home() {
             </article>
 
             <article className="sealApplicationCard applicationDigital">
-              <div className="applicationStage">
+              <div className="applicationStage applicationDigitalStage">
                 <div className="mockBrowser">
                   <div className="mockBrowserBar"><i></i><i></i><i></i></div>
                   <div className="mockProduct">
@@ -151,7 +163,9 @@ export default function Home() {
             </article>
 
             <article className="sealApplicationCard applicationPos">
-              <div className="applicationStage">
+              <div className="applicationStage applicationStagePhoto applicationPosStage">
+                <img className="applicationPhoto" src="https://images.unsplash.com/photo-1774282557812-6182cc59f638?auto=format&fit=crop&w=1400&q=82" alt="" aria-hidden="true" />
+                <div className="applicationPhotoShade dark"></div>
                 <div className="mockPos">
                   <img src={assetBase + '/brand/made-by-humans-seal.png'} alt="" aria-hidden="true" />
                   <strong>Von Menschen gemacht.</strong>
@@ -286,12 +300,20 @@ export default function Home() {
               So lässt sich die Zertifizierung konsistent am Produkt, digital und im Vertrieb einsetzen.
             </p>
           </div>
-          <div className="brandKitGrid">
-            {brandKit.map(([title, copy]) => <article key={title}><strong>{title}</strong><p>{copy}</p></article>)}
-          </div>
-          <div className="brandKitCallout">
-            <img src={assetBase + '/brand/made-by-humans-seal.png'} alt="Made by Humans Zertifizierungszeichen" />
-            <div><span>MADE BY HUMANS MARKENNUTZUNG</span><strong>Ein Zeichen. Eine klare Aussage. Ein überprüfbarer Produktbezug.</strong></div>
+          <div className="brandKitEditorial">
+            <div className="brandKitFolio" aria-label="Beispielhafte Markennutzungsunterlagen">
+              <div className="folioSheet folioBack"><span>REGISTER</span></div>
+              <div className="folioSheet folioMid"><span>DIGITAL BADGE</span></div>
+              <div className="folioSheet folioFront">
+                <img src={assetBase + '/brand/made-by-humans-seal.png'} alt="Made by Humans Zertifizierungszeichen" />
+                <small>MARKENNUTZUNG</small>
+                <strong>Von Menschen gemacht.<br />Vor Ort geprüft.</strong>
+                <span>Zertifizierungs-ID · QR · Produktbezug</span>
+              </div>
+            </div>
+            <div className="brandKitList">
+              {brandKit.map(([title, copy]) => <article key={title}><strong>{title}</strong><p>{copy}</p></article>)}
+            </div>
           </div>
         </div>
       </section>
