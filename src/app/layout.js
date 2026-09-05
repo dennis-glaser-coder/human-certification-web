@@ -25,7 +25,7 @@ export const metadata = {
     locale: 'de_DE',
     url: canonical('/'),
     siteName: SITE_NAME,
-    title: 'Made by Humans | Standard für menschlich gefertigte Produkte',
+    title: 'Made by Humans | Zertifizierung für menschliche Herstellung',
     description: DEFAULT_DESCRIPTION,
     images: [
       {
@@ -36,7 +36,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary',
-    title: 'Made by Humans | Standard für menschlich gefertigte Produkte',
+    title: 'Made by Humans | Zertifizierung für menschliche Herstellung',
     description: DEFAULT_DESCRIPTION,
     images: [canonical('/brand/made-by-humans-seal.png')],
   },
