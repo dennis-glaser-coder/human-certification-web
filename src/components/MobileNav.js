@@ -23,14 +23,15 @@ export default function MobileNav() {
 
       {open && (
         <nav id="mobile-site-menu" className="mobileMenuPanel premiumMobileMenu" aria-label="Mobile Navigation">
-          <Link href="/standard" onClick={close}>Standard</Link>
-          <Link href="/warum-made-by-humans" onClick={close}>Warum Made by Humans?</Link>
-          <Link href="/fuer-hersteller" onClick={close}>Für Hersteller</Link>
+          <Link href="/warum-made-by-humans" onClick={close}>Warum Made by Humans</Link>
+          <Link href="/fuer-hersteller" onClick={close}>Zertifizierung</Link>
+          <Link href="/fuer-kaeufer" onClick={close}>Für Käufer</Link>
           <Link href="/register" onClick={close}>Register</Link>
-          <Link href="/dokumente" onClick={close}>Dokumente</Link>
-          <Link href="/ueber-uns" onClick={close}>Über uns</Link>
-          <Link href="/transparenz" onClick={close}>Transparenz & Integrität</Link>
+          <Link href="/standard" onClick={close}>Standard</Link>
           <Link href="/pruefen" onClick={close}>Zertifizierungs-ID prüfen</Link>
+          <Link href="/ueber-uns" onClick={close}>Über uns</Link>
+          <Link href="/dokumente" onClick={close}>Dokumente</Link>
+          <Link href="/transparenz" onClick={close}>Transparenz & Integrität</Link>
           <Link className="mobileMenuVerify" href="/fuer-hersteller#zertifizierungsanfrage" onClick={close}>Zertifizierung anfragen</Link>
         </nav>
       )}
