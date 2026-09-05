@@ -42,10 +42,10 @@ export default function EvidenceGuidePage() {
 
       <section className="guideMetaBand">
         <div className="shell guideMetaGrid">
-          <div><span>01</span><strong>Produktbezogen</strong><p>Nachweise müssen zum konkreten Zertifizierungsumfang passen.</p></div>
-          <div><span>02</span><strong>Prozessbezogen</strong><p>Entscheidend ist die tatsächliche Herstellung, nicht nur das Endprodukt.</p></div>
-          <div><span>03</span><strong>Kombinierbar</strong><p>Mehrere unterschiedliche Belege können gemeinsam ein belastbares Bild ergeben.</p></div>
-          <div><span>04</span><strong>Nachvollziehbar</strong><p>Unterlagen müssen der Prüfung eindeutig zugeordnet werden können.</p></div>
+          <div><strong>Produktbezogen</strong><p>Nachweise müssen zum konkreten Zertifizierungsumfang passen.</p></div>
+          <div><strong>Prozessbezogen</strong><p>Entscheidend ist die tatsächliche Herstellung, nicht nur das Endprodukt.</p></div>
+          <div><strong>Kombinierbar</strong><p>Mehrere unterschiedliche Belege können gemeinsam ein belastbares Bild ergeben.</p></div>
+          <div><strong>Nachvollziehbar</strong><p>Unterlagen müssen der Prüfung eindeutig zugeordnet werden können.</p></div>
         </div>
       </section>
 
@@ -62,9 +62,8 @@ export default function EvidenceGuidePage() {
         </div>
 
         <div className="guideEvidenceGrid">
-          {evidenceTypes.map(([title, copy], index) => (
+          {evidenceTypes.map(([title, copy]) => (
             <article key={title}>
-              <span>{String(index + 1).padStart(2, '0')}</span>
               <strong>{title}</strong>
               <p>{copy}</p>
             </article>
@@ -79,9 +78,8 @@ export default function EvidenceGuidePage() {
             <h2>Eine Behauptung ist noch kein Nachweis.</h2>
           </div>
           <div className="guideChecklist">
-            {weakEvidence.map((item, index) => (
+            {weakEvidence.map((item) => (
               <article key={item}>
-                <span>{String(index + 1).padStart(2, '0')}</span>
                 <p>{item}</p>
               </article>
             ))}
