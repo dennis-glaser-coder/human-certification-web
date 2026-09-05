@@ -124,10 +124,10 @@ export default function ManufacturerPage() {
 
       <section className="manufacturerMetaBand" aria-label="Kernbestandteile der Zertifizierung">
         <div className="shell manufacturerMetaGrid">
-          <div><span>01</span><strong>Produktbezogen</strong><p>Klar abgegrenzter Zertifizierungsumfang.</p></div>
-          <div><span>02</span><strong>Vor Ort geprüft</strong><p>Die tatsächliche Herstellung wird beim Hersteller nachvollzogen.</p></div>
-          <div><span>03</span><strong>Versioniert</strong><p>Entscheidung ist an eine Standardfassung gebunden.</p></div>
-          <div><span>04</span><strong>Verifizierbar</strong><p>Status und Produktbezug sind öffentlich prüfbar.</p></div>
+          <div><strong>Produktbezogen</strong><p>Klar abgegrenzter Zertifizierungsumfang.</p></div>
+          <div><strong>Vor Ort geprüft</strong><p>Die tatsächliche Herstellung wird beim Hersteller nachvollzogen.</p></div>
+          <div><strong>Versioniert</strong><p>Entscheidung ist an eine Standardfassung gebunden.</p></div>
+          <div><strong>Verifizierbar</strong><p>Status und Produktbezug sind öffentlich prüfbar.</p></div>
         </div>
       </section>
 
@@ -145,9 +145,8 @@ export default function ManufacturerPage() {
           </div>
 
           <div className="manufacturerBenefitGrid">
-            {certificationValue.map(([title, copy], index) => (
+            {certificationValue.map(([title, copy]) => (
               <article key={title}>
-                <span>{String(index + 1).padStart(2, '0')}</span>
                 <strong>{title}</strong>
                 <p>{copy}</p>
               </article>
@@ -196,9 +195,8 @@ export default function ManufacturerPage() {
 
           <div>
             <div className="manufacturerEvidenceList">
-              {evidence.map(([title, copy], index) => (
+              {evidence.map(([title, copy]) => (
                 <article key={title}>
-                  <span>{String(index + 1).padStart(2, '0')}</span>
                   <div>
                     <strong>{title}</strong>
                     <p>{copy}</p>
