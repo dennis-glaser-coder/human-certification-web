@@ -361,23 +361,23 @@ export default function ManufacturerPage() {
 
             <label>
               Unternehmen *
-              <input required minLength="2" maxLength="180" name="company_name" value={form.company_name} onChange={change} placeholder="Unternehmensname" />
+              <input required minLength="2" maxLength="180" name="company_name" autoComplete="organization" value={form.company_name} onChange={change} placeholder="Unternehmensname" />
             </label>
 
             <div className="formTwo">
               <label>
                 Ansprechpartner *
-                <input required minLength="2" maxLength="180" name="contact_name" value={form.contact_name} onChange={change} placeholder="Vor- und Nachname" />
+                <input required minLength="2" maxLength="180" name="contact_name" autoComplete="name" value={form.contact_name} onChange={change} placeholder="Vor- und Nachname" />
               </label>
               <label>
                 E-Mail *
-                <input required type="email" maxLength="320" name="email" value={form.email} onChange={change} placeholder="name@unternehmen.de" />
+                <input required type="email" maxLength="320" name="email" autoComplete="email" value={form.email} onChange={change} placeholder="name@unternehmen.de" />
               </label>
             </div>
 
             <label>
               Website
-              <input name="website" value={form.website} onChange={change} placeholder="https://…" />
+              <input type="url" autoComplete="url" name="website" value={form.website} onChange={change} placeholder="https://…" />
             </label>
 
             <div className="formSectionLabel"><strong>Produkt</strong></div>
@@ -429,13 +429,13 @@ export default function ManufacturerPage() {
             </label>
 
             <div className="applicationSubmit">
-              <button className="button primary formButton" disabled={state.loading}>
+              <button type="submit" className="button primary formButton" disabled={state.loading} aria-busy={state.loading}>
                 {state.loading ? 'Wird gesendet …' : 'Zertifizierungsanfrage senden'}
               </button>
-              <small className="formLegal">Die Angaben werden ausschließlich zur Bearbeitung Ihrer Zertifizierungsanfrage gespeichert.</small>
+              <small className="formLegal">Die Angaben werden zur Bearbeitung Ihrer Zertifizierungsanfrage verarbeitet.</small>
             </div>
 
-            {state.message && <p className={state.success ? 'formMessage success' : 'formMessage'}>{state.message}</p>}
+            {state.message && <p role="status" aria-live="polite" className={state.success ? 'formMessage success' : 'formMessage'}>{state.message}</p>}
           </form>
         </div>
       </section>
