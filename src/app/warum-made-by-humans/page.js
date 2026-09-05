@@ -53,10 +53,10 @@ export default function WhyPage() {
         <div className="shell whyHeroGrid">
           <div className="whyHeroCopy">
             <p className="premiumEyebrow">WARUM MADE BY HUMANS?</p>
-            <h1>Weil menschliche Arbeit mehr sein sollte als eine Behauptung.</h1>
+            <h1>Menschliche Herstellung ist ein Unterschied. Machen Sie ihn sichtbar.</h1>
             <p className="whyHeroLead">
-              Wenn Menschen ein Produkt wesentlich prägen, entsteht daraus ein echter Unterschied.
-              Made by Humans macht diesen Unterschied sichtbar, prüfbar und verständlich –
+              Wenn Menschen ein Produkt wesentlich prägen, sollte diese Leistung nicht in einer allgemeinen
+              Werbeaussage verschwinden. Made by Humans macht den Unterschied sichtbar, prüfbar und verständlich –
               für Hersteller, Handel und Käufer.
             </p>
             <div className="whyHeroActions">
@@ -142,15 +142,18 @@ export default function WhyPage() {
             </p>
           </div>
 
-          <div className="whyCustomerList">
-            {customerBenefits.map(([title, copy]) => (
-              <article key={title}>
-                <div>
-                  <strong>{title}</strong>
-                  <p>{copy}</p>
-                </div>
-              </article>
-            ))}
+          <div>
+            <div className="whyCustomerList">
+              {customerBenefits.map(([title, copy]) => (
+                <article key={title}>
+                  <div>
+                    <strong>{title}</strong>
+                    <p>{copy}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <Link className="desireTextLink desireTextLinkLight" href="/fuer-kaeufer">Was das Zeichen für Käufer bedeutet →</Link>
           </div>
         </div>
       </section>
