@@ -2933,3 +2933,113 @@ textarea:focus-visible{
     height:420px;
   }
 }
+
+
+/* ===== Mobile layout hardening 2026-09-05 ===== */
+@media(max-width:760px){
+  .premiumRegisterGrid,
+  .premiumManufacturerGrid{
+    grid-template-columns:minmax(0,1fr);
+    gap:0;
+  }
+
+  .premiumRegister{
+    padding-top:68px;
+    padding-bottom:72px;
+  }
+
+  .premiumRegister h2,
+  .premiumManufacturer h2{
+    max-width:none;
+    font-size:clamp(38px,10vw,44px);
+    line-height:1.04;
+    letter-spacing:-.038em;
+  }
+
+  .premiumRegisterIntro{
+    max-width:none;
+    font-size:12px;
+    line-height:1.72;
+  }
+
+  .premiumVerify{
+    width:100%;
+    min-width:0;
+    padding-top:40px;
+  }
+
+  .premiumRegister .verifyModule{
+    width:100%;
+    min-width:0;
+  }
+
+  .premiumRegister .verifyModuleHead{
+    min-height:0;
+    padding:14px 0;
+    align-items:flex-start;
+    flex-direction:column;
+    gap:5px;
+  }
+
+  .premiumRegister .verifyModuleHead strong,
+  .premiumRegister .verifyModuleHead span{
+    white-space:normal;
+  }
+
+  .premiumRegister .verifyModuleForm{
+    padding:20px 0 16px;
+  }
+
+  .premiumRegister .verifyModuleForm>div{
+    width:100%;
+    grid-template-columns:1fr;
+  }
+
+  .premiumRegister .verifyModuleForm input{
+    width:100%;
+    min-width:0;
+    height:54px;
+    border-right:1px solid rgba(255,255,255,.40);
+    border-bottom:0;
+    font-size:16px;
+  }
+
+  .premiumRegister .verifyModuleForm button{
+    width:100%;
+    height:48px;
+  }
+
+  .premiumRegister .verifyModuleFoot{
+    padding-top:14px;
+    flex-direction:column;
+    gap:8px;
+  }
+
+  .premiumManufacturer{
+    padding-top:72px;
+    padding-bottom:76px;
+  }
+
+  .premiumManufacturerGrid>div:last-child{
+    width:100%;
+    min-width:0;
+    padding-top:28px;
+  }
+
+  .premiumManufacturerGrid>div:last-child p{
+    max-width:none;
+    font-size:12px;
+    line-height:1.72;
+  }
+}
+
+@media(max-width:480px){
+  .premiumRegister h2,
+  .premiumManufacturer h2{
+    font-size:40px;
+  }
+
+  .premiumRegister .verifyModuleForm input{
+    font-size:16px;
+  }
+}
