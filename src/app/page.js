@@ -101,20 +101,19 @@ export default function Home() {
           </div>
 
           <div className="sealApplicationGrid compactApplicationGrid">
-            <article className="sealApplicationCard applicationPackage">
-              <div className="applicationStage applicationStagePhoto">
-                <img className="applicationPhoto" src="https://images.unsplash.com/photo-1771523350488-32af5ba560e6?auto=format&fit=crop&w=1400&q=82" alt="" aria-hidden="true" />
-                <div className="applicationPhotoShade"></div>
-                <div className="mockPackage">
-                  <span className="mockBrand">PRODUKT</span>
-                  <span className="mockDescriptor">BEISPIELANWENDUNG</span>
-                  <div className="mockSealLockup">
-                    <img src={assetBase + '/brand/made-by-humans-seal.png'} alt="" aria-hidden="true" />
-                    <span>Von Menschen gemacht.<br />Vor Ort geprüft.</span>
-                  </div>
-                </div>
+            <article className="sealApplicationCard applicationPackage realApplicationCard">
+              <div className="applicationStage applicationStagePhoto realApplicationStage">
+                <img
+                  className="applicationPhoto realApplicationPhoto"
+                  src={assetBase + '/brand/IMG_1047.png'}
+                  alt="Beispielhafte Made by Humans Kennzeichnung an einem textilen Produkt mit Verpackung"
+                  loading="lazy"
+                />
               </div>
-              <div className="applicationCopy"><strong>Verpackung & Produkt</strong><p>Der Nachweis wird dort sichtbar, wo das Produkt erlebt und gekauft wird.</p></div>
+              <div className="applicationCopy">
+                <strong>Verpackung & Produkt</strong>
+                <p>Das Zertifizierungszeichen kann dezent am Produkt und auf der Verpackung eingesetzt werden.</p>
+              </div>
             </article>
 
             <article className="sealApplicationCard applicationDigital">
