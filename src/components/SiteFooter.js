@@ -1,53 +1,39 @@
 import Link from 'next/link';
 
 export default function SiteFooter() {
-  const assetBase = process.env.GITHUB_PAGES === 'true' ? '/human-certification-web' : '';
-
   return (
-    <footer className="siteFooter">
-      <div className="shell footerMain">
-        <div className="footerBrand">
-          <img
-            className="footerSealTemporary"
-            src={assetBase + '/brand/made-by-humans-seal.png'}
-            alt=""
-            aria-hidden="true"
-            width="46"
-            height="46"
-          />
-          <div>
-            <strong>MADE BY HUMANS</strong>
-            <span>Standard für menschliche Herstellung</span>
-          </div>
+    <footer className="siteFooter premiumFooter">
+      <div className="shell premiumFooterTop">
+        <div className="premiumFooterBrand">
+          <strong>MADE BY HUMANS</strong>
+          <p>Standard für nachweisbar menschliche Herstellung.</p>
         </div>
 
-        <div className="footerNav">
+        <nav className="premiumFooterNav" aria-label="Footer Navigation">
           <div>
-            <strong>STANDARD</strong>
+            <span>STANDARD</span>
             <Link href="/standard">Kriterien</Link>
-            <Link href="/dokumente">Dokumentenregister</Link>
-          </div>
-          <div>
-            <strong>ORGANISATION</strong>
-            <Link href="/ueber-uns">Über Made by Humans</Link>
-            <Link href="/transparenz">Transparenz & Governance</Link>
+            <Link href="/dokumente">Dokumente</Link>
             <Link href="/markennutzung">Markennutzung</Link>
-            <Link href="/verfahren">Beschwerden & Einsprüche</Link>
           </div>
           <div>
-            <strong>HERSTELLER</strong>
+            <span>VERIFIZIERUNG</span>
+            <Link href="/register">Public Register</Link>
+            <Link href="/pruefen">Zertifizierungs-ID prüfen</Link>
             <Link href="/fuer-hersteller">Für Hersteller</Link>
           </div>
           <div>
-            <strong>VERIFIZIERUNG</strong>
-            <Link href="/register">Public Register</Link>
-            <Link href="/pruefen">Zertifizierungs-ID prüfen</Link>
+            <span>ORGANISATION</span>
+            <Link href="/ueber-uns">Über Made by Humans</Link>
+            <Link href="/transparenz">Transparenz & Governance</Link>
+            <Link href="/verfahren">Beschwerden & Einsprüche</Link>
           </div>
-        </div>
+        </nav>
       </div>
 
-      <div className="shell footerMeta">
+      <div className="shell premiumFooterBottom">
         <span>STANDARD · AUDIT · TRACEABILITY · PUBLIC REGISTER</span>
+        <span>Made by Humans</span>
       </div>
     </footer>
   );
