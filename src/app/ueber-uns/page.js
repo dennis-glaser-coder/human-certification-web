@@ -13,7 +13,7 @@ const principles = [
   ['Enger Prüfgegenstand', 'Bewertet wird die definierte Eigenschaft menschlich geprägter Herstellung – nicht pauschal die Qualität oder Moral eines Unternehmens.'],
   ['Öffentliche Verifizierung', 'Eine Kennzeichnung soll über eine eindeutige ID mit einem öffentlichen Zertifizierungsdatensatz verbunden sein.'],
   ['Versionierter Standard', 'Zertifizierungsentscheidungen sollen immer auf eine eindeutig bezeichnete Standardfassung zurückgeführt werden können.'],
-  ['Nachvollziehbare Zuständigkeiten', 'Prüfung, Review, Zertifizierungsentscheidung und Markennutzung sollen mit klaren Rollen dokumentiert werden.'],
+  ['Nachvollziehbare Zuständigkeiten', 'Prüfung, fachliche Kontrolle, Zertifizierungsentscheidung und Markennutzung sollen mit klaren Rollen dokumentiert werden.'],
 ];
 
 export default function AboutPage() {
@@ -38,7 +38,7 @@ export default function AboutPage() {
           </div>
           <div>
             <p>
-              Begriffe wie handgefertigt, handmade oder menschlich gefertigt werden heute unterschiedlich verwendet.
+              Begriffe wie handgefertigt oder menschlich gefertigt werden heute unterschiedlich verwendet.
               Made by Humans soll deshalb nicht bewerten, ob eine Formulierung sympathisch klingt, sondern ob die zugrunde liegende
               Herstellungsrealität anhand definierter Kriterien und Nachweise überprüft werden kann.
             </p>
@@ -73,11 +73,11 @@ export default function AboutPage() {
           <div>
             <p>
               Eine öffentliche kommerzielle Zertifikatsvergabe ist noch nicht gestartet.
-              Vor dem Start werden Rechtsrahmen, Governance-Struktur, Markennutzungsregeln und Prüfverantwortlichkeiten final festgelegt und veröffentlicht.
+              Vor dem Start werden Rechtsrahmen, Organisations- und Integritätsstruktur, Markennutzungsregeln und Prüfverantwortlichkeiten final festgelegt und veröffentlicht.
             </p>
             <div className="aboutStatusLinks">
               <Link className="textLink lightTextLink" href="/dokumente">Dokumente ansehen →</Link>
-              <Link className="textLink lightTextLink" href="/transparenz">Transparenz & Governance →</Link>
+              <Link className="textLink lightTextLink" href="/transparenz">Transparenz & Integrität →</Link>
             </div>
           </div>
         </div>
