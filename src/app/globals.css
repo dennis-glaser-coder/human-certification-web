@@ -8995,3 +8995,18 @@ textarea:focus-visible{
     border-right:0;
   }
 }
+
+
+/* ===== Final mobile hero stacking correction 2026-09-05 ===== */
+.manufacturerHeroArtVisual::after{z-index:1;}
+.manufacturerHeroCredential{z-index:2;}
+
+@media(max-width:760px){
+  .desireHeroCopy,
+  .whyHeroCopy,
+  .manufacturerHeroArtCopy{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+  }
+}
