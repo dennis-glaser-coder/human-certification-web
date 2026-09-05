@@ -14,6 +14,7 @@ export default function SiteHeader() {
 
         <nav className="mainNav premiumMainNav" aria-label="Hauptnavigation">
           <Link href="/standard">Standard</Link>
+          <Link href="/warum-made-by-humans">Warum?</Link>
           <Link href="/fuer-hersteller">Für Hersteller</Link>
           <Link href="/register">Register</Link>
           <Link href="/dokumente">Dokumente</Link>
