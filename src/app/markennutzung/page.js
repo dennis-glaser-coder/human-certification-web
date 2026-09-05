@@ -27,23 +27,12 @@ export default function MarkUsePage() {
         <div className="eyebrow">MARKENNUTZUNG · MBH-MARK-0.1</div>
         <h1>Grundsätze zur Nutzung des Zertifizierungszeichens.</h1>
         <p className="lead">
-          Das Zeichen ist kein frei verwendbares Marketingelement. Seine Nutzung soll an einen definierten Zertifizierungsumfang,
+          Das Zeichen ist kein frei verwendbares Marketingelement. Seine Nutzung ist an einen definierten Zertifizierungsumfang,
           einen gültigen Status und einen öffentlichen Registereintrag gebunden sein.
         </p>
       </section>
 
-      <section className="statusPanel shell">
-        <div>
-          <span>DOKUMENTSTATUS</span>
-          <strong>Arbeitsgrundsätze · Version 0.1</strong>
-        </div>
-        <p>
-          Das aktuell verwendete Siegel ist vorläufig. Verbindliche Gestaltungsregeln zu Mindestgröße, Schutzraum,
-          Farbvarianten und finalen Dateien werden erst mit dem endgültigen Zertifizierungszeichen festgelegt.
-        </p>
-      </section>
-
-      <section className="shell markUseSection">
+            <section className="shell markUseSection">
         <div className="sectionIntro compact">
           <div>
             <div className="sectionNo">GRUNDREGELN</div>
@@ -64,7 +53,7 @@ export default function MarkUsePage() {
               <h2>Produkt, Verpackung und produktbezogene Kommunikation.</h2>
             </div>
             <p>
-              Die konkrete Freigabe soll sich immer auf den jeweiligen Zertifizierungsumfang beziehen.
+              Die konkrete Freigabe bezieht sich immer auf den jeweiligen Zertifizierungsumfang.
               Eine Nutzung auf allgemeinen Unternehmensmaterialien darf nicht zu einer weitergehenden Zertifizierungsaussage führen.
             </p>
           </div>
@@ -79,8 +68,7 @@ export default function MarkUsePage() {
 
       <section className="shell standardClose">
         <p>
-          Die Markennutzungsgrundsätze werden vor einer kommerziellen Zertifikatsvergabe in eine verbindliche Fassung überführt
-          und mit dem finalen Zertifizierungszeichen abgestimmt.
+          Die Markennutzungsgrundsätze werden versioniert geführt und mit dem jeweils freigegebenen Zertifizierungszeichen verknüpft.
         </p>
         <div className="standardCloseLinks">
           <Link className="textLink" href="/dokumente">Dokumentenregister →</Link>
