@@ -2734,3 +2734,137 @@ textarea:focus-visible{
     padding-top:38px;
   }
 }
+
+
+/* ===== Institutional content refinement 2026-09-05 ===== */
+.premiumHeroProof{
+  max-width:680px;
+  margin-top:30px;
+  padding-top:17px;
+  border-top:1px solid var(--stone);
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px 28px;
+}
+.premiumHeroProof span{
+  position:relative;
+  padding-left:13px;
+  color:var(--muted-soft);
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+}
+.premiumHeroProof span::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:50%;
+  width:4px;
+  height:4px;
+  margin-top:-2px;
+  border-radius:50%;
+  background:var(--blue);
+}
+
+.premiumProcess{
+  padding:106px 0 112px;
+  background:var(--white);
+  border-bottom:1px solid var(--stone);
+}
+.premiumProcessHead{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(320px,.72fr);
+  gap:110px;
+  align-items:end;
+  margin-bottom:58px;
+}
+.premiumProcessHead h2{
+  max-width:720px;
+  margin:0;
+  font-size:clamp(38px,4vw,56px);
+  line-height:1.06;
+  letter-spacing:-.038em;
+}
+.premiumProcessHead>p{
+  max-width:540px;
+  margin:0;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.76;
+}
+.premiumProcessSteps{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  border-top:1px solid var(--ink);
+}
+.premiumProcessSteps article{
+  min-height:208px;
+  padding:22px 20px 22px 0;
+  border-right:1px solid var(--stone);
+}
+.premiumProcessSteps article:not(:first-child){
+  padding-left:20px;
+}
+.premiumProcessSteps article:last-child{
+  border-right:0;
+}
+.premiumProcessSteps span{
+  display:block;
+  margin-bottom:36px;
+  color:var(--blue);
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.12em;
+}
+.premiumProcessSteps strong{
+  display:block;
+  margin-bottom:13px;
+  font-size:11px;
+}
+.premiumProcessSteps p{
+  margin:0;
+  color:var(--muted);
+  font-size:9px;
+  line-height:1.7;
+}
+
+@media(max-width:1020px){
+  .premiumProcessHead{
+    gap:64px;
+  }
+  .premiumProcessSteps{
+    grid-template-columns:repeat(3,1fr);
+  }
+  .premiumProcessSteps article{
+    border-bottom:1px solid var(--stone);
+  }
+}
+
+@media(max-width:760px){
+  .premiumHeroProof{
+    margin-top:24px;
+    gap:10px 18px;
+  }
+  .premiumProcess{
+    padding:64px 0 68px;
+  }
+  .premiumProcessHead{
+    grid-template-columns:1fr;
+    gap:24px;
+    margin-bottom:38px;
+  }
+  .premiumProcessSteps{
+    grid-template-columns:1fr;
+  }
+  .premiumProcessSteps article,
+  .premiumProcessSteps article:not(:first-child){
+    min-height:0;
+    padding:18px 0;
+    border-right:0;
+    border-bottom:1px solid var(--stone);
+  }
+  .premiumProcessSteps span{
+    margin-bottom:13px;
+  }
+}
