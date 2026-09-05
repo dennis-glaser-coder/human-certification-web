@@ -2,7 +2,7 @@ export const dynamic = 'force-static';
 
 import { canonical } from '../lib/seo';
 
-const lastModified = new Date('2026-09-05');
+const lastModified = new Date();
 
 export default function sitemap() {
   return [
