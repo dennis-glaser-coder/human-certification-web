@@ -48,7 +48,27 @@ const process = [
   ['Register & Markennutzung', 'Freigegebene Zertifizierungen erhalten eine ID, öffentlichen Status und klar geregelte Zeichennutzung.'],
 ];
 
+const markUseBenefits = [
+  ['Zertifizierungszeichen', 'Kennzeichnung für den freigegebenen Produktumfang.'],
+  ['QR & Registerlink', 'Direkte Verbindung zum öffentlichen Zertifizierungsdatensatz.'],
+  ['Verpackungsanwendung', 'Klare Verbindung aus Zeichen, Produktaussage und Verifizierung.'],
+  ['Digitales Badge', 'Für Produktseiten, Kataloge und digitale Verkaufsunterlagen.'],
+  ['Zulässige Formulierungen', 'Konsistente Kommunikation ohne Erweiterung auf ungeprüfte Eigenschaften.'],
+  ['B2B-Nachweis', 'Verweis auf Produktumfang, Status und angewendete Standardfassung.'],
+];
+
+const manufacturerFaq = [
+  ['Dürfen Maschinen eingesetzt werden?', 'Ja. Maschinen können menschliche Arbeit unterstützen. Entscheidend ist, ob die wesentlichen produktprägenden Herstellungsschritte weiterhin tatsächlich durch Menschen ausgeführt werden.'],
+  ['Können mehrere Produktvarianten gemeinsam zertifiziert werden?', 'Vergleichbare Varianten können als Produktfamilie zusammengefasst werden, wenn Herstellungsprozess und relevanter Zertifizierungsumfang ausreichend übereinstimmen.'],
+  ['Was passiert bei mehreren Produktionsstandorten?', 'Alle für den Zertifizierungsumfang relevanten Produktionsstandorte werden erfasst und in die Prüfung einbezogen.'],
+  ['Ist Fremdfertigung grundsätzlich ausgeschlossen?', 'Nein. Relevante Fremdfertigung muss offengelegt, dem Produkt eindeutig zugeordnet und in den Zertifizierungsumfang einbezogen werden.'],
+  ['Welche Unterlagen werden benötigt?', 'Erforderlich sind geeignete Informationen zur tatsächlichen Herstellung, zu Standorten, Fremdfertigung und den wesentlichen Prozessschritten. Welche Nachweise im Einzelfall sinnvoll sind, wird in der Vorbereitung eingegrenzt.'],
+  ['Was passiert bei Änderungen an Produkt oder Produktion?', 'Wesentliche Änderungen am Prozess, an relevanten Standorten oder an Fremdfertigung können eine erneute Bewertung des Zertifizierungsumfangs erforderlich machen.'],
+  ['Wie wird der konkrete Auditaufwand festgelegt?', 'Der Umfang ergibt sich aus Produkt, Herstellungsprozess, Produktionsstandorten und relevanter Fremdfertigung. Diese Punkte werden vor dem Vor-Ort-Audit fachlich abgegrenzt.'],
+];
+
 export default function ManufacturerPage() {
+  const assetBase = process.env.GITHUB_PAGES === 'true' ? '/human-certification-web' : '';
   const [form, setForm] = useState(initialForm);
   const [state, setState] = useState({ loading: false, success: false, message: '' });
 
@@ -111,10 +131,10 @@ export default function ManufacturerPage() {
 
       <section className="pageHero shell manufacturerHero">
         <div className="eyebrow">ZERTIFIZIERUNG FÜR HERSTELLER</div>
-        <h1>Menschliche Herstellung nachvollziehbar zertifizieren.</h1>
+        <h1>Ihr Produkt. Ihre Herstellung. Nachvollziehbar zertifiziert.</h1>
         <p className="lead">
-          Made by Humans prüft ein konkret abgegrenztes physisches Produkt und den zugehörigen Herstellungsprozess
-          anhand definierter Kriterien, dokumentierter Nachweise und eines Vor-Ort-Audits beim Hersteller.
+          Made by Humans macht menschliche Herstellung sichtbar und überprüfbar: mit klar abgegrenztem Produktumfang,
+          Vor-Ort-Audit beim Hersteller, dokumentierter Entscheidung und öffentlicher Verifizierung.
         </p>
         <div className="manufacturerHeroActions">
           <a className="button primary" href="#zertifizierungsanfrage">Zertifizierung anfragen</a>
@@ -231,6 +251,63 @@ export default function ManufacturerPage() {
                 <strong>{title}</strong>
                 <p>{copy}</p>
               </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      <section className="manufacturerMarkValue">
+        <div className="shell">
+          <div className="sectionIntro compact">
+            <div>
+              <div className="sectionNo">NACH POSITIVER ZERTIFIZIERUNG</div>
+              <h2>Mehr als ein Zertifikat: ein nutzbarer Nachweis für Produkt und Vertrieb.</h2>
+            </div>
+            <p>
+              Die Markennutzung verbindet den geprüften Produktumfang mit klaren Anwendungen für Verpackung,
+              Produktseite, Handel und B2B-Kommunikation. Jede Nutzung bleibt an die gültige Zertifizierung gebunden.
+            </p>
+          </div>
+
+          <div className="manufacturerMarkGrid">
+            {markUseBenefits.map(([title, copy]) => (
+              <article key={title}>
+                <strong>{title}</strong>
+                <p>{copy}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="manufacturerMarkPreview">
+            <div className="manufacturerMarkPreviewSeal">
+              <img src={assetBase + '/brand/made-by-humans-seal.png'} alt="Made by Humans Zertifizierungszeichen" />
+            </div>
+            <div>
+              <span>MADE BY HUMANS MARKENNUTZUNG</span>
+              <strong>Von Menschen gemacht. Vor Ort geprüft. Öffentlich verifizierbar.</strong>
+              <p>Das Zeichen ergänzt die Herstellermarke – es ersetzt sie nicht.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="manufacturerFaq">
+        <div className="shell manufacturerFaqGrid">
+          <div>
+            <div className="sectionNo">VOR DER ANFRAGE</div>
+            <h2>Was Hersteller vor einer Zertifizierung wissen sollten.</h2>
+            <p>
+              Die konkrete Prüfung hängt vom Produkt und Herstellungsprozess ab. Diese Punkte beantworten
+              die häufigsten Fragen zur grundsätzlichen Einordnung.
+            </p>
+          </div>
+          <div className="manufacturerFaqList">
+            {manufacturerFaq.map(([question, answer]) => (
+              <details key={question}>
+                <summary>{question}</summary>
+                <p>{answer}</p>
+              </details>
             ))}
           </div>
         </div>
