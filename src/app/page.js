@@ -1,240 +1,141 @@
 import Link from 'next/link';
 import SiteHeader from '../components/SiteHeader';
 import SiteFooter from '../components/SiteFooter';
-import HeroVerify from '../components/HeroVerify';
 
-const system = [
-  ['STANDARD', 'definiert die Anforderungen an die zertifizierte Eigenschaft.'],
-  ['AUDIT', 'prüft Herstellungsprozess und Nachweise gegen den Standard.'],
-  ['TRACEABILITY', 'ordnet relevante Produktionsschritte, Standorte und Fremdfertigung zu.'],
-  ['PUBLIC REGISTER', 'verknüpft Kennzeichnung, Zertifizierungs-ID und öffentlichen Status.'],
+const principles = [
+  {
+    title: 'Produktbezogen',
+    text: 'Geprüft wird ein konkret definiertes physisches Produkt oder eine klar abgegrenzte Produktfamilie.'
+  },
+  {
+    title: 'Herstellungsbezogen',
+    text: 'Im Mittelpunkt stehen die wesentlichen Arbeitsschritte, durch die das verkaufsfertige Produkt entsteht.'
+  },
+  {
+    title: 'Nachweisbar',
+    text: 'Herstellungsorte, relevante Fremdfertigung und geeignete Nachweise müssen nachvollziehbar zugeordnet werden können.'
+  }
 ];
-
-const scope = [
-  ['Produktbezug', 'Die Zertifizierung bezieht sich auf ein definiertes physisches Produkt oder eine klar abgegrenzte Produktfamilie.'],
-  ['Herstellungsbezug', 'Geprüft werden die wesentlichen Schritte, durch die aus Materialien und Komponenten das Endprodukt entsteht.'],
-  ['Nachweisbarkeit', 'Die Angaben zum Herstellungsprozess müssen durch geeignete Unterlagen und Informationen nachvollziehbar belegt werden.'],
-];
-
-const focus = [
-  'Taschen & Lederwaren',
-  'Schmuck',
-  'Möbel & Holz',
-  'Keramik & Glas',
-  'Mode & Textil',
-  'Wohnaccessoires',
-];
-
-function QrMock() {
-  return (
-    <svg className="qrMock" viewBox="0 0 76 76" aria-label="QR-Code Muster" role="img">
-      <rect width="76" height="76" fill="white" />
-      <g fill="currentColor">
-        <path d="M4 4h22v22H4zM8 8v14h14V8zM12 12h6v6h-6z" fillRule="evenodd"/>
-        <path d="M50 4h22v22H50zM54 8v14h14V8zM58 12h6v6h-6z" fillRule="evenodd"/>
-        <path d="M4 50h22v22H4zM8 54v14h14V54zM12 58h6v6h-6z" fillRule="evenodd"/>
-        <rect x="32" y="4" width="6" height="6"/><rect x="40" y="4" width="6" height="6"/>
-        <rect x="32" y="12" width="6" height="14"/><rect x="40" y="18" width="6" height="8"/>
-        <rect x="28" y="30" width="8" height="8"/><rect x="40" y="30" width="8" height="8"/>
-        <rect x="52" y="30" width="8" height="8"/><rect x="64" y="30" width="8" height="8"/>
-        <rect x="30" y="42" width="8" height="8"/><rect x="42" y="42" width="8" height="8"/>
-        <rect x="54" y="42" width="18" height="6"/><rect x="30" y="54" width="6" height="18"/>
-        <rect x="40" y="54" width="8" height="8"/><rect x="52" y="52" width="8" height="8"/>
-        <rect x="64" y="52" width="8" height="20"/><rect x="42" y="66" width="18" height="6"/>
-      </g>
-    </svg>
-  );
-}
 
 export default function Home() {
-  const assetBase = process.env.GITHUB_PAGES === 'true' ? '/human-certification-web' : '';
-
   return (
-    <main>
+    <main className="resetHome">
       <SiteHeader />
 
-      <section className="homeHero">
-        <div className="shell homeHeroGrid">
-          <div className="homeHeroCopy">
-            <div className="eyebrow">STANDARD FÜR MENSCHLICHE HERSTELLUNG</div>
-            <h1>Menschliche Herstellung. Nachweisbar am Produkt.</h1>
-            <p className="lead">
-              Made by Humans prüft, ob die wesentlichen Herstellungsschritte eines physischen Produkts tatsächlich
-              durch Menschen ausgeführt werden. Eine eindeutige ID verbindet das Zeichen mit dem öffentlichen Register.
-            </p>
-            <div className="actions">
-              <Link className="button primary" href="/standard">Standard ansehen</Link>
-              <Link className="button secondary" href="/fuer-hersteller">Produkt vorstellen</Link>
-            </div>
-          </div>
-
-          <aside className="productMarkPreview">
-            <div className="productMarkKicker">KENNZEICHNUNG · MUSTER</div>
-            <div className="productMarkMain">
-              <img
-                className="heroSeal"
-                src={assetBase + '/brand/made-by-humans-seal.png'}
-                alt="Made by Humans Zertifizierungszeichen"
-                width="176"
-                height="176"
-              />
-              <div className="productMarkCopy">
-                <span>ZERTIFIZIERTE AUSSAGE</span>
-                <blockquote>
-                  Dieses Produkt wurde in seinen wesentlichen Herstellungsschritten nachweislich durch Menschen gefertigt.
-                </blockquote>
-              </div>
-            </div>
-            <div className="productMarkVerify">
-              <div>
-                <small>ZERTIFIZIERUNGS-ID</small>
-                <strong>MBH-XXXX-XXXX</strong>
-                <span>Öffentlichen Nachweis prüfen</span>
-              </div>
-              <QrMock />
-            </div>
-            <div className="productMarkNote">Beispielhafte Darstellung · kein Zertifikat</div>
-          </aside>
-        </div>
-      </section>
-
-      <section className="systemBand">
-        <div className="shell systemBandGrid">
-          {system.map(([term, copy]) => (
-            <article key={term}>
-              <strong>{term}</strong>
-              <p>{copy}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="documentarySection">
-        <div className="shell documentaryIntro">
-          <div>
-            <div className="sectionNo">TATSÄCHLICHE HERSTELLUNG</div>
-            <h2>Geprüft wird der reale Produktionsprozess.</h2>
-          </div>
-          <p>
-            Entscheidend ist, welche Arbeitsschritte für die Entstehung des Produkts wesentlich sind,
-            wo sie stattfinden und wie sie tatsächlich ausgeführt werden.
+      <section className="resetHero">
+        <div className="shell resetHeroInner">
+          <p className="resetOverline">MADE BY HUMANS</p>
+          <h1>Standard für nachweisbar menschliche Herstellung.</h1>
+          <p className="resetLead">
+            Made by Humans definiert, wann die wesentlichen Herstellungsschritte eines physischen Produkts
+            tatsächlich durch Menschen ausgeführt werden und wie diese Eigenschaft geprüft werden kann.
           </p>
-        </div>
 
-        <div className="shell documentaryGrid">
-          <figure className="documentaryFigure documentaryWide">
-            <img
-              src="https://images.unsplash.com/photo-1772442126046-29faff1ad234?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=80&w=1800"
-              alt="Goldschmiedin arbeitet an einem Schmuckstück am Werktisch"
-              loading="lazy"
-            />
-            <figcaption>
-              Schmuckfertigung am Werktisch · Foto: Johanna / Unsplash · keine Aussage über einen Zertifizierungsstatus
-            </figcaption>
-          </figure>
-
-          <figure className="documentaryFigure">
-            <img
-              src="https://images.unsplash.com/photo-1773511237767-0e324389922a?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=80&w=1400"
-              alt="Hände führen Stoff an einer Nähmaschine"
-              loading="lazy"
-            />
-            <figcaption>
-              Textile Fertigung an der Nähmaschine · Foto: Phil Hearing / Unsplash · keine Aussage über einen Zertifizierungsstatus
-            </figcaption>
-          </figure>
+          <div className="resetPrimaryLinks">
+            <Link href="/standard">Standard lesen</Link>
+            <Link href="/fuer-hersteller">Für Hersteller</Link>
+            <Link href="/pruefen">Zertifizierungs-ID prüfen</Link>
+          </div>
         </div>
       </section>
 
-      <section className="homeSection shell">
-        <div className="sectionIntro">
+      <section className="resetStatement">
+        <div className="shell resetStatementGrid">
+          <p className="resetSectionLabel">AUSSAGE</p>
           <div>
-            <div className="sectionNo">WAS GEPRÜFT WIRD</div>
-            <h2>Eine klar abgegrenzte Eigenschaft des Produkts.</h2>
+            <p className="resetQuote">
+              „Dieses Produkt wurde in seinen wesentlichen Herstellungsschritten
+              nachweislich durch Menschen gefertigt.“
+            </p>
+            <p className="resetSmall">
+              Das ist die Aussage, die Made by Humans für ein geprüftes Produkt eindeutig und überprüfbar machen soll.
+            </p>
           </div>
-          <p>
-            Die Kennzeichnung ist keine allgemeine Aussage über das Unternehmen.
-            Sie bezieht sich auf die tatsächliche Herstellung des geprüften Produkts.
-          </p>
         </div>
-
-        <div className="scopeGrid">
-          {scope.map(([title, copy]) => (
-            <article key={title}>
-              <h3>{title}</h3>
-              <p>{copy}</p>
-            </article>
-          ))}
-        </div>
-
-        <Link className="textLink sectionLink" href="/standard">Kriterien und Abgrenzungen ansehen →</Link>
       </section>
 
-      <section className="proofSection">
-        <div className="shell proofGrid">
-          <div className="proofCopy">
-            <div className="sectionNo light">PUBLIC REGISTER</div>
-            <h2>Jede Kennzeichnung muss öffentlich verifizierbar sein.</h2>
+      <section className="resetSection">
+        <div className="shell resetTwoColumn">
+          <div>
+            <p className="resetSectionLabel">WORUM ES GEHT</p>
+            <h2>Eine enge Aussage statt eines allgemeinen Qualitätssiegels.</h2>
+          </div>
+          <div className="resetBody">
             <p>
-              Der Registereintrag ordnet die Zertifizierungs-ID einem Hersteller, einem Produkt,
-              der angewendeten Standardfassung und dem aktuellen Status zu.
+              Made by Humans bewertet nicht pauschal ein Unternehmen und macht keine Aussage zu Herkunft,
+              Nachhaltigkeit, Bio- oder Fairtrade-Eigenschaften.
             </p>
-            <HeroVerify />
+            <p>
+              Geprüft wird ausschließlich, ob menschliche Arbeit für die tatsächliche Herstellung
+              des definierten Endprodukts wesentlich ist und diese Herstellungsrealität ausreichend belegt werden kann.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="resetSection resetSectionWhite">
+        <div className="shell">
+          <div className="resetSectionHead">
+            <p className="resetSectionLabel">GRUNDLAGE DER PRÜFUNG</p>
+            <h2>Was der Standard festlegt.</h2>
           </div>
 
-          <article className="recordPreview">
-            <div className="recordPreviewHead">
-              <span>REGISTERSTRUKTUR</span>
-              <span className="statusBadge demo">MUSTER</span>
+          <div className="resetPrinciples">
+            {principles.map((item) => (
+              <div className="resetPrincipleRow" key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </div>
+            ))}
+          </div>
+
+          <Link className="resetTextLink" href="/standard">Kriterien und Abgrenzungen ansehen</Link>
+        </div>
+      </section>
+
+      <section className="resetRegister">
+        <div className="shell resetRegisterGrid">
+          <div>
+            <p className="resetSectionLabel resetSectionLabelLight">PUBLIC REGISTER</p>
+            <h2>Eine Kennzeichnung muss überprüfbar bleiben.</h2>
+          </div>
+          <div>
+            <p>
+              Ein öffentlicher Registereintrag soll die Zertifizierungs-ID dem Hersteller,
+              dem geprüften Produkt, der angewendeten Standardfassung und dem aktuellen Status zuordnen.
+            </p>
+            <div className="resetRegisterLinks">
+              <Link href="/register">Public Register</Link>
+              <Link href="/pruefen">ID prüfen</Link>
             </div>
-            <div className="recordPreviewId">MBH-XXXX-XXXX</div>
-            <dl>
-              <div><dt>Hersteller</dt><dd>Name des Herstellers</dd></div>
-              <div><dt>Produkt</dt><dd>Produkt / Produktfamilie</dd></div>
-              <div><dt>Standard</dt><dd>angewendete Version</dd></div>
-              <div><dt>Status</dt><dd>aktuell öffentlich ausgewiesen</dd></div>
-            </dl>
-            <span className="recordPreviewNote">Schematische Darstellung · kein Zertifikat</span>
-          </article>
+          </div>
         </div>
       </section>
 
-      <section className="manufacturerSection shell">
-        <div className="manufacturerGrid">
+      <section className="resetSection">
+        <div className="shell resetTwoColumn">
           <div>
-            <div className="sectionNo">FÜR HERSTELLER</div>
-            <h2>Menschliche Herstellung überprüfbar am Produkt ausweisen.</h2>
-            <p>
-              Das System ist darauf ausgelegt, eine erfolgreiche Prüfung mit Produktkennzeichnung,
-              eindeutiger ID und öffentlichem Nachweis zu verbinden.
-            </p>
-            <Link className="button primary" href="/fuer-hersteller">Produkt vorstellen</Link>
+            <p className="resetSectionLabel">FÜR HERSTELLER</p>
+            <h2>Produktionsprozesse zur Validierung vorstellen.</h2>
           </div>
-
-          <div className="focusList">
-            <span className="focusLabel">STARTFOKUS</span>
-            {focus.map((item) => <span className="focusItem" key={item}>{item}</span>)}
+          <div className="resetBody">
+            <p>
+              Für die aktuelle Validierung werden physische Produkte gesucht, deren wesentliche
+              Herstellungsschritte klar beschrieben und praktisch geprüft werden können.
+            </p>
+            <p>
+              Eine Vorstellung ist unverbindlich und noch kein Zertifizierungsantrag.
+            </p>
+            <Link className="resetTextLink" href="/fuer-hersteller">Produkt vorstellen</Link>
           </div>
         </div>
       </section>
 
-      <section className="institutionalSection">
-        <div className="shell institutionalGrid">
-          <Link href="/dokumente">
-            <span>DOKUMENTE</span>
-            <strong>Standardversionen und öffentliche Arbeitsfassungen</strong>
-            <small>Dokumentation öffnen →</small>
-          </Link>
-          <Link href="/transparenz">
-            <span>TRANSPARENZ</span>
-            <strong>Prüfrollen, Statusverwaltung und Markennutzung</strong>
-            <small>Governance ansehen →</small>
-          </Link>
-          <Link href="/ueber-uns">
-            <span>ÜBER MADE BY HUMANS</span>
-            <strong>Zweck, Abgrenzung und aktueller Entwicklungsstand</strong>
-            <small>Mehr erfahren →</small>
-          </Link>
+      <section className="resetLinks">
+        <div className="shell resetLinksInner">
+          <Link href="/dokumente">Dokumente</Link>
+          <Link href="/transparenz">Transparenz & Governance</Link>
+          <Link href="/ueber-uns">Über Made by Humans</Link>
         </div>
       </section>
 
