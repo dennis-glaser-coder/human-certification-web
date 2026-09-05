@@ -92,6 +92,29 @@ export default function Home() {
         </div>
       </section>
 
+
+      <section className="premiumEditorial" aria-label="Menschliche Arbeit im Herstellungsprozess">
+        <div className="shell premiumEditorialGrid">
+          <figure className="premiumEditorialImage">
+            <img
+              src="https://images.unsplash.com/photo-1774282557812-6182cc59f638?auto=format&fit=crop&w=1800&q=84"
+              alt="Facharbeiter bei der manuellen Metallbearbeitung in einer Werkstatt"
+              loading="lazy"
+            />
+            <figcaption>Produktionsaufnahme · Maksim Shiriagin / Unsplash</figcaption>
+          </figure>
+          <div className="premiumEditorialCopy">
+            <p className="premiumSectionLabel">MENSCHLICHE ARBEIT IM PROZESS</p>
+            <h2>Nicht „handgemacht“ als Stil. Sondern menschliche Herstellung als überprüfbare Tatsache.</h2>
+            <p>
+              Entscheidend ist nicht, ob ein Produkt handwerklich aussieht. Entscheidend ist,
+              welche wesentlichen Herstellungsschritte tatsächlich durch Menschen ausgeführt werden
+              und ob sich diese Arbeit nachvollziehbar belegen lässt.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="premiumStandard">
         <div className="shell premiumStandardGrid">
           <div className="premiumStandardIntro">
