@@ -5,18 +5,18 @@ import SiteFooter from '../../components/SiteFooter';
 const principles = [
   ['Standardversionen', 'Jede Zertifizierung soll eindeutig auf die zugrunde liegende Standardfassung verweisen. Änderungen am Regelwerk bleiben dadurch zeitlich nachvollziehbar.'],
   ['Prüfnachweise', 'Die Bewertung eines Produkts soll auf dokumentierten Informationen und nachvollziehbaren Prüfunterlagen beruhen.'],
-  ['Review und Entscheidung', 'Prüfung, fachliches Review und Zertifizierungsentscheidung sollen mit klaren Zuständigkeiten dokumentiert werden.'],
+  ['Fachprüfung und Entscheidung', 'Prüfung, fachliche Kontrolle und Zertifizierungsentscheidung sollen mit klaren Zuständigkeiten dokumentiert werden.'],
   ['Statusänderungen', 'Aktiv, ausgesetzt, abgelaufen oder widerrufen: Änderungen am Zertifizierungsstatus sollen im öffentlichen Register nachvollziehbar bleiben.'],
   ['Markennutzung', 'Die Nutzung des Zeichens soll an Zertifizierungsumfang, Status und öffentliche Verifizierbarkeit gebunden sein.'],
   ['Beschwerden und Einsprüche', 'Beschwerden, Einsprüche gegen Entscheidungen und Zeichenmissbrauch werden als getrennte Verfahren dokumentiert.'],
 ];
 
 const roles = [
-  ['Scheme-Inhaber', 'verantwortet Standard, Marke, Register und die Regeln des Zertifizierungssystems.'],
+  ['Systeminhaber', 'verantwortet Standard, Marke, Register und die Regeln des Zertifizierungssystems.'],
   ['Prüfung', 'bewertet Herstellungsprozess und Nachweise gegen die festgelegten Anforderungen.'],
-  ['Review', 'prüft die fachliche Plausibilität und Vollständigkeit des dokumentierten Prüfergebnisses.'],
+  ['Fachprüfung', 'prüft die fachliche Plausibilität und Vollständigkeit des dokumentierten Prüfergebnisses.'],
   ['Zertifizierungsentscheidung', 'überführt das geprüfte Ergebnis in eine dokumentierte Entscheidung zum Zertifizierungsstatus.'],
-  ['Public Register', 'veröffentlicht die für Käufer und Geschäftspartner relevanten Zertifizierungsinformationen.'],
+  ['Öffentliches Register', 'veröffentlicht die für Käufer und Geschäftspartner relevanten Zertifizierungsinformationen.'],
 ];
 
 export default function TransparencyPage() {
@@ -25,7 +25,7 @@ export default function TransparencyPage() {
       <SiteHeader />
 
       <section className="pageHero shell">
-        <div className="eyebrow">TRANSPARENZ & GOVERNANCE</div>
+        <div className="eyebrow">TRANSPARENZ & INTEGRITÄT</div>
         <h1>Regeln für Standard, Prüfung und Markennutzung.</h1>
         <p className="lead">
           Die Glaubwürdigkeit der Kennzeichnung hängt nicht allein vom sichtbaren Zeichen ab,
@@ -35,12 +35,12 @@ export default function TransparencyPage() {
 
       <section className="statusPanel shell">
         <div>
-          <span>AKTUELLER PROJEKTSTATUS</span>
-          <strong>Standard und Registermodell in Validierung</strong>
+          <span>STATUS DES ZERTIFIZIERUNGSSYSTEMS</span>
+          <strong>Standard 0.1 und Registerstruktur im Aufbau</strong>
         </div>
         <p>
           Die öffentliche kommerzielle Zertifikatsvergabe ist noch nicht gestartet.
-          Rechtsrahmen, Governance-Struktur und endgültiger Prüfprozess werden vor dem Start festgelegt.
+          Dieser Status wird hier bewusst transparent ausgewiesen; Rechtsrahmen, Rollen und endgültiger Prüfprozess werden vor dem Start festgelegt.
         </p>
       </section>
 
@@ -66,12 +66,12 @@ export default function TransparencyPage() {
         <div className="shell">
           <div className="sectionIntro compact">
             <div>
-              <div className="sectionNo">ZIELSTRUKTUR</div>
-              <h2>Klare Rollen im Zertifizierungssystem.</h2>
+              <div className="sectionNo">VORGESEHENE ROLLENTRENNUNG</div>
+              <h2>Klare Verantwortlichkeiten im Zertifizierungssystem.</h2>
             </div>
             <p>
               Die endgültige rechtliche und organisatorische Ausgestaltung wird vor dem kommerziellen Start festgelegt.
-              Das System soll jedoch so aufgebaut sein, dass Standardverantwortung, Prüfung, Review und Entscheidung klar unterscheidbar sind.
+              Das System ist so konzipiert, dass Standardverantwortung, Prüfung, fachliche Kontrolle und Entscheidung klar unterscheidbar sind.
             </p>
           </div>
 
@@ -89,27 +89,27 @@ export default function TransparencyPage() {
       <section className="governanceDocuments">
         <div className="shell governanceDocumentsGrid">
           <Link href="/dokumente/certification-scheme-0-1">
-            <span>CERTIFICATION SCHEME</span>
-            <strong>Rollen, Review, Entscheidung und Statusverwaltung</strong>
-            <small>Scheme 0.1 öffnen →</small>
+            <span>ZERTIFIZIERUNGSSCHEMA</span>
+            <strong>Rollen, Fachprüfung, Entscheidung und Statusverwaltung</strong>
+            <small>Schema 0.1 öffnen →</small>
           </Link>
           <Link href="/markennutzung">
-            <span>MARK USE</span>
+            <span>MARKENNUTZUNG</span>
             <strong>Grundsätze zur Nutzung des Zertifizierungszeichens</strong>
             <small>Markennutzung öffnen →</small>
           </Link>
           <Link href="/verfahren">
-            <span>GOVERNANCE</span>
-            <strong>Beschwerden, Einsprüche und Zeichenmissbrauch</strong>
+            <span>BESCHWERDEN & EINSPRÜCHE</span>
+            <strong>Verfahren für Beschwerden, Einsprüche und Zeichenmissbrauch</strong>
             <small>Verfahren öffnen →</small>
           </Link>
         </div>
       </section>
 
       <section className="shell transparencyIntegrity">
-        <strong>Keine vorgetäuschte Unabhängigkeit</strong>
+        <strong>Unabhängigkeit nur dort behaupten, wo sie organisatorisch besteht.</strong>
         <p>
-          Die endgültige organisatorische und rechtliche Governance-Struktur ist noch nicht eingerichtet.
+          Die endgültige organisatorische und rechtliche Struktur ist noch nicht eingerichtet.
           Made by Humans behauptet deshalb derzeit weder Akkreditierung noch eine bereits bestehende unabhängige externe Entscheidungsinstanz.
         </p>
       </section>
