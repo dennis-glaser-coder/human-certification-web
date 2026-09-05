@@ -4,7 +4,7 @@ import { canonical, DEFAULT_DESCRIPTION, SITE_NAME, SITE_URL } from '../lib/seo'
 export const metadata = {
   metadataBase: new URL(SITE_URL + '/'),
   title: {
-    default: 'Made by Humans | Standard für menschlich gefertigte Produkte',
+    default: 'Made by Humans | Zertifizierung für menschliche Herstellung',
     template: '%s | Made by Humans',
   },
   description: DEFAULT_DESCRIPTION,
