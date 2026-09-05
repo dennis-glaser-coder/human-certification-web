@@ -33,6 +33,8 @@ const prohibited = [
 ];
 
 export default function MarkUsePage() {
+  const assetBase = process.env.GITHUB_PAGES === 'true' ? '/human-certification-web' : '';
+
   return (
     <main className="markUseInstitution">
       <SiteHeader />
@@ -53,6 +55,27 @@ export default function MarkUsePage() {
           <div><strong>Statusgebunden</strong><p>Nutzung nur bei gültigem Zertifizierungsstatus.</p></div>
           <div><strong>Registerbezug</strong><p>ID und öffentlicher Datensatz bleiben zugeordnet.</p></div>
           <div><strong>Aussageklarheit</strong><p>Keine Erweiterung um ungeprüfte Eigenschaften.</p></div>
+        </div>
+      </section>
+
+      <section className="markUseRealExample" aria-label="Beispielhafte Produktkennzeichnung">
+        <div className="shell markUseRealExampleGrid">
+          <figure>
+            <img
+              src={assetBase + '/brand/IMG_1037.png'}
+              alt="Beispielhafte Made by Humans Kennzeichnung an einem Lederprodukt"
+              loading="lazy"
+            />
+            <figcaption>Beispielhafte Produktkennzeichnung · Visualisierung der Markennutzung</figcaption>
+          </figure>
+          <div className="markUseRealExampleCopy">
+            <div className="sectionNo">AM PRODUKT</div>
+            <h2>Das Zeichen ergänzt die Produktmarke, ohne sie zu ersetzen.</h2>
+            <p>
+              Eine zurückhaltende Kennzeichnung kann den geprüften Produktbezug sichtbar machen,
+              während Produkt und Herstellermarke im Vordergrund bleiben.
+            </p>
+          </div>
         </div>
       </section>
 
