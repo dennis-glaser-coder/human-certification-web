@@ -15,7 +15,7 @@ const documents = [
     type: 'STANDARD',
     title: 'Arbeitsstandard 0.1',
     version: '0.1',
-    status: 'Arbeitsfassung · in Validierung',
+    status: 'Arbeitsfassung · in Erprobung',
     date: '04.09.2026',
     copy: 'Geltungsbereich, Prüfkriterien, Abgrenzungen, Nachweise und Entscheidungsregel für physische Produkte.',
     href: '/dokumente/standard-0-1',
@@ -23,28 +23,28 @@ const documents = [
   },
   {
     id: 'MBH-SCH-0.1',
-    type: 'CERTIFICATION SCHEME',
-    title: 'Certification Scheme 0.1',
+    type: 'ZERTIFIZIERUNGSSCHEMA',
+    title: 'Zertifizierungsschema 0.1',
     version: '0.1',
     status: 'Arbeitsfassung · Zielstruktur',
     date: '04.09.2026',
-    copy: 'Rollen, Prüfprozess, Review, Zertifizierungsentscheidung, Statusverwaltung, Register und Governance.',
+    copy: 'Rollen, Prüfprozess, fachliche Kontrolle, Zertifizierungsentscheidung, Statusverwaltung, Register und Verfahrensregeln.',
     href: '/dokumente/certification-scheme-0-1',
     pdf: '/documents/made-by-humans-certification-scheme-0-1.pdf',
   },
   {
     id: 'MBH-MARK-0.1',
-    type: 'MARK USE',
+    type: 'MARKENNUTZUNG',
     title: 'Grundsätze zur Markennutzung',
     version: '0.1',
     status: 'Arbeitsgrundsätze',
     date: '04.09.2026',
-    copy: 'Regeln für Scope, Kennzeichnung, Produktbezug, Statusänderungen und zulässige Kommunikation.',
+    copy: 'Regeln für Zertifizierungsumfang, Kennzeichnung, Produktbezug, Statusänderungen und zulässige Kommunikation.',
     href: '/markennutzung',
   },
   {
     id: 'MBH-GOV-0.1',
-    type: 'GOVERNANCE',
+    type: 'VERFAHRENSREGELN',
     title: 'Beschwerden, Einsprüche & Zeichenmissbrauch',
     version: '0.1',
     status: 'Verfahrensgrundsätze',
@@ -65,7 +65,7 @@ export default function DocumentsPage() {
         <div className="eyebrow">DOKUMENTENREGISTER</div>
         <h1>Versionierte Regeln statt unverbindlicher Aussagen.</h1>
         <p className="lead">
-          Standard, Certification Scheme, Markennutzungsregeln und Governance-Verfahren werden als kontrollierte Dokumente geführt.
+          Standard, Zertifizierungsschema, Markennutzungsregeln und Verfahrensregeln werden als kontrollierte Dokumente geführt.
           Jede Fassung erhält Dokument-ID, Version, Status und Datum.
         </p>
       </section>
