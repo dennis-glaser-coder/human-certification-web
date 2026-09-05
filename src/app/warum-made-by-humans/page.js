@@ -53,6 +53,7 @@ export default function WhyPage() {
         <div className="shell whyHeroGrid">
           <div className="whyHeroCopy">
             <p className="premiumEyebrow">WARUM MADE BY HUMANS?</p>
+            <div className="brandTrace" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
             <h1>Menschliche Herstellung ist ein Unterschied. Machen Sie ihn sichtbar.</h1>
             <p className="whyHeroLead">
               Wenn Menschen ein Produkt wesentlich prägen, sollte diese Leistung nicht in einer allgemeinen
