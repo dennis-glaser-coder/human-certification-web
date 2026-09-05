@@ -5,7 +5,7 @@ import { canonical } from '../../lib/seo';
 
 export const metadata = {
   title: 'Dokumentenregister',
-  description: 'Versionierte öffentliche Arbeitsfassungen und Regelwerke des Made by Humans Zertifizierungssystems.',
+  description: 'Versionierte öffentliche Regelwerke und kontrollierte Dokumente des Made by Humans Zertifizierungssystems.',
   alternates: { canonical: canonical('/dokumente') },
 };
 
@@ -13,9 +13,9 @@ const documents = [
   {
     id: 'MBH-STD-0.1',
     type: 'STANDARD',
-    title: 'Arbeitsstandard 0.1',
+    title: 'Standard 0.1',
     version: '0.1',
-    status: 'Arbeitsfassung · in Erprobung',
+    status: 'Veröffentlicht',
     date: '04.09.2026',
     copy: 'Geltungsbereich, Prüfkriterien, Abgrenzungen, Nachweise und Entscheidungsregel für physische Produkte.',
     href: '/dokumente/standard-0-1',
@@ -26,7 +26,7 @@ const documents = [
     type: 'ZERTIFIZIERUNGSSCHEMA',
     title: 'Zertifizierungsschema 0.1',
     version: '0.1',
-    status: 'Arbeitsfassung · Zielstruktur',
+    status: 'Veröffentlicht',
     date: '04.09.2026',
     copy: 'Rollen, Prüfprozess, fachliche Kontrolle, Zertifizierungsentscheidung, Statusverwaltung, Register und Verfahrensregeln.',
     href: '/dokumente/certification-scheme-0-1',
@@ -37,7 +37,7 @@ const documents = [
     type: 'MARKENNUTZUNG',
     title: 'Grundsätze zur Markennutzung',
     version: '0.1',
-    status: 'Arbeitsgrundsätze',
+    status: 'Veröffentlicht',
     date: '04.09.2026',
     copy: 'Regeln für Zertifizierungsumfang, Kennzeichnung, Produktbezug, Statusänderungen und zulässige Kommunikation.',
     href: '/markennutzung',
@@ -47,7 +47,7 @@ const documents = [
     type: 'VERFAHRENSREGELN',
     title: 'Beschwerden, Einsprüche & Zeichenmissbrauch',
     version: '0.1',
-    status: 'Verfahrensgrundsätze',
+    status: 'Veröffentlicht',
     date: '04.09.2026',
     copy: 'Getrennte Verfahrenslogik für Beschwerden, Einsprüche gegen Entscheidungen und unberechtigte Zeichennutzung.',
     href: '/verfahren',
@@ -99,12 +99,12 @@ export default function DocumentsPage() {
         <div className="shell versionPolicyGrid">
           <div>
             <div className="sectionNo">DOKUMENTENLENKUNG</div>
-            <h2>Alte Fassungen sollen nachvollziehbar bleiben.</h2>
+            <h2>Alte Fassungen bleiben nachvollziehbar.</h2>
           </div>
           <p>
             Änderungen werden mit Versionsnummer, Datum, Status und Änderungsgrund dokumentiert.
             Sobald eine Fassung ersetzt wird, bleibt sie als ersetzte Version referenzierbar.
-            Öffentliche Zertifizierungsdatensätze sollen auf die tatsächlich angewendete Standardversion verweisen.
+            Öffentliche Zertifizierungsdatensätze verweisen auf die tatsächlich angewendete Standardversion.
           </p>
         </div>
       </section>
