@@ -3903,3 +3903,336 @@ textarea:focus-visible{
     font-size:28px;
   }
 }
+
+
+/* ===== Verification authority pass 2026-09-05 ===== */
+.verifyPage{
+  padding-top:72px;
+  padding-bottom:96px;
+}
+.verifyPageIntro{
+  max-width:860px;
+}
+.verifyPageIntro h1{
+  margin:18px 0 22px;
+  font-size:clamp(52px,5vw,70px);
+  line-height:1;
+  letter-spacing:-.044em;
+}
+.verifyPageIntro p{
+  max-width:690px;
+  font-size:13px;
+  line-height:1.74;
+}
+
+.verifyTrustStrip{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  margin-top:44px;
+  border-top:1px solid var(--ink);
+  border-bottom:1px solid var(--stone);
+}
+.verifyTrustStrip>div{
+  min-height:126px;
+  padding:19px 22px 18px 0;
+  border-right:1px solid var(--stone);
+}
+.verifyTrustStrip>div:not(:first-child){
+  padding-left:22px;
+}
+.verifyTrustStrip>div:last-child{
+  border-right:0;
+}
+.verifyTrustStrip span{
+  display:block;
+  margin-bottom:23px;
+  color:var(--blue);
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:.13em;
+}
+.verifyTrustStrip strong{
+  display:block;
+  margin-bottom:8px;
+  font-size:10px;
+}
+.verifyTrustStrip p{
+  margin:0;
+  color:var(--muted);
+  font-size:9px;
+  line-height:1.55;
+}
+
+.verifySearch{
+  max-width:none;
+  margin-top:54px;
+  padding-top:0;
+  border-top:0;
+}
+.verifySearch label{
+  margin-bottom:9px;
+}
+.verifySearch>div{
+  max-width:760px;
+}
+.verifySearch input{
+  min-height:56px;
+  padding:0 15px;
+  border:1px solid var(--ink);
+  border-right:0;
+  font-size:16px;
+  letter-spacing:.025em;
+}
+.verifySearch .button{
+  min-width:120px;
+  min-height:56px;
+}
+.demoButton{
+  margin-top:12px;
+  color:var(--muted-soft);
+  font-size:8px;
+}
+
+.verificationEmpty{
+  max-width:760px;
+  margin-top:30px;
+  padding:22px 0;
+  border-top:1px solid var(--stone);
+  border-bottom:1px solid var(--stone);
+}
+
+.verificationRecord{
+  max-width:920px;
+  margin-top:40px;
+  padding:0;
+  border:1px solid var(--stone);
+  background:var(--white);
+}
+.verificationRecord.status-active{
+  border-top:3px solid var(--blue);
+}
+.verificationTop{
+  padding:18px 22px;
+  background:var(--paper);
+}
+.verificationTop strong{
+  font-family:"Source Serif 4",Georgia,serif;
+  font-size:18px;
+  font-weight:500;
+}
+.verificationIdentity{
+  padding:28px 22px;
+}
+.verificationIdentity h2{
+  font-size:clamp(32px,3.5vw,44px);
+  line-height:1;
+}
+.verificationDetails{
+  padding:0 22px 20px;
+}
+.verificationDetails div{
+  grid-template-columns:180px 1fr;
+  padding:12px 0;
+}
+.publicNote{
+  margin:0 22px 22px;
+  padding:14px 0 0 13px;
+}
+
+.certificatePage{
+  padding-top:48px;
+  padding-bottom:96px;
+}
+.certificateBar{
+  padding-bottom:14px;
+  border-bottom:1px solid var(--ink);
+}
+.certificateSummary{
+  margin-top:24px;
+  padding:0;
+  border:1px solid var(--stone);
+  background:var(--white);
+}
+.certificateAuthorityLine{
+  min-height:42px;
+  padding:0 20px;
+  border-bottom:1px solid var(--stone);
+  background:var(--paper);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  color:var(--muted-soft);
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:.11em;
+}
+.certificateHeader{
+  padding:28px 24px;
+}
+.certificateBrand img{
+  width:76px;
+  height:76px;
+}
+.certificateHeader h1{
+  font-size:clamp(42px,4.5vw,58px);
+  line-height:1;
+}
+.certificateClaim{
+  padding:30px 24px;
+}
+.certificateClaim p{
+  max-width:820px;
+  font-size:27px;
+  line-height:1.28;
+}
+.certificateFacts{
+  padding:8px 24px 24px;
+}
+.certificateFacts div{
+  grid-template-columns:190px 1fr;
+  padding:12px 0;
+}
+.certificatePublicNote{
+  margin:0 24px 24px;
+  padding:14px 0 0 13px;
+}
+.certificateHistory{
+  padding-top:78px;
+}
+.certificateTimeline{
+  border-top:2px solid var(--ink);
+}
+.timelineEvent{
+  padding:20px 0;
+}
+.certificateActions{
+  margin-top:16px;
+  padding-top:28px;
+}
+
+@media(max-width:900px){
+  .verifyTrustStrip{
+    grid-template-columns:1fr 1fr;
+  }
+  .verifyTrustStrip>div:nth-child(2){
+    border-right:0;
+  }
+  .verifyTrustStrip>div:nth-child(-n+2){
+    border-bottom:1px solid var(--stone);
+  }
+}
+
+@media(max-width:760px){
+  .verifyPage{
+    padding-top:56px;
+    padding-bottom:72px;
+  }
+  .verifyPageIntro h1{
+    font-size:clamp(40px,10.5vw,48px);
+  }
+  .verifyTrustStrip{
+    grid-template-columns:1fr;
+    margin-top:34px;
+  }
+  .verifyTrustStrip>div,
+  .verifyTrustStrip>div:not(:first-child){
+    min-height:0;
+    padding:15px 0;
+    border-right:0;
+    border-bottom:1px solid var(--stone);
+  }
+  .verifyTrustStrip>div:last-child{
+    border-bottom:0;
+  }
+  .verifyTrustStrip span{
+    margin-bottom:7px;
+  }
+  .verifySearch{
+    margin-top:38px;
+  }
+  .verifySearch>div{
+    display:grid;
+    grid-template-columns:1fr;
+  }
+  .verifySearch input{
+    min-height:52px;
+    border-right:1px solid var(--ink);
+    border-bottom:0;
+  }
+  .verifySearch .button{
+    width:100%;
+    min-height:48px;
+  }
+  .verificationRecord{
+    margin-top:30px;
+  }
+  .verificationTop,
+  .verificationIdentity{
+    flex-direction:column;
+    gap:14px;
+    padding-left:18px;
+    padding-right:18px;
+  }
+  .recordOpenLink{
+    align-self:flex-start;
+  }
+  .verificationDetails{
+    padding-left:18px;
+    padding-right:18px;
+  }
+  .verificationDetails div{
+    grid-template-columns:1fr;
+    gap:5px;
+  }
+  .publicNote{
+    margin-left:18px;
+    margin-right:18px;
+  }
+  .certificateAuthorityLine{
+    min-height:0;
+    padding:12px 18px;
+    align-items:flex-start;
+    flex-direction:column;
+    gap:5px;
+  }
+  .certificateHeader{
+    padding:22px 18px;
+    flex-direction:column;
+  }
+  .certificateBrand{
+    align-items:flex-start;
+  }
+  .certificateBrand img{
+    width:62px;
+    height:62px;
+  }
+  .certificateClaim{
+    grid-template-columns:1fr;
+    gap:14px;
+    padding:24px 18px;
+  }
+  .certificateClaim p{
+    font-size:23px;
+  }
+  .certificateFacts{
+    padding-left:18px;
+    padding-right:18px;
+  }
+  .certificateFacts div{
+    grid-template-columns:1fr;
+    gap:5px;
+  }
+  .certificatePublicNote{
+    margin-left:18px;
+    margin-right:18px;
+  }
+  .certificateHistory{
+    grid-template-columns:1fr;
+    gap:34px;
+    padding-top:58px;
+  }
+  .timelineEvent{
+    grid-template-columns:82px 1fr;
+  }
+}
