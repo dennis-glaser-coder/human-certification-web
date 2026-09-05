@@ -136,12 +136,12 @@ export default function StandardPage() {
       <section className="standardClose shell">
         <div>
           <p>
-            Die öffentliche Arbeitsfassung des Standards ist versioniert dokumentiert.
+            Der Standard ist versioniert dokumentiert.
             Regeln zu Prüfrollen, Statusänderungen und Markennutzung werden unter Transparenz & Integrität geführt.
           </p>
         </div>
         <div className="standardCloseLinks">
-          <Link className="textLink" href="/dokumente/standard-0-1">Arbeitsstandard 0.1 öffnen →</Link>
+          <Link className="textLink" href="/dokumente/standard-0-1">Standard 0.1 öffnen →</Link>
           <Link className="textLink" href="/transparenz">Transparenz & Integrität →</Link>
         </div>
       </section>
