@@ -19,7 +19,7 @@ export default function HeroVerify() {
     <div className="verifyModule">
       <div className="verifyModuleHead">
         <strong>ZERTIFIZIERUNGS-ID PRÜFEN</strong>
-        <span>PUBLIC REGISTER</span>
+        <span>ÖFFENTLICHES REGISTER</span>
       </div>
 
       <form onSubmit={submit} className="verifyModuleForm">
@@ -37,8 +37,8 @@ export default function HeroVerify() {
       </form>
 
       <div className="verifyModuleFoot">
-        <span>Öffentliche Verifizierung über eindeutige Zertifizierungs-ID.</span>
-        <Link href="/register">Zum Register →</Link>
+        <span>Gültigkeit und Umfang öffentlich nachvollziehen.</span>
+        <Link href="/register">Register öffnen →</Link>
       </div>
     </div>
   );
