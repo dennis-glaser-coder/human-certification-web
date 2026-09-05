@@ -22,7 +22,7 @@ const principles = [
   }
 ];
 
-const process = [
+const certificationSteps = [
   ['01', 'Produkt abgrenzen', 'Produkt oder Produktfamilie und relevante Herstellungsorte eindeutig festlegen.'],
   ['02', 'Herstellung dokumentieren', 'Wesentliche Arbeitsschritte, Standorte und relevante Fremdfertigung erfassen.'],
   ['03', 'Nachweise prüfen', 'Unterlagen und Informationen zur tatsächlichen Ausführung bewerten.'],
@@ -152,7 +152,7 @@ export default function Home() {
           </div>
 
           <div className="premiumProcessSteps">
-            {process.map(([number, title, copy]) => (
+            {certificationSteps.map(([number, title, copy]) => (
               <article key={number}>
                 <span>{number}</span>
                 <strong>{title}</strong>
