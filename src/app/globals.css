@@ -4719,3 +4719,445 @@ textarea:focus-visible{
     min-width:0;
   }
 }
+
+
+/* ===== About & transparency institutional pass 2026-09-05 ===== */
+.aboutMetaBand,
+.integrityMetaBand{
+  background:var(--paper);
+  border-bottom:1px solid var(--stone);
+}
+.aboutMetaGrid,
+.integrityMetaGrid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+}
+.aboutMetaGrid>div,
+.integrityMetaGrid>div{
+  min-height:116px;
+  padding:20px 22px 18px 0;
+  border-right:1px solid var(--stone);
+}
+.aboutMetaGrid>div:not(:first-child),
+.integrityMetaGrid>div:not(:first-child){
+  padding-left:22px;
+}
+.aboutMetaGrid>div:last-child,
+.integrityMetaGrid>div:last-child{
+  border-right:0;
+}
+.aboutMetaGrid span,
+.integrityMetaGrid span{
+  display:block;
+  margin-bottom:22px;
+  color:var(--blue);
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:.13em;
+}
+.aboutMetaGrid strong,
+.integrityMetaGrid strong{
+  display:block;
+  margin-bottom:7px;
+  font-size:10px;
+}
+.aboutMetaGrid p,
+.integrityMetaGrid p{
+  margin:0;
+  color:var(--muted);
+  font-size:9px;
+  line-height:1.55;
+}
+
+.aboutPurpose{
+  padding:90px 0 94px;
+  background:var(--white);
+  border-bottom:1px solid var(--stone);
+}
+.aboutPurposeGrid{
+  display:grid;
+  grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);
+  gap:110px;
+  align-items:start;
+}
+.aboutPurpose h2{
+  margin:14px 0 0;
+  max-width:560px;
+  font-size:clamp(38px,4vw,54px);
+  line-height:1.05;
+}
+.aboutPurposeGrid>div:last-child p{
+  max-width:700px;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.8;
+}
+
+.aboutPrinciples{
+  padding-top:88px;
+  padding-bottom:94px;
+}
+.aboutPrinciplesGrid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:2px solid var(--ink);
+}
+.aboutPrinciplesGrid article{
+  min-height:210px;
+  padding:22px 24px 20px 0;
+  border-right:1px solid var(--stone);
+  border-bottom:1px solid var(--stone);
+}
+.aboutPrinciplesGrid article:not(:first-child){
+  padding-left:24px;
+}
+.aboutPrinciplesGrid article:last-child{
+  border-right:0;
+}
+.aboutPrinciplesGrid article>span{
+  display:block;
+  margin-bottom:42px;
+  color:var(--blue);
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:.13em;
+}
+.aboutPrinciplesGrid strong{
+  display:block;
+  margin-bottom:12px;
+  font-size:11px;
+}
+.aboutPrinciplesGrid p{
+  margin:0;
+  color:var(--muted);
+  font-size:10px;
+  line-height:1.65;
+}
+
+.aboutArchitecture{
+  padding:90px 0 96px;
+  background:var(--ink);
+  color:var(--white);
+}
+.aboutArchitectureIntro .sectionNo,
+.integrityRolesIntro .sectionNo{
+  color:rgba(255,255,255,.52);
+}
+.aboutArchitectureIntro h2,
+.integrityRolesIntro h2{
+  color:var(--white);
+}
+.aboutArchitectureIntro>p,
+.integrityRolesIntro>p{
+  color:rgba(255,255,255,.62);
+}
+.aboutArchitectureGrid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  border-top:1px solid rgba(255,255,255,.55);
+}
+.aboutArchitectureGrid article{
+  min-height:214px;
+  padding:22px 20px 20px 0;
+  border-right:1px solid rgba(255,255,255,.18);
+  border-bottom:1px solid rgba(255,255,255,.18);
+}
+.aboutArchitectureGrid article:not(:first-child){
+  padding-left:20px;
+}
+.aboutArchitectureGrid article:last-child{
+  border-right:0;
+}
+.aboutArchitectureGrid span,
+.integrityRolesGrid span{
+  display:block;
+  margin-bottom:42px;
+  color:#AFC1D8;
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.12em;
+}
+.aboutArchitectureGrid strong,
+.integrityRolesGrid strong{
+  display:block;
+  margin-bottom:12px;
+  font-size:11px;
+}
+.aboutArchitectureGrid p,
+.integrityRolesGrid p{
+  margin:0;
+  color:rgba(255,255,255,.62);
+  font-size:9px;
+  line-height:1.65;
+}
+.aboutArchitectureLinks{
+  display:flex;
+  flex-wrap:wrap;
+  gap:26px;
+  padding-top:28px;
+}
+.aboutArchitectureLinks a{
+  color:var(--white);
+  font-size:9px;
+  font-weight:700;
+  text-decoration:none;
+  border-bottom:1px solid rgba(255,255,255,.6);
+  padding-bottom:3px;
+}
+
+.aboutBoundaries{
+  padding:82px 0 88px;
+  background:var(--white);
+  border-bottom:1px solid var(--stone);
+}
+.aboutBoundariesGrid{
+  display:grid;
+  grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);
+  gap:100px;
+}
+.aboutBoundaries h2{
+  margin:14px 0 0;
+  max-width:600px;
+  font-size:clamp(36px,3.8vw,50px);
+  line-height:1.06;
+}
+.aboutBoundaries p{
+  max-width:700px;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.78;
+}
+
+.transparencySection{
+  padding-top:88px;
+  padding-bottom:94px;
+}
+.transparencyPrinciplesGrid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:2px solid var(--ink);
+}
+.transparencyPrinciplesGrid article{
+  min-height:190px;
+  padding:22px 26px 20px 0;
+  border-right:1px solid var(--stone);
+  border-bottom:1px solid var(--stone);
+}
+.transparencyPrinciplesGrid article:nth-child(3n){
+  border-right:0;
+}
+.transparencyPrinciplesGrid article:not(:nth-child(3n+1)){
+  padding-left:26px;
+}
+.transparencyPrinciplesGrid span{
+  display:block;
+  margin-bottom:34px;
+  color:var(--blue);
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:.13em;
+}
+.transparencyPrinciplesGrid h3{
+  margin:0 0 11px;
+  font-size:12px;
+}
+.transparencyPrinciplesGrid p{
+  margin:0;
+  color:var(--muted);
+  font-size:10px;
+  line-height:1.65;
+}
+
+.integrityRoles{
+  padding:90px 0 96px;
+  background:var(--ink);
+  color:var(--white);
+}
+.integrityRolesGrid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  border-top:1px solid rgba(255,255,255,.55);
+}
+.integrityRolesGrid article{
+  min-height:220px;
+  padding:22px 20px 20px 0;
+  border-right:1px solid rgba(255,255,255,.18);
+  border-bottom:1px solid rgba(255,255,255,.18);
+}
+.integrityRolesGrid article:not(:first-child){
+  padding-left:20px;
+}
+.integrityRolesGrid article:last-child{
+  border-right:0;
+}
+
+.governanceDocuments{
+  padding:88px 0 94px;
+  background:var(--white);
+  border-bottom:1px solid var(--stone);
+}
+.governanceDocumentsGrid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:2px solid var(--ink);
+}
+.governanceDocumentsGrid>a{
+  min-height:220px;
+  padding:24px 26px 22px 0;
+  border-right:1px solid var(--stone);
+  border-bottom:1px solid var(--stone);
+  text-decoration:none;
+}
+.governanceDocumentsGrid>a:not(:first-child){
+  padding-left:26px;
+}
+.governanceDocumentsGrid>a:last-child{
+  border-right:0;
+}
+.governanceDocumentsGrid>a>span{
+  display:block;
+  margin-bottom:45px;
+  color:var(--blue);
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:.13em;
+}
+.governanceDocumentsGrid>a>strong{
+  display:block;
+  margin-bottom:24px;
+  max-width:320px;
+  font-family:"Source Serif 4",Georgia,serif;
+  font-size:20px;
+  font-weight:500;
+  line-height:1.3;
+}
+.governanceDocumentsGrid>a>small{
+  color:var(--blue);
+  font-size:9px;
+  font-weight:700;
+}
+
+.integrityClaimBoundary{
+  padding:80px 0 88px;
+}
+.integrityClaimBoundaryGrid{
+  display:grid;
+  grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);
+  gap:100px;
+  align-items:start;
+}
+.integrityClaimBoundary h2{
+  margin:14px 0 0;
+  max-width:600px;
+  font-size:clamp(36px,3.8vw,50px);
+  line-height:1.06;
+}
+.integrityClaimBoundary p{
+  max-width:720px;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.78;
+}
+
+@media(max-width:1020px){
+  .aboutMetaGrid,
+  .integrityMetaGrid,
+  .aboutPrinciplesGrid{
+    grid-template-columns:1fr 1fr;
+  }
+  .aboutMetaGrid>div:nth-child(2),
+  .integrityMetaGrid>div:nth-child(2),
+  .aboutPrinciplesGrid article:nth-child(2){
+    border-right:0;
+  }
+  .aboutArchitectureGrid,
+  .integrityRolesGrid{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+
+@media(max-width:760px){
+  .aboutMetaGrid,
+  .integrityMetaGrid,
+  .aboutPrinciplesGrid,
+  .aboutArchitectureGrid,
+  .transparencyPrinciplesGrid,
+  .integrityRolesGrid,
+  .governanceDocumentsGrid,
+  .aboutPurposeGrid,
+  .aboutBoundariesGrid,
+  .integrityClaimBoundaryGrid{
+    grid-template-columns:1fr;
+  }
+
+  .aboutMetaGrid>div,
+  .aboutMetaGrid>div:not(:first-child),
+  .integrityMetaGrid>div,
+  .integrityMetaGrid>div:not(:first-child),
+  .aboutPrinciplesGrid article,
+  .aboutPrinciplesGrid article:not(:first-child),
+  .transparencyPrinciplesGrid article,
+  .transparencyPrinciplesGrid article:not(:nth-child(3n+1)),
+  .aboutArchitectureGrid article,
+  .aboutArchitectureGrid article:not(:first-child),
+  .integrityRolesGrid article,
+  .integrityRolesGrid article:not(:first-child),
+  .governanceDocumentsGrid>a,
+  .governanceDocumentsGrid>a:not(:first-child){
+    min-height:0;
+    padding:17px 0;
+    border-right:0;
+    border-bottom:1px solid var(--stone);
+  }
+
+  .aboutMetaGrid span,
+  .integrityMetaGrid span{
+    margin-bottom:7px;
+  }
+
+  .aboutPurpose,
+  .aboutPrinciples,
+  .aboutBoundaries,
+  .transparencySection,
+  .governanceDocuments,
+  .integrityClaimBoundary{
+    padding-top:64px;
+    padding-bottom:68px;
+  }
+
+  .aboutPurposeGrid,
+  .aboutBoundariesGrid,
+  .integrityClaimBoundaryGrid{
+    gap:28px;
+  }
+
+  .aboutPurpose h2,
+  .aboutBoundaries h2,
+  .integrityClaimBoundary h2{
+    font-size:35px;
+  }
+
+  .aboutPrinciplesGrid article>span,
+  .transparencyPrinciplesGrid span,
+  .aboutArchitectureGrid span,
+  .integrityRolesGrid span,
+  .governanceDocumentsGrid>a>span{
+    margin-bottom:12px;
+  }
+
+  .aboutArchitecture,
+  .integrityRoles{
+    padding-top:68px;
+    padding-bottom:72px;
+  }
+
+  .aboutArchitectureGrid article,
+  .integrityRolesGrid article{
+    border-bottom-color:rgba(255,255,255,.18);
+  }
+
+  .governanceDocumentsGrid>a>strong{
+    margin-bottom:14px;
+    font-size:18px;
+  }
+}
