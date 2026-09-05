@@ -47,10 +47,10 @@ export default function ScopeGuidePage() {
 
       <section className="guideMetaBand">
         <div className="shell guideMetaGrid">
-          <div><span>01</span><strong>Produkt</strong><p>Konkreter Gegenstand der Zertifizierung.</p></div>
-          <div><span>02</span><strong>Produktfamilie</strong><p>Zusammenfassung vergleichbarer Varianten nur bei passendem Prozess.</p></div>
-          <div><span>03</span><strong>Standorte</strong><p>Relevante Produktionsorte gehören zum Umfang.</p></div>
-          <div><span>04</span><strong>Änderungen</strong><p>Wesentliche Prozessänderungen können eine Neubewertung auslösen.</p></div>
+          <div><strong>Produkt</strong><p>Konkreter Gegenstand der Zertifizierung.</p></div>
+          <div><strong>Produktfamilie</strong><p>Zusammenfassung vergleichbarer Varianten nur bei passendem Prozess.</p></div>
+          <div><strong>Standorte</strong><p>Relevante Produktionsorte gehören zum Umfang.</p></div>
+          <div><strong>Änderungen</strong><p>Wesentliche Prozessänderungen können eine Neubewertung auslösen.</p></div>
         </div>
       </section>
 
@@ -67,9 +67,8 @@ export default function ScopeGuidePage() {
         </div>
 
         <div className="guideRuleGrid">
-          {scopeRules.map(([title, copy], index) => (
+          {scopeRules.map(([title, copy]) => (
             <article key={title}>
-              <span>{String(index + 1).padStart(2, '0')}</span>
               <strong>{title}</strong>
               <p>{copy}</p>
             </article>
@@ -109,9 +108,8 @@ export default function ScopeGuidePage() {
             <h2>Wann der bestehende Umfang neu geprüft werden sollte.</h2>
           </div>
           <div className="guideChecklist">
-            {changeTriggers.map((item, index) => (
+            {changeTriggers.map((item) => (
               <article key={item}>
-                <span>{String(index + 1).padStart(2, '0')}</span>
                 <p>{item}</p>
               </article>
             ))}
