@@ -70,6 +70,15 @@ export default function DocumentsPage() {
         </p>
       </section>
 
+      <section className="documentProofBand" aria-label="Dokumentenprinzipien">
+        <div className="shell documentProofGrid">
+          <div><span>01</span><strong>Dokument-ID</strong><p>Eindeutige Referenz für jedes Regelwerk.</p></div>
+          <div><span>02</span><strong>Version</strong><p>Änderungen bleiben zeitlich nachvollziehbar.</p></div>
+          <div><span>03</span><strong>Stand</strong><p>Veröffentlichungsdatum jeder Fassung.</p></div>
+          <div><span>04</span><strong>Web & PDF</strong><p>Regelwerke sind direkt einsehbar und referenzierbar.</p></div>
+        </div>
+      </section>
+
       <section className="shell documentsSection">
         <div className="documentRegistry">
           <div className="documentRegistryHead">
