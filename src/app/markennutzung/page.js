@@ -49,10 +49,10 @@ export default function MarkUsePage() {
 
       <section className="markUseMetaBand" aria-label="Grundlagen der Markennutzung">
         <div className="shell markUseMetaGrid">
-          <div><span>01</span><strong>Produktfokus</strong><p>Zeichen nur für den zertifizierten Umfang.</p></div>
-          <div><span>02</span><strong>Statusgebunden</strong><p>Nutzung nur bei gültigem Zertifizierungsstatus.</p></div>
-          <div><span>03</span><strong>Registerbezug</strong><p>ID und öffentlicher Datensatz bleiben zugeordnet.</p></div>
-          <div><span>04</span><strong>Aussageklarheit</strong><p>Keine Erweiterung um ungeprüfte Eigenschaften.</p></div>
+          <div><strong>Produktfokus</strong><p>Zeichen nur für den zertifizierten Umfang.</p></div>
+          <div><strong>Statusgebunden</strong><p>Nutzung nur bei gültigem Zertifizierungsstatus.</p></div>
+          <div><strong>Registerbezug</strong><p>ID und öffentlicher Datensatz bleiben zugeordnet.</p></div>
+          <div><strong>Aussageklarheit</strong><p>Keine Erweiterung um ungeprüfte Eigenschaften.</p></div>
         </div>
       </section>
 
@@ -69,9 +69,8 @@ export default function MarkUsePage() {
         </div>
 
         <div className="markUseRuleGrid">
-          {rules.map(([title, copy], index) => (
+          {rules.map(([title, copy]) => (
             <article key={title}>
-              <span>{String(index + 1).padStart(2, '0')}</span>
               <strong>{title}</strong>
               <p>{copy}</p>
             </article>
@@ -107,9 +106,8 @@ export default function MarkUsePage() {
             <h2>Das Zeichen darf keine weitergehende Zertifizierung vortäuschen.</h2>
           </div>
           <div className="markUseProhibitedList">
-            {prohibited.map(([title, copy], index) => (
+            {prohibited.map(([title, copy]) => (
               <article key={title}>
-                <span>{String(index + 1).padStart(2, '0')}</span>
                 <div><strong>{title}</strong><p>{copy}</p></div>
               </article>
             ))}
