@@ -71,10 +71,10 @@ export default function VerifyPage() {
         </div>
 
         <div className="verifyTrustStrip" aria-label="Prüfinformationen">
-          <div><span>01</span><strong>Status</strong><p>In Prüfung, aktiv, ausgesetzt, abgelaufen oder widerrufen.</p></div>
-          <div><span>02</span><strong>Produktbezug</strong><p>Hersteller, Produkt und Zertifizierungsumfang.</p></div>
-          <div><span>03</span><strong>Produktion & Standard</strong><p>Relevante Standorte und angewendetes Regelwerk.</p></div>
-          <div><span>04</span><strong>Gültigkeit</strong><p>Ausstellungs- und Gültigkeitszeitraum.</p></div>
+          <div><strong>Status</strong><p>In Prüfung, aktiv, ausgesetzt, abgelaufen oder widerrufen.</p></div>
+          <div><strong>Produktbezug</strong><p>Hersteller, Produkt und Zertifizierungsumfang.</p></div>
+          <div><strong>Produktion & Standard</strong><p>Relevante Standorte und angewendetes Regelwerk.</p></div>
+          <div><strong>Gültigkeit</strong><p>Ausstellungs- und Gültigkeitszeitraum.</p></div>
         </div>
 
         <form onSubmit={verify} className="verifySearch">
