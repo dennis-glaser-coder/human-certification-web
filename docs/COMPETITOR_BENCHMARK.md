@@ -109,7 +109,7 @@ Must answer within seconds:
 2. What exact statement does the mark make?
 3. How is the statement verified?
 4. Where can the public check it?
-5. How can a manufacturer enter the pilot?
+5. How can a manufacturer request certification?
 
 ### Standard
 Must show:
@@ -123,10 +123,10 @@ Must show:
 ### Manufacturer journey
 Must show:
 - who is suitable
-- pilot scope
-- audit journey
+- suitability and certified scope
+- on-site audit journey
 - evidence expectations
-- no premature certification promise
+- clear boundaries around what certification does and does not claim
 
 ### Public Register
 Must make searchable:
