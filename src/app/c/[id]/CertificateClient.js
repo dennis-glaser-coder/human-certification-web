@@ -1,5 +1,6 @@
 'use client';
 
+import { CERTIFIED_STATEMENT } from '../../../lib/brand';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import SiteHeader from '../../../components/SiteHeader';
@@ -98,7 +99,7 @@ export default function CertificateClient({ id }) {
                 <p>
                   {state.record.status === 'under_review'
                     ? 'Dieser Datensatz befindet sich in Prüfung. Eine Zertifizierungsentscheidung wurde noch nicht erteilt.'
-                    : 'Dieses Produkt wurde in seinen wesentlichen Herstellungsschritten nachweislich durch Menschen gefertigt.'}
+                    : CERTIFIED_STATEMENT}
                 </p>
               </div>
 
