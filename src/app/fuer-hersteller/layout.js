@@ -3,7 +3,7 @@ import { canonical } from '../../lib/seo';
 export const metadata = {
   title: 'Zertifizierung für Hersteller',
   description:
-    'Informationen für Hersteller, Manufakturen und Marken, die physische Produkte und ihre Herstellungsprozesse zur Validierung des Made by Humans Standards vorstellen möchten.',
+    'Informationen für Hersteller, Manufakturen und Marken zur Zertifizierung physischer Produkte mit nachweisbar menschlicher Herstellung.',
   alternates: {
     canonical: canonical('/fuer-hersteller'),
   },
