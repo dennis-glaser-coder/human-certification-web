@@ -19,7 +19,7 @@ const benefits = [
   ['Produktbezogenes Zeichen', 'Die Kennzeichnung bezieht sich auf ein klar abgegrenztes geprüftes Produkt oder eine Produktfamilie.'],
   ['Eindeutige ID', 'Eine Zertifizierungs-ID verbindet die Kennzeichnung mit dem zugehörigen öffentlichen Datensatz.'],
   ['QR-Verifizierung', 'Der öffentliche Nachweis kann direkt von Verpackung, Produktseite oder Verkaufsunterlagen erreichbar gemacht werden.'],
-  ['Public Register', 'Hersteller, Produkt, Standardversion und aktueller Status werden nachvollziehbar zugeordnet.'],
+  ['Öffentliches Register', 'Hersteller, Produkt, Standardversion und aktueller Status werden nachvollziehbar zugeordnet.'],
   ['Freigegebene Kommunikation', 'Regeln legen fest, wie die geprüfte Aussage auf Produkt, Verpackung und in produktbezogener Werbung verwendet werden darf.'],
 ];
 
@@ -35,7 +35,7 @@ const process = [
   ['Prozessaufnahme', 'Wesentliche Arbeitsschritte, Standorte und relevante Fremdfertigung werden erfasst.'],
   ['Nachweise', 'Die zum Herstellungsprozess vorliegenden Informationen und Unterlagen werden geprüft.'],
   ['Prüfung', 'Der konkrete Produktionsfall wird gegen die Kriterien des Standards bewertet.'],
-  ['Auswertung', 'Ergebnis, offene Punkte und Erkenntnisse für die weitere Standardentwicklung werden dokumentiert.'],
+  ['Ergebnis', 'Ergebnis, offene Punkte und der nächste fachliche Schritt werden dokumentiert.'],
 ];
 
 export default function ManufacturerPage() {
@@ -86,10 +86,10 @@ export default function ManufacturerPage() {
 
       <section className="pageHero shell">
         <div className="eyebrow">FÜR HERSTELLER</div>
-        <h1>Ein überprüfbarer Produktclaim für menschliche Herstellung.</h1>
+        <h1>Produkte auf ihre Eignung für den Standard prüfen.</h1>
         <p className="lead">
-          Das Made by Humans System ist darauf ausgelegt, eine erfolgreiche Produktprüfung mit Kennzeichnung,
-          eindeutiger Zertifizierungs-ID, öffentlichem Registereintrag und klaren Markennutzungsregeln zu verbinden.
+          Made by Humans verbindet eine produktbezogene Prüfung mit eindeutiger Zertifizierungs-ID,
+          öffentlichem Registereintrag und klaren Regeln für die Nutzung des Zeichens.
         </p>
       </section>
 
@@ -97,12 +97,12 @@ export default function ManufacturerPage() {
         <div className="shell">
           <div className="sectionIntro compact">
             <div>
-              <div className="sectionNo">WAS DAS SYSTEM BEREITSTELLEN SOLL</div>
-              <h2>Die Prüfung soll am Produkt sichtbar und überprüfbar werden.</h2>
+              <div className="sectionNo">WAS DIE ZERTIFIZIERUNG VERBINDET</div>
+              <h2>Vom Prüfergebnis bis zur öffentlichen Verifizierung.</h2>
             </div>
             <p>
-              Die Zertifizierung ist nicht als internes Audit-Endprodukt gedacht.
-              Ihr Wert entsteht erst, wenn die geprüfte Aussage eindeutig kommuniziert und öffentlich verifiziert werden kann.
+              Der Wert der Kennzeichnung entsteht durch die Verbindung aus klarer Produktaussage,
+              dokumentierter Prüfung und einem öffentlich nachvollziehbaren Zertifizierungsstatus.
             </p>
           </div>
 
@@ -120,12 +120,12 @@ export default function ManufacturerPage() {
       <section className="shell manufacturerFit">
         <div className="sectionIntro compact">
           <div>
-            <div className="sectionNo">AKTUELLE VALIDIERUNG</div>
-            <h2>Gesucht werden reale Produkte mit nachvollziehbaren Herstellungsprozessen.</h2>
+            <div className="sectionNo">EIGNUNG FÜR DEN STANDARD</div>
+            <h2>Geeignet sind reale Produkte mit nachvollziehbaren Herstellungsprozessen.</h2>
           </div>
           <p>
-            Ausgewählte Produktionsfälle werden genutzt, um Kriterien, Nachweisanforderungen und Prüfablauf
-            unter realen Bedingungen zu testen und vor einer kommerziellen Zertifikatsvergabe zu schärfen.
+            Für die Einordnung müssen Produkt, wesentliche Herstellungsschritte, Produktionsorte
+            und verfügbare Nachweise ausreichend klar beschrieben werden können.
           </p>
         </div>
 
@@ -133,7 +133,7 @@ export default function ManufacturerPage() {
           {suitable.map((item) => <div key={item}>{item}</div>)}
         </div>
         <p className="fitNote">
-          Lebensmittel, Medizinprodukte und andere stark regulierte Kategorien sind für die erste Validierung nicht vorgesehen.
+          Lebensmittel, Medizinprodukte und andere stark regulierte Kategorien werden derzeit nicht in den Geltungsbereich aufgenommen.
         </p>
       </section>
 
@@ -142,7 +142,7 @@ export default function ManufacturerPage() {
           <div className="sectionIntro compact">
             <div>
               <div className="sectionNo">ABLAUF</div>
-              <h2>So wird ein Produktionsfall derzeit geprüft.</h2>
+              <h2>So ist die fachliche Einordnung aufgebaut.</h2>
             </div>
           </div>
 
@@ -159,11 +159,11 @@ export default function ManufacturerPage() {
 
       <section className="shell interestSection">
         <div className="interestIntro">
-          <div className="sectionNo">PRODUKT VORSTELLEN</div>
-          <h2>Produkt zur Validierung einreichen.</h2>
+          <div className="sectionNo">PRODUKT EINORDNEN</div>
+          <h2>Passt Ihr Produkt zum Standard?</h2>
           <p>
-            Die Anfrage ist unverbindlich. Sie ist kein Zertifizierungsantrag und enthält keine Zusage
-            zur späteren Nutzung des Zeichens.
+            Die Anfrage ist unverbindlich und noch kein formeller Zertifizierungsantrag.
+            Sie dient der ersten fachlichen Einordnung von Produkt und Herstellungsprozess.
           </p>
         </div>
 
@@ -206,11 +206,11 @@ export default function ManufacturerPage() {
           </label>
 
           <button className="button primary formButton" disabled={state.loading}>
-            {state.loading ? 'Wird gesendet …' : 'Produkt zur Validierung vorstellen'}
+            {state.loading ? 'Wird gesendet …' : 'Produkt einordnen lassen'}
           </button>
 
           {state.message && <p className={state.success ? 'formMessage success' : 'formMessage'}>{state.message}</p>}
-          <small className="formLegal">Die Angaben werden ausschließlich zur Kontaktaufnahme im Rahmen der Validierung gespeichert.</small>
+          <small className="formLegal">Die Angaben werden ausschließlich zur Bearbeitung Ihrer Anfrage gespeichert.</small>
         </form>
       </section>
 
