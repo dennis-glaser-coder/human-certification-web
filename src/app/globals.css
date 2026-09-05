@@ -4236,3 +4236,486 @@ textarea:focus-visible{
     grid-template-columns:82px 1fr;
   }
 }
+
+
+/* ===== Manufacturer certification journey 2026-09-05 ===== */
+.manufacturerHero{
+  padding-bottom:66px;
+}
+.manufacturerHeroActions{
+  display:flex;
+  gap:10px;
+  margin-top:30px;
+  flex-wrap:wrap;
+}
+
+.manufacturerMetaBand{
+  background:var(--paper);
+  border-bottom:1px solid var(--stone);
+}
+.manufacturerMetaGrid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+}
+.manufacturerMetaGrid>div{
+  min-height:116px;
+  padding:20px 22px 18px 0;
+  border-right:1px solid var(--stone);
+}
+.manufacturerMetaGrid>div:not(:first-child){
+  padding-left:22px;
+}
+.manufacturerMetaGrid>div:last-child{
+  border-right:0;
+}
+.manufacturerMetaGrid span{
+  display:block;
+  margin-bottom:22px;
+  color:var(--blue);
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:.13em;
+}
+.manufacturerMetaGrid strong{
+  display:block;
+  margin-bottom:7px;
+  font-size:10px;
+}
+.manufacturerMetaGrid p{
+  margin:0;
+  color:var(--muted);
+  font-size:9px;
+  line-height:1.55;
+}
+
+.manufacturerBenefits{
+  padding:84px 0 90px;
+  background:var(--white);
+  border-bottom:1px solid var(--stone);
+}
+.manufacturerBenefitGrid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:2px solid var(--ink);
+}
+.manufacturerBenefitGrid article{
+  min-height:206px;
+  padding:22px 24px 20px 0;
+  border-right:1px solid var(--stone);
+  border-bottom:1px solid var(--stone);
+}
+.manufacturerBenefitGrid article:not(:first-child){
+  padding-left:24px;
+}
+.manufacturerBenefitGrid article:last-child{
+  border-right:0;
+}
+.manufacturerBenefitGrid article>span{
+  display:block;
+  margin-bottom:42px;
+  color:var(--blue);
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:.13em;
+}
+.manufacturerBenefitGrid strong{
+  display:block;
+  margin-bottom:12px;
+  font-size:11px;
+}
+.manufacturerBenefitGrid p{
+  margin:0;
+  color:var(--muted);
+  font-size:10px;
+  line-height:1.65;
+}
+
+.manufacturerFit{
+  padding-top:88px;
+  padding-bottom:88px;
+}
+.manufacturerFitGrid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  border-top:1px solid var(--ink);
+}
+.manufacturerFitGrid article{
+  min-height:150px;
+  padding:24px 30px 22px 0;
+  border-bottom:1px solid var(--stone);
+}
+.manufacturerFitGrid article:nth-child(odd){
+  border-right:1px solid var(--stone);
+}
+.manufacturerFitGrid article:nth-child(even){
+  padding-left:30px;
+}
+.manufacturerFitGrid strong{
+  display:block;
+  margin-bottom:11px;
+  font-size:11px;
+}
+.manufacturerFitGrid p{
+  margin:0;
+  color:var(--muted);
+  font-size:10px;
+  line-height:1.65;
+}
+.manufacturerScopeNote{
+  margin-top:24px;
+  padding:16px 0;
+  border-top:1px solid var(--stone);
+  display:grid;
+  grid-template-columns:180px 1fr;
+  gap:30px;
+}
+.manufacturerScopeNote span{
+  color:var(--blue);
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.10em;
+}
+.manufacturerScopeNote p{
+  margin:0;
+  max-width:760px;
+  color:var(--muted);
+  font-size:10px;
+}
+
+.manufacturerEvidence{
+  padding:90px 0 96px;
+  background:var(--ink);
+  color:var(--white);
+}
+.manufacturerEvidenceGrid{
+  display:grid;
+  grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);
+  gap:110px;
+  align-items:start;
+}
+.manufacturerEvidence h2{
+  margin:16px 0 22px;
+  max-width:560px;
+  font-size:clamp(38px,4vw,54px);
+  line-height:1.05;
+}
+.manufacturerEvidenceGrid>div:first-child>p{
+  max-width:530px;
+  color:rgba(255,255,255,.64);
+  font-size:11px;
+  line-height:1.75;
+}
+.manufacturerEvidence .sectionNo{
+  color:rgba(255,255,255,.52);
+}
+.manufacturerEvidenceList{
+  border-top:1px solid rgba(255,255,255,.55);
+}
+.manufacturerEvidenceList article{
+  display:grid;
+  grid-template-columns:52px 1fr;
+  gap:10px;
+  padding:21px 0;
+  border-bottom:1px solid rgba(255,255,255,.18);
+}
+.manufacturerEvidenceList article>span{
+  color:#AFC1D8;
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.12em;
+}
+.manufacturerEvidenceList strong{
+  display:block;
+  margin-bottom:8px;
+  font-size:11px;
+}
+.manufacturerEvidenceList p{
+  margin:0;
+  max-width:620px;
+  color:rgba(255,255,255,.62);
+  font-size:10px;
+  line-height:1.65;
+}
+
+.manufacturerProcess{
+  padding:88px 0 94px;
+  background:var(--white);
+  border-bottom:1px solid var(--stone);
+}
+.manufacturerProcessGrid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  border-top:2px solid var(--ink);
+}
+.manufacturerProcessGrid article{
+  min-height:218px;
+  padding:22px 20px 20px 0;
+  border-right:1px solid var(--stone);
+  border-bottom:1px solid var(--stone);
+}
+.manufacturerProcessGrid article:not(:first-child){
+  padding-left:20px;
+}
+.manufacturerProcessGrid article:last-child{
+  border-right:0;
+}
+.manufacturerProcessGrid span{
+  display:block;
+  margin-bottom:42px;
+  color:var(--blue);
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.12em;
+}
+.manufacturerProcessGrid strong{
+  display:block;
+  margin-bottom:12px;
+  font-size:11px;
+}
+.manufacturerProcessGrid p{
+  margin:0;
+  color:var(--muted);
+  font-size:9px;
+  line-height:1.65;
+}
+
+.manufacturerApplication{
+  padding:96px 0 104px;
+}
+.manufacturerApplicationGrid{
+  display:grid;
+  grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);
+  gap:94px;
+  align-items:start;
+}
+.manufacturerApplicationIntro{
+  position:sticky;
+  top:102px;
+}
+.manufacturerApplicationIntro h2{
+  margin:15px 0 22px;
+  max-width:510px;
+  font-size:clamp(38px,4vw,52px);
+  line-height:1.05;
+}
+.manufacturerApplicationIntro>p{
+  max-width:520px;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.75;
+}
+.applicationReference{
+  margin-top:34px;
+  padding:17px 0;
+  border-top:1px solid var(--ink);
+  border-bottom:1px solid var(--stone);
+}
+.applicationReference span{
+  display:block;
+  margin-bottom:8px;
+  color:var(--blue);
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:.12em;
+}
+.applicationReference strong{
+  font-size:9px;
+  line-height:1.6;
+}
+
+.certificationRequestForm{
+  padding:0;
+  background:transparent;
+  border:0;
+}
+.formSectionLabel{
+  margin-top:36px;
+  padding:12px 0;
+  border-top:2px solid var(--ink);
+  border-bottom:1px solid var(--stone);
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+.formSectionLabel:first-child{
+  margin-top:0;
+}
+.formSectionLabel span{
+  color:var(--blue);
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:.12em;
+}
+.formSectionLabel strong{
+  font-size:10px;
+  letter-spacing:.03em;
+}
+.certificationRequestForm label{
+  margin-top:18px;
+}
+.certificationRequestForm input,
+.certificationRequestForm textarea,
+.certificationRequestForm select{
+  width:100%;
+  padding:12px 13px;
+  border:1px solid var(--stone);
+  border-radius:0;
+  background:var(--white);
+  color:var(--ink);
+  outline:none;
+}
+.certificationRequestForm input{
+  min-height:46px;
+}
+.certificationRequestForm select{
+  min-height:46px;
+  appearance:none;
+  background-image:linear-gradient(45deg,transparent 50%,var(--ink) 50%),linear-gradient(135deg,var(--ink) 50%,transparent 50%);
+  background-position:calc(100% - 16px) 19px,calc(100% - 11px) 19px;
+  background-size:5px 5px,5px 5px;
+  background-repeat:no-repeat;
+}
+.certificationRequestForm input:focus,
+.certificationRequestForm textarea:focus,
+.certificationRequestForm select:focus{
+  border-color:var(--blue);
+}
+.certificationRequestForm textarea{
+  resize:vertical;
+  line-height:1.55;
+}
+.applicationSubmit{
+  margin-top:26px;
+  padding-top:22px;
+  border-top:1px solid var(--stone);
+}
+.applicationSubmit .formButton{
+  min-width:260px;
+  margin-top:0;
+}
+.applicationSubmit .formLegal{
+  max-width:560px;
+  margin-top:10px;
+}
+
+@media(max-width:1020px){
+  .manufacturerMetaGrid,
+  .manufacturerBenefitGrid{
+    grid-template-columns:1fr 1fr;
+  }
+  .manufacturerMetaGrid>div:nth-child(2),
+  .manufacturerBenefitGrid article:nth-child(2){
+    border-right:0;
+  }
+  .manufacturerMetaGrid>div:nth-child(-n+2),
+  .manufacturerBenefitGrid article:nth-child(-n+2){
+    border-bottom:1px solid var(--stone);
+  }
+  .manufacturerEvidenceGrid,
+  .manufacturerApplicationGrid{
+    gap:62px;
+  }
+  .manufacturerProcessGrid{
+    grid-template-columns:repeat(3,1fr);
+  }
+  .manufacturerProcessGrid article{
+    border-bottom:1px solid var(--stone);
+  }
+}
+
+@media(max-width:760px){
+  .manufacturerHeroActions{
+    display:grid;
+    grid-template-columns:1fr;
+  }
+  .manufacturerHeroActions .button{
+    width:100%;
+  }
+  .manufacturerMetaGrid,
+  .manufacturerBenefitGrid,
+  .manufacturerFitGrid,
+  .manufacturerEvidenceGrid,
+  .manufacturerProcessGrid,
+  .manufacturerApplicationGrid{
+    grid-template-columns:1fr;
+  }
+  .manufacturerMetaGrid>div,
+  .manufacturerMetaGrid>div:not(:first-child),
+  .manufacturerBenefitGrid article,
+  .manufacturerBenefitGrid article:not(:first-child){
+    min-height:0;
+    padding:15px 0;
+    border-right:0;
+    border-bottom:1px solid var(--stone);
+  }
+  .manufacturerMetaGrid span{
+    margin-bottom:7px;
+  }
+  .manufacturerBenefitGrid article>span{
+    margin-bottom:12px;
+  }
+  .manufacturerFit{
+    padding-top:64px;
+    padding-bottom:64px;
+  }
+  .manufacturerFitGrid article,
+  .manufacturerFitGrid article:nth-child(odd),
+  .manufacturerFitGrid article:nth-child(even){
+    min-height:0;
+    padding:19px 0;
+    border-right:0;
+  }
+  .manufacturerScopeNote{
+    grid-template-columns:1fr;
+    gap:8px;
+  }
+  .manufacturerEvidence{
+    padding:68px 0 72px;
+  }
+  .manufacturerEvidenceGrid{
+    gap:36px;
+  }
+  .manufacturerEvidence h2{
+    font-size:35px;
+  }
+  .manufacturerEvidenceList article{
+    grid-template-columns:38px 1fr;
+    padding:17px 0;
+  }
+  .manufacturerProcess{
+    padding:64px 0 68px;
+  }
+  .manufacturerProcessGrid article,
+  .manufacturerProcessGrid article:not(:first-child){
+    min-height:0;
+    padding:18px 0;
+    border-right:0;
+  }
+  .manufacturerProcessGrid span{
+    margin-bottom:12px;
+  }
+  .manufacturerApplication{
+    padding:68px 0 74px;
+  }
+  .manufacturerApplicationGrid{
+    gap:42px;
+  }
+  .manufacturerApplicationIntro{
+    position:static;
+  }
+  .manufacturerApplicationIntro h2{
+    font-size:35px;
+  }
+  .formTwo{
+    grid-template-columns:1fr;
+  }
+  .certificationRequestForm input,
+  .certificationRequestForm textarea,
+  .certificationRequestForm select{
+    font-size:16px;
+  }
+  .applicationSubmit .formButton{
+    width:100%;
+    min-width:0;
+  }
+}
