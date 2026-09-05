@@ -301,20 +301,12 @@ export default function ManufacturerPage() {
             ))}
           </div>
 
-          <div className="manufacturerMarkPreview">
-            <div className="manufacturerMarkPack">
-              <span className="manufacturerMarkPackBrand">PRODUKTMARKE</span>
-              <span className="manufacturerMarkPackProduct">Produktname</span>
-              <div className="manufacturerMarkPackSeal">
-                <img src={assetBase + '/brand/made-by-humans-seal.png'} alt="Made by Humans Zertifizierungszeichen" />
-                <span>Von Menschen gemacht.<br />Vor Ort geprüft.</span>
-              </div>
-            </div>
-            <div>
-              <span>MADE BY HUMANS MARKENNUTZUNG</span>
-              <strong>Die Herstellermarke bleibt im Vordergrund. Der Nachweis gibt ihr zusätzliche Substanz.</strong>
-              <p>Produktfokus · Zertifizierungs-ID · QR · öffentliches Register</p>
-            </div>
+          <div className="manufacturerMarkClose">
+            <p>
+              Das Zertifizierungszeichen ergänzt die Produktmarke und bleibt an Produktumfang,
+              Zertifizierungsstatus und öffentlichen Registereintrag gebunden.
+            </p>
+            <Link href="/markennutzung">Regeln zur Markennutzung ansehen →</Link>
           </div>
         </div>
       </section>
