@@ -47,8 +47,8 @@ export default function Home() {
               durch Menschen gefertigt wurde – und wie diese Aussage dokumentiert, geprüft und öffentlich verifiziert werden kann.
             </p>
             <div className="premiumHeroLinks">
-              <Link href="/standard">Standard ansehen</Link>
-              <Link href="/fuer-hersteller">Produkt einordnen</Link>
+              <Link className="premiumHeroPrimary" href="/standard">Standard ansehen</Link>
+              <Link className="premiumHeroSecondary" href="/fuer-hersteller">Zertifizierung anfragen</Link>
             </div>
             <div className="premiumHeroProof" aria-label="Grundprinzipien des Standards">
               <span>Definierte Kriterien</span>
@@ -188,13 +188,13 @@ export default function Home() {
           </div>
           <div>
             <p>
-              Hersteller können ihr Produkt und den zugehörigen Herstellungsprozess zunächst einordnen lassen.
-              Entscheidend sind ein klar abgrenzbares physisches Produkt, nachvollziehbare Arbeitsschritte und geeignete Nachweise.
+              Hersteller reichen ein klar abgegrenztes physisches Produkt und den zugehörigen Herstellungsprozess zur Prüfung ein.
+              Entscheidend sind nachvollziehbare Arbeitsschritte, relevante Produktionsorte und geeignete Nachweise.
             </p>
             <p>
-              Die Anfrage dient der ersten fachlichen Einordnung und ist noch kein formeller Zertifizierungsantrag.
+              Die Anfrage startet mit einer fachlichen Vorprüfung. Bei grundsätzlicher Eignung wird der Zertifizierungsumfang festgelegt.
             </p>
-            <Link className="premiumInlineLink" href="/fuer-hersteller">Produkt einordnen</Link>
+            <Link className="premiumInlineLink" href="/fuer-hersteller">Zertifizierung anfragen</Link>
           </div>
         </div>
       </section>
