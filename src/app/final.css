@@ -1,0 +1,154 @@
+/* Final stable UI layer.
+   New cross-site refinements belong here instead of globals.css.
+   Keep this file small and intentional. */
+
+@media (max-width: 760px) {
+  /* Readability: compression must come from content and spacing, never 8px body copy. */
+  main p:not(.premiumEyebrow):not(.premiumSectionLabel),
+  main li,
+  main dd,
+  main dt {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .premiumEyebrow,
+  .premiumSectionLabel,
+  .eyebrow,
+  .sectionNo,
+  .markPanelLabel,
+  .formSectionLabel,
+  .whyThesisSignature span,
+  .aboutOriginThesis span {
+    font-size: 10px;
+    line-height: 1.35;
+    letter-spacing: .12em;
+  }
+
+  main a:not(.brandLockup),
+  main button,
+  .premiumFooter a {
+    font-size: 12px;
+  }
+
+  figcaption {
+    font-size: 11px !important;
+    line-height: 1.4;
+  }
+
+  /* Mobile navigation: visually fine, physically easy to tap. */
+  .premiumHeaderInner {
+    min-height: 56px;
+  }
+
+  .premiumMobileHeaderActions .mobileVerify {
+    min-height: 44px;
+    padding: 0 8px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 11px;
+  }
+
+  .premiumMobileHeaderActions .mobileMenuToggle {
+    width: 44px;
+    height: 44px;
+    border: 0;
+  }
+
+  .premiumMobileHeaderActions .mobileMenuToggle span {
+    width: 17px;
+    height: 1px;
+  }
+
+  .premiumMobileMenu a {
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+
+  /* Inputs at 16px prevent iOS zoom and improve actual usability. */
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+
+  input,
+  select {
+    min-height: 46px;
+  }
+
+  /* Homepage microcopy was over-compressed in previous passes. */
+  .desireHeroLead,
+  .desireManifestoGrid > div > p,
+  .compactApplicationGrid .applicationCopy p,
+  .homeValueStoryHead > p,
+  .homeStoryRows p,
+  .compactAudit .desireAuditLead,
+  .homeVerifyCompact > p,
+  .homeFinalSummary p,
+  .homeFinalCta > div:last-child > p {
+    font-size: 13px;
+    line-height: 1.58;
+  }
+
+  .compactAudit .desireAuditFacts strong {
+    font-size: 11px;
+    line-height: 1.35;
+  }
+
+  .homeStoryRows strong {
+    font-size: 17px;
+  }
+
+  /* Keep footer compact without becoming unreadable. */
+  .premiumFooterNav a {
+    font-size: 12px !important;
+    min-height: 34px;
+    display: flex;
+    align-items: center;
+  }
+
+  .premiumFooterNav span {
+    font-size: 10px !important;
+  }
+
+  /* About story was intentionally shortened; restore readable type. */
+  .aboutStoryHero .lead,
+  .aboutOriginStory > p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  /* Why and manufacturer pages: fewer items, readable copy. */
+  .whyPage p:not(.premiumEyebrow):not(.premiumSectionLabel),
+  .manufacturerJourney p:not(.premiumEyebrow):not(.premiumSectionLabel),
+  .buyerPage p:not(.premiumEyebrow):not(.premiumSectionLabel) {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .whyBenefitGrid p,
+  .whyCustomerList p,
+  .whyComparisonRow p,
+  .manufacturerBenefitGrid p,
+  .manufacturerProcessGrid p,
+  .manufacturerMarkGrid p,
+  .manufacturerFaqList p,
+  .buyerMeaningGrid p,
+  .buyerFaqList p {
+    font-size: 13px;
+  }
+}
+
+/* Keyboard users must always see focus, independent of the visual treatment. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
