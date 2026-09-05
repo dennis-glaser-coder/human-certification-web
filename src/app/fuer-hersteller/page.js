@@ -125,7 +125,7 @@ export default function ManufacturerPage() {
       <section className="manufacturerMetaBand" aria-label="Kernbestandteile der Zertifizierung">
         <div className="shell manufacturerMetaGrid">
           <div><span>01</span><strong>Produktbezogen</strong><p>Klar abgegrenzter Zertifizierungsumfang.</p></div>
-          <div><span>02</span><strong>Nachweisbasiert</strong><p>Herstellungsprozess und Belege werden geprüft.</p></div>
+          <div><span>02</span><strong>Vor Ort geprüft</strong><p>Die tatsächliche Herstellung wird beim Hersteller nachvollzogen.</p></div>
           <div><span>03</span><strong>Versioniert</strong><p>Entscheidung ist an eine Standardfassung gebunden.</p></div>
           <div><span>04</span><strong>Verifizierbar</strong><p>Status und Produktbezug sind öffentlich prüfbar.</p></div>
         </div>
