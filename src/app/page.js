@@ -170,11 +170,10 @@ export default function Home() {
         <div className="shell desireAuditGrid">
           <figure>
             <img
-              src="https://images.unsplash.com/photo-1748347084012-075796185d56?auto=format&fit=crop&w=1800&q=86"
-              alt="Prüfung in einer modernen Produktionsumgebung"
+              src={assetBase + '/brand/IMG_1049.png'}
+              alt="Vor-Ort-Audit während eines produktprägenden menschlichen Herstellungsschritts"
               loading="lazy"
             />
-            <figcaption>Produktionsprüfung · TECNIC Bioprocess Solutions / Unsplash</figcaption>
           </figure>
           <div className="desireAuditCopy">
             <p className="premiumSectionLabel">VOR-ORT-AUDIT</p>
