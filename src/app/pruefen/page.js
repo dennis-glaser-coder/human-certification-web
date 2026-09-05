@@ -69,6 +69,13 @@ export default function VerifyPage() {
           </p>
         </div>
 
+        <div className="verifyTrustStrip" aria-label="Prüfinformationen">
+          <div><span>01</span><strong>Status</strong><p>Aktiv, ausgesetzt, abgelaufen oder widerrufen.</p></div>
+          <div><span>02</span><strong>Produktbezug</strong><p>Hersteller und geprüftes Produkt.</p></div>
+          <div><span>03</span><strong>Standardfassung</strong><p>Das angewendete Regelwerk.</p></div>
+          <div><span>04</span><strong>Gültigkeit</strong><p>Ausstellungs- und Gültigkeitszeitraum.</p></div>
+        </div>
+
         <form onSubmit={verify} className="verifySearch">
           <label htmlFor="certificate-id">Zertifizierungs-ID</label>
           <div>
@@ -84,8 +91,8 @@ export default function VerifyPage() {
           <article className={'verificationRecord status-' + state.record.status}>
             <div className="verificationTop">
               <div>
-                <small>STATUS</small>
-                <strong>{statusText[state.record.status] ?? state.record.status}</strong>
+                <small>PRÜFERGEBNIS</small>
+                <strong>Zertifizierungsdatensatz gefunden</strong>
               </div>
               <span className={'statusBadge ' + (state.record.status === 'active' ? 'active' : '')}>{statusText[state.record.status] ?? state.record.status}</span>
             </div>
@@ -104,6 +111,7 @@ export default function VerifyPage() {
               <div><dt>Standard</dt><dd>{state.record.standard_versions?.title ?? state.record.standard_versions?.version ?? '—'}</dd></div>
               <div><dt>Ausgestellt</dt><dd>{state.record.issued_at ? new Date(state.record.issued_at).toLocaleDateString('de-DE') : '—'}</dd></div>
               <div><dt>Gültig bis</dt><dd>{state.record.valid_until ? new Date(state.record.valid_until).toLocaleDateString('de-DE') : '—'}</dd></div>
+              <div><dt>Zuletzt verifiziert</dt><dd>{state.record.last_verified_at ? new Date(state.record.last_verified_at).toLocaleDateString('de-DE') : '—'}</dd></div>
             </dl>
 
             {state.record.public_note && <div className="publicNote"><strong>HINWEIS</strong><p>{state.record.public_note}</p></div>}
