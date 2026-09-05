@@ -41,11 +41,11 @@ const evidence = [
 ];
 
 const process = [
-  ['01', 'Anfrage', 'Produkt, Hersteller und Herstellungsprozess werden für die fachliche Vorprüfung erfasst.'],
-  ['02', 'Zertifizierungsumfang', 'Produkt oder Produktfamilie, Standorte und relevante Fremdfertigung werden eindeutig abgegrenzt.'],
-  ['03', 'Vor-Ort-Audit', 'Herstellung, menschliche Arbeit, Maschineneinsatz, relevante Standorte und Fremdfertigung werden beim Hersteller vor Ort geprüft.'],
-  ['04', 'Bewertung & Entscheidung', 'Auditfeststellungen, Nachweise und offene Punkte werden gegen den Standard bewertet und die Zertifizierungsentscheidung dokumentiert.'],
-  ['05', 'Register & Markennutzung', 'Freigegebene Zertifizierungen erhalten eine ID, öffentlichen Status und klar geregelte Zeichennutzung.'],
+  ['Anfrage', 'Produkt, Hersteller und Herstellungsprozess werden für die fachliche Vorprüfung erfasst.'],
+  ['Zertifizierungsumfang', 'Produkt oder Produktfamilie, Standorte und relevante Fremdfertigung werden eindeutig abgegrenzt.'],
+  ['Vor-Ort-Audit', 'Herstellung, menschliche Arbeit, Maschineneinsatz, relevante Standorte und Fremdfertigung werden beim Hersteller vor Ort geprüft.'],
+  ['Bewertung & Entscheidung', 'Auditfeststellungen, Nachweise und offene Punkte werden gegen den Standard bewertet und die Zertifizierungsentscheidung dokumentiert.'],
+  ['Register & Markennutzung', 'Freigegebene Zertifizierungen erhalten eine ID, öffentlichen Status und klar geregelte Zeichennutzung.'],
 ];
 
 export default function ManufacturerPage() {
@@ -226,9 +226,8 @@ export default function ManufacturerPage() {
           </div>
 
           <div className="manufacturerProcessGrid">
-            {process.map(([number, title, copy]) => (
-              <article key={number}>
-                <span>{number}</span>
+            {process.map(([title, copy]) => (
+              <article key={title}>
                 <strong>{title}</strong>
                 <p>{copy}</p>
               </article>
@@ -254,7 +253,7 @@ export default function ManufacturerPage() {
           </div>
 
           <form className="interestForm certificationRequestForm" onSubmit={submit}>
-            <div className="formSectionLabel"><span>01</span><strong>Unternehmen & Kontakt</strong></div>
+            <div className="formSectionLabel"><strong>Unternehmen & Kontakt</strong></div>
 
             <label>
               Unternehmen *
@@ -277,7 +276,7 @@ export default function ManufacturerPage() {
               <input name="website" value={form.website} onChange={change} placeholder="https://…" />
             </label>
 
-            <div className="formSectionLabel"><span>02</span><strong>Produkt</strong></div>
+            <div className="formSectionLabel"><strong>Produkt</strong></div>
 
             <div className="formTwo">
               <label>
@@ -290,7 +289,7 @@ export default function ManufacturerPage() {
               </label>
             </div>
 
-            <div className="formSectionLabel"><span>03</span><strong>Herstellung</strong></div>
+            <div className="formSectionLabel"><strong>Herstellung</strong></div>
 
             <label>
               Produktionsorte *
@@ -313,7 +312,7 @@ export default function ManufacturerPage() {
               <textarea required name="message" value={form.message} onChange={change} rows="6" placeholder="Welche wesentlichen Herstellungsschritte erfolgen durch Menschen? Welche Maschinen oder automatisierten Teilprozesse werden eingesetzt?" />
             </label>
 
-            <div className="formSectionLabel"><span>04</span><strong>Nachweise</strong></div>
+            <div className="formSectionLabel"><strong>Nachweise</strong></div>
 
             <label>
               Welche Nachweise sind vorhanden?
