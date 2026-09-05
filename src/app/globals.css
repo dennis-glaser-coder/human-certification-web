@@ -2003,3 +2003,528 @@ textarea:focus-visible{
     font-size:28px;
   }
 }
+
+
+/* ===== Premium institutional direction 2026-09-05 ===== */
+.premiumSiteHeader{
+  background:rgba(243,240,232,.965);
+  backdrop-filter:blur(14px);
+}
+.premiumHeaderInner{
+  min-height:74px;
+}
+.premiumBrandLockup{
+  gap:0;
+}
+.premiumBrandLockup .brandName{
+  font-size:12px;
+  letter-spacing:.21em;
+}
+.premiumBrandLockup .brandDescriptor{
+  font-size:7px;
+  letter-spacing:.10em;
+}
+.premiumMainNav{
+  gap:23px;
+}
+.premiumMainNav a{
+  font-size:9px;
+  font-weight:600;
+}
+.premiumMainNav .navVerify{
+  padding:9px 13px;
+  border-color:var(--ink);
+  color:var(--ink);
+}
+.premiumMainNav .navVerify:hover{
+  background:var(--ink);
+  border-color:var(--ink);
+}
+.premiumMobileHeaderActions .mobileVerify{
+  border-color:var(--ink);
+  color:var(--ink);
+}
+
+.premiumHome{
+  background:var(--paper);
+}
+.premiumHero{
+  min-height:690px;
+  display:flex;
+  align-items:stretch;
+  border-bottom:1px solid var(--stone);
+}
+.premiumHeroGrid{
+  display:grid;
+  grid-template-columns:minmax(0,1.28fr) minmax(320px,.72fr);
+  gap:92px;
+  align-items:center;
+}
+.premiumHeroCopy{
+  padding:92px 0 88px;
+}
+.premiumEyebrow,
+.premiumSectionLabel{
+  margin:0 0 26px;
+  color:var(--blue);
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.17em;
+  text-transform:uppercase;
+}
+.premiumHero h1{
+  max-width:770px;
+  margin:0;
+  font-size:clamp(58px,5.7vw,82px);
+  line-height:.99;
+  letter-spacing:-.046em;
+}
+.premiumLead{
+  max-width:680px;
+  margin:32px 0 0;
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.78;
+}
+.premiumHeroLinks{
+  display:flex;
+  gap:30px;
+  margin-top:38px;
+}
+.premiumHeroLinks a,
+.premiumInlineLink{
+  display:inline-block;
+  padding-bottom:4px;
+  border-bottom:1px solid currentColor;
+  color:var(--ink);
+  font-size:10px;
+  font-weight:700;
+  text-decoration:none;
+}
+.premiumHeroLinks a:hover,
+.premiumInlineLink:hover{
+  color:var(--blue);
+}
+.premiumSealField{
+  min-height:515px;
+  padding-left:54px;
+  border-left:1px solid var(--stone);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.premiumSealRule{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding-bottom:12px;
+  border-bottom:1px solid var(--stone);
+  color:var(--muted-soft);
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:.13em;
+}
+.premiumSealField img{
+  width:min(330px,90%);
+  height:auto;
+  margin:38px auto 34px;
+  border-radius:50%;
+}
+.premiumSealField p{
+  max-width:340px;
+  margin:0;
+  color:var(--muted);
+  font-size:9px;
+  line-height:1.65;
+}
+
+.premiumClaim{
+  padding:90px 0 94px;
+  background:var(--white);
+  border-bottom:1px solid var(--stone);
+}
+.premiumClaimGrid{
+  display:grid;
+  grid-template-columns:210px 1fr;
+  gap:74px;
+  align-items:start;
+}
+.premiumClaim blockquote{
+  max-width:900px;
+  margin:0;
+  font-size:clamp(36px,3.8vw,56px);
+  line-height:1.12;
+  letter-spacing:-.035em;
+}
+.premiumClaimGrid>div>p{
+  max-width:700px;
+  margin:28px 0 0;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.75;
+}
+
+.premiumStandard{
+  padding:102px 0 106px;
+  border-bottom:1px solid var(--stone);
+}
+.premiumStandardGrid{
+  display:grid;
+  grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);
+  gap:110px;
+}
+.premiumStandardIntro h2,
+.premiumRegister h2,
+.premiumManufacturer h2{
+  margin:0;
+  font-size:clamp(38px,4vw,56px);
+  line-height:1.06;
+  letter-spacing:-.038em;
+}
+.premiumStandardIntro>p:last-child{
+  max-width:520px;
+  margin:28px 0 0;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.78;
+}
+.premiumPrinciples{
+  border-top:1px solid var(--ink);
+}
+.premiumPrinciple{
+  display:grid;
+  grid-template-columns:180px 1fr;
+  gap:42px;
+  padding:23px 0;
+  border-bottom:1px solid var(--stone);
+}
+.premiumPrinciple span{
+  font-size:10px;
+  font-weight:700;
+}
+.premiumPrinciple p{
+  margin:0;
+  color:var(--muted);
+  font-size:10px;
+  line-height:1.7;
+}
+.premiumPrinciples .premiumInlineLink{
+  margin-top:26px;
+}
+
+.premiumRegister{
+  padding:100px 0 104px;
+  background:var(--ink);
+  color:var(--white);
+}
+.premiumRegisterGrid{
+  display:grid;
+  grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);
+  gap:110px;
+  align-items:start;
+}
+.premiumSectionLabelLight{
+  color:#AFC1D8;
+}
+.premiumRegisterIntro{
+  max-width:540px;
+  margin:28px 0 0;
+  color:rgba(255,255,255,.63);
+  font-size:11px;
+  line-height:1.76;
+}
+.premiumVerify{
+  padding-top:36px;
+}
+.premiumRegister .verifyModule{
+  margin:0;
+  border:0;
+  border-top:1px solid rgba(255,255,255,.48);
+  background:transparent;
+}
+.premiumRegister .verifyModuleHead{
+  min-height:50px;
+  padding:0;
+  border-bottom:1px solid rgba(255,255,255,.20);
+}
+.premiumRegister .verifyModuleForm{
+  padding:22px 0 18px;
+}
+.premiumRegister .verifyModuleForm>div{
+  display:grid;
+  grid-template-columns:1fr 100px;
+}
+.premiumRegister .verifyModuleForm input{
+  height:50px;
+  padding:0 14px;
+}
+.premiumRegister .verifyModuleForm button{
+  width:auto;
+}
+.premiumRegister .verifyModuleFoot{
+  padding:13px 0 0;
+  border-top:0;
+}
+
+.premiumManufacturer{
+  padding:100px 0 104px;
+  border-bottom:1px solid var(--stone);
+}
+.premiumManufacturerGrid{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,.78fr);
+  gap:110px;
+  align-items:start;
+}
+.premiumManufacturerGrid>div:last-child{
+  padding-top:36px;
+}
+.premiumManufacturerGrid>div:last-child p{
+  max-width:560px;
+  margin:0 0 18px;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.78;
+}
+.premiumManufacturerGrid .premiumInlineLink{
+  margin-top:10px;
+}
+
+.premiumClosingLinks{
+  background:var(--white);
+  border-bottom:1px solid var(--stone);
+}
+.premiumClosingLinks .shell{
+  min-height:92px;
+  display:flex;
+  align-items:center;
+  gap:38px;
+}
+.premiumClosingLinks a{
+  color:var(--ink);
+  font-size:9px;
+  font-weight:700;
+  text-decoration:none;
+}
+.premiumClosingLinks a:hover{
+  color:var(--blue);
+}
+
+/* Premium footer */
+.premiumFooter{
+  padding:0;
+  background:var(--ink);
+  color:var(--white);
+}
+.premiumFooterTop{
+  display:grid;
+  grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+  gap:100px;
+  padding:68px 0 64px;
+}
+.premiumFooterBrand strong{
+  display:block;
+  margin-bottom:16px;
+  font-size:13px;
+  letter-spacing:.22em;
+}
+.premiumFooterBrand p{
+  max-width:360px;
+  margin:0;
+  color:rgba(255,255,255,.58);
+  font-family:"Source Serif 4",Georgia,serif;
+  font-size:22px;
+  line-height:1.35;
+}
+.premiumFooterNav{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:44px;
+}
+.premiumFooterNav>div{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:9px;
+}
+.premiumFooterNav span{
+  margin-bottom:8px;
+  color:#AFC1D8;
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:.15em;
+}
+.premiumFooterNav a{
+  color:rgba(255,255,255,.72);
+  font-size:9px;
+  text-decoration:none;
+}
+.premiumFooterNav a:hover{
+  color:var(--white);
+}
+.premiumFooterBottom{
+  min-height:54px;
+  border-top:1px solid rgba(255,255,255,.17);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  color:rgba(255,255,255,.38);
+  font-size:7px;
+  letter-spacing:.10em;
+}
+
+/* Keep older footer layout from affecting the new footer */
+.premiumFooter .footerMain,
+.premiumFooter .footerMeta,
+.premiumFooter .footerBrand,
+.premiumFooter .footerNav{
+  display:none;
+}
+
+@media(max-width:1020px){
+  .premiumMainNav{
+    gap:16px;
+  }
+  .premiumHeroGrid{
+    grid-template-columns:minmax(0,1fr) 300px;
+    gap:50px;
+  }
+  .premiumSealField{
+    padding-left:38px;
+  }
+  .premiumStandardGrid,
+  .premiumRegisterGrid,
+  .premiumManufacturerGrid{
+    gap:64px;
+  }
+  .premiumFooterTop{
+    grid-template-columns:1fr;
+    gap:48px;
+  }
+}
+
+@media(max-width:860px){
+  .premiumMainNav{
+    display:none;
+  }
+  .premiumMobileHeaderActions{
+    display:flex;
+  }
+}
+
+@media(max-width:760px){
+  .premiumHeaderInner{
+    min-height:66px;
+  }
+  .premiumBrandLockup .brandName{
+    font-size:10px;
+  }
+  .premiumBrandLockup .brandDescriptor{
+    font-size:6px;
+  }
+  .premiumHero{
+    min-height:0;
+  }
+  .premiumHeroGrid,
+  .premiumClaimGrid,
+  .premiumStandardGrid,
+  .premiumRegisterGrid,
+  .premiumManufacturerGrid{
+    grid-template-columns:1fr;
+    gap:0;
+  }
+  .premiumHeroCopy{
+    padding:64px 0 48px;
+  }
+  .premiumHero h1{
+    font-size:46px;
+  }
+  .premiumLead{
+    margin-top:24px;
+    font-size:13px;
+  }
+  .premiumHeroLinks{
+    margin-top:30px;
+    gap:22px;
+  }
+  .premiumSealField{
+    min-height:0;
+    padding:34px 0 54px;
+    border-left:0;
+    border-top:1px solid var(--stone);
+  }
+  .premiumSealField img{
+    width:220px;
+    margin:28px auto 24px;
+  }
+  .premiumClaim,
+  .premiumStandard,
+  .premiumRegister,
+  .premiumManufacturer{
+    padding:64px 0 68px;
+  }
+  .premiumClaimGrid{
+    gap:22px;
+  }
+  .premiumClaim blockquote{
+    font-size:34px;
+  }
+  .premiumStandardIntro{
+    margin-bottom:38px;
+  }
+  .premiumPrinciple{
+    grid-template-columns:1fr;
+    gap:8px;
+    padding:18px 0;
+  }
+  .premiumRegisterIntro{
+    margin-top:22px;
+  }
+  .premiumVerify,
+  .premiumManufacturerGrid>div:last-child{
+    padding-top:38px;
+  }
+  .premiumClosingLinks .shell{
+    min-height:0;
+    padding:26px 0;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:15px;
+  }
+  .premiumFooterTop{
+    padding:52px 0 48px;
+  }
+  .premiumFooterNav{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+  .premiumFooterBottom{
+    min-height:0;
+    padding:18px 0;
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  .premiumMobileMenu{
+    top:66px;
+  }
+}
+
+@media(max-width:480px){
+  .premiumHero h1{
+    font-size:40px;
+  }
+  .premiumClaim blockquote{
+    font-size:30px;
+  }
+  .premiumRegister .verifyModuleForm>div{
+    grid-template-columns:1fr;
+  }
+  .premiumRegister .verifyModuleForm input{
+    border-right:1px solid rgba(255,255,255,.40);
+    border-bottom:0;
+  }
+  .premiumRegister .verifyModuleForm button{
+    height:44px;
+  }
+}
