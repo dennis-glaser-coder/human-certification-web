@@ -7,6 +7,7 @@ import SiteFooter from '../../components/SiteFooter';
 import { getSupabaseBrowserClient } from '../../lib/supabase';
 
 const statusText = {
+  under_review: 'In Prüfung',
   active: 'Aktiv',
   suspended: 'Ausgesetzt',
   expired: 'Abgelaufen',
@@ -39,7 +40,7 @@ export default function VerifyPage() {
 
     const { data, error } = await supabase
       .from('certifications')
-      .select('public_id,status,issued_at,valid_until,last_verified_at,public_note,products(name,manufacturers(name)),standard_versions(version,title)')
+      .select('public_id,status,issued_at,valid_until,last_verified_at,public_note,certification_scope,production_locations,products(name,manufacturers(name)),standard_versions(version,title)')
       .eq('public_id', publicId)
       .maybeSingle();
 
@@ -70,9 +71,9 @@ export default function VerifyPage() {
         </div>
 
         <div className="verifyTrustStrip" aria-label="Prüfinformationen">
-          <div><span>01</span><strong>Status</strong><p>Aktiv, ausgesetzt, abgelaufen oder widerrufen.</p></div>
-          <div><span>02</span><strong>Produktbezug</strong><p>Hersteller und geprüftes Produkt.</p></div>
-          <div><span>03</span><strong>Standardfassung</strong><p>Das angewendete Regelwerk.</p></div>
+          <div><span>01</span><strong>Status</strong><p>In Prüfung, aktiv, ausgesetzt, abgelaufen oder widerrufen.</p></div>
+          <div><span>02</span><strong>Produktbezug</strong><p>Hersteller, Produkt und Zertifizierungsumfang.</p></div>
+          <div><span>03</span><strong>Produktion & Standard</strong><p>Relevante Standorte und angewendetes Regelwerk.</p></div>
           <div><span>04</span><strong>Gültigkeit</strong><p>Ausstellungs- und Gültigkeitszeitraum.</p></div>
         </div>
 
@@ -94,7 +95,7 @@ export default function VerifyPage() {
                 <small>PRÜFERGEBNIS</small>
                 <strong>Zertifizierungsdatensatz gefunden</strong>
               </div>
-              <span className={'statusBadge ' + (state.record.status === 'active' ? 'active' : '')}>{statusText[state.record.status] ?? state.record.status}</span>
+              <span className={'statusBadge status-' + state.record.status + (state.record.status === 'active' ? ' active' : '')}>{statusText[state.record.status] ?? state.record.status}</span>
             </div>
 
             <div className="verificationIdentity">
@@ -108,6 +109,8 @@ export default function VerifyPage() {
             <dl className="verificationDetails">
               <div><dt>Hersteller</dt><dd>{state.record.products?.manufacturers?.name ?? '—'}</dd></div>
               <div><dt>Produkt</dt><dd>{state.record.products?.name ?? '—'}</dd></div>
+              <div><dt>Zertifizierungsumfang</dt><dd>{state.record.certification_scope ?? '—'}</dd></div>
+              <div><dt>Produktionsstandorte</dt><dd>{state.record.production_locations?.length ? state.record.production_locations.join(' · ') : '—'}</dd></div>
               <div><dt>Standard</dt><dd>{state.record.standard_versions?.title ?? state.record.standard_versions?.version ?? '—'}</dd></div>
               <div><dt>Ausgestellt</dt><dd>{state.record.issued_at ? new Date(state.record.issued_at).toLocaleDateString('de-DE') : '—'}</dd></div>
               <div><dt>Gültig bis</dt><dd>{state.record.valid_until ? new Date(state.record.valid_until).toLocaleDateString('de-DE') : '—'}</dd></div>
