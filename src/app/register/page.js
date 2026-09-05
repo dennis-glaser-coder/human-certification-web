@@ -117,7 +117,7 @@ export default function RegisterPage() {
                 <span className={'statusBadge status-' + record.status + (record.status === 'active' ? ' active' : '')}>{labels[record.status] ?? record.status}</span>
                 <em>{formatDate(record.valid_until)}</em>
               </div>
-              <Link href={'/c/' + encodeURIComponent(record.public_id)} aria-label={record.public_id + ' öffnen'}>Datensatz →</Link>
+              <Link href={'/zertifikat?id=' + encodeURIComponent(record.public_id)} aria-label={record.public_id + ' öffnen'}>Datensatz →</Link>
             </article>
           ))}
         </div>
