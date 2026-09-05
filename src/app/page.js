@@ -17,11 +17,11 @@ const auditChecks = [
 ];
 
 const certificationSteps = [
-  ['01', 'Anfrage & Vorprüfung', 'Produkt und Herstellungsprozess werden eingeordnet und der mögliche Zertifizierungsumfang abgegrenzt.'],
-  ['02', 'Vorbereitung', 'Relevante Produktionsinformationen, Standorte und vorhandene Nachweise werden für die Prüfung zusammengestellt.'],
-  ['03', 'Vor-Ort-Audit', 'Die tatsächliche Herstellung wird beim Hersteller vor Ort geprüft – dort, wo das Produkt entsteht.'],
-  ['04', 'Bewertung & Entscheidung', 'Auditfeststellungen und Nachweise werden gegen den Standard bewertet und die Entscheidung dokumentiert.'],
-  ['05', 'Zeichen & Register', 'Bei positiver Entscheidung erhält das Produkt eine Zertifizierungs-ID, QR-Verifizierung und einen öffentlichen Registerdatensatz.'],
+  ['Anfrage & Vorprüfung', 'Produkt und Herstellungsprozess werden eingeordnet und der mögliche Zertifizierungsumfang abgegrenzt.'],
+  ['Vorbereitung', 'Relevante Produktionsinformationen, Standorte und vorhandene Nachweise werden für die Prüfung zusammengestellt.'],
+  ['Vor-Ort-Audit', 'Die tatsächliche Herstellung wird beim Hersteller vor Ort geprüft – dort, wo das Produkt entsteht.'],
+  ['Bewertung & Entscheidung', 'Auditfeststellungen und Nachweise werden gegen den Standard bewertet und die Entscheidung dokumentiert.'],
+  ['Zeichen & Register', 'Bei positiver Entscheidung erhält das Produkt eine Zertifizierungs-ID, QR-Verifizierung und einen öffentlichen Registerdatensatz.'],
 ];
 
 const communicationPoints = [
@@ -182,9 +182,8 @@ export default function Home() {
           </div>
 
           <div className="salesProcessGrid">
-            {certificationSteps.map(([number, title, copy]) => (
-              <article key={number}>
-                <span>{number}</span>
+            {certificationSteps.map(([title, copy]) => (
+              <article key={title}>
                 <strong>{title}</strong>
                 <p>{copy}</p>
               </article>
