@@ -5161,3 +5161,393 @@ textarea:focus-visible{
     font-size:18px;
   }
 }
+
+
+/* ===== Mark use & procedure institutional pass 2026-09-05 ===== */
+.markUseMetaBand,
+.procedureMetaBand{
+  background:var(--paper);
+  border-bottom:1px solid var(--stone);
+}
+.markUseMetaGrid,
+.procedureMetaGrid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+}
+.markUseMetaGrid>div,
+.procedureMetaGrid>div{
+  min-height:116px;
+  padding:20px 22px 18px 0;
+  border-right:1px solid var(--stone);
+}
+.markUseMetaGrid>div:not(:first-child),
+.procedureMetaGrid>div:not(:first-child){
+  padding-left:22px;
+}
+.markUseMetaGrid>div:last-child,
+.procedureMetaGrid>div:last-child{
+  border-right:0;
+}
+.markUseMetaGrid span,
+.procedureMetaGrid span{
+  display:block;
+  margin-bottom:22px;
+  color:var(--blue);
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:.13em;
+}
+.markUseMetaGrid strong,
+.procedureMetaGrid strong{
+  display:block;
+  margin-bottom:7px;
+  font-size:10px;
+}
+.markUseMetaGrid p,
+.procedureMetaGrid p{
+  margin:0;
+  color:var(--muted);
+  font-size:9px;
+  line-height:1.55;
+}
+
+.markUseRules,
+.procedureSection{
+  padding-top:88px;
+  padding-bottom:94px;
+}
+.markUseRuleGrid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:2px solid var(--ink);
+}
+.markUseRuleGrid article{
+  min-height:190px;
+  padding:22px 26px 20px 0;
+  border-right:1px solid var(--stone);
+  border-bottom:1px solid var(--stone);
+}
+.markUseRuleGrid article:nth-child(3n){
+  border-right:0;
+}
+.markUseRuleGrid article:not(:nth-child(3n+1)){
+  padding-left:26px;
+}
+.markUseRuleGrid span{
+  display:block;
+  margin-bottom:34px;
+  color:var(--blue);
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:.13em;
+}
+.markUseRuleGrid strong{
+  display:block;
+  margin-bottom:11px;
+  font-size:11px;
+}
+.markUseRuleGrid p{
+  margin:0;
+  color:var(--muted);
+  font-size:10px;
+  line-height:1.65;
+}
+
+.markUseApplications{
+  padding:88px 0 94px;
+  background:var(--white);
+  border-top:1px solid var(--stone);
+  border-bottom:1px solid var(--stone);
+}
+.markUseApplicationGrid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:2px solid var(--ink);
+}
+.markUseApplicationGrid article{
+  min-height:180px;
+  padding:22px 24px 20px 0;
+  border-right:1px solid var(--stone);
+  border-bottom:1px solid var(--stone);
+}
+.markUseApplicationGrid article:not(:first-child){
+  padding-left:24px;
+}
+.markUseApplicationGrid article:last-child{
+  border-right:0;
+}
+.markUseApplicationGrid strong{
+  display:block;
+  margin-bottom:12px;
+  font-size:11px;
+}
+.markUseApplicationGrid p{
+  margin:0;
+  color:var(--muted);
+  font-size:10px;
+  line-height:1.65;
+}
+
+.markUseProhibited{
+  padding:90px 0 96px;
+  background:var(--ink);
+  color:var(--white);
+}
+.markUseProhibitedGrid{
+  display:grid;
+  grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);
+  gap:110px;
+  align-items:start;
+}
+.markUseProhibited h2{
+  margin:16px 0 0;
+  max-width:560px;
+  font-size:clamp(38px,4vw,54px);
+  line-height:1.05;
+}
+.markUseProhibited .sectionNo{
+  color:rgba(255,255,255,.52);
+}
+.markUseProhibitedList{
+  border-top:1px solid rgba(255,255,255,.55);
+}
+.markUseProhibitedList article{
+  display:grid;
+  grid-template-columns:52px 1fr;
+  gap:10px;
+  padding:21px 0;
+  border-bottom:1px solid rgba(255,255,255,.18);
+}
+.markUseProhibitedList article>span{
+  color:#AFC1D8;
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.12em;
+}
+.markUseProhibitedList strong{
+  display:block;
+  margin-bottom:8px;
+  font-size:11px;
+}
+.markUseProhibitedList p{
+  margin:0;
+  color:rgba(255,255,255,.62);
+  font-size:10px;
+  line-height:1.65;
+}
+
+.procedureSection{
+  padding-top:88px;
+}
+.procedureGrid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:2px solid var(--ink);
+}
+.procedureGrid article{
+  min-height:440px;
+  padding:26px 30px 24px 0;
+  border-right:1px solid var(--stone);
+  border-bottom:1px solid var(--stone);
+}
+.procedureGrid article:not(:first-child){
+  padding-left:30px;
+}
+.procedureGrid article:last-child{
+  border-right:0;
+}
+.procedureGrid article>span{
+  color:var(--blue);
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:.12em;
+}
+.procedureGrid h2{
+  margin:18px 0 16px;
+  font-size:28px;
+  line-height:1.1;
+}
+.procedureGrid>article>p{
+  color:var(--muted);
+  font-size:10px;
+  line-height:1.7;
+}
+.procedureGrid ol{
+  margin:24px 0 0;
+  padding:0;
+  list-style:none;
+  counter-reset:steps;
+}
+.procedureGrid li{
+  counter-increment:steps;
+  position:relative;
+  padding:10px 0 10px 30px;
+  border-top:1px solid var(--stone);
+  color:var(--muted);
+  font-size:9px;
+  line-height:1.55;
+}
+.procedureGrid li::before{
+  content:counter(steps, decimal-leading-zero);
+  position:absolute;
+  left:0;
+  top:10px;
+  color:var(--blue);
+  font-size:7px;
+  font-weight:700;
+}
+
+.procedureIntegrity{
+  padding:88px 0 94px;
+  background:var(--ink);
+  color:var(--white);
+}
+.procedureIntegrityGrid{
+  display:grid;
+  grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);
+  gap:100px;
+  align-items:start;
+}
+.procedureIntegrity h2{
+  margin:16px 0 0;
+  max-width:560px;
+  font-size:clamp(38px,4vw,52px);
+  line-height:1.05;
+}
+.procedureIntegrity p{
+  max-width:700px;
+  color:rgba(255,255,255,.64);
+  font-size:11px;
+  line-height:1.78;
+}
+
+.procedureRecord{
+  padding:88px 0 94px;
+  background:var(--white);
+  border-bottom:1px solid var(--stone);
+}
+.procedureRecordGrid{
+  display:grid;
+  grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);
+  gap:100px;
+  align-items:start;
+}
+.procedureRecord h2{
+  margin:14px 0 0;
+  max-width:560px;
+  font-size:clamp(36px,3.8vw,50px);
+  line-height:1.06;
+}
+.procedureRecordList{
+  border-top:1px solid var(--ink);
+}
+.procedureRecordList article{
+  display:grid;
+  grid-template-columns:52px 1fr;
+  gap:12px;
+  padding:18px 0;
+  border-bottom:1px solid var(--stone);
+}
+.procedureRecordList article>span{
+  color:var(--blue);
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.12em;
+}
+.procedureRecordList strong{
+  display:block;
+  margin-bottom:7px;
+  font-size:11px;
+}
+.procedureRecordList p{
+  margin:0;
+  color:var(--muted);
+  font-size:10px;
+  line-height:1.6;
+}
+
+@media(max-width:1020px){
+  .markUseMetaGrid,
+  .procedureMetaGrid,
+  .markUseApplicationGrid{
+    grid-template-columns:1fr 1fr;
+  }
+  .markUseRuleGrid{
+    grid-template-columns:1fr 1fr;
+  }
+  .procedureGrid{
+    grid-template-columns:1fr;
+  }
+  .procedureGrid article,
+  .procedureGrid article:not(:first-child){
+    min-height:0;
+    padding:24px 0;
+    border-right:0;
+  }
+}
+
+@media(max-width:760px){
+  .markUseMetaGrid,
+  .procedureMetaGrid,
+  .markUseRuleGrid,
+  .markUseApplicationGrid,
+  .markUseProhibitedGrid,
+  .procedureIntegrityGrid,
+  .procedureRecordGrid{
+    grid-template-columns:1fr;
+  }
+
+  .markUseMetaGrid>div,
+  .markUseMetaGrid>div:not(:first-child),
+  .procedureMetaGrid>div,
+  .procedureMetaGrid>div:not(:first-child),
+  .markUseRuleGrid article,
+  .markUseRuleGrid article:not(:nth-child(3n+1)),
+  .markUseApplicationGrid article,
+  .markUseApplicationGrid article:not(:first-child){
+    min-height:0;
+    padding:17px 0;
+    border-right:0;
+    border-bottom:1px solid var(--stone);
+  }
+
+  .markUseMetaGrid span,
+  .procedureMetaGrid span{
+    margin-bottom:7px;
+  }
+
+  .markUseRules,
+  .markUseApplications,
+  .procedureSection,
+  .procedureRecord{
+    padding-top:64px;
+    padding-bottom:68px;
+  }
+
+  .markUseRuleGrid span{
+    margin-bottom:12px;
+  }
+
+  .markUseProhibited,
+  .procedureIntegrity{
+    padding-top:68px;
+    padding-bottom:72px;
+  }
+
+  .markUseProhibitedGrid,
+  .procedureIntegrityGrid,
+  .procedureRecordGrid{
+    gap:32px;
+  }
+
+  .markUseProhibited h2,
+  .procedureIntegrity h2,
+  .procedureRecord h2{
+    font-size:35px;
+  }
+
+  .markUseProhibitedList article,
+  .procedureRecordList article{
+    grid-template-columns:38px 1fr;
+  }
+}
