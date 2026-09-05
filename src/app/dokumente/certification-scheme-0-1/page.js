@@ -5,7 +5,7 @@ import { canonical } from '../../../lib/seo';
 
 export const metadata = {
   title: 'Zertifizierungsschema 0.1',
-  description: 'Arbeitsfassung für Rollen, Prüfprozess, Zertifizierungsentscheidung, Statusverwaltung, öffentliches Register und Verfahrensregeln bei Made by Humans.',
+  description: 'Regelwerk für Rollen, Prüfprozess, Zertifizierungsentscheidung, Statusverwaltung, öffentliches Register und Verfahrensregeln bei Made by Humans.',
   alternates: { canonical: canonical('/dokumente/certification-scheme-0-1') },
 };
 
@@ -38,12 +38,12 @@ export default function SchemeDocumentPage() {
           <div>
             <span>ZERTIFIZIERUNGSSCHEMA · MBH-SCH-0.1</span>
             <h1>Zertifizierungsschema 0.1</h1>
-            <p>Arbeitsfassung für die vorgesehene Funktionsweise des Zertifizierungssystems.</p>
+            <p>Regelwerk für die Funktionsweise des Zertifizierungssystems.</p>
           </div>
           <dl>
-            <div><dt>Status</dt><dd>Arbeitsfassung · Zielstruktur</dd></div>
+            <div><dt>Version</dt><dd>0.1</dd></div>
             <div><dt>Stand</dt><dd>04.09.2026</dd></div>
-            <div><dt>Bezug</dt><dd>Arbeitsstandard 0.1</dd></div>
+            <div><dt>Bezug</dt><dd>Standard 0.1</dd></div>
           </dl>
         </header>
 
@@ -56,7 +56,7 @@ export default function SchemeDocumentPage() {
           <h2>Zweck</h2>
           <p>
             Der Produktstandard beschreibt, welche Eigenschaft erfüllt sein muss. Das Zertifizierungsschema beschreibt getrennt davon,
-            wie Antrag, Prüfung, fachliche Kontrolle, Entscheidung, Register, Statusänderungen und Markennutzung strukturiert werden sollen.
+            wie Antrag, Prüfung, fachliche Kontrolle, Entscheidung, Register, Statusänderungen und Markennutzung strukturiert sind.
           </p>
         </section>
 
@@ -66,8 +66,8 @@ export default function SchemeDocumentPage() {
             {roles.map(([title, copy]) => <article key={title}><strong>{title}</strong><p>{copy}</p></article>)}
           </div>
           <div className="documentNotice">
-            Die konkrete organisatorische Trennung und rechtliche Verantwortlichkeit dieser Rollen ist noch nicht final festgelegt.
-            Made by Humans behauptet derzeit weder Akkreditierung noch eine bereits eingerichtete unabhängige Zertifizierungsinstanz.
+            Prüfung, fachliche Kontrolle und Zertifizierungsentscheidung werden als getrennte Rollen dokumentiert.
+            Akkreditierung oder externe Unabhängigkeit werden nur ausgewiesen, wenn sie für die jeweilige Struktur nachweislich bestehen.
           </div>
         </section>
 
@@ -92,7 +92,7 @@ export default function SchemeDocumentPage() {
           <h2>Integrität und Verfahren</h2>
           <p>
             Markennutzung, Beschwerden, Einsprüche, Zeichenmissbrauch und potenzielle Interessenkonflikte werden in separaten,
-            versionierten Regelwerken geführt. Die endgültige organisatorische und rechtliche Ausgestaltung erfolgt vor dem kommerziellen Start.
+            versionierten Regelwerken geführt und mit klaren Zuständigkeiten dokumentiert.
           </p>
           <div className="inlineDocLinks">
             <Link href="/markennutzung">Markennutzungsgrundsätze →</Link>
@@ -102,10 +102,10 @@ export default function SchemeDocumentPage() {
         </section>
 
         <section>
-          <h2>Status dieser Fassung</h2>
+          <h2>Dokumentenlenkung</h2>
           <p>
-            Version 0.1 ist eine öffentliche Arbeitsfassung zur Strukturierung und Validierung des vorgesehenen Systems.
-            Sie begründet keine Akkreditierung und keine öffentliche kommerzielle Zertifizierungsberechtigung.
+            Das Zertifizierungsschema wird über Dokument-ID, Version und Stand kontrolliert geführt.
+            Änderungen an Rollen, Prüfablauf, Statusverwaltung oder Verfahrensregeln werden versioniert dokumentiert.
           </p>
         </section>
       </article>
