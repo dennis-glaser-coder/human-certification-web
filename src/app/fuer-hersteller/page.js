@@ -152,11 +152,6 @@ export default function ManufacturerPage() {
                 <p>{copy}</p>
               </article>
             ))}
-            </div>
-            <div className="manufacturerGuideLinks">
-              <a href="/leitfaden/nachweise">Leitfaden Prüfnachweise →</a>
-              <a href="/leitfaden/zertifizierungsumfang">Leitfaden Zertifizierungsumfang →</a>
-            </div>
           </div>
         </div>
       </section>
@@ -201,15 +196,20 @@ export default function ManufacturerPage() {
 
           <div>
             <div className="manufacturerEvidenceList">
-            {evidence.map(([title, copy], index) => (
-              <article key={title}>
-                <span>{String(index + 1).padStart(2, '0')}</span>
-                <div>
-                  <strong>{title}</strong>
-                  <p>{copy}</p>
-                </div>
-              </article>
-            ))}
+              {evidence.map(([title, copy], index) => (
+                <article key={title}>
+                  <span>{String(index + 1).padStart(2, '0')}</span>
+                  <div>
+                    <strong>{title}</strong>
+                    <p>{copy}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <div className="manufacturerGuideLinks">
+              <a href="/leitfaden/nachweise">Leitfaden Prüfnachweise →</a>
+              <a href="/leitfaden/zertifizierungsumfang">Leitfaden Zertifizierungsumfang →</a>
+            </div>
           </div>
         </div>
       </section>
