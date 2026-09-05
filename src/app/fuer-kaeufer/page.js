@@ -2,6 +2,7 @@ import Link from 'next/link';
 import SiteHeader from '../../components/SiteHeader';
 import SiteFooter from '../../components/SiteFooter';
 import { canonical } from '../../lib/seo';
+import { CERTIFIED_STATEMENT } from '../../lib/brand';
 
 export const metadata = {
   title: 'Für Käufer – Was bedeutet Made by Humans?',
@@ -15,7 +16,7 @@ export const metadata = {
 };
 
 const says = [
-  ['Menschliche Herstellung', 'Wesentliche produktprägende Herstellungsschritte werden nachweislich durch Menschen ausgeführt.'],
+  ['Menschliche Herstellung', CERTIFIED_STATEMENT],
   ['Vor-Ort-Prüfung', 'Die tatsächliche Herstellung wird beim Hersteller vor Ort nachvollzogen.'],
   ['Klarer Produktbezug', 'Die Aussage gilt nur für den veröffentlichten Zertifizierungsumfang.'],
   ['Öffentliche Verifizierung', 'Status, Produktbezug, Standardfassung und relevante Produktionsstandorte können über ID oder QR geprüft werden.'],
@@ -70,7 +71,7 @@ export default function BuyerPage() {
         <div className="shell">
           <div className="buyerMeaningLead">
             <p className="premiumSectionLabel">WAS DAS ZEICHEN AUSSAGT</p>
-            <h2>Eine einfache Aussage mit einem überprüfbaren Hintergrund.</h2>
+            <h2>Was die Zertifizierung konkret aussagt.</h2>
           </div>
           <div className="buyerMeaningGrid">
             {says.map(([title, copy]) => (
@@ -99,7 +100,7 @@ export default function BuyerPage() {
           </div>
           <div className="buyerVerifyCopy">
             <p className="premiumSectionLabel premiumSectionLabelLight">QR & ZERTIFIZIERUNGS-ID</p>
-            <h2>Nicht nur glauben. Selbst nachsehen.</h2>
+            <h2>Zertifizierungsstatus und Produktbezug lassen sich öffentlich prüfen.</h2>
             <p>
               Eine veröffentlichte Zertifizierung lässt sich über QR-Code oder Zertifizierungs-ID prüfen.
               Der öffentliche Datensatz zeigt, für welches Produkt die Aussage gilt und welchen aktuellen Status sie hat.
@@ -158,7 +159,7 @@ export default function BuyerPage() {
         <div className="shell buyerFaqGrid">
           <div>
             <p className="premiumSectionLabel">HÄUFIGE FRAGEN</p>
-            <h2>Kurz erklärt.</h2>
+            <h2>Häufige Fragen zur Kennzeichnung.</h2>
           </div>
           <div className="buyerFaqList">
             {faq.map(([question, answer]) => (
@@ -173,7 +174,7 @@ export default function BuyerPage() {
 
       <section className="buyerFinal">
         <div className="shell buyerFinalGrid">
-          <div><p className="premiumSectionLabel premiumSectionLabelLight">VERIFIZIERUNG</p><h2>Sie haben ein Made by Humans Zeichen vor sich?</h2></div>
+          <div><p className="premiumSectionLabel premiumSectionLabelLight">VERIFIZIERUNG</p><h2>Zertifizierung über ID oder QR prüfen.</h2></div>
           <div><p>Prüfen Sie die Zertifizierungs-ID oder den QR-Code gegen den öffentlichen Datensatz.</p><Link className="desireFinalButton" href="/pruefen">Zertifizierung prüfen</Link></div>
         </div>
       </section>
