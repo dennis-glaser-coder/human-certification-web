@@ -58,11 +58,11 @@ export default function RegisterPage() {
       <SiteHeader />
 
       <section className="pageHero shell registerHero">
-        <div className="eyebrow">PUBLIC REGISTER</div>
-        <h1>Öffentliche Zertifizierungsdaten.</h1>
+        <div className="eyebrow">ÖFFENTLICHES REGISTER</div>
+        <h1>Zertifizierungen öffentlich prüfen.</h1>
         <p className="lead">
-          Über das Register lassen sich Zertifizierungs-ID, Hersteller, Produkt und aktueller Status
-          eines veröffentlichten Datensatzes prüfen.
+          Über das Register lassen sich Zertifizierungs-ID, Hersteller, Produkt, zugrunde liegende Standardfassung
+          und aktueller Status eines veröffentlichten Datensatzes nachvollziehen.
         </p>
       </section>
 
