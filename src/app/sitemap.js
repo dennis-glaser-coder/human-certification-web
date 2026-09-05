@@ -8,6 +8,7 @@ export default function sitemap() {
   return [
     { url: canonical('/'), lastModified, changeFrequency: 'weekly', priority: 1 },
     { url: canonical('/standard'), lastModified, changeFrequency: 'monthly', priority: 0.9 },
+    { url: canonical('/warum-made-by-humans'), lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: canonical('/fuer-hersteller'), lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: canonical('/register'), lastModified, changeFrequency: 'daily', priority: 0.9 },
     { url: canonical('/pruefen'), lastModified, changeFrequency: 'monthly', priority: 0.8 },
