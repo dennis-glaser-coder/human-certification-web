@@ -15,19 +15,16 @@ export const metadata = {
 };
 
 const manufacturerBenefits = [
-  ['Differenzierung sichtbar machen', 'Wenn menschliche Arbeit Ihr Produkt tatsächlich prägt, wird dieser Unterschied nicht nur behauptet, sondern am Produkt sichtbar und überprüfbar.'],
+  ['Differenzierung sichtbar machen', 'Wenn menschliche Arbeit Ihr Produkt prägt, wird dieser Unterschied am Produkt sichtbar und überprüfbar.'],
   ['Eigenclaim durch Nachweis ersetzen', 'Statt ausschließlich selbst mit Begriffen wie „handgemacht“ oder „manufakturgefertigt“ zu werben, können Sie auf eine definierte Prüfung verweisen.'],
-  ['Wertigkeit besser erklären', 'Das Zeichen schafft einen konkreten Anknüpfungspunkt, um auf Verpackung, Produktseite und im Verkauf zu erklären, warum Ihr Herstellungsprozess besonders ist.'],
-  ['Vertrieb unterstützen', 'Eine verifizierbare Zertifizierung kann im B2C- und B2B-Vertrieb als zusätzlicher, klar verständlicher Produktnachweis eingesetzt werden.'],
-  ['Produktgeschichte konkretisieren', 'Aus einer allgemeinen Markenstory wird eine produktbezogene Aussage mit geprüftem Umfang, Produktionsstandorten und nachvollziehbarem Status.'],
-  ['Vertrauen langfristig absichern', 'Register, QR-Code, Standardversion und Status sorgen dafür, dass die Aussage auch nach dem Kauf oder im Geschäftskontakt überprüft werden kann.'],
+  ['Wertigkeit erklären', 'Die Zertifizierung schafft einen konkreten Bezug, um den Herstellungsprozess auf Verpackung, Produktseite und im Vertrieb verständlich zu erklären.'],
+  ['Vertrieb und Vertrauen unterstützen', 'Zertifizierungs-ID, Register und klar geregelte Markennutzung machen die Aussage im B2C- und B2B-Kontext nachvollziehbar.'],
 ];
 
 const customerBenefits = [
-  ['Schneller verstehen', 'Käufer erkennen, dass menschliche Arbeit ein wesentlicher Bestandteil der Herstellung des konkret gekennzeichneten Produktes ist.'],
-  ['Nicht nur glauben müssen', 'Die Aussage kommt nicht allein aus der Produktwerbung: Zertifizierungs-ID und QR-Code führen zu einem öffentlichen Datensatz.'],
-  ['Bewusster vergleichen', 'Wer menschliche Herstellung gezielt berücksichtigen möchte, erhält dafür eine klar abgegrenzte und nachvollziehbare Information.'],
-  ['Umfang prüfen', 'Der öffentliche Datensatz zeigt, welches Produkt oder welche Produktfamilie tatsächlich vom Zertifizierungsumfang erfasst ist.'],
+  ['Schnell verstehen', 'Käufer erkennen, dass menschliche Arbeit ein wesentlicher Bestandteil der Herstellung des konkret gekennzeichneten Produktes ist.'],
+  ['Öffentlich prüfen', 'Zertifizierungs-ID und QR-Code führen zum öffentlichen Datensatz mit Produktbezug und aktuellem Status.'],
+  ['Umfang einordnen', 'Der Datensatz zeigt, welches Produkt oder welche Produktfamilie tatsächlich von der Zertifizierung erfasst ist.'],
 ];
 
 const claimComparison = [
@@ -35,12 +32,6 @@ const claimComparison = [
   ['Made by Humans', 'Definierte produktbezogene Aussage', 'Vor-Ort-Audit und dokumentierte Bewertung', 'ID, QR und öffentlicher Registerdatensatz'],
 ];
 
-const useCases = [
-  ['Verpackung', 'Das Zeichen macht die geprüfte menschliche Herstellung direkt am physischen Produkt sichtbar.'],
-  ['Produktseite', 'Die Aussage kann online erklärt und unmittelbar mit dem öffentlichen Datensatz verknüpft werden.'],
-  ['Point of Sale', 'Ein verständliches Zeichen hilft, einen komplexen Herstellungsprozess in einer klaren Aussage zu verdichten.'],
-  ['B2B & Handel', 'Kataloge, Datenblätter und Verkaufsunterlagen können auf eine verifizierbare Produktzertifizierung verweisen.'],
-];
 
 export default function WhyPage() {
   const assetBase = process.env.GITHUB_PAGES === 'true' ? '/human-certification-web' : '';
@@ -54,7 +45,7 @@ export default function WhyPage() {
           <div className="whyHeroCopy">
             <p className="premiumEyebrow">WARUM MADE BY HUMANS?</p>
             <div className="brandTrace" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
-            <h1>Menschliche Herstellung ist ein Unterschied. Machen Sie ihn sichtbar.</h1>
+            <h1>Menschliche Herstellung sichtbar und überprüfbar machen.</h1>
             <p className="whyHeroLead">
               Wenn Menschen ein Produkt wesentlich prägen, sollte diese Leistung nicht in einer allgemeinen
               Werbeaussage verschwinden. Made by Humans macht den Unterschied sichtbar, prüfbar und verständlich –
@@ -95,7 +86,7 @@ export default function WhyPage() {
         <div className="shell whyThesisGrid">
           <p className="premiumSectionLabel">DER KERN</p>
           <div>
-            <h2>Menschliche Herstellung kann einen Wert haben. Aber nur, wenn man sie glaubwürdig erklären kann.</h2>
+            <h2>Menschliche Herstellung gewinnt an Wert, wenn sie nachvollziehbar belegt ist.</h2>
             <p>
               Viele Marken investieren bewusst in eigene Fertigung, Facharbeit, handwerkliche Prozesse
               oder menschlich geprägte Produktion. Nach außen bleibt davon oft nur ein unscharfer Begriff.
@@ -115,7 +106,7 @@ export default function WhyPage() {
           <div className="whySectionHead">
             <div>
               <p className="premiumSectionLabel">VORTEILE FÜR HERSTELLER</p>
-              <h2>Aus tatsächlicher menschlicher Arbeit wird ein belastbares Verkaufsargument.</h2>
+              <h2>Geprüfte menschliche Herstellung schafft ein belastbares Differenzierungsmerkmal.</h2>
             </div>
             <p>
               Die Zertifizierung ersetzt keine gute Marke und kein gutes Produkt.
@@ -139,7 +130,7 @@ export default function WhyPage() {
         <div className="shell whyCustomersGrid">
           <div className="whyCustomersIntro">
             <p className="premiumSectionLabel premiumSectionLabelLight">VORTEILE FÜR KÄUFER</p>
-            <h2>Ein Zeichen, das nicht nur Aufmerksamkeit erzeugt, sondern Orientierung gibt.</h2>
+            <h2>Für Käufer entsteht eine klar überprüfbare Information.</h2>
             <p>
               Käufer müssen nicht verstehen, wie jede Fertigungsstufe technisch funktioniert.
               Sie sollen aber nachvollziehen können, was die Kennzeichnung bedeutet –
@@ -168,7 +159,7 @@ export default function WhyPage() {
           <div className="whySectionHead">
             <div>
               <p className="premiumSectionLabel">WARUM NICHT EINFACH „HANDGEMACHT“?</p>
-              <h2>Eine eigene Werbeaussage und eine geprüfte Aussage sind nicht dasselbe.</h2>
+              <h2>Eine geprüfte Aussage ist klarer als eine eigene Werbeaussage.</h2>
             </div>
             <p>
               Begriffe wie „handgemacht“, „handcrafted“ oder „manufakturgefertigt“ können sinnvoll sein,
@@ -196,30 +187,6 @@ export default function WhyPage() {
         </div>
       </section>
 
-      <section className="whyUse">
-        <div className="shell">
-          <div className="whySectionHead">
-            <div>
-              <p className="premiumSectionLabel">WO DAS ZEICHEN WIRKT</p>
-              <h2>Der Nachweis gehört dorthin, wo die Kaufentscheidung stattfindet.</h2>
-            </div>
-            <p>
-              Die Kennzeichnung bleibt produktbezogen. Dadurch kann sie an unterschiedlichen Kontaktpunkten
-              eingesetzt werden, ohne zur pauschalen Unternehmensbehauptung zu werden.
-            </p>
-          </div>
-
-          <div className="whyUseGrid">
-            {useCases.map(([title, copy]) => (
-              <article key={title}>
-                <strong>{title}</strong>
-                <p>{copy}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="whyBrandValue">
         <div className="shell whyBrandValueGrid">
           <div className="whyBrandValueVisual">
@@ -241,7 +208,7 @@ export default function WhyPage() {
           </div>
           <div>
             <p className="premiumSectionLabel premiumSectionLabelLight">FÜR DIE MARKE</p>
-            <h2>Das Siegel soll nicht die Marke ersetzen. Es soll ihre Herstellungsleistung glaubwürdiger machen.</h2>
+            <h2>Das Zeichen ergänzt die Herstellermarke um einen überprüfbaren Nachweis.</h2>
             <p>
               Eine starke Marke erzählt, wofür ein Produkt steht. Made by Humans ergänzt diese Geschichte
               um einen überprüfbaren Beleg für einen klar abgegrenzten Teil der Herstellung.
@@ -256,7 +223,7 @@ export default function WhyPage() {
         <div className="shell whyProofGrid">
           <div>
             <p className="premiumSectionLabel">WAS HINTER DEM ZEICHEN STEHT</p>
-            <h2>Kein reines Marketinglogo.</h2>
+            <h2>Der Wert des Zeichens entsteht durch die Prüfung dahinter.</h2>
           </div>
           <div className="whyProofList">
             <div><strong>Definierter Standard</strong></div>
@@ -272,7 +239,7 @@ export default function WhyPage() {
         <div className="shell salesFinalCtaGrid">
           <div>
             <p className="premiumSectionLabel premiumSectionLabelLight">FÜR HERSTELLER</p>
-            <h2>Wenn menschliche Arbeit Ihr Produkt prägt, sollte man das sehen können.</h2>
+            <h2>Prüfen Sie, ob Ihr Produkt zum Standard passt.</h2>
           </div>
           <div>
             <p>
