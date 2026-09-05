@@ -36,6 +36,7 @@ export default function Home() {
         <div className="shell desireHeroGrid">
           <div className="desireHeroCopy">
             <p className="premiumEyebrow">ZERTIFIZIERUNG FÜR MENSCHLICHE HERSTELLUNG</p>
+            <div className="brandTrace" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
             <h1>Von Menschen gemacht.<br />Vor Ort geprüft.</h1>
             <p className="desireHeroLead">
               Made by Humans zeichnet physische Produkte aus, deren wesentliche Herstellungsschritte
