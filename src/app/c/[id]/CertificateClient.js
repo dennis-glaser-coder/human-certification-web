@@ -4,9 +4,11 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import SiteHeader from '../../../components/SiteHeader';
 import SiteFooter from '../../../components/SiteFooter';
+import CertificationQr from '../../../components/CertificationQr';
 import { getSupabaseBrowserClient } from '../../../lib/supabase';
 
 const statusLabels = {
+  under_review: 'In Prüfung',
   active: 'Aktiv',
   suspended: 'Ausgesetzt',
   expired: 'Abgelaufen',
@@ -37,7 +39,7 @@ export default function CertificateClient({ id }) {
 
       const { data: record, error } = await supabase
         .from('certifications')
-        .select('id,public_id,status,issued_at,valid_until,last_verified_at,public_note,products(name,manufacturers(name)),standard_versions(version,title)')
+        .select('id,public_id,status,issued_at,valid_until,last_verified_at,public_note,certification_scope,production_locations,products(name,manufacturers(name)),standard_versions(version,title)')
         .eq('public_id', id)
         .maybeSingle();
 
@@ -86,24 +88,32 @@ export default function CertificateClient({ id }) {
                     <h1>{state.record.public_id}</h1>
                   </div>
                 </div>
-                <span className={`statusBadge ${state.record.status === 'active' ? 'active' : ''}`}>
+                <span className={`statusBadge status-${state.record.status} ${state.record.status === 'active' ? 'active' : ''}`}>
                   {statusLabels[state.record.status] ?? state.record.status}
                 </span>
               </div>
 
-              <div className="certificateClaim">
-                <span>ZERTIFIZIERTE AUSSAGE</span>
-                <p>Dieses Produkt wurde in seinen wesentlichen Herstellungsschritten nachweislich durch Menschen gefertigt.</p>
+              <div className={`certificateClaim ${state.record.status === 'under_review' ? 'certificateClaimReview' : ''}`}>
+                <span>{state.record.status === 'under_review' ? 'PRÜFSTATUS' : 'ZERTIFIZIERTE AUSSAGE'}</span>
+                <p>
+                  {state.record.status === 'under_review'
+                    ? 'Dieser Datensatz befindet sich in Prüfung. Eine Zertifizierungsentscheidung wurde noch nicht erteilt.'
+                    : 'Dieses Produkt wurde in seinen wesentlichen Herstellungsschritten nachweislich durch Menschen gefertigt.'}
+                </p>
               </div>
 
               <dl className="certificateFacts">
                 <div><dt>Hersteller</dt><dd>{state.record.products?.manufacturers?.name ?? '—'}</dd></div>
                 <div><dt>Produkt</dt><dd>{state.record.products?.name ?? '—'}</dd></div>
+                <div><dt>Zertifizierungsumfang</dt><dd>{state.record.certification_scope ?? '—'}</dd></div>
+                <div><dt>Produktionsstandorte</dt><dd>{state.record.production_locations?.length ? state.record.production_locations.join(' · ') : '—'}</dd></div>
                 <div><dt>Standard</dt><dd>{state.record.standard_versions?.title ?? state.record.standard_versions?.version ?? '—'}</dd></div>
                 <div><dt>Ausgestellt</dt><dd>{state.record.issued_at ? new Date(state.record.issued_at).toLocaleDateString('de-DE') : '—'}</dd></div>
                 <div><dt>Gültig bis</dt><dd>{state.record.valid_until ? new Date(state.record.valid_until).toLocaleDateString('de-DE') : '—'}</dd></div>
                 <div><dt>Zuletzt verifiziert</dt><dd>{state.record.last_verified_at ? new Date(state.record.last_verified_at).toLocaleDateString('de-DE') : '—'}</dd></div>
               </dl>
+
+              <CertificationQr publicId={state.record.public_id} />
 
               {state.record.public_note && (
                 <div className="certificatePublicNote">
