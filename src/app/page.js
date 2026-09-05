@@ -99,9 +99,8 @@ export default function Home() {
           </div>
 
           <div className="salesValueGrid">
-            {valuePoints.map(([title, copy], index) => (
+            {valuePoints.map(([title, copy]) => (
               <article key={title}>
-                <span>{String(index + 1).padStart(2, '0')}</span>
                 <strong>{title}</strong>
                 <p>{copy}</p>
               </article>
@@ -134,9 +133,9 @@ export default function Home() {
             </p>
 
             <div className="onsiteAuditFacts">
-              <div><span>01</span><strong>Produktion ansehen</strong><p>Reale Abläufe statt bloßer Selbstauskunft.</p></div>
-              <div><span>02</span><strong>Nachweise abgleichen</strong><p>Unterlagen und tatsächliche Fertigung werden zusammen bewertet.</p></div>
-              <div><span>03</span><strong>Umfang festlegen</strong><p>Das Zertifikat bleibt auf das tatsächlich geprüfte Produkt begrenzt.</p></div>
+              <div><strong>Produktion ansehen</strong><p>Reale Abläufe statt bloßer Selbstauskunft.</p></div>
+              <div><strong>Nachweise abgleichen</strong><p>Unterlagen und tatsächliche Fertigung werden zusammen bewertet.</p></div>
+              <div><strong>Umfang festlegen</strong><p>Das Zertifikat bleibt auf das tatsächlich geprüfte Produkt begrenzt.</p></div>
             </div>
 
             <Link className="premiumInlineLink" href="/fuer-hersteller">Zertifizierungsverfahren im Detail</Link>
@@ -158,9 +157,8 @@ export default function Home() {
           </div>
 
           <div className="auditScopeGrid">
-            {auditChecks.map(([title, copy], index) => (
+            {auditChecks.map(([title, copy]) => (
               <article key={title}>
-                <span>{String(index + 1).padStart(2, '0')}</span>
                 <strong>{title}</strong>
                 <p>{copy}</p>
               </article>
