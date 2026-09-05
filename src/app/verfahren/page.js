@@ -67,9 +67,8 @@ export default function ProceduresPage() {
           </div>
           <div>
             <p>
-              Solange die endgültige Organisations- und Integritätsstruktur nicht eingerichtet ist, behauptet Made by Humans nicht,
-              dass Beschwerden oder Einsprüche bereits durch eine unabhängige externe Instanz entschieden werden.
-              Für den kommerziellen Betrieb werden Zuständigkeiten und Regeln zur Vermeidung von Interessenkonflikten vorab veröffentlicht.
+              Beschwerden und Einsprüche werden so zugeordnet, dass Interessenkonflikte erkennbar und dokumentierbar bleiben.
+              Eine unabhängige externe Entscheidung wird nur dann ausgewiesen, wenn sie für das jeweilige Verfahren tatsächlich eingerichtet ist.
             </p>
           </div>
         </div>
@@ -77,17 +76,17 @@ export default function ProceduresPage() {
 
       <section className="shell procedureChannel">
         <div>
-          <div className="sectionNo">MELDEKANAL</div>
-          <h2>Der öffentliche Einreichungsweg wird vor dem kommerziellen Start veröffentlicht.</h2>
+          <div className="sectionNo">VERFAHRENSGRUNDSATZ</div>
+          <h2>Jeder Vorgang erhält eine eindeutige Zuordnung und einen dokumentierten Abschluss.</h2>
         </div>
         <p>
-          Bis dahin dient diese Seite der transparenten Dokumentation der vorgesehenen Verfahrenslogik.
-          Es wird kein bereits operativer Beschwerde- oder Einspruchsdienst vorgetäuscht.
+          Beschwerde, Einspruch und Zeichenmissbrauch werden getrennt behandelt. Zuständigkeit,
+          Sachverhalt, Entscheidung und gegebenenfalls erforderliche Maßnahmen bleiben nachvollziehbar dokumentiert.
         </p>
       </section>
 
       <section className="shell standardClose">
-        <p>Die Verfahrensgrundsätze werden versioniert geführt und vor dem kommerziellen Start in eine verbindliche Fassung überführt.</p>
+        <p>Die Verfahrensgrundsätze werden versioniert geführt und Änderungen nachvollziehbar dokumentiert.</p>
         <div className="standardCloseLinks">
           <Link className="textLink" href="/dokumente">Dokumentenregister →</Link>
           <Link className="textLink" href="/transparenz">Transparenz & Integrität →</Link>
