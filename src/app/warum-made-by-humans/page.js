@@ -191,8 +191,8 @@ export default function WhyPage() {
         <div className="shell whyBrandValueGrid">
           <div className="whyBrandValueVisual">
             <img
-              src="https://images.unsplash.com/photo-1463082459669-fd1ca1692fea?auto=format&fit=crop&w=1400&q=84"
-              alt="Handwerkliche Bearbeitung eines Werkstücks in einer Werkstatt"
+              src={assetBase + '/brand/IMG_1040.png'}
+              alt="Menschliche Holzbearbeitung beim manuellen Schleifen eines Produktes"
               loading="lazy"
             />
             <div className="whyBrandSeal">
