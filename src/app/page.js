@@ -107,6 +107,9 @@ export default function Home() {
               </article>
             ))}
           </div>
+          <div className="salesValueMore">
+            <Link href="/warum-made-by-humans">Alle Vorteile für Hersteller und Käufer ansehen →</Link>
+          </div>
         </div>
       </section>
 
