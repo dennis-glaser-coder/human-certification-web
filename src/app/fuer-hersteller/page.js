@@ -133,6 +133,7 @@ export default function ManufacturerPage() {
         <div className="shell manufacturerHeroArtGrid">
           <div className="manufacturerHeroArtCopy">
             <div className="eyebrow">ZERTIFIZIERUNG FÜR HERSTELLER</div>
+            <div className="brandTrace" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
             <h1>Ihr Produkt. Ihre Herstellung. Nachvollziehbar zertifiziert.</h1>
             <p className="lead">
               Made by Humans macht menschliche Herstellung sichtbar und überprüfbar: mit klar abgegrenztem Produktumfang,
