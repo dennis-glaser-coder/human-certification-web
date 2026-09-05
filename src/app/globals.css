@@ -9695,3 +9695,300 @@ textarea:focus-visible{
   }
   .premiumFooterBottom span:first-child{display:none;}
 }
+
+
+/* ===== Premium refinement pass — no new imagery 2026-09-05 ===== */
+
+/* Desktop hierarchy: slightly quieter, more assured */
+.premiumHeaderInner{min-height:72px;}
+.premiumBrandLockup .brandName{font-size:10.5px;letter-spacing:.215em;}
+.premiumBrandLockup .brandDescriptor{font-size:6px;letter-spacing:.07em;}
+.premiumMainNav{gap:16px;}
+.premiumMainNav a{font-size:7.7px;font-weight:600;}
+.premiumMainNav .navVerify{
+  min-height:36px;
+  padding:0 13px;
+  display:inline-flex;
+  align-items:center;
+  border:0;
+  background:var(--ink);
+  color:var(--white);
+}
+.premiumMainNav .navVerify:hover{background:var(--blue);color:var(--white);}
+
+.desireHeroGrid{min-height:720px;}
+.desireHeroVisual{min-height:720px;}
+.desireHeroCopy{padding-top:82px;padding-bottom:72px;}
+.desireHeroCopy h1{
+  max-width:720px;
+  font-size:clamp(60px,5.55vw,84px);
+  line-height:.93;
+}
+.desireHeroLead{max-width:590px;font-size:12.5px;}
+.desireHeroOverlay{
+  width:min(430px,calc(100% - 48px));
+  grid-template-columns:66px 1fr;
+  gap:14px;
+  padding:11px 14px 11px 11px;
+}
+.desireHeroOverlay img{
+  width:66px;
+  height:66px;
+  border-radius:50%;
+}
+.desireHeroOverlay strong{font-size:17px;}
+
+/* Unify current photography without changing assets */
+.desireHeroVisual>img,
+.manifestoMaterial img,
+.desireAudit figure img,
+.applicationPhoto{
+  filter:saturate(.58) contrast(1.055) brightness(.96);
+}
+.desireAudit figure img{filter:saturate(.54) contrast(1.06) brightness(.94);}
+
+/* Headline hierarchy: not every section should compete with the hero */
+.compactHome .desireManifesto h2{font-size:clamp(46px,4.45vw,64px);}
+.compactHome .compactApplications .desireSectionHead h2{font-size:clamp(39px,3.7vw,52px);}
+.compactHome .homeValueStoryHead h2{font-size:clamp(36px,3.45vw,48px);}
+.compactHome .compactAudit .desireAuditCopy h2{font-size:clamp(36px,3.45vw,47px);}
+.compactHome .homeConsumerCopy h2{font-size:clamp(37px,3.55vw,49px);}
+.compactHome .homeFinalTop h2{font-size:clamp(35px,3.35vw,46px);}
+.compactHome .homeFinalCta h2{font-size:clamp(38px,3.7vw,50px);}
+
+/* Finer premium controls */
+.desirePrimary,
+.desireSecondary,
+.desireFinalButton,
+.homeVerifyPrimary,
+.homeVerifySecondary{
+  min-height:44px;
+  padding-left:17px;
+  padding-right:17px;
+  font-size:9px;
+  letter-spacing:.01em;
+}
+.desirePrimary,
+.desireFinalButton,
+.homeVerifyPrimary{
+  border-color:var(--ink);
+}
+.desireTextLink,
+.homeStoryLinks a,
+.homeConsumerLinks a,
+.homeFinalSummary a,
+.homeStandardLine a,
+.compactApplicationFooter a{
+  border-bottom-width:1px;
+  padding-bottom:2px;
+}
+.desireSectionHead,
+.homeValueStory,
+.homeFinalSummary,
+.homeStandardLine{
+  border-top-color:rgba(17,24,32,.28);
+}
+
+/* Application cards: less UI-frame, more editorial object */
+.compactApplicationGrid .sealApplicationCard{
+  border-color:rgba(17,24,32,.11);
+}
+.compactApplicationGrid .applicationCopy{
+  border-top:0;
+  padding-top:17px;
+}
+.compactApplicationGrid .applicationCopy strong{font-size:19px;}
+.compactApplicationGrid .applicationCopy p{font-size:8.8px;}
+
+/* Buyer verification: flatter and more institutional */
+.homeVerifyCompact{
+  border-color:rgba(17,24,32,.12);
+  box-shadow:none;
+}
+.homeVerifyCompact>strong{font-size:28px;}
+.homeVerifySecondary{border-color:rgba(17,24,32,.34);}
+
+/* Final area: slightly more compact on desktop too */
+.homeFinalCompact{padding-top:68px;}
+.homeStandardLine{margin-top:34px;}
+.homeFinalCta{margin-top:26px;padding-top:48px;padding-bottom:50px;}
+
+/* Mobile: refine rather than enlarge */
+@media(max-width:760px){
+  .premiumSiteHeader{border-bottom-color:rgba(17,24,32,.12);}
+  .premiumHeaderInner{min-height:52px;}
+  .premiumBrandLockup .brandName{
+    font-size:10px;
+    letter-spacing:.205em;
+  }
+  .premiumBrandLockup .brandDescriptor{display:none;}
+  .premiumMobileHeaderActions{gap:9px;}
+  .premiumMobileHeaderActions .mobileVerify{
+    min-height:32px;
+    padding:0 9px;
+    background:transparent;
+    color:var(--ink);
+    border:0;
+    border-bottom:1px solid rgba(17,24,32,.45);
+    font-size:8px;
+  }
+  .premiumMobileHeaderActions .mobileMenuToggle{
+    width:32px;
+    height:32px;
+    border:0;
+    gap:5px;
+  }
+  .premiumMobileHeaderActions .mobileMenuToggle span{
+    width:17px;
+    height:1px;
+  }
+
+  .desireHeroGrid{min-height:calc(100svh - 52px);}
+  .desireHeroCopy{
+    min-height:calc(100svh - 52px);
+    padding-top:66px;
+    padding-bottom:28px;
+  }
+  .desireHeroCopy .premiumEyebrow{font-size:6.5px;}
+  .desireHeroCopy h1{
+    max-width:92%;
+    font-size:clamp(40px,10.8vw,48px);
+    line-height:.95;
+    margin-bottom:15px;
+  }
+  .desireHeroLead{
+    max-width:90%;
+    font-size:10.5px;
+    line-height:1.58;
+  }
+  .desireHeroActions{margin-top:18px;}
+  .desireHeroActions .desirePrimary{
+    min-width:174px;
+    min-height:40px;
+    padding:0 14px;
+    font-size:8.5px;
+  }
+  .desireProofLine{margin-top:17px;padding-top:10px;}
+  .desireProofLine span,
+  .desireProofLine span+span{
+    padding-left:9px;
+    padding-right:9px;
+    font-size:6px;
+  }
+
+  /* Seal: no white square / sticker effect */
+  .desireHeroOverlay{
+    top:12px;
+    right:10px;
+    width:52px;
+    height:52px;
+    padding:2px;
+    background:rgba(243,240,232,.80);
+    border:0;
+    border-radius:50%;
+    overflow:hidden;
+    box-shadow:0 0 0 1px rgba(255,255,255,.22);
+  }
+  .desireHeroOverlay img{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    object-fit:cover;
+  }
+
+  /* Only manifesto keeps a near-hero scale */
+  .compactHome .desireManifesto h2{
+    max-width:94%;
+    font-size:34px;
+    line-height:1;
+  }
+  .compactHome .compactApplications .desireSectionHead h2{
+    max-width:94%;
+    font-size:29px;
+    line-height:1.02;
+  }
+  .compactHome .homeValueStoryHead h2{
+    max-width:92%;
+    font-size:28px;
+    line-height:1.02;
+  }
+  .compactHome .compactAudit .desireAuditCopy h2{
+    max-width:92%;
+    font-size:29px;
+    line-height:1.02;
+  }
+  .compactHome .homeConsumerCopy h2{
+    max-width:92%;
+    font-size:29px;
+    line-height:1.02;
+  }
+  .compactHome .homeFinalTop h2{
+    font-size:27px;
+    line-height:1.03;
+  }
+  .compactHome .homeFinalCta h2{
+    max-width:92%;
+    font-size:29px;
+    line-height:1.02;
+  }
+
+  .compactHome .premiumSectionLabel{
+    font-size:6.5px;
+    letter-spacing:.145em;
+  }
+
+  .compactApplications{padding-top:52px;padding-bottom:54px;}
+  .compactApplicationGrid{margin-top:22px;}
+  .compactApplicationGrid .sealApplicationCard,
+  .compactApplicationGrid .sealApplicationCard:nth-child(1),
+  .compactApplicationGrid .sealApplicationCard:nth-child(2){
+    flex-basis:81vw;
+    width:81vw;
+  }
+  .compactApplicationGrid .sealApplicationCard:nth-child(1) .applicationStage,
+  .compactApplicationGrid .sealApplicationCard:nth-child(2) .applicationStage{
+    min-height:235px;
+  }
+  .compactApplicationGrid .applicationCopy strong{font-size:17px;}
+  .compactApplicationGrid .applicationCopy p{font-size:8px;}
+
+  .homeValueProof{padding-top:48px;padding-bottom:50px;}
+  .homeStoryRows article,
+  .homeStoryRows article:not(:first-child){padding-top:11px;padding-bottom:11px;}
+  .homeStoryRows strong{font-size:15.5px;}
+  .homeStoryRows p{font-size:7.8px;}
+
+  .compactAudit .desireAudit figure{height:245px;}
+  .compactAudit .desireAuditCopy{padding-top:32px;padding-bottom:34px;}
+  .compactAudit .desireAuditLead{font-size:9px;}
+  .compactAudit .desireAuditFacts{margin-top:16px;}
+
+  .homeConsumerVerify{padding-top:48px;padding-bottom:50px;}
+  .homeConsumerCopy blockquote{font-size:16px;}
+  .homeVerifyCompact{padding:18px 17px;}
+  .homeVerifyCompact>strong{font-size:21px;}
+  .homeVerifyCompact>p{font-size:8px;margin-bottom:13px;}
+  .homeVerifyPrimary,
+  .homeVerifySecondary{min-height:37px;font-size:8px;}
+
+  .homeFinalCompact{padding-top:42px;}
+  .homeStandardLine{margin-top:18px;}
+  .homeFinalCta{
+    margin-top:14px;
+    padding-top:32px;
+    padding-bottom:35px;
+  }
+  .homeFinalCta>div:last-child>p{font-size:8.5px;}
+  .homeFinalCta .desireFinalButton{min-height:39px;font-size:8.5px;}
+
+  /* Footer refinement */
+  .premiumFooter{padding-top:34px!important;}
+  .premiumFooterBrand{margin-bottom:22px!important;}
+  .premiumFooterBrand p{
+    max-width:285px!important;
+    font-size:19px!important;
+  }
+  .premiumFooterNav{gap:22px 18px!important;}
+  .premiumFooterNav a{font-size:8.5px!important;}
+  .premiumFooterBottom{margin-top:24px!important;}
+}
