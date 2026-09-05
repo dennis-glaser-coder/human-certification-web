@@ -15,6 +15,8 @@ export default function SiteFooter() {
             <Link href="/standard">Kriterien</Link>
             <Link href="/dokumente">Dokumente</Link>
             <Link href="/markennutzung">Markennutzung</Link>
+            <Link href="/leitfaden/nachweise">Prüfnachweise</Link>
+            <Link href="/leitfaden/zertifizierungsumfang">Zertifizierungsumfang</Link>
           </div>
           <div>
             <span>VERIFIZIERUNG</span>
