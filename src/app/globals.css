@@ -10302,3 +10302,34 @@ textarea:focus-visible{
     object-position:center center;
   }
 }
+
+
+/* ===== Homepage uploaded hero image 2026-09-05 ===== */
+.compactHome .desireHeroVisual::after{
+  display:none;
+}
+
+.compactHome .desireHeroVisual>img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center center;
+}
+
+@media(max-width:760px){
+  .compactHome .desireHeroVisual{
+    min-height:0;
+    height:auto;
+    margin-left:calc((100vw - 100%)/-2);
+    margin-right:calc((100vw - 100%)/-2);
+  }
+
+  .compactHome .desireHeroVisual>img{
+    width:100%;
+    height:auto;
+    min-height:0;
+    object-fit:contain;
+    object-position:center center;
+  }
+}
