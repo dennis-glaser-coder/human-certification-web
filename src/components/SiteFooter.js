@@ -6,7 +6,7 @@ export default function SiteFooter() {
       <div className="shell premiumFooterTop">
         <div className="premiumFooterBrand">
           <strong>MADE BY HUMANS</strong>
-          <p>Standard für nachweisbar menschliche Herstellung.</p>
+          <p>Zertifizierung für nachweisbar menschliche Herstellung.</p>
         </div>
 
         <nav className="premiumFooterNav" aria-label="Footer Navigation">
@@ -22,7 +22,8 @@ export default function SiteFooter() {
             <span>VERIFIZIERUNG</span>
             <Link href="/register">Öffentliches Register</Link>
             <Link href="/pruefen">Zertifizierungs-ID prüfen</Link>
-            <Link href="/fuer-hersteller">Für Hersteller</Link>
+            <Link href="/fuer-kaeufer">Für Käufer</Link>
+            <Link href="/fuer-hersteller">Zertifizierung</Link>
             <Link href="/warum-made-by-humans">Warum Made by Humans?</Link>
           </div>
           <div>
