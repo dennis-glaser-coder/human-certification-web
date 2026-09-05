@@ -8675,3 +8675,323 @@ textarea:focus-visible{
   .manufacturerFaqGrid,.manufacturerApplicationGrid{grid-template-columns:1fr;gap:34px;}
   .certificationRequestForm{padding:22px 18px;}
 }
+
+
+/* ===== Final signature & mobile hero pass 2026-09-05 ===== */
+
+/* Made by Humans signature trace */
+.brandTrace{
+  position:relative;
+  width:164px;
+  height:18px;
+  margin:14px 0 18px;
+}
+.brandTrace i{
+  position:absolute;
+  left:0;
+  height:1px;
+  background:var(--blue);
+  display:block;
+}
+.brandTrace i:nth-child(1){top:1px;width:164px;}
+.brandTrace i:nth-child(2){top:8px;width:112px;left:26px;}
+.brandTrace i:nth-child(3){top:15px;width:64px;left:72px;}
+.brandTrace b{
+  position:absolute;
+  right:-1px;
+  top:-3px;
+  width:8px;
+  height:8px;
+  border:1px solid var(--blue);
+  border-radius:50%;
+  background:transparent;
+}
+.desireHeroCopy h1,
+.whyHeroCopy h1,
+.manufacturerHeroArtCopy h1{margin-top:0;}
+
+/* Slightly stronger editorial rhythm across the brand pages */
+.desireSectionHead,
+.whySectionHead,
+.sectionIntro.compact{
+  border-top:1px solid rgba(17,24,32,.18);
+  padding-top:18px;
+}
+.manufacturerDesire .desireSectionHead,
+.whyCustomers .whySectionHead{
+  border-top-color:rgba(255,255,255,.22);
+}
+.premiumSectionLabel,
+.sectionNo,
+.premiumEyebrow,
+.eyebrow{
+  letter-spacing:.15em;
+}
+
+/* Remove remaining "card UI" cues from primary brand surfaces */
+.sealApplicationCard,
+.desireVerifyTool,
+.certificationRequestForm,
+.manufacturerMarkPreview{
+  border-radius:0;
+}
+.applicationCopy,
+.brandKitList article,
+.manufacturerDesireGrid article,
+.whyBenefitGrid article,
+.whyUseGrid article{
+  transition:none;
+}
+
+/* Mobile: first screen becomes one full-bleed brand composition */
+@media(max-width:760px){
+  .desireHero,
+  .whyHero,
+  .manufacturerHeroArt{
+    position:relative;
+    background:var(--ink);
+    color:var(--white);
+    overflow:hidden;
+    border-bottom:0;
+  }
+
+  .desireHeroGrid,
+  .whyHeroGrid,
+  .manufacturerHeroArtGrid{
+    position:relative;
+    display:block;
+    min-height:calc(100svh - 68px);
+  }
+
+  .desireHeroVisual,
+  .whyHeroVisual,
+  .manufacturerHeroArtVisual{
+    position:absolute;
+    inset:0 calc((100vw - 100%)/-2);
+    z-index:1;
+    min-height:0;
+    height:auto;
+    margin:0;
+  }
+
+  .desireHeroVisual::after{
+    background:
+      linear-gradient(180deg,rgba(17,24,32,.18) 0%,rgba(17,24,32,.05) 28%,rgba(17,24,32,.46) 57%,rgba(17,24,32,.94) 100%);
+  }
+  .whyHeroVisual figure::after{
+    background:
+      linear-gradient(180deg,rgba(17,24,32,.18) 0%,rgba(17,24,32,.04) 28%,rgba(17,24,32,.48) 57%,rgba(17,24,32,.95) 100%);
+  }
+  .manufacturerHeroArtVisual::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+      linear-gradient(180deg,rgba(17,24,32,.18) 0%,rgba(17,24,32,.04) 28%,rgba(17,24,32,.48) 57%,rgba(17,24,32,.95) 100%);
+  }
+
+  .desireHeroVisual>img,
+  .whyHeroVisual figure>img,
+  .manufacturerHeroArtVisual>img{
+    filter:saturate(.62) contrast(1.08);
+  }
+
+  .desireHeroCopy,
+  .whyHeroCopy,
+  .manufacturerHeroArtCopy{
+    position:relative;
+    z-index:3;
+    min-height:calc(100svh - 68px);
+    padding:84px 0 36px;
+    color:var(--white);
+    justify-content:flex-end;
+  }
+
+  .desireHeroCopy .premiumEyebrow,
+  .whyHeroCopy .premiumEyebrow,
+  .manufacturerHeroArtCopy .eyebrow{
+    color:rgba(255,255,255,.74);
+    font-size:7px;
+  }
+
+  .brandTrace{
+    width:130px;
+    margin:12px 0 16px;
+  }
+  .brandTrace i{background:#AFC1D8;}
+  .brandTrace i:nth-child(1){width:130px;}
+  .brandTrace i:nth-child(2){width:90px;left:20px;}
+  .brandTrace i:nth-child(3){width:52px;left:56px;}
+  .brandTrace b{border-color:#AFC1D8;}
+
+  .desireHeroCopy h1,
+  .whyHeroCopy h1,
+  .manufacturerHeroArtCopy h1{
+    max-width:94%;
+    margin:0 0 18px;
+    color:var(--white);
+    font-size:clamp(42px,11.4vw,52px);
+    line-height:.94;
+    letter-spacing:-.052em;
+    text-wrap:balance;
+  }
+
+  .desireHeroLead,
+  .whyHeroLead,
+  .manufacturerHeroArtCopy .lead{
+    max-width:92%;
+    color:rgba(255,255,255,.76);
+    font-size:11.5px;
+    line-height:1.66;
+  }
+
+  .desireHeroActions,
+  .whyHeroActions,
+  .manufacturerHeroActions{
+    margin-top:22px;
+  }
+
+  .desireHeroActions .desireSecondary,
+  .whyHeroActions .salesSecondary,
+  .manufacturerHeroActions .secondary{
+    display:none;
+  }
+
+  .desireHeroActions .desirePrimary,
+  .whyHeroActions .salesPrimary,
+  .manufacturerHeroActions .button.primary{
+    width:auto;
+    min-width:190px;
+    min-height:46px;
+    padding:0 17px;
+    background:var(--white);
+    color:var(--ink);
+    border-color:var(--white);
+    justify-self:start;
+  }
+
+  .desireProofLine{
+    display:flex;
+    flex-wrap:wrap;
+    gap:0;
+    max-width:100%;
+    margin-top:22px;
+    padding-top:12px;
+    border-top:1px solid rgba(255,255,255,.38);
+  }
+  .desireProofLine span,
+  .desireProofLine span+span{
+    width:auto;
+    padding:0 12px;
+    border:0;
+    border-left:1px solid rgba(255,255,255,.22);
+    color:rgba(255,255,255,.68);
+    font-size:6.5px;
+  }
+  .desireProofLine span:first-child{
+    padding-left:0;
+    border-left:0;
+  }
+
+  /* On mobile the seal is a small endorsement, never a card */
+  .desireHeroOverlay,
+  .whySealTag,
+  .manufacturerHeroCredential{
+    top:18px;
+    right:14px;
+    bottom:auto;
+    left:auto;
+    width:62px;
+    height:62px;
+    padding:6px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(243,240,232,.94);
+    border:1px solid rgba(255,255,255,.55);
+  }
+  .desireHeroOverlay>div,
+  .whySealTag>div,
+  .manufacturerHeroCredential>div{
+    display:none;
+  }
+  .desireHeroOverlay img,
+  .whySealTag>img,
+  .manufacturerHeroCredential>img{
+    width:50px;
+    height:50px;
+    margin:0;
+    object-fit:contain;
+    filter:none;
+  }
+
+  /* Screen two: immediate, bold brand point instead of generic next section */
+  .desireManifesto,
+  .whyThesis{
+    padding-top:64px;
+    padding-bottom:68px;
+  }
+  .desireManifesto h2,
+  .whyThesis h2{
+    max-width:96%;
+    font-size:37px;
+    line-height:.98;
+    letter-spacing:-.035em;
+  }
+  .desireManifestoGrid>div>p,
+  .whyThesisGrid>div>p{
+    max-width:94%;
+    font-size:10.5px;
+    line-height:1.68;
+  }
+  .manifestoMaterial{
+    height:260px;
+    margin-top:30px;
+  }
+
+  /* Make mobile application examples feel like campaign frames */
+  .sealApplicationCard{
+    border-color:rgba(17,24,32,.10);
+  }
+  .applicationCopy{
+    min-height:0;
+    padding:16px 4px 24px;
+    background:transparent;
+    border-top:0;
+  }
+  .applicationCopy strong{
+    font-size:19px;
+  }
+  .applicationCopy p{
+    font-size:8.5px;
+  }
+
+  /* Less box density on mobile benefits */
+  .manufacturerDesireGrid,
+  .whyBenefitGrid,
+  .whyUseGrid,
+  .brandKitList,
+  .manufacturerMarkGrid{
+    border-top-width:1px;
+  }
+
+  .manufacturerDesireGrid article,
+  .whyBenefitGrid article,
+  .whyUseGrid article,
+  .manufacturerMarkGrid article{
+    padding-top:20px;
+    padding-bottom:20px;
+  }
+
+  /* Manufacturer form should feel like editorial paper, not SaaS form */
+  .manufacturerApplication{
+    background:#F4F0E6;
+  }
+  .certificationRequestForm{
+    margin-left:calc((100vw - 100%)/-2);
+    margin-right:calc((100vw - 100%)/-2);
+    padding:30px 6vw;
+    border-left:0;
+    border-right:0;
+  }
+}
