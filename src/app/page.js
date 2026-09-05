@@ -46,22 +46,9 @@ export default function Home() {
 
           <div className="desireHeroVisual">
             <img
-              src="https://images.unsplash.com/photo-1463082459669-fd1ca1692fea?auto=format&fit=crop&w=1800&q=86"
-              alt="Holzhandwerker bei der manuellen Bearbeitung eines Werkstücks"
+              src={assetBase + '/brand/IMG_1039.png'}
+              alt="Menschliche Holzbearbeitung an einer Bandsäge in einer Werkstatt"
             />
-            <div className="desireHeroOverlay">
-              <img
-                src={assetBase + '/brand/made-by-humans-seal.png'}
-                alt="Made by Humans Zertifizierungszeichen"
-                width="92"
-                height="92"
-              />
-              <div>
-                <span>MADE BY HUMANS</span>
-                <strong>Geprüfte menschliche Herstellung.</strong>
-                <p>Produktfokus · Zertifizierungs-ID · öffentlich verifizierbar</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
