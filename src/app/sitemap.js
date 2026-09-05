@@ -17,6 +17,8 @@ export default function sitemap() {
     { url: canonical('/dokumente/standard-0-1'), lastModified, changeFrequency: 'monthly', priority: 0.7 },
     { url: canonical('/dokumente/certification-scheme-0-1'), lastModified, changeFrequency: 'monthly', priority: 0.7 },
     { url: canonical('/markennutzung'), lastModified, changeFrequency: 'monthly', priority: 0.6 },
+    { url: canonical('/leitfaden/nachweise'), lastModified, changeFrequency: 'monthly', priority: 0.7 },
+    { url: canonical('/leitfaden/zertifizierungsumfang'), lastModified, changeFrequency: 'monthly', priority: 0.7 },
     { url: canonical('/verfahren'), lastModified, changeFrequency: 'monthly', priority: 0.6 },
   ];
 }
