@@ -10120,3 +10120,63 @@ textarea:focus-visible{
     padding-top:62px;
   }
 }
+
+
+/* ===== About story mobile compression 2026-09-05 ===== */
+.aboutOriginGrid{
+  grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);
+  gap:88px;
+}
+.aboutOriginStatement h2{
+  max-width:620px;
+  font-size:clamp(40px,3.9vw,54px);
+}
+.aboutOriginStory>p{
+  font-size:10.5px;
+  line-height:1.72;
+}
+.aboutOriginThesis.compact{
+  margin-top:28px;
+  padding-top:18px;
+  grid-template-columns:.42fr 1.58fr;
+}
+.aboutOriginThesis.compact strong{
+  font-size:21px;
+  max-width:520px;
+}
+
+@media(max-width:760px){
+  .aboutOrigin{
+    padding-top:52px;
+    padding-bottom:54px;
+  }
+  .aboutOriginGrid{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+  .aboutOriginStatement h2{
+    max-width:94%;
+    font-size:30px;
+    line-height:1.02;
+  }
+  .aboutOriginStory>p{
+    max-width:95%;
+    margin-bottom:12px;
+    font-size:9px;
+    line-height:1.6;
+  }
+  .aboutOriginThesis.compact{
+    margin-top:20px;
+    padding-top:14px;
+    grid-template-columns:1fr;
+    gap:6px;
+  }
+  .aboutOriginThesis.compact span{
+    font-size:6.5px;
+  }
+  .aboutOriginThesis.compact strong{
+    max-width:90%;
+    font-size:17px;
+    line-height:1.25;
+  }
+}
