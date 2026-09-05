@@ -63,7 +63,7 @@ export default function DocumentsPage() {
 
       <section className="pageHero shell">
         <div className="eyebrow">DOKUMENTENREGISTER</div>
-        <h1>Versionierte Regeln statt unverbindlicher Aussagen.</h1>
+        <h1>Regeln und Dokumentversionen öffentlich nachvollziehen.</h1>
         <p className="lead">
           Standard, Zertifizierungsschema, Markennutzungsregeln und Verfahrensregeln werden als kontrollierte Dokumente geführt.
           Jede Fassung erhält Dokument-ID, Version, Status und Datum.
