@@ -24,6 +24,7 @@ export default function MobileNav() {
       {open && (
         <nav id="mobile-site-menu" className="mobileMenuPanel premiumMobileMenu" aria-label="Mobile Navigation">
           <Link href="/standard" onClick={close}>Standard</Link>
+          <Link href="/warum-made-by-humans" onClick={close}>Warum Made by Humans?</Link>
           <Link href="/fuer-hersteller" onClick={close}>Für Hersteller</Link>
           <Link href="/register" onClick={close}>Register</Link>
           <Link href="/dokumente" onClick={close}>Dokumente</Link>
