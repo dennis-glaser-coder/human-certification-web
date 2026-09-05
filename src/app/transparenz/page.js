@@ -1,6 +1,18 @@
 import Link from 'next/link';
 import SiteHeader from '../../components/SiteHeader';
 import SiteFooter from '../../components/SiteFooter';
+import { canonical } from '../../lib/seo';
+
+export const metadata = {
+  title: 'Transparenz & Integrität',
+  description: 'Rollen, Prüfnachweise, Statusverwaltung, Markennutzung, Beschwerden und Integritätsregeln des Made by Humans Zertifizierungssystems.',
+  alternates: { canonical: canonical('/transparenz') },
+  openGraph: {
+    title: 'Transparenz & Integrität | Made by Humans',
+    description: 'Nachvollziehbare Regeln für Prüfung, Zertifizierungsentscheidung, Register und Markennutzung.',
+    url: canonical('/transparenz'),
+  },
+};
 
 const principles = [
   ['Standardversionen', 'Jede Zertifizierung verweist eindeutig auf die zugrunde liegende Standardfassung. Änderungen am Regelwerk bleiben dadurch zeitlich nachvollziehbar.'],
