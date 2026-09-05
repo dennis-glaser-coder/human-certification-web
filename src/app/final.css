@@ -288,3 +288,70 @@ summary:focus-visible {
     font-size: 12px;
   }
 }
+
+
+/* Mobile QA 2026-09-05: remaining specialist text must stay readable. */
+@media (max-width: 760px) {
+  .manufacturerEvidenceList strong,
+  .manufacturerProcessGrid strong,
+  .manufacturerMarkGrid strong,
+  .manufacturerFaqList summary,
+  .buyerMeaningGrid strong,
+  .buyerBoundaryList > div,
+  .buyerFaqList summary,
+  .markUseRuleGrid strong,
+  .markUseApplicationGrid strong,
+  .markUseProhibitedList strong,
+  .whyCustomerList strong,
+  .whyProofList strong {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .manufacturerEvidenceList > article > span,
+  .manufacturerScopeNote span,
+  .buyerHeroCard > span,
+  .buyerPhone > span,
+  .buyerStatus,
+  .buyerPhone dt,
+  .whyCustomerList article > span,
+  .whyComparisonHead span,
+  .whyProofList span,
+  .whySealTag span,
+  .markUseRuleGrid span,
+  .markUseProhibitedList article > span,
+  .registerRow small,
+  .verificationRecord small,
+  .certificateSummary small,
+  .registerTrustBar span,
+  .registerStatusCell em,
+  .registerSubline {
+    font-size: 10px;
+    line-height: 1.4;
+  }
+
+  .buyerVerifyChecks span,
+  .whyComparisonRow span,
+  .registerRow strong,
+  .registerToolbar strong,
+  .registerDisclosure strong {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .buyerPhone dd {
+    font-size: 12px;
+  }
+
+  .buyerPhone small,
+  .registerDisclosure p,
+  .registerTrustBar p {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .manufacturerFaqList details p,
+  .buyerFaqList details p {
+    padding-right: 0;
+  }
+}
