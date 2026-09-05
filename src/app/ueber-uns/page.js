@@ -5,7 +5,7 @@ import { canonical } from '../../lib/seo';
 
 export const metadata = {
   title: 'Über Made by Humans',
-  description: 'Zweck, Systemarchitektur und Grundsätze des Made by Humans Standards für nachweisbar menschlich gefertigte physische Produkte.',
+  description: 'Warum Made by Humans entstanden ist: menschliche Herstellung sichtbar und überprüfbar machen – mit klarem Produktbezug, Vor-Ort-Prüfung und öffentlicher Verifizierung.',
   alternates: { canonical: canonical('/ueber-uns') },
 };
 
@@ -29,13 +29,46 @@ export default function AboutPage() {
     <main className="aboutInstitution">
       <SiteHeader />
 
-      <section className="pageHero shell">
+      <section className="pageHero shell aboutStoryHero">
         <div className="eyebrow">ÜBER MADE BY HUMANS</div>
-        <h1>Ein Standard für eine klar definierte Aussage über Herstellung.</h1>
+        <h1>Warum menschliche Herstellung sichtbar werden muss.</h1>
         <p className="lead">
-          Made by Humans schafft einen nachvollziehbaren Rahmen für physische Produkte,
-          deren wesentliche Herstellungsschritte nachweislich von Menschen ausgeführt werden.
+          Made by Humans ist aus einer einfachen Beobachtung entstanden: Je stärker Produktion,
+          Gestaltung und Vermarktung automatisiert werden, desto schwerer wird von außen erkennbar,
+          wo Menschen ein Produkt tatsächlich noch wesentlich prägen.
         </p>
+      </section>
+
+      <section className="aboutOrigin">
+        <div className="shell aboutOriginGrid">
+          <div className="aboutOriginStatement">
+            <div className="sectionNo light">DIE IDEE</div>
+            <h2>Je mehr automatisiert wird, desto wichtiger wird sichtbar, wo Menschen den Unterschied machen.</h2>
+          </div>
+
+          <div className="aboutOriginStory">
+            <p>
+              Automatisierung, moderne Maschinen und künstliche Intelligenz verändern, wie Produkte
+              entwickelt, hergestellt und vermarktet werden. Das ist kein Widerspruch zu Made by Humans.
+              Technologie kann sinnvoll unterstützen und Prozesse verbessern.
+            </p>
+            <p>
+              Gleichzeitig entsteht eine neue Vertrauenslücke: Begriffe wie „handgemacht“,
+              „handcrafted“ oder „manufakturgefertigt“ erzeugen ein bestimmtes Bild – wie viel
+              tatsächliche menschliche Arbeit dahintersteht, bleibt für Käufer aber häufig unsichtbar.
+            </p>
+            <p>
+              Genau hier setzt Made by Humans an. Wenn Erfahrung, Können und unmittelbare menschliche
+              Arbeit wesentliche Bestandteile eines Produktes sind, soll dieser Unterschied nicht nur
+              erzählt, sondern nachvollziehbar geprüft und öffentlich verifizierbar gemacht werden.
+            </p>
+
+            <div className="aboutOriginThesis">
+              <span>NICHT GEGEN TECHNOLOGIE.</span>
+              <strong>Für Sichtbarkeit dort, wo Menschen den Unterschied machen.</strong>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="aboutMetaBand" aria-label="Grundprinzipien von Made by Humans">
@@ -50,14 +83,14 @@ export default function AboutPage() {
       <section className="aboutPurpose">
         <div className="shell aboutPurposeGrid">
           <div>
-            <div className="sectionNo">ZWECK</div>
-            <h2>Aus einer Herstellungsangabe wird eine prüfbare Aussage.</h2>
+            <div className="sectionNo">VON DER BEHAUPTUNG ZUM NACHWEIS</div>
+            <h2>Eine glaubwürdige Aussage beginnt bei der tatsächlichen Herstellung.</h2>
           </div>
           <div>
             <p>
-              Begriffe wie handgefertigt oder menschlich gefertigt werden unterschiedlich verwendet.
-              Made by Humans setzt deshalb nicht bei der Formulierung an, sondern bei der tatsächlichen Herstellung:
-              Welche wesentlichen Schritte werden durch Menschen ausgeführt und wie lässt sich das nachvollziehbar belegen?
+              Made by Humans setzt deshalb nicht bei einer Werbeformulierung an, sondern bei der realen Produktion:
+              Welche wesentlichen, produktprägenden Schritte werden tatsächlich durch Menschen ausgeführt,
+              welche Technik unterstützt dabei und wie lässt sich das nachvollziehbar belegen?
             </p>
             <p>
               Das sichtbare Zeichen ist nur die Kennzeichnung. Der Vertrauensmechanismus dahinter besteht aus
