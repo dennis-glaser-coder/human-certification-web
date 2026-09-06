@@ -380,3 +380,137 @@ summary:focus-visible {
     object-position: 50% 63%;
   }
 }
+
+
+/* ===== Brand authority layer 2026-09-06 ===== */
+
+/* The wordmark needs a recognizable institutional signature even without using the certification seal as a logo. */
+.premiumBrandLockup{
+  position:relative;
+  padding-left:15px;
+}
+.premiumBrandLockup::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:50%;
+  width:2px;
+  height:29px;
+  background:var(--blue);
+  transform:translateY(-50%);
+}
+.premiumBrandLockup .brandName{
+  font-weight:700;
+  letter-spacing:.225em;
+}
+.premiumBrandLockup .brandDescriptor{
+  color:rgba(17,24,32,.52);
+}
+
+/* Quieter navigation: the request CTA carries the action, the rest reads like an institution rather than an app. */
+.premiumMainNav a:not(.navVerify){
+  color:rgba(17,24,32,.72);
+}
+.premiumMainNav a:not(.navVerify):hover{
+  color:var(--ink);
+}
+
+/* Editorial hierarchy and better line composition across the brand system. */
+.desireHeroCopy h1,
+.pageHero h1,
+.whyHeroCopy h1,
+.manufacturerHeroArtCopy h1,
+.compactHome h2,
+.aboutInstitution h2,
+.transparencyInstitution h2,
+.manufacturerJourney h2,
+.buyerPage h2,
+.whyPage h2{
+  text-wrap:balance;
+}
+
+/* The homepage must not look like a two-CTA SaaS landing page. */
+.compactHome .desireHeroActions{
+  align-items:center;
+  gap:18px;
+}
+.compactHome .desireHeroActions .desireSecondary{
+  min-height:auto;
+  padding:5px 0 4px;
+  border:0;
+  border-bottom:1px solid rgba(41,76,119,.55);
+  color:var(--blue);
+}
+.compactHome .desireHeroActions .desireSecondary:hover{
+  border-bottom-color:var(--blue);
+  color:var(--blue);
+}
+
+/* Repeated proof labels should feel like a controlled standard, not feature chips. */
+.compactHome .desireProofLine{
+  border-top-color:rgba(17,24,32,.32);
+}
+.compactHome .desireProofLine span{
+  color:rgba(17,24,32,.58);
+  letter-spacing:.09em;
+}
+
+/* Standard/version line becomes a small institutional status strip. */
+.compactHome .homeStandardLine{
+  padding-top:15px;
+  padding-bottom:15px;
+  border-top:1px solid rgba(17,24,32,.34);
+  border-bottom:1px solid rgba(17,24,32,.14);
+}
+.compactHome .homeStandardLine span{
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+/* Give the footer the same signature as the header without misusing the certification seal as a corporate logo. */
+.premiumFooterBrand{
+  position:relative;
+  padding-left:18px;
+}
+.premiumFooterBrand::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:2px;
+  width:2px;
+  height:34px;
+  background:#AFC1D8;
+}
+.premiumFooterBrand strong{
+  letter-spacing:.235em;
+}
+
+/* Mobile keeps the identity mark but avoids turning it into decoration. */
+@media(max-width:760px){
+  .premiumBrandLockup{
+    padding-left:11px;
+  }
+  .premiumBrandLockup::before{
+    width:2px;
+    height:22px;
+  }
+
+  .compactHome .desireHeroActions .desireSecondary{
+    display:none;
+  }
+
+  .compactHome .homeStandardLine span{
+    font-size:10px;
+    line-height:1.45;
+    letter-spacing:.06em;
+  }
+
+  .premiumFooterBrand{
+    padding-left:14px;
+  }
+  .premiumFooterBrand::before{
+    height:29px;
+  }
+}
