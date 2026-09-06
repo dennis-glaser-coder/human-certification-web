@@ -65,7 +65,7 @@ export default function DocumentsPage() {
       <section className="pageHero shell">
         <div className="eyebrow">DOKUMENTENREGISTER</div>
         <BrandTrace compact />
-        <h1>Regeln und Dokumentversionen öffentlich nachvollziehen.</h1>
+        <h1>Jede Regel. Jede Version. Öffentlich nachvollziehbar.</h1>
         <p className="lead">
           Standard, Zertifizierungsschema, Markennutzungsregeln und Verfahrensregeln werden als kontrollierte Dokumente geführt.
           Dokument-ID, Version, Status und Stand machen jede veröffentlichte Fassung eindeutig referenzierbar.
