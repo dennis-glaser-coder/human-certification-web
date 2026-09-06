@@ -1,16 +1,16 @@
 import { canonical } from '../../lib/seo';
 
 export const metadata = {
-  title: 'Transparenz & Governance',
+  title: 'Transparenz & Integrität',
   description:
-    'Grundsätze für Standardversionen, Prüfung, Zertifizierungsentscheidung, Statusänderungen, Markennutzung und öffentliche Verifizierung bei Made by Humans.',
+    'Rollen, Prüfnachweise, Statusverwaltung, Markennutzung, Beschwerden und Integritätsregeln des Made by Humans Zertifizierungssystems.',
   alternates: {
     canonical: canonical('/transparenz'),
   },
   openGraph: {
-    title: 'Transparenz & Governance | Made by Humans',
+    title: 'Transparenz & Integrität | Made by Humans',
     description:
-      'Regeln und Zuständigkeiten hinter Standard, Prüfung, Register und Markennutzung.',
+      'Nachvollziehbare Regeln für Prüfung, Zertifizierungsentscheidung, Register und Markennutzung.',
     url: canonical('/transparenz'),
   },
 };
