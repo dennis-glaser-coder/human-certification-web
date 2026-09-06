@@ -57,7 +57,7 @@ export default function Home() {
         <div className="shell brandAuthorityRailInner">
           <div className="brandAuthorityWordmark">
             <span>MADE BY HUMANS</span>
-            <small>VERIFIED HUMAN PRODUCTION</small>
+            <small>VERIFIED</small>
           </div>
           <div className="brandAuthorityPillars">
             <span>STANDARD</span>
