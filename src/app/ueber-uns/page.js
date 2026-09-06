@@ -33,7 +33,7 @@ export default function AboutPage() {
       <section className="pageHero shell aboutStoryHero">
         <div className="eyebrow">ÜBER MADE BY HUMANS</div>
         <BrandTrace compact />
-        <h1>Warum menschliche Herstellung sichtbar werden muss.</h1>
+        <h1>Menschliche Arbeit verdient einen überprüfbaren Nachweis.</h1>
         <p className="lead">
           Made by Humans ist aus einer einfachen Beobachtung entstanden: Je stärker Produktion,
           Gestaltung und Vermarktung automatisiert werden, desto schwerer wird von außen erkennbar,
