@@ -211,7 +211,7 @@ export default function Home() {
           </div>
 
           <div className="homeStandardLine">
-            <span>Veröffentlicht. Versioniert. Öffentlich nachvollziehbar.</span>
+            <span>Aktuelle Standardfassung: 0.1 · veröffentlicht am 04.09.2026</span>
             <Link href="/standard">Standard ansehen →</Link>
           </div>
 
