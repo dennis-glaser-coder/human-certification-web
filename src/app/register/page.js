@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import SiteHeader from '../../components/SiteHeader';
 import SiteFooter from '../../components/SiteFooter';
+import BrandTrace from '../../components/BrandTrace';
 import { getSupabaseBrowserClient } from '../../lib/supabase';
 
 const labels = {
@@ -67,6 +68,7 @@ export default function RegisterPage() {
 
       <section className="pageHero shell registerHero">
         <div className="eyebrow">ÖFFENTLICHES REGISTER</div>
+        <BrandTrace compact />
         <h1>Zertifizierungen öffentlich prüfen.</h1>
         <p className="lead">
           Das Register macht Zertifizierungs-ID, Hersteller, Produkt, Zertifizierungsumfang, relevante Produktionsstandorte, Standardfassung, Gültigkeit und aktuellen Status eines veröffentlichten Datensatzes nachvollziehbar.
