@@ -104,23 +104,26 @@ export default function Home() {
             </article>
 
             <article className="sealApplicationCard applicationDigital">
-              <div className="applicationStage applicationDigitalStage">
-                <div className="mockBrowser">
-                  <div className="mockBrowserBar"><i></i><i></i><i></i></div>
-                  <div className="mockProduct">
-                    <div className="mockProductImage"></div>
-                    <div className="mockProductInfo">
-                      <span>PRODUKTDETAIL</span>
-                      <strong>Produktname</strong>
-                      <div className="mockDigitalBadge">
-                        <img src={assetBase + '/brand/made-by-humans-seal.png'} alt="" aria-hidden="true" />
-                        <div><b>Made by Humans</b><small>Zertifizierung prüfen →</small></div>
-                      </div>
-                    </div>
+              <div className="applicationStage applicationDigitalStage applicationProofStage">
+                <div className="applicationProofPanel">
+                  <div className="applicationProofTop">
+                    <span>DIGITALE VERIFIZIERUNG</span>
+                    <img src={assetBase + '/brand/made-by-humans-seal.png'} alt="" aria-hidden="true" />
                   </div>
+                  <div className="applicationProofStatement">
+                    <small>PRODUKTBEZOGENER NACHWEIS</small>
+                    <strong>Made by Humans</strong>
+                    <p>Die Kennzeichnung führt zum öffentlichen Zertifizierungsdatensatz des konkret erfassten Produkts.</p>
+                  </div>
+                  <div className="applicationProofMeta" aria-label="Bestandteile des digitalen Nachweises">
+                    <span>Produktumfang</span>
+                    <span>Status</span>
+                    <span>Standardfassung</span>
+                  </div>
+                  <div className="applicationProofAction">Öffentlichen Datensatz prüfen →</div>
                 </div>
               </div>
-              <div className="applicationCopy"><strong>Online & B2B</strong><p>Digitales Badge, Registerlink und Produktnachweis bleiben direkt miteinander verbunden.</p></div>
+              <div className="applicationCopy"><strong>Digitaler Nachweis</strong><p>Zeichen, Registerbezug und Verifizierung bleiben auch online eindeutig miteinander verbunden.</p></div>
             </article>
           </div>
 
