@@ -47,7 +47,7 @@ export default function StandardPage() {
       <section className="pageHero shell">
         <div className="eyebrow">STANDARD</div>
         <BrandTrace compact />
-        <h1>Kriterien für nachweisbar menschlich gefertigte Produkte.</h1>
+        <h1>Der Standard für nachweisbar menschliche Herstellung.</h1>
         <p className="lead">
           Der öffentliche Standard definiert, wann menschliche Arbeit für die Herstellung eines physischen Endprodukts
           wesentlich ist, wie der Produktumfang abgegrenzt wird und welche Nachweise für die Prüfung erforderlich sind.
