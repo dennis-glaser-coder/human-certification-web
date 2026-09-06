@@ -16,6 +16,37 @@ const statusLabels = {
   revoked: 'Widerrufen',
 };
 
+function publicClaim(record) {
+  if (record.public_id?.startsWith('HC-DEMO-')) {
+    return {
+      label: 'BEISPIELDATENSATZ',
+      text: 'Technische Demonstration des öffentlichen Registermodells. Dieser Datensatz ist keine reale Zertifizierung.',
+      className: 'certificateClaimReview',
+    };
+  }
+
+  if (record.status === 'active') {
+    return {
+      label: 'ZERTIFIZIERTE AUSSAGE',
+      text: CERTIFIED_STATEMENT,
+      className: '',
+    };
+  }
+
+  const statusMessages = {
+    under_review: 'Dieser Datensatz befindet sich in Prüfung. Eine Zertifizierungsentscheidung wurde noch nicht erteilt.',
+    suspended: 'Diese Zertifizierung ist derzeit ausgesetzt. Der Datensatz bleibt zur öffentlichen Nachvollziehbarkeit sichtbar.',
+    expired: 'Diese Zertifizierung ist abgelaufen. Der Datensatz bleibt zur öffentlichen Nachvollziehbarkeit sichtbar.',
+    revoked: 'Diese Zertifizierung wurde widerrufen. Der Datensatz bleibt zur öffentlichen Nachvollziehbarkeit sichtbar.',
+  };
+
+  return {
+    label: record.status === 'under_review' ? 'PRÜFSTATUS' : 'STATUSHINWEIS',
+    text: statusMessages[record.status] ?? 'Der aktuelle Zertifizierungsstatus ist im öffentlichen Datensatz ausgewiesen.',
+    className: 'certificateClaimReview',
+  };
+}
+
 export default function CertificateClient({ id }) {
   const assetBase = process.env.GITHUB_PAGES === 'true' ? '/human-certification-web' : '';
   const [state, setState] = useState({
@@ -94,14 +125,15 @@ export default function CertificateClient({ id }) {
                 </span>
               </div>
 
-              <div className={`certificateClaim ${state.record.status === 'under_review' ? 'certificateClaimReview' : ''}`}>
-                <span>{state.record.status === 'under_review' ? 'PRÜFSTATUS' : 'ZERTIFIZIERTE AUSSAGE'}</span>
-                <p>
-                  {state.record.status === 'under_review'
-                    ? 'Dieser Datensatz befindet sich in Prüfung. Eine Zertifizierungsentscheidung wurde noch nicht erteilt.'
-                    : CERTIFIED_STATEMENT}
-                </p>
-              </div>
+              {(() => {
+                const claim = publicClaim(state.record);
+                return (
+                  <div className={`certificateClaim ${claim.className}`}>
+                    <span>{claim.label}</span>
+                    <p>{claim.text}</p>
+                  </div>
+                );
+              })()}
 
               <dl className="certificateFacts">
                 <div><dt>Hersteller</dt><dd>{state.record.products?.manufacturers?.name ?? '—'}</dd></div>
