@@ -53,6 +53,20 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="brandAuthorityRail" aria-label="Made by Humans Markenversprechen">
+        <div className="shell brandAuthorityRailInner">
+          <div className="brandAuthorityWordmark">
+            <span>MADE BY HUMANS</span>
+            <small>VERIFIED HUMAN PRODUCTION</small>
+          </div>
+          <div className="brandAuthorityPillars">
+            <span>STANDARD</span>
+            <span>VOR-ORT-AUDIT</span>
+            <span>ÖFFENTLICHES REGISTER</span>
+          </div>
+        </div>
+      </section>
+
       <section className="desireManifesto compactManifesto">
         <div className="shell desireManifestoGrid">
           <p className="premiumSectionLabel">WARUM ES DAS ZEICHEN GIBT</p>
