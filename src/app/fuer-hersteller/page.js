@@ -131,7 +131,7 @@ export default function ManufacturerPage() {
           <div className="manufacturerHeroArtCopy">
             <div className="eyebrow">ZERTIFIZIERUNG FÜR HERSTELLER</div>
             <div className="brandTrace" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
-            <h1>Menschliche Herstellung für Ihr Produkt nachvollziehbar zertifizieren.</h1>
+            <h1>Menschliche Herstellung. Als Produktmerkmal zertifiziert.</h1>
             <p className="lead">
               Made by Humans macht menschliche Herstellung sichtbar und überprüfbar: mit klar abgegrenztem Produktumfang,
               Vor-Ort-Audit beim Hersteller, dokumentierter Entscheidung und öffentlicher Verifizierung.
@@ -171,7 +171,7 @@ export default function ManufacturerPage() {
           <div className="sectionIntro compact">
             <div>
               <div className="sectionNo">ZERTIFIZIERUNGSSYSTEM</div>
-              <h2>Die Zertifizierung schafft einen überprüfbaren Produktnachweis.</h2>
+              <h2>Aus Herstellung wird ein belegbarer Produktunterschied.</h2>
             </div>
             <p>
               Die Kennzeichnung erhält ihren Wert durch die Verbindung von abgegrenztem Produktumfang,
