@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import SiteHeader from '../../components/SiteHeader';
 import SiteFooter from '../../components/SiteFooter';
+import BrandTrace from '../../components/BrandTrace';
 import { canonical } from '../../lib/seo';
 
 export const metadata = {
@@ -38,6 +39,7 @@ export default function TransparencyPage() {
 
       <section className="pageHero shell">
         <div className="eyebrow">TRANSPARENZ & INTEGRITÄT</div>
+        <BrandTrace compact />
         <h1>Vertrauen braucht nachvollziehbare Regeln.</h1>
         <p className="lead">
           Die Glaubwürdigkeit der Kennzeichnung entsteht durch klare Standardversionen,
