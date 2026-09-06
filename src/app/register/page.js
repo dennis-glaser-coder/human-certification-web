@@ -71,7 +71,8 @@ export default function RegisterPage() {
         <BrandTrace compact />
         <h1>Zertifizierungen öffentlich prüfen.</h1>
         <p className="lead">
-          Das Register macht Zertifizierungs-ID, Hersteller, Produkt, Zertifizierungsumfang, relevante Produktionsstandorte, Standardfassung, Gültigkeit und aktuellen Status eines veröffentlichten Datensatzes nachvollziehbar.
+          Jeder veröffentlichte Datensatz ordnet Zertifizierungs-ID, Hersteller, Produkt, Umfang, relevante Produktionsstandorte,
+          Standardfassung, Gültigkeit und aktuellen Status eindeutig zu.
         </p>
       </section>
 
