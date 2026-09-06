@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import SiteHeader from '../../components/SiteHeader';
 import SiteFooter from '../../components/SiteFooter';
+import BrandTrace from '../../components/BrandTrace';
 import { canonical } from '../../lib/seo';
 
 export const metadata = {
@@ -45,6 +46,7 @@ export default function StandardPage() {
 
       <section className="pageHero shell">
         <div className="eyebrow">STANDARD</div>
+        <BrandTrace compact />
         <h1>Kriterien für nachweisbar menschlich gefertigte Produkte.</h1>
         <p className="lead">
           Der Standard grenzt ab, wann menschliche Arbeit für die Herstellung eines physischen Endprodukts
