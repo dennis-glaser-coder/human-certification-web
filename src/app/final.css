@@ -514,3 +514,133 @@ summary:focus-visible {
     height:29px;
   }
 }
+
+
+/* ===== Homepage digital proof specimen 2026-09-06 ===== */
+.applicationProofStage{
+  padding:34px;
+  background:#E9E5DA;
+}
+.applicationProofPanel{
+  width:min(100%,520px);
+  margin:auto;
+  background:var(--paper);
+  border-top:3px solid var(--blue);
+  border-left:1px solid rgba(17,24,32,.18);
+  border-right:1px solid rgba(17,24,32,.18);
+  border-bottom:1px solid rgba(17,24,32,.18);
+}
+.applicationProofTop{
+  min-height:78px;
+  padding:14px 16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  border-bottom:1px solid rgba(17,24,32,.18);
+}
+.applicationProofTop span{
+  color:var(--blue);
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.14em;
+}
+.applicationProofTop img{
+  width:48px;
+  height:48px;
+  object-fit:contain;
+  border-radius:50%;
+}
+.applicationProofStatement{
+  padding:24px 18px 23px;
+}
+.applicationProofStatement small{
+  display:block;
+  margin-bottom:8px;
+  color:var(--muted-soft);
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:.12em;
+}
+.applicationProofStatement strong{
+  display:block;
+  margin-bottom:10px;
+  font-family:var(--font-serif),Georgia,serif;
+  font-size:31px;
+  font-weight:500;
+  line-height:1.05;
+}
+.applicationProofStatement p{
+  max-width:390px;
+  margin:0;
+  color:var(--muted);
+  font-size:10px;
+  line-height:1.65;
+}
+.applicationProofMeta{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:1px solid rgba(17,24,32,.18);
+  border-bottom:1px solid rgba(17,24,32,.18);
+}
+.applicationProofMeta span{
+  min-height:52px;
+  padding:0 12px;
+  display:flex;
+  align-items:center;
+  color:var(--muted);
+  font-size:8px;
+  font-weight:600;
+}
+.applicationProofMeta span+span{
+  border-left:1px solid rgba(17,24,32,.18);
+}
+.applicationProofAction{
+  padding:14px 16px;
+  color:var(--blue);
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.03em;
+}
+
+@media(max-width:760px){
+  .applicationProofStage{
+    padding:20px;
+  }
+  .applicationProofTop{
+    min-height:64px;
+  }
+  .applicationProofTop img{
+    width:42px;
+    height:42px;
+  }
+  .applicationProofTop span{
+    font-size:10px;
+  }
+  .applicationProofStatement{
+    padding:20px 16px 18px;
+  }
+  .applicationProofStatement small{
+    font-size:9px;
+  }
+  .applicationProofStatement strong{
+    font-size:26px;
+  }
+  .applicationProofStatement p{
+    font-size:12px;
+  }
+  .applicationProofMeta{
+    grid-template-columns:1fr;
+  }
+  .applicationProofMeta span{
+    min-height:40px;
+    font-size:10px;
+  }
+  .applicationProofMeta span+span{
+    border-left:0;
+    border-top:1px solid rgba(17,24,32,.14);
+  }
+  .applicationProofAction{
+    font-size:10px;
+  }
+}
