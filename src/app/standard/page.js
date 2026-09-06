@@ -1,6 +1,18 @@
 import Link from 'next/link';
 import SiteHeader from '../../components/SiteHeader';
 import SiteFooter from '../../components/SiteFooter';
+import { canonical } from '../../lib/seo';
+
+export const metadata = {
+  title: 'Standard für menschliche Herstellung',
+  description: 'Kriterien, Geltungsbereich, Nachweise und Entscheidungsregeln des Made by Humans Standards für nachweisbar menschlich gefertigte physische Produkte.',
+  alternates: { canonical: canonical('/standard') },
+  openGraph: {
+    title: 'Standard | Made by Humans',
+    description: 'Der öffentliche Made by Humans Standard mit Kriterien, Abgrenzungen und Entscheidungsregeln.',
+    url: canonical('/standard'),
+  },
+};
 
 const criteria = [
   ['Produktentstehung', 'Durch menschliche Arbeit entsteht aus Materialien oder Komponenten das verkaufsfertige Endprodukt.'],
