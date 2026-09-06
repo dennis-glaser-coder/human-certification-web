@@ -211,10 +211,6 @@ export default function ManufacturerPage() {
           ))}
         </div>
 
-        <div className="manufacturerScopeNote">
-          <span>GELTUNGSBEREICH</span>
-          <p>Lebensmittel, Medizinprodukte und andere stark regulierte Kategorien sind nicht Gegenstand des aktuellen Standards.</p>
-        </div>
       </section>
 
       <section className="manufacturerEvidence">
