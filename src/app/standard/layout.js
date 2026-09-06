@@ -1,16 +1,16 @@
 import { canonical } from '../../lib/seo';
 
 export const metadata = {
-  title: 'Standard für menschlich gefertigte Produkte',
+  title: 'Standard für menschliche Herstellung',
   description:
-    'Kriterien und Abgrenzungen für physische Produkte, deren wesentliche Herstellungsschritte nachweislich durch Menschen ausgeführt werden.',
+    'Kriterien, Geltungsbereich, Nachweise und Entscheidungsregeln des Made by Humans Standards für nachweisbar menschlich gefertigte physische Produkte.',
   alternates: {
     canonical: canonical('/standard'),
   },
   openGraph: {
-    title: 'Standard für menschlich gefertigte Produkte | Made by Humans',
+    title: 'Standard | Made by Humans',
     description:
-      'Kriterien, Nachweise und Abgrenzungen für die Zertifizierung menschlich gefertigter physischer Produkte.',
+      'Der öffentliche Made by Humans Standard mit Kriterien, Abgrenzungen und Entscheidungsregeln.',
     url: canonical('/standard'),
   },
 };
