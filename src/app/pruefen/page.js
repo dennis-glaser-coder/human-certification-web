@@ -68,7 +68,7 @@ export default function VerifyPage() {
           <BrandTrace compact />
           <h1>Zertifizierung über ID prüfen.</h1>
           <p>
-            Geben Sie die ID einer Kennzeichnung ein, um den zugehörigen öffentlichen Datensatz aufzurufen.
+            Eine Zertifizierungs-ID führt zum zugehörigen öffentlichen Datensatz mit Produktbezug, Standardfassung und aktuellem Status.
           </p>
         </div>
 
