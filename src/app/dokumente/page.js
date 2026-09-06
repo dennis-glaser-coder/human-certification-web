@@ -68,7 +68,7 @@ export default function DocumentsPage() {
         <h1>Regeln und Dokumentversionen öffentlich nachvollziehen.</h1>
         <p className="lead">
           Standard, Zertifizierungsschema, Markennutzungsregeln und Verfahrensregeln werden als kontrollierte Dokumente geführt.
-          Jede Fassung erhält Dokument-ID, Version, Status und Datum.
+          Dokument-ID, Version, Status und Stand machen jede veröffentlichte Fassung eindeutig referenzierbar.
         </p>
       </section>
 
