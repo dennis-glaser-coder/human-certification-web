@@ -46,7 +46,8 @@ export default function SchemeDocumentPage() {
         </header>
 
         <div className="controlledDocumentActions">
-          <Link className="button primary" href="/dokumente">Dokumentenregister</Link>
+          <a className="button primary" href={assetBase + '/documents/made-by-humans-certification-scheme-0-1.pdf'}>PDF herunterladen</a>
+          <Link className="button secondary" href="/dokumente">Dokumentenregister</Link>
         </div>
 
         <section>
