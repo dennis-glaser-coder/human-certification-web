@@ -80,7 +80,7 @@ export default function Home() {
           <div className="desireSectionHead">
             <div>
               <p className="premiumSectionLabel">DAS ZEICHEN IM EINSATZ</p>
-              <h2>Der Nachweis kann direkt am Produkt und im Verkauf eingesetzt werden.</h2>
+              <h2>Der Nachweis wird dort sichtbar, wo die Kaufentscheidung fällt.</h2>
             </div>
             <p>
               Das Zeichen ergänzt die Herstellermarke und verweist immer auf den konkret zertifizierten Produktumfang.
@@ -183,7 +183,7 @@ export default function Home() {
         <div className="shell homeConsumerVerifyGrid">
           <div className="homeConsumerCopy">
             <p className="premiumSectionLabel premiumSectionLabelLight">FÜR KÄUFER</p>
-            <h2>Für Käufer klar erklärt und öffentlich überprüfbar.</h2>
+            <h2>Vertrauen endet nicht beim Zeichen. Es lässt sich prüfen.</h2>
             <blockquote>
               {CERTIFIED_STATEMENT}
             </blockquote>
@@ -205,7 +205,7 @@ export default function Home() {
           <div className="homeFinalTop">
             <div>
               <p className="premiumSectionLabel">NACH POSITIVER ZERTIFIZIERUNG</p>
-              <h2>Die Nutzung des Zeichens bleibt an klare Regeln gebunden.</h2>
+              <h2>Ein starkes Zeichen braucht klare Grenzen.</h2>
             </div>
             <div className="homeFinalSummary">
               <p>Freigegebene Kennzeichnung · QR & Registerlink · gültiger Zertifizierungsstatus · geregelte Produktaussagen</p>
