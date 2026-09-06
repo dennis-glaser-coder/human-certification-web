@@ -31,21 +31,26 @@ export const metadata = {
     description: DEFAULT_DESCRIPTION,
     images: [
       {
-        url: canonical('/brand/made-by-humans-seal.png'),
-        alt: 'Made by Humans Zertifizierungszeichen',
+        url: canonical('/brand/IMG_1053.png'),
+        alt: 'Made by Humans – Vor-Ort-Prüfung menschlicher Herstellung',
       },
     ],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: 'Made by Humans | Zertifizierung für menschliche Herstellung',
     description: DEFAULT_DESCRIPTION,
-    images: [canonical('/brand/made-by-humans-seal.png')],
+    images: [canonical('/brand/IMG_1053.png')],
   },
   icons: {
     icon: canonical('/brand/made-by-humans-seal.png'),
     apple: canonical('/brand/made-by-humans-seal.png'),
   },
+};
+
+export const viewport = {
+  themeColor: '#F3F0E8',
+  colorScheme: 'light',
 };
 
 const ibmPlexSans = IBM_Plex_Sans({
