@@ -20,7 +20,6 @@ const documents = [
     date: '04.09.2026',
     copy: 'Geltungsbereich, Prüfkriterien, Abgrenzungen, Nachweise und Entscheidungsregel für physische Produkte.',
     href: '/dokumente/standard-0-1',
-    pdf: '/documents/made-by-humans-standard-0-1.pdf',
   },
   {
     id: 'MBH-SCH-0.1',
@@ -31,7 +30,6 @@ const documents = [
     date: '04.09.2026',
     copy: 'Rollen, Prüfprozess, fachliche Kontrolle, Zertifizierungsentscheidung, Statusverwaltung, Register und Verfahrensregeln.',
     href: '/dokumente/certification-scheme-0-1',
-    pdf: '/documents/made-by-humans-certification-scheme-0-1.pdf',
   },
   {
     id: 'MBH-MARK-0.1',
@@ -56,8 +54,6 @@ const documents = [
 ];
 
 export default function DocumentsPage() {
-  const assetBase = process.env.GITHUB_PAGES === 'true' ? '/human-certification-web' : '';
-
   return (
     <main>
       <SiteHeader />
@@ -77,7 +73,7 @@ export default function DocumentsPage() {
           <div><strong>Dokument-ID</strong><p>Eindeutige Referenz für jedes Regelwerk.</p></div>
           <div><strong>Version</strong><p>Änderungen bleiben zeitlich nachvollziehbar.</p></div>
           <div><strong>Stand</strong><p>Veröffentlichungsdatum jeder Fassung.</p></div>
-          <div><strong>Web & PDF</strong><p>Regelwerke sind direkt einsehbar und referenzierbar.</p></div>
+          <div><strong>Webfassung</strong><p>Regelwerke sind direkt einsehbar und referenzierbar.</p></div>
         </div>
       </section>
 
@@ -99,7 +95,6 @@ export default function DocumentsPage() {
               <time>{doc.date}</time>
               <div className="documentActions">
                 <Link href={doc.href}>Webfassung →</Link>
-                {doc.pdf && <a href={assetBase + doc.pdf}>PDF ↓</a>}
               </div>
             </article>
           ))}
