@@ -86,18 +86,25 @@ export default function BuyerPage() {
       <section className="buyerVerify">
         <div className="shell buyerVerifyGrid">
           <div className="buyerVerifyVisual">
-            <div className="buyerPhone">
-              <div className="buyerPhoneTop"></div>
-              <span>ZERTIFIZIERUNG</span>
-              <strong>HC-DEMO-0001</strong>
-              <div className="buyerStatus">AKTIV · DEMO</div>
-              <dl>
+            <div className="buyerProofSpecimen">
+              <div className="buyerProofAuthority">
+                <span>ÖFFENTLICHER ZERTIFIZIERUNGSDATENSATZ</span>
+                <small>BEISPIEL · KEINE REALE ZERTIFIZIERUNG</small>
+              </div>
+              <div className="buyerProofIdentity">
+                <div>
+                  <small>ZERTIFIZIERUNGS-ID</small>
+                  <strong>HC-DEMO-0001</strong>
+                </div>
+                <span className="statusBadge active">AKTIV · DEMO</span>
+              </div>
+              <dl className="buyerProofFacts">
                 <div><dt>Produkt</dt><dd>Demo Produkt</dd></div>
                 <div><dt>Hersteller</dt><dd>Demo Hersteller</dd></div>
                 <div><dt>Produktionsort</dt><dd>Deutschland · Demo-Standort</dd></div>
                 <div><dt>Standard</dt><dd>0.1</dd></div>
               </dl>
-              <small>Beispieldarstellung · keine reale Zertifizierung</small>
+              <div className="buyerProofFoot">Produktbezogen · statusgebunden · öffentlich verifizierbar</div>
             </div>
           </div>
           <div className="buyerVerifyCopy">
