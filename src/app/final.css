@@ -913,3 +913,36 @@ summary:focus-visible {
     line-height:1.45;
   }
 }
+
+
+/* ===== Mobile editorial headline guard 2026-09-06 ===== */
+@media(max-width:760px){
+  .whySectionHead{
+    grid-template-columns:1fr;
+    gap:22px;
+    align-items:start;
+    width:100%;
+    min-width:0;
+    overflow:visible;
+  }
+
+  .whySectionHead>div,
+  .whySectionHead>p,
+  .whySectionHead h2{
+    width:100%;
+    min-width:0;
+    max-width:100%;
+  }
+
+  .whySectionHead h2{
+    height:auto;
+    max-height:none;
+    overflow:visible;
+    font-size:clamp(31px,8.8vw,35px);
+    line-height:1.02;
+    word-break:normal;
+    overflow-wrap:break-word;
+    -webkit-hyphens:auto;
+    hyphens:auto;
+  }
+}
