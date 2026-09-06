@@ -211,6 +211,11 @@ export default function ManufacturerPage() {
           ))}
         </div>
 
+        <div className="manufacturerScopeNote">
+          <span>START- & PILOTPHASE</span>
+          <p>Lebensmittel, Medizinprodukte und andere stark regulierte Kategorien werden in der aktuellen Validierungsphase zunächst nicht aufgenommen.</p>
+        </div>
+
       </section>
 
       <section className="manufacturerEvidence">
