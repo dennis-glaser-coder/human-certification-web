@@ -102,7 +102,7 @@ export default function BuyerPage() {
                 <div><dt>Produkt</dt><dd>Demo Produkt</dd></div>
                 <div><dt>Hersteller</dt><dd>Demo Hersteller</dd></div>
                 <div><dt>Produktionsort</dt><dd>Deutschland · Demo-Standort</dd></div>
-                <div><dt>Standard</dt><dd>0.1</dd></div>
+                <div><dt>Standard</dt><dd>0.1-DEMO</dd></div>
               </dl>
               <div className="buyerProofFoot">Produktbezogen · statusgebunden · öffentlich verifizierbar</div>
             </div>
