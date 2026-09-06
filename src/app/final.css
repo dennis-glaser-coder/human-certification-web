@@ -644,3 +644,272 @@ summary:focus-visible {
     font-size:10px;
   }
 }
+
+
+/* ===== Made by Humans certification object system 2026-09-06 ===== */
+
+/* A smaller signature for institutional page openings. */
+.brandTraceInstitutional{
+  width:118px;
+  height:14px;
+  margin:13px 0 19px;
+}
+.brandTraceInstitutional i:nth-child(1){width:118px;}
+.brandTraceInstitutional i:nth-child(2){top:6px;width:78px;left:19px;}
+.brandTraceInstitutional i:nth-child(3){top:12px;width:43px;left:50px;}
+.brandTraceInstitutional b{
+  right:-1px;
+  top:-3px;
+  width:7px;
+  height:7px;
+}
+.brandTraceLight i{background:#AFC1D8;}
+.brandTraceLight b{border-color:#AFC1D8;}
+
+/* Core institutional bands share one quiet paper-and-rule language. */
+.standardMetaBand,
+.documentProofBand,
+.markUseMetaBand,
+.integrityMetaBand,
+.aboutMetaBand{
+  background:#ECE8DE;
+  border-top:1px solid rgba(17,24,32,.18);
+  border-bottom:1px solid rgba(17,24,32,.18);
+}
+
+/* Public proof surfaces use the same visual grammar: blue authority rule, paper field, no app-card styling. */
+.registerTrustBar,
+.verifyTrustStrip{
+  background:#F7F4ED;
+  border-top:3px solid var(--blue);
+  border-bottom:1px solid rgba(17,24,32,.18);
+}
+.registerTrustBar>div,
+.verifyTrustStrip>div{
+  border-color:rgba(17,24,32,.16)!important;
+}
+
+.documentRegistryRow,
+.registerRow{
+  box-shadow:inset 2px 0 0 var(--blue);
+  background:rgba(255,255,255,.34);
+}
+.documentRegistryRow:hover,
+.registerRow:hover{
+  background:#F7F4ED;
+}
+
+.verificationRecord{
+  border-radius:0!important;
+  border-top:3px solid var(--blue)!important;
+  box-shadow:none!important;
+  background:var(--white);
+}
+.verificationTop,
+.verificationIdentity,
+.verificationDetails>div,
+.publicNote{
+  border-color:rgba(17,24,32,.16)!important;
+}
+
+/* Controlled-document and certification labels become a recognizable micro-language. */
+.documentRegistryRow small,
+.registerRow small,
+.verificationRecord small,
+.certificateSummary small,
+.applicationProofPanel small,
+.buyerProofSpecimen small,
+.certificateAuthorityLine,
+.documentRegistryHead,
+.caseTableHead{
+  color:var(--blue);
+  font-weight:700;
+  letter-spacing:.115em;
+  text-transform:uppercase;
+}
+
+/* The full certificate keeps status semantics while gaining the same authority rule. */
+.certificateSummary{
+  position:relative;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+.certificateSummary::before{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  height:3px;
+  background:var(--blue);
+  z-index:2;
+}
+.certificateAuthorityLine{
+  padding-top:17px;
+}
+
+/* Buyer verification is now a certification object, not a phone/app mockup. */
+.buyerProofSpecimen{
+  width:min(100%,500px);
+  margin:auto;
+  background:var(--paper);
+  color:var(--ink);
+  border-top:3px solid var(--blue);
+  border-left:1px solid rgba(17,24,32,.18);
+  border-right:1px solid rgba(17,24,32,.18);
+  border-bottom:1px solid rgba(17,24,32,.18);
+}
+.buyerProofAuthority{
+  min-height:62px;
+  padding:13px 16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  border-bottom:1px solid rgba(17,24,32,.18);
+}
+.buyerProofAuthority span{
+  color:var(--blue);
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.13em;
+}
+.buyerProofAuthority small{
+  color:var(--muted-soft);
+  font-size:7px;
+  text-align:right;
+}
+.buyerProofIdentity{
+  padding:24px 18px 22px;
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:18px;
+  border-bottom:1px solid rgba(17,24,32,.18);
+}
+.buyerProofIdentity small{
+  display:block;
+  margin-bottom:7px;
+  font-size:7px;
+}
+.buyerProofIdentity strong{
+  display:block;
+  font-family:var(--font-serif),Georgia,serif;
+  font-size:30px;
+  font-weight:500;
+  line-height:1;
+  letter-spacing:-.03em;
+}
+.buyerProofFacts{
+  margin:0;
+  padding:0 18px;
+}
+.buyerProofFacts>div{
+  padding:12px 0;
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:22px;
+  border-bottom:1px solid rgba(17,24,32,.14);
+}
+.buyerProofFacts dt{
+  color:var(--muted-soft);
+  font-size:9px;
+}
+.buyerProofFacts dd{
+  margin:0;
+  text-align:right;
+  font-size:10px;
+  font-weight:600;
+}
+.buyerProofFoot{
+  padding:13px 18px;
+  color:var(--blue);
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+/* Document links behave like references, not promotional buttons. */
+.documentActions a,
+.recordOpenLink,
+.registerRow>a{
+  color:var(--blue);
+  font-weight:700;
+  text-decoration:none;
+  border-bottom:1px solid rgba(41,76,119,.45);
+  padding-bottom:2px;
+}
+.documentActions a:hover,
+.recordOpenLink:hover,
+.registerRow>a:hover{
+  border-bottom-color:var(--blue);
+}
+
+/* One headline rhythm across system pages. */
+.pageHero .lead,
+.verifyPageIntro>p{
+  max-width:760px;
+}
+.pageHero h1,
+.verifyPageIntro h1{
+  text-wrap:balance;
+}
+
+@media(max-width:760px){
+  .brandTraceInstitutional{
+    width:92px;
+    height:12px;
+    margin:10px 0 16px;
+  }
+  .brandTraceInstitutional i:nth-child(1){width:92px;}
+  .brandTraceInstitutional i:nth-child(2){top:5px;width:61px;left:15px;}
+  .brandTraceInstitutional i:nth-child(3){top:10px;width:34px;left:39px;}
+
+  .registerTrustBar,
+  .verifyTrustStrip{
+    border-top-width:2px;
+  }
+
+  .documentRegistryRow,
+  .registerRow{
+    box-shadow:inset 2px 0 0 var(--blue);
+  }
+
+  .buyerProofAuthority{
+    min-height:56px;
+  }
+  .buyerProofAuthority span{
+    font-size:10px;
+  }
+  .buyerProofAuthority small{
+    font-size:9px;
+  }
+  .buyerProofIdentity{
+    padding:20px 15px 18px;
+  }
+  .buyerProofIdentity small{
+    font-size:9px;
+  }
+  .buyerProofIdentity strong{
+    font-size:26px;
+  }
+  .buyerProofFacts{
+    padding:0 15px;
+  }
+  .buyerProofFacts>div{
+    grid-template-columns:1fr;
+    gap:3px;
+    padding:10px 0;
+  }
+  .buyerProofFacts dt,
+  .buyerProofFacts dd{
+    font-size:11px;
+    text-align:left;
+  }
+  .buyerProofFoot{
+    padding:12px 15px;
+    font-size:9px;
+    line-height:1.45;
+  }
+}
