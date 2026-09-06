@@ -49,8 +49,8 @@ export default function StandardPage() {
         <BrandTrace compact />
         <h1>Kriterien für nachweisbar menschlich gefertigte Produkte.</h1>
         <p className="lead">
-          Der Standard grenzt ab, wann menschliche Arbeit für die Herstellung eines physischen Endprodukts
-          wesentlich ist und welche Nachweise für eine Prüfung erforderlich sind.
+          Der öffentliche Standard definiert, wann menschliche Arbeit für die Herstellung eines physischen Endprodukts
+          wesentlich ist, wie der Produktumfang abgegrenzt wird und welche Nachweise für die Prüfung erforderlich sind.
         </p>
       </section>
 
