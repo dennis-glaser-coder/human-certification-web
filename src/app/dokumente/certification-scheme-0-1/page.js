@@ -27,6 +27,8 @@ const steps = [
 ];
 
 export default function SchemeDocumentPage() {
+  const assetBase = process.env.GITHUB_PAGES === 'true' ? '/human-certification-web' : '';
+
   return (
     <main>
       <SiteHeader />
