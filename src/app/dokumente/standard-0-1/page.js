@@ -19,16 +19,13 @@ const criteria = [
 ];
 
 export default function StandardDocumentPage() {
-  const assetBase = process.env.GITHUB_PAGES === 'true' ? '/human-certification-web' : '';
-
   return (
     <main className="standardDocumentPage">
       <SiteHeader />
 
       <article className="shell standardDocument">
         <div className="controlledDocumentActions">
-          <a className="button primary" href={assetBase + '/documents/made-by-humans-standard-0-1.pdf'}>PDF herunterladen</a>
-          <Link className="button secondary" href="/dokumente">Dokumentenregister</Link>
+          <Link className="button primary" href="/dokumente">Dokumentenregister</Link>
         </div>
 
         <header className="standardDocumentHeader">
