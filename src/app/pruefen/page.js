@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import SiteHeader from '../../components/SiteHeader';
 import SiteFooter from '../../components/SiteFooter';
+import BrandTrace from '../../components/BrandTrace';
 import { getSupabaseBrowserClient } from '../../lib/supabase';
 
 const statusText = {
@@ -64,6 +65,7 @@ export default function VerifyPage() {
       <section className="verifyPage shell">
         <div className="verifyPageIntro">
           <div className="eyebrow">VERIFIZIERUNG</div>
+          <BrandTrace compact />
           <h1>Zertifizierung über ID prüfen.</h1>
           <p>
             Geben Sie die ID einer Kennzeichnung ein, um den zugehörigen öffentlichen Datensatz aufzurufen.
