@@ -42,7 +42,7 @@ export default function TransparencyPage() {
         <BrandTrace compact />
         <h1>Vertrauen braucht nachvollziehbare Regeln.</h1>
         <p className="lead">
-          Die Glaubwürdigkeit der Kennzeichnung entsteht durch klare Standardversionen,
+          Glaubwürdigkeit entsteht nicht durch das Zeichen allein. Sie entsteht durch versionierte Regeln,
           dokumentierte Prüfungen, definierte Zuständigkeiten und einen öffentlich nachvollziehbaren Zertifizierungsstatus.
         </p>
       </section>
