@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import SiteHeader from '../../components/SiteHeader';
 import SiteFooter from '../../components/SiteFooter';
+import BrandTrace from '../../components/BrandTrace';
 import { canonical } from '../../lib/seo';
 
 export const metadata = {
@@ -41,6 +42,7 @@ export default function MarkUsePage() {
 
       <section className="pageHero shell">
         <div className="eyebrow">MARKENNUTZUNG · MBH-MARK-0.1</div>
+        <BrandTrace compact />
         <h1>Das Zeichen bleibt an Produkt, Status und Register gebunden.</h1>
         <p className="lead">
           Das Made by Humans Zertifizierungszeichen ist kein frei verwendbares Marketingelement.
