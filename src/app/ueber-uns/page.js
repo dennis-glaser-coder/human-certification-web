@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import SiteHeader from '../../components/SiteHeader';
 import SiteFooter from '../../components/SiteFooter';
+import BrandTrace from '../../components/BrandTrace';
 import { canonical } from '../../lib/seo';
 
 export const metadata = {
@@ -31,6 +32,7 @@ export default function AboutPage() {
 
       <section className="pageHero shell aboutStoryHero">
         <div className="eyebrow">ÜBER MADE BY HUMANS</div>
+        <BrandTrace compact />
         <h1>Warum menschliche Herstellung sichtbar werden muss.</h1>
         <p className="lead">
           Made by Humans ist aus einer einfachen Beobachtung entstanden: Je stärker Produktion,
