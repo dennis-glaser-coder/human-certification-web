@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import SiteHeader from '../../components/SiteHeader';
 import SiteFooter from '../../components/SiteFooter';
+import BrandTrace from '../../components/BrandTrace';
 import { canonical } from '../../lib/seo';
 import { CERTIFIED_STATEMENT } from '../../lib/brand';
 
@@ -47,6 +48,7 @@ export default function BuyerPage() {
         <div className="shell buyerHeroGrid">
           <div>
             <p className="premiumEyebrow">FÜR KÄUFER</p>
+            <BrandTrace compact />
             <h1>Was bedeutet Made by Humans?</h1>
             <p className="buyerHeroLead">
               Das Zeichen steht für eine klar abgegrenzte Aussage: Bei diesem Produkt wurden die wesentlichen
