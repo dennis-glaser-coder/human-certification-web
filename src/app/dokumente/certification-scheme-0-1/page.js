@@ -27,8 +27,6 @@ const steps = [
 ];
 
 export default function SchemeDocumentPage() {
-  const assetBase = process.env.GITHUB_PAGES === 'true' ? '/human-certification-web' : '';
-
   return (
     <main>
       <SiteHeader />
@@ -48,8 +46,7 @@ export default function SchemeDocumentPage() {
         </header>
 
         <div className="controlledDocumentActions">
-          <a className="button primary" href={assetBase + '/documents/made-by-humans-certification-scheme-0-1.pdf'}>PDF herunterladen</a>
-          <Link className="button secondary" href="/dokumente">Dokumentenregister</Link>
+          <Link className="button primary" href="/dokumente">Dokumentenregister</Link>
         </div>
 
         <section>
