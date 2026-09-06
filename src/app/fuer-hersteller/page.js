@@ -248,8 +248,8 @@ export default function ManufacturerPage() {
               ))}
             </div>
             <div className="manufacturerGuideLinks">
-              <a href="/leitfaden/nachweise">Leitfaden Prüfnachweise →</a>
-              <a href="/leitfaden/zertifizierungsumfang">Leitfaden Zertifizierungsumfang →</a>
+              <Link href="/leitfaden/nachweise">Leitfaden Prüfnachweise →</Link>
+              <Link href="/leitfaden/zertifizierungsumfang">Leitfaden Zertifizierungsumfang →</Link>
             </div>
           </div>
         </div>
