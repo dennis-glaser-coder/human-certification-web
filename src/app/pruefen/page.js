@@ -73,7 +73,7 @@ export default function VerifyPage() {
         </div>
 
         <div className="verifyTrustStrip" aria-label="Prüfinformationen">
-          <div><strong>Status</strong><p>In Prüfung, aktiv, ausgesetzt, abgelaufen oder widerrufen.</p></div>
+          <div><strong>Status</strong><p>Aktiv, ausgesetzt, abgelaufen oder widerrufen.</p></div>
           <div><strong>Produktbezug</strong><p>Hersteller, Produkt und Zertifizierungsumfang.</p></div>
           <div><strong>Produktion & Standard</strong><p>Relevante Standorte und angewendetes Regelwerk.</p></div>
           <div><strong>Gültigkeit</strong><p>Ausstellungs- und Gültigkeitszeitraum.</p></div>
