@@ -4,15 +4,15 @@ import SiteFooter from '../components/SiteFooter';
 import { CERTIFIED_STATEMENT } from '../lib/brand';
 
 const homeStory = [
-  ['Sichtbar machen', 'Menschliche Herstellung wird zu einem klaren, produktbezogenen Unterschied.'],
-  ['Vor Ort prüfen', 'Die tatsächliche Herstellung wird beim Hersteller nachvollzogen.'],
-  ['Öffentlich verifizieren', 'Zertifizierungs-ID, Status und Produktbezug bleiben überprüfbar.'],
+  ['Differenzierung', 'Ein realer Herstellungsunterschied wird für Käufer und Geschäftspartner klar erkennbar.'],
+  ['Glaubwürdigkeit', 'Die Produktaussage bleibt an einen dokumentierten Zertifizierungsstatus gebunden.'],
+  ['Anschlussfähigkeit', 'Kennzeichnung, QR und Registerlink lassen sich im Verkauf und im B2B-Kontext einsetzen.'],
 ];
 
 const auditFacts = [
-  ['Herstellung nachvollziehen', 'Die reale Produktion wird dort betrachtet, wo die relevanten Arbeitsschritte stattfinden.'],
-  ['Maschineneinsatz bewerten', 'Geprüft wird, wo Technik unterstützt und wo menschliche Arbeit wesentlich bleibt.'],
-  ['Umfang eindeutig halten', 'Produkt, relevante Standorte und Fremdfertigung werden klar zugeordnet.'],
+  ['Arbeitsschritte beobachten', 'Wesentliche produktprägende Schritte werden in der realen Produktion betrachtet.'],
+  ['Maschineneinsatz einordnen', 'Geprüft wird, wo Technik unterstützt und wo menschliche Arbeit wesentlich bleibt.'],
+  ['Produktumfang abgleichen', 'Produkt, relevante Standorte und Fremdfertigung werden mit den Angaben abgeglichen.'],
 ];
 
 export default function Home() {
@@ -49,19 +49,6 @@ export default function Home() {
               src="https://images.unsplash.com/photo-1463082459669-fd1ca1692fea?auto=format&fit=crop&w=1800&q=86"
               alt="Holzhandwerker bei der manuellen Bearbeitung eines Werkstücks"
             />
-            <div className="desireHeroOverlay">
-              <img
-                src={assetBase + '/brand/made-by-humans-seal.png'}
-                alt="Made by Humans Zertifizierungszeichen"
-                width="92"
-                height="92"
-              />
-              <div>
-                <span>MADE BY HUMANS</span>
-                <strong>Geprüfte menschliche Herstellung.</strong>
-                <p>Produktfokus · Zertifizierungs-ID · öffentlich verifizierbar</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -149,9 +136,9 @@ export default function Home() {
         <div className="shell homeValueStory">
           <div className="homeValueStoryHead">
             <p className="premiumSectionLabel premiumSectionLabelLight">WERT & VERTRAUEN</p>
-            <h2>Herstellungsunterschiede sichtbar machen und nachvollziehbar belegen.</h2>
+            <h2>Aus einem Herstellungsmerkmal wird ein belegbares Unterscheidungsmerkmal.</h2>
             <p>
-              Made by Humans verbindet den Nutzen für Hersteller mit einem nachvollziehbaren Prüf- und Verifizierungssystem.
+              Made by Humans macht menschliche Herstellung strukturiert kommunizierbar – klar begrenzt auf den tatsächlich zertifizierten Produktumfang.
             </p>
           </div>
           <div className="homeStoryRows">
@@ -215,10 +202,10 @@ export default function Home() {
           <div className="homeFinalTop">
             <div>
               <p className="premiumSectionLabel">NACH POSITIVER ZERTIFIZIERUNG</p>
-              <h2>Was Hersteller nach positiver Zertifizierung nutzen können.</h2>
+              <h2>Die Nutzung des Zeichens bleibt an klare Regeln gebunden.</h2>
             </div>
             <div className="homeFinalSummary">
-              <p>Zertifizierungszeichen · QR & Registerlink · Verpackungs- und Digitalanwendung · geregelte Claims</p>
+              <p>Freigegebene Kennzeichnung · QR & Registerlink · gültiger Zertifizierungsstatus · geregelte Produktaussagen</p>
               <Link href="/markennutzung">Markennutzung ansehen →</Link>
             </div>
           </div>
