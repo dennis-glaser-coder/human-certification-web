@@ -45,7 +45,7 @@ export default function WhyPage() {
           <div className="whyHeroCopy">
             <p className="premiumEyebrow">WARUM MADE BY HUMANS?</p>
             <div className="brandTrace" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
-            <h1>Menschliche Herstellung sichtbar und überprüfbar machen.</h1>
+            <h1>Wenn Menschen den Unterschied machen, sollte man ihn sehen können.</h1>
             <p className="whyHeroLead">
               Wenn Menschen ein Produkt wesentlich prägen, sollte diese Leistung nicht in einer allgemeinen
               Werbeaussage verschwinden. Made by Humans macht den Unterschied sichtbar, prüfbar und verständlich –
