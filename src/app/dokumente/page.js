@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import SiteHeader from '../../components/SiteHeader';
 import SiteFooter from '../../components/SiteFooter';
+import BrandTrace from '../../components/BrandTrace';
 import { canonical } from '../../lib/seo';
 
 export const metadata = {
@@ -63,6 +64,7 @@ export default function DocumentsPage() {
 
       <section className="pageHero shell">
         <div className="eyebrow">DOKUMENTENREGISTER</div>
+        <BrandTrace compact />
         <h1>Regeln und Dokumentversionen öffentlich nachvollziehen.</h1>
         <p className="lead">
           Standard, Zertifizierungsschema, Markennutzungsregeln und Verfahrensregeln werden als kontrollierte Dokumente geführt.
