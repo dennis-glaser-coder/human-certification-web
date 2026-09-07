@@ -33,7 +33,7 @@ export default function VerifyPage() {
 
     const supabase = getSupabaseBrowserClient();
     if (!supabase) {
-      setState({ loading: false, record: null, message: 'Die Verifizierung ist derzeit nicht erreichbar.' });
+      setState({ loading: false, record: null, message: 'Die Prüfung ist derzeit nicht erreichbar.' });
       return;
     }
 
@@ -46,12 +46,12 @@ export default function VerifyPage() {
       .maybeSingle();
 
     if (error) {
-      setState({ loading: false, record: null, message: 'Die Verifizierung ist vorübergehend nicht erreichbar. Bitte versuchen Sie es später erneut.' });
+      setState({ loading: false, record: null, message: 'Die Prüfung ist vorübergehend nicht erreichbar. Bitte versuchen Sie es später erneut.' });
       return;
     }
 
     if (!data) {
-      setState({ loading: false, record: null, message: 'Zu dieser ID wurde kein öffentlicher Datensatz gefunden.' });
+      setState({ loading: false, record: null, message: 'Zu dieser ID wurde kein Registereintrag gefunden.' });
       return;
     }
 
@@ -69,7 +69,7 @@ export default function VerifyPage() {
 
       <section className="verifyPage shell">
         <div className="verifyPageIntro">
-          <div className="eyebrow">VERIFIZIERUNG</div>
+          <div className="eyebrow">ZERTIFIZIERUNG PRÜFEN</div>
           <BrandTrace compact />
           <h1>Zertifizierung über ID prüfen.</h1>
           <p>
@@ -79,7 +79,7 @@ export default function VerifyPage() {
 
         <div className="verifyTrustStrip" aria-label="Prüfinformationen">
           <div><strong>Status</strong><p>Zeigt, ob die Zertifizierung in Prüfung, aktiv, ausgesetzt, abgelaufen oder widerrufen ist.</p></div>
-          <div><strong>Produktbezug</strong><p>Hersteller, Produkt und wofür die Zertifizierung gilt.</p></div>
+          <div><strong>Gilt für</strong><p>Hersteller, Produkt und wofür die Zertifizierung gilt.</p></div>
           <div><strong>Produktion & Standard</strong><p>Angegebene Produktionsorte und der verwendete Standard.</p></div>
           <div><strong>Gültigkeit</strong><p>Wann die Zertifizierung ausgestellt wurde und wie lange sie gilt.</p></div>
         </div>
@@ -123,7 +123,7 @@ export default function VerifyPage() {
               <div><dt>Standard</dt><dd>{state.record.standard_versions?.title ?? state.record.standard_versions?.version ?? '—'}</dd></div>
               <div><dt>Ausgestellt</dt><dd>{state.record.issued_at ? new Date(state.record.issued_at).toLocaleDateString('de-DE') : '—'}</dd></div>
               <div><dt>Gültig bis</dt><dd>{state.record.valid_until ? new Date(state.record.valid_until).toLocaleDateString('de-DE') : '—'}</dd></div>
-              <div><dt>Zuletzt verifiziert</dt><dd>{state.record.last_verified_at ? new Date(state.record.last_verified_at).toLocaleDateString('de-DE') : '—'}</dd></div>
+              <div><dt>Zuletzt geprüft</dt><dd>{state.record.last_verified_at ? new Date(state.record.last_verified_at).toLocaleDateString('de-DE') : '—'}</dd></div>
             </dl>
 
             {state.record.public_note && <div className="publicNote"><strong>HINWEIS</strong><p>{state.record.public_note}</p></div>}
