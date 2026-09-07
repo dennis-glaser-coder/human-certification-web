@@ -1384,3 +1384,103 @@ summary:focus-visible {
     display:none;
   }
 }
+
+
+/* ===== Final Made by Human logo system 2026-09-07 ===== */
+.brandWordmarkAsset{
+  display:block;
+  width:auto;
+  height:18px;
+  max-width:210px;
+  object-fit:contain;
+  object-position:left center;
+}
+
+.premiumBrandLockup .brandTextStack{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:5px;
+}
+
+.premiumBrandLockup .brandDescriptor{
+  display:block;
+  font-size:6px;
+  line-height:1.2;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.footerWordmarkAsset{
+  display:block;
+  width:auto;
+  height:22px;
+  max-width:230px;
+  object-fit:contain;
+  object-position:left center;
+  filter:brightness(0) invert(1);
+}
+
+.brandAuthorityWordmark img{
+  display:block;
+  width:auto;
+  height:36px;
+  max-width:min(56vw,460px);
+  object-fit:contain;
+  object-position:left center;
+}
+
+.markUseMasterLogo{
+  width:min(360px,100%);
+  margin-top:32px;
+  padding:26px;
+  border-top:1px solid rgba(17,24,32,.22);
+  border-bottom:1px solid rgba(17,24,32,.12);
+  background:#F7F4ED;
+}
+
+.markUseMasterLogo img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+
+@media(max-width:1020px){
+  .brandWordmarkAsset{
+    height:17px;
+    max-width:185px;
+  }
+  .brandAuthorityWordmark img{
+    height:32px;
+  }
+}
+
+@media(max-width:760px){
+  .brandWordmarkAsset{
+    height:16px;
+    max-width:168px;
+  }
+
+  .premiumBrandLockup .brandDescriptor{
+    font-size:5.5px;
+    letter-spacing:.06em;
+  }
+
+  .brandAuthorityWordmark img{
+    width:min(78vw,300px);
+    height:auto;
+    max-height:34px;
+  }
+
+  .footerWordmarkAsset{
+    height:20px;
+    max-width:200px;
+  }
+
+  .markUseMasterLogo{
+    width:min(300px,100%);
+    margin-top:24px;
+    padding:20px;
+  }
+}
