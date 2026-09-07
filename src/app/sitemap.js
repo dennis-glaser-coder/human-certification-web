@@ -22,5 +22,6 @@ export default function sitemap() {
     { url: canonical('/leitfaden/nachweise'), lastModified, changeFrequency: 'monthly', priority: 0.7 },
     { url: canonical('/leitfaden/zertifizierungsumfang'), lastModified, changeFrequency: 'monthly', priority: 0.7 },
     { url: canonical('/verfahren'), lastModified, changeFrequency: 'monthly', priority: 0.6 },
+    { url: canonical('/impressum'), lastModified, changeFrequency: 'yearly', priority: 0.3 },
   ];
 }
