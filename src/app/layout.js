@@ -43,8 +43,8 @@ export const metadata = {
     images: [canonical('/brand/IMG_1053.png')],
   },
   icons: {
-    icon: canonical('/brand/made-by-humans-seal.png'),
-    apple: canonical('/brand/made-by-humans-seal.png'),
+    icon: canonical('/brand/made-by-human-seal.png'),
+    apple: canonical('/brand/made-by-human-seal.png'),
   },
 };
 
