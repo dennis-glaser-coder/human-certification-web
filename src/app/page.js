@@ -106,7 +106,7 @@ export default function Home() {
               <div className="applicationStage applicationStagePhoto realApplicationStage">
                 <img
                   className="applicationPhoto realApplicationPhoto"
-                  src={assetBase + '/brand/IMG_1047.png'}
+                  src={assetBase + '/brand/IMG_1047_mbh.png'}
                   alt="Beispielhafte Made by Human Kennzeichnung an einem textilen Produkt mit Verpackung"
                   loading="lazy"
                 />
