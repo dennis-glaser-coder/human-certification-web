@@ -62,6 +62,7 @@ const manufacturerFaq = [
   ['Wie werden mehrere Standorte oder Fremdfertigung behandelt?', 'Alle relevanten Produktionsstandorte und wesentliche Fremdfertigung werden offengelegt, dem Produkt zugeordnet und in den Zertifizierungsumfang einbezogen.'],
   ['Welche Unterlagen werden benötigt?', 'Benötigt werden geeignete Informationen zur tatsächlichen Herstellung, zu Standorten, Fremdfertigung und den wesentlichen Prozessschritten. Die konkrete Nachweisanforderung wird in der Vorbereitung eingegrenzt.'],
   ['Was passiert bei Änderungen an Produkt oder Produktion?', 'Wesentliche Änderungen am Prozess, an relevanten Standorten oder an Fremdfertigung können eine erneute Bewertung des Zertifizierungsumfangs erforderlich machen.'],
+  ['Woraus setzen sich die Kosten zusammen?', 'Unser Modell umfasst die Erstprüfung und eine jährliche Lizenz zur Markennutzung. Zusätzliche Produktfamilien und weitere Standorte können den Umfang verändern. Konkrete Preise veröffentlichen wir erst, wenn sie verbindlich festgelegt sind.'],
 ];
 
 export default function ManufacturerPage() {
@@ -147,7 +148,7 @@ export default function ManufacturerPage() {
               alt="Menschliche Holzbearbeitung an einer Bandsäge in einer Werkstatt"
             />
             <div className="manufacturerHeroCredential">
-              <img src={assetBase + '/brand/made-by-human-seal.png'} alt="Made by Human Zertifizierungszeichen" />
+              <img src={assetBase + '/brand/made-by-human-logo.png'} alt="Made by Human – Verified Human Production" />
               <div>
                 <span>NACH POSITIVER ENTSCHEIDUNG</span>
                 <strong>Ein sichtbarer Nachweis für einen realen Herstellungsunterschied.</strong>
@@ -212,8 +213,8 @@ export default function ManufacturerPage() {
         </div>
 
         <div className="manufacturerScopeNote">
-          <span>START- & PILOTPHASE</span>
-          <p>Lebensmittel, Medizinprodukte und andere stark regulierte Kategorien werden in der aktuellen Validierungsphase zunächst nicht aufgenommen.</p>
+          <span>GELTUNGSBEREICH</span>
+          <p>Lebensmittel, Medizinprodukte und andere stark regulierte Kategorien nehmen wir derzeit nicht auf.</p>
         </div>
 
       </section>
