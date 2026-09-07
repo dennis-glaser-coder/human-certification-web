@@ -4,11 +4,11 @@ import SiteFooter from '../../components/SiteFooter';
 import { canonical } from '../../lib/seo';
 
 export const metadata = {
-  title: 'Warum Made by Humans?',
-  description: 'Welche Vorteile die Made by Humans Zertifizierung Herstellern und Käufern bietet – von glaubwürdiger Differenzierung bis zur öffentlichen Verifizierung.',
+  title: 'Warum Made by Human?',
+  description: 'Welche Vorteile die Made by Human Zertifizierung Herstellern und Käufern bietet – von glaubwürdiger Differenzierung bis zur öffentlichen Verifizierung.',
   alternates: { canonical: canonical('/warum-made-by-humans') },
   openGraph: {
-    title: 'Warum Made by Humans? | Made by Humans',
+    title: 'Warum Made by Human? | Made by Human',
     description: 'Warum eine geprüfte Aussage zur menschlichen Herstellung für Hersteller, Marken und Käufer relevant sein kann.',
     url: canonical('/warum-made-by-humans'),
   },
@@ -29,7 +29,7 @@ const customerBenefits = [
 
 const claimComparison = [
   ['„Handgemacht“', 'Eigenangabe des Herstellers', 'Bedeutung kann unterschiedlich ausgelegt werden', 'Keine öffentliche Statusprüfung'],
-  ['Made by Humans', 'Definierte produktbezogene Aussage', 'Vor-Ort-Audit und dokumentierte Bewertung', 'ID, QR und öffentlicher Registerdatensatz'],
+  ['Made by Human', 'Definierte produktbezogene Aussage', 'Vor-Ort-Audit und dokumentierte Bewertung', 'ID, QR und öffentlicher Registerdatensatz'],
 ];
 
 
@@ -43,12 +43,12 @@ export default function WhyPage() {
       <section className="whyHero">
         <div className="shell whyHeroGrid">
           <div className="whyHeroCopy">
-            <p className="premiumEyebrow">WARUM MADE BY HUMANS?</p>
+            <p className="premiumEyebrow">WARUM MADE BY HUMAN?</p>
             <div className="brandTrace" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
             <h1>Wenn Menschen den Unterschied machen, sollte man ihn sehen können.</h1>
             <p className="whyHeroLead">
               Wenn Menschen ein Produkt wesentlich prägen, sollte diese Leistung nicht in einer allgemeinen
-              Werbeaussage verschwinden. Made by Humans macht den Unterschied sichtbar, prüfbar und verständlich –
+              Werbeaussage verschwinden. Wir machen den Unterschied sichtbar, prüfbar und verständlich –
               für Hersteller, Handel und Käufer.
             </p>
             <div className="whyHeroActions">
@@ -68,7 +68,7 @@ export default function WhyPage() {
             <div className="whySealTag">
               <img
                 src={assetBase + '/brand/made-by-humans-seal.png'}
-                alt="Made by Humans Zertifizierungszeichen"
+                alt="Made by Human Zertifizierungszeichen"
                 width="96"
                 height="96"
               />
@@ -90,7 +90,7 @@ export default function WhyPage() {
             <p>
               Viele Marken investieren bewusst in eigene Fertigung, Facharbeit, handwerkliche Prozesse
               oder menschlich geprägte Produktion. Nach außen bleibt davon oft nur ein unscharfer Begriff.
-              Made by Humans übersetzt diesen Herstellungsunterschied in eine klar definierte,
+              Wir übersetzen diesen Herstellungsunterschied in eine klar definierte,
               produktbezogene und öffentlich überprüfbare Aussage.
             </p>
             <div className="whyThesisSignature">
@@ -163,12 +163,12 @@ export default function WhyPage() {
             </div>
             <p>
               Begriffe wie „handgemacht“, „handcrafted“ oder „manufakturgefertigt“ können sinnvoll sein,
-              bleiben aber häufig Eigenangaben. Made by Humans soll die Aussage zur menschlichen Herstellung
+              bleiben aber häufig Eigenangaben. Wir machen die Aussage zur menschlichen Herstellung
               enger definieren und über Prüfung und Register nachvollziehbar machen.
             </p>
           </div>
 
-          <div className="whyComparisonTable" role="table" aria-label="Vergleich Eigenclaim und Made by Humans">
+          <div className="whyComparisonTable" role="table" aria-label="Vergleich Eigenclaim und Made by Human">
             <div className="whyComparisonHead" role="row">
               <span role="columnheader">AUSSAGE</span>
               <span role="columnheader">GRUNDLAGE</span>
@@ -210,7 +210,7 @@ export default function WhyPage() {
             <p className="premiumSectionLabel premiumSectionLabelLight">FÜR DIE MARKE</p>
             <h2>Das Zeichen ergänzt die Herstellermarke um einen überprüfbaren Nachweis.</h2>
             <p>
-              Eine starke Marke erzählt, wofür ein Produkt steht. Made by Humans ergänzt diese Geschichte
+              Eine starke Marke erzählt, wofür ein Produkt steht. Wir ergänzen diese Geschichte
               um einen überprüfbaren Beleg für einen klar abgegrenzten Teil der Herstellung.
               Gerade dort, wo menschliche Arbeit ein wesentlicher Teil der Positionierung ist,
               kann das Zeichen diese Aussage konsistenter und belastbarer machen.
