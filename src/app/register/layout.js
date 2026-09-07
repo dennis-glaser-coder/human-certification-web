@@ -1,4 +1,4 @@
-import { canonical } from '../../lib/seo';
+import { canonical, SOCIAL_IMAGE } from '../../lib/seo';
 
 export const metadata = {
   title: 'Öffentliches Register – Zertifizierungen prüfen',
@@ -12,6 +12,7 @@ export const metadata = {
     description:
       'Öffentliche Zertifizierungsdaten mit ID, Hersteller, Produkt, Standardfassung, Gültigkeit und Status.',
     url: canonical('/register'),
+    images: [SOCIAL_IMAGE],
   },
 };
 
