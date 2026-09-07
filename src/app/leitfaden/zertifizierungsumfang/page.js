@@ -19,14 +19,14 @@ const scopeRules = [
 const examples = [
   ['Farbvariante derselben Tasche', 'Kann im selben Umfang liegen, wenn Material- und Herstellungsprozess im Wesentlichen unverändert bleiben.', 'Typischerweise gemeinsam prüfbar'],
   ['Neue Größe mit gleichem Verfahren', 'Kann derselben Produktfamilie zugeordnet werden, wenn die produktprägenden Schritte gleich bleiben.', 'Einzelfall prüfen'],
-  ['Neues Produkt mit anderem Fertigungsverfahren', 'Erfordert in der Regel eine neue oder erweiterte Bewertung des Zertifizierungsumfangs.', 'Neue Bewertung'],
-  ['Zusätzlicher Produktionsstandort', 'Muss bewertet werden, wenn dort wesentliche produktprägende Schritte ausgeführt werden.', 'Änderung prüfen'],
+  ['Neues Produkt mit anderem Fertigungsverfahren', 'Erfordert in der Regel eine neue oder erweiterte Prüfung.', 'Neue Bewertung'],
+  ['Zusätzlicher Produktionsstandort', 'Muss geprüft werden, wenn dort wichtige Herstellungsschritte stattfinden.', 'Änderung prüfen'],
 ];
 
 const changeTriggers = [
-  'Wesentliche produktprägende Arbeitsschritte werden neu automatisiert.',
-  'Ein wesentlicher Herstellungsschritt wird erstmals ausgelagert oder zu einem anderen Partner verlagert.',
-  'Ein neuer relevanter Produktionsstandort kommt hinzu.',
+  'Wichtige Arbeitsschritte werden neu automatisiert.',
+  'Ein wichtiger Herstellungsschritt wird erstmals ausgelagert oder zu einem anderen Partner verlagert.',
+  'Ein neuer Produktionsstandort für wichtige Arbeitsschritte kommt hinzu.',
   'Das Produkt oder die Produktfamilie wird so verändert, dass der bisher geprüfte Herstellungsprozess nicht mehr eindeutig passt.',
 ];
 
@@ -61,8 +61,7 @@ export default function ScopeGuidePage() {
             <h2>Vier Fragen klären, was zur Zertifizierung gehört.</h2>
           </div>
           <p>
-            Der Umfang muss so konkret sein, dass später eindeutig geprüft werden kann,
-            ob ein beworbenes Produkt vom veröffentlichten Datensatz erfasst ist.
+            Die Zertifizierung muss so klar beschrieben sein, dass später jeder prüfen kann, ob ein beworbenes Produkt tatsächlich dazugehört.
           </p>
         </div>
 
@@ -84,8 +83,7 @@ export default function ScopeGuidePage() {
               <h2>Nicht jede Variante braucht automatisch eine neue Zertifizierung.</h2>
             </div>
             <p>
-              Entscheidend ist, ob sich die für die Aussage relevanten Herstellungsschritte,
-              Produktionsorte oder die produktprägende menschliche Arbeit verändern.
+              Entscheidend ist, ob sich wichtige Herstellungsschritte, Produktionsorte oder die menschliche Arbeit am Produkt verändern.
             </p>
           </div>
 
@@ -124,8 +122,7 @@ export default function ScopeGuidePage() {
         </div>
         <div>
           <p>
-            In der fachlichen Vorprüfung wird gemeinsam eingegrenzt, welches Produkt oder welche Produktfamilie
-            sinnvoll in einem Zertifizierungsumfang zusammengefasst werden kann.
+            In der ersten Einschätzung klären wir gemeinsam, welches Produkt oder welche Produktfamilie sinnvoll zusammen zertifiziert werden kann.
           </p>
           <div className="guideLinks">
             <Link className="button primary" href="/fuer-hersteller#zertifizierungsanfrage">Zertifizierung anfragen</Link>
