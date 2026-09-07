@@ -73,15 +73,15 @@ export default function VerifyPage() {
           <BrandTrace compact />
           <h1>Zertifizierung über ID prüfen.</h1>
           <p>
-            Eine Zertifizierungs-ID führt zum zugehörigen öffentlichen Datensatz mit Produktbezug, Standardfassung und aktuellem Status.
+            Eine Zertifizierungs-ID führt zum passenden Registereintrag. Dort sehen Sie Produkt, Standard und aktuellen Status.
           </p>
         </div>
 
         <div className="verifyTrustStrip" aria-label="Prüfinformationen">
-          <div><strong>Status</strong><p>In Prüfung, aktiv, ausgesetzt, abgelaufen oder widerrufen.</p></div>
-          <div><strong>Produktbezug</strong><p>Hersteller, Produkt und Zertifizierungsumfang.</p></div>
-          <div><strong>Produktion & Standard</strong><p>Relevante Standorte und angewendetes Regelwerk.</p></div>
-          <div><strong>Gültigkeit</strong><p>Ausstellungs- und Gültigkeitszeitraum.</p></div>
+          <div><strong>Status</strong><p>Zeigt, ob die Zertifizierung in Prüfung, aktiv, ausgesetzt, abgelaufen oder widerrufen ist.</p></div>
+          <div><strong>Produktbezug</strong><p>Hersteller, Produkt und wofür die Zertifizierung gilt.</p></div>
+          <div><strong>Produktion & Standard</strong><p>Angegebene Produktionsorte und der verwendete Standard.</p></div>
+          <div><strong>Gültigkeit</strong><p>Wann die Zertifizierung ausgestellt wurde und wie lange sie gilt.</p></div>
         </div>
 
         <form onSubmit={verify} className="verifySearch">
@@ -100,7 +100,7 @@ export default function VerifyPage() {
             <div className="verificationTop">
               <div>
                 <small>PRÜFERGEBNIS</small>
-                <strong>Zertifizierungsdatensatz gefunden</strong>
+                <strong>Registereintrag gefunden</strong>
               </div>
               <span className={'statusBadge status-' + state.record.status + (state.record.status === 'active' ? ' active' : '')}>
                 {state.record.public_id?.startsWith('HC-DEMO-') ? 'Demo · keine reale Zertifizierung' : (statusText[state.record.status] ?? state.record.status)}
@@ -112,7 +112,7 @@ export default function VerifyPage() {
                 <small>ZERTIFIZIERUNGS-ID</small>
                 <h2>{state.record.public_id}</h2>
               </div>
-              <Link className="recordOpenLink" href={'/zertifikat/?id=' + encodeURIComponent(state.record.public_id)}>Vollständigen Datensatz öffnen →</Link>
+              <Link className="recordOpenLink" href={'/zertifikat/?id=' + encodeURIComponent(state.record.public_id)}>Vollständigen Registereintrag öffnen →</Link>
             </div>
 
             <dl className="verificationDetails">
