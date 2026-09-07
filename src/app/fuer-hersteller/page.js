@@ -409,7 +409,10 @@ export default function ManufacturerPage() {
               <button type="submit" className="button primary formButton" disabled={state.loading} aria-busy={state.loading}>
                 {state.loading ? 'Wird gesendet …' : 'Zertifizierungsanfrage senden'}
               </button>
-              <small className="formLegal">Die Angaben werden zur Bearbeitung Ihrer Zertifizierungsanfrage verarbeitet.</small>
+              <small className="formLegal">
+                Die Angaben werden zur Bearbeitung Ihrer Zertifizierungsanfrage verarbeitet.
+                {' '}<Link href="/datenschutz">Datenschutzhinweise</Link>
+              </small>
             </div>
 
             {state.message && <p role="status" aria-live="polite" className={state.success ? 'formMessage success' : 'formMessage'}>{state.message}</p>}
