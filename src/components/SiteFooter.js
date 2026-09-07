@@ -5,7 +5,7 @@ export default function SiteFooter() {
     <footer className="siteFooter premiumFooter">
       <div className="shell premiumFooterTop">
         <div className="premiumFooterBrand">
-          <strong>MADE BY HUMANS</strong>
+          <strong>MADE BY HUMAN</strong>
           <p>Zertifizierung für nachweisbar menschliche Herstellung.</p>
         </div>
 
@@ -24,11 +24,11 @@ export default function SiteFooter() {
             <Link href="/pruefen">Zertifizierungs-ID prüfen</Link>
             <Link href="/fuer-kaeufer">Für Käufer</Link>
             <Link href="/fuer-hersteller">Für Hersteller</Link>
-            <Link href="/warum-made-by-humans">Warum Made by Humans?</Link>
+            <Link href="/warum-made-by-humans">Warum Made by Human?</Link>
           </div>
           <div>
             <span>ORGANISATION</span>
-            <Link href="/ueber-uns">Über Made by Humans</Link>
+            <Link href="/ueber-uns">Über Made by Human</Link>
             <Link href="/transparenz">Transparenz & Integrität</Link>
             <Link href="/verfahren">Beschwerden & Einsprüche</Link>
           </div>
@@ -37,7 +37,7 @@ export default function SiteFooter() {
 
       <div className="shell premiumFooterBottom">
         <span>STANDARD · PRÜFUNG · NACHVOLLZIEHBARKEIT · ÖFFENTLICHES REGISTER</span>
-        <span>Made by Humans</span>
+        <span>Made by Human</span>
       </div>
     </footer>
   );
