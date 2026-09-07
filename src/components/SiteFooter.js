@@ -33,6 +33,7 @@ export default function SiteFooter() {
             <Link href="/ueber-uns">Über Made by Human</Link>
             <Link href="/transparenz">Transparenz & Integrität</Link>
             <Link href="/verfahren">Beschwerden & Einsprüche</Link>
+            <Link href="/impressum">Impressum</Link>
           </div>
         </nav>
 
@@ -63,6 +64,7 @@ export default function SiteFooter() {
               <Link href="/ueber-uns">Über Made by Human</Link>
               <Link href="/transparenz">Transparenz & Integrität</Link>
               <Link href="/verfahren">Beschwerden & Einsprüche</Link>
+              <Link href="/impressum">Impressum</Link>
             </div>
           </details>
         </nav>
@@ -70,7 +72,10 @@ export default function SiteFooter() {
 
       <div className="shell premiumFooterBottom">
         <span>STANDARD · PRÜFUNG · KLARE REGELN · ÖFFENTLICHES REGISTER</span>
-        <span>Made by Human</span>
+        <div className="footerLegalMeta">
+          <Link href="/impressum">Impressum</Link>
+          <span>Made by Human</span>
+        </div>
       </div>
     </footer>
   );
