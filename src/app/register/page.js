@@ -82,7 +82,7 @@ export default function RegisterPage() {
       <section className="shell registerSection">
         <div className="registerTrustBar" aria-label="Inhalte eines Registereintrags">
           <div><strong>Zertifizierungs-ID</strong><p>Eindeutige ID für diesen Eintrag.</p></div>
-          <div><strong>Produkt & Umfang</strong><p>Hersteller, Produkt und wofür die Zertifizierung gilt.</p></div>
+          <div><strong>Produkt & Zertifizierung</strong><p>Hersteller, Produkt und wofür die Zertifizierung gilt.</p></div>
           <div><strong>Produktion & Standard</strong><p>Angegebene Produktionsorte und der verwendete Standard.</p></div>
           <div><strong>Status & Gültigkeit</strong><p>Aktueller Status und Gültigkeitszeitraum.</p></div>
         </div>
@@ -90,7 +90,7 @@ export default function RegisterPage() {
         <div className="registerToolbar">
           <div>
             <span className="sectionNo">REGISTER</span>
-            <strong aria-live="polite">{loading ? 'Datensätze werden geladen …' : (records.length === 1 ? '1 Datensatz' : records.length + ' Datensätze')}</strong>
+            <strong aria-live="polite">{loading ? 'Einträge werden geladen …' : (records.length === 1 ? '1 Eintrag' : records.length + ' Einträge')}</strong>
           </div>
           <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="ID, Hersteller, Produkt oder Standort suchen" aria-label="Register durchsuchen" />
         </div>
@@ -125,12 +125,12 @@ export default function RegisterPage() {
                 </span>
                 <em>{formatDate(record.valid_until)}</em>
               </div>
-              <Link href={'/zertifikat/?id=' + encodeURIComponent(record.public_id)} aria-label={record.public_id + ' öffnen'}>Datensatz →</Link>
+              <Link href={'/zertifikat/?id=' + encodeURIComponent(record.public_id)} aria-label={record.public_id + ' öffnen'}>Eintrag →</Link>
             </article>
           ))}
         </div>
 
-        {!message && filtered.length === 0 && <div className="registerMessage">Keine passenden Datensätze gefunden.</div>}
+        {!message && filtered.length === 0 && <div className="registerMessage">Keine passenden Einträge gefunden.</div>}
 
         <div className="registerDisclosure">
           <strong>Beispieldatensatz</strong>
