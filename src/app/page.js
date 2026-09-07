@@ -10,9 +10,9 @@ const homeStory = [
 ];
 
 const auditFacts = [
-  ['Arbeitsschritte beobachten', 'Wesentliche produktprägende Schritte werden in der realen Produktion betrachtet.'],
-  ['Maschineneinsatz einordnen', 'Geprüft wird, wo Technik unterstützt und wo menschliche Arbeit wesentlich bleibt.'],
-  ['Produktumfang abgleichen', 'Produkt, relevante Standorte und Fremdfertigung werden mit den Angaben abgeglichen.'],
+  ['Arbeitsschritte beobachten', 'Wir beobachten wesentliche produktprägende Schritte in der realen Produktion.'],
+  ['Maschineneinsatz einordnen', 'Wir ordnen ein, wo Technik unterstützt und wo menschliche Arbeit wesentlich bleibt.'],
+  ['Produktumfang abgleichen', 'Wir gleichen Produkt, relevante Standorte und Fremdfertigung mit den Angaben ab.'],
 ];
 
 export default function Home() {
@@ -183,8 +183,8 @@ export default function Home() {
             <p className="premiumSectionLabel">VOR-ORT-AUDIT</p>
             <h2>Wir prüfen dort, wo das Produkt tatsächlich entsteht.</h2>
             <p className="desireAuditLead">
-              Kein reines Online-Formular und keine bloße Selbstauskunft: Die tatsächliche Herstellung wird
-              beim Hersteller vor Ort nachvollzogen.
+              Kein reines Online-Formular und keine bloße Selbstauskunft: Wir nachvollziehen die tatsächliche Herstellung
+              direkt beim Hersteller vor Ort.
             </p>
             <div className="desireAuditFacts">
               {auditFacts.map(([title, copy]) => <div key={title}><strong>{title}</strong><p>{copy}</p></div>)}
