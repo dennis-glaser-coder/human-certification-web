@@ -24,12 +24,14 @@ export default function RegisterPage() {
   const [records, setRecords] = useState([]);
   const [query, setQuery] = useState('');
   const [message, setMessage] = useState('Register wird geladen …');
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function load() {
       const supabase = getSupabaseBrowserClient();
       if (!supabase) {
         setMessage('Das Register ist derzeit nicht erreichbar.');
+        setLoading(false);
         return;
       }
 
@@ -40,11 +42,13 @@ export default function RegisterPage() {
 
       if (error) {
         setMessage('Das Register konnte gerade nicht geladen werden.');
+        setLoading(false);
         return;
       }
 
       setRecords(data ?? []);
       setMessage('');
+      setLoading(false);
     }
 
     load();
@@ -87,12 +91,12 @@ export default function RegisterPage() {
         <div className="registerToolbar">
           <div>
             <span className="sectionNo">REGISTER</span>
-            <strong>{records.length} Datensatz{records.length === 1 ? '' : 'e'}</strong>
+            <strong aria-live="polite">{loading ? 'Datensätze werden geladen …' : (records.length === 1 ? '1 Datensatz' : records.length + ' Datensätze')}</strong>
           </div>
           <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="ID, Hersteller, Produkt oder Standort suchen" aria-label="Register durchsuchen" />
         </div>
 
-        {message && <div className="registerMessage">{message}</div>}
+        {message && <div className="registerMessage" role="status" aria-live="polite">{message}</div>}
 
         <div className="registerList">
           {filtered.map((record) => (
@@ -117,10 +121,12 @@ export default function RegisterPage() {
               </div>
               <div className="registerStatusCell">
                 <small>STATUS / GÜLTIG BIS</small>
-                <span className={'statusBadge status-' + record.status + (record.status === 'active' ? ' active' : '')}>{labels[record.status] ?? record.status}</span>
+                <span className={'statusBadge status-' + record.status + (record.status === 'active' ? ' active' : '')}>
+                  {record.public_id?.startsWith('HC-DEMO-') ? 'Demo · keine reale Zertifizierung' : (labels[record.status] ?? record.status)}
+                </span>
                 <em>{formatDate(record.valid_until)}</em>
               </div>
-              <Link href={'/zertifikat?id=' + encodeURIComponent(record.public_id)} aria-label={record.public_id + ' öffnen'}>Datensatz →</Link>
+              <Link href={'/zertifikat/?id=' + encodeURIComponent(record.public_id)} aria-label={record.public_id + ' öffnen'}>Datensatz →</Link>
             </article>
           ))}
         </div>
