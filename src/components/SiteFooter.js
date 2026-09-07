@@ -11,7 +11,7 @@ export default function SiteFooter() {
           <p>Zertifizierung für nachweisbar menschliche Herstellung.</p>
         </div>
 
-        <nav className="premiumFooterNav" aria-label="Footer Navigation">
+        <nav className="premiumFooterNav premiumFooterNavDesktop" aria-label="Footer Navigation">
           <div>
             <span>STANDARD</span>
             <Link href="/standard">Kriterien</Link>
@@ -34,6 +34,37 @@ export default function SiteFooter() {
             <Link href="/transparenz">Transparenz & Integrität</Link>
             <Link href="/verfahren">Beschwerden & Einsprüche</Link>
           </div>
+        </nav>
+
+        <nav className="premiumFooterNavMobile" aria-label="Footer Navigation mobil">
+          <details>
+            <summary>Standard</summary>
+            <div>
+              <Link href="/standard">Kriterien</Link>
+              <Link href="/dokumente">Dokumente</Link>
+              <Link href="/markennutzung">Markennutzung</Link>
+              <Link href="/leitfaden/nachweise">Prüfnachweise</Link>
+              <Link href="/leitfaden/zertifizierungsumfang">Zertifizierungsumfang</Link>
+            </div>
+          </details>
+          <details>
+            <summary>Verifizierung</summary>
+            <div>
+              <Link href="/register">Öffentliches Register</Link>
+              <Link href="/pruefen">Zertifizierungs-ID prüfen</Link>
+              <Link href="/fuer-kaeufer">Für Käufer</Link>
+              <Link href="/fuer-hersteller">Für Hersteller</Link>
+              <Link href="/warum-made-by-human">Warum Made by Human?</Link>
+            </div>
+          </details>
+          <details>
+            <summary>Organisation</summary>
+            <div>
+              <Link href="/ueber-uns">Über Made by Human</Link>
+              <Link href="/transparenz">Transparenz & Integrität</Link>
+              <Link href="/verfahren">Beschwerden & Einsprüche</Link>
+            </div>
+          </details>
         </nav>
       </div>
 
