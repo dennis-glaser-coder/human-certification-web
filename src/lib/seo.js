@@ -1,5 +1,5 @@
-export const SITE_URL = 'https://dennis-glaser-coder.github.io/human-certification-web';
-export const SITE_NAME = 'Made by Humans';
+export const SITE_URL = 'https://madebyhuman.org';
+export const SITE_NAME = 'Made by Human';
 export const DEFAULT_DESCRIPTION =
   'Zertifizierung für physische Produkte mit nachweisbar menschlicher Herstellung – mit Vor-Ort-Audit, Zertifizierungszeichen, QR-Verifizierung und öffentlichem Register.';
 
