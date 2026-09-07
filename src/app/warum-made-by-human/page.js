@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import SiteHeader from '../../components/SiteHeader';
 import SiteFooter from '../../components/SiteFooter';
-import { canonical } from '../../lib/seo';
+import { canonical, SOCIAL_IMAGE } from '../../lib/seo';
 
 export const metadata = {
   title: 'Warum Made by Human?',
@@ -11,6 +11,7 @@ export const metadata = {
     title: 'Warum Made by Human? | Made by Human',
     description: 'Warum menschliche Herstellung sichtbar und überprüfbar sein sollte.',
     url: canonical('/warum-made-by-human'),
+    images: [SOCIAL_IMAGE],
   },
 };
 
