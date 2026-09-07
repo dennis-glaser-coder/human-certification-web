@@ -11,7 +11,7 @@ export default function SiteHeader() {
       <div className="shell headerInner premiumHeaderInner">
         <Link className="brandLockup premiumBrandLockup" href="/#top" aria-label="Made by Human Startseite – nach oben">
           <span className="brandTextStack">
-            <img className="brandMasterLogoAsset" src={assetBase + '/brand/made-by-human-logo.png'} alt="Made by Human – Verified Human Production" />
+            <img className="brandMasterLogoAsset" src={assetBase + '/brand/made-by-human-logo.webp'} alt="Made by Human – Verified Human Production" />
             <span className="brandDescriptor">Zertifizierung für menschliche Herstellung</span>
           </span>
         </Link>
