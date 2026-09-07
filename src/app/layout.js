@@ -52,8 +52,6 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Made by Human | Siegel für menschliche Herstellung',
-    description: DEFAULT_DESCRIPTION,
     images: [SOCIAL_IMAGE],
   },
   icons: {
