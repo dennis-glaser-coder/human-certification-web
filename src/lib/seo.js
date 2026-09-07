@@ -1,7 +1,8 @@
-export const SITE_URL = 'https://madebyhuman.org';
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://madebyhuman.org').replace(/\/+$/, '');
+export const SITE_INDEXABLE = process.env.NEXT_PUBLIC_SITE_INDEXABLE === 'true';
 export const SITE_NAME = 'Made by Human';
 export const DEFAULT_DESCRIPTION =
-  'Zertifizierung für physische Produkte mit nachweisbar menschlicher Herstellung – mit Vor-Ort-Audit, Zertifizierungszeichen, QR-Verifizierung und öffentlichem Register.';
+  'Made by Human ist ein Siegel für physische Produkte mit nachweisbar menschlicher Herstellung. Wir prüfen vor Ort und machen die Zertifizierung öffentlich prüfbar.';
 
 export function canonical(path = '/') {
   if (path === '/') return SITE_URL + '/';
@@ -11,3 +12,7 @@ export function canonical(path = '/') {
 
   return SITE_URL + '/' + clean + (isFile ? '' : '/');
 }
+
+export const SOCIAL_IMAGE = canonical('/brand/made-by-human-social.png');
+export const LOGO_IMAGE = canonical('/brand/made-by-human-logo.png');
+export const FAVICON_IMAGE = canonical('/brand/made-by-human-favicon.png');
