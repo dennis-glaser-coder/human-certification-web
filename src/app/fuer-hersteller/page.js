@@ -144,7 +144,7 @@ export default function ManufacturerPage() {
           </div>
           <div className="manufacturerHeroArtVisual">
             <img
-              src={assetBase + '/brand/IMG_1039.png'}
+              src={assetBase + '/brand/IMG_1039.webp'}
               alt="Menschliche Holzbearbeitung an einer Bandsäge in einer Werkstatt"
             />
             <div className="manufacturerHeroCredential">
