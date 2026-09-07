@@ -75,7 +75,7 @@ export default function WhyPage() {
               <div>
                 <span>AM PRODUKT SICHTBAR</span>
                 <strong>Geprüfte Herstellung. Öffentlich verifizierbar.</strong>
-                <p>Produktfokus · Zertifizierungs-ID · QR · Register</p>
+                <p>Für dieses Produkt · Zertifizierungs-ID · QR · Register</p>
               </div>
             </div>
           </div>
@@ -90,7 +90,7 @@ export default function WhyPage() {
             <p>
               Viele Marken investieren bewusst in eigene Fertigung, Facharbeit und handwerkliche Prozesse.
               Von außen ist davon oft wenig zu erkennen. Made by Human zeigt, welche menschliche Arbeit
-              ein Produkt tatsächlich prägt – und macht die Prüfung öffentlich nachvollziehbar.
+              ein Produkt tatsächlich prägt – und macht das Ergebnis öffentlich prüfbar.
             </p>
             <div className="whyThesisSignature">
               <span>NICHT GEGEN TECHNOLOGIE.</span>
@@ -132,8 +132,7 @@ export default function WhyPage() {
             <h2>Käufer sehen, was das Zeichen wirklich bedeutet.</h2>
             <p>
               Käufer müssen nicht verstehen, wie jede Fertigungsstufe technisch funktioniert.
-              Sie sollen aber nachvollziehen können, was die Kennzeichnung bedeutet –
-              und selbst prüfen können, ob sie für das konkrete Produkt gilt.
+              Sie sollen verstehen, was die Kennzeichnung bedeutet – und selbst prüfen können, ob sie für das konkrete Produkt gilt.
             </p>
           </div>
 
@@ -167,12 +166,12 @@ export default function WhyPage() {
             </p>
           </div>
 
-          <div className="whyComparisonTable" role="table" aria-label="Vergleich Eigenclaim und Made by Human">
+          <div className="whyComparisonTable" role="table" aria-label="Vergleich Herstellerangabe und Made by Human">
             <div className="whyComparisonHead" role="row">
               <span role="columnheader">AUSSAGE</span>
               <span role="columnheader">GRUNDLAGE</span>
               <span role="columnheader">PRÜFUNG</span>
-              <span role="columnheader">VERIFIZIERUNG</span>
+              <span role="columnheader">ÖFFENTLICH PRÜFBAR</span>
             </div>
             {claimComparison.map(([claim, basis, check, verification]) => (
               <div className="whyComparisonRow" role="row" key={claim}>
@@ -193,10 +192,10 @@ export default function WhyPage() {
             <h2>Der Wert des Zeichens entsteht durch die Prüfung dahinter.</h2>
           </div>
           <div className="whyProofList">
-            <div><strong>Definierter Standard</strong></div>
+            <div><strong>Fester Standard</strong></div>
             <div><strong>Vor-Ort-Audit beim Hersteller</strong></div>
-            <div><strong>Dokumentierte Zertifizierungsentscheidung</strong></div>
-            <div><strong>Produktbezogener Zertifizierungsumfang</strong></div>
+            <div><strong>Festgehaltene Entscheidung</strong></div>
+            <div><strong>Klar benanntes Produkt</strong></div>
             <div><strong>ID, QR-Code und öffentliches Register</strong></div>
           </div>
         </div>
@@ -210,8 +209,7 @@ export default function WhyPage() {
           </div>
           <div>
             <p>
-              In der fachlichen Vorprüfung klären wir, ob Ihr Produkt grundsätzlich zum Standard passt
-              und welcher Zertifizierungsumfang sinnvoll ist.
+              In der ersten Einschätzung klären wir, ob Ihr Produkt grundsätzlich zum Standard passt und was genau zertifiziert werden soll.
             </p>
             <Link className="salesFinalButton" href="/fuer-hersteller#zertifizierungsanfrage">Zertifizierung anfragen</Link>
             <Link className="salesFinalText" href="/fuer-hersteller">Ablauf der Zertifizierung ansehen →</Link>
