@@ -171,12 +171,13 @@ export default function ManufacturerPage() {
         <div className="shell">
           <div className="sectionIntro compact">
             <div>
-              <div className="sectionNo">ZERTIFIZIERUNGSSYSTEM</div>
-              <h2>Aus Herstellung wird ein belegbarer Produktunterschied.</h2>
+              <div className="sectionNo">NUTZEN FÜR HERSTELLER</div>
+              <h2>Machen Sie Ihre Herstellung nachvollziehbar.</h2>
             </div>
             <p>
-              Die Kennzeichnung erhält ihren Wert durch die Verbindung von abgegrenztem Produktumfang,
-              dokumentierter Prüfung, eindeutiger Zertifizierungs-ID und öffentlicher Verifizierung.
+              Nach positiver Zertifizierung können Sie auf Produktseite, Verpackung und im Verkauf zeigen,
+              welche menschliche Arbeit hinter Ihrem Produkt steht. Der Nachweis bleibt mit Produktumfang,
+              Zertifizierungs-ID und öffentlichem Register verknüpft.
             </p>
           </div>
 
