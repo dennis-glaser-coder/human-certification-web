@@ -1,12 +1,21 @@
 import Link from 'next/link';
 import SiteHeader from '../../components/SiteHeader';
 import SiteFooter from '../../components/SiteFooter';
-import { canonical } from '../../lib/seo';
+import { canonical, SOCIAL_IMAGE } from '../../lib/seo';
 
 export const metadata = {
   title: 'Datenschutz',
   description: 'Datenschutzhinweise von Made by Human und der D&G Handels GmbH.',
   alternates: { canonical: canonical('/datenschutz') },
+  openGraph: {
+    type: 'website',
+    locale: 'de_DE',
+    siteName: 'Made by Human',
+    title: 'Datenschutz | Made by Human',
+    description: 'Datenschutzhinweise von Made by Human und der D&G Handels GmbH.',
+    url: canonical('/datenschutz'),
+    images: [SOCIAL_IMAGE],
+  },
 };
 
 export default function DatenschutzPage() {
