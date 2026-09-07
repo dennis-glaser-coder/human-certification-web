@@ -53,19 +53,20 @@ export default function CertificateClient({ id }) {
     loading: true,
     record: null,
     events: [],
+    eventsMessage: '',
     message: '',
   });
 
   useEffect(() => {
     async function load() {
       if (!id) {
-        setState({ loading: false, record: null, events: [], message: 'Keine Zertifizierungs-ID angegeben.' });
+        setState({ loading: false, record: null, events: [], eventsMessage: '', message: 'Keine Zertifizierungs-ID angegeben.' });
         return;
       }
 
       const supabase = getSupabaseBrowserClient();
       if (!supabase) {
-        setState({ loading: false, record: null, events: [], message: 'Das Register ist derzeit nicht erreichbar.' });
+        setState({ loading: false, record: null, events: [], eventsMessage: '', message: 'Das Register ist derzeit nicht erreichbar.' });
         return;
       }
 
@@ -75,18 +76,29 @@ export default function CertificateClient({ id }) {
         .eq('public_id', id)
         .maybeSingle();
 
-      if (error || !record) {
-        setState({ loading: false, record: null, events: [], message: 'Zu dieser ID wurde kein öffentlicher Datensatz gefunden.' });
+      if (error) {
+        setState({ loading: false, record: null, events: [], eventsMessage: '', message: 'Das Register ist vorübergehend nicht erreichbar. Bitte versuchen Sie es später erneut.' });
         return;
       }
 
-      const { data: events } = await supabase
+      if (!record) {
+        setState({ loading: false, record: null, events: [], eventsMessage: '', message: 'Zu dieser ID wurde kein öffentlicher Datensatz gefunden.' });
+        return;
+      }
+
+      const { data: events, error: eventsError } = await supabase
         .from('certification_events')
         .select('id,event_type,status_after,title,public_note,occurred_at')
         .eq('certification_id', record.id)
         .order('occurred_at', { ascending: false });
 
-      setState({ loading: false, record, events: events ?? [], message: '' });
+      setState({
+        loading: false,
+        record,
+        events: events ?? [],
+        eventsMessage: eventsError ? 'Der Statusverlauf konnte vorübergehend nicht geladen werden.' : '',
+        message: '',
+      });
     }
 
     load();
@@ -114,14 +126,16 @@ export default function CertificateClient({ id }) {
               </div>
               <div className="certificateHeader">
                 <div className="certificateBrand">
-                  <img src={`${assetBase}/brand/made-by-human-seal.png`} alt="" aria-hidden="true" />
+                  <img className="certificateMasterLogo" src={`${assetBase}/brand/made-by-human-logo.png`} alt="" aria-hidden="true" />
                   <div>
                     <small>ZERTIFIZIERUNGS-ID</small>
                     <h1>{state.record.public_id}</h1>
                   </div>
                 </div>
                 <span className={`statusBadge status-${state.record.status} ${state.record.status === 'active' ? 'active' : ''}`}>
-                  {statusLabels[state.record.status] ?? state.record.status}
+                  {state.record.public_id?.startsWith('HC-DEMO-')
+                    ? 'Demo · keine reale Zertifizierung'
+                    : (statusLabels[state.record.status] ?? state.record.status)}
                 </span>
               </div>
 
@@ -167,7 +181,10 @@ export default function CertificateClient({ id }) {
               </div>
 
               <div className="certificateTimeline">
-                {state.events.length === 0 && (
+                {state.eventsMessage && (
+                  <div className="timelineEmpty" role="status">{state.eventsMessage}</div>
+                )}
+                {!state.eventsMessage && state.events.length === 0 && (
                   <div className="timelineEmpty">Für diesen Datensatz sind keine öffentlichen Ereignisse hinterlegt.</div>
                 )}
 
