@@ -2057,3 +2057,147 @@ summary:focus-visible {
     font-size:9px;
   }
 }
+
+
+/* ===== Imprint / legal information 2026-09-07 ===== */
+.legalHero{
+  padding-bottom:38px;
+}
+.legalHero h1{
+  max-width:760px;
+}
+.legalHero .lead{
+  max-width:620px;
+  font-size:15px;
+}
+.legalContent{
+  padding:6px 0 96px;
+}
+.legalPrimary{
+  padding:30px 0 34px;
+  border-top:2px solid var(--ink);
+  border-bottom:1px solid var(--stone);
+}
+.legalPrimary>span,
+.legalGrid article>span{
+  display:block;
+  margin-bottom:11px;
+  color:var(--blue);
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.11em;
+}
+.legalPrimary h2{
+  margin:0 0 14px;
+  font-size:34px;
+}
+.legalPrimary address{
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.65;
+  font-style:normal;
+}
+.legalGrid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  border-bottom:1px solid var(--stone);
+}
+.legalGrid article{
+  min-height:190px;
+  padding:28px 34px 28px 0;
+  border-bottom:1px solid var(--stone);
+}
+.legalGrid article:nth-child(odd){
+  border-right:1px solid var(--stone);
+}
+.legalGrid article:nth-child(even){
+  padding-left:34px;
+}
+.legalGrid p,
+.legalGrid dl{
+  margin:0;
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.65;
+}
+.legalGrid dl div{
+  display:grid;
+  grid-template-columns:140px 1fr;
+  gap:20px;
+  padding:5px 0;
+}
+.legalGrid dt{
+  color:var(--muted-soft);
+}
+.legalGrid dd{
+  margin:0;
+  color:var(--ink);
+  font-weight:600;
+}
+
+.footerLegalMeta{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+.footerLegalMeta a{
+  color:rgba(255,255,255,.62);
+  font-size:8px;
+  letter-spacing:.08em;
+  text-decoration:none;
+}
+.footerLegalMeta a:hover{
+  color:var(--white);
+}
+.footerLegalMeta span{
+  color:rgba(255,255,255,.38);
+}
+
+@media(max-width:760px){
+  .legalHero{
+    padding-top:48px;
+    padding-bottom:28px;
+  }
+  .legalHero h1{
+    font-size:46px;
+  }
+  .legalHero .lead{
+    font-size:15px;
+  }
+  .legalContent{
+    padding-bottom:64px;
+  }
+  .legalPrimary{
+    padding:24px 0 28px;
+  }
+  .legalPrimary h2{
+    font-size:29px;
+  }
+  .legalPrimary address{
+    font-size:15px;
+  }
+  .legalGrid{
+    grid-template-columns:1fr;
+  }
+  .legalGrid article,
+  .legalGrid article:nth-child(even){
+    min-height:0;
+    padding:24px 0;
+    border-right:0;
+  }
+  .legalGrid dl div{
+    grid-template-columns:1fr;
+    gap:2px;
+  }
+  .legalGrid p,
+  .legalGrid dl{
+    font-size:14px;
+  }
+  .footerLegalMeta{
+    width:100%;
+    justify-content:space-between;
+  }
+  .footerLegalMeta a{
+    font-size:10px;
+  }
+}
