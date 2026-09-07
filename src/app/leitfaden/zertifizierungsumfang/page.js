@@ -1,12 +1,21 @@
 import Link from 'next/link';
 import SiteHeader from '../../../components/SiteHeader';
 import SiteFooter from '../../../components/SiteFooter';
-import { canonical } from '../../../lib/seo';
+import { canonical, SOCIAL_IMAGE } from '../../../lib/seo';
 
 export const metadata = {
   title: 'Was genau wird zertifiziert?',
   description: 'Wie wir festlegen, welches Produkt, welche Varianten und welche Produktionsorte zu einer Made by Human Zertifizierung gehören.',
   alternates: { canonical: canonical('/leitfaden/zertifizierungsumfang') },
+  openGraph: {
+    type: 'website',
+    locale: 'de_DE',
+    siteName: 'Made by Human',
+    title: 'Was genau wird zertifiziert? | Made by Human',
+    description: 'Wie wir festlegen, welches Produkt, welche Varianten und welche Produktionsorte zu einer Made by Human Zertifizierung gehören.',
+    url: canonical('/leitfaden/zertifizierungsumfang'),
+    images: [SOCIAL_IMAGE],
+  },
 };
 
 const scopeRules = [
