@@ -56,7 +56,7 @@ export default function Home() {
       <section className="brandAuthorityRail" aria-label="Made by Human Markenversprechen">
         <div className="shell brandAuthorityRailInner">
           <div className="brandAuthorityWordmark">
-            <span>MADE BY HUMAN</span>
+            <img src={assetBase + '/brand/made-by-human-wordmark.png'} alt="Made by Human" />
             <small>VERIFIED</small>
           </div>
           <div className="brandAuthorityPillars">
