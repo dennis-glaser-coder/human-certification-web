@@ -5,7 +5,7 @@ import { canonical } from '../../../lib/seo';
 
 export const metadata = {
   title: 'Leitfaden zum Zertifizierungsumfang',
-  description: 'Wie Produkt, Produktfamilie, Varianten, Produktionsorte und relevante Änderungen für eine Made by Humans Zertifizierung abgegrenzt werden.',
+  description: 'Wie Produkt, Produktfamilie, Varianten, Produktionsorte und relevante Änderungen für eine Made by Human Zertifizierung abgegrenzt werden.',
   alternates: { canonical: canonical('/leitfaden/zertifizierungsumfang') },
 };
 
