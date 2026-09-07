@@ -78,7 +78,7 @@ export default function Home() {
             </p>
             <figure className="manifestoMaterial">
               <img
-                src={assetBase + '/brand/IMG_1040.png'}
+                src={assetBase + '/brand/IMG_1040.webp'}
                 alt="Menschliche Holzbearbeitung beim manuellen Schleifen eines Produktes"
                 loading="lazy"
               />
@@ -105,7 +105,7 @@ export default function Home() {
               <div className="applicationStage applicationStagePhoto realApplicationStage">
                 <img
                   className="applicationPhoto realApplicationPhoto"
-                  src={assetBase + '/brand/IMG_1047_mbh.png'}
+                  src={assetBase + '/brand/IMG_1047_mbh.webp'}
                   alt="Beispielhafte Made by Human Kennzeichnung an einem textilen Produkt mit Verpackung"
                   loading="lazy"
                 />
@@ -177,7 +177,7 @@ export default function Home() {
         <div className="shell desireAuditGrid">
           <figure>
             <img
-              src={assetBase + '/brand/IMG_1053.png'}
+              src={assetBase + '/brand/IMG_1053.webp'}
               alt="Vor-Ort-Audit während eines produktprägenden menschlichen Herstellungsschritts"
               loading="lazy"
             />
