@@ -27,7 +27,7 @@ function publicClaim(record) {
 
   if (record.status === 'active') {
     return {
-      label: 'ZERTIFIZIERTE AUSSAGE',
+      label: 'WAS ZERTIFIZIERT WURDE',
       text: CERTIFIED_STATEMENT,
       className: '',
     };
@@ -82,7 +82,7 @@ export default function CertificateClient({ id }) {
       }
 
       if (!record) {
-        setState({ loading: false, record: null, events: [], eventsMessage: '', message: 'Zu dieser ID wurde kein öffentlicher Datensatz gefunden.' });
+        setState({ loading: false, record: null, events: [], eventsMessage: '', message: 'Zu dieser ID wurde kein Registereintrag gefunden.' });
         return;
       }
 
@@ -114,14 +114,14 @@ export default function CertificateClient({ id }) {
           <Link href="/register">Zur Registersuche →</Link>
         </div>
 
-        {state.loading && <div className="certificateMessage">Datensatz wird geladen …</div>}
+        {state.loading && <div className="certificateMessage">Eintrag wird geladen …</div>}
         {state.message && <div className="certificateMessage">{state.message}</div>}
 
         {state.record && (
           <>
             <section className={`certificateSummary status-${state.record.status}`}>
               <div className="certificateAuthorityLine">
-                <span>ÖFFENTLICHER ZERTIFIZIERUNGSDATENSATZ</span>
+                <span>ÖFFENTLICHER REGISTEREINTRAG</span>
                 <span>STANDARD · AKTUELLER STATUS · ÖFFENTLICH PRÜFBAR</span>
               </div>
               <div className="certificateHeader">
@@ -157,14 +157,14 @@ export default function CertificateClient({ id }) {
                 <div><dt>Standard</dt><dd>{state.record.standard_versions?.title ?? state.record.standard_versions?.version ?? '—'}</dd></div>
                 <div><dt>Ausgestellt</dt><dd>{state.record.issued_at ? new Date(state.record.issued_at).toLocaleDateString('de-DE') : '—'}</dd></div>
                 <div><dt>Gültig bis</dt><dd>{state.record.valid_until ? new Date(state.record.valid_until).toLocaleDateString('de-DE') : '—'}</dd></div>
-                <div><dt>Zuletzt verifiziert</dt><dd>{state.record.last_verified_at ? new Date(state.record.last_verified_at).toLocaleDateString('de-DE') : '—'}</dd></div>
+                <div><dt>Zuletzt geprüft</dt><dd>{state.record.last_verified_at ? new Date(state.record.last_verified_at).toLocaleDateString('de-DE') : '—'}</dd></div>
               </dl>
 
               <CertificationQr publicId={state.record.public_id} />
 
               {state.record.public_note && (
                 <div className="certificatePublicNote">
-                  <small>HINWEIS ZUM DATENSATZ</small>
+                  <small>HINWEIS ZUM EINTRAG</small>
                   <p>{state.record.public_note}</p>
                 </div>
               )}
