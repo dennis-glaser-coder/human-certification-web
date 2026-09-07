@@ -50,18 +50,18 @@ export default function ProceduresPage() {
         <div className="eyebrow">VERFAHRENSREGELN · MBH-GOV-0.1</div>
         <h1>Beschwerden, Einsprüche und Zeichenmissbrauch klar trennen.</h1>
         <p className="lead">
-          Unterschiedliche Vorgänge brauchen unterschiedliche Verfahren. Wir trennen
-          Beschwerde, Einspruch gegen eine Entscheidung und unberechtigte Zeichennutzung
-          nach Zweck, Zuständigkeit, Prüfung und dokumentiertem Abschluss.
+          Nicht jedes Anliegen ist dasselbe. Deshalb unterscheiden wir zwischen
+          Beschwerden, Einsprüchen gegen eine Entscheidung und unberechtigter Zeichennutzung
+          und bearbeiten jeden Fall nach dem passenden Verfahren.
         </p>
       </section>
 
       <section className="procedureMetaBand" aria-label="Verfahrensgrundsätze">
         <div className="shell procedureMetaGrid">
-          <div><strong>Kategorisiert</strong><p>Jeder Vorgang wird eindeutig eingeordnet.</p></div>
-          <div><strong>Dokumentiert</strong><p>Sachverhalt, Belege und Bewertung bleiben nachvollziehbar.</p></div>
-          <div><strong>Zuständigkeitsklar</strong><p>Bearbeitende Rollen werden dem Vorgang zugeordnet.</p></div>
-          <div><strong>Abschlussfähig</strong><p>Entscheidung und Maßnahmen werden dokumentiert.</p></div>
+          <div><strong>Richtig eingeordnet</strong><p>Wir klären zuerst, um welche Art von Anliegen es geht.</p></div>
+          <div><strong>Festgehalten</strong><p>Sachverhalt, Belege und Bewertung werden dokumentiert.</p></div>
+          <div><strong>Klare Zuständigkeit</strong><p>Es ist festgelegt, wer den Vorgang bearbeitet.</p></div>
+          <div><strong>Mit klarem Abschluss</strong><p>Entscheidung und mögliche Maßnahmen werden festgehalten.</p></div>
         </div>
       </section>
 
@@ -69,11 +69,11 @@ export default function ProceduresPage() {
         <div className="sectionIntro compact">
           <div>
             <div className="sectionNo">DREI VERFAHREN</div>
-            <h2>Jeder Fall folgt einer eigenen Logik.</h2>
+            <h2>Je nach Anliegen gilt ein anderes Verfahren.</h2>
           </div>
           <p>
-            Eine klare Trennung verhindert, dass unterschiedliche Anliegen in einem unscharfen
-            Sammelprozess vermischt werden.
+            So verhindern wir, dass Beschwerden, Einsprüche und Zeichenmissbrauch
+            in einem einzigen unklaren Verfahren vermischt werden.
           </p>
         </div>
 
@@ -95,13 +95,13 @@ export default function ProceduresPage() {
         <div className="shell procedureIntegrityGrid">
           <div>
             <div className="sectionNo light">INTERESSENKONFLIKTE</div>
-            <h2>Zuständigkeiten müssen nachvollziehbar bleiben.</h2>
+            <h2>Zuständigkeiten müssen klar sein.</h2>
           </div>
           <div>
             <p>
-              Mögliche Interessenkonflikte werden im jeweiligen Vorgang berücksichtigt und dokumentiert.
-              Eine externe oder unabhängige Entscheidung wird nur dann als solche bezeichnet,
-              wenn diese organisatorische Eigenschaft tatsächlich besteht und nachweisbar ist.
+              Mögliche Interessenkonflikte halten wir im jeweiligen Vorgang fest.
+              Von einer externen oder unabhängigen Entscheidung sprechen wir nur,
+              wenn diese Unabhängigkeit tatsächlich besteht und belegt werden kann.
             </p>
           </div>
         </div>
@@ -110,8 +110,8 @@ export default function ProceduresPage() {
       <section className="procedureRecord">
         <div className="shell procedureRecordGrid">
           <div>
-            <div className="sectionNo">VERFAHRENSAKTE</div>
-            <h2>Fünf Angaben machen einen Vorgang nachvollziehbar.</h2>
+            <div className="sectionNo">DOKUMENTATION</div>
+            <h2>Diese fünf Punkte halten wir zu jedem Vorgang fest.</h2>
           </div>
           <div className="procedureRecordList">
             {recordFields.map(([title, copy]) => (
@@ -124,7 +124,7 @@ export default function ProceduresPage() {
       </section>
 
       <section className="shell standardClose">
-        <p>Die Verfahrensregeln werden versioniert geführt; Änderungen bleiben nachvollziehbar dokumentiert.</p>
+        <p>Die Verfahrensregeln haben einen festen Versionsstand. Änderungen werden mit einer neuen Fassung dokumentiert.</p>
         <div className="standardCloseLinks">
           <Link className="textLink" href="/dokumente">Dokumentenregister →</Link>
           <Link className="textLink" href="/transparenz">Transparenz & Integrität →</Link>
