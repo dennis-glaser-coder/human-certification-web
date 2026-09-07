@@ -1,0 +1,78 @@
+import SiteHeader from '../../components/SiteHeader';
+import SiteFooter from '../../components/SiteFooter';
+import { canonical } from '../../lib/seo';
+
+export const metadata = {
+  title: 'Impressum',
+  description: 'Impressum und Anbieterangaben von Made by Human.',
+  alternates: { canonical: canonical('/impressum') },
+};
+
+export default function ImpressumPage() {
+  return (
+    <main className="legalPage">
+      <SiteHeader />
+
+      <section className="pageHero shell legalHero">
+        <div className="eyebrow">IMPRESSUM</div>
+        <h1>Anbieterangaben.</h1>
+        <p className="lead">Angaben gemäß § 5 DDG.</p>
+      </section>
+
+      <section className="shell legalContent">
+        <article className="legalPrimary">
+          <span>ANBIETER</span>
+          <h2>D&G Handels GmbH</h2>
+          <address>
+            Hohenloher Weg 44<br />
+            33102 Paderborn<br />
+            Deutschland
+          </address>
+        </article>
+
+        <div className="legalGrid">
+          <article>
+            <span>HANDELSREGISTER</span>
+            <dl>
+              <div><dt>Registergericht</dt><dd>Amtsgericht Paderborn</dd></div>
+              <div><dt>Registernummer</dt><dd>HRB 14807</dd></div>
+            </dl>
+          </article>
+
+          <article>
+            <span>VERTRETEN DURCH</span>
+            <p>
+              Nikita Dohrenkamp<br />
+              Stephan Gehle
+            </p>
+          </article>
+
+          <article>
+            <span>UMSATZSTEUER-ID</span>
+            <p>DE335791582</p>
+          </article>
+
+          <article>
+            <span>KONTAKT</span>
+            <dl>
+              <div><dt>E-Mail</dt><dd>Wird ergänzt</dd></div>
+              <div><dt>Telefon</dt><dd>Wird ergänzt</dd></div>
+            </dl>
+          </article>
+
+          <article>
+            <span>INHALTLICH VERANTWORTLICH</span>
+            <p>
+              D&G Handels GmbH<br />
+              Hohenloher Weg 44<br />
+              33102 Paderborn<br />
+              Deutschland
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <SiteFooter />
+    </main>
+  );
+}
