@@ -133,7 +133,7 @@ export default function ManufacturerPage() {
             <div className="brandTrace" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
             <h1>Menschliche Herstellung. Als Produktmerkmal zertifiziert.</h1>
             <p className="lead">
-              Made by Humans macht menschliche Herstellung sichtbar und überprüfbar: mit klar abgegrenztem Produktumfang,
+              Wir machen menschliche Herstellung sichtbar und überprüfbar: mit klar abgegrenztem Produktumfang,
               Vor-Ort-Audit beim Hersteller, dokumentierter Entscheidung und öffentlicher Verifizierung.
             </p>
             <div className="manufacturerHeroActions">
@@ -147,7 +147,7 @@ export default function ManufacturerPage() {
               alt="Menschliche Holzbearbeitung an einer Bandsäge in einer Werkstatt"
             />
             <div className="manufacturerHeroCredential">
-              <img src={assetBase + '/brand/made-by-humans-seal.png'} alt="Made by Humans Zertifizierungszeichen" />
+              <img src={assetBase + '/brand/made-by-humans-seal.png'} alt="Made by Human Zertifizierungszeichen" />
               <div>
                 <span>NACH POSITIVER ENTSCHEIDUNG</span>
                 <strong>Ein sichtbarer Nachweis für einen realen Herstellungsunterschied.</strong>
