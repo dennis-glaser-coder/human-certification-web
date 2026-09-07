@@ -1,4 +1,4 @@
-import { canonical } from '../../lib/seo';
+import { canonical, SOCIAL_IMAGE } from '../../lib/seo';
 
 export const metadata = {
   title: 'Zertifizierungs-ID prüfen',
@@ -12,6 +12,7 @@ export const metadata = {
     description:
       'Öffentlichen Datensatz einer Made by Human Kennzeichnung über die Zertifizierungs-ID aufrufen.',
     url: canonical('/pruefen'),
+    images: [SOCIAL_IMAGE],
   },
 };
 
