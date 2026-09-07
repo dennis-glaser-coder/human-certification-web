@@ -60,14 +60,14 @@ export default function WhyPage() {
           <div className="whyHeroVisual">
             <figure>
               <img
-                src={assetBase + '/photography/why-human-production.jpg'}
+                src={assetBase + '/photography/why-human-production.webp'}
                 alt="Hände bei der Formgebung eines keramischen Produktes"
               />
               <figcaption>Produktionsaufnahme · Maksim Shiriagin / Unsplash</figcaption>
             </figure>
             <div className="whySealTag">
               <img
-                src={assetBase + '/brand/made-by-human-logo.png'}
+                src={assetBase + '/brand/made-by-human-logo.webp'}
                 alt="Made by Human Zertifizierungszeichen"
                 width="96"
                 height="96"
