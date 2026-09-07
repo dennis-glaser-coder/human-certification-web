@@ -1230,7 +1230,7 @@ summary:focus-visible {
     height:100%;
     min-height:560px;
     object-fit:cover;
-    object-position:68% 50%;
+    object-position:80% 50%;
     filter:saturate(.70) contrast(1.035) brightness(.97);
   }
   .compactHome .compactAudit .desireAudit figure::after{
@@ -1247,7 +1247,7 @@ summary:focus-visible {
     object-position:center 56%;
   }
   .compactHome .compactAudit .desireAudit figure img{
-    object-position:66% 50%;
+    object-position:76% 50%;
   }
 }
 
