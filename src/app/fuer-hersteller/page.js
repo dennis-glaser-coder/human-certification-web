@@ -244,7 +244,7 @@ export default function ManufacturerPage() {
             </p>
             <figure className="manufacturerEvidencePhoto">
               <img
-                src="https://images.unsplash.com/photo-1781389005078-d9e413d89c94?auto=format&fit=crop&w=1400&q=82"
+                src={assetBase + '/photography/manufacturer-production.jpg'}
                 alt="Hände bei der manuellen Formgebung eines Produktes"
                 loading="lazy"
               />
