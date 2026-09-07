@@ -34,9 +34,9 @@ export default function EvidenceGuidePage() {
         <div className="eyebrow">LEITFADEN · PRÜFNACHWEISE</div>
         <h1>Belege müssen zeigen, wie das Produkt hergestellt wird.</h1>
         <p className="lead">
-          Es gibt nicht den einen vorgeschriebenen Beleg für jedes Produkt. Entscheidend ist,
-          dass die Kombination der vorliegenden Informationen die wesentlichen Herstellungsschritte,
-          wie sie tatsächlich ausgeführt werden und wo produziert wird.
+          Es gibt nicht für jedes Produkt denselben vorgeschriebenen Beleg. Entscheidend ist,
+          dass die vorhandenen Informationen zusammen zeigen, welche wichtigen Herstellungsschritte stattfinden,
+          wie sie ausgeführt werden und wo produziert wird.
         </p>
       </section>
 
