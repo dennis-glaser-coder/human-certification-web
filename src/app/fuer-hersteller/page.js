@@ -176,8 +176,8 @@ export default function ManufacturerPage() {
             </div>
             <p>
               Nach positiver Zertifizierung können Sie auf Produktseite, Verpackung und im Verkauf zeigen,
-              welche menschliche Arbeit hinter Ihrem Produkt steht. Der Nachweis bleibt mit Produktumfang,
-              Zertifizierungs-ID und öffentlichem Register verknüpft.
+              welche menschliche Arbeit hinter Ihrem Produkt steht. Über Zertifizierungs-ID und Register
+              bleibt klar, für welches Produkt die Zertifizierung gilt.
             </p>
           </div>
 
