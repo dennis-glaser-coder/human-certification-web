@@ -43,6 +43,7 @@ jobs:
 
       - name: Build
         env:
+          GITHUB_PAGES: "true"
           NEXT_PUBLIC_SITE_URL: "https://madebyhuman.org"
           NEXT_PUBLIC_SITE_INDEXABLE: "true"
           NEXT_PUBLIC_BASE_PATH: ""
