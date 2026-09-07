@@ -61,7 +61,7 @@ export default function BuyerPage() {
 
           <div className="buyerHeroCard">
             <div className="buyerHeroLogoField">
-              <img src={assetBase + '/brand/made-by-human-logo.png'} alt="Made by Human – Verified Human Production" />
+              <img src={assetBase + '/brand/made-by-human-logo.webp'} alt="Made by Human – Verified Human Production" />
             </div>
             <strong>Von Menschen gemacht.<br />Vor Ort geprüft.</strong>
             <p>Für dieses Produkt · Zertifizierungs-ID · öffentlich prüfbar</p>
@@ -146,7 +146,7 @@ export default function BuyerPage() {
         <div className="shell buyerAuditGrid">
           <figure>
             <img
-              src={assetBase + '/photography/buyer-production.jpg'}
+              src={assetBase + '/photography/buyer-production.webp'}
               alt="Menschliche Arbeit in einer Produktionswerkstatt"
               loading="lazy"
             />
