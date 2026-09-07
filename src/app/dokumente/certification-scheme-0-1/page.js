@@ -18,12 +18,12 @@ const roles = [
 ];
 
 const steps = [
-  ['Zertifizierungsumfang', 'Produkt, Produktfamilie und Herstellungsorte abgrenzen.'],
-  ['Prozessaufnahme', 'Wesentliche Herstellungsschritte und Fremdfertigung erfassen.'],
+  ['Was wird zertifiziert?', 'Produkt, Produktfamilie und Produktionsorte festlegen.'],
+  ['Herstellung erfassen', 'Die wichtigen Herstellungsschritte und externe Fertigung erfassen.'],
   ['Nachweise', 'Unterlagen und Informationen zur tatsächlichen Ausführung prüfen.'],
   ['Prüfung', 'Produktionsfall gegen die Kriterien des Standards bewerten.'],
   ['Fachprüfung', 'Prüfergebnis fachlich kontrollieren und offene Punkte klären.'],
-  ['Entscheidung', 'Zertifizierungsstatus dokumentiert festlegen und bei Freigabe registrieren.'],
+  ['Entscheidung', 'Über die Zertifizierung entscheiden und bei Freigabe den Status registrieren.'],
 ];
 
 export default function SchemeDocumentPage() {
@@ -84,15 +84,14 @@ export default function SchemeDocumentPage() {
             <div><strong>Aktiv</strong><p>innerhalb des festgelegten Umfangs und Zeitraums gültig.</p></div>
             <div><strong>Ausgesetzt</strong><p>Zeichennutzung vorübergehend eingeschränkt oder untersagt, bis die Ursache geklärt ist.</p></div>
             <div><strong>Abgelaufen</strong><p>Gültigkeitszeitraum beendet und nicht rechtzeitig erneuert.</p></div>
-            <div><strong>Widerrufen</strong><p>Zertifizierung beendet; weitere Zeichennutzung für den betroffenen Zertifizierungsumfang unzulässig.</p></div>
+            <div><strong>Widerrufen</strong><p>Zertifizierung beendet; das Zeichen darf für das betroffene Produkt nicht weiter genutzt werden.</p></div>
           </div>
         </section>
 
         <section>
           <h2>Weitere Regeln</h2>
           <p>
-            Markennutzung, Beschwerden, Einsprüche, Zeichenmissbrauch und potenzielle Interessenkonflikte werden in separaten,
-            versionierten Regelwerken geführt und mit klaren Zuständigkeiten dokumentiert.
+            Für Markennutzung, Beschwerden, Einsprüche, Zeichenmissbrauch und mögliche Interessenkonflikte gibt es eigene Regeln mit festen Zuständigkeiten und Versionsstand.
           </p>
           <div className="inlineDocLinks">
             <Link href="/markennutzung">Markennutzungsgrundsätze →</Link>
@@ -102,10 +101,9 @@ export default function SchemeDocumentPage() {
         </section>
 
         <section>
-          <h2>Dokumentenlenkung</h2>
+          <h2>Versionen & Änderungen</h2>
           <p>
-            Das Zertifizierungsschema wird über Dokument-ID, Version und Stand kontrolliert geführt.
-            Änderungen an Rollen, Prüfablauf, Statusverwaltung oder Verfahrensregeln werden versioniert dokumentiert.
+            Dokument-ID, Version und Datum zeigen, welche Fassung gilt. Änderungen an Rollen, Prüfablauf, Status oder Verfahrensregeln werden in einer neuen Version festgehalten.
           </p>
         </section>
       </article>
