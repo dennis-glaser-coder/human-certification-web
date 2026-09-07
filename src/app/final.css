@@ -1817,3 +1817,243 @@ summary:focus-visible {
     border-left:1px solid rgba(17,24,32,.18);
   }
 }
+
+
+/* ===== Final A+B mobile cleanup 2026-09-07 ===== */
+
+/* Condensed manufacturer mark-use guidance */
+.manufacturerMarkSummary{
+  margin-top:42px;
+  padding-top:22px;
+  border-top:1px solid var(--ink);
+  display:grid;
+  grid-template-columns:minmax(180px,.65fr) minmax(0,1.35fr) auto;
+  gap:34px;
+  align-items:start;
+}
+.manufacturerMarkSummary>div:first-child>span{
+  display:block;
+  margin-bottom:8px;
+  color:var(--blue);
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.11em;
+}
+.manufacturerMarkSummary>div:first-child>strong{
+  font-family:var(--font-serif),Georgia,serif;
+  font-size:22px;
+  line-height:1.18;
+  font-weight:500;
+}
+.manufacturerMarkSummaryItems{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px 24px;
+}
+.manufacturerMarkSummaryItems>div{
+  padding-top:10px;
+  border-top:1px solid var(--stone);
+}
+.manufacturerMarkSummaryItems strong{
+  display:block;
+  margin-bottom:4px;
+  font-size:11px;
+}
+.manufacturerMarkSummaryItems p{
+  margin:0;
+  color:var(--muted);
+  font-size:10px;
+  line-height:1.5;
+}
+.manufacturerMarkSummary>a{
+  color:var(--blue);
+  font-size:11px;
+  font-weight:700;
+  text-decoration:none;
+  border-bottom:1px solid currentColor;
+  padding-bottom:3px;
+  white-space:nowrap;
+}
+
+/* Desktop footer keeps its full institutional navigation. */
+.premiumFooterNavMobile{
+  display:none;
+}
+
+@media(max-width:760px){
+  /* Applications: no clipped carousel. Both examples stay fully visible. */
+  .compactApplicationGrid{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:18px!important;
+    overflow:visible!important;
+    margin-right:0!important;
+    padding-right:0!important;
+    scroll-snap-type:none!important;
+  }
+  .compactApplicationGrid .sealApplicationCard,
+  .compactApplicationGrid .sealApplicationCard:nth-child(1),
+  .compactApplicationGrid .sealApplicationCard:nth-child(2){
+    width:100%!important;
+    max-width:100%!important;
+    flex:none!important;
+    grid-column:auto!important;
+  }
+  .compactApplicationGrid .applicationCopy{
+    min-height:0;
+  }
+  .applicationSwipeHint{
+    display:none!important;
+  }
+
+  /* The header already carries the brand. Avoid repeated logo panels in mobile heroes. */
+  .manufacturerHeroCredential,
+  .buyerHeroCard{
+    display:none!important;
+  }
+  .buyerHeroGrid,
+  .manufacturerHeroArtGrid{
+    gap:0!important;
+  }
+
+  /* Manufacturer page: retain information, reduce presentation length. */
+  .manufacturerBenefits,
+  .manufacturerFit,
+  .manufacturerEvidence,
+  .manufacturerProcess,
+  .manufacturerFaq,
+  .manufacturerApplication{
+    padding-top:54px!important;
+    padding-bottom:58px!important;
+  }
+  .manufacturerEvidencePhoto{
+    display:none;
+  }
+  .manufacturerBenefitGrid,
+  .manufacturerFitGrid,
+  .manufacturerProcessGrid{
+    margin-top:30px!important;
+  }
+  .manufacturerMarkSummary{
+    margin-top:28px;
+    padding-top:18px;
+    display:block;
+  }
+  .manufacturerMarkSummary>div:first-child{
+    margin-bottom:18px;
+  }
+  .manufacturerMarkSummary>div:first-child>span{
+    font-size:10px;
+  }
+  .manufacturerMarkSummary>div:first-child>strong{
+    font-size:23px;
+  }
+  .manufacturerMarkSummaryItems{
+    grid-template-columns:1fr 1fr;
+    gap:0 16px;
+  }
+  .manufacturerMarkSummaryItems>div{
+    padding:12px 0;
+  }
+  .manufacturerMarkSummaryItems strong{
+    font-size:12px;
+  }
+  .manufacturerMarkSummaryItems p{
+    font-size:11px!important;
+    line-height:1.45!important;
+  }
+  .manufacturerMarkSummary>a{
+    display:inline-block;
+    margin-top:16px;
+    font-size:12px;
+  }
+
+  /* Compact footer: all destinations remain available without a 700px wall of links. */
+  .premiumFooter{
+    padding-top:28px!important;
+  }
+  .premiumFooterTop{
+    padding-top:0!important;
+    padding-bottom:22px!important;
+    display:block!important;
+  }
+  .premiumFooterBrand{
+    margin-bottom:22px!important;
+  }
+  .footerLogoField{
+    width:96px;
+    padding:8px;
+  }
+  .premiumFooterBrand>p{
+    max-width:280px!important;
+    margin-top:10px!important;
+    font-size:17px!important;
+    line-height:1.24!important;
+  }
+  .premiumFooterNavDesktop{
+    display:none!important;
+  }
+  .premiumFooterNavMobile{
+    display:block;
+    border-top:1px solid rgba(255,255,255,.18);
+  }
+  .premiumFooterNavMobile details{
+    border-bottom:1px solid rgba(255,255,255,.14);
+  }
+  .premiumFooterNavMobile summary{
+    position:relative;
+    min-height:48px;
+    display:flex;
+    align-items:center;
+    cursor:pointer;
+    list-style:none;
+    color:#AFC1D8;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+  }
+  .premiumFooterNavMobile summary::-webkit-details-marker{
+    display:none;
+  }
+  .premiumFooterNavMobile summary::after{
+    content:"+";
+    position:absolute;
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+    color:rgba(255,255,255,.68);
+    font-size:19px;
+    font-weight:400;
+  }
+  .premiumFooterNavMobile details[open] summary::after{
+    content:"–";
+  }
+  .premiumFooterNavMobile details>div{
+    padding:0 0 14px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:4px 18px;
+  }
+  .premiumFooterNavMobile a{
+    min-height:32px!important;
+    padding:5px 0;
+    display:flex;
+    align-items:center;
+    color:rgba(255,255,255,.72);
+    font-size:11px!important;
+    line-height:1.3;
+    text-decoration:none;
+  }
+  .premiumFooterBottom{
+    margin-top:0!important;
+    padding:12px 0 16px!important;
+    min-height:0!important;
+  }
+  .premiumFooterBottom span:first-child{
+    display:none;
+  }
+  .premiumFooterBottom span:last-child{
+    font-size:9px;
+  }
+}
