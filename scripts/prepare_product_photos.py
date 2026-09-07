@@ -18,6 +18,14 @@ EXTRA_WEBP = [
     (BRAND / "IMG_1053.png", BRAND / "IMG_1053.webp"),
 ]
 
+PHOTOGRAPHY = ROOT / "public" / "photography"
+PHOTO_WEBP = [
+    (PHOTOGRAPHY / "home-hero-woodworking.jpg", PHOTOGRAPHY / "home-hero-woodworking.webp"),
+    (PHOTOGRAPHY / "why-human-production.jpg", PHOTOGRAPHY / "why-human-production.webp"),
+    (PHOTOGRAPHY / "manufacturer-production.jpg", PHOTOGRAPHY / "manufacturer-production.webp"),
+    (PHOTOGRAPHY / "buyer-production.jpg", PHOTOGRAPHY / "buyer-production.webp"),
+]
+
 for path in (MASTER, LEATHER_SOURCE, TEXTILE_SOURCE):
     if not path.exists():
         raise SystemExit(f"Missing required source: {path}")
@@ -135,14 +143,14 @@ def add_box_label(base):
     ).astype(np.uint8)
 
 
-def save_webp(image, path, max_width=1600):
+def save_webp(image, path, max_width=1600, quality=88):
     if not isinstance(image, Image.Image):
         image = Image.fromarray(image)
     image = image.convert("RGB")
     if image.width > max_width:
         height = round(image.height * max_width / image.width)
         image = image.resize((max_width, height), Image.Resampling.LANCZOS)
-    image.save(path, "WEBP", quality=88, method=6)
+    image.save(path, "WEBP", quality=quality, method=6)
 
 
 # Leather photo: preserve the original image completely except for the existing hang-tag print.
@@ -179,6 +187,10 @@ save_webp(textile, TEXTILE_WEBP)
 for source, output in EXTRA_WEBP:
     if source.exists():
         save_webp(Image.open(source), output)
+
+for source, output in PHOTO_WEBP:
+    if source.exists():
+        save_webp(Image.open(source), output, quality=84)
 
 print("Prepared:", LEATHER_OUT)
 print("Prepared:", TEXTILE_OUT)
