@@ -28,7 +28,7 @@ const procedures = [
     code: '03',
     type: 'ZEICHENMISSBRAUCH',
     title: 'Unberechtigte oder irreführende Zeichennutzung',
-    copy: 'Zeichenmissbrauch umfasst Nutzung ohne Berechtigung, Nutzung für nicht erfasste Produkte, Weiterverwendung nach Statusverlust oder eine irreführende Erweiterung der zertifizierten Aussage.',
+    copy: 'Von Zeichenmissbrauch sprechen wir, wenn das Zeichen ohne Berechtigung, für nicht zertifizierte Produkte oder nach Verlust des Status weiter genutzt wird oder wenn damit mehr behauptet wird, als tatsächlich zertifiziert ist.',
     steps: ['Meldung und Belege sichern', 'Register- und Nutzungsstatus prüfen', 'Korrektur oder Entfernung verlangen', 'Erforderliche Folgemaßnahmen dokumentieren'],
   },
 ];
@@ -36,8 +36,8 @@ const procedures = [
 const recordFields = [
   ['Vorgangsart', 'Beschwerde, Einspruch oder Zeichenmissbrauch'],
   ['Sachverhalt', 'Worum es geht, welche Zertifizierung betroffen ist und welche Belege vorliegen'],
-  ['Zuständigkeit', 'Bearbeitende Rolle und Prüfung möglicher Interessenkonflikte'],
-  ['Entscheidung', 'Bewertung, Begründung und gegebenenfalls erforderliche Maßnahmen'],
+  ['Zuständigkeit', 'Wer den Fall bearbeitet und ob mögliche Interessenkonflikte bestehen'],
+  ['Entscheidung', 'Ergebnis, Begründung und gegebenenfalls nötige Maßnahmen'],
   ['Abschluss', 'Ergebnis des Verfahrens und mögliche Änderungen am Status'],
 ];
 
