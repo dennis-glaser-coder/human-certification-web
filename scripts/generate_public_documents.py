@@ -64,7 +64,7 @@ def header_footer(canvas, doc, doc_id, short_title, status):
     canvas.setStrokeColor(STONE); canvas.setLineWidth(0.5)
     canvas.line(18*mm, h-14*mm, w-18*mm, h-14*mm)
     canvas.setFont(SANS_B, 6.8); canvas.setFillColor(BLUE)
-    canvas.drawRightString(w-18*mm, h-11.4*mm, f'MADE BY HUMANS  /  {doc_id}')
+    canvas.drawRightString(w-18*mm, h-11.4*mm, f'MADE BY HUMAN  /  {doc_id}')
     canvas.setFont(SANS, 6.2); canvas.setFillColor(MUTED)
     canvas.drawString(18*mm, 10.5*mm, f'{short_title}  ·  Version 0.1  ·  {status}')
     canvas.restoreState()
@@ -75,7 +75,7 @@ def title_block(title, subtitle, doc_id, status, details):
         P(title,'title'), P(subtitle,'subtitle'),
         P('Kontrolliertes Dokument. Dokument-ID, Version und Stand ermöglichen eine eindeutige Referenzierung der veröffentlichten Fassung.','small')
     ]
-    right = [Image(str(SEAL), width=34*mm, height=34*mm), Spacer(1,4*mm), P('MADE BY HUMANS','white'), P(doc_id,'white')] if SEAL.exists() else [P('MADE BY HUMANS','white'), P(doc_id,'white')]
+    right = [Image(str(SEAL), width=34*mm, height=34*mm), Spacer(1,4*mm), P('MADE BY HUMAN','white'), P(doc_id,'white')] if SEAL.exists() else [P('MADE BY HUMAN','white'), P(doc_id,'white')]
     t = Table([[left, right]], colWidths=[123*mm, 47*mm])
     t.setStyle(TableStyle([
         ('BACKGROUND',(0,0),(0,0),PAPER), ('BACKGROUND',(1,0),(1,0),INK), ('VALIGN',(0,0),(-1,-1),'TOP'),
@@ -126,8 +126,8 @@ def criteria_table(rows):
     return t
 
 def build_standard():
-    path=OUT/'made-by-humans-standard-0-1.pdf'
-    doc=SimpleDocTemplate(str(path),pagesize=A4,rightMargin=18*mm,leftMargin=18*mm,topMargin=20*mm,bottomMargin=16*mm,title='Made by Humans Standard 0.1',author='Made by Humans')
+    path=OUT/'made-by-human-standard-0-1.pdf'
+    doc=SimpleDocTemplate(str(path),pagesize=A4,rightMargin=18*mm,leftMargin=18*mm,topMargin=20*mm,bottomMargin=16*mm,title='Made by Human Standard 0.1',author='Made by Human')
     story=[]
     story += title_block('Standard 0.1','Kriterien für physische Produkte, deren wesentliche Herstellungsschritte nachweislich durch Menschen ausgeführt werden.','MBH-STD-0.1','Veröffentlicht',[
         ('Version','0.1'),('Stand','04.09.2026'),('Geltungsbereich','Physische Produkte'),('Dokumentstatus','Veröffentlicht')
@@ -171,14 +171,14 @@ def build_standard():
     doc.build(story,onFirstPage=lambda c,d: header_footer(c,d,'MBH-STD-0.1','Standard','Veröffentlicht'),onLaterPages=lambda c,d: header_footer(c,d,'MBH-STD-0.1','Standard','Version 0.1'))
 
 def build_scheme():
-    path=OUT/'made-by-humans-certification-scheme-0-1.pdf'
-    doc=SimpleDocTemplate(str(path),pagesize=A4,rightMargin=18*mm,leftMargin=18*mm,topMargin=20*mm,bottomMargin=16*mm,title='Made by Humans Zertifizierungsschema 0.1',author='Made by Humans')
+    path=OUT/'made-by-human-certification-scheme-0-1.pdf'
+    doc=SimpleDocTemplate(str(path),pagesize=A4,rightMargin=18*mm,leftMargin=18*mm,topMargin=20*mm,bottomMargin=16*mm,title='Made by Human Zertifizierungsschema 0.1',author='Made by Human')
     story=[]
     story += title_block('Zertifizierungsschema 0.1','Regelwerk für Rollen, Prüfprozess, Zertifizierungsentscheidung, Statusverwaltung, Register und Markennutzung.','MBH-SCH-0.1','Veröffentlicht',[
-        ('Version','0.1'),('Stand','04.09.2026'),('Bezug','Made by Humans Standard 0.1'),('Dokumentstatus','Veröffentlicht')
+        ('Version','0.1'),('Stand','04.09.2026'),('Bezug','Made by Human Standard 0.1'),('Dokumentstatus','Veröffentlicht')
     ])
     story += doc_control('Veröffentlichte Fassung des Zertifizierungssystems.')
-    story += [P('1  Zweck und Status','h1'),P('Dieses Dokument beschreibt die Funktionsweise des Made by Humans Zertifizierungssystems getrennt vom eigentlichen Produktstandard.'),P('Es regelt nicht, welche Produkteigenschaft erfüllt sein muss - das ist Aufgabe des Standards. Es beschreibt, wie Antrag, Prüfung, fachliche Kontrolle, Entscheidung, Register, Statusänderungen und Markennutzung strukturiert sind.'),P('Version 0.1 beschreibt Rollen, Zuständigkeiten und Abläufe des Zertifizierungssystems.'),P('2  Rollen im System','h1')]
+    story += [P('1  Zweck und Status','h1'),P('Dieses Dokument beschreibt die Funktionsweise des Made by Human Zertifizierungssystems getrennt vom eigentlichen Produktstandard.'),P('Es regelt nicht, welche Produkteigenschaft erfüllt sein muss - das ist Aufgabe des Standards. Es beschreibt, wie Antrag, Prüfung, fachliche Kontrolle, Entscheidung, Register, Statusänderungen und Markennutzung strukturiert sind.'),P('Version 0.1 beschreibt Rollen, Zuständigkeiten und Abläufe des Zertifizierungssystems.'),P('2  Rollen im System','h1')]
     roles=[('Systeminhaber','verantwortet Standard, Marke, Dokumentenlenkung, Registermodell und Regeln des Zertifizierungssystems.'),('Prüfung','bewertet den konkreten Produkt- und Herstellungsprozess gegen die anwendbaren Anforderungen und dokumentiert die Nachweise.'),('Fachprüfung','prüft die Vollständigkeit und fachliche Plausibilität des Prüfergebnisses und dokumentiert offene Punkte.'),('Zertifizierungsentscheidung','überführt das geprüfte Ergebnis in eine dokumentierte Entscheidung über Freigabe, Ablehnung, Aussetzung, Erneuerung oder Widerruf.'),('Öffentliches Register','veröffentlicht die für Käufer und Geschäftspartner relevanten Zertifizierungsinformationen und den aktuellen Status.')]
     for n,d in roles: story.append(P(f'<b><font color="#294C77">{n}:</font></b> {d}'))
     story += [callout('Wichtiger Statushinweis','Prüfung, fachliche Kontrolle und Zertifizierungsentscheidung werden als getrennte Rollen dokumentiert. Akkreditierung oder externe Unabhängigkeit werden nur ausgewiesen, wenn sie nachweislich bestehen.'),Spacer(1,4*mm),P('3  Antrag und Zertifizierungsumfang','h1')]
