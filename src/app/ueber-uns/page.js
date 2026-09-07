@@ -155,7 +155,7 @@ export default function AboutPage() {
           <p>
             Wir treffen keine Aussage zu Herkunftsland, Nachhaltigkeit, Bio-, Fairtrade-,
             Qualitäts- oder Sicherheitsmerkmalen, sofern diese nicht ausdrücklich Gegenstand eines anderen Nachweises sind.
-            Die Zertifizierung bleibt auf die definierte Aussage zur menschlichen Herstellung begrenzt.
+            Unsere Zertifizierung bleibt auf die menschliche Herstellung begrenzt.
           </p>
         </div>
       </section>
