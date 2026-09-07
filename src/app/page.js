@@ -29,13 +29,13 @@ export default function Home() {
             <div className="brandTrace" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
             <h1>Von Menschen gemacht.<br />Vor Ort geprüft.</h1>
             <p className="desireHeroLead">
-              Made by Humans zertifiziert physische Produkte, deren wesentliche Herstellungsschritte
+              Wir zertifizieren physische Produkte, deren wesentliche Herstellungsschritte
               nachweislich durch Menschen ausgeführt werden. Wir prüfen die tatsächliche Herstellung vor Ort
               und machen den Zertifizierungsstatus öffentlich überprüfbar.
             </p>
             <div className="desireHeroActions">
               <Link className="desirePrimary" href="/fuer-hersteller#zertifizierungsanfrage">Zertifizierung anfragen</Link>
-              <Link className="desireSecondary" href="/warum-made-by-humans">Warum Made by Humans?</Link>
+              <Link className="desireSecondary" href="/warum-made-by-humans">Warum Made by Human?</Link>
             </div>
             <div className="desireProofLine">
               <span>Vor-Ort-Audit</span>
@@ -53,10 +53,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="brandAuthorityRail" aria-label="Made by Humans Markenversprechen">
+      <section className="brandAuthorityRail" aria-label="Made by Human Markenversprechen">
         <div className="shell brandAuthorityRailInner">
           <div className="brandAuthorityWordmark">
-            <span>MADE BY HUMANS</span>
+            <span>MADE BY HUMAN</span>
             <small>VERIFIED</small>
           </div>
           <div className="brandAuthorityPillars">
@@ -74,7 +74,7 @@ export default function Home() {
             <h2>Handmade ist schnell gesagt. Wir machen es überprüfbar.</h2>
             <p>
               Begriffe wie „handmade“, „handcrafted“ oder „manufakturgefertigt“ sagen allein wenig darüber aus,
-              wie ein Produkt tatsächlich entsteht. Made by Humans prüft die wesentlichen Herstellungsschritte
+              wie ein Produkt tatsächlich entsteht. Wir prüfen die wesentlichen Herstellungsschritte
               vor Ort und macht das Ergebnis über Zertifizierungs-ID und Register nachvollziehbar.
             </p>
             <figure className="manifestoMaterial">
@@ -107,7 +107,7 @@ export default function Home() {
                 <img
                   className="applicationPhoto realApplicationPhoto"
                   src={assetBase + '/brand/IMG_1047.png'}
-                  alt="Beispielhafte Made by Humans Kennzeichnung an einem textilen Produkt mit Verpackung"
+                  alt="Beispielhafte Made by Human Kennzeichnung an einem textilen Produkt mit Verpackung"
                   loading="lazy"
                 />
               </div>
@@ -126,7 +126,7 @@ export default function Home() {
                   </div>
                   <div className="applicationProofStatement">
                     <small>PRODUKTBEZOGENER NACHWEIS</small>
-                    <strong>Made by Humans</strong>
+                    <strong>Made by Human</strong>
                     <p>Die Kennzeichnung führt zum öffentlichen Zertifizierungsdatensatz des konkret erfassten Produkts.</p>
                   </div>
                   <div className="applicationProofMeta" aria-label="Bestandteile des digitalen Nachweises">
@@ -155,7 +155,7 @@ export default function Home() {
             <p className="premiumSectionLabel premiumSectionLabelLight">WERT & VERTRAUEN</p>
             <h2>Aus einem Herstellungsmerkmal wird ein belegbares Unterscheidungsmerkmal.</h2>
             <p>
-              Made by Humans macht menschliche Herstellung strukturiert kommunizierbar – klar begrenzt auf den tatsächlich zertifizierten Produktumfang.
+              Wir machen menschliche Herstellung strukturiert kommunizierbar – klar begrenzt auf den tatsächlich zertifizierten Produktumfang.
             </p>
           </div>
           <div className="homeStoryRows">
