@@ -20,7 +20,7 @@ function publicClaim(record) {
   if (record.public_id?.startsWith('HC-DEMO-')) {
     return {
       label: 'BEISPIELDATENSATZ',
-      text: 'Technische Demonstration des öffentlichen Registermodells. Dieser Datensatz ist keine reale Zertifizierung.',
+      text: 'Beispiel für einen öffentlichen Registereintrag. Dieser Eintrag ist keine reale Zertifizierung.',
       className: 'certificateClaimReview',
     };
   }
@@ -34,15 +34,15 @@ function publicClaim(record) {
   }
 
   const statusMessages = {
-    under_review: 'Dieser Datensatz befindet sich in Prüfung. Eine Zertifizierungsentscheidung wurde noch nicht erteilt.',
-    suspended: 'Diese Zertifizierung ist derzeit ausgesetzt. Der Datensatz bleibt zur öffentlichen Nachvollziehbarkeit sichtbar.',
-    expired: 'Diese Zertifizierung ist abgelaufen. Der Datensatz bleibt zur öffentlichen Nachvollziehbarkeit sichtbar.',
-    revoked: 'Diese Zertifizierung wurde widerrufen. Der Datensatz bleibt zur öffentlichen Nachvollziehbarkeit sichtbar.',
+    under_review: 'Diese Zertifizierung wird noch geprüft. Eine Entscheidung wurde noch nicht getroffen.',
+    suspended: 'Diese Zertifizierung ist derzeit ausgesetzt. Der Eintrag bleibt im Register sichtbar.',
+    expired: 'Diese Zertifizierung ist abgelaufen. Der Eintrag bleibt im Register sichtbar.',
+    revoked: 'Diese Zertifizierung wurde widerrufen. Der Eintrag bleibt im Register sichtbar.',
   };
 
   return {
     label: record.status === 'under_review' ? 'PRÜFSTATUS' : 'STATUSHINWEIS',
-    text: statusMessages[record.status] ?? 'Der aktuelle Zertifizierungsstatus ist im öffentlichen Datensatz ausgewiesen.',
+    text: statusMessages[record.status] ?? 'Der aktuelle Status steht im öffentlichen Registereintrag.',
     className: 'certificateClaimReview',
   };
 }
@@ -122,7 +122,7 @@ export default function CertificateClient({ id }) {
             <section className={`certificateSummary status-${state.record.status}`}>
               <div className="certificateAuthorityLine">
                 <span>ÖFFENTLICHER ZERTIFIZIERUNGSDATENSATZ</span>
-                <span>STANDARDGEBUNDEN · STATUSVERFOLGBAR</span>
+                <span>STANDARD · AKTUELLER STATUS · ÖFFENTLICH PRÜFBAR</span>
               </div>
               <div className="certificateHeader">
                 <div className="certificateBrand">
@@ -173,9 +173,9 @@ export default function CertificateClient({ id }) {
             <section className="certificateHistory">
               <div className="certificateHistoryIntro">
                 <div className="sectionNo">STATUSVERLAUF</div>
-                <h2>Öffentliche Änderungen am Zertifizierungsstatus.</h2>
+                <h2>Änderungen am Zertifizierungsstatus.</h2>
                 <p>
-                  Statusänderungen bleiben im Datensatz sichtbar. Damit kann auch nachträglich geprüft werden,
+                  Statusänderungen bleiben im Register sichtbar. So lässt sich auch später prüfen,
                   ob eine Zertifizierung ausgesetzt, erneuert oder widerrufen wurde.
                 </p>
               </div>
@@ -185,7 +185,7 @@ export default function CertificateClient({ id }) {
                   <div className="timelineEmpty" role="status">{state.eventsMessage}</div>
                 )}
                 {!state.eventsMessage && state.events.length === 0 && (
-                  <div className="timelineEmpty">Für diesen Datensatz sind keine öffentlichen Ereignisse hinterlegt.</div>
+                  <div className="timelineEmpty">Für diesen Registereintrag sind noch keine öffentlichen Änderungen hinterlegt.</div>
                 )}
 
                 {state.events.map((event) => (
