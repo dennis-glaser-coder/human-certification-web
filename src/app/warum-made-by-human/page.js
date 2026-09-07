@@ -62,6 +62,10 @@ export default function WhyPage() {
             <figure>
               <img
                 src={assetBase + '/photography/why-human-production.webp'}
+                width="1800"
+                height="1200"
+                fetchPriority="high"
+                decoding="async"
                 alt="Hände bei der Formgebung eines keramischen Produktes"
               />
               <figcaption>Produktionsaufnahme · Maksim Shiriagin / Unsplash</figcaption>
