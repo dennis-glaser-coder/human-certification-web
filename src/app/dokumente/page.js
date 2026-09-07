@@ -6,7 +6,7 @@ import { canonical } from '../../lib/seo';
 
 export const metadata = {
   title: 'Dokumentenregister',
-  description: 'Versionierte öffentliche Regelwerke und kontrollierte Dokumente des Made by Human Zertifizierungssystems.',
+  description: 'Öffentliche Regeln und Dokumente des Made by Human Zertifizierungssystems – mit Versionsstand und Datum.',
   alternates: { canonical: canonical('/dokumente') },
 };
 
@@ -29,7 +29,7 @@ const documents = [
     version: '0.1',
     status: 'Veröffentlicht',
     date: '04.09.2026',
-    copy: 'Rollen, Prüfprozess, fachliche Kontrolle, Zertifizierungsentscheidung, Statusverwaltung, Register und Verfahrensregeln.',
+    copy: 'Rollen, Prüfprozess, fachliche Kontrolle, Zertifizierungsentscheidung, Statusänderungen, Register und Verfahrensregeln.',
     href: '/dokumente/certification-scheme-0-1',
     pdf: '/documents/made-by-human-certification-scheme-0-1.pdf',
   },
@@ -50,7 +50,7 @@ const documents = [
     version: '0.1',
     status: 'Veröffentlicht',
     date: '04.09.2026',
-    copy: 'Getrennte Verfahrenslogik für Beschwerden, Einsprüche gegen Entscheidungen und unberechtigte Zeichennutzung.',
+    copy: 'Getrennte Regeln für Beschwerden, Einsprüche gegen Entscheidungen und unberechtigte Zeichennutzung.',
     href: '/verfahren',
   },
 ];
@@ -65,7 +65,7 @@ export default function DocumentsPage() {
       <section className="pageHero shell">
         <div className="eyebrow">DOKUMENTENREGISTER</div>
         <BrandTrace compact />
-        <h1>Jede Regel. Jede Version. Öffentlich nachvollziehbar.</h1>
+        <h1>Regeln und Versionen öffentlich einsehbar.</h1>
         <p className="lead">
           Standard, Zertifizierungsschema, Markennutzungsregeln und Verfahrensregeln werden als kontrollierte Dokumente geführt.
           Dokument-ID, Version, Status und Stand machen jede veröffentlichte Fassung eindeutig referenzierbar.
@@ -74,10 +74,10 @@ export default function DocumentsPage() {
 
       <section className="documentProofBand" aria-label="Dokumentenprinzipien">
         <div className="shell documentProofGrid">
-          <div><strong>Dokument-ID</strong><p>Eindeutige Referenz für jedes Regelwerk.</p></div>
-          <div><strong>Version</strong><p>Änderungen bleiben zeitlich nachvollziehbar.</p></div>
+          <div><strong>Dokument-ID</strong><p>Eindeutige Kennung für jedes Dokument.</p></div>
+          <div><strong>Version</strong><p>Änderungen bleiben über die Versionen sichtbar.</p></div>
           <div><strong>Stand</strong><p>Veröffentlichungsdatum jeder Fassung.</p></div>
-          <div><strong>Web & PDF</strong><p>Regelwerke sind direkt einsehbar und referenzierbar.</p></div>
+          <div><strong>Web & PDF</strong><p>Regelwerke sind direkt online und als PDF einsehbar.</p></div>
         </div>
       </section>
 
@@ -109,8 +109,8 @@ export default function DocumentsPage() {
       <section className="versionPolicy">
         <div className="shell versionPolicyGrid">
           <div>
-            <div className="sectionNo">DOKUMENTENLENKUNG</div>
-            <h2>Alte Fassungen bleiben nachvollziehbar.</h2>
+            <div className="sectionNo">VERSIONEN & ÄNDERUNGEN</div>
+            <h2>Alte Fassungen bleiben auffindbar.</h2>
           </div>
           <p>
             Änderungen werden mit Versionsnummer, Datum, Status und Änderungsgrund dokumentiert.
