@@ -6,7 +6,7 @@ import { canonical } from '../../lib/seo';
 
 export const metadata = {
   title: 'Regeln zur Markennutzung',
-  description: 'Regeln für die zulässige Nutzung des Made by Humans Zertifizierungszeichens auf Produkten, Verpackungen und in produktbezogener Kommunikation.',
+  description: 'Regeln für die zulässige Nutzung des Made by Human Zertifizierungszeichens auf Produkten, Verpackungen und in produktbezogener Kommunikation.',
   alternates: { canonical: canonical('/markennutzung') },
 };
 
@@ -45,7 +45,7 @@ export default function MarkUsePage() {
         <BrandTrace compact />
         <h1>Das Zeichen bleibt an Produkt, Status und Register gebunden.</h1>
         <p className="lead">
-          Das Made by Humans Zertifizierungszeichen ist kein frei verwendbares Marketingelement.
+          Das Made by Human Zertifizierungszeichen ist kein frei verwendbares Marketingelement.
           Seine Nutzung ist an einen definierten Zertifizierungsumfang, einen gültigen Status
           und einen eindeutig zugeordneten öffentlichen Registereintrag gebunden.
         </p>
@@ -65,7 +65,7 @@ export default function MarkUsePage() {
           <figure>
             <img
               src={assetBase + '/brand/IMG_1037.png'}
-              alt="Beispielhafte Made by Humans Kennzeichnung an einem Lederprodukt"
+              alt="Beispielhafte Made by Human Kennzeichnung an einem Lederprodukt"
               loading="lazy"
             />
             <figcaption>Beispielhafte Produktkennzeichnung · Visualisierung der Markennutzung</figcaption>
