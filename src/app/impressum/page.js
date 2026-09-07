@@ -40,7 +40,7 @@ export default function ImpressumPage() {
           </article>
 
           <article>
-            <span>VERTRETEN DURCH</span>
+            <span>GESCHÄFTSFÜHRER</span>
             <p>
               Nikita Dohrenkamp<br />
               Stephan Gehle
