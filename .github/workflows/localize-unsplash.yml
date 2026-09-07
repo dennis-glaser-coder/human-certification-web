@@ -1,0 +1,43 @@
+name: Localize Unsplash photography
+
+on:
+  push:
+    paths:
+      - '.github/workflows/localize-unsplash.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  localize:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Download current photography
+        run: |
+          set -euo pipefail
+          mkdir -p public/photography
+          curl -L --fail --retry 3 "https://images.unsplash.com/photo-1463082459669-fd1ca1692fea?auto=format&fit=crop&w=1800&q=86&fm=jpg" -o public/photography/home-hero-woodworking.jpg
+          curl -L --fail --retry 3 "https://images.unsplash.com/photo-1771523350488-32af5ba560e6?auto=format&fit=crop&w=1800&q=84&fm=jpg" -o public/photography/why-human-production.jpg
+          curl -L --fail --retry 3 "https://images.unsplash.com/photo-1781389005078-d9e413d89c94?auto=format&fit=crop&w=1400&q=82&fm=jpg" -o public/photography/manufacturer-production.jpg
+          curl -L --fail --retry 3 "https://images.unsplash.com/photo-1774282557812-6182cc59f638?auto=format&fit=crop&w=1600&q=84&fm=jpg" -o public/photography/buyer-production.jpg
+          file public/photography/*.jpg
+          test -s public/photography/home-hero-woodworking.jpg
+          test -s public/photography/why-human-production.jpg
+          test -s public/photography/manufacturer-production.jpg
+          test -s public/photography/buyer-production.jpg
+
+      - name: Commit localized photography and remove one-time workflow
+        run: |
+          set -euo pipefail
+          rm .github/workflows/localize-unsplash.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/photography .github/workflows/localize-unsplash.yml
+          git commit -m "Localize current Unsplash photography"
+          git push
