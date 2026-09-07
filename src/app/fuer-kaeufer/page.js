@@ -2,7 +2,7 @@ import Link from 'next/link';
 import SiteHeader from '../../components/SiteHeader';
 import SiteFooter from '../../components/SiteFooter';
 import BrandTrace from '../../components/BrandTrace';
-import { canonical } from '../../lib/seo';
+import { canonical, SOCIAL_IMAGE } from '../../lib/seo';
 import { CERTIFIED_STATEMENT } from '../../lib/brand';
 
 export const metadata = {
@@ -13,6 +13,7 @@ export const metadata = {
     title: 'Für Käufer | Made by Human',
     description: 'Was das Made by Human Zeichen bedeutet – einfach erklärt und öffentlich prüfbar.',
     url: canonical('/fuer-kaeufer'),
+    images: [SOCIAL_IMAGE],
   },
 };
 
