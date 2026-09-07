@@ -4,20 +4,20 @@ import SiteFooter from '../../components/SiteFooter';
 import BrandTrace from '../../components/BrandTrace';
 
 const principles = [
-  ['Standardversionen', 'Jede Zertifizierung verweist eindeutig auf die zugrunde liegende Standardfassung. Änderungen am Regelwerk bleiben zeitlich nachvollziehbar.'],
-  ['Prüfnachweise', 'Die Bewertung eines Produkts beruht auf dokumentierten Informationen und nachvollziehbaren Prüfunterlagen.'],
-  ['Fachprüfung & Entscheidung', 'Prüfung, fachliche Kontrolle und Zertifizierungsentscheidung werden mit klar unterscheidbaren Zuständigkeiten dokumentiert.'],
-  ['Statusänderungen', 'Aktiv, ausgesetzt, abgelaufen oder widerrufen: Änderungen am Zertifizierungsstatus bleiben im öffentlichen Register nachvollziehbar.'],
-  ['Markennutzung', 'Die Nutzung des Zeichens ist an Zertifizierungsumfang, Status und öffentliche Verifizierbarkeit gebunden.'],
-  ['Beschwerden & Einsprüche', 'Beschwerden, Einsprüche gegen Entscheidungen und Zeichenmissbrauch werden als getrennte Verfahren behandelt.'],
+  ['Feste Standardfassung', 'Jede Zertifizierung zeigt, nach welcher Fassung des Standards geprüft wurde. Änderungen bleiben mit Datum und Version sichtbar.'],
+  ['Belege zur Prüfung', 'Unsere Bewertung stützt sich auf Informationen und Unterlagen, die zur tatsächlichen Herstellung passen.'],
+  ['Prüfung & Entscheidung', 'Wir halten fest, wer geprüft, wer fachlich kontrolliert und wer die Zertifizierungsentscheidung getroffen hat.'],
+  ['Statusänderungen', 'Ob aktiv, ausgesetzt, abgelaufen oder widerrufen: Änderungen bleiben im öffentlichen Register sichtbar.'],
+  ['Markennutzung', 'Das Zeichen darf nur für das zertifizierte Produkt und nur bei gültigem Status verwendet werden.'],
+  ['Beschwerden & Einsprüche', 'Beschwerden, Einsprüche und Zeichenmissbrauch behandeln wir getrennt, weil es unterschiedliche Anliegen sind.'],
 ];
 
 const roles = [
-  ['01', 'Systeminhaber', 'verantwortet Standard, Marke, Dokumentenlenkung, Register und die Regeln des Zertifizierungssystems.'],
-  ['02', 'Prüfung', 'bewertet Herstellungsprozess und Nachweise gegen die festgelegten Anforderungen.'],
-  ['03', 'Fachprüfung', 'prüft Plausibilität, Vollständigkeit und offene Punkte des dokumentierten Prüfergebnisses.'],
-  ['04', 'Zertifizierungsentscheidung', 'überführt das geprüfte Ergebnis in eine dokumentierte Entscheidung zum Zertifizierungsstatus.'],
-  ['05', 'Öffentliches Register', 'veröffentlicht die für Käufer und Geschäftspartner relevanten Zertifizierungsinformationen.'],
+  ['01', 'Systeminhaber', 'verantwortet Standard, Marke, Dokumente, Register und die Regeln des Zertifizierungssystems.'],
+  ['02', 'Prüfung', 'prüft den Herstellungsprozess und die Belege anhand der festgelegten Anforderungen.'],
+  ['03', 'Fachprüfung', 'prüft, ob das Prüfergebnis vollständig und fachlich schlüssig ist und ob noch Fragen offen sind.'],
+  ['04', 'Zertifizierungsentscheidung', 'trifft auf Grundlage des geprüften Ergebnisses die Entscheidung über den Zertifizierungsstatus.'],
+  ['05', 'Öffentliches Register', 'zeigt öffentlich die Informationen, die Käufer und Geschäftspartner zur Zertifizierung prüfen können.'],
 ];
 
 export default function TransparencyPage() {
@@ -28,7 +28,7 @@ export default function TransparencyPage() {
       <section className="pageHero shell">
         <div className="eyebrow">TRANSPARENZ & INTEGRITÄT</div>
         <BrandTrace compact />
-        <h1>Vertrauen braucht nachvollziehbare Regeln.</h1>
+        <h1>Vertrauen braucht klare Regeln.</h1>
         <p className="lead">
           Glaubwürdigkeit entsteht nicht durch das Zeichen allein. Sie entsteht durch versionierte Regeln,
           dokumentierte Prüfungen, definierte Zuständigkeiten und einen öffentlich nachvollziehbaren Zertifizierungsstatus.
@@ -37,9 +37,9 @@ export default function TransparencyPage() {
 
       <section className="integrityMetaBand" aria-label="Integritätsprinzipien">
         <div className="shell integrityMetaGrid">
-          <div><strong>Versioniert</strong><p>Regelwerke und Entscheidungen bleiben referenzierbar.</p></div>
-          <div><strong>Dokumentiert</strong><p>Prüfnachweise und Entscheidungen sind nachvollziehbar.</p></div>
-          <div><strong>Rollenklar</strong><p>Prüfung, Fachprüfung und Entscheidung sind unterscheidbar.</p></div>
+          <div><strong>Mit Versionsstand</strong><p>Regeln und Entscheidungen lassen sich einer bestimmten Fassung zuordnen.</p></div>
+          <div><strong>Belegt</strong><p>Prüfung und Entscheidung werden festgehalten.</p></div>
+          <div><strong>Klare Rollen</strong><p>Es ist erkennbar, wer prüft, wer kontrolliert und wer entscheidet.</p></div>
           <div><strong>Öffentlich prüfbar</strong><p>Status und Produktbezug werden über das Register verifiziert.</p></div>
         </div>
       </section>
@@ -47,8 +47,8 @@ export default function TransparencyPage() {
       <section className="shell transparencySection">
         <div className="sectionIntro compact">
           <div>
-            <div className="sectionNo">INTEGRITÄTSPRINZIPIEN</div>
-            <h2>Sechs Regeln sichern die Nachvollziehbarkeit.</h2>
+            <div className="sectionNo">SO SICHERN WIR DIE PRÜFUNG AB</div>
+            <h2>Sechs Regeln zeigen, wie wir arbeiten.</h2>
           </div>
           <p>
             Integrität bedeutet hier vor allem, dass eine Zertifizierung nicht nur ausgesprochen,
@@ -71,7 +71,7 @@ export default function TransparencyPage() {
           <div className="sectionIntro compact integrityRolesIntro">
             <div>
               <div className="sectionNo light">ROLLEN & VERANTWORTUNG</div>
-              <h2>Klare Funktionen statt unscharfer Zuständigkeiten.</h2>
+              <h2>Wer prüft, wer kontrolliert, wer entscheidet.</h2>
             </div>
             <p>
               Die Rollen im Zertifizierungssystem werden getrennt beschrieben, damit Prüfung,
@@ -94,8 +94,8 @@ export default function TransparencyPage() {
         <div className="shell">
           <div className="sectionIntro compact">
             <div>
-              <div className="sectionNo">KONTROLLIERTE REGELWERKE</div>
-              <h2>Integrität wird in Dokumenten festgehalten.</h2>
+              <div className="sectionNo">ÖFFENTLICHE REGELN</div>
+              <h2>Unsere Regeln sind dokumentiert und öffentlich einsehbar.</h2>
             </div>
             <p>
               Die Regeln zu Zertifizierungsverfahren, Markennutzung, Beschwerden und Einsprüchen
@@ -126,8 +126,8 @@ export default function TransparencyPage() {
       <section className="integrityClaimBoundary">
         <div className="shell integrityClaimBoundaryGrid">
           <div>
-            <div className="sectionNo">NACHWEISBARE AUSSAGEN</div>
-            <h2>Keine weitergehende Behauptung ohne belastbaren Nachweis.</h2>
+            <div className="sectionNo">NUR WAS WIR BELEGEN KÖNNEN</div>
+            <h2>Wir behaupten nur, was wir belegen können.</h2>
           </div>
           <div>
             <p>
