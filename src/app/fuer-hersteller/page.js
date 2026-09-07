@@ -147,7 +147,7 @@ export default function ManufacturerPage() {
               alt="Menschliche Holzbearbeitung an einer Bandsäge in einer Werkstatt"
             />
             <div className="manufacturerHeroCredential">
-              <img src={assetBase + '/brand/made-by-humans-seal.png'} alt="Made by Human Zertifizierungszeichen" />
+              <img src={assetBase + '/brand/made-by-human-seal.png'} alt="Made by Human Zertifizierungszeichen" />
               <div>
                 <span>NACH POSITIVER ENTSCHEIDUNG</span>
                 <strong>Ein sichtbarer Nachweis für einen realen Herstellungsunterschied.</strong>
