@@ -61,7 +61,7 @@ export default function BuyerPage() {
           </div>
 
           <div className="buyerHeroCard">
-            <img src={assetBase + '/brand/made-by-humans-seal.png'} alt="Made by Human Zertifizierungszeichen" />
+            <img src={assetBase + '/brand/made-by-human-seal.png'} alt="Made by Human Zertifizierungszeichen" />
             <span>MADE BY HUMAN</span>
             <strong>Von Menschen gemacht.<br />Vor Ort geprüft.</strong>
             <p>Produktfokus · Zertifizierungs-ID · öffentlich verifizierbar</p>
