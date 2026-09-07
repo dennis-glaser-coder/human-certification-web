@@ -86,10 +86,10 @@ def title_block(title, subtitle, doc_id, status, details):
         P('Kontrolliertes Dokument. Dokument-ID, Version und Stand ermöglichen eine eindeutige Referenzierung der veröffentlichten Fassung.','small')
     ]
     logo = brand_logo()
-    right = ([logo, Spacer(1,3*mm), P(doc_id,'white')] if logo else [P('MADE BY HUMAN','white'), P(doc_id,'white')])
+    right = ([logo, Spacer(1,3*mm), P(doc_id,'tableb')] if logo else [P('MADE BY HUMAN','tableb'), P(doc_id,'tableb')])
     t = Table([[left, right]], colWidths=[123*mm, 47*mm])
     t.setStyle(TableStyle([
-        ('BACKGROUND',(0,0),(0,0),PAPER), ('BACKGROUND',(1,0),(1,0),INK), ('VALIGN',(0,0),(-1,-1),'TOP'),
+        ('BACKGROUND',(0,0),(0,0),PAPER), ('BACKGROUND',(1,0),(1,0),WHITE), ('LINEBEFORE',(1,0),(1,0),0.7,STONE), ('VALIGN',(0,0),(-1,-1),'TOP'),
         ('LEFTPADDING',(0,0),(0,0),6*mm), ('RIGHTPADDING',(0,0),(0,0),5*mm), ('TOPPADDING',(0,0),(0,0),5*mm), ('BOTTOMPADDING',(0,0),(0,0),5*mm),
         ('ALIGN',(1,0),(1,0),'CENTER'), ('LEFTPADDING',(1,0),(1,0),5*mm), ('RIGHTPADDING',(1,0),(1,0),5*mm), ('TOPPADDING',(1,0),(1,0),4*mm),
     ]))
