@@ -370,25 +370,12 @@ export default function ManufacturerPage() {
               </label>
             </div>
 
+            <div className="formSectionLabel"><strong>Produkt & Herstellung</strong></div>
+
             <label>
-              Website
-              <input type="url" autoComplete="url" name="website" value={form.website} onChange={change} placeholder="https://…" />
+              Produkt / Produktfamilie *
+              <input required name="product_name" value={form.product_name} onChange={change} placeholder="z. B. Ledertasche Modell X" />
             </label>
-
-            <div className="formSectionLabel"><strong>Produkt</strong></div>
-
-            <div className="formTwo">
-              <label>
-                Produkt / Produktfamilie *
-                <input required name="product_name" value={form.product_name} onChange={change} placeholder="z. B. Ledertasche Modell X" />
-              </label>
-              <label>
-                Produktkategorie
-                <input name="product_category" value={form.product_category} onChange={change} placeholder="z. B. Lederwaren" />
-              </label>
-            </div>
-
-            <div className="formSectionLabel"><strong>Herstellung</strong></div>
 
             <label>
               Produktionsorte *
@@ -396,27 +383,40 @@ export default function ManufacturerPage() {
             </label>
 
             <label>
-              Relevante Fremdfertigung
-              <select name="external_manufacturing" value={form.external_manufacturing} onChange={change}>
-                <option value="">Bitte auswählen</option>
-                <option value="Keine relevante Fremdfertigung">Keine relevante Fremdfertigung</option>
-                <option value="Teilweise Fremdfertigung">Teilweise Fremdfertigung</option>
-                <option value="Wesentliche Fremdfertigung">Wesentliche Fremdfertigung</option>
-                <option value="Noch zu klären">Noch zu klären</option>
-              </select>
-            </label>
-
-            <label>
               Herstellungsprozess kurz beschreiben *
               <textarea required name="message" value={form.message} onChange={change} rows="6" placeholder="Welche wesentlichen Herstellungsschritte erfolgen durch Menschen? Welche Maschinen oder automatisierten Teilprozesse werden eingesetzt?" />
             </label>
 
-            <div className="formSectionLabel"><strong>Nachweise</strong></div>
+            <details className="optionalFormDetails">
+              <summary>Weitere Angaben – optional</summary>
+              <div className="optionalFormFields">
+                <label>
+                  Website
+                  <input type="url" autoComplete="url" name="website" value={form.website} onChange={change} placeholder="https://…" />
+                </label>
 
-            <label>
-              Welche Nachweise sind vorhanden?
-              <textarea name="evidence_note" value={form.evidence_note} onChange={change} rows="4" placeholder="z. B. Prozessdokumentation, Fertigungsunterlagen, Fotos/Videos, Lieferanten- oder Standortinformationen" />
-            </label>
+                <label>
+                  Produktkategorie
+                  <input name="product_category" value={form.product_category} onChange={change} placeholder="z. B. Lederwaren" />
+                </label>
+
+                <label>
+                  Relevante Fremdfertigung
+                  <select name="external_manufacturing" value={form.external_manufacturing} onChange={change}>
+                    <option value="">Bitte auswählen</option>
+                    <option value="Keine relevante Fremdfertigung">Keine relevante Fremdfertigung</option>
+                    <option value="Teilweise Fremdfertigung">Teilweise Fremdfertigung</option>
+                    <option value="Wesentliche Fremdfertigung">Wesentliche Fremdfertigung</option>
+                    <option value="Noch zu klären">Noch zu klären</option>
+                  </select>
+                </label>
+
+                <label>
+                  Welche Nachweise sind bereits vorhanden?
+                  <textarea name="evidence_note" value={form.evidence_note} onChange={change} rows="4" placeholder="z. B. Prozessdokumentation, Fertigungsunterlagen, Fotos/Videos, Lieferanten- oder Standortinformationen" />
+                </label>
+              </div>
+            </details>
 
             <label className="honeypot" aria-hidden="true">
               Firmenwebsite bestätigen
