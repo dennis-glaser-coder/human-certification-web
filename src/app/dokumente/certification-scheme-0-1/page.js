@@ -5,16 +5,16 @@ import { canonical } from '../../../lib/seo';
 
 export const metadata = {
   title: 'Zertifizierungsschema 0.1',
-  description: 'Regelwerk für Rollen, Prüfprozess, Zertifizierungsentscheidung, Statusverwaltung, öffentliches Register und Verfahrensregeln bei Made by Human.',
+  description: 'Regelwerk für Rollen, Prüfprozess, Zertifizierungsentscheidung, Statusänderungen, öffentliches Register und Verfahrensregeln bei Made by Human.',
   alternates: { canonical: canonical('/dokumente/certification-scheme-0-1') },
 };
 
 const roles = [
-  ['Systeminhaber', 'verantwortet Standard, Marke, Dokumentenlenkung, Registermodell und Regeln des Zertifizierungssystems.'],
-  ['Prüfung', 'bewertet Produkt und Herstellungsprozess gegen die anwendbaren Anforderungen und dokumentiert die Nachweise.'],
-  ['Fachprüfung', 'prüft Vollständigkeit und fachliche Plausibilität des Prüfergebnisses und dokumentiert offene Punkte.'],
-  ['Zertifizierungsentscheidung', 'überführt das geprüfte Ergebnis in eine dokumentierte Entscheidung über Freigabe, Ablehnung, Aussetzung, Erneuerung oder Widerruf.'],
-  ['Öffentliches Register', 'veröffentlicht die für Käufer und Geschäftspartner relevanten Zertifizierungsinformationen und den aktuellen Status.'],
+  ['Systeminhaber', 'verantwortet Standard, Marke, Dokumente, Register und die Regeln des Zertifizierungssystems.'],
+  ['Prüfung', 'prüft Produkt und Herstellungsprozess anhand der geltenden Anforderungen und hält die Belege fest.'],
+  ['Fachprüfung', 'prüft, ob das Prüfergebnis vollständig und fachlich schlüssig ist, und klärt offene Punkte.'],
+  ['Zertifizierungsentscheidung', 'trifft auf Grundlage des geprüften Ergebnisses die Entscheidung über Freigabe, Ablehnung, Aussetzung, Erneuerung oder Widerruf.'],
+  ['Öffentliches Register', 'veröffentlicht die Informationen, die Käufer und Geschäftspartner zur Zertifizierung prüfen können, sowie den aktuellen Status.'],
 ];
 
 const steps = [
@@ -66,7 +66,7 @@ export default function SchemeDocumentPage() {
             {roles.map(([title, copy]) => <article key={title}><strong>{title}</strong><p>{copy}</p></article>)}
           </div>
           <div className="documentNotice">
-            Prüfung, fachliche Kontrolle und Zertifizierungsentscheidung werden als getrennte Rollen dokumentiert.
+            Prüfung, fachliche Kontrolle und Zertifizierungsentscheidung sind als getrennte Rollen festgehalten.
             Akkreditierung oder externe Unabhängigkeit werden nur ausgewiesen, wenn sie für die jeweilige Struktur nachweislich bestehen.
           </div>
         </section>
@@ -89,7 +89,7 @@ export default function SchemeDocumentPage() {
         </section>
 
         <section>
-          <h2>Integrität und Verfahren</h2>
+          <h2>Weitere Regeln</h2>
           <p>
             Markennutzung, Beschwerden, Einsprüche, Zeichenmissbrauch und potenzielle Interessenkonflikte werden in separaten,
             versionierten Regelwerken geführt und mit klaren Zuständigkeiten dokumentiert.
