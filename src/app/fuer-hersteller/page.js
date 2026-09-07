@@ -29,7 +29,7 @@ const certificationValue = [
 
 const suitable = [
   ['Physisches Produkt', 'Das zu prüfende Endprodukt oder die Produktfamilie lässt sich eindeutig beschreiben und abgrenzen.'],
-  ['Menschliche Herstellung', 'Wesentliche produktprägende Herstellungsschritte werden tatsächlich durch Menschen ausgeführt.'],
+  ['Menschliche Herstellung', 'Die Arbeitsschritte, die das Produkt wesentlich prägen, werden tatsächlich von Menschen ausgeführt.'],
   ['Klare Produktionsorte', 'Es muss erkennbar sein, wo das Produkt hergestellt wird und welche wichtigen Schritte andere Betriebe übernehmen.'],
   ['Belege zur Herstellung', 'Unterlagen, Prozessinformationen oder andere Belege müssen zeigen können, wie das Produkt tatsächlich hergestellt wird.'],
 ];
@@ -37,14 +37,14 @@ const suitable = [
 const evidence = [
   ['Prozessbeschreibung', 'Eine verständliche Übersicht der wichtigsten Herstellungsschritte – vom Material oder Bauteil bis zum fertigen Produkt.'],
   ['Produktionsorte', 'Orte, an denen die wichtigen Arbeitsschritte für das Produkt stattfinden.'],
-  ['Fremdfertigung', 'Angaben zu wichtigen Arbeitsschritten, die außerhalb des eigenen Betriebs ausgeführt werden.'],
+  ['Externe Fertigung', 'Angaben zu wichtigen Arbeitsschritten, die außerhalb des eigenen Betriebs ausgeführt werden.'],
   ['Nachweise', 'Unterlagen oder Informationen, die zeigen, dass der beschriebene Herstellungsprozess tatsächlich so stattfindet.'],
 ];
 
 const certificationProcess = [
   ['Anfrage', 'Wir schauen uns Produkt, Hersteller und Herstellungsprozess für eine erste Einschätzung an.'],
   ['Was wird zertifiziert?', 'Wir legen fest, welches Produkt oder welche Produktfamilie, welche Produktionsorte und welche externen Arbeitsschritte zur Zertifizierung gehören.'],
-  ['Vor-Ort-Audit', 'Wir prüfen Herstellung, menschliche Arbeit, Maschineneinsatz, relevante Standorte und Fremdfertigung beim Hersteller vor Ort.'],
+  ['Vor-Ort-Prüfung', 'Wir prüfen beim Hersteller, welche Arbeitsschritte Menschen ausführen, welche Maschinen eingesetzt werden und wo die wichtigen Schritte stattfinden.'],
   ['Bewertung & Entscheidung', 'Wir gleichen die Ergebnisse und Belege mit dem Standard ab, klären offene Punkte und halten die Entscheidung fest.'],
   ['Register & Zeichen', 'Nach positiver Entscheidung vergeben wir eine ID, veröffentlichen den Status und geben die Nutzung des Zeichens frei.'],
 ];
@@ -59,7 +59,7 @@ const markUseBenefits = [
 const manufacturerFaq = [
   ['Dürfen Maschinen eingesetzt werden?', 'Ja. Maschinen dürfen die Arbeit unterstützen. Entscheidend ist, dass die Herstellungsschritte, die das Produkt wesentlich prägen, weiterhin tatsächlich von Menschen ausgeführt werden.'],
   ['Können mehrere Produktvarianten gemeinsam zertifiziert werden?', 'Ja, wenn die Varianten weitgehend gleich hergestellt werden und sinnvoll zu einer Produktfamilie zusammengefasst werden können.'],
-  ['Wie werden mehrere Standorte oder Fremdfertigung behandelt?', 'Alle Produktionsorte und externen Betriebe, die wichtige Herstellungsschritte übernehmen, müssen angegeben und dem Produkt zugeordnet werden.'],
+  ['Was gilt bei mehreren Standorten oder externer Fertigung?', 'Alle Produktionsorte und externen Betriebe, die wichtige Herstellungsschritte übernehmen, müssen angegeben und dem Produkt zugeordnet werden.'],
   ['Welche Unterlagen werden benötigt?', 'Wir brauchen Informationen dazu, wie und wo das Produkt hergestellt wird und welche wichtigen Schritte andere Betriebe übernehmen. Welche Belege im Einzelfall nötig sind, klären wir in der Vorbereitung.'],
   ['Was passiert bei Änderungen an Produkt oder Produktion?', 'Wenn sich wichtige Herstellungsschritte, Produktionsorte oder externe Fertigung ändern, kann eine erneute Prüfung nötig werden.'],
   ['Woraus setzen sich die Kosten zusammen?', 'Unser Modell umfasst die Erstprüfung und eine jährliche Lizenz zur Markennutzung. Zusätzliche Produktfamilien und weitere Standorte können den Umfang verändern. Konkrete Preise veröffentlichen wir erst, wenn sie verbindlich festgelegt sind.'],
@@ -172,7 +172,7 @@ export default function ManufacturerPage() {
           <div className="sectionIntro compact">
             <div>
               <div className="sectionNo">NUTZEN FÜR HERSTELLER</div>
-              <h2>Machen Sie Ihre Herstellung nachvollziehbar.</h2>
+              <h2>Zeigen Sie, wie Ihr Produkt entsteht.</h2>
             </div>
             <p>
               Nach positiver Zertifizierung können Sie auf Produktseite, Verpackung und im Verkauf zeigen,
@@ -265,7 +265,7 @@ export default function ManufacturerPage() {
             </div>
             <div className="manufacturerGuideLinks">
               <Link href="/leitfaden/nachweise">Leitfaden Prüfnachweise →</Link>
-              <Link href="/leitfaden/zertifizierungsumfang">Leitfaden Zertifizierungsumfang →</Link>
+              <Link href="/leitfaden/zertifizierungsumfang">Was genau zertifiziert wird →</Link>
             </div>
           </div>
         </div>
@@ -329,7 +329,7 @@ export default function ManufacturerPage() {
             </p>
             <div className="applicationReference">
               <span>WIR SCHAUEN AUF</span>
-              <strong>Produkt · Herstellung · Standorte · Fremdfertigung · Nachweise</strong>
+              <strong>Produkt · Herstellung · Standorte · externe Fertigung · Belege</strong>
             </div>
           </div>
 
@@ -361,12 +361,12 @@ export default function ManufacturerPage() {
 
             <label>
               Produktionsorte *
-              <input required name="production_locations" value={form.production_locations} onChange={change} placeholder="Stadt / Land der wesentlichen Herstellungsschritte" />
+              <input required name="production_locations" value={form.production_locations} onChange={change} placeholder="Stadt / Land der wichtigsten Herstellungsschritte" />
             </label>
 
             <label>
               Herstellungsprozess kurz beschreiben *
-              <textarea required name="message" value={form.message} onChange={change} rows="6" placeholder="Welche wesentlichen Herstellungsschritte erfolgen durch Menschen? Welche Maschinen oder automatisierten Teilprozesse werden eingesetzt?" />
+              <textarea required name="message" value={form.message} onChange={change} rows="6" placeholder="Welche wichtigen Herstellungsschritte führen Menschen aus? Welche Maschinen oder automatisierten Schritte werden eingesetzt?" />
             </label>
 
             <details className="optionalFormDetails">
@@ -383,12 +383,12 @@ export default function ManufacturerPage() {
                 </label>
 
                 <label>
-                  Relevante Fremdfertigung
+                  Externe Fertigung
                   <select name="external_manufacturing" value={form.external_manufacturing} onChange={change}>
                     <option value="">Bitte auswählen</option>
-                    <option value="Keine relevante Fremdfertigung">Keine relevante Fremdfertigung</option>
-                    <option value="Teilweise Fremdfertigung">Teilweise Fremdfertigung</option>
-                    <option value="Wesentliche Fremdfertigung">Wesentliche Fremdfertigung</option>
+                    <option value="Keine relevante Fremdfertigung">Keine externe Fertigung</option>
+                    <option value="Teilweise Fremdfertigung">Teilweise externe Fertigung</option>
+                    <option value="Wesentliche Fremdfertigung">Wichtige Schritte extern gefertigt</option>
                     <option value="Noch zu klären">Noch zu klären</option>
                   </select>
                 </label>
