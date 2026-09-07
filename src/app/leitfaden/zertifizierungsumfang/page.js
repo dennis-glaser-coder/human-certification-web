@@ -39,9 +39,9 @@ export default function ScopeGuidePage() {
         <div className="eyebrow">LEITFADEN · WAS WIRD ZERTIFIZIERT?</div>
         <h1>So legen wir fest, wofür eine Zertifizierung gilt.</h1>
         <p className="lead">
-          Zertifiziert wird nicht pauschal ein Unternehmen. Der öffentliche Datensatz beschreibt
-          ein konkretes Produkt oder eine klar abgegrenzte Produktfamilie und verbindet diesen Umfang
-          mit Herstellungsprozess, relevanten Produktionsstandorten und Standardfassung.
+          Zertifiziert wird nicht pauschal ein Unternehmen. Im Register steht genau,
+          für welches Produkt oder welche Produktfamilie die Zertifizierung gilt,
+          wie hergestellt wird, wo produziert wird und nach welcher Standardfassung geprüft wurde.
         </p>
       </section>
 
@@ -57,7 +57,7 @@ export default function ScopeGuidePage() {
       <section className="shell guideSection">
         <div className="sectionIntro compact">
           <div>
-            <div className="sectionNo">ABGRENZUNG</div>
+            <div className="sectionNo">WAS GEHÖRT DAZU?</div>
             <h2>Vier Fragen klären, was zur Zertifizierung gehört.</h2>
           </div>
           <p>
