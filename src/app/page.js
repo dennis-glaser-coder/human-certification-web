@@ -6,13 +6,13 @@ import { CERTIFIED_STATEMENT } from '../lib/brand';
 const homeStory = [
   ['Unterschied sichtbar machen', 'Käufer und Geschäftspartner sehen, was Ihr Produkt in der Herstellung unterscheidet.'],
   ['Glaubwürdigkeit', 'Die Aussage bleibt an eine gültige Zertifizierung gebunden und kann im Register geprüft werden.'],
-  ['Im Verkauf nutzbar', 'Kennzeichnung, QR und Registerlink lassen sich auf Produktseiten, Verpackungen und im B2B-Vertrieb einsetzen.'],
+  ['Im Verkauf nutzbar', 'Kennzeichnung, QR und Registerlink lassen sich auf Produktseiten, Verpackungen und im Vertrieb an Geschäftskunden einsetzen.'],
 ];
 
 const auditFacts = [
   ['Arbeitsschritte ansehen', 'Wir sehen uns die Schritte an, die das Produkt in der Herstellung wirklich prägen.'],
   ['Maschinen richtig einordnen', 'Wir prüfen, wo Technik unterstützt und wo die Arbeit des Menschen entscheidend bleibt.'],
-  ['Produkt genau zuordnen', 'Wir gleichen das Produkt, die Produktionsorte und mögliche Fremdfertigung mit Ihren Angaben ab.'],
+  ['Produkt genau zuordnen', 'Wir gleichen das Produkt, die Produktionsorte und mögliche externe Fertigung mit Ihren Angaben ab.'],
 ];
 
 export default function Home() {
@@ -39,7 +39,7 @@ export default function Home() {
             </div>
             <div className="desireProofLine">
               <span>Vor-Ort-Audit</span>
-              <span>Produktfokus</span>
+              <span>Für dieses Produkt</span>
               <span>QR & Register</span>
             </div>
           </div>
@@ -73,8 +73,7 @@ export default function Home() {
             <h2>Handmade ist schnell gesagt. Wir machen es überprüfbar.</h2>
             <p>
               Begriffe wie „handmade“, „handcrafted“ oder „manufakturgefertigt“ sagen allein wenig darüber aus,
-              wie ein Produkt tatsächlich entsteht. Wir prüfen die wesentlichen Herstellungsschritte
-              vor Ort und machen das Ergebnis über Zertifizierungs-ID und Register nachvollziehbar.
+              wie ein Produkt tatsächlich entsteht. Wir prüfen die entscheidenden Herstellungsschritte vor Ort und machen das Ergebnis über Zertifizierungs-ID und Register öffentlich prüfbar.
             </p>
             <figure className="manifestoMaterial">
               <img
@@ -120,7 +119,7 @@ export default function Home() {
               <div className="applicationStage applicationDigitalStage applicationProofStage">
                 <div className="applicationProofPanel">
                   <div className="applicationProofTop">
-                    <span>DIGITALE VERIFIZIERUNG</span>
+                    <span>ONLINE PRÜFBAR</span>
                     <img src={assetBase + '/brand/made-by-human-logo.png'} alt="" aria-hidden="true" />
                   </div>
                   <div className="applicationProofStatement">
@@ -155,7 +154,7 @@ export default function Home() {
         <div className="shell homeValueStory">
           <div className="homeValueStoryHead">
             <p className="premiumSectionLabel premiumSectionLabelLight">WERT & VERTRAUEN</p>
-            <h2>Machen Sie Ihre Herstellung nachvollziehbar.</h2>
+            <h2>Zeigen Sie, wie Ihr Produkt entsteht.</h2>
             <p>
               Zeigen Sie auf Produktseite, Verpackung und im Verkauf, welche menschliche Arbeit hinter Ihrem Produkt steht.
               Über Zertifizierungs-ID und Register kann jeder prüfen, wofür die Zertifizierung gilt.
@@ -186,7 +185,7 @@ export default function Home() {
             <p className="premiumSectionLabel">VOR-ORT-AUDIT</p>
             <h2>Wir prüfen dort, wo das Produkt tatsächlich entsteht.</h2>
             <p className="desireAuditLead">
-              Kein reines Online-Formular und keine bloße Selbstauskunft: Wir prüfen die tatsächliche Herstellung direkt beim Hersteller vor Ort und dokumentieren die wesentlichen Arbeitsschritte.
+              Kein reines Online-Formular und keine bloße Selbstauskunft: Wir prüfen die tatsächliche Herstellung direkt beim Hersteller vor Ort und halten die wichtigsten Arbeitsschritte fest.
             </p>
             <div className="desireAuditFacts">
               {auditFacts.map(([title, copy]) => <div key={title}><strong>{title}</strong><p>{copy}</p></div>)}
