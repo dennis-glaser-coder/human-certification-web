@@ -21,10 +21,10 @@ const initialForm = {
 };
 
 const certificationValue = [
-  ['Produktbezogener Umfang', 'Zertifiziert wird ein eindeutig abgegrenztes Produkt oder eine klar definierte Produktfamilie.'],
-  ['Dokumentierte Prüfung', 'Herstellungsprozess, relevante Standorte und geeignete Nachweise werden gegen den Standard bewertet.'],
-  ['Eindeutige Zertifizierungs-ID', 'Eine freigegebene Zertifizierung wird einem eindeutigen öffentlichen Datensatz zugeordnet.'],
-  ['Öffentliche Verifizierung', 'Standardfassung, Produktbezug, Status und Gültigkeit bleiben über das Register nachvollziehbar.'],
+  ['Produktbezogener Umfang', 'Wir zertifizieren ein eindeutig abgegrenztes Produkt oder eine klar definierte Produktfamilie.'],
+  ['Dokumentierte Prüfung', 'Wir bewerten Herstellungsprozess, relevante Standorte und geeignete Nachweise gegen den Standard.'],
+  ['Eindeutige Zertifizierungs-ID', 'Nach positiver Entscheidung ordnen wir die Zertifizierung einem eindeutigen öffentlichen Datensatz zu.'],
+  ['Öffentliche Verifizierung', 'Über unser Register machen wir Standardfassung, Produktbezug, Status und Gültigkeit nachvollziehbar.'],
 ];
 
 const suitable = [
@@ -42,11 +42,11 @@ const evidence = [
 ];
 
 const certificationProcess = [
-  ['Anfrage', 'Produkt, Hersteller und Herstellungsprozess werden für die fachliche Vorprüfung erfasst.'],
-  ['Zertifizierungsumfang', 'Produkt oder Produktfamilie, Standorte und relevante Fremdfertigung werden eindeutig abgegrenzt.'],
-  ['Vor-Ort-Audit', 'Herstellung, menschliche Arbeit, Maschineneinsatz, relevante Standorte und Fremdfertigung werden beim Hersteller vor Ort geprüft.'],
-  ['Bewertung & Entscheidung', 'Auditfeststellungen, Nachweise und offene Punkte werden gegen den Standard bewertet und die Zertifizierungsentscheidung dokumentiert.'],
-  ['Register & Markennutzung', 'Freigegebene Zertifizierungen erhalten eine ID, öffentlichen Status und klar geregelte Zeichennutzung.'],
+  ['Anfrage', 'Wir erfassen Produkt, Hersteller und Herstellungsprozess für die fachliche Vorprüfung.'],
+  ['Zertifizierungsumfang', 'Wir grenzen Produkt oder Produktfamilie, Standorte und relevante Fremdfertigung eindeutig ab.'],
+  ['Vor-Ort-Audit', 'Wir prüfen Herstellung, menschliche Arbeit, Maschineneinsatz, relevante Standorte und Fremdfertigung beim Hersteller vor Ort.'],
+  ['Bewertung & Entscheidung', 'Wir bewerten Auditfeststellungen, Nachweise und offene Punkte gegen den Standard und dokumentieren die Zertifizierungsentscheidung.'],
+  ['Register & Markennutzung', 'Nach positiver Entscheidung vergeben wir eine ID, veröffentlichen den Status und regeln die Zeichennutzung.'],
 ];
 
 const markUseBenefits = [
@@ -160,7 +160,7 @@ export default function ManufacturerPage() {
       <section className="manufacturerMetaBand" aria-label="Kernbestandteile der Zertifizierung">
         <div className="shell manufacturerMetaGrid">
           <div><strong>Produktbezogen</strong><p>Klar abgegrenzter Zertifizierungsumfang.</p></div>
-          <div><strong>Vor Ort geprüft</strong><p>Die tatsächliche Herstellung wird beim Hersteller nachvollzogen.</p></div>
+          <div><strong>Vor Ort geprüft</strong><p>Wir prüfen die tatsächliche Herstellung beim Hersteller.</p></div>
           <div><strong>Versioniert</strong><p>Entscheidung ist an eine Standardfassung gebunden.</p></div>
           <div><strong>Verifizierbar</strong><p>Status und Produktbezug sind öffentlich prüfbar.</p></div>
         </div>
@@ -225,7 +225,7 @@ export default function ManufacturerPage() {
             <h2>Diese Informationen sollten für die Prüfung vorliegen.</h2>
             <p>
               Nicht jeder Nachweis muss bereits mit der ersten Anfrage vollständig eingereicht werden.
-              Die Informationen dienen der Vorbereitung des Vor-Ort-Audits und werden dort mit der tatsächlichen Produktion abgeglichen.
+              Die Informationen helfen uns bei der Vorbereitung des Vor-Ort-Audits. Vor Ort gleichen wir sie mit der tatsächlichen Produktion ab.
             </p>
             <figure className="manufacturerEvidencePhoto">
               <img
