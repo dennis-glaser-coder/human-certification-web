@@ -49,6 +49,9 @@ export default function MarkUsePage() {
           Seine Nutzung ist an einen definierten Zertifizierungsumfang, einen gültigen Status
           und einen eindeutig zugeordneten öffentlichen Registereintrag gebunden.
         </p>
+        <div className="markUseMasterLogo" aria-label="Made by Human Masterlogo">
+          <img src={assetBase + '/brand/made-by-human-logo.png'} alt="Made by Human Logo" />
+        </div>
       </section>
 
       <section className="markUseMetaBand" aria-label="Grundlagen der Markennutzung">
