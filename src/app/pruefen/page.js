@@ -45,7 +45,12 @@ export default function VerifyPage() {
       .eq('public_id', publicId)
       .maybeSingle();
 
-    if (error || !data) {
+    if (error) {
+      setState({ loading: false, record: null, message: 'Die Verifizierung ist vorübergehend nicht erreichbar. Bitte versuchen Sie es später erneut.' });
+      return;
+    }
+
+    if (!data) {
       setState({ loading: false, record: null, message: 'Zu dieser ID wurde kein öffentlicher Datensatz gefunden.' });
       return;
     }
@@ -88,7 +93,7 @@ export default function VerifyPage() {
           <button type="button" className="demoButton" onClick={() => { setValue('HC-DEMO-0001'); verifyId('HC-DEMO-0001'); }}>Beispieldatensatz HC-DEMO-0001 testen</button>
         </form>
 
-        {state.message && <div className="verificationEmpty">{state.message}</div>}
+        {state.message && <div className="verificationEmpty" role="status" aria-live="polite">{state.message}</div>}
 
         {state.record && (
           <article className={'verificationRecord status-' + state.record.status}>
@@ -97,7 +102,9 @@ export default function VerifyPage() {
                 <small>PRÜFERGEBNIS</small>
                 <strong>Zertifizierungsdatensatz gefunden</strong>
               </div>
-              <span className={'statusBadge status-' + state.record.status + (state.record.status === 'active' ? ' active' : '')}>{statusText[state.record.status] ?? state.record.status}</span>
+              <span className={'statusBadge status-' + state.record.status + (state.record.status === 'active' ? ' active' : '')}>
+                {state.record.public_id?.startsWith('HC-DEMO-') ? 'Demo · keine reale Zertifizierung' : (statusText[state.record.status] ?? state.record.status)}
+              </span>
             </div>
 
             <div className="verificationIdentity">
@@ -105,7 +112,7 @@ export default function VerifyPage() {
                 <small>ZERTIFIZIERUNGS-ID</small>
                 <h2>{state.record.public_id}</h2>
               </div>
-              <Link className="recordOpenLink" href={'/zertifikat?id=' + encodeURIComponent(state.record.public_id)}>Vollständigen Datensatz öffnen →</Link>
+              <Link className="recordOpenLink" href={'/zertifikat/?id=' + encodeURIComponent(state.record.public_id)}>Vollständigen Datensatz öffnen →</Link>
             </div>
 
             <dl className="verificationDetails">
