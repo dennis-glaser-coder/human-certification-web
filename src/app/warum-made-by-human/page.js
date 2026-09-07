@@ -187,38 +187,6 @@ export default function WhyPage() {
         </div>
       </section>
 
-      <section className="whyBrandValue">
-        <div className="shell whyBrandValueGrid">
-          <div className="whyBrandValueVisual">
-            <img
-              src={assetBase + '/brand/IMG_1040.png'}
-              alt="Menschliche Holzbearbeitung beim manuellen Schleifen eines Produktes"
-              loading="lazy"
-            />
-            <div className="whyBrandSeal">
-              <img
-                src={assetBase + '/brand/made-by-human-logo.png'}
-                alt=""
-                aria-hidden="true"
-                width="78"
-                height="78"
-              />
-              <span>Nachweis direkt mit der Produktkommunikation verbinden</span>
-            </div>
-          </div>
-          <div>
-            <p className="premiumSectionLabel premiumSectionLabelLight">FÜR DIE MARKE</p>
-            <h2>Das Zeichen ergänzt die Herstellermarke um einen überprüfbaren Nachweis.</h2>
-            <p>
-              Eine starke Marke erzählt, wofür ein Produkt steht. Wir ergänzen diese Geschichte
-              um einen überprüfbaren Beleg für einen klar abgegrenzten Teil der Herstellung.
-              Gerade dort, wo menschliche Arbeit ein wesentlicher Teil der Positionierung ist,
-              kann das Zeichen diese Aussage konsistenter und belastbarer machen.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <section className="whyProof">
         <div className="shell whyProofGrid">
           <div>
