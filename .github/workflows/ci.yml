@@ -32,8 +32,9 @@ jobs:
 
       - name: Prepare final brand assets
         run: |
-          python -m pip install --quiet pillow==11.3.0
+          python -m pip install --quiet pillow==11.3.0 opencv-python-headless==4.12.0.88
           python scripts/prepare_brand_assets.py
+          python scripts/prepare_product_photos.py
 
       - name: Generate controlled PDF documents
         run: |
