@@ -161,28 +161,16 @@ export default function DatenschutzPage() {
         </section>
 
         <section className="privacySection">
-          <span>06 · EXTERNE BILDER</span>
-          <h2>Einzelne Bilder werden derzeit über Unsplash geladen.</h2>
+          <span>06 · BILDER</span>
+          <h2>Produktionsbilder werden lokal über die Website ausgeliefert.</h2>
           <p>
-            Auf einigen Seiten werden dokumentarische Bilder direkt von
-            <code> images.unsplash.com</code> geladen. Beim Abruf dieser Bilder wird technisch eine
-            Verbindung zu Unsplash hergestellt. Dabei können insbesondere IP-Adresse,
-            Browser- und Geräteinformationen, Zeitpunkt des Abrufs und Referrer-Informationen
-            verarbeitet werden.
+            Die auf der Website verwendeten Produktionsbilder werden aktuell als lokale Dateien
+            über unsere Website bereitgestellt. Beim bloßen Aufruf einer Seite wird deshalb keine
+            zusätzliche Verbindung zu Unsplash aufgebaut.
           </p>
-          <div className="privacyFacts">
-            <div><strong>Zweck</strong><p>Darstellung dokumentarischer Produktionsbilder auf der Website.</p></div>
-            <div><strong>Rechtsgrundlage</strong><p>Art. 6 Abs. 1 lit. f DSGVO.</p></div>
-            <div><strong>Berechtigtes Interesse</strong><p>Anschauliche und glaubwürdige Darstellung der Inhalte.</p></div>
-            <div><strong>Empfänger</strong><p>Unsplash Inc. und von Unsplash eingesetzte Dienstleister.</p></div>
-          </div>
           <p>
-            Unsplash weist darauf hin, dass Daten auch in Ländern außerhalb des Europäischen
-            Wirtschaftsraums verarbeitet werden können. Weitere Einzelheiten ergeben sich aus der
-            Datenschutzerklärung von Unsplash.
-          </p>
-          <p className="privacySourceLine">
-            <a href="https://unsplash.com/privacy" target="_blank" rel="noreferrer">Datenschutzerklärung von Unsplash</a>
+            Externe Quellseiten, die in unserer internen Bilddokumentation genannt werden, werden
+            nur aufgerufen, wenn ein Nutzer einen solchen Link ausdrücklich öffnet.
           </p>
         </section>
 
