@@ -14,7 +14,7 @@ const criteria = [
 
 const cases = [
   ['Ledertasche: Zuschnitt und Fertigung durch Menschen', 'Grundsätzlich zertifizierbar', 'Die menschliche Herstellung prägt die Entstehung des Endprodukts.'],
-  ['Ledertasche: digitaler Zuschnitt, manuelle Montage und Finish', 'Einzelfall grundsätzlich zertifizierbar', 'Der digitale Teilprozess ersetzt nicht die wesentlichen weiteren Herstellungsschritte.'],
+  ['Ledertasche: digitaler Zuschnitt, manuelle Montage und Finish', 'Grundsätzlich möglich – im Einzelfall prüfen', 'Der digitale Teilprozess ersetzt nicht die wesentlichen weiteren Herstellungsschritte.'],
   ['Fertige Importtasche mit eigenem Label', 'Nicht zertifizierbar', 'Das verkaufsfertige Produkt existiert bereits vor dem eigenen Arbeitsschritt.'],
   ['Tisch: CNC-Zuschnitt, manuelle Anpassung, Montage und Finish', 'Grundsätzlich ja', 'Der automatisierte Zuschnitt ist ein Teilprozess; weitere wesentliche Herstellungsschritte erfolgen durch Menschen.'],
   ['Tisch weitgehend automatisch gefertigt, nur Finish von Hand', 'Nicht zertifizierbar', 'Die verbleibende menschliche Tätigkeit ist für die Produktentstehung nicht mehr wesentlich.'],
@@ -55,7 +55,7 @@ export default function StandardPage() {
         <div className="sectionIntro compact">
           <div>
             <div className="sectionNo">PRÜFBEREICHE</div>
-            <h2>Sechs Bereiche bilden die Grundlage der Prüfung.</h2>
+            <h2>Sechs Bereiche zeigen, worauf wir bei der Prüfung achten.</h2>
           </div>
           <p>
             Eine Zertifizierung setzt voraus, dass die Kriterien für den konkreten Herstellungsprozess
@@ -78,7 +78,7 @@ export default function StandardPage() {
           <div className="sectionIntro compact">
             <div>
               <div className="sectionNo">PRÜFPROZESS</div>
-              <h2>Von der Produktabgrenzung bis zum Registereintrag.</h2>
+              <h2>Vom Produkt bis zum Registereintrag.</h2>
             </div>
             <p>
               Das Zertifizierungsverfahren ist so angelegt, dass die Entscheidung nicht auf einer einzelnen Selbstauskunft,
@@ -87,12 +87,12 @@ export default function StandardPage() {
           </div>
 
           <div className="auditProcessGrid">
-            <article><strong>Produktumfang</strong><p>Produkt oder Produktfamilie und relevante Herstellungsorte festlegen.</p></article>
-            <article><strong>Prozessaufnahme</strong><p>Wesentliche Herstellungsschritte und Fremdfertigung erfassen.</p></article>
-            <article><strong>Nachweise</strong><p>Unterlagen und Informationen zur tatsächlichen Ausführung prüfen.</p></article>
-            <article><strong>Prüfung</strong><p>Produktionsfall gegen die Kriterien des Standards bewerten.</p></article>
-            <article><strong>Fachprüfung</strong><p>Prüfergebnis kontrollieren und offene Punkte dokumentieren.</p></article>
-            <article><strong>Entscheidung</strong><p>Zertifizierungsstatus festlegen und bei Freigabe öffentlich registrieren.</p></article>
+            <article><strong>Produktumfang</strong><p>Produkt oder Produktfamilie und die wichtigen Produktionsorte festlegen.</p></article>
+            <article><strong>Prozessaufnahme</strong><p>Die wichtigen Herstellungsschritte und externe Fertigung erfassen.</p></article>
+            <article><strong>Nachweise</strong><p>Prüfen, ob Unterlagen und Informationen zur tatsächlichen Herstellung passen.</p></article>
+            <article><strong>Prüfung</strong><p>Den Herstellungsprozess anhand der Kriterien des Standards bewerten.</p></article>
+            <article><strong>Fachprüfung</strong><p>Prüfergebnis kontrollieren und offene Fragen klären.</p></article>
+            <article><strong>Entscheidung</strong><p>Über die Zertifizierung entscheiden und bei Freigabe den Status im Register veröffentlichen.</p></article>
           </div>
         </div>
       </section>
@@ -136,7 +136,7 @@ export default function StandardPage() {
         <div className="shell scopeExclusionGrid">
           <div>
             <div className="sectionNo">NICHT GEGENSTAND DES STANDARDS</div>
-            <h2>Die zertifizierte Aussage bleibt bewusst eng gefasst.</h2>
+            <h2>Made by Human bleibt bewusst auf die menschliche Herstellung begrenzt.</h2>
           </div>
           <div className="exclusionList">
             {exclusions.map((item) => <span key={item}>{item}</span>)}
