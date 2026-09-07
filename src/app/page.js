@@ -19,7 +19,7 @@ export default function Home() {
   const assetBase = process.env.GITHUB_PAGES === 'true' ? '/human-certification-web' : '';
 
   return (
-    <main className="desireHome compactHome">
+    <main id="top" className="desireHome compactHome">
       <SiteHeader />
 
       <section className="desireHero">
