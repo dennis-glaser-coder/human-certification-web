@@ -31,10 +31,10 @@ const doesNotSay = [
 ];
 
 const faq = [
-  ['Dürfen Maschinen eingesetzt werden?', 'Ja. Maschinen können menschliche Arbeit unterstützen. Entscheidend ist, ob die wesentlichen produktprägenden Herstellungsschritte weiterhin tatsächlich durch Menschen ausgeführt werden.'],
+  ['Dürfen Maschinen eingesetzt werden?', 'Ja. Maschinen dürfen unterstützen. Entscheidend ist, dass die Arbeitsschritte, die das Produkt wesentlich prägen, weiterhin von Menschen ausgeführt werden.'],
   ['Ist jedes handgemachte Produkt automatisch zertifiziert?', 'Nein. Die Kennzeichnung darf nur für einen konkret geprüften und freigegebenen Produktumfang verwendet werden.'],
   ['Kann ich die Zertifizierung selbst prüfen?', 'Ja. Zertifizierungs-ID und QR führen zum öffentlichen Datensatz mit aktuellem Status und Produktbezug.'],
-  ['Was passiert, wenn sich die Produktion ändert?', 'Wesentliche Änderungen am Herstellungsprozess, an relevanten Standorten oder an Fremdfertigung können eine erneute Bewertung des Zertifizierungsumfangs erforderlich machen.'],
+  ['Was passiert, wenn sich die Produktion ändert?', 'Wenn sich wichtige Herstellungsschritte, Produktionsorte oder externe Fertigung ändern, kann eine neue Prüfung nötig werden.'],
 ];
 
 export default function BuyerPage() {
@@ -116,7 +116,7 @@ export default function BuyerPage() {
             </p>
             <div className="buyerVerifyChecks">
               <span>Produkt & Hersteller</span>
-              <span>Zertifizierungsumfang</span>
+              <span>Gilt für</span>
               <span>angegebene Produktionsstandorte</span>
               <span>Status & Gültigkeit</span>
               <span>angewendete Standardfassung</span>
@@ -155,9 +155,7 @@ export default function BuyerPage() {
             <p className="premiumSectionLabel">WIE WIRD GEPRÜFT?</p>
             <h2>Die Prüfung findet dort statt, wo das Produkt entsteht.</h2>
             <p>
-              Beim Vor-Ort-Audit prüfen wir, welche Arbeitsschritte Menschen ausführen,
-              welche Maschinen eingesetzt werden, welche Produktionsorte relevant sind und ob Fremdfertigung
-              zum Zertifizierungsumfang gehört.
+              Vor Ort prüfen wir, welche Arbeitsschritte Menschen ausführen, welche Maschinen eingesetzt werden, wo produziert wird und ob wichtige Schritte von anderen Betrieben übernommen werden.
             </p>
             <Link className="desireTextLink" href="/standard">Prüfkriterien ansehen →</Link>
           </div>
@@ -183,7 +181,7 @@ export default function BuyerPage() {
 
       <section className="buyerFinal">
         <div className="shell buyerFinalGrid">
-          <div><p className="premiumSectionLabel premiumSectionLabelLight">VERIFIZIERUNG</p><h2>Zertifizierung über ID oder QR prüfen.</h2></div>
+          <div><p className="premiumSectionLabel premiumSectionLabelLight">ÖFFENTLICH PRÜFEN</p><h2>Zertifizierung über ID oder QR prüfen.</h2></div>
           <div><p>Prüfen Sie die Zertifizierungs-ID oder den QR-Code im öffentlichen Register.</p><Link className="desireFinalButton" href="/pruefen">Zertifizierung prüfen</Link></div>
         </div>
       </section>
