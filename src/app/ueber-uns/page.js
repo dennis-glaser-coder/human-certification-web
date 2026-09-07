@@ -12,17 +12,17 @@ export const metadata = {
 
 const principles = [
   ['Klare Grenze', 'Wir prüfen die menschliche Herstellung eines Produkts – nicht pauschal die Qualität oder Haltung eines Unternehmens.'],
-  ['Produktbezug', 'Die zertifizierte Aussage bezieht sich auf ein eindeutig abgegrenztes Produkt oder eine klar definierte Produktfamilie.'],
+  ['Für ein bestimmtes Produkt', 'Die Zertifizierung gilt für ein klar benanntes Produkt oder eine klar benannte Produktfamilie.'],
   ['Fester Standard', 'Jede Entscheidung bezieht sich auf die Standardfassung, nach der geprüft wurde.'],
   ['Öffentlich prüfbar', 'Über eine eindeutige ID führt das Zeichen zum passenden öffentlichen Registereintrag.'],
 ];
 
 const architecture = [
-  ['01', 'Standard', 'Definiert Geltungsbereich, Kriterien, Nachweise und Entscheidungsregeln.'],
+  ['01', 'Standard', 'Legt fest, was geprüft wird und welche Kriterien gelten.'],
   ['02', 'Prüfung', 'Bewertet den konkreten Herstellungsprozess gegen die anwendbaren Anforderungen.'],
-  ['03', 'Entscheidung', 'Dokumentiert das Prüfergebnis und den daraus folgenden Zertifizierungsstatus.'],
-  ['04', 'Register', 'Macht Produktbezug, Standardfassung, Status und Gültigkeit öffentlich nachvollziehbar.'],
-  ['05', 'Markennutzung', 'Bindet das Zeichen an freigegebenen Zertifizierungsumfang und gültigen Status.'],
+  ['03', 'Entscheidung', 'Hält das Prüfergebnis und die Entscheidung über den Status fest.'],
+  ['04', 'Register', 'Zeigt öffentlich, für welches Produkt die Zertifizierung gilt, nach welchem Standard geprüft wurde und welchen Status sie hat.'],
+  ['05', 'Markennutzung', 'Regelt, für welches zertifizierte Produkt und bei welchem Status das Zeichen genutzt werden darf.'],
 ];
 
 export default function AboutPage() {
@@ -45,7 +45,7 @@ export default function AboutPage() {
         <div className="shell aboutOriginGrid">
           <div className="aboutOriginStatement">
             <div className="sectionNo light">DIE IDEE</div>
-            <h2>Menschliche Arbeit ist ein Unterschied – aber nur, wenn er nachvollziehbar ist.</h2>
+            <h2>Menschliche Arbeit ist ein Unterschied – wenn man ihn sehen und belegen kann.</h2>
           </div>
 
           <div className="aboutOriginStory">
@@ -70,10 +70,10 @@ export default function AboutPage() {
 
       <section className="aboutMetaBand" aria-label="Grundprinzipien von Made by Human">
         <div className="shell aboutMetaGrid">
-          <div><strong>Produktfokus</strong><p>Geprüft wird ein klar abgegrenztes physisches Produkt.</p></div>
+          <div><strong>Konkretes Produkt</strong><p>Geprüft wird ein klar benanntes physisches Produkt.</p></div>
           <div><strong>Klare Aussage</strong><p>Bewertet wird ausschließlich die menschliche Herstellung.</p></div>
           <div><strong>Nachweise</strong><p>Die Herstellung muss sich mit geeigneten Informationen und Belegen prüfen lassen.</p></div>
-          <div><strong>Verifizierung</strong><p>Zertifizierungsstatus und Standardfassung bleiben nachvollziehbar.</p></div>
+          <div><strong>Öffentlich prüfbar</strong><p>Status und Standardfassung können im Register geprüft werden.</p></div>
         </div>
       </section>
 
@@ -90,8 +90,7 @@ export default function AboutPage() {
               welche Technik unterstützt dabei und wie lässt sich das nachvollziehbar belegen?
             </p>
             <p>
-              Das sichtbare Zeichen ist nur die Kennzeichnung. Der Vertrauensmechanismus dahinter besteht aus
-              Standard, Prüfung, dokumentierter Entscheidung, öffentlichem Register und geregelter Markennutzung.
+              Das Zeichen allein schafft noch kein Vertrauen. Dahinter stehen ein klarer Standard, die Prüfung vor Ort, eine festgehaltene Entscheidung, das öffentliche Register und klare Regeln für die Nutzung.
             </p>
           </div>
         </div>
@@ -105,7 +104,7 @@ export default function AboutPage() {
           </div>
           <p>
             Die Aussage bleibt bewusst eng. Sie soll für Käufer, Hersteller und Geschäftspartner verständlich,
-            überprüfbar und auf den tatsächlichen Zertifizierungsumfang begrenzt sein.
+            überprüfbar und auf das tatsächlich zertifizierte Produkt begrenzt sein.
           </p>
         </div>
 
