@@ -42,6 +42,10 @@ export default function Home() {
           <div className="desireHeroVisual">
             <img
               src={assetBase + '/photography/home-hero-woodworking.webp'}
+              width="1800"
+              height="1202"
+              fetchPriority="high"
+              decoding="async"
               alt="Holzhandwerker bei der manuellen Bearbeitung eines Werkstücks"
             />
           </div>
