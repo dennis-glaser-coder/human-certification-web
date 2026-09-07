@@ -6,15 +6,15 @@ import { canonical } from '../../lib/seo';
 
 export const metadata = {
   title: 'Über Made by Human',
-  description: 'Warum Made by Human entstanden ist: menschliche Herstellung sichtbar und überprüfbar machen – mit klarem Produktbezug, Vor-Ort-Prüfung und öffentlicher Verifizierung.',
+  description: 'Warum Made by Human entstanden ist und wie wir menschliche Herstellung sichtbar und überprüfbar machen.',
   alternates: { canonical: canonical('/ueber-uns') },
 };
 
 const principles = [
-  ['Enger Prüfgegenstand', 'Bewertet wird die definierte Eigenschaft menschlich geprägter Herstellung – nicht pauschal die Qualität oder Moral eines Unternehmens.'],
+  ['Klare Grenze', 'Wir prüfen die menschliche Herstellung eines Produkts – nicht pauschal die Qualität oder Haltung eines Unternehmens.'],
   ['Produktbezug', 'Die zertifizierte Aussage bezieht sich auf ein eindeutig abgegrenztes Produkt oder eine klar definierte Produktfamilie.'],
-  ['Versionierter Standard', 'Jede Zertifizierungsentscheidung lässt sich auf die angewendete Standardfassung zurückführen.'],
-  ['Öffentliche Verifizierung', 'Eine Kennzeichnung ist über eine eindeutige ID mit dem zugehörigen öffentlichen Zertifizierungsdatensatz verbunden.'],
+  ['Fester Standard', 'Jede Entscheidung bezieht sich auf die Standardfassung, nach der geprüft wurde.'],
+  ['Öffentlich prüfbar', 'Über eine eindeutige ID führt das Zeichen zum passenden öffentlichen Registereintrag.'],
 ];
 
 const architecture = [
@@ -72,7 +72,7 @@ export default function AboutPage() {
         <div className="shell aboutMetaGrid">
           <div><strong>Produktfokus</strong><p>Geprüft wird ein klar abgegrenztes physisches Produkt.</p></div>
           <div><strong>Klare Aussage</strong><p>Bewertet wird ausschließlich die menschliche Herstellung.</p></div>
-          <div><strong>Nachweise</strong><p>Die Aussage muss anhand geeigneter Informationen prüfbar sein.</p></div>
+          <div><strong>Nachweise</strong><p>Die Herstellung muss sich mit geeigneten Informationen und Belegen prüfen lassen.</p></div>
           <div><strong>Verifizierung</strong><p>Zertifizierungsstatus und Standardfassung bleiben nachvollziehbar.</p></div>
         </div>
       </section>
@@ -80,7 +80,7 @@ export default function AboutPage() {
       <section className="aboutPurpose">
         <div className="shell aboutPurposeGrid">
           <div>
-            <div className="sectionNo">VON DER BEHAUPTUNG ZUM NACHWEIS</div>
+            <div className="sectionNo">VON DER BEHAUPTUNG ZUM BELEG</div>
             <h2>Eine glaubwürdige Aussage beginnt bei der tatsächlichen Herstellung.</h2>
           </div>
           <div>
@@ -123,8 +123,8 @@ export default function AboutPage() {
         <div className="shell">
           <div className="sectionIntro compact aboutArchitectureIntro">
             <div>
-              <div className="sectionNo light">SYSTEMARCHITEKTUR</div>
-              <h2>Fünf Bausteine greifen ineinander.</h2>
+              <div className="sectionNo light">SO FUNKTIONIERT DAS SYSTEM</div>
+              <h2>Fünf Bausteine gehören zusammen.</h2>
             </div>
             <p>
               Glaubwürdigkeit entsteht nicht durch das Zeichen allein, sondern dadurch,
@@ -153,7 +153,7 @@ export default function AboutPage() {
         <div className="shell aboutBoundariesGrid">
           <div>
             <div className="sectionNo">ABGRENZUNG</div>
-            <h2>Eine Zertifizierung ersetzt keine anderen Produktaussagen.</h2>
+            <h2>Made by Human ersetzt keine anderen Produktaussagen.</h2>
           </div>
           <p>
             Wir treffen keine Aussage zu Herkunftsland, Nachhaltigkeit, Bio-, Fairtrade-,
