@@ -67,7 +67,7 @@ export default function MarkUsePage() {
         <div className="shell markUseRealExampleGrid">
           <figure>
             <img
-              src={assetBase + '/brand/IMG_1037.png'}
+              src={assetBase + '/brand/IMG_1037_mbh.png'}
               alt="Beispielhafte Made by Human Kennzeichnung an einem Lederprodukt"
               loading="lazy"
             />
