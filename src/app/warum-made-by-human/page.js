@@ -34,7 +34,7 @@ const claimComparison = [
 
 
 export default function WhyPage() {
-  const assetBase = process.env.GITHUB_PAGES === 'true' ? '/human-certification-web' : '';
+  const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE || '';
 
   return (
     <main className="whyPage">
@@ -67,7 +67,7 @@ export default function WhyPage() {
             </figure>
             <div className="whySealTag">
               <img
-                src={assetBase + '/brand/made-by-human-seal.png'}
+                src={assetBase + '/brand/made-by-human-logo.png'}
                 alt="Made by Human Zertifizierungszeichen"
                 width="96"
                 height="96"
@@ -197,7 +197,7 @@ export default function WhyPage() {
             />
             <div className="whyBrandSeal">
               <img
-                src={assetBase + '/brand/made-by-human-seal.png'}
+                src={assetBase + '/brand/made-by-human-logo.png'}
                 alt=""
                 aria-hidden="true"
                 width="78"
