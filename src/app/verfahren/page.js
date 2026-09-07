@@ -5,7 +5,7 @@ import { canonical } from '../../lib/seo';
 
 export const metadata = {
   title: 'Beschwerden, Einsprüche & Zeichenmissbrauch',
-  description: 'Verfahrensregeln für Beschwerden, Einsprüche gegen Zertifizierungsentscheidungen und Zeichenmissbrauch bei Made by Humans.',
+  description: 'Verfahrensregeln für Beschwerden, Einsprüche gegen Zertifizierungsentscheidungen und Zeichenmissbrauch bei Made by Human.',
   alternates: { canonical: canonical('/verfahren') },
 };
 
@@ -50,7 +50,7 @@ export default function ProceduresPage() {
         <div className="eyebrow">VERFAHRENSREGELN · MBH-GOV-0.1</div>
         <h1>Beschwerden, Einsprüche und Zeichenmissbrauch klar trennen.</h1>
         <p className="lead">
-          Unterschiedliche Vorgänge brauchen unterschiedliche Verfahren. Made by Humans trennt
+          Unterschiedliche Vorgänge brauchen unterschiedliche Verfahren. Wir trennen
           Beschwerde, Einspruch gegen eine Entscheidung und unberechtigte Zeichennutzung
           nach Zweck, Zuständigkeit, Prüfung und dokumentiertem Abschluss.
         </p>
