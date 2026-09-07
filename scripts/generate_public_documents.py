@@ -9,7 +9,7 @@ from reportlab.pdfbase import pdfmetrics
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'public' / 'documents'
-SEAL = ROOT / 'public' / 'brand' / 'made-by-humans-seal.png'
+SEAL = ROOT / 'public' / 'brand' / 'made-by-human-seal.png'
 OUT.mkdir(parents=True, exist_ok=True)
 
 INK = colors.HexColor('#111820')
