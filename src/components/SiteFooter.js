@@ -1,11 +1,13 @@
 import Link from 'next/link';
 
 export default function SiteFooter() {
+  const assetBase = process.env.GITHUB_PAGES === 'true' ? '/human-certification-web' : '';
+
   return (
     <footer className="siteFooter premiumFooter">
       <div className="shell premiumFooterTop">
         <div className="premiumFooterBrand">
-          <strong>MADE BY HUMAN</strong>
+          <img className="footerWordmarkAsset" src={assetBase + '/brand/made-by-human-wordmark.png'} alt="Made by Human" />
           <p>Zertifizierung für nachweisbar menschliche Herstellung.</p>
         </div>
 
