@@ -145,6 +145,10 @@ export default function ManufacturerPage() {
           <div className="manufacturerHeroArtVisual">
             <img
               src={assetBase + '/brand/IMG_1039.webp'}
+              width="1536"
+              height="1024"
+              fetchPriority="high"
+              decoding="async"
               alt="Menschliche Holzbearbeitung an einer Bandsäge in einer Werkstatt"
             />
             <div className="manufacturerHeroCredential">
