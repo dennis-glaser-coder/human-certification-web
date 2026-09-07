@@ -28,9 +28,9 @@ const useCases = [
 
 const prohibited = [
   ['Unternehmensweite Aussage', 'Keine pauschale Darstellung, nach der ein gesamtes Unternehmen oder Sortiment zertifiziert sei.'],
-  ['Nicht zertifizierte Produkte', 'Keine Übertragung des Zeichens auf Produkte außerhalb des freigegebenen Zertifizierungsumfangs.'],
+  ['Nicht zertifizierte Produkte', 'Das Zeichen darf nicht auf Produkte übertragen werden, die nicht zertifiziert sind.'],
   ['Abgelaufener Status', 'Keine fortgesetzte Nutzung, wenn die Zertifizierung abgelaufen, ausgesetzt oder widerrufen ist.'],
-  ['Ungeprüfte Zusatzclaims', 'Keine Verbindung des Zeichens mit Aussagen zu Nachhaltigkeit, Herkunft, Qualität oder anderen ungeprüften Eigenschaften.'],
+  ['Keine ungeprüften Zusatzversprechen', 'Das Zeichen darf nicht mit Aussagen zu Nachhaltigkeit, Herkunft, Qualität oder anderen ungeprüften Eigenschaften verbunden werden.'],
 ];
 
 export default function MarkUsePage() {
@@ -45,9 +45,7 @@ export default function MarkUsePage() {
         <BrandTrace compact />
         <h1>Das Zeichen bleibt an Produkt, Status und Register gebunden.</h1>
         <p className="lead">
-          Das Made by Human Zertifizierungszeichen ist kein frei verwendbares Marketingelement.
-          Seine Nutzung ist an einen definierten Zertifizierungsumfang, einen gültigen Status
-          und einen eindeutig zugeordneten öffentlichen Registereintrag gebunden.
+          Das Made by Human Zeichen darf nicht frei für Marketing genutzt werden. Es gehört immer zu einem konkret zertifizierten Produkt, einem gültigen Status und dem passenden Registereintrag.
         </p>
         <div className="markUseMasterLogo" aria-label="Made by Human Masterlogo">
           <img src={assetBase + '/brand/made-by-human-logo.png'} alt="Made by Human Logo" />
@@ -114,8 +112,7 @@ export default function MarkUsePage() {
               <h2>Vier typische Einsatzbereiche.</h2>
             </div>
             <p>
-              Entscheidend ist nicht das Medium, sondern der eindeutige Bezug zum zertifizierten Produkt
-              und zum veröffentlichten Zertifizierungsdatensatz.
+              Ob Verpackung, Webshop oder Katalog: Entscheidend ist, dass die Kennzeichnung eindeutig zum zertifizierten Produkt und seinem Registereintrag gehört.
             </p>
           </div>
 
