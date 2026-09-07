@@ -11,7 +11,7 @@ export default function NotFound() {
         <h1>Diese Seite ist nicht verfügbar.</h1>
         <p className="lead">
           Der aufgerufene Inhalt wurde nicht gefunden. Über die Startseite, den Standard oder das öffentliche Register
-          gelangen Sie direkt zu den zentralen Bereichen von Made by Humans.
+          gelangen Sie direkt zu den zentralen Bereichen von Made by Human.
         </p>
         <div className="actions">
           <Link className="button primary" href="/">Zur Startseite</Link>
