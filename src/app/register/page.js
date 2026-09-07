@@ -82,10 +82,10 @@ export default function RegisterPage() {
 
       <section className="shell registerSection">
         <div className="registerTrustBar" aria-label="Inhalte eines Registereintrags">
-          <div><strong>Zertifizierungs-ID</strong><p>Eindeutige Zuordnung des Datensatzes.</p></div>
-          <div><strong>Produkt & Umfang</strong><p>Hersteller, Produkt und veröffentlichter Zertifizierungsumfang.</p></div>
-          <div><strong>Produktion & Standard</strong><p>Relevante Produktionsstandorte und angewendetes Regelwerk.</p></div>
-          <div><strong>Status & Gültigkeit</strong><p>Aktueller Zertifizierungsstatus und Laufzeit.</p></div>
+          <div><strong>Zertifizierungs-ID</strong><p>Eindeutige ID für diesen Eintrag.</p></div>
+          <div><strong>Produkt & Umfang</strong><p>Hersteller, Produkt und wofür die Zertifizierung gilt.</p></div>
+          <div><strong>Produktion & Standard</strong><p>Angegebene Produktionsorte und der verwendete Standard.</p></div>
+          <div><strong>Status & Gültigkeit</strong><p>Aktueller Status und Gültigkeitszeitraum.</p></div>
         </div>
 
         <div className="registerToolbar">
@@ -135,7 +135,7 @@ export default function RegisterPage() {
 
         <div className="registerDisclosure">
           <strong>Beispieldatensatz</strong>
-          <p>HC-DEMO-0001 dient ausschließlich zur technischen Demonstration des Registermodells und ist keine reale Zertifizierung.</p>
+          <p>HC-DEMO-0001 ist nur ein Beispiel dafür, wie ein Registereintrag aussieht. Es handelt sich nicht um eine reale Zertifizierung.</p>
         </div>
       </section>
 
