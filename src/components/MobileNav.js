@@ -1,15 +1,29 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 
 export default function MobileNav() {
   const [open, setOpen] = useState(false);
+  const toggleRef = useRef(null);
   const close = () => setOpen(false);
+
+  useEffect(() => {
+    if (!open) return undefined;
+    function onKeyDown(event) {
+      if (event.key === 'Escape') {
+        setOpen(false);
+        window.requestAnimationFrame(() => toggleRef.current?.focus());
+      }
+    }
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [open]);
 
   return (
     <div className="mobileNavControl">
       <button
+        ref={toggleRef}
         className="mobileMenuToggle"
         type="button"
         aria-expanded={open}
