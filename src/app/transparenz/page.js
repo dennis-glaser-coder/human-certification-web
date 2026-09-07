@@ -39,7 +39,7 @@ export default function TransparencyPage() {
           <div><strong>Mit Versionsstand</strong><p>Regeln und Entscheidungen lassen sich einer bestimmten Fassung zuordnen.</p></div>
           <div><strong>Belegt</strong><p>Prüfung und Entscheidung werden festgehalten.</p></div>
           <div><strong>Klare Rollen</strong><p>Es ist erkennbar, wer prüft, wer kontrolliert und wer entscheidet.</p></div>
-          <div><strong>Öffentlich prüfbar</strong><p>Status und Produktbezug werden über das Register verifiziert.</p></div>
+          <div><strong>Öffentlich prüfbar</strong><p>Im Register kann jeder sehen, für welches Produkt die Zertifizierung gilt und welchen Status sie hat.</p></div>
         </div>
       </section>
 
@@ -50,8 +50,7 @@ export default function TransparencyPage() {
             <h2>Sechs Regeln zeigen, wie wir arbeiten.</h2>
           </div>
           <p>
-            Integrität bedeutet hier vor allem, dass eine Zertifizierung nicht nur ausgesprochen,
-            sondern anhand von Regelwerk, Nachweisen, Zuständigkeiten und Status nachvollzogen werden kann.
+            Eine Zertifizierung soll nicht nur behauptet werden. Man soll sehen können, nach welchen Regeln geprüft wurde, welche Belege vorlagen, wer entschieden hat und welchen Status die Zertifizierung heute hat.
           </p>
         </div>
 
@@ -96,20 +95,19 @@ export default function TransparencyPage() {
               <h2>Unsere Regeln sind dokumentiert und öffentlich einsehbar.</h2>
             </div>
             <p>
-              Die Regeln zu Zertifizierungsverfahren, Markennutzung, Beschwerden und Einsprüchen
-              werden versioniert geführt und sind öffentlich einsehbar.
+              Die Regeln zu Zertifizierung, Markennutzung, Beschwerden und Einsprüchen sind öffentlich einsehbar. Änderungen werden mit einer neuen Version festgehalten.
             </p>
           </div>
 
           <div className="governanceDocumentsGrid">
             <Link href="/dokumente/certification-scheme-0-1">
               <span>ZERTIFIZIERUNGSSCHEMA</span>
-              <strong>Rollen, Fachprüfung, Entscheidung und Statusverwaltung</strong>
+              <strong>Rollen, Fachprüfung, Entscheidung und Statusänderungen</strong>
               <small>Schema 0.1 öffnen →</small>
             </Link>
             <Link href="/markennutzung">
               <span>MARKENNUTZUNG</span>
-              <strong>Regeln für Produktbezug, Status und Verwendung des Zeichens</strong>
+              <strong>Regeln dafür, wofür das Zeichen gilt und wie es verwendet werden darf</strong>
               <small>Markennutzung öffnen →</small>
             </Link>
             <Link href="/verfahren">
@@ -129,8 +127,7 @@ export default function TransparencyPage() {
           </div>
           <div>
             <p>
-              Begriffe wie Akkreditierung, externe Unabhängigkeit oder unabhängige Zertifizierungsentscheidung
-              werden ausschließlich verwendet, wenn die jeweilige Eigenschaft organisatorisch besteht und nachweisbar belegt werden kann.
+              Begriffe wie Akkreditierung oder unabhängige Zertifizierungsentscheidung verwenden wir nur, wenn diese Eigenschaft tatsächlich besteht und belegt werden kann.
             </p>
             <Link className="textLink" href="/dokumente">Dokumentenregister ansehen →</Link>
           </div>
