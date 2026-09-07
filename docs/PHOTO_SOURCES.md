@@ -27,7 +27,7 @@ Not sufficient on its own:
 - standing beside machinery
 - monitoring an automated process
 
-If the visible activity would not materially contribute to the creation of the physical product, the image should not be used as a core Made by Humans manufacturing image.
+If the visible activity would not materially contribute to the creation of the physical product, the image should not be used as a core Made by Human manufacturing image.
 
 ## Current reference imagery
 
@@ -38,7 +38,7 @@ If the visible activity would not materially contribute to the creation of the p
 - Published: 2026-03-02
 - License: Unsplash License
 - Use on website: documentary illustration of direct human jewelry making
-- Certification status: no claim that the depicted company or activity is certified by Made by Humans
+- Certification status: no claim that the depicted company or activity is certified by Made by Human
 
 ### Sewing / textile manufacturing
 - Photographer: Phil Hearing
@@ -47,6 +47,6 @@ If the visible activity would not materially contribute to the creation of the p
 - Published: 2026-03-14
 - License: Unsplash License
 - Use on website: documentary illustration of direct human textile manufacturing with a sewing machine
-- Certification status: no claim that the depicted company or activity is certified by Made by Humans
+- Certification status: no claim that the depicted company or activity is certified by Made by Human
 
 These images are temporary reference photography. They should be replaced progressively by commissioned documentary photography from real validation and certified production cases.
