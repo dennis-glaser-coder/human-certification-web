@@ -111,8 +111,8 @@ export default function BuyerPage() {
             <p className="premiumSectionLabel premiumSectionLabelLight">QR & ZERTIFIZIERUNGS-ID</p>
             <h2>Produkt und aktueller Status lassen sich öffentlich prüfen.</h2>
             <p>
-              Eine veröffentlichte Zertifizierung lässt sich über QR-Code oder Zertifizierungs-ID prüfen.
-              Der öffentliche Datensatz zeigt, für welches Produkt die Aussage gilt und welchen aktuellen Status sie hat.
+              Über QR-Code oder Zertifizierungs-ID gelangen Käufer direkt zum Register.
+              Dort sehen sie, für welches Produkt die Zertifizierung gilt und ob sie aktuell gültig ist.
             </p>
             <div className="buyerVerifyChecks">
               <span>Produkt & Hersteller</span>
@@ -132,8 +132,8 @@ export default function BuyerPage() {
             <p className="premiumSectionLabel">BEWUSST KLAR BEGRENZT</p>
             <h2>Was das Zeichen nicht automatisch aussagt.</h2>
             <p>
-              Wir konzentrieren uns auf die nachweisbare menschliche Herstellung. Andere Eigenschaften eines Produktes
-              benötigen eigene Nachweise und dürfen nicht aus der Zertifizierung abgeleitet werden.
+              Made by Human prüft die menschliche Herstellung.
+              Aussagen zu Nachhaltigkeit, Herkunft, Bio, Fairtrade oder Qualität brauchen eigene Nachweise.
             </p>
           </div>
           <div className="buyerBoundaryList">
