@@ -1,28 +1,34 @@
 export const dynamic = 'force-static';
 
-import { canonical } from '../lib/seo';
+import { canonical, SITE_INDEXABLE } from '../lib/seo';
 
-const lastModified = new Date();
+const pages = [
+  ['/', 'weekly', 1],
+  ['/standard', 'monthly', 0.9],
+  ['/warum-made-by-human', 'monthly', 0.9],
+  ['/fuer-hersteller', 'monthly', 0.9],
+  ['/fuer-kaeufer', 'monthly', 0.9],
+  ['/register', 'daily', 0.9],
+  ['/pruefen', 'monthly', 0.8],
+  ['/transparenz', 'monthly', 0.8],
+  ['/ueber-uns', 'monthly', 0.7],
+  ['/dokumente', 'monthly', 0.8],
+  ['/dokumente/standard-0-1', 'monthly', 0.7],
+  ['/dokumente/certification-scheme-0-1', 'monthly', 0.7],
+  ['/markennutzung', 'monthly', 0.6],
+  ['/leitfaden/nachweise', 'monthly', 0.7],
+  ['/leitfaden/zertifizierungsumfang', 'monthly', 0.7],
+  ['/verfahren', 'monthly', 0.6],
+  ['/impressum', 'yearly', 0.3],
+  ['/datenschutz', 'yearly', 0.3],
+];
 
 export default function sitemap() {
-  return [
-    { url: canonical('/'), lastModified, changeFrequency: 'weekly', priority: 1 },
-    { url: canonical('/standard'), lastModified, changeFrequency: 'monthly', priority: 0.9 },
-    { url: canonical('/warum-made-by-human'), lastModified, changeFrequency: 'monthly', priority: 0.9 },
-    { url: canonical('/fuer-hersteller'), lastModified, changeFrequency: 'monthly', priority: 0.9 },
-    { url: canonical('/fuer-kaeufer'), lastModified, changeFrequency: 'monthly', priority: 0.9 },
-    { url: canonical('/register'), lastModified, changeFrequency: 'daily', priority: 0.9 },
-    { url: canonical('/pruefen'), lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: canonical('/transparenz'), lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: canonical('/ueber-uns'), lastModified, changeFrequency: 'monthly', priority: 0.7 },
-    { url: canonical('/dokumente'), lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: canonical('/dokumente/standard-0-1'), lastModified, changeFrequency: 'monthly', priority: 0.7 },
-    { url: canonical('/dokumente/certification-scheme-0-1'), lastModified, changeFrequency: 'monthly', priority: 0.7 },
-    { url: canonical('/markennutzung'), lastModified, changeFrequency: 'monthly', priority: 0.6 },
-    { url: canonical('/leitfaden/nachweise'), lastModified, changeFrequency: 'monthly', priority: 0.7 },
-    { url: canonical('/leitfaden/zertifizierungsumfang'), lastModified, changeFrequency: 'monthly', priority: 0.7 },
-    { url: canonical('/verfahren'), lastModified, changeFrequency: 'monthly', priority: 0.6 },
-    { url: canonical('/impressum'), lastModified, changeFrequency: 'yearly', priority: 0.3 },
-    { url: canonical('/datenschutz'), lastModified, changeFrequency: 'yearly', priority: 0.3 },
-  ];
+  if (!SITE_INDEXABLE) return [];
+
+  return pages.map(([path, changeFrequency, priority]) => ({
+    url: canonical(path),
+    changeFrequency,
+    priority,
+  }));
 }
