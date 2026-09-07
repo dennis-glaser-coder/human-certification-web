@@ -75,7 +75,7 @@ export default function Home() {
             <p>
               Begriffe wie „handmade“, „handcrafted“ oder „manufakturgefertigt“ sagen allein wenig darüber aus,
               wie ein Produkt tatsächlich entsteht. Wir prüfen die wesentlichen Herstellungsschritte
-              vor Ort und macht das Ergebnis über Zertifizierungs-ID und Register nachvollziehbar.
+              vor Ort und machen das Ergebnis über Zertifizierungs-ID und Register nachvollziehbar.
             </p>
             <figure className="manifestoMaterial">
               <img
