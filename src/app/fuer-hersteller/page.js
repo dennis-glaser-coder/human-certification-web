@@ -50,7 +50,7 @@ const certificationProcess = [
 ];
 
 const markUseBenefits = [
-  ['Zertifizierungszeichen', 'Kennzeichnung für den freigegebenen Produktumfang.'],
+  ['Zertifizierungszeichen', 'Zeichen für das zertifizierte Produkt.'],
   ['QR & Registerlink', 'Direkter Weg zum öffentlichen Registereintrag.'],
   ['Verpackung & Digital', 'Freigegebene Anwendungen für Verpackung, Produktseiten, Kataloge und Verkaufsunterlagen.'],
   ['Für Kunden & Geschäftspartner', 'Klare Formulierungen mit Verweis auf Produkt, Status und Standard.'],
@@ -62,7 +62,7 @@ const manufacturerFaq = [
   ['Was gilt bei mehreren Standorten oder externer Fertigung?', 'Alle Produktionsorte und externen Betriebe, die wichtige Herstellungsschritte übernehmen, müssen angegeben und dem Produkt zugeordnet werden.'],
   ['Welche Unterlagen werden benötigt?', 'Wir brauchen Informationen dazu, wie und wo das Produkt hergestellt wird und welche wichtigen Schritte andere Betriebe übernehmen. Welche Belege im Einzelfall nötig sind, klären wir in der Vorbereitung.'],
   ['Was passiert bei Änderungen an Produkt oder Produktion?', 'Wenn sich wichtige Herstellungsschritte, Produktionsorte oder externe Fertigung ändern, kann eine erneute Prüfung nötig werden.'],
-  ['Woraus setzen sich die Kosten zusammen?', 'Unser Modell umfasst die Erstprüfung und eine jährliche Lizenz zur Markennutzung. Zusätzliche Produktfamilien und weitere Standorte können den Umfang verändern. Konkrete Preise veröffentlichen wir erst, wenn sie verbindlich festgelegt sind.'],
+  ['Woraus setzen sich die Kosten zusammen?', 'Zu unserem Modell gehören die Erstprüfung und eine jährliche Lizenz zur Markennutzung. Zusätzliche Produktfamilien und weitere Standorte können den Umfang verändern. Konkrete Preise veröffentlichen wir erst, wenn sie verbindlich festgelegt sind.'],
 ];
 
 export default function ManufacturerPage() {
@@ -227,7 +227,7 @@ export default function ManufacturerPage() {
         </div>
 
         <div className="manufacturerScopeNote">
-          <span>GELTUNGSBEREICH</span>
+          <span>DERZEIT NICHT AUFGENOMMEN</span>
           <p>Lebensmittel, Medizinprodukte und andere stark regulierte Kategorien nehmen wir derzeit nicht auf.</p>
         </div>
 
@@ -394,7 +394,7 @@ export default function ManufacturerPage() {
                 </label>
 
                 <label>
-                  Welche Nachweise sind bereits vorhanden?
+                  Welche Belege sind bereits vorhanden?
                   <textarea name="evidence_note" value={form.evidence_note} onChange={change} rows="4" placeholder="z. B. Prozessdokumentation, Fertigungsunterlagen, Fotos/Videos, Lieferanten- oder Standortinformationen" />
                 </label>
               </div>
