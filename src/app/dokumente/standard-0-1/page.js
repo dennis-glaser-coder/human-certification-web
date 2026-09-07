@@ -5,7 +5,7 @@ import { canonical } from '../../../lib/seo';
 
 export const metadata = {
   title: 'Standard 0.1',
-  description: 'Version 0.1 des Made by Humans Standards für nachweisbar menschlich gefertigte physische Produkte.',
+  description: 'Version 0.1 des Made by Human Standards für nachweisbar menschlich gefertigte physische Produkte.',
   alternates: { canonical: canonical('/dokumente/standard-0-1') },
 };
 
@@ -27,13 +27,13 @@ export default function StandardDocumentPage() {
 
       <article className="shell standardDocument">
         <div className="controlledDocumentActions">
-          <a className="button primary" href={assetBase + '/documents/made-by-humans-standard-0-1.pdf'}>PDF herunterladen</a>
+          <a className="button primary" href={assetBase + '/documents/made-by-human-standard-0-1.pdf'}>PDF herunterladen</a>
           <Link className="button secondary" href="/dokumente">Dokumentenregister</Link>
         </div>
 
         <header className="standardDocumentHeader">
           <div>
-            <span>MADE BY HUMANS · STANDARD</span>
+            <span>MADE BY HUMAN · STANDARD</span>
             <h1>Standard 0.1</h1>
           </div>
           <dl>
