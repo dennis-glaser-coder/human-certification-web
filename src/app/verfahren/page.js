@@ -1,12 +1,21 @@
 import Link from 'next/link';
 import SiteHeader from '../../components/SiteHeader';
 import SiteFooter from '../../components/SiteFooter';
-import { canonical } from '../../lib/seo';
+import { canonical, SOCIAL_IMAGE } from '../../lib/seo';
 
 export const metadata = {
   title: 'Beschwerden, Einsprüche & Zeichenmissbrauch',
   description: 'Verfahrensregeln für Beschwerden, Einsprüche gegen Zertifizierungsentscheidungen und Zeichenmissbrauch bei Made by Human.',
   alternates: { canonical: canonical('/verfahren') },
+  openGraph: {
+    type: 'website',
+    locale: 'de_DE',
+    siteName: 'Made by Human',
+    title: 'Beschwerden, Einsprüche & Zeichenmissbrauch | Made by Human',
+    description: 'Verfahrensregeln für Beschwerden, Einsprüche gegen Zertifizierungsentscheidungen und Zeichenmissbrauch bei Made by Human.',
+    url: canonical('/verfahren'),
+    images: [SOCIAL_IMAGE],
+  },
 };
 
 const procedures = [
