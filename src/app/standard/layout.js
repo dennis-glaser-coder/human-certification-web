@@ -1,4 +1,4 @@
-import { canonical } from '../../lib/seo';
+import { canonical, SOCIAL_IMAGE } from '../../lib/seo';
 
 export const metadata = {
   title: 'Standard für menschliche Herstellung',
@@ -12,6 +12,7 @@ export const metadata = {
     description:
       'Der öffentliche Made by Human Standard mit Kriterien, Abgrenzungen und Entscheidungsregeln.',
     url: canonical('/standard'),
+    images: [SOCIAL_IMAGE],
   },
 };
 
