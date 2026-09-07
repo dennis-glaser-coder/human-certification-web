@@ -38,7 +38,7 @@ const faq = [
 ];
 
 export default function BuyerPage() {
-  const assetBase = process.env.GITHUB_PAGES === 'true' ? '/human-certification-web' : '';
+  const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE || '';
 
   return (
     <main className="buyerPage">
@@ -61,8 +61,9 @@ export default function BuyerPage() {
           </div>
 
           <div className="buyerHeroCard">
-            <img src={assetBase + '/brand/made-by-human-seal.png'} alt="Made by Human Zertifizierungszeichen" />
-            <span>MADE BY HUMAN</span>
+            <div className="buyerHeroLogoField">
+              <img src={assetBase + '/brand/made-by-human-logo.png'} alt="Made by Human – Verified Human Production" />
+            </div>
             <strong>Von Menschen gemacht.<br />Vor Ort geprüft.</strong>
             <p>Produktfokus · Zertifizierungs-ID · öffentlich verifizierbar</p>
           </div>
@@ -96,7 +97,7 @@ export default function BuyerPage() {
                   <small>ZERTIFIZIERUNGS-ID</small>
                   <strong>HC-DEMO-0001</strong>
                 </div>
-                <span className="statusBadge active">AKTIV · DEMO</span>
+                <span className="statusBadge status-demo">DEMO · KEINE REALE ZERTIFIZIERUNG</span>
               </div>
               <dl className="buyerProofFacts">
                 <div><dt>Produkt</dt><dd>Demo Produkt</dd></div>
