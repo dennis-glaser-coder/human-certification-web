@@ -2201,3 +2201,251 @@ summary:focus-visible {
     font-size:10px;
   }
 }
+
+
+/* ===== Privacy notice 2026-09-07 ===== */
+.privacyHero{
+  padding-bottom:34px;
+}
+.privacyHero h1{
+  max-width:920px;
+}
+.privacyHero .lead{
+  max-width:760px;
+}
+.legalStatus{
+  margin:18px 0 0;
+  color:var(--muted-soft);
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.04em;
+}
+.privacyContent{
+  padding-bottom:100px;
+}
+.privacySection{
+  display:grid;
+  grid-template-columns:minmax(150px,.34fr) minmax(0,1.66fr);
+  gap:24px 54px;
+  padding:42px 0 46px;
+  border-top:1px solid var(--stone);
+}
+.privacySection>span{
+  padding-top:7px;
+  color:var(--blue);
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.11em;
+}
+.privacySection>h2{
+  margin:0;
+  max-width:820px;
+  font-size:32px;
+  line-height:1.12;
+}
+.privacySection>p,
+.privacySection>.privacyFacts,
+.privacySection>.privacyContactCard,
+.privacySection>.privacyRights{
+  grid-column:2;
+}
+.privacySection>p{
+  max-width:820px;
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.72;
+}
+.privacySection>p+p{
+  margin-top:-8px;
+}
+.privacyFacts{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  margin:6px 0;
+  border-top:1px solid var(--ink);
+}
+.privacyFacts>div{
+  min-height:120px;
+  padding:17px 22px 18px 0;
+  border-bottom:1px solid var(--stone);
+}
+.privacyFacts>div:nth-child(odd){
+  padding-right:26px;
+  border-right:1px solid var(--stone);
+}
+.privacyFacts>div:nth-child(even){
+  padding-left:26px;
+}
+.privacyFacts strong{
+  display:block;
+  margin-bottom:8px;
+  color:var(--ink);
+  font-size:11px;
+}
+.privacyFacts p{
+  margin:0;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.55;
+}
+.privacyContactCard{
+  max-width:700px;
+  padding:22px 24px;
+  border-left:2px solid var(--blue);
+  background:var(--white);
+}
+.privacyContactCard.compact{
+  max-width:760px;
+}
+.privacyContactCard>strong{
+  display:block;
+  margin-bottom:10px;
+  font-family:var(--font-serif),Georgia,serif;
+  font-size:22px;
+  font-weight:500;
+}
+.privacyContactCard address,
+.privacyContactCard p{
+  margin:0;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.65;
+  font-style:normal;
+}
+.privacyContactCard dl{
+  margin:14px 0 0;
+  border-top:1px solid var(--stone);
+}
+.privacyContactCard dl div{
+  display:grid;
+  grid-template-columns:110px 1fr;
+  gap:18px;
+  padding:8px 0;
+  border-bottom:1px solid var(--stone);
+}
+.privacyContactCard dt{
+  color:var(--muted-soft);
+  font-size:11px;
+}
+.privacyContactCard dd{
+  margin:0;
+  color:var(--ink);
+  font-size:12px;
+  font-weight:600;
+}
+.privacyContactCard>a{
+  display:inline-block;
+  margin-top:15px;
+  color:var(--blue);
+  font-size:12px;
+  font-weight:700;
+  text-decoration:none;
+  border-bottom:1px solid currentColor;
+}
+.privacySourceLine a{
+  color:var(--blue);
+  text-decoration:none;
+  border-bottom:1px solid rgba(41,76,119,.35);
+}
+.privacySourceLine a:hover{
+  border-bottom-color:var(--blue);
+}
+.privacySection code{
+  padding:1px 4px;
+  background:rgba(41,76,119,.07);
+  font-family:var(--font-sans),Arial,sans-serif;
+  font-size:.92em;
+}
+.privacyRights{
+  max-width:800px;
+  margin:0;
+  padding-left:20px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.72;
+}
+.privacyRights li+li{
+  margin-top:5px;
+}
+.privacyClosing{
+  border-bottom:1px solid var(--stone);
+}
+.formLegal a{
+  color:var(--blue);
+  text-decoration:none;
+  border-bottom:1px solid rgba(41,76,119,.35);
+}
+.formLegal a:hover{
+  border-bottom-color:var(--blue);
+}
+.footerLegalMeta{
+  flex-wrap:wrap;
+  justify-content:flex-end;
+}
+
+@media(max-width:760px){
+  .privacyHero h1{
+    font-size:44px;
+  }
+  .privacyContent{
+    padding-bottom:64px;
+  }
+  .privacySection{
+    display:block;
+    padding:32px 0 36px;
+  }
+  .privacySection>span{
+    display:block;
+    margin-bottom:10px;
+    padding-top:0;
+    font-size:10px;
+  }
+  .privacySection>h2{
+    margin-bottom:18px;
+    font-size:27px;
+  }
+  .privacySection>p{
+    font-size:14px;
+    line-height:1.68;
+  }
+  .privacySection>p+p{
+    margin-top:14px;
+  }
+  .privacyFacts{
+    grid-template-columns:1fr;
+    margin:22px 0;
+  }
+  .privacyFacts>div,
+  .privacyFacts>div:nth-child(even),
+  .privacyFacts>div:nth-child(odd){
+    min-height:0;
+    padding:15px 0;
+    border-right:0;
+  }
+  .privacyFacts strong{
+    font-size:12px;
+  }
+  .privacyFacts p{
+    font-size:12px;
+  }
+  .privacyContactCard{
+    margin:20px 0;
+    padding:18px 18px;
+  }
+  .privacyContactCard>strong{
+    font-size:20px;
+  }
+  .privacyContactCard dl div{
+    grid-template-columns:1fr;
+    gap:2px;
+  }
+  .privacyRights{
+    margin:18px 0 0;
+    font-size:14px;
+  }
+  .footerLegalMeta{
+    justify-content:flex-start;
+    gap:16px;
+  }
+}
