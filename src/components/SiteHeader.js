@@ -5,15 +5,15 @@ export default function SiteHeader() {
   return (
     <header className="siteHeader premiumSiteHeader">
       <div className="shell headerInner premiumHeaderInner">
-        <Link className="brandLockup premiumBrandLockup" href="/#top" aria-label="Made by Humans Startseite – nach oben">
+        <Link className="brandLockup premiumBrandLockup" href="/#top" aria-label="Made by Human Startseite – nach oben">
           <span className="brandTextStack">
-            <span className="brandName">MADE BY HUMANS</span>
+            <span className="brandName">MADE BY HUMAN</span>
             <span className="brandDescriptor">Zertifizierung für menschliche Herstellung</span>
           </span>
         </Link>
 
         <nav className="mainNav premiumMainNav" aria-label="Hauptnavigation">
-          <Link href="/warum-made-by-humans">Warum Made by Humans</Link>
+          <Link href="/warum-made-by-humans">Warum Made by Human</Link>
           <Link href="/fuer-hersteller">Für Hersteller</Link>
           <Link href="/fuer-kaeufer">Für Käufer</Link>
           <Link href="/register">Register</Link>
