@@ -2,12 +2,14 @@ import Link from 'next/link';
 import MobileNav from './MobileNav';
 
 export default function SiteHeader() {
+  const assetBase = process.env.GITHUB_PAGES === 'true' ? '/human-certification-web' : '';
+
   return (
     <header className="siteHeader premiumSiteHeader">
       <div className="shell headerInner premiumHeaderInner">
         <Link className="brandLockup premiumBrandLockup" href="/#top" aria-label="Made by Human Startseite – nach oben">
           <span className="brandTextStack">
-            <span className="brandName">MADE BY HUMAN</span>
+            <img className="brandWordmarkAsset" src={assetBase + '/brand/made-by-human-wordmark.png'} alt="Made by Human" />
             <span className="brandDescriptor">Zertifizierung für menschliche Herstellung</span>
           </span>
         </Link>
