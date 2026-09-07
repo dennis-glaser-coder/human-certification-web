@@ -4,11 +4,11 @@ import SiteFooter from '../../components/SiteFooter';
 import { canonical, SOCIAL_IMAGE } from '../../lib/seo';
 
 export const metadata = {
-  title: 'Warum Made by Human?',
+  title: 'Warum ein Siegel für menschliche Herstellung?',
   description: 'Warum Made by Human menschliche Herstellung sichtbar macht – für Hersteller, Marken und Käufer.',
   alternates: { canonical: canonical('/warum-made-by-human') },
   openGraph: {
-    title: 'Warum Made by Human? | Made by Human',
+    title: 'Warum ein Siegel für menschliche Herstellung? | Made by Human',
     description: 'Warum menschliche Herstellung sichtbar und überprüfbar sein sollte.',
     url: canonical('/warum-made-by-human'),
     images: [SOCIAL_IMAGE],
