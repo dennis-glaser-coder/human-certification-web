@@ -1,4 +1,4 @@
-import { canonical } from '../../lib/seo';
+import { canonical, SOCIAL_IMAGE } from '../../lib/seo';
 
 export const metadata = {
   title: 'Zertifizierung für Hersteller',
@@ -12,6 +12,7 @@ export const metadata = {
     description:
       'Herstellungsprozess, Nachweise und Prüfablauf für physische Produkte mit wesentlicher menschlicher Fertigung.',
     url: canonical('/fuer-hersteller'),
+    images: [SOCIAL_IMAGE],
   },
 };
 
