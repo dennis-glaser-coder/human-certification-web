@@ -152,7 +152,7 @@ export default function CertificateClient({ id }) {
               <dl className="certificateFacts">
                 <div><dt>Hersteller</dt><dd>{state.record.products?.manufacturers?.name ?? '—'}</dd></div>
                 <div><dt>Produkt</dt><dd>{state.record.products?.name ?? '—'}</dd></div>
-                <div><dt>Zertifizierungsumfang</dt><dd>{state.record.certification_scope ?? '—'}</dd></div>
+                <div><dt>Gilt für</dt><dd>{state.record.certification_scope ?? '—'}</dd></div>
                 <div><dt>Produktionsstandorte</dt><dd>{state.record.production_locations?.length ? state.record.production_locations.join(' · ') : '—'}</dd></div>
                 <div><dt>Standard</dt><dd>{state.record.standard_versions?.title ?? state.record.standard_versions?.version ?? '—'}</dd></div>
                 <div><dt>Ausgestellt</dt><dd>{state.record.issued_at ? new Date(state.record.issued_at).toLocaleDateString('de-DE') : '—'}</dd></div>
