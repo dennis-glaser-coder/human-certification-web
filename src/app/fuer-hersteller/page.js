@@ -148,7 +148,7 @@ export default function ManufacturerPage() {
               alt="Menschliche Holzbearbeitung an einer Bandsäge in einer Werkstatt"
             />
             <div className="manufacturerHeroCredential">
-              <img src={assetBase + '/brand/made-by-human-logo.png'} alt="Made by Human – Verified Human Production" />
+              <img src={assetBase + '/brand/made-by-human-logo.webp'} alt="Made by Human – Verified Human Production" />
               <div>
                 <span>NACH POSITIVER ENTSCHEIDUNG</span>
                 <strong>Ein sichtbarer Nachweis für einen realen Herstellungsunterschied.</strong>
@@ -244,7 +244,7 @@ export default function ManufacturerPage() {
             </p>
             <figure className="manufacturerEvidencePhoto">
               <img
-                src={assetBase + '/photography/manufacturer-production.jpg'}
+                src={assetBase + '/photography/manufacturer-production.webp'}
                 alt="Hände bei der manuellen Formgebung eines Produktes"
                 loading="lazy"
               />
