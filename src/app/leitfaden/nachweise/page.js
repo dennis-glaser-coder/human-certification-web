@@ -1,12 +1,21 @@
 import Link from 'next/link';
 import SiteHeader from '../../../components/SiteHeader';
 import SiteFooter from '../../../components/SiteFooter';
-import { canonical } from '../../../lib/seo';
+import { canonical, SOCIAL_IMAGE } from '../../../lib/seo';
 
 export const metadata = {
   title: 'Leitfaden für Prüfnachweise',
   description: 'Welche Unterlagen und Informationen zeigen können, wie ein Produkt tatsächlich hergestellt wird.',
   alternates: { canonical: canonical('/leitfaden/nachweise') },
+  openGraph: {
+    type: 'website',
+    locale: 'de_DE',
+    siteName: 'Made by Human',
+    title: 'Leitfaden für Prüfnachweise | Made by Human',
+    description: 'Welche Unterlagen und Informationen zeigen können, wie ein Produkt tatsächlich hergestellt wird.',
+    url: canonical('/leitfaden/nachweise'),
+    images: [SOCIAL_IMAGE],
+  },
 };
 
 const evidenceTypes = [
