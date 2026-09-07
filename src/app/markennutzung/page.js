@@ -34,7 +34,7 @@ const prohibited = [
 ];
 
 export default function MarkUsePage() {
-  const assetBase = process.env.GITHUB_PAGES === 'true' ? '/human-certification-web' : '';
+  const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE || '';
 
   return (
     <main className="markUseInstitution">
