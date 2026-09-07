@@ -5,31 +5,31 @@ import { canonical } from '../../lib/seo';
 
 export const metadata = {
   title: 'Warum Made by Human?',
-  description: 'Welche Vorteile die Made by Human Zertifizierung Herstellern und Käufern bietet – von glaubwürdiger Differenzierung bis zur öffentlichen Verifizierung.',
+  description: 'Warum Made by Human menschliche Herstellung sichtbar macht – für Hersteller, Marken und Käufer.',
   alternates: { canonical: canonical('/warum-made-by-human') },
   openGraph: {
     title: 'Warum Made by Human? | Made by Human',
-    description: 'Warum eine geprüfte Aussage zur menschlichen Herstellung für Hersteller, Marken und Käufer relevant sein kann.',
+    description: 'Warum menschliche Herstellung sichtbar und überprüfbar sein sollte.',
     url: canonical('/warum-made-by-human'),
   },
 };
 
 const manufacturerBenefits = [
-  ['Differenzierung sichtbar machen', 'Wenn menschliche Arbeit Ihr Produkt prägt, wird dieser Unterschied am Produkt sichtbar und überprüfbar.'],
-  ['Eigenclaim durch Nachweis ersetzen', 'Statt ausschließlich selbst mit Begriffen wie „handgemacht“ oder „manufakturgefertigt“ zu werben, können Sie auf eine definierte Prüfung verweisen.'],
-  ['Wertigkeit erklären', 'Die Zertifizierung schafft einen konkreten Bezug, um den Herstellungsprozess auf Verpackung, Produktseite und im Vertrieb verständlich zu erklären.'],
-  ['Vertrieb und Vertrauen unterstützen', 'Zertifizierungs-ID, Register und klar geregelte Markennutzung machen die Aussage im B2C- und B2B-Kontext nachvollziehbar.'],
+  ['Den Unterschied sichtbar machen', 'Wenn menschliche Arbeit Ihr Produkt prägt, sollen Kunden diesen Unterschied auch erkennen können.'],
+  ['Nicht nur behaupten. Belegen.', 'Statt nur mit Begriffen wie „handgemacht“ oder „manufakturgefertigt“ zu werben, können Sie auf eine konkrete Prüfung verweisen.'],
+  ['Die Arbeit dahinter zeigen', 'Auf Verpackung, Produktseite und im Verkauf können Sie zeigen, welche menschliche Arbeit in Ihrem Produkt steckt.'],
+  ['Vertrauen im Verkauf stärken', 'Zertifizierungs-ID und Register geben Kunden und Geschäftspartnern die Möglichkeit, die Aussage selbst zu prüfen.'],
 ];
 
 const customerBenefits = [
-  ['Schnell verstehen', 'Käufer erkennen, dass menschliche Arbeit ein wesentlicher Bestandteil der Herstellung des konkret gekennzeichneten Produktes ist.'],
+  ['Schnell verstehen', 'Käufer erkennen, dass menschliche Arbeit dieses Produkt wesentlich prägt.'],
   ['Öffentlich prüfen', 'Zertifizierungs-ID und QR-Code führen zum öffentlichen Datensatz mit Produktbezug und aktuellem Status.'],
-  ['Umfang einordnen', 'Der Datensatz zeigt, welches Produkt oder welche Produktfamilie tatsächlich von der Zertifizierung erfasst ist.'],
+  ['Sehen, wofür die Zertifizierung gilt', 'Der Registereintrag zeigt, welches Produkt oder welche Produktfamilie tatsächlich zertifiziert ist.'],
 ];
 
 const claimComparison = [
-  ['„Handgemacht“', 'Eigenangabe des Herstellers', 'Bedeutung kann unterschiedlich ausgelegt werden', 'Keine öffentliche Statusprüfung'],
-  ['Made by Human', 'Definierte produktbezogene Aussage', 'Vor-Ort-Audit und dokumentierte Bewertung', 'ID, QR und öffentlicher Registerdatensatz'],
+  ['„Handgemacht“', 'Eigene Angabe des Herstellers', 'Kann unterschiedlich verstanden werden', 'Nicht öffentlich prüfbar'],
+  ['Made by Human', 'Klare Aussage für ein bestimmtes Produkt', 'Vor-Ort-Prüfung und dokumentierte Entscheidung', 'ID, QR und öffentlicher Registereintrag'],
 ];
 
 
@@ -86,12 +86,11 @@ export default function WhyPage() {
         <div className="shell whyThesisGrid">
           <p className="premiumSectionLabel">DER KERN</p>
           <div>
-            <h2>Menschliche Herstellung gewinnt an Wert, wenn sie nachvollziehbar belegt ist.</h2>
+            <h2>Menschliche Arbeit wird wertvoller, wenn man sie belegen kann.</h2>
             <p>
-              Viele Marken investieren bewusst in eigene Fertigung, Facharbeit, handwerkliche Prozesse
-              oder menschlich geprägte Produktion. Nach außen bleibt davon oft nur ein unscharfer Begriff.
-              Wir übersetzen diesen Herstellungsunterschied in eine klar definierte,
-              produktbezogene und öffentlich überprüfbare Aussage.
+              Viele Marken investieren bewusst in eigene Fertigung, Facharbeit und handwerkliche Prozesse.
+              Von außen ist davon oft wenig zu erkennen. Made by Human zeigt, welche menschliche Arbeit
+              ein Produkt tatsächlich prägt – und macht die Prüfung öffentlich nachvollziehbar.
             </p>
             <div className="whyThesisSignature">
               <span>NICHT GEGEN TECHNOLOGIE.</span>
@@ -109,9 +108,9 @@ export default function WhyPage() {
               <h2>Geprüfte menschliche Herstellung macht den Unterschied sichtbar.</h2>
             </div>
             <p>
-              Die Zertifizierung ersetzt keine gute Marke und kein gutes Produkt.
-              Sie kann aber einen realen Herstellungsunterschied glaubwürdiger sichtbar machen
-              und dadurch Kommunikation, Vertrieb und Positionierung unterstützen.
+              Die Zertifizierung ersetzt weder eine gute Marke noch ein gutes Produkt.
+              Sie zeigt aber glaubwürdig, was Ihr Produkt in der Herstellung unterscheidet –
+              und gibt Kunden einen Nachweis, den sie selbst prüfen können.
             </p>
           </div>
 
@@ -130,7 +129,7 @@ export default function WhyPage() {
         <div className="shell whyCustomersGrid">
           <div className="whyCustomersIntro">
             <p className="premiumSectionLabel premiumSectionLabelLight">VORTEILE FÜR KÄUFER</p>
-            <h2>Für Käufer entsteht eine klar überprüfbare Information.</h2>
+            <h2>Käufer sehen, was das Zeichen wirklich bedeutet.</h2>
             <p>
               Käufer müssen nicht verstehen, wie jede Fertigungsstufe technisch funktioniert.
               Sie sollen aber nachvollziehen können, was die Kennzeichnung bedeutet –
