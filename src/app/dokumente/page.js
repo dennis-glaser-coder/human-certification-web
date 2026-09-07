@@ -2,12 +2,21 @@ import Link from 'next/link';
 import SiteHeader from '../../components/SiteHeader';
 import SiteFooter from '../../components/SiteFooter';
 import BrandTrace from '../../components/BrandTrace';
-import { canonical } from '../../lib/seo';
+import { canonical, SOCIAL_IMAGE } from '../../lib/seo';
 
 export const metadata = {
   title: 'Dokumentenregister',
   description: 'Öffentliche Regeln und Dokumente des Made by Human Zertifizierungssystems – mit Versionsstand und Datum.',
   alternates: { canonical: canonical('/dokumente') },
+  openGraph: {
+    type: 'website',
+    locale: 'de_DE',
+    siteName: 'Made by Human',
+    title: 'Dokumentenregister | Made by Human',
+    description: 'Öffentliche Regeln und Dokumente des Made by Human Zertifizierungssystems – mit Versionsstand und Datum.',
+    url: canonical('/dokumente'),
+    images: [SOCIAL_IMAGE],
+  },
 };
 
 const documents = [
