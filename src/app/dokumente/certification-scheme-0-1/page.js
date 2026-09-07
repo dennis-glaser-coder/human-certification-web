@@ -5,7 +5,7 @@ import { canonical } from '../../../lib/seo';
 
 export const metadata = {
   title: 'Zertifizierungsschema 0.1',
-  description: 'Regelwerk für Rollen, Prüfprozess, Zertifizierungsentscheidung, Statusverwaltung, öffentliches Register und Verfahrensregeln bei Made by Humans.',
+  description: 'Regelwerk für Rollen, Prüfprozess, Zertifizierungsentscheidung, Statusverwaltung, öffentliches Register und Verfahrensregeln bei Made by Human.',
   alternates: { canonical: canonical('/dokumente/certification-scheme-0-1') },
 };
 
@@ -48,7 +48,7 @@ export default function SchemeDocumentPage() {
         </header>
 
         <div className="controlledDocumentActions">
-          <a className="button primary" href={assetBase + '/documents/made-by-humans-certification-scheme-0-1.pdf'}>PDF herunterladen</a>
+          <a className="button primary" href={assetBase + '/documents/made-by-human-certification-scheme-0-1.pdf'}>PDF herunterladen</a>
           <Link className="button secondary" href="/dokumente">Dokumentenregister</Link>
         </div>
 
