@@ -162,7 +162,7 @@ export default function WhyPage() {
             <p>
               Begriffe wie „handgemacht“, „handcrafted“ oder „manufakturgefertigt“ können sinnvoll sein,
               bleiben aber häufig Eigenangaben. Wir definieren die Aussage zur menschlichen Herstellung enger
-              und machen sie über Prüfung und Register nachvollziehbar.
+              und machen das Ergebnis über Prüfung und Register sichtbar.
             </p>
           </div>
 
