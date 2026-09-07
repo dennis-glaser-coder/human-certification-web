@@ -7,11 +7,11 @@ import { CERTIFIED_STATEMENT } from '../../lib/brand';
 
 export const metadata = {
   title: 'Für Käufer – Was bedeutet Made by Human?',
-  description: 'Made by Human einfach erklärt: Was das Zeichen über menschliche Herstellung aussagt, wie geprüft wird und wie sich eine Zertifizierung per QR oder ID verifizieren lässt.',
+  description: 'Made by Human einfach erklärt: Was das Zeichen bedeutet, wie wir prüfen und wie Käufer eine Zertifizierung über QR oder ID selbst prüfen können.',
   alternates: { canonical: canonical('/fuer-kaeufer') },
   openGraph: {
     title: 'Für Käufer | Made by Human',
-    description: 'Was das Made by Human Zeichen bedeutet – einfach erklärt und öffentlich verifizierbar.',
+    description: 'Was das Made by Human Zeichen bedeutet – einfach erklärt und öffentlich prüfbar.',
     url: canonical('/fuer-kaeufer'),
   },
 };
@@ -19,8 +19,8 @@ export const metadata = {
 const says = [
   ['Menschliche Herstellung', CERTIFIED_STATEMENT],
   ['Vor-Ort-Prüfung', 'Wir prüfen die tatsächliche Herstellung beim Hersteller vor Ort.'],
-  ['Klarer Produktbezug', 'Die Aussage gilt nur für den veröffentlichten Zertifizierungsumfang.'],
-  ['Öffentliche Verifizierung', 'Status, Produktbezug, Standardfassung und relevante Produktionsstandorte können über ID oder QR geprüft werden.'],
+  ['Gilt für ein bestimmtes Produkt', 'Die Zertifizierung gilt nur für das Produkt oder die Produktfamilie, die im Register genannt ist.'],
+  ['Öffentlich prüfbar', 'Über ID oder QR sehen Käufer Produkt, Status, Standard und die angegebenen Produktionsorte.'],
 ];
 
 const doesNotSay = [
@@ -51,8 +51,7 @@ export default function BuyerPage() {
             <BrandTrace compact />
             <h1>Was bedeutet Made by Human?</h1>
             <p className="buyerHeroLead">
-              Das Zeichen steht für eine klar abgegrenzte Aussage: Wir prüfen bei diesem Produkt,
-              ob die wesentlichen Herstellungsschritte nachweislich durch Menschen ausgeführt werden.
+              Das Zeichen bedeutet: Wir haben bei diesem Produkt geprüft, ob die entscheidenden Herstellungsschritte tatsächlich von Menschen ausgeführt werden.
             </p>
             <div className="buyerHeroActions">
               <Link className="desirePrimary" href="/pruefen">Zertifizierung prüfen</Link>
@@ -65,7 +64,7 @@ export default function BuyerPage() {
               <img src={assetBase + '/brand/made-by-human-logo.png'} alt="Made by Human – Verified Human Production" />
             </div>
             <strong>Von Menschen gemacht.<br />Vor Ort geprüft.</strong>
-            <p>Produktfokus · Zertifizierungs-ID · öffentlich verifizierbar</p>
+            <p>Für dieses Produkt · Zertifizierungs-ID · öffentlich prüfbar</p>
           </div>
         </div>
       </section>
@@ -105,7 +104,7 @@ export default function BuyerPage() {
                 <div><dt>Produktionsort</dt><dd>Deutschland · Demo-Standort</dd></div>
                 <div><dt>Standard</dt><dd>0.1-DEMO</dd></div>
               </dl>
-              <div className="buyerProofFoot">Produktbezogen · statusgebunden · öffentlich verifizierbar</div>
+              <div className="buyerProofFoot">Für dieses Produkt · aktueller Status · öffentlich prüfbar</div>
             </div>
           </div>
           <div className="buyerVerifyCopy">
@@ -118,7 +117,7 @@ export default function BuyerPage() {
             <div className="buyerVerifyChecks">
               <span>Produkt & Hersteller</span>
               <span>Zertifizierungsumfang</span>
-              <span>relevante Produktionsstandorte</span>
+              <span>angegebene Produktionsstandorte</span>
               <span>Status & Gültigkeit</span>
               <span>angewendete Standardfassung</span>
             </div>
@@ -185,7 +184,7 @@ export default function BuyerPage() {
       <section className="buyerFinal">
         <div className="shell buyerFinalGrid">
           <div><p className="premiumSectionLabel premiumSectionLabelLight">VERIFIZIERUNG</p><h2>Zertifizierung über ID oder QR prüfen.</h2></div>
-          <div><p>Prüfen Sie die Zertifizierungs-ID oder den QR-Code gegen den öffentlichen Datensatz.</p><Link className="desireFinalButton" href="/pruefen">Zertifizierung prüfen</Link></div>
+          <div><p>Prüfen Sie die Zertifizierungs-ID oder den QR-Code im öffentlichen Register.</p><Link className="desireFinalButton" href="/pruefen">Zertifizierung prüfen</Link></div>
         </div>
       </section>
 
