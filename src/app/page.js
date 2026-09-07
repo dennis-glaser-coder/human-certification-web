@@ -37,11 +37,6 @@ export default function Home() {
               <Link className="desirePrimary" href="/fuer-hersteller#zertifizierungsanfrage">Zertifizierung anfragen</Link>
               <Link className="desireSecondary" href="/warum-made-by-human">Warum Made by Human?</Link>
             </div>
-            <div className="desireProofLine">
-              <span>Vor-Ort-Audit</span>
-              <span>Für dieses Produkt</span>
-              <span>QR & Register</span>
-            </div>
           </div>
 
           <div className="desireHeroVisual">
