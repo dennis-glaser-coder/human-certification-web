@@ -186,7 +186,7 @@ export default function Home() {
             <p className="premiumSectionLabel">VOR-ORT-AUDIT</p>
             <h2>Wir prüfen dort, wo das Produkt tatsächlich entsteht.</h2>
             <p className="desireAuditLead">
-              Kein reines Online-Formular und keine bloße Selbstauskunft: Wir nachvollziehen die tatsächliche Herstellung
+              Kein reines Online-Formular und keine bloße Selbstauskunft: Wir prüfen die tatsächliche Herstellung direkt beim Hersteller vor Ort und dokumentieren die wesentlichen Arbeitsschritte.
               direkt beim Hersteller vor Ort.
             </p>
             <div className="desireAuditFacts">
