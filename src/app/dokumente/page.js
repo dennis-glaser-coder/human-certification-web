@@ -6,7 +6,7 @@ import { canonical } from '../../lib/seo';
 
 export const metadata = {
   title: 'Dokumentenregister',
-  description: 'Versionierte öffentliche Regelwerke und kontrollierte Dokumente des Made by Humans Zertifizierungssystems.',
+  description: 'Versionierte öffentliche Regelwerke und kontrollierte Dokumente des Made by Human Zertifizierungssystems.',
   alternates: { canonical: canonical('/dokumente') },
 };
 
@@ -20,7 +20,7 @@ const documents = [
     date: '04.09.2026',
     copy: 'Geltungsbereich, Prüfkriterien, Abgrenzungen, Nachweise und Entscheidungsregel für physische Produkte.',
     href: '/dokumente/standard-0-1',
-    pdf: '/documents/made-by-humans-standard-0-1.pdf',
+    pdf: '/documents/made-by-human-standard-0-1.pdf',
   },
   {
     id: 'MBH-SCH-0.1',
@@ -31,7 +31,7 @@ const documents = [
     date: '04.09.2026',
     copy: 'Rollen, Prüfprozess, fachliche Kontrolle, Zertifizierungsentscheidung, Statusverwaltung, Register und Verfahrensregeln.',
     href: '/dokumente/certification-scheme-0-1',
-    pdf: '/documents/made-by-humans-certification-scheme-0-1.pdf',
+    pdf: '/documents/made-by-human-certification-scheme-0-1.pdf',
   },
   {
     id: 'MBH-MARK-0.1',
