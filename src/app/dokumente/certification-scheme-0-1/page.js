@@ -27,7 +27,7 @@ const steps = [
 ];
 
 export default function SchemeDocumentPage() {
-  const assetBase = process.env.GITHUB_PAGES === 'true' ? '/human-certification-web' : '';
+  const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE || '';
 
   return (
     <main>
