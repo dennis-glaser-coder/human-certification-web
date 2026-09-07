@@ -2,14 +2,16 @@ import Link from 'next/link';
 import MobileNav from './MobileNav';
 
 export default function SiteHeader() {
-  const assetBase = process.env.GITHUB_PAGES === 'true' ? '/human-certification-web' : '';
+  const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE || '';
 
   return (
-    <header className="siteHeader premiumSiteHeader">
+    <>
+      <a className="skipLink" href="#content-start">Zum Hauptinhalt springen</a>
+      <header className="siteHeader premiumSiteHeader">
       <div className="shell headerInner premiumHeaderInner">
         <Link className="brandLockup premiumBrandLockup" href="/#top" aria-label="Made by Human Startseite – nach oben">
           <span className="brandTextStack">
-            <img className="brandWordmarkAsset" src={assetBase + '/brand/made-by-human-wordmark.png'} alt="Made by Human" />
+            <img className="brandMasterLogoAsset" src={assetBase + '/brand/made-by-human-logo.png'} alt="Made by Human – Verified Human Production" />
             <span className="brandDescriptor">Zertifizierung für menschliche Herstellung</span>
           </span>
         </Link>
@@ -39,6 +41,8 @@ export default function SiteHeader() {
           <MobileNav />
         </div>
       </div>
-    </header>
+      </header>
+      <span id="content-start" className="contentStart" tabIndex="-1" aria-hidden="true"></span>
+    </>
   );
 }
