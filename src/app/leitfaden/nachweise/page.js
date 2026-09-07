@@ -10,9 +10,9 @@ export const metadata = {
 };
 
 const evidenceTypes = [
-  ['Prozessbeschreibung', 'Eine verständliche Übersicht der wesentlichen Herstellungsschritte – vom Material oder Bauteil bis zum verkaufsfertigen Produkt.'],
-  ['Produktionsstandorte', 'Angaben zu den Orten, an denen wesentliche produktprägende Arbeitsschritte tatsächlich stattfinden.'],
-  ['Fremdfertigung', 'Informationen zu extern ausgeführten Schritten, wenn diese zum Zertifizierungsumfang gehören.'],
+  ['Prozessbeschreibung', 'Eine verständliche Übersicht der wichtigsten Herstellungsschritte – vom Material oder Bauteil bis zum fertigen Produkt.'],
+  ['Produktionsstandorte', 'Angaben zu den Orten, an denen die wichtigen Arbeitsschritte tatsächlich stattfinden.'],
+  ['Fremdfertigung', 'Informationen zu wichtigen Schritten, die außerhalb des eigenen Betriebs ausgeführt werden.'],
   ['Bild- und Videonachweise', 'Fotos oder Videos können zeigen, wie einzelne Arbeitsschritte tatsächlich von Menschen ausgeführt werden.'],
   ['Fertigungsunterlagen', 'Arbeits-, Prozess-, Auftrags- oder Produktionsunterlagen können den beschriebenen Ablauf belegen.'],
   ['Änderungsnachweise', 'Änderungen an Herstellungsverfahren, Produktionsorten oder externer Fertigung müssen der bestehenden Zertifizierung zugeordnet werden können.'],
@@ -21,7 +21,7 @@ const evidenceTypes = [
 const weakEvidence = [
   'Eine reine Marketingaussage wie „handgemacht“ oder „manufakturgefertigt“.',
   'Nur ein Foto des fertigen Produkts ohne Bezug zum Herstellungsprozess.',
-  'Eine allgemeine Unternehmensdarstellung ohne produktbezogene Prozessinformationen.',
+  'Eine allgemeine Unternehmensdarstellung ohne Informationen dazu, wie das konkrete Produkt hergestellt wird.',
   'Herkunfts- oder Lieferantenangaben, wenn daraus die tatsächliche menschliche Herstellung nicht hervorgeht.',
 ];
 
@@ -56,8 +56,7 @@ export default function EvidenceGuidePage() {
             <h2>Sechs typische Arten von Belegen.</h2>
           </div>
           <p>
-            Welche Kombination sinnvoll ist, hängt vom Produkt, der Produktionsstruktur,
-            dem Automatisierungsgrad und der Fremdfertigung ab.
+            Welche Belege sinnvoll sind, hängt vom Produkt, der Produktion, dem Einsatz von Maschinen und möglicher externer Fertigung ab.
           </p>
         </div>
 
@@ -94,12 +93,11 @@ export default function EvidenceGuidePage() {
         </div>
         <div>
           <p>
-            Für die erste fachliche Vorprüfung müssen nicht alle Unterlagen bereits vollständig aufbereitet sein.
-            Wichtig ist, dass der Herstellungsprozess belastbar beschrieben werden kann und geeignete Nachweise verfügbar sind.
+            Für die erste Einschätzung müssen noch nicht alle Unterlagen vollständig aufbereitet sein. Wichtig ist, dass Sie erklären können, wie das Produkt hergestellt wird, und passende Belege verfügbar sind.
           </p>
           <div className="guideLinks">
             <Link className="button primary" href="/fuer-hersteller#zertifizierungsanfrage">Zertifizierung anfragen</Link>
-            <Link className="textLink" href="/leitfaden/zertifizierungsumfang">Zertifizierungsumfang verstehen →</Link>
+            <Link className="textLink" href="/leitfaden/zertifizierungsumfang">Was genau zertifiziert wird →</Link>
           </div>
         </div>
       </section>
