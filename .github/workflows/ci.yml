@@ -42,4 +42,8 @@ jobs:
           python scripts/generate_public_documents.py
 
       - name: Build
+        env:
+          NEXT_PUBLIC_SITE_URL: "https://madebyhuman.org"
+          NEXT_PUBLIC_SITE_INDEXABLE: "true"
+          NEXT_PUBLIC_BASE_PATH: ""
         run: npm run build
