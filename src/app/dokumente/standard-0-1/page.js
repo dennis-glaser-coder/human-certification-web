@@ -55,7 +55,7 @@ export default function StandardDocumentPage() {
         <section>
           <h2>Geltungsbereich</h2>
           <p>
-            Bewertet wird ein definiertes physisches Produkt oder eine klar abgegrenzte Produktfamilie und der zugehörige Herstellungsprozess.
+            Geprüft wird ein klar benanntes physisches Produkt oder eine klar benannte Produktfamilie mit dem dazugehörigen Herstellungsprozess.
             Nicht Gegenstand dieser Fassung sind Herkunftsland, Nachhaltigkeit, Bio- oder Fairtrade-Eigenschaften und Unternehmensgröße.
           </p>
         </section>
