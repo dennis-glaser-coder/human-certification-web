@@ -106,7 +106,7 @@ export default function WhyPage() {
           <div className="whySectionHead">
             <div>
               <p className="premiumSectionLabel">VORTEILE FÜR HERSTELLER</p>
-              <h2>Geprüfte menschliche Herstellung schafft belastbare Differenzierung.</h2>
+              <h2>Geprüfte menschliche Herstellung macht den Unterschied sichtbar.</h2>
             </div>
             <p>
               Die Zertifizierung ersetzt keine gute Marke und kein gutes Produkt.
