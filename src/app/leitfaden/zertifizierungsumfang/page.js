@@ -5,15 +5,15 @@ import { canonical } from '../../../lib/seo';
 
 export const metadata = {
   title: 'Leitfaden zum Zertifizierungsumfang',
-  description: 'Wie Produkt, Produktfamilie, Varianten, Produktionsorte und relevante Änderungen für eine Made by Human Zertifizierung abgegrenzt werden.',
+  description: 'Wie wir festlegen, welches Produkt, welche Varianten und welche Produktionsorte zu einer Made by Human Zertifizierung gehören.',
   alternates: { canonical: canonical('/leitfaden/zertifizierungsumfang') },
 };
 
 const scopeRules = [
-  ['Eindeutiges Produkt', 'Der Umfang muss klar erkennen lassen, welches physische Produkt oder welche definierte Produktfamilie geprüft wird.'],
-  ['Gleicher Herstellungsprozess', 'Produkte können gemeinsam betrachtet werden, wenn die wesentlichen produktprägenden Herstellungsschritte vergleichbar sind.'],
-  ['Gleiche relevante Standorte', 'Produktionsorte, an denen wesentliche Schritte stattfinden, müssen zum veröffentlichten Umfang passen.'],
-  ['Fremdfertigung einbeziehen', 'Extern ausgeführte wesentliche Schritte gehören in den Umfang, wenn sie für die zertifizierte Aussage relevant sind.'],
+  ['Klares Produkt', 'Es muss eindeutig sein, welches Produkt oder welche Produktfamilie geprüft wird.'],
+  ['Ähnliche Herstellung', 'Produkte können gemeinsam geprüft werden, wenn die entscheidenden Herstellungsschritte weitgehend gleich sind.'],
+  ['Passende Produktionsorte', 'Die Orte, an denen wichtige Herstellungsschritte stattfinden, müssen zur Zertifizierung passen.'],
+  ['Externe Fertigung einbeziehen', 'Wichtige Arbeitsschritte bei anderen Betrieben gehören zur Zertifizierung, wenn sie das Produkt wesentlich prägen.'],
 ];
 
 const examples = [
@@ -37,7 +37,7 @@ export default function ScopeGuidePage() {
 
       <section className="pageHero shell">
         <div className="eyebrow">LEITFADEN · ZERTIFIZIERUNGSUMFANG</div>
-        <h1>So wird festgelegt, was eine Zertifizierung tatsächlich umfasst.</h1>
+        <h1>So legen wir fest, wofür eine Zertifizierung gilt.</h1>
         <p className="lead">
           Zertifiziert wird nicht pauschal ein Unternehmen. Der öffentliche Datensatz beschreibt
           ein konkretes Produkt oder eine klar abgegrenzte Produktfamilie und verbindet diesen Umfang
@@ -47,10 +47,10 @@ export default function ScopeGuidePage() {
 
       <section className="guideMetaBand">
         <div className="shell guideMetaGrid">
-          <div><strong>Produkt</strong><p>Konkreter Gegenstand der Zertifizierung.</p></div>
-          <div><strong>Produktfamilie</strong><p>Zusammenfassung vergleichbarer Varianten nur bei passendem Prozess.</p></div>
-          <div><strong>Standorte</strong><p>Relevante Produktionsorte gehören zum Umfang.</p></div>
-          <div><strong>Änderungen</strong><p>Wesentliche Prozessänderungen können eine Neubewertung auslösen.</p></div>
+          <div><strong>Produkt</strong><p>Das konkrete Produkt, für das die Zertifizierung gilt.</p></div>
+          <div><strong>Produktfamilie</strong><p>Vergleichbare Varianten können zusammengefasst werden, wenn sie weitgehend gleich hergestellt werden.</p></div>
+          <div><strong>Standorte</strong><p>Wichtige Produktionsorte gehören zur Zertifizierung.</p></div>
+          <div><strong>Änderungen</strong><p>Ändert sich die Herstellung wesentlich, kann eine neue Prüfung nötig werden.</p></div>
         </div>
       </section>
 
@@ -58,7 +58,7 @@ export default function ScopeGuidePage() {
         <div className="sectionIntro compact">
           <div>
             <div className="sectionNo">ABGRENZUNG</div>
-            <h2>Vier Fragen definieren den Umfang.</h2>
+            <h2>Vier Fragen klären, was zur Zertifizierung gehört.</h2>
           </div>
           <p>
             Der Umfang muss so konkret sein, dass später eindeutig geprüft werden kann,
@@ -104,8 +104,8 @@ export default function ScopeGuidePage() {
       <section className="guideDark">
         <div className="shell guideDarkGrid">
           <div>
-            <div className="sectionNo light">ÄNDERUNGSMELDUNG</div>
-            <h2>Wann der bestehende Umfang neu geprüft werden sollte.</h2>
+            <div className="sectionNo light">WENN SICH ETWAS ÄNDERT</div>
+            <h2>Wann eine Zertifizierung neu geprüft werden sollte.</h2>
           </div>
           <div className="guideChecklist">
             {changeTriggers.map((item) => (
@@ -120,7 +120,7 @@ export default function ScopeGuidePage() {
       <section className="shell guideClose">
         <div>
           <div className="sectionNo">VORBEREITUNG</div>
-          <h2>Den richtigen Umfang vor der Prüfung festlegen.</h2>
+          <h2>Vor der Prüfung festlegen, was zertifiziert werden soll.</h2>
         </div>
         <div>
           <p>
