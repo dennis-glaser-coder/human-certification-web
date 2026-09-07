@@ -5,7 +5,7 @@ import { canonical } from '../../../lib/seo';
 
 export const metadata = {
   title: 'Leitfaden für Prüfnachweise',
-  description: 'Welche Unterlagen und Informationen die Prüfung menschlicher Herstellung nachvollziehbar machen können.',
+  description: 'Welche Unterlagen und Informationen zeigen können, wie ein Produkt tatsächlich hergestellt wird.',
   alternates: { canonical: canonical('/leitfaden/nachweise') },
 };
 
@@ -13,9 +13,9 @@ const evidenceTypes = [
   ['Prozessbeschreibung', 'Eine verständliche Übersicht der wesentlichen Herstellungsschritte – vom Material oder Bauteil bis zum verkaufsfertigen Produkt.'],
   ['Produktionsstandorte', 'Angaben zu den Orten, an denen wesentliche produktprägende Arbeitsschritte tatsächlich stattfinden.'],
   ['Fremdfertigung', 'Informationen zu extern ausgeführten Schritten, wenn diese zum Zertifizierungsumfang gehören.'],
-  ['Bild- und Videonachweise', 'Aufnahmen können die tatsächliche menschliche Ausführung einzelner Herstellungsschritte unterstützen.'],
-  ['Fertigungsunterlagen', 'Geeignete Arbeits-, Prozess-, Auftrags- oder Produktionsunterlagen können den beschriebenen Ablauf belegen.'],
-  ['Änderungsnachweise', 'Relevante Änderungen an Verfahren, Standorten oder Fremdfertigung müssen dem bestehenden Zertifizierungsumfang zugeordnet werden können.'],
+  ['Bild- und Videonachweise', 'Fotos oder Videos können zeigen, wie einzelne Arbeitsschritte tatsächlich von Menschen ausgeführt werden.'],
+  ['Fertigungsunterlagen', 'Arbeits-, Prozess-, Auftrags- oder Produktionsunterlagen können den beschriebenen Ablauf belegen.'],
+  ['Änderungsnachweise', 'Änderungen an Herstellungsverfahren, Produktionsorten oder externer Fertigung müssen der bestehenden Zertifizierung zugeordnet werden können.'],
 ];
 
 const weakEvidence = [
@@ -32,7 +32,7 @@ export default function EvidenceGuidePage() {
 
       <section className="pageHero shell">
         <div className="eyebrow">LEITFADEN · PRÜFNACHWEISE</div>
-        <h1>Nachweise müssen den Herstellungsprozess nachvollziehbar machen.</h1>
+        <h1>Belege müssen zeigen, wie das Produkt hergestellt wird.</h1>
         <p className="lead">
           Es gibt nicht den einen vorgeschriebenen Beleg für jedes Produkt. Entscheidend ist,
           dass die Kombination der vorliegenden Informationen die wesentlichen Herstellungsschritte,
@@ -42,10 +42,10 @@ export default function EvidenceGuidePage() {
 
       <section className="guideMetaBand">
         <div className="shell guideMetaGrid">
-          <div><strong>Produktbezogen</strong><p>Nachweise müssen zum konkreten Zertifizierungsumfang passen.</p></div>
-          <div><strong>Prozessbezogen</strong><p>Entscheidend ist die tatsächliche Herstellung, nicht nur das Endprodukt.</p></div>
-          <div><strong>Kombinierbar</strong><p>Mehrere unterschiedliche Belege können gemeinsam ein belastbares Bild ergeben.</p></div>
-          <div><strong>Nachvollziehbar</strong><p>Unterlagen müssen der Prüfung eindeutig zugeordnet werden können.</p></div>
+          <div><strong>Zum Produkt passend</strong><p>Die Belege müssen zu dem Produkt passen, das zertifiziert werden soll.</p></div>
+          <div><strong>Zur Herstellung passend</strong><p>Entscheidend ist, wie das Produkt entsteht – nicht nur, wie es am Ende aussieht.</p></div>
+          <div><strong>Mehrere Belege möglich</strong><p>Verschiedene Unterlagen können zusammen zeigen, wie das Produkt hergestellt wird.</p></div>
+          <div><strong>Eindeutig zuordenbar</strong><p>Die Unterlagen müssen klar zum Produkt und zur Herstellung gehören.</p></div>
         </div>
       </section>
 
@@ -53,7 +53,7 @@ export default function EvidenceGuidePage() {
         <div className="sectionIntro compact">
           <div>
             <div className="sectionNo">GEEIGNETE NACHWEISE</div>
-            <h2>Sechs typische Nachweisarten.</h2>
+            <h2>Sechs typische Arten von Belegen.</h2>
           </div>
           <p>
             Welche Kombination sinnvoll ist, hängt vom Produkt, der Produktionsstruktur,
@@ -75,7 +75,7 @@ export default function EvidenceGuidePage() {
         <div className="shell guideDarkGrid">
           <div>
             <div className="sectionNo light">NICHT AUSREICHEND</div>
-            <h2>Eine Behauptung ist noch kein Nachweis.</h2>
+            <h2>Eine Behauptung allein ist noch kein Beleg.</h2>
           </div>
           <div className="guideChecklist">
             {weakEvidence.map((item) => (
@@ -90,7 +90,7 @@ export default function EvidenceGuidePage() {
       <section className="shell guideClose">
         <div>
           <div className="sectionNo">NÄCHSTER SCHRITT</div>
-          <h2>Produkt und Nachweise gemeinsam einordnen.</h2>
+          <h2>Produkt und Belege gemeinsam ansehen.</h2>
         </div>
         <div>
           <p>
