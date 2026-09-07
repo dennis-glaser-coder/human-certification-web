@@ -36,7 +36,7 @@ export default function EvidenceGuidePage() {
         <p className="lead">
           Es gibt nicht den einen vorgeschriebenen Beleg für jedes Produkt. Entscheidend ist,
           dass die Kombination der vorliegenden Informationen die wesentlichen Herstellungsschritte,
-          ihre tatsächliche Ausführung und die relevanten Produktionsorte nachvollziehbar macht.
+          wie sie tatsächlich ausgeführt werden und wo produziert wird.
         </p>
       </section>
 
