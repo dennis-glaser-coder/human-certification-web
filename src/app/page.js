@@ -41,7 +41,7 @@ export default function Home() {
 
           <div className="desireHeroVisual">
             <img
-              src="https://images.unsplash.com/photo-1463082459669-fd1ca1692fea?auto=format&fit=crop&w=1800&q=86"
+              src={assetBase + '/photography/home-hero-woodworking.jpg'}
               alt="Holzhandwerker bei der manuellen Bearbeitung eines Werkstücks"
             />
           </div>
