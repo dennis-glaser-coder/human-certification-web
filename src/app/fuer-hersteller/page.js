@@ -65,7 +65,7 @@ const manufacturerFaq = [
 ];
 
 export default function ManufacturerPage() {
-  const assetBase = process.env.GITHUB_PAGES === 'true' ? '/human-certification-web' : '';
+  const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE || '';
   const [form, setForm] = useState(initialForm);
   const [state, setState] = useState({ loading: false, success: false, message: '' });
 
