@@ -24,7 +24,7 @@ export default function SiteFooter() {
             <Link href="/pruefen">Zertifizierungs-ID prüfen</Link>
             <Link href="/fuer-kaeufer">Für Käufer</Link>
             <Link href="/fuer-hersteller">Für Hersteller</Link>
-            <Link href="/warum-made-by-humans">Warum Made by Human?</Link>
+            <Link href="/warum-made-by-human">Warum Made by Human?</Link>
           </div>
           <div>
             <span>ORGANISATION</span>
