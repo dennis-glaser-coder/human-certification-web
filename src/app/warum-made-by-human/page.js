@@ -23,13 +23,13 @@ const manufacturerBenefits = [
 
 const customerBenefits = [
   ['Schnell verstehen', 'Käufer erkennen, dass menschliche Arbeit dieses Produkt wesentlich prägt.'],
-  ['Öffentlich prüfen', 'Zertifizierungs-ID und QR-Code führen zum öffentlichen Datensatz mit Produktbezug und aktuellem Status.'],
+  ['Öffentlich prüfen', 'Zertifizierungs-ID und QR-Code führen zum Registereintrag. Dort sehen Käufer, für welches Produkt die Zertifizierung gilt und welchen Status sie hat.'],
   ['Sehen, wofür die Zertifizierung gilt', 'Der Registereintrag zeigt, welches Produkt oder welche Produktfamilie tatsächlich zertifiziert ist.'],
 ];
 
 const claimComparison = [
   ['„Handgemacht“', 'Eigene Angabe des Herstellers', 'Kann unterschiedlich verstanden werden', 'Nicht öffentlich prüfbar'],
-  ['Made by Human', 'Klare Aussage für ein bestimmtes Produkt', 'Vor-Ort-Prüfung und dokumentierte Entscheidung', 'ID, QR und öffentlicher Registereintrag'],
+  ['Made by Human', 'Klare Aussage für ein bestimmtes Produkt', 'Vor-Ort-Prüfung und festgehaltene Entscheidung', 'ID, QR und öffentlicher Registereintrag'],
 ];
 
 
@@ -160,9 +160,7 @@ export default function WhyPage() {
               <h2>Eine geprüfte Aussage ist klarer als eine eigene Werbeaussage.</h2>
             </div>
             <p>
-              Begriffe wie „handgemacht“, „handcrafted“ oder „manufakturgefertigt“ können sinnvoll sein,
-              bleiben aber häufig Eigenangaben. Wir definieren die Aussage zur menschlichen Herstellung enger
-              und machen das Ergebnis über Prüfung und Register sichtbar.
+              Begriffe wie „handgemacht“, „handcrafted“ oder „manufakturgefertigt“ sind schnell verwendet. Made by Human geht einen Schritt weiter: Wir legen fest, was geprüft wird, prüfen vor Ort und machen das Ergebnis im Register sichtbar.
             </p>
           </div>
 
