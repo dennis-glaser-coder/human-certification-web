@@ -2,12 +2,21 @@ import Link from 'next/link';
 import SiteHeader from '../../components/SiteHeader';
 import SiteFooter from '../../components/SiteFooter';
 import BrandTrace from '../../components/BrandTrace';
-import { canonical } from '../../lib/seo';
+import { canonical, SOCIAL_IMAGE } from '../../lib/seo';
 
 export const metadata = {
   title: 'Regeln zur Markennutzung',
   description: 'Regeln dafür, wie das Made by Human Zeichen auf Produkten, Verpackungen und in der Kommunikation verwendet werden darf.',
   alternates: { canonical: canonical('/markennutzung') },
+  openGraph: {
+    type: 'website',
+    locale: 'de_DE',
+    siteName: 'Made by Human',
+    title: 'Regeln zur Markennutzung | Made by Human',
+    description: 'Regeln dafür, wie das Made by Human Zeichen auf Produkten, Verpackungen und in der Kommunikation verwendet werden darf.',
+    url: canonical('/markennutzung'),
+    images: [SOCIAL_IMAGE],
+  },
 };
 
 const rules = [
