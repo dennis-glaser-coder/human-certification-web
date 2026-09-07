@@ -39,7 +39,29 @@ def padded(box, pad):
 
 # Trimmed full master logo.
 full_box = padded(bbox, max(12, int(min(w, h) * 0.025)))
-img.crop(full_box).save(OUT / "made-by-human-logo.png", optimize=True)
+full_logo = img.crop(full_box)
+full_logo.save(OUT / "made-by-human-logo.png", optimize=True)
+full_logo.save(OUT / "made-by-human-logo.webp", "WEBP", quality=92, method=6)
+
+# Social preview: exact approved full logo on the CI paper background.
+social = Image.new("RGBA", (1200, 630), (243, 240, 232, 255))
+social_logo = full_logo.copy()
+social_logo.thumbnail((610, 500), Image.Resampling.LANCZOS)
+social.alpha_composite(
+    social_logo,
+    ((social.width - social_logo.width) // 2, (social.height - social_logo.height) // 2),
+)
+social.convert("RGB").save(OUT / "made-by-human-social.png", optimize=True)
+
+# Search/browser icon: keep the complete approved logo inside a square field.
+favicon = Image.new("RGBA", (512, 512), (243, 240, 232, 255))
+favicon_logo = full_logo.copy()
+favicon_logo.thumbnail((450, 430), Image.Resampling.LANCZOS)
+favicon.alpha_composite(
+    favicon_logo,
+    ((favicon.width - favicon_logo.width) // 2, (favicon.height - favicon_logo.height) // 2),
+)
+favicon.convert("RGB").save(OUT / "made-by-human-favicon.png", optimize=True)
 
 # Find distinct horizontal artwork bands (wordmark above, seal below).
 l, t, r, b = bbox
@@ -111,5 +133,8 @@ if sw != sh:
 seal.save(OUT / "made-by-human-seal.png", optimize=True)
 
 print("Prepared:", OUT / "made-by-human-logo.png")
+print("Prepared:", OUT / "made-by-human-logo.webp")
+print("Prepared:", OUT / "made-by-human-social.png")
+print("Prepared:", OUT / "made-by-human-favicon.png")
 print("Prepared:", OUT / "made-by-human-wordmark.png")
 print("Prepared:", OUT / "made-by-human-seal.png")
