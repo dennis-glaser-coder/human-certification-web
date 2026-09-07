@@ -1,12 +1,21 @@
 import Link from 'next/link';
 import SiteHeader from '../../../components/SiteHeader';
 import SiteFooter from '../../../components/SiteFooter';
-import { canonical } from '../../../lib/seo';
+import { canonical, SOCIAL_IMAGE } from '../../../lib/seo';
 
 export const metadata = {
   title: 'Zertifizierungsschema 0.1',
   description: 'Regelwerk für Rollen, Prüfprozess, Zertifizierungsentscheidung, Statusänderungen, öffentliches Register und Verfahrensregeln bei Made by Human.',
   alternates: { canonical: canonical('/dokumente/certification-scheme-0-1') },
+  openGraph: {
+    type: 'website',
+    locale: 'de_DE',
+    siteName: 'Made by Human',
+    title: 'Zertifizierungsschema 0.1 | Made by Human',
+    description: 'Regelwerk für Rollen, Prüfprozess, Zertifizierungsentscheidung, Statusänderungen, öffentliches Register und Verfahrensregeln bei Made by Human.',
+    url: canonical('/dokumente/certification-scheme-0-1'),
+    images: [SOCIAL_IMAGE],
+  },
 };
 
 const roles = [
