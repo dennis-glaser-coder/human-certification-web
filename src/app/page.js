@@ -25,13 +25,13 @@ export default function Home() {
       <section className="desireHero">
         <div className="shell desireHeroGrid">
           <div className="desireHeroCopy">
-            <p className="premiumEyebrow">ZERTIFIZIERUNG FÜR MENSCHLICHE HERSTELLUNG</p>
+            <p className="premiumEyebrow">ZERTIFIZIERUNG FÜR PHYSISCHE PRODUKTE</p>
             <div className="brandTrace" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
             <h1>Von Menschen gemacht.<br />Vor Ort geprüft.</h1>
             <p className="desireHeroLead">
-              Made by Humans zeichnet physische Produkte aus, deren wesentliche Herstellungsschritte
-              nachweislich durch Menschen ausgeführt werden – mit Vor-Ort-Audit, klarer Produktzuordnung
-              und öffentlicher Verifizierung.
+              Made by Humans zertifiziert physische Produkte, deren wesentliche Herstellungsschritte
+              nachweislich durch Menschen ausgeführt werden. Wir prüfen die tatsächliche Herstellung vor Ort
+              und machen den Zertifizierungsstatus öffentlich überprüfbar.
             </p>
             <div className="desireHeroActions">
               <Link className="desirePrimary" href="/fuer-hersteller#zertifizierungsanfrage">Zertifizierung anfragen</Link>
@@ -71,16 +71,16 @@ export default function Home() {
         <div className="shell desireManifestoGrid">
           <p className="premiumSectionLabel">WARUM ES DAS ZEICHEN GIBT</p>
           <div>
-            <h2>Menschliche Arbeit sollte nicht unsichtbar bleiben.</h2>
+            <h2>Handmade ist schnell gesagt. Wir machen es überprüfbar.</h2>
             <p>
-              Wo Erfahrung, Können und tatsächliche menschliche Arbeit ein Produkt wesentlich prägen,
-              entsteht ein Unterschied, der von außen oft nicht erkennbar ist. Made by Humans macht genau
-              diesen Unterschied sichtbar – ohne mehr zu behaupten, als tatsächlich geprüft wurde.
+              Begriffe wie „handmade“, „handcrafted“ oder „manufakturgefertigt“ sagen allein wenig darüber aus,
+              wie ein Produkt tatsächlich entsteht. Made by Humans prüft die wesentlichen Herstellungsschritte
+              vor Ort und macht das Ergebnis über Zertifizierungs-ID und Register nachvollziehbar.
             </p>
             <figure className="manifestoMaterial">
               <img
-                src="https://images.unsplash.com/photo-1781389005078-d9e413d89c94?auto=format&fit=crop&w=1600&q=84"
-                alt="Hände bei der manuellen Formgebung von Keramik"
+                src={assetBase + '/brand/IMG_1040.png'}
+                alt="Menschliche Holzbearbeitung beim manuellen Schleifen eines Produktes"
                 loading="lazy"
               />
               <figcaption>Material · Können · Ausführung · Nachweis</figcaption>
