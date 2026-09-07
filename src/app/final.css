@@ -1070,3 +1070,183 @@ summary:focus-visible {
     border-left:0;
   }
 }
+
+
+/* ===== Desktop composition and clarity pass 2026-09-07 ===== */
+@media(min-width:1021px){
+  /* Desktop header: still quiet, but no longer visually underweighted on large screens. */
+  .premiumHeaderInner{
+    min-height:76px;
+  }
+  .premiumMainNav{
+    gap:23px;
+  }
+  .premiumMainNav a:not(.navVerify){
+    font-size:9px;
+    letter-spacing:.005em;
+  }
+  .premiumMainNav .navVerify{
+    min-height:40px;
+    padding:0 16px;
+    font-size:9px;
+  }
+
+  /* Public register: reduce empty hero space and bring search + records forward. */
+  .registerHero{
+    min-height:0!important;
+    padding-top:72px!important;
+    padding-bottom:52px!important;
+  }
+  .registerHero .eyebrow{
+    margin-bottom:0;
+  }
+  .registerHero h1{
+    max-width:800px;
+    margin-top:16px!important;
+    margin-bottom:22px!important;
+    font-size:clamp(56px,5.2vw,76px);
+    line-height:.96;
+    letter-spacing:-.045em;
+  }
+  .registerHero .lead{
+    max-width:910px;
+    font-size:12px;
+    line-height:1.68;
+  }
+  .registerSection{
+    padding-top:0!important;
+  }
+  .registerTrustBar{
+    margin-bottom:28px;
+  }
+  .registerTrustBar>div{
+    min-height:108px;
+    padding-top:18px;
+    padding-bottom:17px;
+  }
+  .registerTrustBar strong{
+    margin-bottom:7px;
+  }
+  .registerToolbar{
+    min-height:70px;
+    padding:0 0 14px;
+  }
+  .registerToolbar input{
+    width:min(440px,38vw);
+    max-width:none;
+    min-height:46px;
+    padding:0 14px;
+    border:1px solid rgba(17,24,32,.22);
+    background:#F7F4ED;
+  }
+  .registerRow{
+    gap:22px;
+    padding:23px 18px 23px 14px;
+  }
+  .registerDisclosure{
+    margin-top:18px;
+  }
+
+  /* Dark brand section: visible human making instead of an abstract crop. */
+  .compactHome .compactManifesto{
+    padding-top:88px;
+    padding-bottom:96px;
+  }
+  .compactHome .compactManifesto .desireManifestoGrid{
+    grid-template-columns:minmax(150px,.28fr) minmax(0,1.72fr);
+    gap:66px;
+  }
+  .compactHome .compactManifesto h2{
+    max-width:980px;
+    margin-bottom:24px;
+    font-size:clamp(50px,4.7vw,70px);
+    line-height:.99;
+    letter-spacing:-.04em;
+  }
+  .compactHome .compactManifesto .desireManifestoGrid>div>p{
+    max-width:800px;
+    font-size:12px;
+    line-height:1.72;
+  }
+  .compactHome .manifestoMaterial{
+    height:360px;
+    margin-top:38px;
+    overflow:hidden;
+  }
+  .compactHome .manifestoMaterial img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center 54%;
+    filter:saturate(.66) contrast(1.055) brightness(.93);
+  }
+
+  /* Audit: deliberate two-column editorial composition and a clean crop. */
+  .compactHome .compactAudit{
+    padding:72px 0;
+  }
+  .compactHome .compactAudit .desireAuditGrid{
+    display:grid;
+    grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);
+    min-height:560px;
+    align-items:stretch;
+  }
+  .compactHome .compactAudit .desireAuditCopy{
+    position:relative;
+    grid-column:1;
+    grid-row:1;
+    right:auto;
+    top:auto;
+    width:auto;
+    min-width:0;
+    padding:54px 54px 50px;
+    background:var(--paper);
+    transform:none;
+  }
+  .compactHome .compactAudit .desireAuditCopy h2{
+    max-width:540px;
+    font-size:clamp(39px,3.45vw,50px);
+    line-height:1.02;
+  }
+  .compactHome .compactAudit .desireAuditLead{
+    max-width:570px;
+    font-size:10.5px;
+    line-height:1.72;
+  }
+  .compactHome .compactAudit .desireAudit figure{
+    position:relative;
+    grid-column:2;
+    grid-row:1;
+    inset:auto;
+    height:auto;
+    min-height:560px;
+    margin:0;
+    overflow:hidden;
+    background:var(--ink);
+  }
+  .compactHome .compactAudit .desireAudit figure img{
+    display:block;
+    width:100%;
+    height:100%;
+    min-height:560px;
+    object-fit:cover;
+    object-position:68% 50%;
+    filter:saturate(.70) contrast(1.035) brightness(.97);
+  }
+  .compactHome .compactAudit .desireAudit figure::after{
+    background:rgba(17,24,32,.08);
+  }
+}
+
+@media(min-width:761px) and (max-width:1020px){
+  .registerHero{
+    padding-top:58px!important;
+    padding-bottom:46px!important;
+  }
+  .compactHome .manifestoMaterial img{
+    object-position:center 56%;
+  }
+  .compactHome .compactAudit .desireAudit figure img{
+    object-position:66% 50%;
+  }
+}
