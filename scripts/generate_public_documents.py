@@ -9,7 +9,7 @@ from reportlab.pdfbase import pdfmetrics
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'public' / 'documents'
-SEAL = ROOT / 'public' / 'brand' / 'made-by-human-seal.png'
+LOGO = ROOT / 'public' / 'brand' / 'made-by-human-logo.png'
 OUT.mkdir(parents=True, exist_ok=True)
 
 INK = colors.HexColor('#111820')
@@ -37,7 +37,7 @@ SERIF = 'MBSerif' if 'MBSerif' in pdfmetrics.getRegisteredFontNames() else 'Time
 ss = getSampleStyleSheet()
 ST = {
     'eyebrow': ParagraphStyle('eyebrow', parent=ss['Normal'], fontName=SANS_B, fontSize=7.5, leading=9, textColor=BLUE, spaceAfter=7),
-    'title': ParagraphStyle('title', parent=ss['Title'], fontName=SERIF, fontSize=28, leading=32, textColor=INK, spaceAfter=10),
+    'title': ParagraphStyle('title', parent=ss['Title'], fontName=SERIF, fontSize=24, leading=28, textColor=INK, spaceAfter=10),
     'subtitle': ParagraphStyle('subtitle', parent=ss['Normal'], fontName=SANS, fontSize=10.5, leading=16, textColor=MUTED, spaceAfter=14),
     'h1': ParagraphStyle('h1', parent=ss['Heading1'], fontName=SERIF, fontSize=18, leading=22, textColor=INK, spaceBefore=12, spaceAfter=8),
     'h2': ParagraphStyle('h2', parent=ss['Heading2'], fontName=SANS_B, fontSize=10.5, leading=14, textColor=BLUE, spaceBefore=9, spaceAfter=5),
@@ -51,6 +51,16 @@ ST = {
 
 def P(text, style='body'):
     return Paragraph(text, ST[style])
+
+def brand_logo():
+    if not LOGO.exists():
+        return None
+    logo = Image(str(LOGO))
+    max_w, max_h = 37*mm, 37*mm
+    scale = min(max_w / logo.imageWidth, max_h / logo.imageHeight)
+    logo.drawWidth = logo.imageWidth * scale
+    logo.drawHeight = logo.imageHeight * scale
+    return logo
 
 def bullet(text):
     return Table([[P('•', 'tableb'), P(text, 'body')]], colWidths=[4*mm, 163*mm], style=TableStyle([
@@ -66,7 +76,7 @@ def header_footer(canvas, doc, doc_id, short_title, status):
     canvas.setFont(SANS_B, 6.8); canvas.setFillColor(BLUE)
     canvas.drawRightString(w-18*mm, h-11.4*mm, f'MADE BY HUMAN  /  {doc_id}')
     canvas.setFont(SANS, 6.2); canvas.setFillColor(MUTED)
-    canvas.drawString(18*mm, 10.5*mm, f'{short_title}  ·  Version 0.1  ·  {status}')
+    canvas.drawString(18*mm, 10.5*mm, f'{short_title}  ·  {status}')
     canvas.restoreState()
 
 def title_block(title, subtitle, doc_id, status, details):
@@ -75,7 +85,8 @@ def title_block(title, subtitle, doc_id, status, details):
         P(title,'title'), P(subtitle,'subtitle'),
         P('Kontrolliertes Dokument. Dokument-ID, Version und Stand ermöglichen eine eindeutige Referenzierung der veröffentlichten Fassung.','small')
     ]
-    right = [Image(str(SEAL), width=34*mm, height=34*mm), Spacer(1,4*mm), P('MADE BY HUMAN','white'), P(doc_id,'white')] if SEAL.exists() else [P('MADE BY HUMAN','white'), P(doc_id,'white')]
+    logo = brand_logo()
+    right = ([logo, Spacer(1,3*mm), P(doc_id,'white')] if logo else [P('MADE BY HUMAN','white'), P(doc_id,'white')])
     t = Table([[left, right]], colWidths=[123*mm, 47*mm])
     t.setStyle(TableStyle([
         ('BACKGROUND',(0,0),(0,0),PAPER), ('BACKGROUND',(1,0),(1,0),INK), ('VALIGN',(0,0),(-1,-1),'TOP'),
@@ -168,7 +179,7 @@ def build_standard():
     ct.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,0),INK),('LINEBELOW',(0,1),(-1,-1),0.4,STONE),('VALIGN',(0,0),(-1,-1),'TOP'),('LEFTPADDING',(0,0),(-1,-1),2*mm),('RIGHTPADDING',(0,0),(-1,-1),2*mm),('TOPPADDING',(0,0),(-1,-1),1.7*mm),('BOTTOMPADDING',(0,0),(-1,-1),1.7*mm)]))
     story.append(ct)
     story += [P('9  Bezug zur Zertifizierung und zum öffentlichen Register','h1'),P('Eine spätere Zertifizierungsentscheidung soll sich auf ein konkret abgegrenztes Produkt oder eine Produktfamilie, die angewendete Standardversion und den geprüften Herstellungsprozess beziehen.'),P('Bei positiver Entscheidung soll die Kennzeichnung mit einer eindeutigen Zertifizierungs-ID verknüpft werden. Der öffentliche Registereintrag soll mindestens Hersteller, Produkt, Standardversion, Status sowie Gültigkeitsinformationen ausweisen.'),P('10  Änderungen am Herstellungsprozess','h1'),P('Wesentliche Änderungen an Produkt, Produktionsstandorten, Fremdfertigung oder produktprägenden Herstellungsschritten sollen meldepflichtig sein. Je nach Bedeutung kann eine erneute Prüfung oder Anpassung des Zertifizierungsumfangs erforderlich werden.'),P('11  Status dieser Fassung','h1'),P('Version 0.1 ist die veröffentlichte Fassung dieses Dokuments. Änderungen an Kriterien, Nachweisanforderungen und Grenzfällen werden in einer neuen Version nachvollziehbar dokumentiert.'),P('Änderungen an Kriterien, Nachweisanforderungen und Grenzfällen werden versioniert dokumentiert.')]
-    doc.build(story,onFirstPage=lambda c,d: header_footer(c,d,'MBH-STD-0.1','Standard','Veröffentlicht'),onLaterPages=lambda c,d: header_footer(c,d,'MBH-STD-0.1','Standard','Version 0.1'))
+    doc.build(story,onFirstPage=lambda c,d: header_footer(c,d,'MBH-STD-0.1','Standard','Version 0.1 · Veröffentlicht'),onLaterPages=lambda c,d: header_footer(c,d,'MBH-STD-0.1','Standard','Version 0.1 · Veröffentlicht'))
 
 def build_scheme():
     path=OUT/'made-by-human-certification-scheme-0-1.pdf'
@@ -187,7 +198,7 @@ def build_scheme():
     story += [P('4  Prüfprozess','h1'),criteria_table([('1','Zertifizierungsumfang','Produkt, Produktfamilie und Herstellungsorte abgrenzen.'),('2','Prozessaufnahme','Wesentliche Herstellungsschritte und Fremdfertigung erfassen.'),('3','Nachweise','Unterlagen und Informationen zur tatsächlichen Ausführung prüfen.'),('4','Prüfung','Produktionsfall gegen die Kriterien des Standards bewerten.'),('5','Fachprüfung','Prüfergebnis fachlich kontrollieren und offene Punkte klären.'),('6','Entscheidung','Zertifizierungsstatus dokumentiert festlegen und bei Freigabe registrieren.')]),PageBreak(),P('5  Zertifizierungsentscheidung','h1'),P('Eine positive Entscheidung soll nur erfolgen, wenn Zertifizierungsumfang, Prüfkriterien und erforderliche Nachweise ausreichend geklärt sind.'),P('Offene Abweichungen können je nach Bedeutung zu Nachforderungen, Ablehnung oder einem späteren Wiederholungs- bzw. Ergänzungsprüfung führen.'),P('6  Zertifizierungsstatus','h1')]
     for n,d in [('Aktiv','Zertifizierung ist innerhalb des festgelegten Umfangs und Zeitraums gültig.'),('Ausgesetzt','Nutzung des Zeichens ist vorübergehend eingeschränkt oder untersagt, bis die Ursache geklärt ist.'),('Abgelaufen','Gültigkeitszeitraum ist beendet und wurde nicht rechtzeitig erneuert.'),('Widerrufen','Zertifizierung wurde beendet; weitere Nutzung des Zeichens für den betroffenen Zertifizierungsumfang ist unzulässig.')]: story.append(P(f'<b><font color="#294C77">{n}:</font></b> {d}'))
     story += [P('7  Gültigkeit, Änderungen und Erneuerung','h1'),P('Gültigkeitsdauer, Erneuerungslogik und erforderliche Nachprüfungen werden im jeweiligen Zertifizierungsdatensatz und den anwendbaren Verfahrensregeln dokumentiert.'),P('Wesentliche Änderungen am zertifizierten Produkt, Produktionsstandort, Herstellungsprozess oder an relevanter Fremdfertigung sollen meldepflichtig sein. Der Zertifizierungsstatus kann bis zur Bewertung der Änderung angepasst werden.'),P('8  Öffentliches Register','h1'),P('Jede freigegebene Kennzeichnung soll auf einen öffentlich prüfbaren Datensatz verweisen. Die Zertifizierungs-ID dient als eindeutige Verbindung zwischen Zeichen und Register.'),P('Der öffentliche Datensatz soll mindestens Zertifizierungs-ID, Hersteller, Produkt oder Produktfamilie, Standardversion, Status, Gültigkeitsinformationen und relevante Statusänderungen enthalten.'),P('9  Markennutzung','h1'),P('Die Nutzung des Zeichens ist an den zertifizierten Zertifizierungsumfang und den aktuellen Zertifizierungsstatus gebunden. Die Markennutzungsregeln werden als separates Dokument geführt.'),P('Das Zeichen darf nicht so verwendet werden, dass der Eindruck entsteht, das gesamte Unternehmen, nicht erfasste Produkte oder andere Eigenschaften seien zertifiziert.'),P('10  Beschwerden, Einsprüche und Zeichenmissbrauch','h1'),P('10.1  Beschwerden','h2'),P('Beschwerden betreffen die Durchführung, Kommunikation oder Funktionsweise des Zertifizierungssystems. Eingang, Prüfung, Maßnahmen und Abschluss sollen dokumentiert werden.'),P('10.2  Einsprüche','h2'),P('Ein Einspruch richtet sich gegen eine konkrete Zertifizierungsentscheidung. Das Verfahren soll sicherstellen, dass der Einspruch von einer Person oder Funktion bewertet wird, die nicht allein die angefochtene Entscheidung getroffen hat.'),P('10.3  Zeichenmissbrauch','h2'),P('Unberechtigte, irreführende oder Nutzung außerhalb des Zertifizierungsumfangs des Zeichens soll dokumentiert und verfolgt werden. Mögliche Maßnahmen reichen von Korrekturaufforderung über Aussetzung bis zum Widerruf und weiteren rechtlichen Schritten.'),callout('Keine vorgetäuschte Unabhängigkeit','Solange die endgültige Organisations- und Integritätsstruktur nicht eingerichtet ist, wird nicht behauptet, dass Beschwerden oder Einsprüche bereits durch eine unabhängige externe Instanz entschieden werden.'),Spacer(1,4*mm),P('11  Interessenkonflikte und Unparteilichkeit','h1'),P('Rollen, Freigaben und fachliche Kontrolle werden so organisiert, dass wirtschaftliche Interessen eines Antragstellers die Zertifizierungsentscheidung nicht bestimmen.'),P('Potenzielle Interessenkonflikte werden vor einer Prüfung identifiziert und dokumentiert.'),P('12  Dokumentenlenkung','h1'),P('Standard, Zertifizierungsschema, Markennutzungsregeln und Verfahrensregeln werden versioniert geführt. Änderungen werden mit Version, Datum, Status und Änderungsgrund dokumentiert.'),P('Öffentliche Zertifizierungsdatensätze sollen auf die jeweils angewendete Standardversion verweisen.'),P('13  Status dieser Fassung','h1'),P('Zertifizierungsschema 0.1 ist die veröffentlichte Fassung des Regelwerks. Akkreditierung oder externe Unabhängigkeit werden nur ausgewiesen, wenn sie für die jeweilige Funktion nachweislich bestehen.'),P('Änderungen an organisatorischen Verantwortlichkeiten, Gültigkeits- und Überwachungslogik sowie Verfahren für Beschwerden und Einsprüche werden versioniert dokumentiert.')]
-    doc.build(story,onFirstPage=lambda c,d: header_footer(c,d,'MBH-SCH-0.1','Zertifizierungsschema','Veröffentlicht'),onLaterPages=lambda c,d: header_footer(c,d,'MBH-SCH-0.1','Zertifizierungsschema','Version 0.1'))
+    doc.build(story,onFirstPage=lambda c,d: header_footer(c,d,'MBH-SCH-0.1','Zertifizierungsschema','Version 0.1 · Veröffentlicht'),onLaterPages=lambda c,d: header_footer(c,d,'MBH-SCH-0.1','Zertifizierungsschema','Version 0.1 · Veröffentlicht'))
 
 if __name__ == '__main__':
     build_standard()
