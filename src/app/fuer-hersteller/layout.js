@@ -8,7 +8,7 @@ export const metadata = {
     canonical: canonical('/fuer-hersteller'),
   },
   openGraph: {
-    title: 'Zertifizierung für Hersteller | Made by Humans',
+    title: 'Zertifizierung für Hersteller | Made by Human',
     description:
       'Herstellungsprozess, Nachweise und Prüfablauf für physische Produkte mit wesentlicher menschlicher Fertigung.',
     url: canonical('/fuer-hersteller'),
