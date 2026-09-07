@@ -1,11 +1,20 @@
 import SiteHeader from '../../components/SiteHeader';
 import SiteFooter from '../../components/SiteFooter';
-import { canonical } from '../../lib/seo';
+import { canonical, SOCIAL_IMAGE } from '../../lib/seo';
 
 export const metadata = {
   title: 'Impressum',
   description: 'Impressum und Anbieterangaben von Made by Human.',
   alternates: { canonical: canonical('/impressum') },
+  openGraph: {
+    type: 'website',
+    locale: 'de_DE',
+    siteName: 'Made by Human',
+    title: 'Impressum | Made by Human',
+    description: 'Impressum und Anbieterangaben von Made by Human.',
+    url: canonical('/impressum'),
+    images: [SOCIAL_IMAGE],
+  },
 };
 
 export default function ImpressumPage() {
