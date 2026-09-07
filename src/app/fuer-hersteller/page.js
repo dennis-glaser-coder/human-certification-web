@@ -21,47 +21,47 @@ const initialForm = {
 };
 
 const certificationValue = [
-  ['Produktbezogener Umfang', 'Wir zertifizieren ein eindeutig abgegrenztes Produkt oder eine klar definierte Produktfamilie.'],
-  ['Dokumentierte Prüfung', 'Wir bewerten Herstellungsprozess, relevante Standorte und geeignete Nachweise gegen den Standard.'],
-  ['Eindeutige Zertifizierungs-ID', 'Nach positiver Entscheidung ordnen wir die Zertifizierung einem eindeutigen öffentlichen Datensatz zu.'],
-  ['Öffentliche Verifizierung', 'Über unser Register machen wir Standardfassung, Produktbezug, Status und Gültigkeit nachvollziehbar.'],
+  ['Für ein bestimmtes Produkt', 'Die Zertifizierung gilt für ein klar benanntes Produkt oder eine klar benannte Produktfamilie.'],
+  ['Prüfung nach festen Kriterien', 'Wir prüfen Herstellungsprozess, Produktionsorte und Belege anhand des Standards.'],
+  ['Eigene Zertifizierungs-ID', 'Nach positiver Entscheidung erhält die Zertifizierung eine eindeutige ID und einen öffentlichen Registereintrag.'],
+  ['Öffentlich prüfbar', 'Im Register sind Produkt, Standard, Status und Gültigkeit öffentlich einsehbar.'],
 ];
 
 const suitable = [
   ['Physisches Produkt', 'Das zu prüfende Endprodukt oder die Produktfamilie lässt sich eindeutig beschreiben und abgrenzen.'],
   ['Menschliche Herstellung', 'Wesentliche produktprägende Herstellungsschritte werden tatsächlich durch Menschen ausgeführt.'],
-  ['Nachvollziehbare Standorte', 'Produktionsorte und relevante Fremdfertigung können dem Produkt zugeordnet werden.'],
-  ['Geeignete Nachweise', 'Der Herstellungsprozess kann durch Unterlagen, Prozessinformationen oder andere geeignete Belege nachvollzogen werden.'],
+  ['Klare Produktionsorte', 'Es muss erkennbar sein, wo das Produkt hergestellt wird und welche wichtigen Schritte andere Betriebe übernehmen.'],
+  ['Belege zur Herstellung', 'Unterlagen, Prozessinformationen oder andere Belege müssen zeigen können, wie das Produkt tatsächlich hergestellt wird.'],
 ];
 
 const evidence = [
-  ['Prozessbeschreibung', 'Übersicht der wesentlichen Herstellungsschritte vom Material oder Bauteil bis zum verkaufsfertigen Produkt.'],
-  ['Produktionsorte', 'Standorte, an denen wesentliche produktprägende Arbeitsschritte stattfinden.'],
-  ['Fremdfertigung', 'Angaben zu extern ausgeführten wesentlichen Arbeitsschritten, soweit diese zum Zertifizierungsumfang gehören.'],
-  ['Nachweise', 'Geeignete Unterlagen oder Informationen, die die tatsächliche Ausführung des beschriebenen Herstellungsprozesses belegen.'],
+  ['Prozessbeschreibung', 'Eine verständliche Übersicht der wichtigsten Herstellungsschritte – vom Material oder Bauteil bis zum fertigen Produkt.'],
+  ['Produktionsorte', 'Orte, an denen die wichtigen Arbeitsschritte für das Produkt stattfinden.'],
+  ['Fremdfertigung', 'Angaben zu wichtigen Arbeitsschritten, die außerhalb des eigenen Betriebs ausgeführt werden.'],
+  ['Nachweise', 'Unterlagen oder Informationen, die zeigen, dass der beschriebene Herstellungsprozess tatsächlich so stattfindet.'],
 ];
 
 const certificationProcess = [
-  ['Anfrage', 'Wir erfassen Produkt, Hersteller und Herstellungsprozess für die fachliche Vorprüfung.'],
-  ['Zertifizierungsumfang', 'Wir grenzen Produkt oder Produktfamilie, Standorte und relevante Fremdfertigung eindeutig ab.'],
+  ['Anfrage', 'Wir schauen uns Produkt, Hersteller und Herstellungsprozess für eine erste Einschätzung an.'],
+  ['Was wird zertifiziert?', 'Wir legen fest, welches Produkt oder welche Produktfamilie, welche Produktionsorte und welche externen Arbeitsschritte zur Zertifizierung gehören.'],
   ['Vor-Ort-Audit', 'Wir prüfen Herstellung, menschliche Arbeit, Maschineneinsatz, relevante Standorte und Fremdfertigung beim Hersteller vor Ort.'],
-  ['Bewertung & Entscheidung', 'Wir bewerten Auditfeststellungen, Nachweise und offene Punkte gegen den Standard und dokumentieren die Zertifizierungsentscheidung.'],
-  ['Register & Markennutzung', 'Nach positiver Entscheidung vergeben wir eine ID, veröffentlichen den Status und regeln die Zeichennutzung.'],
+  ['Bewertung & Entscheidung', 'Wir gleichen die Ergebnisse und Belege mit dem Standard ab, klären offene Punkte und halten die Entscheidung fest.'],
+  ['Register & Zeichen', 'Nach positiver Entscheidung vergeben wir eine ID, veröffentlichen den Status und geben die Nutzung des Zeichens frei.'],
 ];
 
 const markUseBenefits = [
   ['Zertifizierungszeichen', 'Kennzeichnung für den freigegebenen Produktumfang.'],
-  ['QR & Registerlink', 'Direkte Verbindung zum öffentlichen Zertifizierungsdatensatz.'],
+  ['QR & Registerlink', 'Direkter Weg zum öffentlichen Registereintrag.'],
   ['Verpackung & Digital', 'Freigegebene Anwendungen für Verpackung, Produktseiten, Kataloge und Verkaufsunterlagen.'],
-  ['Claims & B2B-Nachweis', 'Konsistente Formulierungen mit Verweis auf Produktumfang, Status und Standardfassung.'],
+  ['Für Kunden & Geschäftspartner', 'Klare Formulierungen mit Verweis auf Produkt, Status und Standard.'],
 ];
 
 const manufacturerFaq = [
-  ['Dürfen Maschinen eingesetzt werden?', 'Ja. Maschinen können menschliche Arbeit unterstützen. Entscheidend ist, ob die wesentlichen produktprägenden Herstellungsschritte weiterhin tatsächlich durch Menschen ausgeführt werden.'],
-  ['Können mehrere Produktvarianten gemeinsam zertifiziert werden?', 'Vergleichbare Varianten können als Produktfamilie zusammengefasst werden, wenn Herstellungsprozess und Zertifizierungsumfang ausreichend übereinstimmen.'],
-  ['Wie werden mehrere Standorte oder Fremdfertigung behandelt?', 'Alle relevanten Produktionsstandorte und wesentliche Fremdfertigung werden offengelegt, dem Produkt zugeordnet und in den Zertifizierungsumfang einbezogen.'],
-  ['Welche Unterlagen werden benötigt?', 'Benötigt werden geeignete Informationen zur tatsächlichen Herstellung, zu Standorten, Fremdfertigung und den wesentlichen Prozessschritten. Die konkrete Nachweisanforderung wird in der Vorbereitung eingegrenzt.'],
-  ['Was passiert bei Änderungen an Produkt oder Produktion?', 'Wesentliche Änderungen am Prozess, an relevanten Standorten oder an Fremdfertigung können eine erneute Bewertung des Zertifizierungsumfangs erforderlich machen.'],
+  ['Dürfen Maschinen eingesetzt werden?', 'Ja. Maschinen dürfen die Arbeit unterstützen. Entscheidend ist, dass die Herstellungsschritte, die das Produkt wesentlich prägen, weiterhin tatsächlich von Menschen ausgeführt werden.'],
+  ['Können mehrere Produktvarianten gemeinsam zertifiziert werden?', 'Ja, wenn die Varianten weitgehend gleich hergestellt werden und sinnvoll zu einer Produktfamilie zusammengefasst werden können.'],
+  ['Wie werden mehrere Standorte oder Fremdfertigung behandelt?', 'Alle Produktionsorte und externen Betriebe, die wichtige Herstellungsschritte übernehmen, müssen angegeben und dem Produkt zugeordnet werden.'],
+  ['Welche Unterlagen werden benötigt?', 'Wir brauchen Informationen dazu, wie und wo das Produkt hergestellt wird und welche wichtigen Schritte andere Betriebe übernehmen. Welche Belege im Einzelfall nötig sind, klären wir in der Vorbereitung.'],
+  ['Was passiert bei Änderungen an Produkt oder Produktion?', 'Wenn sich wichtige Herstellungsschritte, Produktionsorte oder externe Fertigung ändern, kann eine erneute Prüfung nötig werden.'],
   ['Woraus setzen sich die Kosten zusammen?', 'Unser Modell umfasst die Erstprüfung und eine jährliche Lizenz zur Markennutzung. Zusätzliche Produktfamilien und weitere Standorte können den Umfang verändern. Konkrete Preise veröffentlichen wir erst, wenn sie verbindlich festgelegt sind.'],
 ];
 
@@ -134,8 +134,8 @@ export default function ManufacturerPage() {
             <div className="brandTrace" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
             <h1>Menschliche Herstellung. Als Produktmerkmal zertifiziert.</h1>
             <p className="lead">
-              Wir machen menschliche Herstellung sichtbar und überprüfbar: mit klar abgegrenztem Produktumfang,
-              Vor-Ort-Audit beim Hersteller, dokumentierter Entscheidung und öffentlicher Verifizierung.
+              Wir prüfen vor Ort, welche menschliche Arbeit Ihr Produkt prägt. Wenn die Kriterien erfüllt sind,
+              erhält die Zertifizierung eine eindeutige ID und einen öffentlichen Registereintrag.
             </p>
             <div className="manufacturerHeroActions">
               <a className="button primary" href="#zertifizierungsanfrage">Zertifizierung anfragen</a>
@@ -160,10 +160,10 @@ export default function ManufacturerPage() {
 
       <section className="manufacturerMetaBand" aria-label="Kernbestandteile der Zertifizierung">
         <div className="shell manufacturerMetaGrid">
-          <div><strong>Produktbezogen</strong><p>Klar abgegrenzter Zertifizierungsumfang.</p></div>
+          <div><strong>Für ein bestimmtes Produkt</strong><p>Die Zertifizierung gilt nur für das benannte Produkt oder die Produktfamilie.</p></div>
           <div><strong>Vor Ort geprüft</strong><p>Wir prüfen die tatsächliche Herstellung beim Hersteller.</p></div>
-          <div><strong>Versioniert</strong><p>Entscheidung ist an eine Standardfassung gebunden.</p></div>
-          <div><strong>Verifizierbar</strong><p>Status und Produktbezug sind öffentlich prüfbar.</p></div>
+          <div><strong>Mit fester Standardfassung</strong><p>Die Entscheidung bezieht sich immer auf eine bestimmte Fassung des Standards.</p></div>
+          <div><strong>Öffentlich prüfbar</strong><p>Im Register kann jeder sehen, für welches Produkt die Zertifizierung gilt und welchen Status sie hat.</p></div>
         </div>
       </section>
 
@@ -213,7 +213,7 @@ export default function ManufacturerPage() {
           </div>
           <p>
             Entscheidend ist nicht, ob ein Produkt handwerklich aussieht. Entscheidend ist,
-            ob die menschliche Herstellung wesentlich, klar abgrenzbar und nachvollziehbar belegbar ist.
+            ob menschliche Arbeit einen wesentlichen Teil der Herstellung ausmacht und sich belegen lässt.
           </p>
         </div>
 
@@ -239,8 +239,8 @@ export default function ManufacturerPage() {
             <div className="sectionNo">VORBEREITUNG</div>
             <h2>Diese Informationen sollten für die Prüfung vorliegen.</h2>
             <p>
-              Nicht jeder Nachweis muss bereits mit der ersten Anfrage vollständig eingereicht werden.
-              Die Informationen helfen uns bei der Vorbereitung des Vor-Ort-Audits. Vor Ort gleichen wir sie mit der tatsächlichen Produktion ab.
+              Für die erste Anfrage müssen noch nicht alle Unterlagen vollständig vorliegen.
+              Die Angaben helfen uns, die Vor-Ort-Prüfung vorzubereiten. Dort gleichen wir sie mit der tatsächlichen Produktion ab.
             </p>
             <figure className="manufacturerEvidencePhoto">
               <img
@@ -279,8 +279,8 @@ export default function ManufacturerPage() {
               <h2>So läuft die Zertifizierung ab.</h2>
             </div>
             <p>
-              Jeder Schritt baut auf dem vorherigen auf. Dadurch bleiben Zertifizierungsumfang,
-              Prüfung, Entscheidung und öffentlicher Status miteinander verknüpft.
+              Die Schritte bauen aufeinander auf: Erst klären wir das Produkt, dann prüfen wir die Herstellung,
+              treffen eine Entscheidung und veröffentlichen bei erfolgreicher Zertifizierung den Status.
             </p>
           </div>
 
@@ -302,8 +302,8 @@ export default function ManufacturerPage() {
             <div className="sectionNo">VOR DER ANFRAGE</div>
             <h2>Was Hersteller vor einer Zertifizierung wissen sollten.</h2>
             <p>
-              Die konkrete Prüfung hängt vom Produkt und Herstellungsprozess ab. Diese Punkte beantworten
-              die häufigsten Fragen zur grundsätzlichen Einordnung.
+              Die Prüfung hängt vom Produkt und seiner Herstellung ab. Hier beantworten wir die Fragen,
+              die Hersteller vor einer Anfrage am häufigsten haben.
             </p>
           </div>
           <div className="manufacturerFaqList">
@@ -323,12 +323,12 @@ export default function ManufacturerPage() {
             <div className="sectionNo">ZERTIFIZIERUNGSANFRAGE</div>
             <h2>Zertifizierungsanfrage stellen.</h2>
             <p>
-              Mit den folgenden Angaben erfassen wir Produkt, Herstellungsprozess und die wesentlichen Rahmenbedingungen.
-              Daraus lässt sich ableiten, ob das Produkt grundsätzlich in den Geltungsbereich des Standards fällt,
-              welche Informationen benötigt werden und wie das Vor-Ort-Audit vorbereitet werden kann.
+              Mit diesen Angaben bekommen wir einen ersten Überblick über Ihr Produkt und seine Herstellung.
+              So können wir einschätzen, ob es grundsätzlich zum Standard passt,
+              welche Informationen noch fehlen und wie die Vor-Ort-Prüfung vorbereitet werden kann.
             </p>
             <div className="applicationReference">
-              <span>GEPRÜFT WERDEN</span>
+              <span>WIR SCHAUEN AUF</span>
               <strong>Produkt · Herstellung · Standorte · Fremdfertigung · Nachweise</strong>
             </div>
           </div>
