@@ -10,6 +10,13 @@ LEATHER_SOURCE = BRAND / "IMG_1037.png"
 TEXTILE_SOURCE = BRAND / "IMG_1047.png"
 LEATHER_OUT = BRAND / "IMG_1037_mbh.png"
 TEXTILE_OUT = BRAND / "IMG_1047_mbh.png"
+LEATHER_WEBP = BRAND / "IMG_1037_mbh.webp"
+TEXTILE_WEBP = BRAND / "IMG_1047_mbh.webp"
+EXTRA_WEBP = [
+    (BRAND / "IMG_1039.png", BRAND / "IMG_1039.webp"),
+    (BRAND / "IMG_1040.png", BRAND / "IMG_1040.webp"),
+    (BRAND / "IMG_1053.png", BRAND / "IMG_1053.webp"),
+]
 
 for path in (MASTER, LEATHER_SOURCE, TEXTILE_SOURCE):
     if not path.exists():
@@ -128,6 +135,16 @@ def add_box_label(base):
     ).astype(np.uint8)
 
 
+def save_webp(image, path, max_width=1600):
+    if not isinstance(image, Image.Image):
+        image = Image.fromarray(image)
+    image = image.convert("RGB")
+    if image.width > max_width:
+        height = round(image.height * max_width / image.width)
+        image = image.resize((max_width, height), Image.Resampling.LANCZOS)
+    image.save(path, "WEBP", quality=88, method=6)
+
+
 # Leather photo: preserve the original image completely except for the existing hang-tag print.
 leather = np.array(Image.open(LEATHER_SOURCE).convert("RGB"))
 leather = edit_tag(
@@ -141,6 +158,7 @@ leather = edit_tag(
     11,
 )
 Image.fromarray(leather).save(LEATHER_OUT, quality=97, subsampling=0)
+save_webp(leather, LEATHER_WEBP)
 
 # Textile photo: preserve the exact original scene/profile, replace only old brand applications.
 textile = np.array(Image.open(TEXTILE_SOURCE).convert("RGB"))
@@ -156,6 +174,13 @@ textile = edit_tag(
 )
 textile = add_box_label(textile)
 Image.fromarray(textile).save(TEXTILE_OUT, quality=97, subsampling=0)
+save_webp(textile, TEXTILE_WEBP)
+
+for source, output in EXTRA_WEBP:
+    if source.exists():
+        save_webp(Image.open(source), output)
 
 print("Prepared:", LEATHER_OUT)
 print("Prepared:", TEXTILE_OUT)
+print("Prepared web:", LEATHER_WEBP)
+print("Prepared web:", TEXTILE_WEBP)
