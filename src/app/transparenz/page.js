@@ -30,12 +30,11 @@ export default function TransparencyPage() {
         <BrandTrace compact />
         <h1>Vertrauen braucht klare Regeln.</h1>
         <p className="lead">
-          Glaubwürdigkeit entsteht nicht durch das Zeichen allein. Sie entsteht durch versionierte Regeln,
-          dokumentierte Prüfungen, definierte Zuständigkeiten und einen öffentlich nachvollziehbaren Zertifizierungsstatus.
+          Glaubwürdigkeit entsteht nicht durch das Zeichen allein. Sie entsteht durch klare Regeln, dokumentierte Prüfungen, feste Zuständigkeiten und einen Status, den jeder im Register prüfen kann.
         </p>
       </section>
 
-      <section className="integrityMetaBand" aria-label="Integritätsprinzipien">
+      <section className="integrityMetaBand" aria-label="Grundsätze">
         <div className="shell integrityMetaGrid">
           <div><strong>Mit Versionsstand</strong><p>Regeln und Entscheidungen lassen sich einer bestimmten Fassung zuordnen.</p></div>
           <div><strong>Belegt</strong><p>Prüfung und Entscheidung werden festgehalten.</p></div>
@@ -74,8 +73,7 @@ export default function TransparencyPage() {
               <h2>Wer prüft, wer kontrolliert, wer entscheidet.</h2>
             </div>
             <p>
-              Die Rollen im Zertifizierungssystem werden getrennt beschrieben, damit Prüfung,
-              fachliche Kontrolle, Entscheidung und öffentliche Verifizierung voneinander nachvollziehbar bleiben.
+              Die Rollen sind getrennt beschrieben. So ist klar, wer prüft, wer fachlich kontrolliert, wer entscheidet und was anschließend veröffentlicht wird.
             </p>
           </div>
 
