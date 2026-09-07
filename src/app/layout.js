@@ -6,8 +6,8 @@ import { canonical, DEFAULT_DESCRIPTION, SITE_NAME, SITE_URL } from '../lib/seo'
 export const metadata = {
   metadataBase: new URL(SITE_URL + '/'),
   title: {
-    default: 'Made by Humans | Zertifizierung für menschliche Herstellung',
-    template: '%s | Made by Humans',
+    default: 'Made by Human | Zertifizierung für menschliche Herstellung',
+    template: '%s | Made by Human',
   },
   description: DEFAULT_DESCRIPTION,
   applicationName: SITE_NAME,
@@ -27,18 +27,18 @@ export const metadata = {
     locale: 'de_DE',
     url: canonical('/'),
     siteName: SITE_NAME,
-    title: 'Made by Humans | Zertifizierung für menschliche Herstellung',
+    title: 'Made by Human | Zertifizierung für menschliche Herstellung',
     description: DEFAULT_DESCRIPTION,
     images: [
       {
         url: canonical('/brand/IMG_1053.png'),
-        alt: 'Made by Humans – Vor-Ort-Prüfung menschlicher Herstellung',
+        alt: 'Made by Human – Vor-Ort-Prüfung menschlicher Herstellung',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Made by Humans | Zertifizierung für menschliche Herstellung',
+    title: 'Made by Human | Zertifizierung für menschliche Herstellung',
     description: DEFAULT_DESCRIPTION,
     images: [canonical('/brand/IMG_1053.png')],
   },
