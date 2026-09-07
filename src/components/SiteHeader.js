@@ -18,6 +18,17 @@ export default function SiteHeader() {
           <Link href="/fuer-kaeufer">Für Käufer</Link>
           <Link href="/register">Register</Link>
           <Link href="/standard">Standard</Link>
+
+          <details className="desktopNavDropdown">
+            <summary>Organisation</summary>
+            <div className="desktopNavDropdownPanel">
+              <Link href="/ueber-uns">Über uns</Link>
+              <Link href="/dokumente">Dokumente</Link>
+              <Link href="/transparenz">Transparenz & Integrität</Link>
+              <Link href="/verfahren">Beschwerden & Einsprüche</Link>
+            </div>
+          </details>
+
           <Link className="navVerify" href="/fuer-hersteller#zertifizierungsanfrage">Zertifizierung anfragen</Link>
         </nav>
 
