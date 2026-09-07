@@ -1,4 +1,4 @@
-# Made by Humans — Photography Brief
+# Made by Human — Photography Brief
 
 ## Principle
 The photography must document real human manufacturing. It must never simulate authenticity.
