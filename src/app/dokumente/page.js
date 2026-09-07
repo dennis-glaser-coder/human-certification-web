@@ -40,7 +40,7 @@ const documents = [
     version: '0.1',
     status: 'Veröffentlicht',
     date: '04.09.2026',
-    copy: 'Regeln für Zertifizierungsumfang, Kennzeichnung, Produktbezug, Statusänderungen und zulässige Kommunikation.',
+    copy: 'Regeln dafür, wofür das Zeichen gilt, wie es verwendet werden darf und was bei Statusänderungen passiert.',
     href: '/markennutzung',
   },
   {
@@ -67,8 +67,7 @@ export default function DocumentsPage() {
         <BrandTrace compact />
         <h1>Regeln und Versionen öffentlich einsehbar.</h1>
         <p className="lead">
-          Standard, Zertifizierungsschema, Markennutzungsregeln und Verfahrensregeln werden als kontrollierte Dokumente geführt.
-          Dokument-ID, Version, Status und Stand machen jede veröffentlichte Fassung eindeutig referenzierbar.
+          Standard, Zertifizierungsschema, Markennutzungsregeln und Verfahrensregeln werden mit Dokument-ID, Version, Status und Datum veröffentlicht. So lässt sich jede Fassung eindeutig zuordnen.
         </p>
       </section>
 
@@ -113,9 +112,7 @@ export default function DocumentsPage() {
             <h2>Alte Fassungen bleiben auffindbar.</h2>
           </div>
           <p>
-            Änderungen werden mit Versionsnummer, Datum, Status und Änderungsgrund dokumentiert.
-            Sobald eine Fassung ersetzt wird, bleibt sie als ersetzte Version referenzierbar.
-            Öffentliche Zertifizierungsdatensätze verweisen auf die tatsächlich angewendete Standardversion.
+            Änderungen werden mit Versionsnummer, Datum, Status und Grund festgehalten. Wird eine Fassung ersetzt, bleibt die alte Version auffindbar. Registereinträge zeigen, nach welcher Standardversion geprüft wurde.
           </p>
         </div>
       </section>
