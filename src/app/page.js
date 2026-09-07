@@ -35,7 +35,7 @@ export default function Home() {
             </p>
             <div className="desireHeroActions">
               <Link className="desirePrimary" href="/fuer-hersteller#zertifizierungsanfrage">Zertifizierung anfragen</Link>
-              <Link className="desireSecondary" href="/warum-made-by-humans">Warum Made by Human?</Link>
+              <Link className="desireSecondary" href="/warum-made-by-human">Warum Made by Human?</Link>
             </div>
             <div className="desireProofLine">
               <span>Vor-Ort-Audit</span>
@@ -164,7 +164,7 @@ export default function Home() {
             ))}
           </div>
           <div className="homeStoryLinks">
-            <Link href="/warum-made-by-humans">Vorteile ansehen →</Link>
+            <Link href="/warum-made-by-human">Vorteile ansehen →</Link>
             <Link href="/fuer-hersteller#ablauf">Zertifizierungsverfahren →</Link>
           </div>
         </div>
