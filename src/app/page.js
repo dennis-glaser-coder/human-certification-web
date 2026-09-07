@@ -4,15 +4,15 @@ import SiteFooter from '../components/SiteFooter';
 import { CERTIFIED_STATEMENT } from '../lib/brand';
 
 const homeStory = [
-  ['Differenzierung', 'Ein realer Herstellungsunterschied wird für Käufer und Geschäftspartner klar erkennbar.'],
-  ['Glaubwürdigkeit', 'Die Produktaussage bleibt an einen dokumentierten Zertifizierungsstatus gebunden.'],
+  ['Unterschied sichtbar machen', 'Käufer und Geschäftspartner sehen, was Ihr Produkt in der Herstellung unterscheidet.'],
+  ['Glaubwürdigkeit', 'Die Aussage bleibt an eine gültige Zertifizierung gebunden und kann im Register geprüft werden.'],
   ['Im Verkauf nutzbar', 'Kennzeichnung, QR und Registerlink lassen sich auf Produktseiten, Verpackungen und im B2B-Vertrieb einsetzen.'],
 ];
 
 const auditFacts = [
-  ['Arbeitsschritte beobachten', 'Wir beobachten wesentliche produktprägende Schritte in der realen Produktion.'],
-  ['Maschineneinsatz einordnen', 'Wir ordnen ein, wo Technik unterstützt und wo menschliche Arbeit wesentlich bleibt.'],
-  ['Produktumfang abgleichen', 'Wir gleichen Produkt, relevante Standorte und Fremdfertigung mit den Angaben ab.'],
+  ['Arbeitsschritte ansehen', 'Wir sehen uns die Schritte an, die das Produkt in der Herstellung wirklich prägen.'],
+  ['Maschinen richtig einordnen', 'Wir prüfen, wo Technik unterstützt und wo die Arbeit des Menschen entscheidend bleibt.'],
+  ['Produkt genau zuordnen', 'Wir gleichen das Produkt, die Produktionsorte und mögliche Fremdfertigung mit Ihren Angaben ab.'],
 ];
 
 export default function Home() {
@@ -29,7 +29,7 @@ export default function Home() {
             <div className="brandTrace" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
             <h1>Von Menschen gemacht.<br />Vor Ort geprüft.</h1>
             <p className="desireHeroLead">
-              Wir prüfen vor Ort, ob die wesentlichen Herstellungsschritte eines Produkts durch Menschen
+              Wir prüfen vor Ort, ob die entscheidenden Herstellungsschritte eines Produkts tatsächlich von Menschen
               ausgeführt werden. Nach erfolgreicher Zertifizierung machen Zeichen, Zertifizierungs-ID
               und öffentliches Register diesen Nachweis sichtbar.
             </p>
@@ -96,7 +96,7 @@ export default function Home() {
               <h2>Der Nachweis wird dort sichtbar, wo die Kaufentscheidung fällt.</h2>
             </div>
             <p>
-              Das Zeichen ergänzt die Herstellermarke und verweist immer auf den konkret zertifizierten Produktumfang.
+              Das Zeichen ergänzt die Marke des Herstellers und gilt nur für das Produkt, das tatsächlich zertifiziert wurde.
             </p>
           </div>
 
@@ -124,9 +124,9 @@ export default function Home() {
                     <img src={assetBase + '/brand/made-by-human-logo.png'} alt="" aria-hidden="true" />
                   </div>
                   <div className="applicationProofStatement">
-                    <small>PRODUKTBEZOGENER NACHWEIS</small>
+                    <small>NACHWEIS FÜR DIESES PRODUKT</small>
                     <strong>Made by Human</strong>
-                    <p>Die Kennzeichnung führt zum öffentlichen Zertifizierungsdatensatz des konkret erfassten Produkts.</p>
+                    <p>Die Kennzeichnung führt zum öffentlichen Eintrag für genau dieses Produkt.</p>
                   </div>
                   <div className="applicationProofMeta" aria-label="Bestandteile des digitalen Nachweises">
                     <span>Produktumfang</span>
@@ -139,12 +139,12 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-              <div className="applicationCopy"><strong>Digitaler Nachweis</strong><p>Zeichen, Registerbezug und Verifizierung bleiben auch online eindeutig miteinander verbunden.</p></div>
+              <div className="applicationCopy"><strong>Digitaler Nachweis</strong><p>Auch online bleiben Zeichen, Produkt und Registereintrag eindeutig miteinander verbunden.</p></div>
             </article>
           </div>
 
           <div className="compactApplicationFooter">
-            <span>Produktfokus · statusgebunden · öffentlich verifizierbar</span>
+            <span>Für ein konkretes Produkt · nur bei gültigem Status · öffentlich prüfbar</span>
             <span className="applicationSwipeHint">Wischen für weitere Anwendung →</span>
             <Link href="/markennutzung">Markennutzung im Detail →</Link>
           </div>
@@ -158,7 +158,7 @@ export default function Home() {
             <h2>Machen Sie Ihre Herstellung nachvollziehbar.</h2>
             <p>
               Zeigen Sie auf Produktseite, Verpackung und im Verkauf, welche menschliche Arbeit hinter Ihrem Produkt steht.
-              Das Zeichen verbindet diese Aussage mit einem überprüfbaren Zertifizierungsdatensatz.
+              Über Zertifizierungs-ID und Register kann jeder prüfen, wofür die Zertifizierung gilt.
             </p>
           </div>
           <div className="homeStoryRows">
@@ -224,7 +224,7 @@ export default function Home() {
               <h2>Ein starkes Zeichen braucht klare Grenzen.</h2>
             </div>
             <div className="homeFinalSummary">
-              <p>Freigegebene Kennzeichnung · QR & Registerlink · gültiger Zertifizierungsstatus · geregelte Produktaussagen</p>
+              <p>Freigegebenes Zeichen · QR und Registerlink · gültiger Status · klare Regeln für die Nutzung</p>
               <Link href="/markennutzung">Markennutzung ansehen →</Link>
             </div>
           </div>
@@ -240,7 +240,7 @@ export default function Home() {
               <h2>Prüfen Sie, ob Ihr Produkt zum Standard passt.</h2>
             </div>
             <div>
-              <p>In der fachlichen Vorprüfung grenzen wir Produkt, Herstellungsprozess und den sinnvollen Zertifizierungsumfang gemeinsam ein.</p>
+              <p>In der ersten Einschätzung klären wir gemeinsam, welches Produkt Sie zertifizieren möchten, wie es hergestellt wird und was genau geprüft werden soll.</p>
               <Link className="desireFinalButton" href="/fuer-hersteller#zertifizierungsanfrage">Zertifizierung anfragen</Link>
             </div>
           </div>
