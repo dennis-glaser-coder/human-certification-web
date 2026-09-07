@@ -32,8 +32,8 @@ const doesNotSay = [
 
 const faq = [
   ['Dürfen Maschinen eingesetzt werden?', 'Ja. Maschinen dürfen unterstützen. Entscheidend ist, dass die Arbeitsschritte, die das Produkt wesentlich prägen, weiterhin von Menschen ausgeführt werden.'],
-  ['Ist jedes handgemachte Produkt automatisch zertifiziert?', 'Nein. Die Kennzeichnung darf nur für einen konkret geprüften und freigegebenen Produktumfang verwendet werden.'],
-  ['Kann ich die Zertifizierung selbst prüfen?', 'Ja. Zertifizierungs-ID und QR führen zum öffentlichen Datensatz mit aktuellem Status und Produktbezug.'],
+  ['Ist jedes handgemachte Produkt automatisch zertifiziert?', 'Nein. Das Zeichen darf nur für Produkte genutzt werden, die tatsächlich geprüft und zertifiziert wurden.'],
+  ['Kann ich die Zertifizierung selbst prüfen?', 'Ja. Zertifizierungs-ID und QR führen zum Registereintrag mit Produkt und aktuellem Status.'],
   ['Was passiert, wenn sich die Produktion ändert?', 'Wenn sich wichtige Herstellungsschritte, Produktionsorte oder externe Fertigung ändern, kann eine neue Prüfung nötig werden.'],
 ];
 
@@ -109,7 +109,7 @@ export default function BuyerPage() {
           </div>
           <div className="buyerVerifyCopy">
             <p className="premiumSectionLabel premiumSectionLabelLight">QR & ZERTIFIZIERUNGS-ID</p>
-            <h2>Zertifizierungsstatus und Produktbezug lassen sich öffentlich prüfen.</h2>
+            <h2>Produkt und aktueller Status lassen sich öffentlich prüfen.</h2>
             <p>
               Eine veröffentlichte Zertifizierung lässt sich über QR-Code oder Zertifizierungs-ID prüfen.
               Der öffentliche Datensatz zeigt, für welches Produkt die Aussage gilt und welchen aktuellen Status sie hat.
