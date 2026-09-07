@@ -18,7 +18,7 @@ export default function SiteFooter() {
             <Link href="/dokumente">Dokumente</Link>
             <Link href="/markennutzung">Markennutzung</Link>
             <Link href="/leitfaden/nachweise">Prüfnachweise</Link>
-            <Link href="/leitfaden/zertifizierungsumfang">Zertifizierungsumfang</Link>
+            <Link href="/leitfaden/zertifizierungsumfang">Was wird zertifiziert?</Link>
           </div>
           <div>
             <span>PRÜFEN</span>
@@ -44,7 +44,7 @@ export default function SiteFooter() {
               <Link href="/dokumente">Dokumente</Link>
               <Link href="/markennutzung">Markennutzung</Link>
               <Link href="/leitfaden/nachweise">Prüfnachweise</Link>
-              <Link href="/leitfaden/zertifizierungsumfang">Zertifizierungsumfang</Link>
+              <Link href="/leitfaden/zertifizierungsumfang">Was wird zertifiziert?</Link>
             </div>
           </details>
           <details>
