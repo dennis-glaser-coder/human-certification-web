@@ -46,7 +46,7 @@ export default function StandardPage() {
           <div><span>STANDARDVERSION</span><strong>0.1</strong></div>
           <div><span>GELTUNGSBEREICH</span><strong>Physische Produkte</strong></div>
           <div><span>PRÜFBEREICHE</span><strong>6 Kriterienbereiche</strong></div>
-          <div><span>DOKUMENTATION</span><strong>Versioniert & öffentlich</strong></div>
+          <div><span>DOKUMENTATION</span><strong>Mit Versionsstand & öffentlich</strong></div>
         </div>
       </section>
 
@@ -84,9 +84,9 @@ export default function StandardPage() {
           </div>
 
           <div className="auditProcessGrid">
-            <article><strong>Produktumfang</strong><p>Produkt oder Produktfamilie und die wichtigen Produktionsorte festlegen.</p></article>
-            <article><strong>Prozessaufnahme</strong><p>Die wichtigen Herstellungsschritte und externe Fertigung erfassen.</p></article>
-            <article><strong>Nachweise</strong><p>Prüfen, ob Unterlagen und Informationen zur tatsächlichen Herstellung passen.</p></article>
+            <article><strong>Was wird zertifiziert?</strong><p>Produkt oder Produktfamilie und die wichtigen Produktionsorte festlegen.</p></article>
+            <article><strong>Herstellung erfassen</strong><p>Die wichtigen Herstellungsschritte und externe Fertigung erfassen.</p></article>
+            <article><strong>Belege</strong><p>Prüfen, ob Unterlagen und Informationen zur tatsächlichen Herstellung passen.</p></article>
             <article><strong>Prüfung</strong><p>Den Herstellungsprozess anhand der Kriterien des Standards bewerten.</p></article>
             <article><strong>Fachprüfung</strong><p>Prüfergebnis kontrollieren und offene Fragen klären.</p></article>
             <article><strong>Entscheidung</strong><p>Über die Zertifizierung entscheiden und bei Freigabe den Status im Register veröffentlichen.</p></article>
@@ -108,8 +108,8 @@ export default function StandardPage() {
             <h2>Beispiele für die Einordnung.</h2>
           </div>
           <p>
-            Die Beispiele dienen der Abgrenzung. Die endgültige Entscheidung bezieht sich immer auf
-            den konkreten Produkt- und Herstellungsprozess.
+            Die Beispiele helfen bei der Einordnung. Entscheidend ist immer,
+            wie das konkrete Produkt tatsächlich hergestellt wird.
           </p>
         </div>
 
