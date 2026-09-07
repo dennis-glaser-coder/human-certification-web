@@ -18,7 +18,7 @@ export const metadata = {
 
 const says = [
   ['Menschliche Herstellung', CERTIFIED_STATEMENT],
-  ['Vor-Ort-Prüfung', 'Die tatsächliche Herstellung wird beim Hersteller vor Ort nachvollzogen.'],
+  ['Vor-Ort-Prüfung', 'Wir prüfen die tatsächliche Herstellung beim Hersteller vor Ort.'],
   ['Klarer Produktbezug', 'Die Aussage gilt nur für den veröffentlichten Zertifizierungsumfang.'],
   ['Öffentliche Verifizierung', 'Status, Produktbezug, Standardfassung und relevante Produktionsstandorte können über ID oder QR geprüft werden.'],
 ];
@@ -51,8 +51,8 @@ export default function BuyerPage() {
             <BrandTrace compact />
             <h1>Was bedeutet Made by Human?</h1>
             <p className="buyerHeroLead">
-              Das Zeichen steht für eine klar abgegrenzte Aussage: Bei diesem Produkt wurden die wesentlichen
-              Herstellungsschritte darauf geprüft, ob sie nachweislich durch Menschen ausgeführt werden.
+              Das Zeichen steht für eine klar abgegrenzte Aussage: Wir prüfen bei diesem Produkt,
+              ob die wesentlichen Herstellungsschritte nachweislich durch Menschen ausgeführt werden.
             </p>
             <div className="buyerHeroActions">
               <Link className="desirePrimary" href="/pruefen">Zertifizierung prüfen</Link>
@@ -155,7 +155,7 @@ export default function BuyerPage() {
             <p className="premiumSectionLabel">WIE WIRD GEPRÜFT?</p>
             <h2>Die Prüfung findet dort statt, wo das Produkt entsteht.</h2>
             <p>
-              Beim Vor-Ort-Audit wird nachvollzogen, welche Arbeitsschritte Menschen ausführen,
+              Beim Vor-Ort-Audit prüfen wir, welche Arbeitsschritte Menschen ausführen,
               welche Maschinen eingesetzt werden, welche Produktionsorte relevant sind und ob Fremdfertigung
               zum Zertifizierungsumfang gehört.
             </p>
