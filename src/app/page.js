@@ -6,7 +6,7 @@ import { CERTIFIED_STATEMENT } from '../lib/brand';
 const homeStory = [
   ['Differenzierung', 'Ein realer Herstellungsunterschied wird für Käufer und Geschäftspartner klar erkennbar.'],
   ['Glaubwürdigkeit', 'Die Produktaussage bleibt an einen dokumentierten Zertifizierungsstatus gebunden.'],
-  ['Anschlussfähigkeit', 'Kennzeichnung, QR und Registerlink lassen sich im Verkauf und im B2B-Kontext einsetzen.'],
+  ['Im Verkauf nutzbar', 'Kennzeichnung, QR und Registerlink lassen sich auf Produktseiten, Verpackungen und im B2B-Vertrieb einsetzen.'],
 ];
 
 const auditFacts = [
@@ -187,7 +187,6 @@ export default function Home() {
             <h2>Wir prüfen dort, wo das Produkt tatsächlich entsteht.</h2>
             <p className="desireAuditLead">
               Kein reines Online-Formular und keine bloße Selbstauskunft: Wir prüfen die tatsächliche Herstellung direkt beim Hersteller vor Ort und dokumentieren die wesentlichen Arbeitsschritte.
-              direkt beim Hersteller vor Ort.
             </p>
             <div className="desireAuditFacts">
               {auditFacts.map(([title, copy]) => <div key={title}><strong>{title}</strong><p>{copy}</p></div>)}
