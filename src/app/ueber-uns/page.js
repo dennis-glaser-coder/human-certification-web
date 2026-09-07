@@ -5,8 +5,8 @@ import BrandTrace from '../../components/BrandTrace';
 import { canonical } from '../../lib/seo';
 
 export const metadata = {
-  title: 'Über Made by Humans',
-  description: 'Warum Made by Humans entstanden ist: menschliche Herstellung sichtbar und überprüfbar machen – mit klarem Produktbezug, Vor-Ort-Prüfung und öffentlicher Verifizierung.',
+  title: 'Über Made by Human',
+  description: 'Warum Made by Human entstanden ist: menschliche Herstellung sichtbar und überprüfbar machen – mit klarem Produktbezug, Vor-Ort-Prüfung und öffentlicher Verifizierung.',
   alternates: { canonical: canonical('/ueber-uns') },
 };
 
@@ -31,11 +31,11 @@ export default function AboutPage() {
       <SiteHeader />
 
       <section className="pageHero shell aboutStoryHero">
-        <div className="eyebrow">ÜBER MADE BY HUMANS</div>
+        <div className="eyebrow">ÜBER MADE BY HUMAN</div>
         <BrandTrace compact />
         <h1>Menschliche Arbeit verdient einen überprüfbaren Nachweis.</h1>
         <p className="lead">
-          Made by Humans ist aus einer einfachen Beobachtung entstanden: Je stärker Produktion,
+          Wir haben Made by Human aus einer einfachen Beobachtung heraus entwickelt: Je stärker Produktion,
           Gestaltung und Vermarktung automatisiert werden, desto schwerer wird von außen erkennbar,
           wo Menschen ein Produkt tatsächlich noch wesentlich prägen.
         </p>
@@ -51,13 +51,13 @@ export default function AboutPage() {
           <div className="aboutOriginStory">
             <p>
               Automatisierung, moderne Maschinen und künstliche Intelligenz verändern, wie Produkte entstehen.
-              Das ist kein Widerspruch zu Made by Humans: Technologie kann sinnvoll unterstützen.
+              Das ist kein Widerspruch zu Made by Human: Technologie kann sinnvoll unterstützen.
               Gleichzeitig wird für Käufer schwerer erkennbar, wo menschliche Arbeit ein Produkt tatsächlich wesentlich prägt.
             </p>
             <p>
               Begriffe wie „handgemacht“ oder „manufakturgefertigt“ schaffen zwar ein bestimmtes Bild,
               sagen aber oft wenig darüber aus, wie ein Produkt wirklich hergestellt wurde.
-              Genau diese Lücke schließt Made by Humans: aus einer Behauptung wird ein nachvollziehbarer, geprüfter Produktbezug.
+              Genau diese Lücke wollen wir schließen: Aus einer Behauptung wird ein nachvollziehbarer, geprüfter Produktbezug.
             </p>
 
             <div className="aboutOriginThesis compact">
@@ -68,7 +68,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="aboutMetaBand" aria-label="Grundprinzipien von Made by Humans">
+      <section className="aboutMetaBand" aria-label="Grundprinzipien von Made by Human">
         <div className="shell aboutMetaGrid">
           <div><strong>Produktfokus</strong><p>Geprüft wird ein klar abgegrenztes physisches Produkt.</p></div>
           <div><strong>Klare Aussage</strong><p>Bewertet wird ausschließlich die menschliche Herstellung.</p></div>
@@ -85,7 +85,7 @@ export default function AboutPage() {
           </div>
           <div>
             <p>
-              Made by Humans setzt deshalb nicht bei einer Werbeformulierung an, sondern bei der realen Produktion:
+              Wir setzen deshalb nicht bei einer Werbeformulierung an, sondern bei der realen Produktion:
               Welche wesentlichen, produktprägenden Schritte werden tatsächlich durch Menschen ausgeführt,
               welche Technik unterstützt dabei und wie lässt sich das nachvollziehbar belegen?
             </p>
@@ -101,7 +101,7 @@ export default function AboutPage() {
         <div className="sectionIntro compact">
           <div>
             <div className="sectionNo">GRUNDSÄTZE</div>
-            <h2>Was Made by Humans bewusst leistet – und was nicht.</h2>
+            <h2>Was wir bewusst leisten – und was nicht.</h2>
           </div>
           <p>
             Die Aussage bleibt bewusst eng. Sie soll für Käufer, Hersteller und Geschäftspartner verständlich,
@@ -156,7 +156,7 @@ export default function AboutPage() {
             <h2>Eine Zertifizierung ersetzt keine anderen Produktaussagen.</h2>
           </div>
           <p>
-            Made by Humans trifft keine Aussage zu Herkunftsland, Nachhaltigkeit, Bio-, Fairtrade-,
+            Wir treffen keine Aussage zu Herkunftsland, Nachhaltigkeit, Bio-, Fairtrade-,
             Qualitäts- oder Sicherheitsmerkmalen, sofern diese nicht ausdrücklich Gegenstand eines anderen Nachweises sind.
             Die Zertifizierung bleibt auf die definierte Aussage zur menschlichen Herstellung begrenzt.
           </p>
