@@ -21,7 +21,7 @@ export default function SiteFooter() {
             <Link href="/leitfaden/zertifizierungsumfang">Zertifizierungsumfang</Link>
           </div>
           <div>
-            <span>VERIFIZIERUNG</span>
+            <span>PRÜFEN</span>
             <Link href="/register">Öffentliches Register</Link>
             <Link href="/pruefen">Zertifizierungs-ID prüfen</Link>
             <Link href="/fuer-kaeufer">Für Käufer</Link>
@@ -48,7 +48,7 @@ export default function SiteFooter() {
             </div>
           </details>
           <details>
-            <summary>Verifizierung</summary>
+            <summary>Prüfen</summary>
             <div>
               <Link href="/register">Öffentliches Register</Link>
               <Link href="/pruefen">Zertifizierungs-ID prüfen</Link>
@@ -69,7 +69,7 @@ export default function SiteFooter() {
       </div>
 
       <div className="shell premiumFooterBottom">
-        <span>STANDARD · PRÜFUNG · NACHVOLLZIEHBARKEIT · ÖFFENTLICHES REGISTER</span>
+        <span>STANDARD · PRÜFUNG · KLARE REGELN · ÖFFENTLICHES REGISTER</span>
         <span>Made by Human</span>
       </div>
     </footer>
