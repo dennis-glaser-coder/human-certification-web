@@ -20,10 +20,10 @@ const rules = [
 ];
 
 const useCases = [
-  ['Produkt', 'Zeichen direkt am zertifizierten Produkt, sofern Gestaltung und Produktbezug eindeutig bleiben.'],
+  ['Produkt', 'Zeichen direkt am zertifizierten Produkt, wenn die Zuordnung zum Produkt eindeutig bleibt.'],
   ['Verpackung', 'Kennzeichnung auf der Verpackung des zertifizierten Produkts mit eindeutigem Bezug zum Registerdatensatz.'],
   ['Produktseite', 'Verwendung in Webshop oder Produktdetailseite, wenn das zertifizierte Produkt klar bezeichnet ist.'],
-  ['Verkaufsunterlagen', 'Nutzung in Datenblättern, Katalogen oder Präsentationen ausschließlich für den zertifizierten Produktumfang.'],
+  ['Verkaufsunterlagen', 'Nutzung in Datenblättern, Katalogen oder Präsentationen ausschließlich für zertifizierte Produkte.'],
 ];
 
 const prohibited = [
@@ -75,8 +75,8 @@ export default function MarkUsePage() {
             <div className="sectionNo">AM PRODUKT</div>
             <h2>Das Zeichen ergänzt die Produktmarke, ohne sie zu ersetzen.</h2>
             <p>
-              Eine zurückhaltende Kennzeichnung kann den geprüften Produktbezug sichtbar machen,
-              während Produkt und Herstellermarke im Vordergrund bleiben.
+              Das Zeichen kann dezent eingesetzt werden.
+              Produkt und Herstellermarke bleiben im Vordergrund.
             </p>
           </div>
         </div>
@@ -89,8 +89,8 @@ export default function MarkUsePage() {
             <h2>Sechs Regeln sorgen dafür, dass das Zeichen eindeutig bleibt.</h2>
           </div>
           <p>
-            Die Kennzeichnung darf nur so verwendet werden, dass für Käufer und Geschäftspartner
-            jederzeit erkennbar bleibt, welches Produkt mit welcher Aussage zertifiziert wurde.
+            Für Käufer und Geschäftspartner muss immer klar bleiben,
+            welches Produkt zertifiziert ist und wofür die Zertifizierung steht.
           </p>
         </div>
 
