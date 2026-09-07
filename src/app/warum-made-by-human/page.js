@@ -67,7 +67,7 @@ export default function WhyPage() {
             </figure>
             <div className="whySealTag">
               <img
-                src={assetBase + '/brand/made-by-humans-seal.png'}
+                src={assetBase + '/brand/made-by-human-seal.png'}
                 alt="Made by Human Zertifizierungszeichen"
                 width="96"
                 height="96"
@@ -197,7 +197,7 @@ export default function WhyPage() {
             />
             <div className="whyBrandSeal">
               <img
-                src={assetBase + '/brand/made-by-humans-seal.png'}
+                src={assetBase + '/brand/made-by-human-seal.png'}
                 alt=""
                 aria-hidden="true"
                 width="78"
