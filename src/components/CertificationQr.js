@@ -8,8 +8,8 @@ export default function CertificationQr({ publicId }) {
 
   useEffect(() => {
     if (!publicId) return;
-    const base = process.env.GITHUB_PAGES === 'true' ? '/human-certification-web' : '';
-    setUrl(`${window.location.origin}${base}/zertifikat?id=${encodeURIComponent(publicId)}`);
+    const base = process.env.NEXT_PUBLIC_ASSET_BASE || '';
+    setUrl(`${window.location.origin}${base}/zertifikat/?id=${encodeURIComponent(publicId)}`);
   }, [publicId]);
 
   if (!url) return null;
