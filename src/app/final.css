@@ -1250,3 +1250,44 @@ summary:focus-visible {
     object-position:66% 50%;
   }
 }
+
+
+/* ===== Manufacturer desktop hero overflow fix 2026-09-07 ===== */
+@media(min-width:1021px){
+  .manufacturerHeroArtGrid{
+    grid-template-columns:minmax(0,1.02fr) minmax(540px,.98fr);
+  }
+  .manufacturerHeroArtCopy{
+    min-width:0;
+    padding-right:48px;
+  }
+  .manufacturerHeroArtCopy h1{
+    width:100%;
+    max-width:590px;
+    font-size:clamp(54px,4.45vw,68px);
+    line-height:.96;
+    letter-spacing:-.045em;
+    overflow-wrap:normal;
+    word-break:normal;
+    hyphens:none;
+  }
+  .manufacturerHeroArtCopy .lead{
+    max-width:560px;
+  }
+  .manufacturerHeroArtVisual>img{
+    object-position:52% center;
+  }
+}
+
+@media(min-width:1021px) and (max-width:1320px){
+  .manufacturerHeroArtGrid{
+    grid-template-columns:minmax(0,1.06fr) minmax(500px,.94fr);
+  }
+  .manufacturerHeroArtCopy{
+    padding-right:34px;
+  }
+  .manufacturerHeroArtCopy h1{
+    max-width:540px;
+    font-size:clamp(50px,4.35vw,60px);
+  }
+}
