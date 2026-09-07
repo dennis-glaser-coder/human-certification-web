@@ -1484,3 +1484,296 @@ summary:focus-visible {
     padding:20px;
   }
 }
+
+
+/* ===== Approved A+B refinement 2026-09-07 =====
+   One master mark, readable type, keyboard access and calmer proof surfaces. */
+
+.skipLink{
+  position:fixed;
+  left:16px;
+  top:12px;
+  z-index:200;
+  padding:10px 14px;
+  background:var(--ink);
+  color:var(--white);
+  font-size:13px;
+  font-weight:700;
+  text-decoration:none;
+  transform:translateY(-160%);
+  transition:transform .14s ease;
+}
+.skipLink:focus{
+  transform:translateY(0);
+}
+.contentStart{
+  position:absolute;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+.premiumBrandLockup{
+  padding-left:0;
+}
+.premiumBrandLockup::before{
+  display:none;
+}
+.premiumBrandLockup .brandTextStack{
+  flex-direction:row;
+  align-items:center;
+  gap:14px;
+}
+.brandMasterLogoAsset{
+  display:block;
+  width:auto;
+  height:68px;
+  max-width:112px;
+  object-fit:contain;
+  object-position:left center;
+  flex:none;
+}
+.premiumBrandLockup .brandDescriptor{
+  max-width:150px;
+  font-size:10px;
+  line-height:1.35;
+  letter-spacing:.035em;
+  text-transform:none;
+  color:rgba(17,24,32,.62);
+}
+
+.premiumFooterBrand{
+  padding-left:0;
+}
+.premiumFooterBrand::before{
+  display:none;
+}
+.footerLogoField{
+  width:138px;
+  padding:12px;
+  background:var(--paper);
+  border:1px solid rgba(255,255,255,.18);
+}
+.footerMasterLogoAsset{
+  display:block;
+  width:100%;
+  height:auto;
+  filter:none;
+}
+.premiumFooterBrand>p{
+  margin-top:16px;
+}
+
+.brandAuthorityWordmark{
+  align-items:center;
+}
+.brandAuthorityWordmark img{
+  width:118px;
+  height:auto;
+  max-width:118px;
+  max-height:none;
+}
+
+.buyerHeroLogoField{
+  width:min(215px,72%);
+  margin-bottom:24px;
+  padding:16px;
+  background:var(--paper);
+  border:1px solid rgba(255,255,255,.18);
+}
+.buyerHeroCard .buyerHeroLogoField img{
+  display:block;
+  width:100%;
+  height:auto;
+  margin:0;
+  filter:none;
+  border-radius:0;
+}
+.manufacturerHeroCredential img{
+  width:72px;
+  height:auto;
+  max-height:88px;
+  object-fit:contain;
+  border-radius:0;
+}
+.applicationProofTop img{
+  width:70px;
+  height:auto;
+  max-height:74px;
+  object-fit:contain;
+  border-radius:0;
+}
+.certificateBrand .certificateMasterLogo{
+  width:82px;
+  height:auto;
+  max-height:92px;
+  object-fit:contain;
+  border-radius:0;
+}
+.statusBadge.status-demo{
+  background:#ECE8DE;
+  color:var(--ink);
+  border-color:rgba(17,24,32,.22);
+}
+
+.applicationProofAction{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  color:var(--blue);
+  text-decoration:none;
+  border-top:0;
+}
+.applicationProofAction>span{
+  font-weight:700;
+}
+.applicationProofAction>small{
+  color:var(--muted-soft);
+  font-size:10px;
+  text-align:right;
+}
+
+.optionalFormDetails{
+  margin-top:5px;
+  border-top:1px solid var(--stone);
+  border-bottom:1px solid var(--stone);
+}
+.optionalFormDetails>summary{
+  min-height:52px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  cursor:pointer;
+  font-size:13px;
+  font-weight:700;
+  color:var(--blue);
+  list-style:none;
+}
+.optionalFormDetails>summary::-webkit-details-marker{
+  display:none;
+}
+.optionalFormDetails>summary::after{
+  content:"+";
+  font-size:19px;
+  font-weight:400;
+  color:var(--ink);
+}
+.optionalFormDetails[open]>summary::after{
+  content:"–";
+}
+.optionalFormFields{
+  padding:6px 0 18px;
+  display:grid;
+  gap:14px;
+}
+
+@media(min-width:761px){
+  .premiumHeaderInner{
+    min-height:92px;
+  }
+  .premiumMainNav{
+    gap:18px;
+  }
+  .premiumMainNav a:not(.navVerify),
+  .desktopNavDropdown summary{
+    font-size:12px;
+    line-height:1.25;
+  }
+  .premiumMainNav .navVerify{
+    min-height:42px;
+    padding:0 15px;
+    font-size:12px;
+  }
+
+  .desireHeroLead,
+  .lead,
+  .buyerHeroLead,
+  .whyHeroLead,
+  .manufacturerHeroArt .lead{
+    font-size:15px;
+    line-height:1.7;
+  }
+
+  .desireManifestoGrid>div>p,
+  .compactApplicationGrid .applicationCopy p,
+  .homeValueStoryHead>p,
+  .homeStoryRows p,
+  .compactAudit .desireAuditLead,
+  .homeVerifyCompact>p,
+  .homeFinalSummary p,
+  .homeFinalCta>div:last-child>p,
+  .manufacturerBenefitGrid p,
+  .manufacturerFitGrid p,
+  .manufacturerEvidenceGrid p,
+  .manufacturerProcessGrid p,
+  .manufacturerMarkGrid p,
+  .manufacturerFaqList p,
+  .buyerMeaningGrid p,
+  .buyerVerifyCopy>p,
+  .buyerAuditGrid p,
+  .buyerFaqList p{
+    font-size:13px;
+    line-height:1.62;
+  }
+
+  .registerRow strong{
+    font-size:12px;
+  }
+  .registerSubline,
+  .registerStatusCell em{
+    font-size:11px;
+    line-height:1.45;
+  }
+  .verificationDetails dt,
+  .verificationDetails dd,
+  .certificateFacts dt,
+  .certificateFacts dd{
+    font-size:12px;
+    line-height:1.5;
+  }
+  .premiumFooterNav a{
+    font-size:11px;
+  }
+}
+
+@media(max-width:760px){
+  .premiumHeaderInner{
+    min-height:68px;
+  }
+  .brandMasterLogoAsset{
+    height:52px;
+    max-width:78px;
+  }
+  .premiumBrandLockup .brandTextStack{
+    gap:0;
+  }
+  .premiumBrandLockup .brandDescriptor{
+    display:none;
+  }
+  .brandAuthorityWordmark img{
+    width:92px;
+    max-width:92px;
+    max-height:none;
+  }
+  .footerLogoField{
+    width:112px;
+    padding:10px;
+  }
+  .buyerHeroLogoField{
+    width:min(180px,66%);
+  }
+  .applicationProofAction{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:5px;
+  }
+  .applicationProofAction>small{
+    font-size:11px;
+    text-align:left;
+  }
+  .optionalFormDetails>summary{
+    min-height:50px;
+    font-size:13px;
+  }
+}
