@@ -59,7 +59,7 @@ export default function ProceduresPage() {
       <section className="procedureMetaBand" aria-label="Verfahrensgrundsätze">
         <div className="shell procedureMetaGrid">
           <div><strong>Richtig eingeordnet</strong><p>Wir klären zuerst, um welche Art von Anliegen es geht.</p></div>
-          <div><strong>Festgehalten</strong><p>Sachverhalt, Belege und Bewertung werden dokumentiert.</p></div>
+          <div><strong>Festgehalten</strong><p>Sachverhalt, Belege und Bewertung werden festgehalten.</p></div>
           <div><strong>Klare Zuständigkeit</strong><p>Es ist festgelegt, wer den Vorgang bearbeitet.</p></div>
           <div><strong>Mit klarem Abschluss</strong><p>Entscheidung und mögliche Maßnahmen werden festgehalten.</p></div>
         </div>
@@ -124,7 +124,7 @@ export default function ProceduresPage() {
       </section>
 
       <section className="shell standardClose">
-        <p>Die Verfahrensregeln haben einen festen Versionsstand. Änderungen werden mit einer neuen Fassung dokumentiert.</p>
+        <p>Die Verfahrensregeln haben einen festen Versionsstand. Änderungen werden mit einer neuen Fassung festgehalten.</p>
         <div className="standardCloseLinks">
           <Link className="textLink" href="/dokumente">Dokumentenregister →</Link>
           <Link className="textLink" href="/transparenz">Transparenz & Integrität →</Link>
