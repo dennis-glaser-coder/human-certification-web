@@ -35,9 +35,9 @@ export default function AboutPage() {
         <BrandTrace compact />
         <h1>Menschliche Arbeit verdient einen überprüfbaren Nachweis.</h1>
         <p className="lead">
-          Wir haben Made by Human aus einer einfachen Beobachtung heraus entwickelt: Je stärker Produktion,
-          Gestaltung und Vermarktung automatisiert werden, desto schwerer wird von außen erkennbar,
-          wo Menschen ein Produkt tatsächlich noch wesentlich prägen.
+          Immer mehr Schritte in Herstellung und Gestaltung werden automatisiert.
+          Dadurch wird schwerer zu erkennen, wo Menschen ein Produkt wirklich prägen.
+          Genau dafür gibt es Made by Human.
         </p>
       </section>
 
