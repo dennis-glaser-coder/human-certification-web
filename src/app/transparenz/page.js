@@ -30,7 +30,7 @@ export default function TransparencyPage() {
         <BrandTrace compact />
         <h1>Vertrauen braucht klare Regeln.</h1>
         <p className="lead">
-          Glaubwürdigkeit entsteht nicht durch das Zeichen allein. Sie entsteht durch klare Regeln, dokumentierte Prüfungen, feste Zuständigkeiten und einen Status, den jeder im Register prüfen kann.
+          Glaubwürdig wird das Zeichen durch klare Regeln, festgehaltene Prüfungen, feste Zuständigkeiten und einen Status, den jeder im Register prüfen kann.
         </p>
       </section>
 
@@ -92,7 +92,7 @@ export default function TransparencyPage() {
           <div className="sectionIntro compact">
             <div>
               <div className="sectionNo">ÖFFENTLICHE REGELN</div>
-              <h2>Unsere Regeln sind dokumentiert und öffentlich einsehbar.</h2>
+              <h2>Unsere Regeln sind öffentlich einsehbar.</h2>
             </div>
             <p>
               Die Regeln zu Zertifizierung, Markennutzung, Beschwerden und Einsprüchen sind öffentlich einsehbar. Änderungen werden mit einer neuen Version festgehalten.
