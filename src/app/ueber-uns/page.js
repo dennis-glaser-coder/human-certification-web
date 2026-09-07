@@ -19,7 +19,7 @@ const principles = [
 
 const architecture = [
   ['01', 'Standard', 'Legt fest, was geprüft wird und welche Kriterien gelten.'],
-  ['02', 'Prüfung', 'Bewertet den konkreten Herstellungsprozess gegen die anwendbaren Anforderungen.'],
+  ['02', 'Prüfung', 'Prüft den konkreten Herstellungsprozess anhand der geltenden Anforderungen.'],
   ['03', 'Entscheidung', 'Hält das Prüfergebnis und die Entscheidung über den Status fest.'],
   ['04', 'Register', 'Zeigt öffentlich, für welches Produkt die Zertifizierung gilt, nach welchem Standard geprüft wurde und welchen Status sie hat.'],
   ['05', 'Markennutzung', 'Regelt, für welches zertifizierte Produkt und bei welchem Status das Zeichen genutzt werden darf.'],
@@ -50,9 +50,7 @@ export default function AboutPage() {
 
           <div className="aboutOriginStory">
             <p>
-              Automatisierung, moderne Maschinen und künstliche Intelligenz verändern, wie Produkte entstehen.
-              Das ist kein Widerspruch zu Made by Human: Technologie kann sinnvoll unterstützen.
-              Gleichzeitig wird für Käufer schwerer erkennbar, wo menschliche Arbeit ein Produkt tatsächlich wesentlich prägt.
+              Automatisierung, moderne Maschinen und künstliche Intelligenz verändern, wie Produkte entstehen. Das widerspricht Made by Human nicht: Technik darf unterstützen. Entscheidend ist, ob menschliche Arbeit das Produkt weiterhin wesentlich prägt.
             </p>
             <p>
               Begriffe wie „handgemacht“ oder „manufakturgefertigt“ schaffen zwar ein bestimmtes Bild,
