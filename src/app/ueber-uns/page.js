@@ -57,7 +57,7 @@ export default function AboutPage() {
             <p>
               Begriffe wie „handgemacht“ oder „manufakturgefertigt“ schaffen zwar ein bestimmtes Bild,
               sagen aber oft wenig darüber aus, wie ein Produkt wirklich hergestellt wurde.
-              Genau diese Lücke wollen wir schließen: Aus einer Behauptung wird ein nachvollziehbarer, geprüfter Produktbezug.
+              Genau hier setzt Made by Human an: Wir prüfen, was tatsächlich von Menschen gemacht wird, und machen das Ergebnis sichtbar.
             </p>
 
             <div className="aboutOriginThesis compact">
@@ -87,7 +87,7 @@ export default function AboutPage() {
             <p>
               Wir setzen deshalb nicht bei einer Werbeformulierung an, sondern bei der realen Produktion:
               Welche wesentlichen, produktprägenden Schritte werden tatsächlich durch Menschen ausgeführt,
-              welche Technik unterstützt dabei und wie lässt sich das nachvollziehbar belegen?
+              wo Technik unterstützt und wie sich die menschliche Arbeit belegen lässt?
             </p>
             <p>
               Das Zeichen allein schafft noch kein Vertrauen. Dahinter stehen ein klarer Standard, die Prüfung vor Ort, eine festgehaltene Entscheidung, das öffentliche Register und klare Regeln für die Nutzung.
