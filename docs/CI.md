@@ -1,9 +1,9 @@
-# Made by Humans — CI
+# Made by Human — CI
 
 ## Direction
 **Modern Human Standard / Editorial Certification**
 
-Made by Humans should feel like a modern certification and trust-mark system: high-quality, trustworthy, clear and human. It must not look like a handmade shop, a typical eco/bio label, a playful startup or a generic SaaS product.
+Made by Human should feel like a modern certification and trust-mark system: high-quality, trustworthy, clear and human. It must not look like a handmade shop, a typical eco/bio label, a playful startup or a generic SaaS product.
 
 Public copy must never imply accreditation, external independence, scale, customers or maturity that cannot be demonstrated.
 
@@ -85,7 +85,7 @@ Within seconds the website should communicate:
 > Das Zeichen steht für eine klar definierte, produktbezogene und überprüfbare Zertifizierung menschlicher Herstellung.
 
 ## Certification mark rule
-The Made by Humans certification mark is used as a functional endorsement mark, not as decoration.
+The Made by Human certification mark is used as a functional endorsement mark, not as decoration.
 
 - manufacturer / product brand remains visually primary
 - mark is used sparingly
