@@ -1,13 +1,13 @@
 import Link from 'next/link';
 
 export default function SiteFooter() {
-  const assetBase = process.env.GITHUB_PAGES === 'true' ? '/human-certification-web' : '';
+  const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE || '';
 
   return (
     <footer className="siteFooter premiumFooter">
       <div className="shell premiumFooterTop">
         <div className="premiumFooterBrand">
-          <img className="footerWordmarkAsset" src={assetBase + '/brand/made-by-human-wordmark.png'} alt="Made by Human" />
+          <div className="footerLogoField"><img className="footerMasterLogoAsset" src={assetBase + '/brand/made-by-human-logo.png'} alt="Made by Human – Verified Human Production" /></div>
           <p>Zertifizierung für nachweisbar menschliche Herstellung.</p>
         </div>
 
