@@ -146,7 +146,7 @@ export default function BuyerPage() {
         <div className="shell buyerAuditGrid">
           <figure>
             <img
-              src="https://images.unsplash.com/photo-1774282557812-6182cc59f638?auto=format&fit=crop&w=1600&q=84"
+              src={assetBase + '/photography/buyer-production.jpg'}
               alt="Menschliche Arbeit in einer Produktionswerkstatt"
               loading="lazy"
             />
