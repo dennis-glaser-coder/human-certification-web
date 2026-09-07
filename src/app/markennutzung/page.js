@@ -6,17 +6,17 @@ import { canonical } from '../../lib/seo';
 
 export const metadata = {
   title: 'Regeln zur Markennutzung',
-  description: 'Regeln für die zulässige Nutzung des Made by Human Zertifizierungszeichens auf Produkten, Verpackungen und in produktbezogener Kommunikation.',
+  description: 'Regeln dafür, wie das Made by Human Zeichen auf Produkten, Verpackungen und in der Kommunikation verwendet werden darf.',
   alternates: { canonical: canonical('/markennutzung') },
 };
 
 const rules = [
-  ['Nur zertifizierter Umfang', 'Das Zeichen darf nur für Produkte oder Produktfamilien verwendet werden, die vom veröffentlichten Zertifizierungsumfang erfasst sind.'],
+  ['Nur für zertifizierte Produkte', 'Das Zeichen darf nur für Produkte oder Produktfamilien verwendet werden, die im Register tatsächlich als zertifiziert geführt werden.'],
   ['Kein Unternehmens-Siegel', 'Die Verwendung darf nicht den Eindruck erwecken, das gesamte Unternehmen oder nicht erfasste Produkte seien zertifiziert.'],
   ['Aussage nicht erweitern', 'Die zertifizierte Aussage darf nicht mit zusätzlichen ungeprüften Eigenschaften vermischt oder inhaltlich erweitert werden.'],
-  ['Registerbezug erhalten', 'Zertifizierungs-ID und öffentlicher Registerbezug müssen der Kennzeichnung eindeutig zugeordnet bleiben.'],
-  ['Status ist bindend', 'Bei Aussetzung, Ablauf oder Widerruf endet oder ruht die Berechtigung zur Zeichennutzung für den betroffenen Zertifizierungsumfang.'],
-  ['Werbung bleibt produktbezogen', 'In Webshop, Produktseiten, Anzeigen und Verkaufsunterlagen muss klar erkennbar sein, welches konkrete Produkt zertifiziert ist.'],
+  ['ID und Register gehören dazu', 'Zertifizierungs-ID und Registereintrag müssen eindeutig zur Kennzeichnung gehören.'],
+  ['Nur bei gültiger Zertifizierung', 'Ist die Zertifizierung ausgesetzt, abgelaufen oder widerrufen, darf das Zeichen für das betroffene Produkt nicht weiter genutzt werden.'],
+  ['Nur das zertifizierte Produkt bewerben', 'In Webshop, Anzeigen und Verkaufsunterlagen muss klar sein, welches Produkt tatsächlich zertifiziert ist.'],
 ];
 
 const useCases = [
@@ -56,10 +56,10 @@ export default function MarkUsePage() {
 
       <section className="markUseMetaBand" aria-label="Grundlagen der Markennutzung">
         <div className="shell markUseMetaGrid">
-          <div><strong>Produktfokus</strong><p>Zeichen nur für den zertifizierten Umfang.</p></div>
-          <div><strong>Statusgebunden</strong><p>Nutzung nur bei gültigem Zertifizierungsstatus.</p></div>
-          <div><strong>Registerbezug</strong><p>ID und öffentlicher Datensatz bleiben zugeordnet.</p></div>
-          <div><strong>Aussageklarheit</strong><p>Keine Erweiterung um ungeprüfte Eigenschaften.</p></div>
+          <div><strong>Konkretes Produkt</strong><p>Das Zeichen gilt nur für das zertifizierte Produkt.</p></div>
+          <div><strong>Gültiger Status</strong><p>Das Zeichen darf nur bei gültiger Zertifizierung genutzt werden.</p></div>
+          <div><strong>Mit Registereintrag</strong><p>ID und öffentlicher Eintrag gehören zur Kennzeichnung.</p></div>
+          <div><strong>Klare Aussage</strong><p>Keine zusätzlichen Eigenschaften behaupten, die nicht geprüft wurden.</p></div>
         </div>
       </section>
 
@@ -88,7 +88,7 @@ export default function MarkUsePage() {
         <div className="sectionIntro compact">
           <div>
             <div className="sectionNo">GRUNDREGELN</div>
-            <h2>Sechs Regeln schützen die Aussage des Zeichens.</h2>
+            <h2>Sechs Regeln sorgen dafür, dass das Zeichen eindeutig bleibt.</h2>
           </div>
           <p>
             Die Kennzeichnung darf nur so verwendet werden, dass für Käufer und Geschäftspartner
@@ -145,7 +145,7 @@ export default function MarkUsePage() {
 
       <section className="shell standardClose">
         <p>
-          Die Markennutzungsregeln werden versioniert geführt und mit dem jeweils freigegebenen Zertifizierungszeichen verknüpft.
+          Die Regeln zur Markennutzung haben einen festen Versionsstand und gelten immer zusammen mit dem freigegebenen Zertifizierungszeichen.
         </p>
         <div className="standardCloseLinks">
           <Link className="textLink" href="/dokumente">Dokumentenregister →</Link>
