@@ -14,14 +14,14 @@ const procedures = [
     code: '01',
     type: 'BESCHWERDE',
     title: 'Beschwerde über System, Prüfung oder Kommunikation',
-    copy: 'Eine Beschwerde betrifft Durchführung, Kommunikation oder Funktionsweise des Zertifizierungssystems und ist nicht automatisch ein Einspruch gegen eine konkrete Zertifizierungsentscheidung.',
+    copy: 'Eine Beschwerde betrifft zum Beispiel die Durchführung, Kommunikation oder Funktionsweise des Zertifizierungssystems. Sie ist nicht automatisch ein Einspruch gegen eine konkrete Entscheidung.',
     steps: ['Eingang dokumentieren', 'Zuständigkeit und mögliche Interessenkonflikte prüfen', 'Sachverhalt bewerten', 'Maßnahme und Abschluss dokumentieren'],
   },
   {
     code: '02',
     type: 'EINSPRUCH',
     title: 'Einspruch gegen eine Zertifizierungsentscheidung',
-    copy: 'Ein Einspruch richtet sich gegen eine konkrete Entscheidung, zum Beispiel Ablehnung, Aussetzung oder Widerruf. Angefochtene Entscheidung, erneute Bewertung und Begründung werden getrennt nachvollziehbar dokumentiert.',
+    copy: 'Ein Einspruch richtet sich gegen eine konkrete Entscheidung, zum Beispiel eine Ablehnung, Aussetzung oder einen Widerruf. Die Entscheidung wird erneut geprüft und das Ergebnis mit Begründung festgehalten.',
     steps: ['Entscheidung und Begründung erfassen', 'Beteiligte Rollen und mögliche Interessenkonflikte prüfen', 'Entscheidungsgrundlage erneut bewerten', 'Ergebnis und Begründung dokumentieren'],
   },
   {
@@ -35,10 +35,10 @@ const procedures = [
 
 const recordFields = [
   ['Vorgangsart', 'Beschwerde, Einspruch oder Zeichenmissbrauch'],
-  ['Sachverhalt', 'Gegenstand, betroffene Zertifizierung und relevante Belege'],
+  ['Sachverhalt', 'Worum es geht, welche Zertifizierung betroffen ist und welche Belege vorliegen'],
   ['Zuständigkeit', 'Bearbeitende Rolle und Prüfung möglicher Interessenkonflikte'],
   ['Entscheidung', 'Bewertung, Begründung und gegebenenfalls erforderliche Maßnahmen'],
-  ['Abschluss', 'Dokumentierter Verfahrensabschluss und relevante Statusänderungen'],
+  ['Abschluss', 'Ergebnis des Verfahrens und mögliche Änderungen am Status'],
 ];
 
 export default function ProceduresPage() {
