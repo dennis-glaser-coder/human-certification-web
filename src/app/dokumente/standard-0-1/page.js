@@ -1,12 +1,21 @@
 import Link from 'next/link';
 import SiteHeader from '../../../components/SiteHeader';
 import SiteFooter from '../../../components/SiteFooter';
-import { canonical } from '../../../lib/seo';
+import { canonical, SOCIAL_IMAGE } from '../../../lib/seo';
 
 export const metadata = {
   title: 'Standard 0.1',
   description: 'Version 0.1 des Made by Human Standards für nachweisbar menschlich gefertigte physische Produkte.',
   alternates: { canonical: canonical('/dokumente/standard-0-1') },
+  openGraph: {
+    type: 'website',
+    locale: 'de_DE',
+    siteName: 'Made by Human',
+    title: 'Standard 0.1 | Made by Human',
+    description: 'Version 0.1 des Made by Human Standards für nachweisbar menschlich gefertigte physische Produkte.',
+    url: canonical('/dokumente/standard-0-1'),
+    images: [SOCIAL_IMAGE],
+  },
 };
 
 const criteria = [
