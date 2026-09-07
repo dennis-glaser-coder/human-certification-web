@@ -8,7 +8,7 @@ const criteria = [
   ['Menschliche Ausführung', 'Die wesentlichen produktprägenden Herstellungsschritte werden tatsächlich unmittelbar durch Menschen ausgeführt.'],
   ['Fachliche Prägung', 'Relevante Schritte erfordern Erfahrung, Fähigkeit oder bewusste menschliche Entscheidungen.'],
   ['Automatisierungsgrenze', 'Technik kann unterstützen; eine weitgehend autonome Produktentstehung erfüllt das Kriterium nicht.'],
-  ['Rückverfolgbarkeit', 'Relevante Produktionsorte, Zulieferer und wesentliche Fremdfertigung müssen nachvollziehbar zugeordnet werden können.'],
+  ['Rückverfolgbarkeit', 'Produktionsorte, Zulieferer und wichtige externe Fertigung müssen eindeutig zum Produkt zugeordnet werden können.'],
   ['Nachweisbarkeit', 'Die Angaben zum Herstellungsprozess müssen durch geeignete Informationen und Unterlagen prüfbar sein.'],
 ];
 
@@ -37,8 +37,7 @@ export default function StandardPage() {
         <BrandTrace compact />
         <h1>Der Standard für nachweisbar menschliche Herstellung.</h1>
         <p className="lead">
-          Der öffentliche Standard definiert, wann menschliche Arbeit für die Herstellung eines physischen Endprodukts
-          wesentlich ist, wie der Produktumfang abgegrenzt wird und welche Nachweise für die Prüfung erforderlich sind.
+          Der Standard legt fest, wann menschliche Arbeit ein physisches Produkt wesentlich prägt, was genau zur Zertifizierung gehört und welche Belege für die Prüfung nötig sind.
         </p>
       </section>
 
@@ -58,8 +57,7 @@ export default function StandardPage() {
             <h2>Sechs Bereiche zeigen, worauf wir bei der Prüfung achten.</h2>
           </div>
           <p>
-            Eine Zertifizierung setzt voraus, dass die Kriterien für den konkreten Herstellungsprozess
-            nachvollziehbar erfüllt und ausreichend belegt werden.
+            Eine Zertifizierung ist nur möglich, wenn der konkrete Herstellungsprozess die Kriterien erfüllt und sich das ausreichend belegen lässt.
           </p>
         </div>
 
@@ -81,8 +79,7 @@ export default function StandardPage() {
               <h2>Vom Produkt bis zum Registereintrag.</h2>
             </div>
             <p>
-              Das Zertifizierungsverfahren ist so angelegt, dass die Entscheidung nicht auf einer einzelnen Selbstauskunft,
-              sondern auf einem dokumentierten Prüf- und Entscheidungsprozess beruht.
+              Die Entscheidung stützt sich nicht auf eine Selbstauskunft. Wir erfassen den Herstellungsprozess, prüfen die Belege, bewerten den Fall und halten die Entscheidung fest.
             </p>
           </div>
 
@@ -147,8 +144,7 @@ export default function StandardPage() {
       <section className="standardClose shell">
         <div>
           <p>
-            Der Standard ist versioniert dokumentiert.
-            Regeln zu Prüfrollen, Statusänderungen und Markennutzung werden unter Transparenz & Integrität geführt.
+            Jede Fassung des Standards hat eine eigene Version. Regeln zu Prüfrollen, Statusänderungen und Markennutzung stehen unter Transparenz & Integrität.
           </p>
         </div>
         <div className="standardCloseLinks">
