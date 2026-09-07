@@ -60,7 +60,7 @@ export default function WhyPage() {
           <div className="whyHeroVisual">
             <figure>
               <img
-                src="https://images.unsplash.com/photo-1771523350488-32af5ba560e6?auto=format&fit=crop&w=1800&q=84"
+                src={assetBase + '/photography/why-human-production.jpg'}
                 alt="Hände bei der Formgebung eines keramischen Produktes"
               />
               <figcaption>Produktionsaufnahme · Maksim Shiriagin / Unsplash</figcaption>
