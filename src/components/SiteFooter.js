@@ -7,7 +7,7 @@ export default function SiteFooter() {
     <footer className="siteFooter premiumFooter">
       <div className="shell premiumFooterTop">
         <div className="premiumFooterBrand">
-          <div className="footerLogoField"><img className="footerMasterLogoAsset" src={assetBase + '/brand/made-by-human-logo.webp'} alt="Made by Human – Verified Human Production" /></div>
+          <div className="footerLogoField"><img className="footerMasterLogoAsset" src={assetBase + '/brand/made-by-human-logo.webp'} width="1085" height="819" loading="lazy" alt="Made by Human – Verified Human Production" /></div>
           <p>Zertifizierung für nachweisbar menschliche Herstellung.</p>
         </div>
 
