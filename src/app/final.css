@@ -1295,3 +1295,92 @@ summary:focus-visible {
     font-size:clamp(50px,4.35vw,60px);
   }
 }
+
+
+/* ===== Desktop organisation dropdown 2026-09-07 ===== */
+@media(min-width:1021px){
+  .desktopNavDropdown{
+    position:relative;
+    display:flex;
+    align-items:center;
+  }
+
+  .desktopNavDropdown summary{
+    list-style:none;
+    position:relative;
+    display:flex;
+    align-items:center;
+    min-height:40px;
+    padding:0 14px 0 0;
+    color:rgba(17,24,32,.72);
+    font-size:9px;
+    font-weight:600;
+    line-height:1;
+    letter-spacing:.005em;
+    cursor:pointer;
+    user-select:none;
+  }
+
+  .desktopNavDropdown summary::-webkit-details-marker{
+    display:none;
+  }
+
+  .desktopNavDropdown summary::after{
+    content:"";
+    position:absolute;
+    right:0;
+    top:50%;
+    width:5px;
+    height:5px;
+    border-right:1px solid currentColor;
+    border-bottom:1px solid currentColor;
+    transform:translateY(-65%) rotate(45deg);
+    transition:transform .16s ease;
+  }
+
+  .desktopNavDropdown[open] summary{
+    color:var(--ink);
+  }
+
+  .desktopNavDropdown[open] summary::after{
+    transform:translateY(-35%) rotate(225deg);
+  }
+
+  .desktopNavDropdownPanel{
+    position:absolute;
+    top:calc(100% + 10px);
+    right:0;
+    z-index:50;
+    width:245px;
+    padding:8px 0;
+    background:var(--paper);
+    border-top:2px solid var(--blue);
+    border-left:1px solid rgba(17,24,32,.16);
+    border-right:1px solid rgba(17,24,32,.16);
+    border-bottom:1px solid rgba(17,24,32,.16);
+    box-shadow:0 18px 40px rgba(17,24,32,.12);
+  }
+
+  .premiumMainNav .desktopNavDropdownPanel a{
+    display:block;
+    min-height:0;
+    padding:12px 15px;
+    color:rgba(17,24,32,.76);
+    font-size:9px;
+    font-weight:600;
+    line-height:1.35;
+    white-space:nowrap;
+  }
+
+  .premiumMainNav .desktopNavDropdownPanel a:hover,
+  .premiumMainNav .desktopNavDropdownPanel a:focus-visible{
+    color:var(--ink);
+    background:#ECE8DE;
+  }
+}
+
+@media(max-width:1020px){
+  .desktopNavDropdown{
+    display:none;
+  }
+}
