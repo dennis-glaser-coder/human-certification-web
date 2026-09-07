@@ -34,6 +34,7 @@ export default function SiteFooter() {
             <Link href="/transparenz">Transparenz & Integrität</Link>
             <Link href="/verfahren">Beschwerden & Einsprüche</Link>
             <Link href="/impressum">Impressum</Link>
+            <Link href="/datenschutz">Datenschutz</Link>
           </div>
         </nav>
 
@@ -65,6 +66,7 @@ export default function SiteFooter() {
               <Link href="/transparenz">Transparenz & Integrität</Link>
               <Link href="/verfahren">Beschwerden & Einsprüche</Link>
               <Link href="/impressum">Impressum</Link>
+              <Link href="/datenschutz">Datenschutz</Link>
             </div>
           </details>
         </nav>
@@ -74,6 +76,7 @@ export default function SiteFooter() {
         <span>STANDARD · PRÜFUNG · KLARE REGELN · ÖFFENTLICHES REGISTER</span>
         <div className="footerLegalMeta">
           <Link href="/impressum">Impressum</Link>
+          <Link href="/datenschutz">Datenschutz</Link>
           <span>Made by Human</span>
         </div>
       </div>
