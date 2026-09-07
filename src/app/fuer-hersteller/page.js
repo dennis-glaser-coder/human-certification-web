@@ -189,6 +189,19 @@ export default function ManufacturerPage() {
               </article>
             ))}
           </div>
+
+          <div className="manufacturerMarkSummary">
+            <div>
+              <span>NACH POSITIVER ZERTIFIZIERUNG</span>
+              <strong>So lässt sich der Nachweis nutzen.</strong>
+            </div>
+            <div className="manufacturerMarkSummaryItems">
+              {markUseBenefits.map(([title, copy]) => (
+                <div key={title}><strong>{title}</strong><p>{copy}</p></div>
+              ))}
+            </div>
+            <Link href="/markennutzung">Regeln zur Markennutzung →</Link>
+          </div>
         </div>
       </section>
 
@@ -282,38 +295,6 @@ export default function ManufacturerPage() {
         </div>
       </section>
 
-
-      <section className="manufacturerMarkValue">
-        <div className="shell">
-          <div className="sectionIntro compact">
-            <div>
-              <div className="sectionNo">NACH POSITIVER ZERTIFIZIERUNG</div>
-              <h2>Was nach positiver Zertifizierung genutzt werden kann.</h2>
-            </div>
-            <p>
-              Die Markennutzung verbindet den geprüften Produktumfang mit klaren Anwendungen für Verpackung,
-              Produktseite, Handel und B2B-Kommunikation. Jede Nutzung bleibt an die gültige Zertifizierung gebunden.
-            </p>
-          </div>
-
-          <div className="manufacturerMarkGrid">
-            {markUseBenefits.map(([title, copy]) => (
-              <article key={title}>
-                <strong>{title}</strong>
-                <p>{copy}</p>
-              </article>
-            ))}
-          </div>
-
-          <div className="manufacturerMarkClose">
-            <p>
-              Das Zertifizierungszeichen ergänzt die Produktmarke und bleibt an Produktumfang,
-              Zertifizierungsstatus und öffentlichen Registereintrag gebunden.
-            </p>
-            <Link href="/markennutzung">Regeln zur Markennutzung ansehen →</Link>
-          </div>
-        </div>
-      </section>
 
       <section className="manufacturerFaq">
         <div className="shell manufacturerFaqGrid">
