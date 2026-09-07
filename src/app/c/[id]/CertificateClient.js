@@ -48,7 +48,7 @@ function publicClaim(record) {
 }
 
 export default function CertificateClient({ id }) {
-  const assetBase = process.env.GITHUB_PAGES === 'true' ? '/human-certification-web' : '';
+  const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE || '';
   const [state, setState] = useState({
     loading: true,
     record: null,
