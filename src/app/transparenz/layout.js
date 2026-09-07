@@ -1,4 +1,4 @@
-import { canonical } from '../../lib/seo';
+import { canonical, SOCIAL_IMAGE } from '../../lib/seo';
 
 export const metadata = {
   title: 'Transparenz & Integrität',
@@ -12,6 +12,7 @@ export const metadata = {
     description:
       'Nachvollziehbare Regeln für Prüfung, Zertifizierungsentscheidung, Register und Markennutzung.',
     url: canonical('/transparenz'),
+    images: [SOCIAL_IMAGE],
   },
 };
 
