@@ -5,14 +5,14 @@ import BrandTrace from '../../components/BrandTrace';
 import { canonical, SOCIAL_IMAGE } from '../../lib/seo';
 
 export const metadata = {
-  title: 'Über Made by Human',
+  title: 'Über uns',
   description: 'Warum Made by Human entstanden ist und wie wir menschliche Herstellung sichtbar und überprüfbar machen.',
   alternates: { canonical: canonical('/ueber-uns') },
   openGraph: {
     type: 'website',
     locale: 'de_DE',
     siteName: 'Made by Human',
-    title: 'Über Made by Human | Made by Human',
+    title: 'Über uns | Made by Human',
     description: 'Warum Made by Human entstanden ist und wie wir menschliche Herstellung sichtbar und überprüfbar machen.',
     url: canonical('/ueber-uns'),
     images: [SOCIAL_IMAGE],
