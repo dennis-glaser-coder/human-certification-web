@@ -41,7 +41,7 @@ export default function Home() {
 
           <div className="desireHeroVisual">
             <img
-              src={assetBase + '/photography/home-hero-woodworking.jpg'}
+              src={assetBase + '/photography/home-hero-woodworking.webp'}
               alt="Holzhandwerker bei der manuellen Bearbeitung eines Werkstücks"
             />
           </div>
@@ -51,7 +51,7 @@ export default function Home() {
       <section className="brandAuthorityRail" aria-label="Made by Human Markenversprechen">
         <div className="shell brandAuthorityRailInner">
           <div className="brandAuthorityWordmark">
-            <img src={assetBase + '/brand/made-by-human-logo.png'} alt="Made by Human – Verified Human Production" />
+            <img src={assetBase + '/brand/made-by-human-logo.webp'} alt="Made by Human – Verified Human Production" />
           </div>
           <div className="brandAuthorityPillars">
             <span>STANDARD</span>
@@ -115,7 +115,7 @@ export default function Home() {
                 <div className="applicationProofPanel">
                   <div className="applicationProofTop">
                     <span>ONLINE PRÜFBAR</span>
-                    <img src={assetBase + '/brand/made-by-human-logo.png'} alt="" aria-hidden="true" />
+                    <img src={assetBase + '/brand/made-by-human-logo.webp'} alt="" aria-hidden="true" />
                   </div>
                   <div className="applicationProofStatement">
                     <small>NACHWEIS FÜR DIESES PRODUKT</small>
