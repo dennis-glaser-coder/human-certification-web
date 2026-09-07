@@ -20,8 +20,8 @@ const roles = [
 const steps = [
   ['Was wird zertifiziert?', 'Produkt, Produktfamilie und Produktionsorte festlegen.'],
   ['Herstellung erfassen', 'Die wichtigen Herstellungsschritte und externe Fertigung erfassen.'],
-  ['Nachweise', 'Unterlagen und Informationen zur tatsächlichen Ausführung prüfen.'],
-  ['Prüfung', 'Produktionsfall gegen die Kriterien des Standards bewerten.'],
+  ['Nachweise', 'Unterlagen und Informationen zur tatsächlichen Herstellung prüfen.'],
+  ['Prüfung', 'Herstellungsprozess anhand der Kriterien des Standards bewerten.'],
   ['Fachprüfung', 'Prüfergebnis fachlich kontrollieren und offene Punkte klären.'],
   ['Entscheidung', 'Über die Zertifizierung entscheiden und bei Freigabe den Status registrieren.'],
 ];
@@ -55,8 +55,8 @@ export default function SchemeDocumentPage() {
         <section>
           <h2>Zweck</h2>
           <p>
-            Der Produktstandard beschreibt, welche Eigenschaft erfüllt sein muss. Das Zertifizierungsschema beschreibt getrennt davon,
-            wie Antrag, Prüfung, fachliche Kontrolle, Entscheidung, Register, Statusänderungen und Markennutzung strukturiert sind.
+            Der Produktstandard legt die Kriterien fest. Das Zertifizierungsschema beschreibt,
+            wie Antrag, Prüfung, fachliche Kontrolle, Entscheidung, Register, Statusänderungen und Markennutzung ablaufen.
           </p>
         </section>
 
@@ -66,8 +66,8 @@ export default function SchemeDocumentPage() {
             {roles.map(([title, copy]) => <article key={title}><strong>{title}</strong><p>{copy}</p></article>)}
           </div>
           <div className="documentNotice">
-            Prüfung, fachliche Kontrolle und Zertifizierungsentscheidung sind als getrennte Rollen festgehalten.
-            Akkreditierung oder externe Unabhängigkeit werden nur ausgewiesen, wenn sie für die jeweilige Struktur nachweislich bestehen.
+            Prüfung, fachliche Kontrolle und Zertifizierungsentscheidung sind getrennte Rollen.
+            Von Akkreditierung oder externer Unabhängigkeit sprechen wir nur, wenn sie tatsächlich besteht und belegt werden kann.
           </div>
         </section>
 
