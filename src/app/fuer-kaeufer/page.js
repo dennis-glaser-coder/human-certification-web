@@ -6,12 +6,12 @@ import { canonical } from '../../lib/seo';
 import { CERTIFIED_STATEMENT } from '../../lib/brand';
 
 export const metadata = {
-  title: 'Für Käufer – Was bedeutet Made by Humans?',
-  description: 'Made by Humans einfach erklärt: Was das Zeichen über menschliche Herstellung aussagt, wie geprüft wird und wie sich eine Zertifizierung per QR oder ID verifizieren lässt.',
+  title: 'Für Käufer – Was bedeutet Made by Human?',
+  description: 'Made by Human einfach erklärt: Was das Zeichen über menschliche Herstellung aussagt, wie geprüft wird und wie sich eine Zertifizierung per QR oder ID verifizieren lässt.',
   alternates: { canonical: canonical('/fuer-kaeufer') },
   openGraph: {
-    title: 'Für Käufer | Made by Humans',
-    description: 'Was das Made by Humans Zeichen bedeutet – einfach erklärt und öffentlich verifizierbar.',
+    title: 'Für Käufer | Made by Human',
+    description: 'Was das Made by Human Zeichen bedeutet – einfach erklärt und öffentlich verifizierbar.',
     url: canonical('/fuer-kaeufer'),
   },
 };
@@ -49,7 +49,7 @@ export default function BuyerPage() {
           <div>
             <p className="premiumEyebrow">FÜR KÄUFER</p>
             <BrandTrace compact />
-            <h1>Was bedeutet Made by Humans?</h1>
+            <h1>Was bedeutet Made by Human?</h1>
             <p className="buyerHeroLead">
               Das Zeichen steht für eine klar abgegrenzte Aussage: Bei diesem Produkt wurden die wesentlichen
               Herstellungsschritte darauf geprüft, ob sie nachweislich durch Menschen ausgeführt werden.
@@ -61,8 +61,8 @@ export default function BuyerPage() {
           </div>
 
           <div className="buyerHeroCard">
-            <img src={assetBase + '/brand/made-by-humans-seal.png'} alt="Made by Humans Zertifizierungszeichen" />
-            <span>MADE BY HUMANS</span>
+            <img src={assetBase + '/brand/made-by-humans-seal.png'} alt="Made by Human Zertifizierungszeichen" />
+            <span>MADE BY HUMAN</span>
             <strong>Von Menschen gemacht.<br />Vor Ort geprüft.</strong>
             <p>Produktfokus · Zertifizierungs-ID · öffentlich verifizierbar</p>
           </div>
@@ -132,7 +132,7 @@ export default function BuyerPage() {
             <p className="premiumSectionLabel">BEWUSST KLAR BEGRENZT</p>
             <h2>Was das Zeichen nicht automatisch aussagt.</h2>
             <p>
-              Made by Humans konzentriert sich auf menschliche Herstellung. Andere Eigenschaften eines Produktes
+              Wir konzentrieren uns auf die nachweisbare menschliche Herstellung. Andere Eigenschaften eines Produktes
               benötigen eigene Nachweise und dürfen nicht aus der Zertifizierung abgeleitet werden.
             </p>
           </div>
