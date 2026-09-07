@@ -4,7 +4,7 @@ import SiteFooter from '../../../components/SiteFooter';
 import { canonical } from '../../../lib/seo';
 
 export const metadata = {
-  title: 'Leitfaden zum Zertifizierungsumfang',
+  title: 'Was genau wird zertifiziert?',
   description: 'Wie wir festlegen, welches Produkt, welche Varianten und welche Produktionsorte zu einer Made by Human Zertifizierung gehören.',
   alternates: { canonical: canonical('/leitfaden/zertifizierungsumfang') },
 };
@@ -36,7 +36,7 @@ export default function ScopeGuidePage() {
       <SiteHeader />
 
       <section className="pageHero shell">
-        <div className="eyebrow">LEITFADEN · ZERTIFIZIERUNGSUMFANG</div>
+        <div className="eyebrow">LEITFADEN · WAS WIRD ZERTIFIZIERT?</div>
         <h1>So legen wir fest, wofür eine Zertifizierung gilt.</h1>
         <p className="lead">
           Zertifiziert wird nicht pauschal ein Unternehmen. Der öffentliche Datensatz beschreibt
