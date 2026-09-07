@@ -1,12 +1,12 @@
-# Made by Humans — Competitor Benchmark & Website QA
+# Made by Human — Competitor Benchmark & Website QA
 
 ## Purpose
 This document is a permanent reference for website, product and brand decisions.
 
-The benchmark is not used to copy competitors. It is used to understand which trust mechanisms users already expect from serious certification systems and where Made by Humans must differentiate.
+The benchmark is not used to copy competitors. It is used to understand which trust mechanisms users already expect from serious certification systems and where Made by Human must differentiate.
 
 ## Business-plan north star
-Made by Humans is intended to become a cross-industry trust mark and standard for physical products whose material manufacturing steps are demonstrably performed by humans.
+Made by Human is intended to become a cross-industry trust mark and standard for physical products whose material manufacturing steps are demonstrably performed by humans.
 
 The long-term moat is not audit software or audit hours alone. It is the combination of:
 - brand
@@ -33,7 +33,7 @@ Do not copy:
 - artisan / cultural / social-impact positioning
 - technique-specific craft taxonomy as the core brand narrative
 
-Made by Humans difference:
+Made by Human difference:
 - broader physical-product end-product standard
 - not limited to classic handcraft
 - technology-neutral
@@ -47,7 +47,7 @@ Relevant strengths:
 - mark-use rules
 - misuse controls
 
-Made by Humans should match or exceed:
+Made by Human should match or exceed:
 - instant public verification
 - clear status and validity
 - exact scope of what was verified
@@ -60,7 +60,7 @@ Relevant strengths:
 - published mark usage rules
 - follow-up / ongoing compliance concepts
 
-Made by Humans should match or exceed:
+Made by Human should match or exceed:
 - one exact consumer-understandable certified statement
 - public evidence context
 - lifecycle / status history
@@ -73,7 +73,7 @@ Relevant strengths:
 - strict labelling guidance
 - buying / product directory
 
-Made by Humans should learn:
+Made by Human should learn:
 - verification must be a primary navigation function
 - mark communication must be standardized
 - retailers and consumers should not invent their own wording around the mark
@@ -85,7 +85,7 @@ Relevant strengths:
 - published standards and procedures
 - separation between scheme and certification bodies
 
-Made by Humans should learn:
+Made by Human should learn:
 - public data should become deeper as the scheme scales
 - long-term certification-body model must be structurally possible
 
@@ -101,7 +101,7 @@ Do not copy:
 - generic corporate claims
 - complexity that hides the actual certified property
 
-## Website architecture that Made by Humans should own
+## Website architecture that Made by Human should own
 
 ### Home
 Must answer within seconds:
