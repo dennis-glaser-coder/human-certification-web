@@ -114,7 +114,7 @@ export default function CertificateClient({ id }) {
               </div>
               <div className="certificateHeader">
                 <div className="certificateBrand">
-                  <img src={`${assetBase}/brand/made-by-humans-seal.png`} alt="" aria-hidden="true" />
+                  <img src={`${assetBase}/brand/made-by-human-seal.png`} alt="" aria-hidden="true" />
                   <div>
                     <small>ZERTIFIZIERUNGS-ID</small>
                     <h1>{state.record.public_id}</h1>
