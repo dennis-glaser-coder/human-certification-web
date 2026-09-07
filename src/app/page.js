@@ -122,7 +122,7 @@ export default function Home() {
                 <div className="applicationProofPanel">
                   <div className="applicationProofTop">
                     <span>DIGITALE VERIFIZIERUNG</span>
-                    <img src={assetBase + '/brand/made-by-humans-seal.png'} alt="" aria-hidden="true" />
+                    <img src={assetBase + '/brand/made-by-human-seal.png'} alt="" aria-hidden="true" />
                   </div>
                   <div className="applicationProofStatement">
                     <small>PRODUKTBEZOGENER NACHWEIS</small>
