@@ -16,7 +16,7 @@ const auditFacts = [
 ];
 
 export default function Home() {
-  const assetBase = process.env.GITHUB_PAGES === 'true' ? '/human-certification-web' : '';
+  const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE || '';
 
   return (
     <main id="top" className="desireHome compactHome">
@@ -29,9 +29,9 @@ export default function Home() {
             <div className="brandTrace" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
             <h1>Von Menschen gemacht.<br />Vor Ort geprüft.</h1>
             <p className="desireHeroLead">
-              Wir zertifizieren physische Produkte, deren wesentliche Herstellungsschritte
-              nachweislich durch Menschen ausgeführt werden. Wir prüfen die tatsächliche Herstellung vor Ort
-              und machen den Zertifizierungsstatus öffentlich überprüfbar.
+              Wir prüfen vor Ort, ob die wesentlichen Herstellungsschritte eines Produkts durch Menschen
+              ausgeführt werden. Nach erfolgreicher Zertifizierung machen Zeichen, Zertifizierungs-ID
+              und öffentliches Register diesen Nachweis sichtbar.
             </p>
             <div className="desireHeroActions">
               <Link className="desirePrimary" href="/fuer-hersteller#zertifizierungsanfrage">Zertifizierung anfragen</Link>
@@ -56,8 +56,7 @@ export default function Home() {
       <section className="brandAuthorityRail" aria-label="Made by Human Markenversprechen">
         <div className="shell brandAuthorityRailInner">
           <div className="brandAuthorityWordmark">
-            <img src={assetBase + '/brand/made-by-human-wordmark.png'} alt="Made by Human" />
-            <small>VERIFIED</small>
+            <img src={assetBase + '/brand/made-by-human-logo.png'} alt="Made by Human – Verified Human Production" />
           </div>
           <div className="brandAuthorityPillars">
             <span>STANDARD</span>
@@ -122,7 +121,7 @@ export default function Home() {
                 <div className="applicationProofPanel">
                   <div className="applicationProofTop">
                     <span>DIGITALE VERIFIZIERUNG</span>
-                    <img src={assetBase + '/brand/made-by-human-seal.png'} alt="" aria-hidden="true" />
+                    <img src={assetBase + '/brand/made-by-human-logo.png'} alt="" aria-hidden="true" />
                   </div>
                   <div className="applicationProofStatement">
                     <small>PRODUKTBEZOGENER NACHWEIS</small>
@@ -134,7 +133,10 @@ export default function Home() {
                     <span>Status</span>
                     <span>Standardfassung</span>
                   </div>
-                  <div className="applicationProofAction">Öffentlichen Datensatz prüfen →</div>
+                  <Link className="applicationProofAction" href="/zertifikat/?id=HC-DEMO-0001">
+                    <span>Beispieldatensatz ansehen →</span>
+                    <small>Demonstration – keine reale Zertifizierung</small>
+                  </Link>
                 </div>
               </div>
               <div className="applicationCopy"><strong>Digitaler Nachweis</strong><p>Zeichen, Registerbezug und Verifizierung bleiben auch online eindeutig miteinander verbunden.</p></div>
@@ -153,9 +155,10 @@ export default function Home() {
         <div className="shell homeValueStory">
           <div className="homeValueStoryHead">
             <p className="premiumSectionLabel premiumSectionLabelLight">WERT & VERTRAUEN</p>
-            <h2>Aus einem Herstellungsmerkmal wird ein belegbares Unterscheidungsmerkmal.</h2>
+            <h2>Machen Sie Ihre Herstellung nachvollziehbar.</h2>
             <p>
-              Wir machen menschliche Herstellung strukturiert kommunizierbar – klar begrenzt auf den tatsächlich zertifizierten Produktumfang.
+              Zeigen Sie auf Produktseite, Verpackung und im Verkauf, welche menschliche Arbeit hinter Ihrem Produkt steht.
+              Das Zeichen verbindet diese Aussage mit einem überprüfbaren Zertifizierungsdatensatz.
             </p>
           </div>
           <div className="homeStoryRows">
