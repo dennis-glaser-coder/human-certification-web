@@ -14,7 +14,7 @@ const criteria = [
   ['Menschliche Ausführung', 'Die wesentlichen produktprägenden Herstellungsschritte werden tatsächlich unmittelbar durch Menschen ausgeführt.'],
   ['Fachliche Prägung', 'Relevante Schritte erfordern Erfahrung, Fähigkeit oder bewusste menschliche Entscheidungen.'],
   ['Automatisierungsgrenze', 'Technik kann unterstützen. Eine weitgehend autonome Produktentstehung erfüllt das Kriterium nicht.'],
-  ['Rückverfolgbarkeit', 'Relevante Produktionsorte, Zulieferer und wesentliche Fremdfertigung müssen nachvollziehbar zugeordnet werden können.'],
+  ['Rückverfolgbarkeit', 'Produktionsorte, Zulieferer und wichtige externe Fertigung müssen eindeutig zum Produkt zugeordnet werden können.'],
   ['Nachweisbarkeit', 'Die Angaben zum Herstellungsprozess müssen durch geeignete Informationen und Unterlagen prüfbar sein.'],
 ];
 
@@ -47,8 +47,7 @@ export default function StandardDocumentPage() {
         <section>
           <h2>Zweck</h2>
           <p>
-            Der Standard beschreibt, wann die menschliche Herstellung eines physischen Produkts so wesentlich,
-            nachvollziehbar und belegbar ist, dass diese Eigenschaft zertifiziert kommuniziert werden kann.
+            Der Standard beschreibt, wann menschliche Arbeit ein physisches Produkt so wesentlich prägt und ausreichend belegt ist, dass es mit Made by Human zertifiziert werden kann.
           </p>
         </section>
 
@@ -79,17 +78,14 @@ export default function StandardDocumentPage() {
         <section>
           <h2>Nachweise</h2>
           <p>
-            Art und Umfang der Nachweise richten sich nach Produkt, Prozess und Risikoprofil.
-            Relevante Informationen können unter anderem Prozessbeschreibungen, Produktionsunterlagen,
-            Angaben zu Standorten und Fremdfertigung sowie geeignete Belege zur tatsächlichen Ausführung umfassen.
+            Welche Belege nötig sind, hängt vom Produkt und vom Herstellungsprozess ab. Dazu können Prozessbeschreibungen, Produktionsunterlagen, Angaben zu Standorten und externer Fertigung sowie andere geeignete Belege gehören.
           </p>
         </section>
 
         <section>
-          <h2>Dokumentenlenkung</h2>
+          <h2>Versionen & Änderungen</h2>
           <p>
-            Standardversion, Dokument-ID und Stand werden kontrolliert geführt. Änderungen an Kriterien,
-            Nachweisanforderungen oder Entscheidungsregeln werden in einer neuen Version nachvollziehbar dokumentiert.
+            Standardversion, Dokument-ID und Datum werden festgehalten. Ändern sich Kriterien, Anforderungen an Belege oder Entscheidungsregeln, wird eine neue Version veröffentlicht.
           </p>
           <Link className="textLink" href="/dokumente">Zur Dokumentenübersicht →</Link>
         </section>
