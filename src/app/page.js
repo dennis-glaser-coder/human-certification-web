@@ -51,10 +51,10 @@ export default function Home() {
           <div className="desireSectionHead">
             <div>
               <p className="premiumSectionLabel">DAS ZEICHEN IM EINSATZ</p>
-              <h2>Der Nachweis wird dort sichtbar, wo die Kaufentscheidung fällt.</h2>
+              <h2>Zeigen Sie Ihren Kunden, was hinter Ihrem Produkt steckt.</h2>
             </div>
             <p>
-              Das Zeichen ergänzt die Marke des Herstellers und gilt nur für das Produkt, das tatsächlich zertifiziert wurde.
+              Nach der Zertifizierung können Sie Ihr Produkt mit dem Made by Human Siegel kennzeichnen – auf der Verpackung, am Produkt und in Ihrem Onlineshop. Über den QR-Code können Kunden die Zertifizierung prüfen.
             </p>
           </div>
 
@@ -69,8 +69,8 @@ export default function Home() {
                 />
               </div>
               <div className="applicationCopy">
-                <strong>Verpackung & Produkt</strong>
-                <p>Das Zertifizierungszeichen kann dezent am Produkt und auf der Verpackung eingesetzt werden.</p>
+                <strong>Direkt am Produkt</strong>
+                <p>Als Anhänger oder auf der Verpackung: So könnte das Siegel an Ihrem Produkt aussehen.</p>
               </div>
             </article>
 
