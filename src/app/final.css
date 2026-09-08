@@ -2463,10 +2463,6 @@ main p:not(.premiumEyebrow):not(.premiumSectionLabel):not(.eyebrow):not(.section
   font-size:16px !important;
   line-height:1.65 !important;
 }
-main p:is(.lead,.desireHeroLead,.buyerHeroLead,.whyHeroLead) {
-  font-size:18px !important;
-  line-height:1.6 !important;
-}
 main li {
   font-size:16px;
   line-height:1.6;
@@ -2560,12 +2556,30 @@ main figcaption { font-size:12px !important; line-height:1.5; }
   }
 }
 @media (max-width:760px) {
-  main p:is(.lead,.desireHeroLead,.buyerHeroLead,.whyHeroLead) {
-    font-size:16px !important;
-  }
   .manufacturerMarkSummaryItems { grid-template-columns:1fr; }
   .premiumMobileMenu {
     top:69px;
     max-height:calc(100dvh - 69px);
   }
 }
+
+/* Supporting labels must remain readable beside the larger copy. */
+main :is(.registerTrustBar,.verifyTrustStrip,.documentProofGrid,.standardMetaBar,
+.guideMetaGrid,.markUseMetaGrid,.procedureMetaGrid,.integrityMetaGrid,.aboutMetaGrid) strong,
+main :is(.registerToolbar,.registerDisclosure) strong {
+  font-size:14px;
+  line-height:1.45;
+}
+main .statusBadge {
+  max-width:100%;
+  font-size:12px;
+  line-height:1.4;
+  white-space:normal;
+  overflow-wrap:anywhere;
+}
+main :is(.registerDisclosure,.brandAuthorityPillars) span,
+.premiumFooter .premiumFooterBottom>span {
+  font-size:12px !important;
+  line-height:1.45;
+}
+.registerRow>div { min-width:0; }
