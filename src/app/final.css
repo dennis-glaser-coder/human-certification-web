@@ -2583,3 +2583,67 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
   line-height:1.45;
 }
 .registerRow>div { min-width:0; }
+
+
+/* ===== Mobile register readability fix 2026-09-08 ===== */
+@media (max-width:760px){
+  .registerList{
+    border-bottom:0;
+  }
+
+  .registerRow{
+    grid-template-columns:1fr !important;
+    gap:0 !important;
+    align-items:stretch;
+    padding:20px 18px 22px !important;
+    overflow:hidden;
+  }
+
+  .registerRow>div,
+  .registerRow>div:nth-child(3),
+  .registerRow>div:nth-child(4),
+  .registerRow>a{
+    grid-column:1 !important;
+    grid-row:auto !important;
+    min-width:0;
+    justify-self:stretch;
+  }
+
+  .registerRow>div{
+    padding:0 0 16px;
+  }
+
+  .registerRow>div+div{
+    padding-top:15px;
+    border-top:1px solid rgba(17,24,32,.12);
+  }
+
+  .registerRow small{
+    margin-bottom:6px;
+    overflow-wrap:normal;
+    word-break:normal;
+  }
+
+  .registerRow strong,
+  .registerSubline,
+  .registerStatusCell em{
+    display:block;
+    max-width:100%;
+  }
+
+  .registerRow>a{
+    width:max-content;
+    max-width:100%;
+    margin-top:3px;
+    padding-top:15px;
+    align-self:start;
+    justify-self:start !important;
+  }
+
+  .registerStatusCell .statusBadge{
+    display:inline-block;
+    width:auto;
+    max-width:100%;
+    margin-bottom:8px;
+  }
+}
