@@ -8,7 +8,7 @@ export default function SiteHeader() {
   return (
     <>
       <a className="skipLink" href="#content-start">Zum Hauptinhalt springen</a>
-      <header className="siteHeader premiumSiteHeader">
+      <header className="siteHeader premiumSiteHeader" data-header-version="2026-09-08-menu-v2">
       <div className="shell headerInner premiumHeaderInner">
         <Link className="brandLockup premiumBrandLockup" href="/#top" aria-label="Made by Human Startseite – nach oben">
           <span className="brandTextStack">
