@@ -2647,3 +2647,57 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
     margin-bottom:8px;
   }
 }
+
+
+/* ===== Mobile document registry readability fix 2026-09-08 ===== */
+@media (max-width:760px){
+  .documentRegistry{
+    overflow:hidden;
+  }
+
+  .documentRegistryRow{
+    grid-template-columns:1fr !important;
+    gap:10px !important;
+    padding:22px 18px 24px !important;
+    overflow:hidden;
+  }
+
+  .documentRegistryRow>div,
+  .documentRegistryRow>span,
+  .documentRegistryRow>time{
+    min-width:0;
+  }
+
+  .documentRegistryRow>div:first-child{
+    padding-bottom:5px;
+  }
+
+  .documentRegistryRow small,
+  .documentRegistryRow strong,
+  .documentRegistryRow p{
+    max-width:100%;
+  }
+
+  .documentRegistryRow small{
+    overflow-wrap:normal;
+    word-break:normal;
+  }
+
+  .documentRegistryRow strong{
+    display:block;
+    line-height:1.22;
+  }
+
+  .documentRegistryRow p{
+    line-height:1.6;
+  }
+
+  .documentActions{
+    align-items:flex-start !important;
+    justify-content:flex-start;
+    flex-direction:row !important;
+    flex-wrap:wrap;
+    gap:18px !important;
+    margin-top:5px !important;
+  }
+}
