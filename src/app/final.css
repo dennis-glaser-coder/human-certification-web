@@ -2701,3 +2701,43 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
     margin-top:5px !important;
   }
 }
+
+
+/* ===== Desktop header declutter + dismissible menu support 2026-09-08 ===== */
+@media (min-width:1201px){
+  .premiumHeaderInner{
+    min-height:84px;
+  }
+
+  .brandMasterLogoAsset{
+    height:70px;
+    max-width:98px;
+  }
+
+  .premiumBrandLockup .brandTextStack{
+    gap:0;
+  }
+
+  .premiumBrandLockup .brandDescriptor{
+    display:none;
+  }
+
+  .premiumMainNav{
+    gap:12px;
+  }
+
+  .premiumMainNav a:not(.navVerify),
+  .desktopNavDropdown summary{
+    font-size:13px;
+  }
+
+  .premiumMainNav .navVerify{
+    min-height:40px;
+    padding:0 13px;
+    font-size:13px;
+  }
+
+  .desktopNavDropdown summary{
+    padding:11px 0;
+  }
+}
