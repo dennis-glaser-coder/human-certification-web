@@ -2456,3 +2456,116 @@ summary:focus-visible {
     gap:16px;
   }
 }
+
+/* Typography: readable copy, controls and supporting information.
+   Explicit role floors override earlier page-specific compression. */
+main p:not(.premiumEyebrow):not(.premiumSectionLabel):not(.eyebrow):not(.sectionNo):not(.premiumFooter p) {
+  font-size:16px !important;
+  line-height:1.65 !important;
+}
+main p:is(.lead,.desireHeroLead,.buyerHeroLead,.whyHeroLead) {
+  font-size:18px !important;
+  line-height:1.6 !important;
+}
+main li {
+  font-size:16px;
+  line-height:1.6;
+}
+main :is(dt,dd) {
+  font-size:14px !important;
+  line-height:1.5;
+  overflow-wrap:anywhere;
+}
+.premiumMainNav a:not(.navVerify),
+.premiumMainNav .navVerify,
+.premiumMainNav .desktopNavDropdownPanel a,
+.desktopNavDropdown summary {
+  font-size:14px;
+  line-height:1.35;
+}
+.premiumMainNav { gap:16px; }
+.premiumBrandLockup .brandDescriptor {
+  font-size:12px;
+  line-height:1.4;
+}
+.premiumMobileHeaderActions .mobileVerify { font-size:14px; }
+.premiumMobileMenu a { font-size:16px; line-height:1.4; }
+
+main :is(.button,.textLink,.desirePrimary,.desireSecondary,.desireFinalButton,
+.homeVerifyPrimary,.homeVerifySecondary,.recordOpenLink),
+main :is(.manufacturerGuideLinks,.homeStoryLinks,.documentActions) a,
+main .manufacturerMarkSummary>a,
+main .registerRow>a,
+main .applicationProofAction {
+  font-size:14px;
+  line-height:1.4;
+}
+main :is(.manufacturerMetaGrid,.manufacturerFitGrid,.manufacturerEvidenceList,.manufacturerProcessGrid,
+.manufacturerMarkSummaryItems,.buyerMeaningGrid,.whyCustomerList,.whyProofList) strong,
+main :is(.manufacturerFaqList,.buyerFaqList,.optionalFormDetails) summary,
+main .registerRow strong {
+  font-size:16px;
+  line-height:1.4;
+}
+main :is(.premiumEyebrow,.premiumSectionLabel,.eyebrow,.sectionNo,.formSectionLabel),
+main :is(.applicationProofTop,.applicationProofMeta,.homeStandardLine,.manufacturerMetaGrid,.manufacturerScopeNote,.applicationReference) span,
+main :is(.registerRow,.verificationRecord,.certificateSummary,.applicationProofPanel) small,
+main :is(.registerSubline,.registerStatusCell em,.documentRegistryHead,.certificateAuthorityLine) {
+  font-size:12px;
+  line-height:1.45;
+}
+main :is(.formSectionLabel strong,.applicationReference strong),
+main .applicationProofAction>small,
+main label,
+main .formLegal,
+main .formLegal a {
+  font-size:14px;
+  line-height:1.5;
+}
+main figcaption { font-size:12px !important; line-height:1.5; }
+.premiumFooter .premiumFooterNav a,
+.premiumFooter .premiumFooterNavMobile a {
+  font-size:14px !important;
+  line-height:1.45;
+}
+.premiumFooter .premiumFooterNav span,
+.premiumFooter .premiumFooterNavMobile summary,
+.premiumFooter .footerLegalMeta a,
+.premiumFooter .footerLegalMeta span {
+  font-size:12px !important;
+  line-height:1.5;
+}
+
+/* Make room for readable navigation instead of squeezing its text. */
+@media (max-width:1200px) {
+  .premiumMainNav { display:none; }
+  .premiumMobileMenu {
+    top:93px;
+    max-height:calc(100dvh - 93px);
+    overflow-y:auto;
+  }
+  .premiumMobileHeaderActions {
+    display:flex;
+    align-items:center;
+    gap:9px;
+  }
+  .premiumMobileHeaderActions .mobileVerify {
+    min-height:44px;
+    display:inline-flex;
+    align-items:center;
+  }
+  .premiumMobileHeaderActions .mobileMenuToggle {
+    width:44px;
+    height:44px;
+  }
+}
+@media (max-width:760px) {
+  main p:is(.lead,.desireHeroLead,.buyerHeroLead,.whyHeroLead) {
+    font-size:16px !important;
+  }
+  .manufacturerMarkSummaryItems { grid-template-columns:1fr; }
+  .premiumMobileMenu {
+    top:69px;
+    max-height:calc(100dvh - 69px);
+  }
+}
