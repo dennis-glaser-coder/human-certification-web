@@ -2901,3 +2901,89 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
     gap:16px;
   }
 }
+
+
+/* ===== Manufacturer request form polish 2026-09-08 ===== */
+@media (min-width:761px){
+  .certificationRequestForm .formSectionLabel{
+    margin-top:40px;
+    padding:14px 0 13px;
+  }
+
+  .certificationRequestForm .formSectionLabel:first-child{
+    margin-top:0;
+  }
+
+  .certificationRequestForm label{
+    gap:9px;
+    margin-top:22px;
+  }
+
+  .certificationRequestForm .formTwo{
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    align-items:start;
+  }
+
+  .certificationRequestForm input,
+  .certificationRequestForm select{
+    min-height:54px;
+  }
+
+  .certificationRequestForm input,
+  .certificationRequestForm textarea,
+  .certificationRequestForm select{
+    padding:15px 16px;
+  }
+
+  .certificationRequestForm input::placeholder,
+  .certificationRequestForm textarea::placeholder{
+    color:rgba(17,24,32,.52);
+    opacity:1;
+    font-weight:500;
+  }
+
+  .certificationRequestForm textarea{
+    min-height:150px;
+    line-height:1.6;
+  }
+
+  .certificationRequestForm .optionalFormDetails{
+    margin-top:10px;
+    border-top:1px solid var(--stone);
+    border-bottom:1px solid var(--stone);
+  }
+
+  .certificationRequestForm .optionalFormDetails summary{
+    min-height:54px;
+    padding:0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+    color:var(--blue);
+    cursor:pointer;
+    list-style:none;
+  }
+
+  .certificationRequestForm .optionalFormDetails summary::-webkit-details-marker{
+    display:none;
+  }
+
+  .certificationRequestForm .optionalFormDetails summary::after{
+    content:"+";
+    flex:none;
+    color:var(--ink);
+    font-size:20px;
+    font-weight:400;
+    line-height:1;
+  }
+
+  .certificationRequestForm .optionalFormDetails[open] summary::after{
+    content:"–";
+  }
+
+  .certificationRequestForm .optionalFormFields{
+    padding:4px 0 22px;
+  }
+}
