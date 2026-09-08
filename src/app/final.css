@@ -2997,3 +2997,15 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
 .certificationRequestForm .formTwo > label:first-child{
   margin-top:22px;
 }
+
+
+/* ===== Document registry left accent spacing 2026-09-08 ===== */
+.documentRegistryRow > div:first-child{
+  padding-left:22px;
+}
+
+@media (max-width:760px){
+  .documentRegistryRow > div:first-child{
+    padding-left:0;
+  }
+}
