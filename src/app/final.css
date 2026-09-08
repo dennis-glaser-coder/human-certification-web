@@ -2987,3 +2987,13 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
     padding:4px 0 22px;
   }
 }
+
+
+/* ===== Align paired form fields 2026-09-08 ===== */
+.certificationRequestForm .formTwo > label{
+  margin-top:22px;
+}
+
+.certificationRequestForm .formTwo > label:first-child{
+  margin-top:22px;
+}
