@@ -16,20 +16,17 @@ export const metadata = {
 };
 
 const manufacturerBenefits = [
-  ['Den Unterschied sichtbar machen', 'Wenn menschliche Arbeit Ihr Produkt prägt, sollen Kunden diesen Unterschied auch erkennen können.'],
-  ['Nicht nur behaupten. Belegen.', 'Statt nur mit Begriffen wie „handgemacht“ oder „manufakturgefertigt“ zu werben, können Sie auf eine konkrete Prüfung verweisen.'],
-  ['Die Arbeit dahinter zeigen', 'Auf Verpackung, Produktseite und im Verkauf können Sie zeigen, welche menschliche Arbeit in Ihrem Produkt steckt.'],
-  ['Vertrauen im Verkauf stärken', 'Zertifizierungs-ID und Register geben Kunden und Geschäftspartnern die Möglichkeit, die Aussage selbst zu prüfen.'],
+  ['Auf eine Prüfung verweisen', 'Sie können die Aussage über Ihre Herstellung mit einer Zertifizierung für das konkrete Produkt belegen.'],
+  ['Den Nachweis im Verkauf nutzen', 'Zeichen und Registerlink lassen sich auf Verpackungen, Produktseiten und im Verkauf einsetzen.'],
 ];
 
 const customerBenefits = [
-  ['Schnell verstehen', 'Käufer erkennen, dass menschliche Arbeit dieses Produkt wesentlich prägt.'],
-  ['Öffentlich prüfen', 'Zertifizierungs-ID und QR-Code führen zum Registereintrag. Dort sehen Käufer, für welches Produkt die Zertifizierung gilt und welchen Status sie hat.'],
-  ['Sehen, wofür die Zertifizierung gilt', 'Der Registereintrag zeigt, welches Produkt oder welche Produktfamilie tatsächlich zertifiziert ist.'],
+  ['Die Aussage verstehen', 'Das Zeichen steht dafür, dass die wesentlichen Herstellungsschritte des Produkts nachweislich durch Menschen ausgeführt werden.'],
+  ['Den Geltungsbereich prüfen', 'Über Zertifizierungs-ID oder QR-Code sehen Käufer im Register, für welches Produkt die Zertifizierung gilt und ob sie gültig ist.'],
 ];
 
 const claimComparison = [
-  ['„Handgemacht“', 'Eigene Angabe des Herstellers', 'Kann unterschiedlich verstanden werden', 'Nicht öffentlich prüfbar'],
+  ['„Handgemacht“ ohne zusätzlichen Nachweis', 'Eigene Angabe des Herstellers', 'Keine Prüfung aus der Angabe allein erkennbar', 'Kein Registereintrag aus der Angabe allein ableitbar'],
   ['Made by Human', 'Klare Aussage für ein bestimmtes Produkt', 'Vor-Ort-Prüfung und festgehaltene Entscheidung', 'ID, QR und öffentlicher Registereintrag'],
 ];
 
@@ -48,9 +45,9 @@ export default function WhyPage() {
             <div className="brandTrace" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
             <h1>Wenn Menschen den Unterschied machen, sollte man ihn sehen können.</h1>
             <p className="whyHeroLead">
-              Wenn Menschen ein Produkt wesentlich prägen, sollte diese Leistung nicht in einer allgemeinen
-              Werbeaussage verschwinden. Wir machen den Unterschied sichtbar, prüfbar und verständlich –
-              für Hersteller, Handel und Käufer.
+              Viele Hersteller investieren bewusst in Facharbeit und handwerkliche Prozesse.
+              Am fertigen Produkt ist davon oft wenig zu erkennen. Made by Human macht diese
+              Herstellung mit einer überprüfbaren Zertifizierung sichtbar.
             </p>
             <div className="whyHeroActions">
               <Link className="salesPrimary" href="/fuer-hersteller#zertifizierungsanfrage">Zertifizierung anfragen</Link>
@@ -87,36 +84,14 @@ export default function WhyPage() {
         </div>
       </section>
 
-      <section className="whyThesis">
-        <div className="shell whyThesisGrid">
-          <p className="premiumSectionLabel">DER KERN</p>
-          <div>
-            <h2>Menschliche Arbeit wird wertvoller, wenn man sie belegen kann.</h2>
-            <p>
-              Viele Marken investieren bewusst in eigene Fertigung, Facharbeit und handwerkliche Prozesse.
-              Von außen ist davon oft wenig zu erkennen. Made by Human zeigt, welche menschliche Arbeit
-              ein Produkt tatsächlich prägt – und macht das Ergebnis öffentlich prüfbar.
-            </p>
-            <div className="whyThesisSignature">
-              <span>NICHT GEGEN TECHNOLOGIE.</span>
-              <strong>Für Sichtbarkeit dort, wo Menschen den Unterschied machen.</strong>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="whyManufacturers" id="hersteller">
         <div className="shell">
           <div className="whySectionHead">
             <div>
               <p className="premiumSectionLabel">VORTEILE FÜR HERSTELLER</p>
-              <h2>Geprüfte menschliche Herstellung macht den Unterschied sichtbar.</h2>
+              <h2>Ein Nachweis für Ihre Herstellung.</h2>
             </div>
-            <p>
-              Die Zertifizierung ersetzt weder eine gute Marke noch ein gutes Produkt.
-              Sie zeigt aber glaubwürdig, was Ihr Produkt in der Herstellung unterscheidet –
-              und gibt Kunden einen Nachweis, den sie selbst prüfen können.
-            </p>
+            <p>Die Zertifizierung ergänzt Ihre Marke. Sie bezieht sich auf das benannte Produkt oder die Produktfamilie, nicht pauschal auf das gesamte Unternehmen.</p>
           </div>
 
           <div className="whyBenefitGrid">
@@ -135,10 +110,7 @@ export default function WhyPage() {
           <div className="whyCustomersIntro">
             <p className="premiumSectionLabel premiumSectionLabelLight">VORTEILE FÜR KÄUFER</p>
             <h2>Käufer sehen, was das Zeichen wirklich bedeutet.</h2>
-            <p>
-              Käufer müssen nicht verstehen, wie jede Fertigungsstufe technisch funktioniert.
-              Sie sollen verstehen, was die Kennzeichnung bedeutet – und selbst prüfen können, ob sie für das konkrete Produkt gilt.
-            </p>
+
           </div>
 
           <div>
@@ -165,11 +137,11 @@ export default function WhyPage() {
               <h2>Eine geprüfte Aussage ist klarer als eine eigene Werbeaussage.</h2>
             </div>
             <p>
-              Begriffe wie „handgemacht“, „handcrafted“ oder „manufakturgefertigt“ sind schnell verwendet. Made by Human geht einen Schritt weiter: Wir legen fest, was geprüft wird, prüfen vor Ort und machen das Ergebnis im Register sichtbar.
+              Der Vergleich zeigt den Unterschied zwischen einer reinen Herstellerangabe und dem Nachweis nach unserem Standard.
             </p>
           </div>
 
-          <div className="whyComparisonTable" role="table" aria-label="Vergleich Herstellerangabe und Made by Human">
+          <div className="whyComparisonTable" role="table" aria-label="Vergleich einer Herstellerangabe ohne zusätzlichen Nachweis mit Made by Human">
             <div className="whyComparisonHead" role="row">
               <span role="columnheader">AUSSAGE</span>
               <span role="columnheader">GRUNDLAGE</span>
@@ -185,22 +157,7 @@ export default function WhyPage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="whyProof">
-        <div className="shell whyProofGrid">
-          <div>
-            <p className="premiumSectionLabel">WAS HINTER DEM ZEICHEN STEHT</p>
-            <h2>Der Wert des Zeichens entsteht durch die Prüfung dahinter.</h2>
-          </div>
-          <div className="whyProofList">
-            <div><strong>Fester Standard</strong></div>
-            <div><strong>Vor-Ort-Audit beim Hersteller</strong></div>
-            <div><strong>Festgehaltene Entscheidung</strong></div>
-            <div><strong>Klar benanntes Produkt</strong></div>
-            <div><strong>ID, QR-Code und öffentliches Register</strong></div>
-          </div>
+          <Link className="desireTextLink" href="/standard">Kriterien und Grenzen des Standards →</Link>
         </div>
       </section>
 
