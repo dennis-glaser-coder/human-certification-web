@@ -2741,3 +2741,89 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
     padding:11px 0;
   }
 }
+
+
+/* ===== Clear desktop More menu 2026-09-08 ===== */
+.desktopNavMenu{
+  position:relative;
+  display:flex;
+  align-items:center;
+}
+
+.desktopNavMenuTrigger{
+  appearance:none;
+  border:0;
+  background:transparent;
+  color:rgba(17,24,32,.76);
+  font:inherit;
+  font-weight:600;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  padding:11px 0;
+}
+
+.desktopNavMenuTrigger:hover,
+.desktopNavMenuTrigger[aria-expanded="true"]{
+  color:var(--ink);
+}
+
+.desktopNavChevron{
+  width:7px;
+  height:7px;
+  border-right:1.5px solid currentColor;
+  border-bottom:1.5px solid currentColor;
+  transform:rotate(45deg) translateY(-2px);
+  transform-origin:center;
+  transition:transform .15s ease;
+  flex:none;
+}
+
+.desktopNavMenuTrigger[aria-expanded="true"] .desktopNavChevron{
+  transform:rotate(225deg) translate(-1px,-1px);
+}
+
+.desktopNavMenuPanel{
+  position:absolute;
+  top:calc(100% + 8px);
+  right:0;
+  z-index:50;
+  min-width:250px;
+  padding:7px 0;
+  background:var(--paper);
+  border-top:2px solid var(--blue);
+  border-left:1px solid rgba(17,24,32,.16);
+  border-right:1px solid rgba(17,24,32,.16);
+  border-bottom:1px solid rgba(17,24,32,.16);
+  box-shadow:0 18px 40px rgba(17,24,32,.12);
+}
+
+.desktopNavMenuPanel a{
+  display:block;
+  padding:12px 15px;
+  color:rgba(17,24,32,.76);
+  font-size:13px;
+  font-weight:600;
+  line-height:1.35;
+  text-decoration:none;
+  white-space:nowrap;
+}
+
+.desktopNavMenuPanel a:hover,
+.desktopNavMenuPanel a:focus-visible{
+  color:var(--ink);
+  background:#ECE8DE;
+}
+
+@media (min-width:1201px){
+  .desktopNavMenuTrigger{
+    font-size:13px;
+  }
+}
+
+@media (max-width:1200px){
+  .desktopNavMenu{
+    display:none;
+  }
+}
