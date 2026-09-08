@@ -120,7 +120,7 @@ export default function Home() {
           </figure>
           <div className="desireAuditCopy">
             <p className="premiumSectionLabel">VOR-ORT-AUDIT</p>
-            <h2>Wir prüfen dort, wo das Produkt tatsächlich entsteht.</h2>
+            <h2>Vor Ort zeigt sich, wie ein Produkt wirklich entsteht.</h2>
             <p className="desireAuditLead">
               Wir sehen uns die Herstellung beim Hersteller an und dokumentieren die Arbeitsschritte, die das Produkt wesentlich prägen.
             </p>
@@ -135,7 +135,7 @@ export default function Home() {
         <div className="shell homeConsumerVerifyGrid">
           <div className="homeConsumerCopy">
             <p className="premiumSectionLabel premiumSectionLabelLight">FÜR KÄUFER</p>
-            <h2>Vertrauen endet nicht beim Zeichen. Es lässt sich prüfen.</h2>
+            <h2>Ein Zeichen ist nur so glaubwürdig wie der Nachweis dahinter.</h2>
             <blockquote>
               {CERTIFIED_STATEMENT}
             </blockquote>
@@ -162,7 +162,7 @@ export default function Home() {
           <div className="homeFinalCta">
             <div>
               <p className="premiumSectionLabel premiumSectionLabelLight">FÜR HERSTELLER</p>
-              <h2>Prüfen Sie, ob Ihr Produkt zum Standard passt.</h2>
+              <h2>Passt Ihr Produkt zu Made by Human?</h2>
             </div>
             <div>
               <p>In der ersten Einschätzung klären wir gemeinsam, welches Produkt Sie zertifizieren möchten, wie es hergestellt wird und was genau geprüft werden soll.</p>
