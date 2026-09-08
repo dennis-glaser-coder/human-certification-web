@@ -3009,3 +3009,9 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
     padding-left:0;
   }
 }
+
+
+/* ===== Document registry left-accent spacing fix 2026-09-08 ===== */
+.documentRegistryRow > div:first-child{
+  padding-left:22px;
+}
