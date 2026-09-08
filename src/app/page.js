@@ -3,12 +3,6 @@ import SiteHeader from '../components/SiteHeader';
 import SiteFooter from '../components/SiteFooter';
 import { CERTIFIED_STATEMENT } from '../lib/brand';
 
-const homeStory = [
-  ['Unterschied sichtbar machen', 'Käufer und Geschäftspartner sehen, was Ihr Produkt in der Herstellung unterscheidet.'],
-  ['Glaubwürdigkeit', 'Die Aussage bleibt an eine gültige Zertifizierung gebunden und kann im Register geprüft werden.'],
-  ['Im Verkauf nutzbar', 'Kennzeichnung, QR und Registerlink lassen sich auf Produktseiten, Verpackungen und im Vertrieb an Geschäftskunden einsetzen.'],
-];
-
 const auditFacts = [
   ['Arbeitsschritte ansehen', 'Wir sehen uns die Schritte an, die das Produkt in der Herstellung wirklich prägen.'],
   ['Maschinen richtig einordnen', 'Wir prüfen, wo Technik unterstützt und wo die Arbeit des Menschen entscheidend bleibt.'],
@@ -48,40 +42,6 @@ export default function Home() {
               decoding="async"
               alt="Holzhandwerker bei der manuellen Bearbeitung eines Werkstücks"
             />
-          </div>
-        </div>
-      </section>
-
-      <section className="brandAuthorityRail" aria-label="Made by Human Markenversprechen">
-        <div className="shell brandAuthorityRailInner">
-          <div className="brandAuthorityWordmark">
-            <img src={assetBase + '/brand/made-by-human-logo.webp'} alt="Made by Human – Verified Human Production" />
-          </div>
-          <div className="brandAuthorityPillars">
-            <span>STANDARD</span>
-            <span>VOR-ORT-AUDIT</span>
-            <span>ÖFFENTLICHES REGISTER</span>
-          </div>
-        </div>
-      </section>
-
-      <section className="desireManifesto compactManifesto">
-        <div className="shell desireManifestoGrid">
-          <p className="premiumSectionLabel">WARUM ES DAS ZEICHEN GIBT</p>
-          <div>
-            <h2>Handmade ist schnell gesagt. Wir machen es überprüfbar.</h2>
-            <p>
-              Begriffe wie „handmade“, „handcrafted“ oder „manufakturgefertigt“ sagen allein wenig darüber aus,
-              wie ein Produkt tatsächlich entsteht. Wir prüfen die entscheidenden Herstellungsschritte vor Ort und machen das Ergebnis über Zertifizierungs-ID und Register öffentlich prüfbar.
-            </p>
-            <figure className="manifestoMaterial">
-              <img
-                src={assetBase + '/brand/IMG_1040.webp'}
-                alt="Menschliche Holzbearbeitung beim manuellen Schleifen eines Produktes"
-                loading="lazy"
-              />
-              <figcaption>Material · Können · Ausführung · Nachweis</figcaption>
-            </figure>
           </div>
         </div>
       </section>
@@ -149,28 +109,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="homeValueProof">
-        <div className="shell homeValueStory">
-          <div className="homeValueStoryHead">
-            <p className="premiumSectionLabel premiumSectionLabelLight">WERT & VERTRAUEN</p>
-            <h2>Zeigen Sie, wie Ihr Produkt entsteht.</h2>
-            <p>
-              Zeigen Sie auf Produktseite, Verpackung und im Verkauf, welche menschliche Arbeit hinter Ihrem Produkt steht.
-              Über Zertifizierungs-ID und Register kann jeder prüfen, wofür die Zertifizierung gilt.
-            </p>
-          </div>
-          <div className="homeStoryRows">
-            {homeStory.map(([title, copy]) => (
-              <article key={title}><strong>{title}</strong><p>{copy}</p></article>
-            ))}
-          </div>
-          <div className="homeStoryLinks">
-            <Link href="/warum-made-by-human">Vorteile ansehen →</Link>
-            <Link href="/fuer-hersteller#ablauf">Zertifizierungsverfahren →</Link>
-          </div>
-        </div>
-      </section>
-
       <section className="desireAudit compactAudit">
         <div className="shell desireAuditGrid">
           <figure>
@@ -184,7 +122,7 @@ export default function Home() {
             <p className="premiumSectionLabel">VOR-ORT-AUDIT</p>
             <h2>Wir prüfen dort, wo das Produkt tatsächlich entsteht.</h2>
             <p className="desireAuditLead">
-              Kein reines Online-Formular und keine bloße Selbstauskunft: Wir prüfen die tatsächliche Herstellung direkt beim Hersteller vor Ort und halten die wichtigsten Arbeitsschritte fest.
+              Wir sehen uns die Herstellung beim Hersteller an und dokumentieren die Arbeitsschritte, die das Produkt wesentlich prägen.
             </p>
             <div className="desireAuditFacts">
               {auditFacts.map(([title, copy]) => <div key={title}><strong>{title}</strong><p>{copy}</p></div>)}
@@ -216,18 +154,7 @@ export default function Home() {
 
       <section className="homeFinalCompact">
         <div className="shell">
-          <div className="homeFinalTop">
-            <div>
-              <p className="premiumSectionLabel">NACH POSITIVER ZERTIFIZIERUNG</p>
-              <h2>Ein starkes Zeichen braucht klare Grenzen.</h2>
-            </div>
-            <div className="homeFinalSummary">
-              <p>Freigegebenes Zeichen · QR und Registerlink · gültiger Status · klare Regeln für die Nutzung</p>
-              <Link href="/markennutzung">Markennutzung ansehen →</Link>
-            </div>
-          </div>
-
-          <div className="homeStandardLine">
+          <div className="homeStandardLine" style={{ marginTop: 0 }}>
             <span>Aktuelle Standardfassung: 0.1 · veröffentlicht am 04.09.2026</span>
             <Link href="/standard">Standard ansehen →</Link>
           </div>
