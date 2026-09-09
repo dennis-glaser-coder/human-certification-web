@@ -3154,3 +3154,69 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
     width:269px;
   }
 }
+
+
+/* Homepage polish: keep the existing identity and composition. */
+.compactHome .premiumHeaderInner {
+  padding-top:8px;
+  padding-bottom:8px;
+}
+.compactHome .desireHeroCopy h1 {
+  line-height:1.02;
+  letter-spacing:-.045em;
+}
+.compactHome .compactApplications {
+  padding-top:56px;
+}
+@media (min-width:1021px) {
+  .compactHome .desireHeroCopy {
+    padding:64px 48px 64px 0;
+  }
+  .compactHome .desireHeroCopy h1 {
+    font-size:clamp(54px,4.45vw,66px);
+    text-wrap:initial;
+  }
+  .compactHome .desireHeroGrid,
+  .compactHome .desireHeroVisual {
+    min-height:660px;
+  }
+}
+@media (max-width:760px) {
+  .compactHome .premiumHeaderInner {
+    min-height:72px;
+  }
+  .compactHome .desireHeroGrid,
+  .compactHome .desireHeroCopy {
+    min-height:calc(100svh - 72px);
+  }
+  .compactHome .desireHeroVisual {
+    min-height:0;
+  }
+  .compactHome .desireHeroCopy {
+    padding-top:64px;
+    padding-bottom:36px;
+  }
+  .compactHome .desireHeroCopy h1 {
+    max-width:100%;
+    text-wrap:initial;
+  }
+  .compactHome .desireHeroCopy .premiumEyebrow {
+    font-size:10px;
+    line-height:1.4;
+    letter-spacing:.1em;
+  }
+  .compactHome .compactApplications {
+    padding-top:36px;
+  }
+}
+@media (max-width:360px) {
+  .compactHome .brandHeaderLogoCrop {
+    width:160px;
+    height:50px;
+  }
+  .compactHome .brandHeaderLogoAsset {
+    width:239px;
+    left:-40px;
+    top:-15px;
+  }
+}
