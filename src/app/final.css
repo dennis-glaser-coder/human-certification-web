@@ -3011,7 +3011,85 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
 }
 
 
-/* ===== Document registry left-accent spacing fix 2026-09-08 ===== */
-.documentRegistryRow > div:first-child{
-  padding-left:22px;
+/* ===== Responsive grid alignment 2026-09-09 ===== */
+@media (min-width:761px){
+  .manufacturerBenefitGrid article:nth-child(odd){
+    padding-left:0;
+  }
+
+  .whyComparisonHead,
+  .whyComparisonRow,
+  .whyComparisonRow:last-child{
+    padding-left:24px;
+    padding-right:24px;
+  }
+}
+
+@media (min-width:761px) and (max-width:1020px){
+  .manufacturerMetaGrid>div:nth-child(odd),
+  .aboutMetaGrid>div:nth-child(odd),
+  .integrityMetaGrid>div:nth-child(odd),
+  .markUseMetaGrid>div:nth-child(odd),
+  .procedureMetaGrid>div:nth-child(odd),
+  .guideMetaGrid>div:nth-child(odd){
+    padding-left:0;
+    border-right:1px solid var(--stone);
+  }
+
+  .manufacturerMetaGrid>div:nth-child(even),
+  .aboutMetaGrid>div:nth-child(even),
+  .integrityMetaGrid>div:nth-child(even),
+  .markUseMetaGrid>div:nth-child(even),
+  .procedureMetaGrid>div:nth-child(even),
+  .guideMetaGrid>div:nth-child(even){
+    padding-left:22px;
+    border-right:0;
+  }
+
+  .aboutPrinciplesGrid article:nth-child(odd),
+  .markUseApplicationGrid article:nth-child(odd),
+  .guideRuleGrid article:nth-child(odd){
+    padding-left:0;
+    border-right:1px solid var(--stone);
+  }
+
+  .aboutPrinciplesGrid article:nth-child(even),
+  .markUseApplicationGrid article:nth-child(even),
+  .guideRuleGrid article:nth-child(even){
+    padding-left:24px;
+    border-right:0;
+  }
+
+  .markUseRuleGrid article:nth-child(odd),
+  .guideEvidenceGrid article:nth-child(odd){
+    padding-left:0;
+    border-right:1px solid var(--stone);
+  }
+
+  .markUseRuleGrid article:nth-child(even),
+  .guideEvidenceGrid article:nth-child(even){
+    padding-left:26px;
+    border-right:0;
+  }
+
+}
+@media (min-width:761px) and (max-width:920px){
+  .buyerMeaningGrid article:nth-child(odd){
+    padding-left:0;
+    border-right:1px solid var(--stone);
+  }
+
+  .buyerMeaningGrid article:nth-child(even){
+    padding-left:22px;
+    border-right:0;
+  }
+}
+
+@media (max-width:760px){
+  .manufacturerBenefitGrid article,
+  .manufacturerBenefitGrid article:nth-child(odd),
+  .manufacturerBenefitGrid article:nth-child(even){
+    padding:18px 0;
+    border-right:0;
+  }
 }
