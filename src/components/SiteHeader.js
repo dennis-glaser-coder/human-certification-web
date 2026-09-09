@@ -8,16 +8,18 @@ export default function SiteHeader() {
   return (
     <>
       <a className="skipLink" href="#content-start">Zum Hauptinhalt springen</a>
-      <header className="siteHeader premiumSiteHeader" data-header-version="2026-09-09-logo-v3">
+      <header className="siteHeader premiumSiteHeader" data-header-version="2026-09-09-logo-v4">
       <div className="shell headerInner premiumHeaderInner">
         <a className="brandLockup premiumBrandLockup" href={assetBase + '/#top'} aria-label="Made by Human Startseite – nach oben">
-          <img
-            className="brandHeaderLogoAsset"
-            src={assetBase + '/brand/header-logo-tight.svg'}
-            width="1452"
-            height="454"
-            alt="Made by Human"
-          />
+          <span className="brandHeaderLogoCrop" aria-hidden="true">
+            <img
+              className="brandHeaderLogoAsset"
+              src={assetBase + '/brand/header-logo-final.png'}
+              width="2172"
+              height="724"
+              alt=""
+            />
+          </span>
         </a>
 
         <nav className="mainNav premiumMainNav" aria-label="Hauptnavigation">
