@@ -8,13 +8,16 @@ export default function SiteHeader() {
   return (
     <>
       <a className="skipLink" href="#content-start">Zum Hauptinhalt springen</a>
-      <header className="siteHeader premiumSiteHeader" data-header-version="2026-09-08-menu-v2">
+      <header className="siteHeader premiumSiteHeader" data-header-version="2026-09-09-logo-v3">
       <div className="shell headerInner premiumHeaderInner">
         <a className="brandLockup premiumBrandLockup" href={assetBase + '/#top'} aria-label="Made by Human Startseite – nach oben">
-          <span className="brandTextStack">
-            <img className="brandMasterLogoAsset" src={assetBase + '/brand/made-by-human-logo.webp'} width="1085" height="819" alt="Made by Human – Verified Human Production" />
-            <span className="brandDescriptor">Zertifizierung für menschliche Herstellung</span>
-          </span>
+          <img
+            className="brandHeaderLogoAsset"
+            src={assetBase + '/brand/header-logo-final.png'}
+            width="2172"
+            height="724"
+            alt="Made by Human"
+          />
         </a>
 
         <nav className="mainNav premiumMainNav" aria-label="Hauptnavigation">

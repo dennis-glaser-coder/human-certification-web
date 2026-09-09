@@ -3093,3 +3093,36 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
     border-right:0;
   }
 }
+
+
+/* ===== Final horizontal header logo 2026-09-09 ===== */
+.brandHeaderLogoAsset{
+  display:block;
+  width:180px;
+  height:auto;
+  max-width:20vw;
+  object-fit:contain;
+  object-position:left center;
+  flex:none;
+}
+
+@media(max-width:1200px){
+  .brandHeaderLogoAsset{
+    width:160px;
+    max-width:18vw;
+  }
+}
+
+@media(max-width:1020px){
+  .brandHeaderLogoAsset{
+    width:154px;
+    max-width:46vw;
+  }
+}
+
+@media(max-width:760px){
+  .brandHeaderLogoAsset{
+    width:138px;
+    max-width:42vw;
+  }
+}
