@@ -13,9 +13,9 @@ export default function SiteHeader() {
         <a className="brandLockup premiumBrandLockup" href={assetBase + '/#top'} aria-label="Made by Human Startseite – nach oben">
           <img
             className="brandHeaderLogoAsset"
-            src={assetBase + '/brand/header-logo-final.png'}
-            width="2172"
-            height="724"
+            src={assetBase + '/brand/header-logo-tight.svg'}
+            width="1452"
+            height="454"
             alt="Made by Human"
           />
         </a>
