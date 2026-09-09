@@ -3098,9 +3098,9 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
 /* ===== Final horizontal header logo 2026-09-09 ===== */
 .brandHeaderLogoAsset{
   display:block;
-  width:180px;
+  width:255px;
   height:auto;
-  max-width:20vw;
+  max-width:27vw;
   object-fit:contain;
   object-position:left center;
   flex:none;
@@ -3108,21 +3108,21 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
 
 @media(max-width:1200px){
   .brandHeaderLogoAsset{
-    width:160px;
-    max-width:18vw;
+    width:220px;
+    max-width:23vw;
   }
 }
 
 @media(max-width:1020px){
   .brandHeaderLogoAsset{
-    width:154px;
-    max-width:46vw;
+    width:190px;
+    max-width:52vw;
   }
 }
 
 @media(max-width:760px){
   .brandHeaderLogoAsset{
-    width:138px;
-    max-width:42vw;
+    width:160px;
+    max-width:46vw;
   }
 }
