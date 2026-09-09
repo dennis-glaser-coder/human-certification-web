@@ -10,12 +10,12 @@ export default function SiteHeader() {
       <a className="skipLink" href="#content-start">Zum Hauptinhalt springen</a>
       <header className="siteHeader premiumSiteHeader" data-header-version="2026-09-08-menu-v2">
       <div className="shell headerInner premiumHeaderInner">
-        <Link className="brandLockup premiumBrandLockup" href="/#top" aria-label="Made by Human Startseite – nach oben">
+        <a className="brandLockup premiumBrandLockup" href={assetBase + '/#top'} aria-label="Made by Human Startseite – nach oben">
           <span className="brandTextStack">
             <img className="brandMasterLogoAsset" src={assetBase + '/brand/made-by-human-logo.webp'} width="1085" height="819" alt="Made by Human – Verified Human Production" />
             <span className="brandDescriptor">Zertifizierung für menschliche Herstellung</span>
           </span>
-        </Link>
+        </a>
 
         <nav className="mainNav premiumMainNav" aria-label="Hauptnavigation">
           <Link href="/warum-made-by-human">Warum Made by Human</Link>
