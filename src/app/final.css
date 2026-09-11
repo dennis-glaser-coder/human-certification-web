@@ -1553,7 +1553,6 @@ summary:focus-visible {
   padding:12px;
   background:transparent;
   border:1px solid transparent;
-  isolation:isolate;
 }
 .footerMasterLogoAsset{
   display:block;
