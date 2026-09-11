@@ -30,7 +30,7 @@ export default function DatenschutzPage() {
           Wir verarbeiten nur Daten, die für den Betrieb der Website, das öffentliche Register
           oder die Bearbeitung einer Zertifizierungsanfrage gebraucht werden.
         </p>
-        <p className="legalStatus">Stand: 07.09.2026</p>
+        <p className="legalStatus">Stand: 11.09.2026</p>
       </section>
 
       <section className="shell privacyContent">
@@ -45,14 +45,14 @@ export default function DatenschutzPage() {
               Deutschland
             </address>
             <dl>
-              <div><dt>E-Mail</dt><dd>Wird ergänzt</dd></div>
-              <div><dt>Telefon</dt><dd>Wird ergänzt</dd></div>
+              <div><dt>E-Mail</dt><dd><a href="mailto:info@madebyhuman.org">info@madebyhuman.org</a></dd></div>
+              <div><dt>Telefon</dt><dd><a href="tel:+49525154491922">05251 / 54491922</a></dd></div>
             </dl>
             <Link href="/impressum">Zum Impressum →</Link>
           </div>
           <p>
-            Solange die E-Mail-Adresse noch nicht veröffentlicht ist, können datenschutzbezogene
-            Anliegen schriftlich an die oben genannte Anschrift gerichtet werden.
+            Datenschutzbezogene Anliegen können per E-Mail, telefonisch oder schriftlich an die oben
+            genannten Kontaktdaten gerichtet werden.
           </p>
         </section>
 
