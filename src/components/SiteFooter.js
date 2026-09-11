@@ -40,6 +40,7 @@ export default function SiteFooter() {
             <Link href="/warum-made-by-human">Warum Made by Human?</Link>
             <Link href="/handarbeit-siegel">Handarbeit-Siegel</Link>
             <Link href="/handarbeit-zertifizieren">Handarbeit zertifizieren</Link>
+            <Link href="/zertifizierung">Zertifizierung nach Produktart</Link>
           </div>
           <div>
             <span>ORGANISATION</span>
@@ -72,6 +73,7 @@ export default function SiteFooter() {
               <Link href="/warum-made-by-human">Warum Made by Human?</Link>
               <Link href="/handarbeit-siegel">Handarbeit-Siegel</Link>
               <Link href="/handarbeit-zertifizieren">Handarbeit zertifizieren</Link>
+              <Link href="/zertifizierung">Zertifizierung nach Produktart</Link>
             </div>
           </details>
           <details>
