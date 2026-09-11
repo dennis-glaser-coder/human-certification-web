@@ -7,7 +7,6 @@ import {
   DEFAULT_DESCRIPTION,
   FAVICON_IMAGE,
   LOGO_IMAGE,
-  SITE_INDEXABLE,
   SITE_NAME,
   SITE_URL,
   SOCIAL_IMAGE,
@@ -25,10 +24,10 @@ export const metadata = {
     canonical: canonical('/'),
   },
   robots: {
-    index: SITE_INDEXABLE,
+    index: true,
     follow: true,
     googleBot: {
-      index: SITE_INDEXABLE,
+      index: true,
       follow: true,
       'max-image-preview': 'large',
       'max-snippet': -1,
