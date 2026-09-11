@@ -25,7 +25,7 @@ const suitable = [
   ['Keramik & Dekoration', 'Produkte, bei denen Formgebung, Bearbeitung, Dekoration, Montage oder andere wesentliche Schritte tatsächlich durch Menschen erfolgen.'],
 ];
 
-const process = [
+const certificationSteps = [
   ['01', 'Anfrage stellen', 'Sie beschreiben Produkt, Herstellung, Produktionsorte und gegebenenfalls externe Fertigung.'],
   ['02', 'Zertifizierungsumfang festlegen', 'Wir grenzen eindeutig ab, welches Produkt oder welche Produktfamilie geprüft werden soll.'],
   ['03', 'Nachweise einreichen', 'Je nach Herstellungsprozess werden geeignete Unterlagen, Prozessbeschreibungen, Fotos, Videos oder weitere Belege benötigt.'],
@@ -43,6 +43,8 @@ const faq = [
 ];
 
 export default function HandarbeitZertifizierenPage() {
+  const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE || '';
+
   const faqJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -89,7 +91,7 @@ export default function HandarbeitZertifizierenPage() {
           <div className="whyHeroVisual">
             <figure>
               <img
-                src={(process.env.NEXT_PUBLIC_ASSET_BASE || '') + '/photography/why-human-production.webp'}
+                src={assetBase + '/photography/why-human-production.webp'}
                 width="1800"
                 height="1200"
                 fetchPriority="high"
@@ -100,7 +102,7 @@ export default function HandarbeitZertifizierenPage() {
             </figure>
             <div className="whySealTag">
               <img
-                src={(process.env.NEXT_PUBLIC_ASSET_BASE || '') + '/brand/made-by-human-logo.webp'}
+                src={assetBase + '/brand/made-by-human-logo.webp'}
                 alt="Made by Human Prüfzeichen"
                 width="96"
                 height="96"
@@ -150,7 +152,7 @@ export default function HandarbeitZertifizierenPage() {
           </div>
 
           <div className="whyCustomerList">
-            {process.map(([number, title, copy]) => (
+            {certificationSteps.map(([number, title, copy]) => (
               <article key={number}>
                 <span>{number}</span>
                 <div>
