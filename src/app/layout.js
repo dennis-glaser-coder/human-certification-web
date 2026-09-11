@@ -1,6 +1,7 @@
 import { IBM_Plex_Sans, Source_Serif_4 } from 'next/font/google';
 import './globals.css';
 import './final.css';
+import './header-logo-fix.css';
 import {
   canonical,
   DEFAULT_DESCRIPTION,
