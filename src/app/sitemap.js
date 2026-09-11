@@ -1,6 +1,6 @@
 export const dynamic = 'force-static';
 
-import { canonical, SITE_INDEXABLE } from '../lib/seo';
+import { canonical } from '../lib/seo';
 
 const pages = [
   ['/', 'weekly', 1],
@@ -24,8 +24,6 @@ const pages = [
 ];
 
 export default function sitemap() {
-  if (!SITE_INDEXABLE) return [];
-
   return pages.map(([path, changeFrequency, priority]) => ({
     url: canonical(path),
     changeFrequency,
