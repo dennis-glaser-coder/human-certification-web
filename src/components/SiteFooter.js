@@ -26,6 +26,7 @@ export default function SiteFooter() {
           <div>
             <span>STANDARD</span>
             <Link href="/standard">Kriterien</Link>
+            <Link href="/wissen">Wissen & Ratgeber</Link>
             <Link href="/dokumente">Dokumente</Link>
             <Link href="/markennutzung">Markennutzung</Link>
             <Link href="/leitfaden/nachweise">Prüfnachweise</Link>
@@ -57,6 +58,7 @@ export default function SiteFooter() {
             <summary>Standard</summary>
             <div>
               <Link href="/standard">Kriterien</Link>
+              <Link href="/wissen">Wissen & Ratgeber</Link>
               <Link href="/dokumente">Dokumente</Link>
               <Link href="/markennutzung">Markennutzung</Link>
               <Link href="/leitfaden/nachweise">Prüfnachweise</Link>
