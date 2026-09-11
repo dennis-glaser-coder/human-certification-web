@@ -64,19 +64,9 @@ export default function ImpressumPage() {
           <article>
             <span>KONTAKT</span>
             <dl>
-              <div><dt>E-Mail</dt><dd>info@madebyhuman.org</dd></div>
-              <div><dt>Telefon</dt><dd>05251 / 54491922</dd></div>
+              <div><dt>E-Mail</dt><dd><a href="mailto:info@madebyhuman.org">info@madebyhuman.org</a></dd></div>
+              <div><dt>Telefon</dt><dd><a href="tel:+49525154491922">05251 / 54491922</a></dd></div>
             </dl>
-          </article>
-
-          <article>
-            <span>INHALTLICH VERANTWORTLICH</span>
-            <p>
-              D&G Handels GmbH<br />
-              Hohenloher Weg 44<br />
-              33102 Paderborn<br />
-              Deutschland
-            </p>
           </article>
         </div>
       </section>
