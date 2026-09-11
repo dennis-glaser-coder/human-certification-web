@@ -1551,14 +1551,17 @@ summary:focus-visible {
 .footerLogoField{
   width:138px;
   padding:12px;
-  background:var(--paper);
-  border:1px solid rgba(255,255,255,.18);
+  background:transparent;
+  border:1px solid transparent;
+  isolation:isolate;
 }
 .footerMasterLogoAsset{
   display:block;
   width:100%;
   height:auto;
-  filter:none;
+  /* Keep the original artwork; blend its paper field into the dark footer. */
+  filter:grayscale(1) invert(1) contrast(1.25);
+  mix-blend-mode:screen;
 }
 .premiumFooterBrand>p{
   margin-top:16px;
