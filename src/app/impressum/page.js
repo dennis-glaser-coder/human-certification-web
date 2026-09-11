@@ -64,8 +64,8 @@ export default function ImpressumPage() {
           <article>
             <span>KONTAKT</span>
             <dl>
-              <div><dt>E-Mail</dt><dd>Wird ergänzt</dd></div>
-              <div><dt>Telefon</dt><dd>Wird ergänzt</dd></div>
+              <div><dt>E-Mail</dt><dd>info@madebyhuman.org</dd></div>
+              <div><dt>Telefon</dt><dd>05251 / 54491922</dd></div>
             </dl>
           </article>
 
