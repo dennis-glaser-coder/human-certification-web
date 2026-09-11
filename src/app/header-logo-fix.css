@@ -1,0 +1,58 @@
+/* Header logo compatibility for the current Made by Human master logo.
+   Keep the complete logo visible; do not reuse the legacy crop offsets. */
+.premiumBrandLockup .brandHeaderLogoCrop {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 300px;
+  height: 94px;
+  overflow: visible;
+  flex: none;
+}
+
+.premiumBrandLockup .brandHeaderLogoAsset {
+  position: static;
+  inset: auto;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
+@media (max-width: 1200px) {
+  .premiumBrandLockup .brandHeaderLogoCrop {
+    width: 270px;
+    height: 84px;
+  }
+}
+
+@media (max-width: 1020px) {
+  .premiumBrandLockup .brandHeaderLogoCrop {
+    width: 220px;
+    height: 69px;
+  }
+}
+
+@media (max-width: 760px) {
+  .premiumBrandLockup .brandHeaderLogoCrop {
+    width: 180px;
+    height: 56px;
+  }
+}
+
+@media (max-width: 360px) {
+  .compactHome .premiumBrandLockup .brandHeaderLogoCrop,
+  .premiumBrandLockup .brandHeaderLogoCrop {
+    width: 160px;
+    height: 50px;
+  }
+
+  .compactHome .premiumBrandLockup .brandHeaderLogoAsset,
+  .premiumBrandLockup .brandHeaderLogoAsset {
+    width: 100%;
+    height: 100%;
+    inset: auto;
+  }
+}
