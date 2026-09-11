@@ -50,10 +50,10 @@ jobs:
         env:
           GITHUB_PAGES: "true"
           NEXT_PUBLIC_SUPABASE_URL: "https://zcyarfpybsjzkgdvktci.supabase.co"
-          NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: "sb_publishable_N2nrDcJF4m_IQANNDnkNGw_QT2zEtDW"
-          NEXT_PUBLIC_SITE_URL: "https://dennis-glaser-coder.github.io/human-certification-web"
+          NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: "sb_publishable_N2nrDcJF4m_IQANNDnkGw_QT2zEtDW"
+          NEXT_PUBLIC_SITE_URL: "https://madebyhuman.org"
           NEXT_PUBLIC_SITE_INDEXABLE: "false"
-          NEXT_PUBLIC_BASE_PATH: "/human-certification-web"
+          NEXT_PUBLIC_BASE_PATH: ""
         run: npm run build
 
       - name: Upload Pages artifact
