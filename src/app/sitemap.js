@@ -6,6 +6,8 @@ const pages = [
   ['/', 'weekly', 1],
   ['/standard', 'monthly', 0.9],
   ['/warum-made-by-human', 'monthly', 0.9],
+  ['/handarbeit-siegel', 'monthly', 0.9],
+  ['/handarbeit-zertifizieren', 'monthly', 0.9],
   ['/fuer-hersteller', 'monthly', 0.9],
   ['/fuer-kaeufer', 'monthly', 0.9],
   ['/register', 'daily', 0.9],
