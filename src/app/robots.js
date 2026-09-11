@@ -1,6 +1,6 @@
 export const dynamic = 'force-static';
 
-import { canonical, SITE_INDEXABLE } from '../lib/seo';
+import { canonical } from '../lib/seo';
 
 export default function robots() {
   return {
@@ -8,6 +8,6 @@ export default function robots() {
       userAgent: '*',
       allow: '/',
     },
-    ...(SITE_INDEXABLE ? { sitemap: canonical('/sitemap.xml') } : {}),
+    sitemap: canonical('/sitemap.xml'),
   };
 }
