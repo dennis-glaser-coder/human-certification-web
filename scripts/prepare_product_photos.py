@@ -168,21 +168,14 @@ leather = edit_tag(
 Image.fromarray(leather).save(LEATHER_OUT, quality=97, subsampling=0)
 save_webp(leather, LEATHER_WEBP)
 
-# Textile photo: preserve the exact original scene/profile, replace only old brand applications.
-textile = np.array(Image.open(TEXTILE_SOURCE).convert("RGB"))
-textile = edit_tag(
-    textile,
-    [(526, 674), (657, 700), (554, 895), (395, 852)],
-    (220, 320),
-    (8, 90, 214, 315),
-    (10, 10, 210, 92),
-    (25, 72, 195, 302),
-    (60, 46, 32),
-    19,
-)
-textile = add_box_label(textile)
-Image.fromarray(textile).save(TEXTILE_OUT, quality=97, subsampling=0)
-save_webp(textile, TEXTILE_WEBP)
+# Approved textile photograph with the corrected paper sticker and logo spacing.
+# Keep the reviewed image intact instead of rebuilding the previous stretched label.
+from shutil import copyfile
+textile_final = BRAND / "IMG_1047_sticker.webp"
+if not textile_final.exists():
+    raise SystemExit(f"Missing approved textile photo: {textile_final}")
+Image.open(textile_final).convert("RGB").save(TEXTILE_OUT)
+copyfile(textile_final, TEXTILE_WEBP)
 
 for source, output in EXTRA_WEBP:
     if source.exists():
