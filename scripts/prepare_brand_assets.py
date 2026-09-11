@@ -2,12 +2,12 @@ from pathlib import Path
 from PIL import Image, ImageChops
 
 ROOT = Path(__file__).resolve().parent.parent
-SOURCE = ROOT / "IMG_1070.png"
+SOURCE = ROOT / "MadeByHuman_Logovariante.png"
 OUT = ROOT / "public" / "brand"
 OUT.mkdir(parents=True, exist_ok=True)
 
 if not SOURCE.exists():
-    raise SystemExit("IMG_1070.png not found at repository root")
+    raise SystemExit("MadeByHuman_Logovariante.png not found at repository root")
 
 img = Image.open(SOURCE).convert("RGBA")
 w, h = img.size
@@ -31,7 +31,7 @@ else:
 
 bbox = mask.getbbox()
 if not bbox:
-    raise SystemExit("Could not detect logo artwork in IMG_1070.png")
+    raise SystemExit("Could not detect logo artwork in MadeByHuman_Logovariante.png")
 
 def padded(box, pad):
     l, t, r, b = box
