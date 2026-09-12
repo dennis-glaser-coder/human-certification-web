@@ -1,0 +1,23 @@
+name: Export Final Logo
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/export-final-logo.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Upload final logo
+        uses: actions/upload-artifact@v4
+        with:
+          name: made-by-human-final-logo
+          path: made-by-human-logo-FINAL.png
+          retention-days: 1
