@@ -4,7 +4,7 @@ import SiteFooter from '../../../components/SiteFooter';
 import { canonical, SOCIAL_IMAGE } from '../../../lib/seo';
 
 export const metadata = {
-  title: 'Handarbeit mit Maschinen – geht das? | Made by Human',
+  title: 'Handarbeit mit Maschinen – geht das?',
   description: 'Maschinen schließen Handarbeit nicht automatisch aus. Entscheidend ist, welche produktprägenden Schritte Menschen tatsächlich ausführen.',
   alternates: { canonical: canonical('/wissen/handarbeit-mit-maschinen') },
   openGraph: { title: 'Handarbeit mit Maschinen – geht das? | Made by Human', description: 'Wie Made by Human die Rolle von Mensch und Maschine in der Herstellung bewertet.', url: canonical('/wissen/handarbeit-mit-maschinen'), images: [SOCIAL_IMAGE] },
