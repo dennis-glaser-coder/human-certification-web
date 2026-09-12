@@ -30,7 +30,7 @@ for path in (MASTER, LEATHER_SOURCE, TEXTILE_SOURCE):
     if not path.exists():
         raise SystemExit(f"Missing required source: {path}")
 
-# Use the exact master logo generated from IMG_1070.png.
+# Use the shared master, including its canonical wordmark-to-seal spacing.
 logo_rgba = np.array(Image.open(MASTER).convert("RGBA"))
 gray = cv2.cvtColor(logo_rgba[:, :, :3], cv2.COLOR_RGB2GRAY)
 source_alpha = logo_rgba[:, :, 3].astype(np.float32) / 255.0
@@ -71,6 +71,14 @@ def add_logo(rect, xyxy, color, opacity=0.95):
     x1, y1, x2, y2 = map(int, xyxy)
     h = y2 - y1
     w = x2 - x1
+    # Fit without distorting the master, then center in the existing print area.
+    ratio = min(w / logo_mask.shape[1], h / logo_mask.shape[0])
+    fitted_w = max(1, round(logo_mask.shape[1] * ratio))
+    fitted_h = max(1, round(logo_mask.shape[0] * ratio))
+    x1 += (w - fitted_w) // 2
+    y1 += (h - fitted_h) // 2
+    w, h = fitted_w, fitted_h
+    x2, y2 = x1 + w, y1 + h
     mask = cv2.resize(logo_mask, (w, h), interpolation=cv2.INTER_AREA).astype(np.float32) / 255.0
     mask *= opacity
     ink_color = np.array(color, np.float32)
@@ -168,14 +176,34 @@ leather = edit_tag(
 Image.fromarray(leather).save(LEATHER_OUT, quality=97, subsampling=0)
 save_webp(leather, LEATHER_WEBP)
 
-# Approved textile photograph with the corrected paper sticker and logo spacing.
-# Keep the reviewed image intact instead of rebuilding the previous stretched label.
-from shutil import copyfile
+# Keep the approved scene and actual paper label; replace only the two prints
+# with the same master used everywhere else, in their existing perspectives.
 textile_final = BRAND / "IMG_1047_sticker.webp"
 if not textile_final.exists():
     raise SystemExit(f"Missing approved textile photo: {textile_final}")
-Image.open(textile_final).convert("RGB").save(TEXTILE_OUT)
-copyfile(textile_final, TEXTILE_WEBP)
+textile = np.array(Image.open(textile_final).convert("RGB"))
+textile = edit_tag(
+    textile,
+    [(526, 674), (657, 700), (554, 895), (395, 852)],
+    (220, 320),
+    (8, 52, 214, 315),
+    (12, 14, 62, 50),
+    (25, 72, 195, 302),
+    (60, 46, 32),
+    19,
+)
+textile = edit_tag(
+    textile,
+    [(982, 556), (1115, 564), (1113, 717), (982, 704)],
+    (134, 150),
+    (5, 8, 129, 145),
+    (4, 3, 28, 12),
+    (15, 16, 119, 136),
+    (38, 36, 32),
+    44,
+)
+Image.fromarray(textile).save(TEXTILE_OUT)
+save_webp(textile, TEXTILE_WEBP)
 
 for source, output in EXTRA_WEBP:
     if source.exists():

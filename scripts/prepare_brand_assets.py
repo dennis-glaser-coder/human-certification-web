@@ -40,6 +40,21 @@ def padded(box, pad):
 # Trimmed full master logo.
 full_box = padded(bbox, max(12, int(min(w, h) * 0.025)))
 full_logo = img.crop(full_box)
+# One canonical stacked lockup: move the seal, never redraw or stretch artwork.
+# The blank band is detected between the wordmark and the seal. Preserve every
+# source pixel on both sides and add the same 45px used in the approved footer.
+full_alpha = full_logo.getchannel("A")
+rows = [full_alpha.crop((0, y, full_logo.width, y + 1)).getbbox() is not None
+        for y in range(full_logo.height)]
+word_start = next(y for y, occupied in enumerate(rows) if occupied)
+word_end = next(y for y in range(word_start, len(rows)) if not rows[y])
+seal_start = next(y for y in range(word_end, len(rows)) if rows[y])
+split_y = (word_end + seal_start) // 2
+gap_extra = 45
+spaced = Image.new("RGBA", (full_logo.width, full_logo.height + gap_extra), (0, 0, 0, 0))
+spaced.paste(full_logo.crop((0, 0, full_logo.width, split_y)), (0, 0))
+spaced.paste(full_logo.crop((0, split_y, full_logo.width, full_logo.height)), (0, split_y + gap_extra))
+full_logo = spaced
 full_logo.save(OUT / "made-by-human-logo.png", optimize=True)
 full_logo.save(OUT / "made-by-human-logo.webp", "WEBP", quality=92, method=6)
 
@@ -131,6 +146,17 @@ if sw != sh:
     canvas.alpha_composite(seal, ((size-sw)//2, (size-sh)//2))
     seal = canvas
 seal.save(OUT / "made-by-human-seal.png", optimize=True)
+
+# Horizontal header application of the very same artwork. Keep its existing
+# canvas, positions and horizontal arrangement; only unify the logo components.
+header = Image.new("RGBA", (1277, 379), (0, 0, 0, 0))
+header_seal = img.crop(seal_box_raw)
+header_seal.thumbnail((359, 355), Image.Resampling.LANCZOS)
+header.paste(header_seal, (12, (379 - header_seal.height) // 2))
+header_word = img.crop(component_bbox(word_run))
+header_word.thumbnail((842, 82), Image.Resampling.LANCZOS)
+header.paste(header_word, (435, (379 - header_word.height) // 2))
+header.save(OUT / "header-logo-final.png", optimize=True)
 
 print("Prepared:", OUT / "made-by-human-logo.png")
 print("Prepared:", OUT / "made-by-human-logo.webp")

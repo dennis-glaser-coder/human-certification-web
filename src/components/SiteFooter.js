@@ -8,16 +8,7 @@ export default function SiteFooter() {
       <div className="shell premiumFooterTop">
         <div className="premiumFooterBrand">
           <div className="footerLogoField">
-            {/* Reuse the exact master artwork, adding 45 source pixels (~5px on desktop)
-                only in the empty band between the wordmark and the seal. */}
-            <svg className="footerMasterLogoAsset" viewBox="0 0 1001 1023" width="1001" height="1023" role="img" aria-label="Made by Human – Verified Human Production">
-              <defs>
-                <clipPath id="footerWordmarkClip"><rect width="1001" height="127" /></clipPath>
-                <clipPath id="footerSealClip"><rect y="172" width="1001" height="851" /></clipPath>
-              </defs>
-              <image href={assetBase + '/brand/made-by-human-logo.webp'} width="1001" height="978" clipPath="url(#footerWordmarkClip)" />
-              <image href={assetBase + '/brand/made-by-human-logo.webp'} y="45" width="1001" height="978" clipPath="url(#footerSealClip)" />
-            </svg>
+            <img className="footerMasterLogoAsset" src={assetBase + '/brand/made-by-human-logo.webp'} width="1001" height="1023" loading="lazy" alt="Made by Human – Verified Human Production" />
           </div>
           <p>Zertifizierung für nachweisbar menschliche Herstellung.</p>
         </div>
