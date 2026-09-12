@@ -4,7 +4,7 @@ import SiteFooter from '../../../components/SiteFooter';
 import { canonical, SOCIAL_IMAGE } from '../../../lib/seo';
 
 export const metadata = {
-  title: 'Was bedeutet handgemacht? | Made by Human',
+  title: 'Was bedeutet handgemacht?',
   description: 'Was „handgemacht“ über ein Produkt aussagt – und warum für eine nachvollziehbare Zertifizierung der tatsächliche Herstellungsprozess entscheidend ist.',
   alternates: { canonical: canonical('/wissen/was-bedeutet-handgemacht') },
   openGraph: { title: 'Was bedeutet handgemacht? | Made by Human', description: 'Handgemacht verständlich erklärt: Begriff, Herstellungsprozess und Nachweis.', url: canonical('/wissen/was-bedeutet-handgemacht'), images: [SOCIAL_IMAGE] },
