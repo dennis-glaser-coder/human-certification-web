@@ -1,0 +1,85 @@
+name: Notify IndexNow
+
+on:
+  workflow_run:
+    workflows: ["Deploy GitHub Pages"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Submit deployed URLs to IndexNow
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import time
+          import urllib.error
+          import urllib.request
+          import xml.etree.ElementTree as ET
+
+          site = "https://madebyhuman.org"
+          sitemap_url = f"{site}/sitemap.xml"
+          key = "4df8d7aa-1387-4940-aa32-1292003270ac"
+          key_location = f"{site}/{key}.txt"
+
+          sitemap = None
+          for attempt in range(6):
+              try:
+                  request = urllib.request.Request(
+                      sitemap_url,
+                      headers={"User-Agent": "MadeByHuman-IndexNow/1.0"},
+                  )
+                  with urllib.request.urlopen(request, timeout=20) as response:
+                      sitemap = response.read()
+                  break
+              except Exception as exc:
+                  print(f"Sitemap not ready yet ({attempt + 1}/6): {exc}")
+                  time.sleep(15)
+
+          if sitemap is None:
+              print("IndexNow skipped: deployed sitemap could not be fetched.")
+              raise SystemExit(0)
+
+          root = ET.fromstring(sitemap)
+          namespace = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+          urls = [
+              node.text.strip()
+              for node in root.findall(".//sm:loc", namespace)
+              if node.text and node.text.strip().startswith(site)
+          ]
+
+          if not urls:
+              print("IndexNow skipped: no madebyhuman.org URLs found in sitemap.")
+              raise SystemExit(0)
+
+          payload = json.dumps(
+              {
+                  "host": "madebyhuman.org",
+                  "key": key,
+                  "keyLocation": key_location,
+                  "urlList": urls,
+              }
+          ).encode("utf-8")
+
+          request = urllib.request.Request(
+              "https://api.indexnow.org/indexnow",
+              data=payload,
+              headers={"Content-Type": "application/json; charset=utf-8"},
+              method="POST",
+          )
+
+          try:
+              with urllib.request.urlopen(request, timeout=30) as response:
+                  print(f"IndexNow accepted {len(urls)} URLs (HTTP {response.status}).")
+          except urllib.error.HTTPError as exc:
+              print(f"IndexNow returned HTTP {exc.code}; deployment remains successful.")
+          except Exception as exc:
+              print(f"IndexNow notification failed without affecting deployment: {exc}")
+          PY
