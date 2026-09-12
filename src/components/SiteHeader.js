@@ -14,7 +14,7 @@ export default function SiteHeader() {
           <span className="brandHeaderLogoCrop" aria-hidden="true">
             <img
               className="brandHeaderLogoAsset"
-              src={assetBase + '/brand/header-logo-final.png'}
+              src={assetBase + '/brand/header-logo-final.png?v=20260912-spacing'}
               width="2172"
               height="724"
               alt=""

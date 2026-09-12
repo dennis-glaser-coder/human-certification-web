@@ -57,7 +57,7 @@ export default function MarkUsePage() {
           Das Made by Human Zeichen darf nicht frei für Marketing genutzt werden. Es gehört immer zu einem konkret zertifizierten Produkt, einem gültigen Status und dem passenden Registereintrag.
         </p>
         <div className="markUseMasterLogo" aria-label="Made by Human Masterlogo">
-          <img src={assetBase + '/brand/made-by-human-logo.webp'} alt="Made by Human Logo" />
+          <img src={assetBase + '/brand/made-by-human-logo.webp?v=20260912-spacing'} alt="Made by Human Logo" />
         </div>
       </section>
 
@@ -74,7 +74,7 @@ export default function MarkUsePage() {
         <div className="shell markUseRealExampleGrid">
           <figure>
             <img
-              src={assetBase + '/brand/IMG_1037_mbh.webp'}
+              src={assetBase + '/brand/IMG_1037_mbh.webp?v=20260912-spacing'}
               alt="Beispielhafte Made by Human Kennzeichnung an einem Lederprodukt"
               loading="lazy"
             />

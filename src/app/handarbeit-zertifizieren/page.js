@@ -102,7 +102,7 @@ export default function HandarbeitZertifizierenPage() {
             </figure>
             <div className="whySealTag">
               <img
-                src={assetBase + '/brand/made-by-human-logo.webp'}
+                src={assetBase + '/brand/made-by-human-logo.webp?v=20260912-spacing'}
                 alt="Made by Human Prüfzeichen"
                 width="96"
                 height="96"

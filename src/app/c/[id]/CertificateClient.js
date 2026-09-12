@@ -126,7 +126,7 @@ export default function CertificateClient({ id }) {
               </div>
               <div className="certificateHeader">
                 <div className="certificateBrand">
-                  <img className="certificateMasterLogo" src={`${assetBase}/brand/made-by-human-logo.webp`} alt="" aria-hidden="true" />
+                  <img className="certificateMasterLogo" src={`${assetBase}/brand/made-by-human-logo.webp?v=20260912-spacing`} alt="" aria-hidden="true" />
                   <div>
                     <small>ZERTIFIZIERUNGS-ID</small>
                     <h1>{state.record.public_id}</h1>

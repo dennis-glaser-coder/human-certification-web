@@ -13,6 +13,6 @@ export function canonical(path = '/') {
   return SITE_URL + '/' + clean + (isFile ? '' : '/');
 }
 
-export const SOCIAL_IMAGE = canonical('/brand/made-by-human-social.png');
-export const LOGO_IMAGE = canonical('/brand/made-by-human-logo.png');
-export const FAVICON_IMAGE = canonical('/brand/made-by-human-favicon.png');
+export const SOCIAL_IMAGE = canonical('/brand/made-by-human-social.png?v=20260912-spacing');
+export const LOGO_IMAGE = canonical('/brand/made-by-human-logo.png?v=20260912-spacing');
+export const FAVICON_IMAGE = canonical('/brand/made-by-human-favicon.png?v=20260912-spacing');

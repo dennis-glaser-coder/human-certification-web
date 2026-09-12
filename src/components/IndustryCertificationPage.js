@@ -67,7 +67,7 @@ export default function IndustryCertificationPage({
               <figcaption>Geprüft wird der konkrete Herstellungsprozess.</figcaption>
             </figure>
             <div className="whySealTag">
-              <img src={assetBase + '/brand/made-by-human-logo.webp'} alt="Made by Human Prüfzeichen" width="96" height="96" />
+              <img src={assetBase + '/brand/made-by-human-logo.webp?v=20260912-spacing'} alt="Made by Human Prüfzeichen" width="96" height="96" />
               <div>
                 <span>PRODUKTBEZOGENE ZERTIFIZIERUNG</span>
                 <strong>{industryName} · Herstellung · Nachweise · Register</strong>

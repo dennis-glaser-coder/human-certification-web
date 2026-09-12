@@ -63,7 +63,7 @@ export default function Home() {
               <div className="applicationStage applicationStagePhoto realApplicationStage">
                 <img
                   className="applicationPhoto realApplicationPhoto"
-                  src={assetBase + '/brand/IMG_1047_mbh.webp'}
+                  src={assetBase + '/brand/IMG_1047_mbh.webp?v=20260912-spacing'}
                   alt="Beispielhafte Made by Human Kennzeichnung an einem textilen Produkt mit Verpackung"
                   loading="lazy"
                 />
@@ -79,7 +79,7 @@ export default function Home() {
                 <div className="applicationProofPanel">
                   <div className="applicationProofTop">
                     <span>ONLINE PRÜFBAR</span>
-                    <img src={assetBase + '/brand/made-by-human-logo.webp'} alt="" aria-hidden="true" />
+                    <img src={assetBase + '/brand/made-by-human-logo.webp?v=20260912-spacing'} alt="" aria-hidden="true" />
                   </div>
                   <div className="applicationProofStatement">
                     <small>NACHWEIS FÜR DIESES PRODUKT</small>
