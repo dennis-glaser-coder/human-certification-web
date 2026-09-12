@@ -4,8 +4,8 @@ import SiteFooter from '../../components/SiteFooter';
 import { canonical, SOCIAL_IMAGE } from '../../lib/seo';
 
 export const metadata = {
-  title: 'Handarbeit zertifizieren lassen | Made by Human',
-  description: 'Handgemachte und menschlich hergestellte Produkte zertifizieren lassen: Made by Human prüft Herstellungsprozess, Nachweise und Zertifizierungsumfang nach klaren Kriterien.',
+  title: 'Handarbeit zertifizieren lassen',
+  description: 'Handarbeit zertifizieren lassen: Made by Human prüft Herstellungsprozess, menschliche Arbeitsschritte und Nachweise für konkrete Produkte und Produktfamilien.',
   alternates: { canonical: canonical('/handarbeit-zertifizieren') },
   openGraph: {
     type: 'website',
