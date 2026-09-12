@@ -5,7 +5,7 @@ import { canonical, SOCIAL_IMAGE } from '../../lib/seo';
 
 export const metadata = {
   title: 'Handarbeit-Siegel für handgemachte Produkte',
-  description: 'Made by Human ist ein Prüfzeichen für Produkte, deren wesentliche Herstellungsschritte nachweislich von Menschen ausgeführt werden. Informationen für Hersteller zu Prüfung, Nachweisen und Zertifizierung.',
+  description: 'Handarbeit-Siegel für handgemachte Produkte: Made by Human prüft menschliche Herstellungsschritte, Nachweise und Zertifizierungsumfang nach klaren Kriterien.',
   alternates: { canonical: canonical('/handarbeit-siegel') },
   openGraph: {
     type: 'website',
