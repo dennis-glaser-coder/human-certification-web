@@ -4,8 +4,8 @@ import SiteFooter from '../../../components/SiteFooter';
 import { canonical, SOCIAL_IMAGE } from '../../../lib/seo';
 
 export const metadata = {
-  title: 'Handmade oder handgefertigt? | Made by Human',
-  description: 'Handmade, handgemacht und handgefertigt werden oft ähnlich verwendet. Für eine Zertifizierung ist der tatsächliche Herstellungsprozess entscheidender als der Begriff.',
+  title: 'Handmade oder handgefertigt?',
+  description: 'Handmade, handgemacht und handgefertigt werden oft ähnlich verwendet. Für Made by Human zählt bei der Zertifizierung der tatsächliche Herstellungsprozess.',
   alternates: { canonical: canonical('/wissen/handmade-vs-handgefertigt') },
   openGraph: { title: 'Handmade oder handgefertigt? | Made by Human', description: 'Warum der Herstellungsprozess wichtiger ist als das Wort auf dem Etikett.', url: canonical('/wissen/handmade-vs-handgefertigt'), images: [SOCIAL_IMAGE] },
 };
