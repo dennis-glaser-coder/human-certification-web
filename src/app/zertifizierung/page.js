@@ -4,8 +4,8 @@ import SiteFooter from '../../components/SiteFooter';
 import { canonical, SOCIAL_IMAGE } from '../../lib/seo';
 
 export const metadata = {
-  title: 'Zertifizierung für handgemachte Produkte | Made by Human',
-  description: 'Made by Human zertifiziert nachweisbar menschlich hergestellte Produkte. Informationen und branchenspezifische Hinweise für Schmuck, Holz, Möbel, Textilien, Lederwaren und Keramik.',
+  title: 'Zertifizierung für handgemachte Produkte',
+  description: 'Zertifizierung für handgemachte Produkte: Made by Human prüft menschlich geprägte Herstellung bei Schmuck, Holz, Möbeln, Textilien, Lederwaren und Keramik.',
   alternates: { canonical: canonical('/zertifizierung') },
   openGraph: {
     type: 'website',
