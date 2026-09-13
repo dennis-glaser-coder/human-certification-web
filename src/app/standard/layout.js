@@ -6,6 +6,10 @@ export const metadata = {
     'Kriterien, Geltungsbereich, Nachweise und Entscheidungsregeln des Made by Human Standards für nachweisbar menschlich gefertigte physische Produkte.',
   alternates: {
     canonical: canonical('/standard'),
+    languages: {
+      'de-DE': canonical('/standard'),
+      en: canonical('/en/standard'),
+    },
   },
   openGraph: {
     title: 'Standard | Made by Human',
