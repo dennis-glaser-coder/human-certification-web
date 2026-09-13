@@ -92,6 +92,10 @@ const organizationJsonLd = {
     '@type': 'ImageObject',
     url: LOGO_IMAGE,
   },
+  sameAs: [
+    'https://www.instagram.com/madebyhuman.verify/',
+    'https://www.linkedin.com/company/made-by-human-org/',
+  ],
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Hohenloher Weg 44',
