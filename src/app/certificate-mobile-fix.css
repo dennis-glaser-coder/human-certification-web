@@ -1,0 +1,96 @@
+/* Mobile hardening for public certification records.
+   Keeps long status labels, IDs and QR/record content inside the viewport. */
+@media (max-width: 760px) {
+  .certificatePage.shell {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .certificateSummary,
+  .certificateAuthorityLine,
+  .certificateHeader,
+  .certificateBrand,
+  .certificateClaim,
+  .certificateFacts,
+  .certificateFacts > div,
+  .certificateQr,
+  .certificateQrCopy {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .certificateSummary {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .certificateAuthorityLine {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .certificateAuthorityLine > span {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .certificateHeader {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .certificateBrand {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .certificateBrand > div {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .certificateHeader h1 {
+    max-width: 100%;
+    font-size: clamp(34px, 10.5vw, 46px);
+    line-height: 1.02;
+    overflow-wrap: anywhere;
+  }
+
+  .statusBadge {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.4;
+  }
+
+  .certificateClaim p,
+  .certificateFacts dt,
+  .certificateFacts dd,
+  .certificatePublicNote p {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .certificateQr {
+    width: auto;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .certificateQrCode {
+    max-width: 100%;
+  }
+
+  .certificateQrCopy a {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+}
