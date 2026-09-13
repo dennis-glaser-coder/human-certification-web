@@ -3,10 +3,11 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 
-export default function DesktopOrganizationNav() {
+export default function DesktopOrganizationNav({ lang = 'de' }) {
   const [open, setOpen] = useState(false);
   const wrapRef = useRef(null);
   const buttonRef = useRef(null);
+  const isEn = lang === 'en';
 
   function close() {
     setOpen(false);
@@ -45,16 +46,17 @@ export default function DesktopOrganizationNav() {
         aria-haspopup="menu"
         onClick={() => setOpen((current) => !current)}
       >
-        <span>Mehr</span>
+        <span>{isEn ? 'More' : 'Mehr'}</span>
         <span className="desktopNavChevron" aria-hidden="true"></span>
       </button>
 
       {open && (
         <div className="desktopNavMenuPanel" role="menu">
-          <Link href="/ueber-uns" role="menuitem" onClick={close}>Über uns</Link>
-          <Link href="/dokumente" role="menuitem" onClick={close}>Dokumente</Link>
-          <Link href="/transparenz" role="menuitem" onClick={close}>Transparenz & Integrität</Link>
-          <Link href="/verfahren" role="menuitem" onClick={close}>Beschwerden & Einsprüche</Link>
+          <Link href={isEn ? '/en/about' : '/ueber-uns'} role="menuitem" onClick={close}>{isEn ? 'About us' : 'Über uns'}</Link>
+          {isEn ? null : <Link href="/dokumente" role="menuitem" onClick={close}>Dokumente</Link>}
+          {isEn ? null : <Link href="/transparenz" role="menuitem" onClick={close}>Transparenz & Integrität</Link>}
+          {isEn ? null : <Link href="/verfahren" role="menuitem" onClick={close}>Beschwerden & Einsprüche</Link>}
+          {isEn ? <Link href="/impressum" role="menuitem" onClick={close}>Legal notice</Link> : null}
         </div>
       )}
     </div>

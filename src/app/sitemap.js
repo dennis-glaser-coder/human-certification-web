@@ -33,6 +33,14 @@ const pages = [
   ['/verfahren', 'monthly', 0.6],
   ['/impressum', 'yearly', 0.3],
   ['/datenschutz', 'yearly', 0.3],
+  ['/en', 'weekly', 1],
+  ['/en/why-made-by-human', 'monthly', 0.9],
+  ['/en/for-manufacturers', 'monthly', 0.9],
+  ['/en/for-buyers', 'monthly', 0.9],
+  ['/en/register', 'daily', 0.9],
+  ['/en/verify', 'monthly', 0.8],
+  ['/en/standard', 'monthly', 0.9],
+  ['/en/about', 'monthly', 0.7],
 ];
 
 export default function sitemap() {
