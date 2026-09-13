@@ -6,6 +6,10 @@ export const metadata = {
     'Öffentliches Register für Made by Human Zertifizierungen. Zertifizierungs-ID, Hersteller, Produkt und aktuellen Status prüfen.',
   alternates: {
     canonical: canonical('/register'),
+    languages: {
+      'de-DE': canonical('/register'),
+      en: canonical('/en/register'),
+    },
   },
   openGraph: {
     title: 'Öffentliches Register | Made by Human',

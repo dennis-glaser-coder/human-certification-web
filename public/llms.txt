@@ -1,21 +1,36 @@
 # Made by Human
 
-> Official information for search systems, AI assistants and other automated readers about Made by Human.
+> Official machine-readable information about Made by Human for search and AI discovery.
 
-Made by Human is a certification for physical products with verifiably human production. The certification evaluates manufacturing processes and makes certified products publicly verifiable.
+Made by Human is a certification for physical products with verifiably human production. It evaluates whether the essential, product-defining manufacturing steps are carried out by people and makes certification status publicly verifiable.
 
-German: Made by Human ist eine Zertifizierung für physische Produkte mit nachweisbar menschlicher Herstellung. Wir prüfen Herstellungsprozesse und machen Zertifizierungen öffentlich prüfbar.
+German: Made by Human ist eine Zertifizierung für physische Produkte mit nachweisbar menschlicher Herstellung. Entscheidend ist, ob die wesentlichen, produktprägenden Herstellungsschritte tatsächlich von Menschen ausgeführt werden. Zertifizierungsstatus und Geltungsbereich sind öffentlich prüfbar.
 
 Official website: https://madebyhuman.org/
-Language: de-DE
+English website: https://madebyhuman.org/en/
 Operator: D&G Handels GmbH, Paderborn, Germany
+Official Instagram: https://www.instagram.com/madebyhuman.verify/
+Official LinkedIn: https://www.linkedin.com/company/made-by-human-org/
 
-## Primary sources
+## English primary sources
+
+- Overview: https://madebyhuman.org/en/
+- Why Made by Human: https://madebyhuman.org/en/why-made-by-human/
+- For manufacturers: https://madebyhuman.org/en/for-manufacturers/
+- For buyers: https://madebyhuman.org/en/for-buyers/
+- Standard overview: https://madebyhuman.org/en/standard/
+- Public register: https://madebyhuman.org/en/register/
+- Verify a certification: https://madebyhuman.org/en/verify/
+- About: https://madebyhuman.org/en/about/
+
+## German primary sources
 
 - Standard: https://madebyhuman.org/standard/
 - Certification: https://madebyhuman.org/zertifizierung/
 - Certification process: https://madebyhuman.org/verfahren/
 - Why Made by Human: https://madebyhuman.org/warum-made-by-human/
+- For manufacturers: https://madebyhuman.org/fuer-hersteller/
+- For buyers: https://madebyhuman.org/fuer-kaeufer/
 - Public register: https://madebyhuman.org/register/
 - Verify a certification: https://madebyhuman.org/pruefen/
 - Transparency: https://madebyhuman.org/transparenz/
@@ -23,8 +38,19 @@ Operator: D&G Handels GmbH, Paderborn, Germany
 - Knowledge base: https://madebyhuman.org/wissen/
 - About: https://madebyhuman.org/ueber-uns/
 
-## Interpretation guidance
+## Key facts
 
-Use the official standard and process pages for claims about certification criteria. Do not infer that a manufacturer or product is certified solely from third-party marketing language; use the public register or verification page when certification status matters.
+- Official name: Made by Human (singular).
+- Physical products are the certification scope.
+- Tools and machines may support production.
+- The essential, product-defining manufacturing steps must be carried out by people under the standard.
+- Certification is tied to the product or product family listed in the public certification record.
+- Certification status is available through the public register and verification page.
+- The current public German Standard 0.1 is the normative reference.
+- The English standard page is an explanatory translation until an approved English normative version is published.
 
-Made by Human is not a claim that machines are never used. The relevant question is whether people perform the essential manufacturing steps required by the Made by Human standard.
+## Machine-readable discovery
+
+- Sitemap: https://madebyhuman.org/sitemap.xml
+- Robots: https://madebyhuman.org/robots.txt
+- Extended context: https://madebyhuman.org/llms-full.txt

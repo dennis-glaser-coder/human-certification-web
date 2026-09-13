@@ -10,8 +10,13 @@ export const metadata = {
     canonical: canonical('/en'),
     languages: {
       'de-DE': canonical('/'),
-      'en': canonical('/en'),
+      en: canonical('/en'),
+      'x-default': canonical('/'),
     },
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
   openGraph: {
     type: 'website',
@@ -20,6 +25,12 @@ export const metadata = {
     title: 'Made by Human | Certification for human production',
     description: 'On-site verification for physical products whose defining production steps are carried out by people.',
     url: canonical('/en'),
+    images: [SOCIAL_IMAGE],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Made by Human | Certification for human production',
+    description: 'On-site verification for physical products whose defining production steps are carried out by people.',
     images: [SOCIAL_IMAGE],
   },
 };

@@ -6,6 +6,10 @@ export const metadata = {
     'Informationen für Hersteller, Manufakturen und Marken zur Zertifizierung physischer Produkte mit nachweisbar menschlicher Herstellung.',
   alternates: {
     canonical: canonical('/fuer-hersteller'),
+    languages: {
+      'de-DE': canonical('/fuer-hersteller'),
+      en: canonical('/en/for-manufacturers'),
+    },
   },
   openGraph: {
     title: 'Zertifizierung für Hersteller | Made by Human',

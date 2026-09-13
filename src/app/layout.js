@@ -23,6 +23,11 @@ export const metadata = {
   applicationName: SITE_NAME,
   alternates: {
     canonical: canonical('/'),
+    languages: {
+      'de-DE': canonical('/'),
+      en: canonical('/en'),
+      'x-default': canonical('/'),
+    },
   },
   robots: {
     index: true,
@@ -89,6 +94,7 @@ const organizationJsonLd = {
   name: SITE_NAME,
   legalName: 'D&G Handels GmbH',
   url: canonical('/'),
+  description: DEFAULT_DESCRIPTION,
   logo: {
     '@type': 'ImageObject',
     url: LOGO_IMAGE,
@@ -96,6 +102,14 @@ const organizationJsonLd = {
   sameAs: [
     'https://www.instagram.com/madebyhuman.verify/',
     'https://www.linkedin.com/company/made-by-human-org/',
+  ],
+  knowsAbout: [
+    'menschliche Herstellung',
+    'human production',
+    'Produktzertifizierung',
+    'product certification',
+    'Herstellungsprozesse',
+    'manufacturing process verification',
   ],
   address: {
     '@type': 'PostalAddress',
@@ -119,7 +133,7 @@ const websiteJsonLd = {
   name: SITE_NAME,
   url: canonical('/'),
   description: DEFAULT_DESCRIPTION,
-  inLanguage: 'de-DE',
+  inLanguage: ['de-DE', 'en'],
   publisher: {
     '@id': organizationId,
   },

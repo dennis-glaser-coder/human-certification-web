@@ -6,6 +6,10 @@ export const metadata = {
     'Made by Human Zertifizierungs-ID eingeben und den zugehörigen öffentlichen Registereintrag prüfen.',
   alternates: {
     canonical: canonical('/pruefen'),
+    languages: {
+      'de-DE': canonical('/pruefen'),
+      en: canonical('/en/verify'),
+    },
   },
   openGraph: {
     title: 'Zertifizierungs-ID prüfen | Made by Human',
