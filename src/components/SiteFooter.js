@@ -5,10 +5,21 @@ const socialLinks = [
     label: 'Instagram',
     href: 'https://www.instagram.com/madebyhuman.verify/',
     icon: (
-      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
-        <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" strokeWidth="1.7" />
-        <circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" strokeWidth="1.7" />
-        <circle cx="17.4" cy="6.7" r="1.05" fill="currentColor" />
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="instagramFooterGradient" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stopColor="#FFDC80" />
+            <stop offset="0.22" stopColor="#F77737" />
+            <stop offset="0.46" stopColor="#FD1D1D" />
+            <stop offset="0.68" stopColor="#C13584" />
+            <stop offset="0.84" stopColor="#833AB4" />
+            <stop offset="1" stopColor="#405DE6" />
+          </linearGradient>
+        </defs>
+        <rect x="1" y="1" width="22" height="22" rx="6" fill="url(#instagramFooterGradient)" />
+        <rect x="5.2" y="5.2" width="13.6" height="13.6" rx="4.3" fill="none" stroke="#FFFFFF" strokeWidth="1.8" />
+        <circle cx="12" cy="12" r="3.3" fill="none" stroke="#FFFFFF" strokeWidth="1.8" />
+        <circle cx="17.15" cy="6.9" r="1.05" fill="#FFFFFF" />
       </svg>
     ),
   },
@@ -16,10 +27,11 @@ const socialLinks = [
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/company/made-by-human-org/',
     icon: (
-      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
-        <rect x="3" y="3" width="18" height="18" rx="2.5" fill="none" stroke="currentColor" strokeWidth="1.7" />
-        <circle cx="8" cy="8.25" r="1.2" fill="currentColor" />
-        <path d="M7 10.7h2v6.3H7zM11 10.7h1.95v.87c.8-.78 1.63-1.12 2.66-1.12 2.05 0 3.39 1.34 3.39 3.86V17h-2.04v-2.46c0-1.49-.51-2.2-1.58-2.2-1.17 0-1.78.79-1.78 2.38V17H11z" fill="currentColor" />
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+        <rect x="1" y="1" width="22" height="22" rx="2.5" fill="#0A66C2" />
+        <circle cx="7.15" cy="8" r="1.35" fill="#FFFFFF" />
+        <path d="M5.95 10.25h2.4v7.65h-2.4z" fill="#FFFFFF" />
+        <path d="M10.25 10.25h2.3v1.05h.03c.32-.61 1.1-1.25 2.27-1.25 2.43 0 2.88 1.6 2.88 3.68v4.17h-2.4v-3.7c0-.88-.02-2.02-1.23-2.02-1.23 0-1.42.96-1.42 1.95v3.77h-2.43z" fill="#FFFFFF" />
       </svg>
     ),
   },
@@ -49,13 +61,12 @@ export default function SiteFooter() {
                 aria-label={`Made by Human auf ${label}`}
                 title={label}
                 style={{
-                  width: '36px',
-                  height: '36px',
-                  border: '1px solid rgba(243,240,232,.28)',
+                  width: '40px',
+                  height: '40px',
+                  border: '1px solid rgba(243,240,232,.22)',
                   display: 'inline-flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: '#F3F0E8',
                   textDecoration: 'none',
                   borderRadius: '50%',
                 }}
