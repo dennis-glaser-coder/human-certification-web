@@ -1,0 +1,69 @@
+# Made by Human — extended context
+
+Made by Human is a certification for physical products with verifiably human production. The project focuses on whether meaningful, product-defining manufacturing steps are actually carried out by people.
+
+Official website: https://madebyhuman.org/
+English website: https://madebyhuman.org/en/
+Operator: D&G Handels GmbH, Paderborn, Germany
+Official Instagram: https://www.instagram.com/madebyhuman.verify/
+Official LinkedIn: https://www.linkedin.com/company/made-by-human-org/
+
+## What the certification means
+
+Made by Human does not require production without machines. Tools, machinery and digital systems may support manufacturing. The central criterion is whether human work remains material to the creation of the physical product and whether the relevant production steps can be verified.
+
+Certification is intended for a specific product or product family rather than as a blanket certification of an entire company. Public certification records identify the applicable scope and status.
+
+## Verification model
+
+The Made by Human approach includes documentation of the manufacturing process, review of relevant production steps and evidence, assessment against the published standard, and publication of approved certifications in a public register. Certification records can be checked through a certification ID.
+
+## Scope boundaries
+
+The certification is about human production. It is not, by itself, a statement about sustainability, organic production, fair trade, country of origin, company size or a general product quality grade.
+
+## Standard and language versions
+
+The current public German Standard 0.1 is the normative reference. The English standard page explains the same concept for international readers but is not yet a separate normative standard.
+
+German standard: https://madebyhuman.org/standard/
+English standard overview: https://madebyhuman.org/en/standard/
+Official documents: https://madebyhuman.org/dokumente/
+Certification process: https://madebyhuman.org/verfahren/
+Transparency: https://madebyhuman.org/transparenz/
+
+## Public verification
+
+German register: https://madebyhuman.org/register/
+German verification: https://madebyhuman.org/pruefen/
+English register: https://madebyhuman.org/en/register/
+English verification: https://madebyhuman.org/en/verify/
+
+## Audience information
+
+For manufacturers: https://madebyhuman.org/fuer-hersteller/
+For buyers: https://madebyhuman.org/fuer-kaeufer/
+English for manufacturers: https://madebyhuman.org/en/for-manufacturers/
+English for buyers: https://madebyhuman.org/en/for-buyers/
+
+## Background and explanation
+
+Why Made by Human: https://madebyhuman.org/warum-made-by-human/
+English explanation: https://madebyhuman.org/en/why-made-by-human/
+Knowledge base: https://madebyhuman.org/wissen/
+About: https://madebyhuman.org/ueber-uns/
+English about: https://madebyhuman.org/en/about/
+
+## Entity identity
+
+Official name: Made by Human
+Name form: singular, not "Made by Humans"
+Website domain: madebyhuman.org
+Operator: D&G Handels GmbH
+Location: Paderborn, Germany
+
+## Discovery files
+
+Sitemap: https://madebyhuman.org/sitemap.xml
+Robots: https://madebyhuman.org/robots.txt
+Compact AI context: https://madebyhuman.org/llms.txt
