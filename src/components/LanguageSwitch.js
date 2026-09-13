@@ -31,6 +31,7 @@ export default function LanguageSwitch({ lang = 'de' }) {
   const enHref = counterpart(pathname, 'en');
 
   const linkStyle = {
+    color: 'inherit',
     fontSize: '11px',
     letterSpacing: '.08em',
     fontWeight: 600,
