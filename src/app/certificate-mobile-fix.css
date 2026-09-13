@@ -1,5 +1,5 @@
-/* Mobile hardening for public certification records.
-   Keeps long status labels, IDs and QR/record content inside the viewport. */
+/* Mobile hardening for public certification records and proof specimens.
+   Keeps long status labels, IDs and record content inside the viewport. */
 @media (max-width: 760px) {
   .certificatePage.shell {
     width: 100%;
@@ -27,7 +27,8 @@
     overflow: hidden;
   }
 
-  .certificateAuthorityLine {
+  .certificateAuthorityLine,
+  .certificateHeader {
     width: 100%;
     box-sizing: border-box;
   }
@@ -36,11 +37,6 @@
     max-width: 100%;
     white-space: normal;
     overflow-wrap: anywhere;
-  }
-
-  .certificateHeader {
-    width: 100%;
-    box-sizing: border-box;
   }
 
   .certificateBrand {
@@ -60,7 +56,7 @@
     overflow-wrap: anywhere;
   }
 
-  .statusBadge {
+  .certificateSummary .statusBadge {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
@@ -92,5 +88,73 @@
     max-width: 100%;
     overflow-wrap: anywhere;
     word-break: break-word;
+  }
+
+  /* Buyer page: the demo certification record used to overflow to the right
+     because its flex children kept their desktop min-content widths. */
+  .buyerVerifyGrid,
+  .buyerVerifyVisual,
+  .buyerProofSpecimen,
+  .buyerProofAuthority,
+  .buyerProofIdentity,
+  .buyerProofFacts,
+  .buyerProofFoot,
+  .buyerVerifyCopy {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .buyerProofSpecimen {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .buyerProofAuthority {
+    min-height: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .buyerProofAuthority > span,
+  .buyerProofAuthority > small {
+    min-width: 0;
+    max-width: 100%;
+    text-align: left;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .buyerProofIdentity {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .buyerProofIdentity > div {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .buyerProofIdentity strong {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .buyerProofIdentity .statusBadge {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.4;
+  }
+
+  .buyerProofFacts dt,
+  .buyerProofFacts dd,
+  .buyerProofFoot {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
 }
