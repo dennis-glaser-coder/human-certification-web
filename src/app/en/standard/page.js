@@ -46,7 +46,7 @@ export default function StandardPage() {
 
       <section className="standardMetaBand" aria-label="Standard metadata">
         <div className="shell standardMetaBar">
-          <div><span>STANDARD VERSION</span><strong>0.1</strong></div>
+          <div><span>STANDARD VERSION</span><strong>1.0</strong></div>
           <div><span>SCOPE</span><strong>Physical products</strong></div>
           <div><span>ASSESSMENT AREAS</span><strong>6 criteria areas</strong></div>
           <div><span>DOCUMENTATION</span><strong>Versioned & public</strong></div>
@@ -84,7 +84,7 @@ export default function StandardPage() {
 
       <section className="scopeExclusionSection"><div className="shell scopeExclusionGrid"><div><div className="sectionNo">OUTSIDE THE STANDARD</div><h2>Made by Human deliberately remains limited to human production.</h2></div><div className="exclusionList">{exclusions.map((item) => <span key={item}>{item}</span>)}</div></div></section>
 
-      <section className="standardClose shell"><div><p>Each version of the standard has its own version number. The current public German standard document remains the normative reference until an approved English normative version is published.</p></div><div className="standardCloseLinks"><Link className="textLink" href="/dokumente/standard-0-1">Open Standard 0.1 (German) →</Link><Link className="textLink" href="/en/about">About the system →</Link></div></section>
+      <section className="standardClose shell"><div><p>Each version of the standard has its own version number. The current public German standard document remains the normative reference until an approved English normative version is published.</p></div><div className="standardCloseLinks"><Link className="textLink" href="/dokumente/standard-1-0">Open Standard 1.0 (German) →</Link><Link className="textLink" href="/en/about">About the system →</Link></div></section>
 
       <EnglishFooter />
     </main>
