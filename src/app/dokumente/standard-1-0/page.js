@@ -25,6 +25,8 @@ const criteria = [
 ];
 
 export default function StandardDocumentPage() {
+  const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE || '';
+
   return (
     <main className="standardDocumentPage">
       <SiteHeader />
@@ -38,6 +40,11 @@ export default function StandardDocumentPage() {
             <div><dt>Geltungsbereich</dt><dd>Aufgenommene physische Produkte</dd></div>
           </dl>
         </header>
+
+        <div className="controlledDocumentActions">
+          <a className="button primary" href={assetBase + '/documents/made-by-human-standard-1-0.pdf'}>PDF herunterladen</a>
+          <Link className="button secondary" href="/dokumente">Dokumentenregister</Link>
+        </div>
 
         <section><h2>Zweck und Aussagegrenze</h2><p>Der Standard beschreibt, wann menschliche Arbeit ein physisches Produkt so wesentlich prägt und ausreichend belegt ist, dass es mit Made by Human zertifiziert werden kann. Die Zertifizierung bezieht sich ausschließlich auf die menschliche Herstellung innerhalb des festgelegten Zertifizierungsumfangs. Sie ist keine Aussage zu Herkunftsland, Nachhaltigkeit, Bio- oder Fairtrade-Eigenschaften, allgemeiner Produktqualität, Produktsicherheit, gesetzlicher Konformität oder Unternehmensgröße.</p></section>
 
