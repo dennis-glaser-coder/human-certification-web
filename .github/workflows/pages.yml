@@ -45,6 +45,7 @@ jobs:
         run: |
           python -m pip install --quiet reportlab==4.4.9
           python scripts/generate_public_documents.py
+          python scripts/generate_public_documents_v1.py
 
       - name: Build static site
         env:
