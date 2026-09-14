@@ -73,7 +73,7 @@ export default function AnalyticsConsent() {
     ? {
         settings: 'Privacy settings',
         eyebrow: 'PRIVACY',
-        title: 'May we collect anonymous usage statistics?',
+        title: 'May we collect usage statistics?',
         text: 'We use Google Analytics to understand how our website is used and which channels bring visitors to us. Tracking is loaded only after your consent. More information is available in our',
         link: 'privacy policy',
         accept: 'Allow statistics',
@@ -82,7 +82,7 @@ export default function AnalyticsConsent() {
     : {
         settings: 'Datenschutz-Einstellungen',
         eyebrow: 'DATENSCHUTZ',
-        title: 'Dürfen wir anonyme Nutzungsstatistiken erfassen?',
+        title: 'Dürfen wir Nutzungsstatistiken erfassen?',
         text: 'Mit Google Analytics möchten wir verstehen, wie unsere Website genutzt wird und über welche Kanäle Besucher zu uns kommen. Das Tracking wird erst nach Ihrer Zustimmung geladen. Mehr dazu in unserer',
         link: 'Datenschutzerklärung',
         accept: 'Statistik erlauben',
