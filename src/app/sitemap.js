@@ -25,8 +25,8 @@ const pages = [
   ['/transparenz', 'monthly', 0.8],
   ['/ueber-uns', 'monthly', 0.7],
   ['/dokumente', 'monthly', 0.8],
-  ['/dokumente/standard-0-1', 'monthly', 0.7],
-  ['/dokumente/certification-scheme-0-1', 'monthly', 0.7],
+  ['/dokumente/standard-1-0', 'monthly', 0.8],
+  ['/dokumente/certification-scheme-1-0', 'monthly', 0.8],
   ['/markennutzung', 'monthly', 0.6],
   ['/leitfaden/nachweise', 'monthly', 0.7],
   ['/leitfaden/zertifizierungsumfang', 'monthly', 0.7],
@@ -44,9 +44,5 @@ const pages = [
 ];
 
 export default function sitemap() {
-  return pages.map(([path, changeFrequency, priority]) => ({
-    url: canonical(path),
-    changeFrequency,
-    priority,
-  }));
+  return pages.map(([path, changeFrequency, priority]) => ({ url: canonical(path), changeFrequency, priority }));
 }
