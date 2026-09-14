@@ -30,7 +30,7 @@ export default function DatenschutzPage() {
           Wir verarbeiten nur Daten, die für den Betrieb der Website, das öffentliche Register
           oder die Bearbeitung einer Zertifizierungsanfrage gebraucht werden.
         </p>
-        <p className="legalStatus">Stand: 11.09.2026</p>
+        <p className="legalStatus">Stand: 14.09.2026</p>
       </section>
 
       <section className="shell privacyContent">
@@ -185,21 +185,52 @@ export default function DatenschutzPage() {
 
         <section className="privacySection">
           <span>07 · COOKIES & TRACKING</span>
-          <h2>Kein eigenes Analyse- oder Marketing-Tracking.</h2>
+          <h2>Google Analytics nur nach Ihrer Einwilligung.</h2>
           <p>
-            Nach dem aktuellen technischen Stand setzen wir selbst keine Analyse- oder
-            Marketing-Dienste wie Google Analytics, Meta Pixel oder vergleichbare Tracking-Systeme ein.
-            Es gibt kein Nutzerkonto, keinen Newsletter und keine personalisierte Werbung.
+            Wir verwenden Google Analytics 4, um zu verstehen, wie unsere Website genutzt wird,
+            welche Seiten aufgerufen werden und über welche Kanäle Besucher zu uns gelangen.
+            Anbieter für Nutzer im Europäischen Wirtschaftsraum ist Google Ireland Limited.
+            Google Analytics wird auf dieser Website erst geladen, wenn Sie im Datenschutz-Dialog
+            ausdrücklich in die Statistikmessung einwilligen.
           </p>
           <p>
-            Die Website verwendet für die Darstellung keine extern nachgeladenen Google-Fonts im Browser;
-            die verwendeten Schriftdateien werden durch das Website-Build lokal bereitgestellt.
-            Ein eigenes Consent-Management-System ist derzeit nicht eingebunden.
+            Bei aktivierter Statistik können insbesondere Seitenaufrufe, Sitzungsdaten, ungefähre
+            Standortinformationen sowie Browser- und Geräteinformationen verarbeitet werden. Google
+            Analytics verwendet eigene Cookies wie <code>_ga</code> und <code>_ga_&lt;container-id&gt;</code>,
+            um Nutzer und Sitzungen zu unterscheiden. Die Standardlaufzeit dieser Cookies beträgt
+            nach Angaben von Google bis zu zwei Jahre und kann durch Browserbeschränkungen verkürzt werden.
           </p>
           <p>
-            Sollte die Website künftig nicht notwendige Cookies, vergleichbare Speichertechnologien,
-            Analyse-, Marketing- oder eingebettete Drittanbieter-Dienste einsetzen, wird diese
-            Datenschutzerklärung angepasst und erforderliche Einwilligungen werden vor der Nutzung eingeholt.
+            Für Nutzer in der EU, der Schweiz und dem Vereinigten Königreich werden nach Angaben von Google
+            einzelne IP-Adressen nicht in Google Analytics protokolliert oder gespeichert. Die IP-Adresse
+            wird dort unter anderem zur Ableitung grober Standortinformationen verwendet und anschließend
+            verworfen. Eine Verarbeitung durch Google-Unternehmen und Dienstleister kann auch außerhalb
+            der Europäischen Union stattfinden.
+          </p>
+          <div className="privacyFacts">
+            <div><strong>Zweck</strong><p>Reichweitenmessung, Analyse der Website-Nutzung und Verbesserung unseres Angebots.</p></div>
+            <div><strong>Rechtsgrundlage</strong><p>Ihre Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO; soweit Informationen auf Ihrem Endgerät gespeichert oder ausgelesen werden, zusätzlich § 25 Abs. 1 TDDDG.</p></div>
+            <div><strong>Empfänger</strong><p>Google Ireland Limited sowie verbundene Unternehmen und von Google eingesetzte Dienstleister.</p></div>
+            <div><strong>Widerruf</strong><p>Sie können Ihre Auswahl jederzeit über „Datenschutz-Einstellungen“ am unteren Seitenrand ändern.</p></div>
+          </div>
+          <p>
+            Ohne Einwilligung wird das Google-Analytics-Tag nicht geladen. Wenn Sie eine bereits erteilte
+            Einwilligung widerrufen, wird die Statistikmessung für zukünftige Seitenaufrufe deaktiviert.
+            Die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung bleibt unberührt.
+          </p>
+          <p>
+            Unabhängig davon verwenden wir für die Darstellung keine extern nachgeladenen Google-Fonts im Browser;
+            die verwendeten Schriftdateien werden durch das Website-Build lokal bereitgestellt. Ein Meta Pixel
+            oder vergleichbares Marketing-Tracking setzen wir derzeit nicht ein.
+          </p>
+          <p className="privacySourceLine">
+            Weitere Informationen:
+            {' '}
+            <a href="https://support.google.com/analytics/answer/12017362?hl=de" target="_blank" rel="noreferrer">Google Analytics: Daten und Datenschutz in der EU</a>
+            {' · '}
+            <a href="https://support.google.com/analytics/answer/11397207?hl=de" target="_blank" rel="noreferrer">Google Analytics: Cookies</a>
+            {' · '}
+            <a href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noreferrer">Google Datenschutzerklärung</a>
           </p>
         </section>
 
@@ -232,7 +263,7 @@ export default function DatenschutzPage() {
             <li>Widerspruch gegen Verarbeitungen auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO nach Art. 21 DSGVO.</li>
           </ul>
           <p>
-            Soweit eine Verarbeitung künftig auf einer Einwilligung beruht, kann diese Einwilligung
+            Soweit eine Verarbeitung auf einer Einwilligung beruht, kann diese Einwilligung
             jederzeit mit Wirkung für die Zukunft widerrufen werden.
           </p>
           <p>
