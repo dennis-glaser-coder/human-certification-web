@@ -1,3 +1,4 @@
+import AnalyticsConsent from '../../components/AnalyticsConsent';
 import { canonical, SOCIAL_IMAGE } from '../../lib/seo';
 
 export const metadata = {
@@ -36,5 +37,10 @@ export const metadata = {
 };
 
 export default function EnglishLayout({ children }) {
-  return children;
+  return (
+    <>
+      {children}
+      <AnalyticsConsent />
+    </>
+  );
 }
