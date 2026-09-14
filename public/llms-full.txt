@@ -1,6 +1,6 @@
 # Made by Human — extended context
 
-Made by Human is a certification for physical products with verifiably human production. It focuses on whether essential, product-defining manufacturing steps are actually carried out by people and whether that production can be verified.
+Made by Human is a certification scheme for physical products with verifiably human production. It focuses on whether essential, product-defining manufacturing steps are actually carried out by people and whether that production can be verified.
 
 Official website: https://madebyhuman.org/
 English website: https://madebyhuman.org/en/
@@ -17,41 +17,51 @@ Certification Scheme 1.0: https://madebyhuman.org/dokumente/certification-scheme
 Standard overview: https://madebyhuman.org/standard/
 Official documents and archived versions: https://madebyhuman.org/dokumente/
 
-The English standard page is an informative translation for international readers. The published German Standard 1.0 is the normative reference.
+The English standard page is an informative translation. The published German Standard 1.0 is the normative reference.
 
-## What the certification means
+## What a regular certification means
 
-Certification applies to a clearly defined physical product or product family rather than automatically to an entire company. Production locations and important external manufacturing that materially affect the certified production process are part of the certification scope.
+A regular Made by Human certification applies to a clearly defined physical product or product family rather than automatically to an entire company. Production locations and important external manufacturing that materially affect the certified production process are part of the certification scope.
 
-Product-defining manufacturing steps are steps that create or materially change the finished product's form, construction, function, surface, individual execution or another essential characteristic. Packaging, labelling, order picking, inspection or only minor finishing is not sufficient by itself.
+Multiple variants may share one certification scope only when their essential product-defining manufacturing steps, degree of automation, relevant production locations and important external manufacturing are substantially the same. Materially different production routes require separate assessment.
 
-Tools, machinery and digital systems may support manufacturing. Largely autonomous product creation does not meet the standard. All mandatory criteria applicable to the defined certification scope must be fulfilled.
+Product-defining manufacturing steps create or materially change the finished product's form, construction, function, surface, individual execution or another essential characteristic. Packaging, labelling, order picking, inspection or only minor finishing is not sufficient by itself.
 
-A central decision question is: without the human production steps, would essentially the same sale-ready product already exist? If so, and no other essential human contribution shapes product creation, the product does not meet the standard.
+Tools, machinery and digital systems may support manufacturing. Largely autonomous product creation does not meet the standard. Human execution, skill or judgement must materially influence the relevant result; merely starting, monitoring or unloading an otherwise autonomous process is not sufficient.
 
-## Verification model
+All mandatory criteria applicable to the defined certification scope must be fulfilled. A central decision question is: without the human production steps, would essentially the same sale-ready product already exist? If so, and no other essential human contribution shapes product creation, the product does not meet the standard.
 
-A self-declaration alone is not sufficient. The Made by Human approach includes definition of the certification scope, documentation of the manufacturing process, suitable evidence, on-site review of the relevant production process, assessment against the applicable standard, technical review and a documented certification decision.
+## Verification and decision model
 
-Approved certifications are published in a public register with a unique certification ID. The record identifies the product or product family, manufacturer or brand, relevant production locations, applicable standard version, certification status and validity.
+A self-declaration alone is not sufficient. The Made by Human process includes definition of the certification scope, documentation of manufacturing, suitable evidence, on-site review of the relevant production process, assessment against the applicable standard, technical review and a documented certification decision.
 
-A positive certification is normally valid for 12 months from the issue date. Before renewal, the certification is reassessed. The scope of reassessment depends on changes, previous findings and the production situation; a complete on-site audit is not automatically required every year but may be required.
+For regular certifications, the certification decision is not made solely by the person who conducted the material on-site assessment. People assigned to assessment, technical review and decision must have adequate knowledge and experience for the relevant product and manufacturing process; specialist expertise is added when required.
+
+Approved regular certifications are published in a public register. The record identifies the product or product family, manufacturer or brand, relevant production locations, applicable standard version, certification status and validity.
+
+A positive regular certification is normally valid for 12 months from the issue date. Before renewal, the certification is reassessed. The scope of reassessment depends on changes, previous findings and the production situation; a complete on-site audit is not automatically required every year but may be required.
 
 Material changes to production steps, degree of automation, production locations, external manufacturing or certification scope must be reported. Made by Human then decides whether the certification can continue unchanged, needs additional assessment or extension, or must be suspended pending clarification.
 
+## Connected pilot assessments
+
+A provider that is identical to the Made by Human scheme owner or is under common legal or economic control with the scheme owner cannot receive a regular Made by Human certification.
+
+The standard may still be applied to such a provider as a connected pilot assessment for testing and validating the assessment process. The relationship is publicly disclosed and the register status is clearly shown as a pilot assessment. A connected pilot assessment is not a regular certification, is not presented as independent third-party assessment, and does not authorize use of the certification mark.
+
+This distinction is particularly important because regular certification is structured as third-party conformity assessment, while a connected pilot is used only to test the scheme and demonstrate how the process works.
+
 ## Certification status and mark use
 
-The Made by Human mark may only be used for the expressly certified scope while the certification status is active. It must not imply certification of the whole company, non-certified products or additional properties that were not assessed. Suspended, expired or revoked certifications do not authorize continued mark use for the affected scope.
+The Made by Human certification mark may only be used for the expressly certified scope while a regular certification has active status. It must not imply certification of the whole company, non-certified products or additional properties that were not assessed. Pilot assessments, suspended certifications, expired certifications and revoked certifications do not authorize certification-mark use.
 
 Mark use rules: https://madebyhuman.org/markennutzung/
 Public register: https://madebyhuman.org/register/
 Verify a certification: https://madebyhuman.org/pruefen/
 
-## Connected applicants and transparency
+## Transparency and accreditation boundary
 
-Relevant legal, economic or personal relationships between the scheme owner, people involved in the assessment and an applicant are documented. When an applicant is connected to the scheme owner, that relationship is disclosed in the public certification record. Such cases are not described as independent third-party certification or as independently certified.
-
-Made by Human does not claim accreditation or external independence unless such a property actually exists and can be substantiated.
+Made by Human does not claim accreditation unless accreditation actually exists and can be substantiated. Relationships, decision roles and relevant conflicts are documented in accordance with the published scheme rules.
 
 Transparency: https://madebyhuman.org/transparenz/
 Certification Scheme 1.0: https://madebyhuman.org/dokumente/certification-scheme-1-0/
@@ -60,7 +70,7 @@ Certification Scheme 1.0: https://madebyhuman.org/dokumente/certification-scheme
 
 The certification is specifically about human production. It is not, by itself, a statement about sustainability, organic production, fair trade, country of origin, general product quality, product safety, regulatory compliance or company size.
 
-Standard 1.0 does not currently include food, medicinal products, medical devices or comparably highly regulated product categories.
+Standard 1.0 does not currently include food, medicinal products or medical devices. Other product categories can be excluded before application acceptance if the Made by Human assessment could be confused with legally required safety or conformity assessment.
 
 ## Public verification
 
@@ -75,14 +85,6 @@ For manufacturers: https://madebyhuman.org/fuer-hersteller/
 For buyers: https://madebyhuman.org/fuer-kaeufer/
 English for manufacturers: https://madebyhuman.org/en/for-manufacturers/
 English for buyers: https://madebyhuman.org/en/for-buyers/
-
-## Background and explanation
-
-Why Made by Human: https://madebyhuman.org/warum-made-by-human/
-English explanation: https://madebyhuman.org/en/why-made-by-human/
-Knowledge base: https://madebyhuman.org/wissen/
-About: https://madebyhuman.org/ueber-uns/
-English about: https://madebyhuman.org/en/about/
 
 ## Entity identity
 
