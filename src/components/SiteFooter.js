@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import AnalyticsConsent from './AnalyticsConsent';
 
 const socialLinks = [
   {
@@ -41,77 +42,46 @@ export default function SiteFooter() {
   const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE || '';
 
   return (
-    <footer className="siteFooter premiumFooter">
-      <div className="shell premiumFooterTop">
-        <div className="premiumFooterBrand">
-          <div className="footerLogoField">
-            <img className="footerMasterLogoAsset" src={assetBase + '/brand/made-by-human-logo.webp?v=20260912-spacing'} width="1001" height="1023" loading="lazy" alt="Made by Human – Verified Human Production" />
+    <>
+      <footer className="siteFooter premiumFooter">
+        <div className="shell premiumFooterTop">
+          <div className="premiumFooterBrand">
+            <div className="footerLogoField">
+              <img className="footerMasterLogoAsset" src={assetBase + '/brand/made-by-human-logo.webp?v=20260912-spacing'} width="1001" height="1023" loading="lazy" alt="Made by Human – Verified Human Production" />
+            </div>
+            <p>Zertifizierung für nachweisbar menschliche Herstellung.</p>
+            <div
+              aria-label="Made by Human auf Social Media"
+              style={{ display: 'flex', alignItems: 'center', gap: '9px', marginTop: '16px' }}
+            >
+              {socialLinks.map(({ label, href, icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Made by Human auf ${label}`}
+                  title={label}
+                  style={{
+                    width: '40px',
+                    height: '40px',
+                    border: '1px solid rgba(243,240,232,.22)',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    textDecoration: 'none',
+                    borderRadius: '50%',
+                  }}
+                >
+                  {icon}
+                </a>
+              ))}
+            </div>
           </div>
-          <p>Zertifizierung für nachweisbar menschliche Herstellung.</p>
-          <div
-            aria-label="Made by Human auf Social Media"
-            style={{ display: 'flex', alignItems: 'center', gap: '9px', marginTop: '16px' }}
-          >
-            {socialLinks.map(({ label, href, icon }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`Made by Human auf ${label}`}
-                title={label}
-                style={{
-                  width: '40px',
-                  height: '40px',
-                  border: '1px solid rgba(243,240,232,.22)',
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  textDecoration: 'none',
-                  borderRadius: '50%',
-                }}
-              >
-                {icon}
-              </a>
-            ))}
-          </div>
-        </div>
 
-        <nav className="premiumFooterNav premiumFooterNavDesktop" aria-label="Footer Navigation">
-          <div>
-            <span>STANDARD</span>
-            <Link href="/standard">Kriterien</Link>
-            <Link href="/wissen">Wissen & Ratgeber</Link>
-            <Link href="/dokumente">Dokumente</Link>
-            <Link href="/markennutzung">Markennutzung</Link>
-            <Link href="/leitfaden/nachweise">Prüfnachweise</Link>
-            <Link href="/leitfaden/zertifizierungsumfang">Was wird zertifiziert?</Link>
-          </div>
-          <div>
-            <span>PRÜFEN</span>
-            <Link href="/register">Öffentliches Register</Link>
-            <Link href="/pruefen">Zertifizierungs-ID prüfen</Link>
-            <Link href="/fuer-kaeufer">Für Käufer</Link>
-            <Link href="/fuer-hersteller">Für Hersteller</Link>
-            <Link href="/warum-made-by-human">Warum Made by Human?</Link>
-            <Link href="/handarbeit-siegel">Handarbeit-Siegel</Link>
-            <Link href="/handarbeit-zertifizieren">Handarbeit zertifizieren</Link>
-            <Link href="/zertifizierung">Zertifizierung nach Produktart</Link>
-          </div>
-          <div>
-            <span>ORGANISATION</span>
-            <Link href="/ueber-uns">Über Made by Human</Link>
-            <Link href="/transparenz">Transparenz & Integrität</Link>
-            <Link href="/verfahren">Beschwerden & Einsprüche</Link>
-            <Link href="/impressum">Impressum</Link>
-            <Link href="/datenschutz">Datenschutz</Link>
-          </div>
-        </nav>
-
-        <nav className="premiumFooterNavMobile" aria-label="Footer Navigation mobil">
-          <details>
-            <summary>Standard</summary>
+          <nav className="premiumFooterNav premiumFooterNavDesktop" aria-label="Footer Navigation">
             <div>
+              <span>STANDARD</span>
               <Link href="/standard">Kriterien</Link>
               <Link href="/wissen">Wissen & Ratgeber</Link>
               <Link href="/dokumente">Dokumente</Link>
@@ -119,10 +89,8 @@ export default function SiteFooter() {
               <Link href="/leitfaden/nachweise">Prüfnachweise</Link>
               <Link href="/leitfaden/zertifizierungsumfang">Was wird zertifiziert?</Link>
             </div>
-          </details>
-          <details>
-            <summary>Prüfen</summary>
             <div>
+              <span>PRÜFEN</span>
               <Link href="/register">Öffentliches Register</Link>
               <Link href="/pruefen">Zertifizierungs-ID prüfen</Link>
               <Link href="/fuer-kaeufer">Für Käufer</Link>
@@ -132,28 +100,64 @@ export default function SiteFooter() {
               <Link href="/handarbeit-zertifizieren">Handarbeit zertifizieren</Link>
               <Link href="/zertifizierung">Zertifizierung nach Produktart</Link>
             </div>
-          </details>
-          <details>
-            <summary>Organisation</summary>
             <div>
+              <span>ORGANISATION</span>
               <Link href="/ueber-uns">Über Made by Human</Link>
               <Link href="/transparenz">Transparenz & Integrität</Link>
               <Link href="/verfahren">Beschwerden & Einsprüche</Link>
               <Link href="/impressum">Impressum</Link>
               <Link href="/datenschutz">Datenschutz</Link>
             </div>
-          </details>
-        </nav>
-      </div>
+          </nav>
 
-      <div className="shell premiumFooterBottom">
-        <span>STANDARD · PRÜFUNG · KLARE REGELN · ÖFFENTLICHES REGISTER</span>
-        <div className="footerLegalMeta">
-          <Link href="/impressum">Impressum</Link>
-          <Link href="/datenschutz">Datenschutz</Link>
-          <span>Made by Human</span>
+          <nav className="premiumFooterNavMobile" aria-label="Footer Navigation mobil">
+            <details>
+              <summary>Standard</summary>
+              <div>
+                <Link href="/standard">Kriterien</Link>
+                <Link href="/wissen">Wissen & Ratgeber</Link>
+                <Link href="/dokumente">Dokumente</Link>
+                <Link href="/markennutzung">Markennutzung</Link>
+                <Link href="/leitfaden/nachweise">Prüfnachweise</Link>
+                <Link href="/leitfaden/zertifizierungsumfang">Was wird zertifiziert?</Link>
+              </div>
+            </details>
+            <details>
+              <summary>Prüfen</summary>
+              <div>
+                <Link href="/register">Öffentliches Register</Link>
+                <Link href="/pruefen">Zertifizierungs-ID prüfen</Link>
+                <Link href="/fuer-kaeufer">Für Käufer</Link>
+                <Link href="/fuer-hersteller">Für Hersteller</Link>
+                <Link href="/warum-made-by-human">Warum Made by Human?</Link>
+                <Link href="/handarbeit-siegel">Handarbeit-Siegel</Link>
+                <Link href="/handarbeit-zertifizieren">Handarbeit zertifizieren</Link>
+                <Link href="/zertifizierung">Zertifizierung nach Produktart</Link>
+              </div>
+            </details>
+            <details>
+              <summary>Organisation</summary>
+              <div>
+                <Link href="/ueber-uns">Über Made by Human</Link>
+                <Link href="/transparenz">Transparenz & Integrität</Link>
+                <Link href="/verfahren">Beschwerden & Einsprüche</Link>
+                <Link href="/impressum">Impressum</Link>
+                <Link href="/datenschutz">Datenschutz</Link>
+              </div>
+            </details>
+          </nav>
         </div>
-      </div>
-    </footer>
+
+        <div className="shell premiumFooterBottom">
+          <span>STANDARD · PRÜFUNG · KLARE REGELN · ÖFFENTLICHES REGISTER</span>
+          <div className="footerLegalMeta">
+            <Link href="/impressum">Impressum</Link>
+            <Link href="/datenschutz">Datenschutz</Link>
+            <span>Made by Human</span>
+          </div>
+        </div>
+      </footer>
+      <AnalyticsConsent />
+    </>
   );
 }
