@@ -37,21 +37,57 @@ const styles = {
   link: { color: '#294C77', textDecoration: 'underline', textUnderlineOffset: 3 }
 };
 
+function clearAnalyticsCookies() {
+  document.cookie.split(';').forEach((entry) => {
+    const name = entry.split('=')[0].trim();
+    if (!name.startsWith('_ga')) return;
+    document.cookie = `${name}=; Max-Age=0; path=/; SameSite=Lax`;
+    document.cookie = `${name}=; Max-Age=0; path=/; domain=.madebyhuman.org; SameSite=Lax`;
+  });
+}
+
 export default function AnalyticsConsent() {
   const [consent, setConsent] = useState(null);
   const [open, setOpen] = useState(false);
+  const [isEnglish, setIsEnglish] = useState(false);
 
   useEffect(() => {
     const saved = window.localStorage.getItem(CONSENT_KEY);
     setConsent(saved);
     setOpen(!saved);
+    setIsEnglish(window.location.pathname.startsWith('/en'));
   }, []);
 
   function save(value) {
     window.localStorage.setItem(CONSENT_KEY, value);
     setConsent(value);
     setOpen(false);
+
+    if (value === 'rejected') {
+      clearAnalyticsCookies();
+      window.setTimeout(() => window.location.reload(), 50);
+    }
   }
+
+  const copy = isEnglish
+    ? {
+        settings: 'Privacy settings',
+        eyebrow: 'PRIVACY',
+        title: 'May we collect anonymous usage statistics?',
+        text: 'We use Google Analytics to understand how our website is used and which channels bring visitors to us. Tracking is loaded only after your consent. More information is available in our',
+        link: 'privacy policy',
+        accept: 'Allow statistics',
+        reject: 'Necessary only'
+      }
+    : {
+        settings: 'Datenschutz-Einstellungen',
+        eyebrow: 'DATENSCHUTZ',
+        title: 'Dürfen wir anonyme Nutzungsstatistiken erfassen?',
+        text: 'Mit Google Analytics möchten wir verstehen, wie unsere Website genutzt wird und über welche Kanäle Besucher zu uns kommen. Das Tracking wird erst nach Ihrer Zustimmung geladen. Mehr dazu in unserer',
+        link: 'Datenschutzerklärung',
+        accept: 'Statistik erlauben',
+        reject: 'Nur notwendige'
+      };
 
   return (
     <>
@@ -62,29 +98,29 @@ export default function AnalyticsConsent() {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${MEASUREMENT_ID}', { anonymize_ip: true });
+            gtag('config', '${MEASUREMENT_ID}');
           `}</Script>
         </>
       )}
 
       {!open && consent && (
         <button type="button" style={styles.settings} onClick={() => setOpen(true)}>
-          Datenschutz-Einstellungen
+          {copy.settings}
         </button>
       )}
 
       {open && (
         <div style={styles.backdrop}>
           <section style={styles.panel} role="dialog" aria-modal="true" aria-labelledby="mbh-consent-title">
-            <p style={styles.eyebrow}>DATENSCHUTZ</p>
-            <h2 id="mbh-consent-title" style={styles.title}>Dürfen wir anonyme Nutzungsstatistiken erfassen?</h2>
+            <p style={styles.eyebrow}>{copy.eyebrow}</p>
+            <h2 id="mbh-consent-title" style={styles.title}>{copy.title}</h2>
             <p style={styles.copy}>
-              Mit Google Analytics möchten wir verstehen, wie unsere Website genutzt wird und über welche Kanäle Besucher zu uns kommen. Das Tracking wird erst nach Ihrer Zustimmung geladen. Mehr dazu in unserer{' '}
-              <Link href="/datenschutz" style={styles.link}>Datenschutzerklärung</Link>.
+              {copy.text}{' '}
+              <Link href="/datenschutz" style={styles.link}>{copy.link}</Link>.
             </p>
             <div style={styles.actions}>
-              <button type="button" style={styles.accept} onClick={() => save('accepted')}>Statistik erlauben</button>
-              <button type="button" style={styles.reject} onClick={() => save('rejected')}>Nur notwendige</button>
+              <button type="button" style={styles.accept} onClick={() => save('accepted')}>{copy.accept}</button>
+              <button type="button" style={styles.reject} onClick={() => save('rejected')}>{copy.reject}</button>
             </div>
           </section>
         </div>
