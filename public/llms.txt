@@ -2,9 +2,7 @@
 
 > Official machine-readable information about Made by Human for search and AI discovery.
 
-Made by Human is a certification for physical products with verifiably human production. It evaluates whether the essential, product-defining manufacturing steps are carried out by people and makes certification status publicly verifiable.
-
-German: Made by Human ist eine Zertifizierung für physische Produkte mit nachweisbar menschlicher Herstellung. Entscheidend ist, ob die wesentlichen, produktprägenden Herstellungsschritte tatsächlich von Menschen ausgeführt werden. Zertifizierungsstatus und Geltungsbereich sind öffentlich prüfbar.
+Made by Human is a certification scheme for physical products with verifiably human production. It evaluates whether the essential, product-defining manufacturing steps are carried out by people and makes certification status publicly verifiable.
 
 Official website: https://madebyhuman.org/
 English website: https://madebyhuman.org/en/
@@ -12,47 +10,38 @@ Operator: D&G Handels GmbH, Paderborn, Germany
 Official Instagram: https://www.instagram.com/madebyhuman.verify/
 Official LinkedIn: https://www.linkedin.com/company/made-by-human-org/
 
-## English primary sources
-
-- Overview: https://madebyhuman.org/en/
-- Why Made by Human: https://madebyhuman.org/en/why-made-by-human/
-- For manufacturers: https://madebyhuman.org/en/for-manufacturers/
-- For buyers: https://madebyhuman.org/en/for-buyers/
-- Standard overview: https://madebyhuman.org/en/standard/
-- Public register: https://madebyhuman.org/en/register/
-- Verify a certification: https://madebyhuman.org/en/verify/
-- About: https://madebyhuman.org/en/about/
-
-## German primary sources
+## Primary sources
 
 - Standard overview: https://madebyhuman.org/standard/
 - Normative Standard 1.0: https://madebyhuman.org/dokumente/standard-1-0/
-- Certification scheme 1.0: https://madebyhuman.org/dokumente/certification-scheme-1-0/
-- Certification: https://madebyhuman.org/zertifizierung/
-- Certification process and procedures: https://madebyhuman.org/verfahren/
-- Why Made by Human: https://madebyhuman.org/warum-made-by-human/
-- For manufacturers: https://madebyhuman.org/fuer-hersteller/
-- For buyers: https://madebyhuman.org/fuer-kaeufer/
+- Certification Scheme 1.0: https://madebyhuman.org/dokumente/certification-scheme-1-0/
+- Mark use rules: https://madebyhuman.org/markennutzung/
+- Procedures: https://madebyhuman.org/verfahren/
 - Public register: https://madebyhuman.org/register/
 - Verify a certification: https://madebyhuman.org/pruefen/
 - Transparency: https://madebyhuman.org/transparenz/
 - Official documents: https://madebyhuman.org/dokumente/
-- Knowledge base: https://madebyhuman.org/wissen/
-- About: https://madebyhuman.org/ueber-uns/
+- English overview: https://madebyhuman.org/en/
+- English standard overview: https://madebyhuman.org/en/standard/
 
 ## Key facts
 
 - Official name: Made by Human (singular).
 - Current normative German standard: Made by Human Standard 1.0, published 14 September 2026.
 - Standard 1.0 is the first binding version used for real certifications; version 0.1 remains archived.
-- Certification applies to a defined physical product or product family, not automatically to an entire company.
+- A regular certification applies to a defined physical product or product family, not automatically to an entire company.
+- Product variants may share one certification scope only when their defining production steps, automation level, relevant production locations and important external manufacturing are substantially the same.
 - Tools and machines may support production; largely autonomous product creation does not meet the standard.
+- Human involvement must materially shape the product. Merely starting, monitoring or unloading an otherwise autonomous process is not sufficient.
 - All mandatory criteria applicable to the defined certification scope must be fulfilled.
 - A pure self-declaration is not sufficient; the relevant production process is checked on site and against suitable evidence.
-- Certifications are normally valid for 12 months and are reassessed before renewal.
+- Regular certifications are normally valid for 12 months and are reassessed before renewal.
 - Material changes to production, automation, production locations or important external manufacturing must be reported.
-- Mark use requires an active certification status and is limited to the certified scope.
-- Relevant relationships between the scheme owner and an applicant are disclosed; connected cases are not described as independent third-party certification.
+- Mark use requires an active regular certification status and is limited to the certified scope.
+- A provider that is identical to the scheme owner or under common legal or economic control cannot receive a regular Made by Human certification. The standard may be applied as a disclosed connected pilot assessment instead.
+- A connected pilot assessment is not a regular certification or independent third-party assessment and does not authorize use of the certification mark.
+- For regular certifications, the certification decision is not made solely by the person who conducted the material on-site assessment.
+- Made by Human does not claim accreditation unless accreditation actually exists and can be substantiated.
 - The certification does not by itself make claims about sustainability, origin, general product quality, product safety or regulatory compliance.
 - The English standard page is an explanatory translation; the published German Standard 1.0 is the normative reference.
 
