@@ -12,7 +12,6 @@ import {
   SITE_URL,
   SOCIAL_IMAGE,
 } from '../lib/seo';
-import AnalyticsConsent from '../components/AnalyticsConsent';
 
 export const metadata = {
   metadataBase: new URL(SITE_URL + '/'),
@@ -149,7 +148,6 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify([organizationJsonLd, websiteJsonLd]).replace(/</g, '\\u003c') }}
         />
         {children}
-        <AnalyticsConsent />
       </body>
     </html>
   );
