@@ -1,11 +1,11 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Script from 'next/script';
 import Link from 'next/link';
 
 const CONSENT_KEY = 'mbh_analytics_consent';
 const MEASUREMENT_ID = 'G-NHR0W4Z7GR';
+const SCRIPT_ID = 'mbh-ga4-script';
 
 const styles = {
   settings: {
@@ -46,6 +46,23 @@ function clearAnalyticsCookies() {
   });
 }
 
+function loadAnalytics() {
+  if (window.__mbhGaInitialized) return;
+  window.__mbhGaInitialized = true;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function gtag(){ window.dataLayer.push(arguments); };
+  window.gtag('js', new Date());
+  window.gtag('config', MEASUREMENT_ID, { send_page_view: true });
+
+  if (!document.getElementById(SCRIPT_ID)) {
+    const script = document.createElement('script');
+    script.id = SCRIPT_ID;
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${MEASUREMENT_ID}`;
+    document.head.appendChild(script);
+  }
+}
+
 export default function AnalyticsConsent() {
   const [consent, setConsent] = useState(null);
   const [open, setOpen] = useState(false);
@@ -58,12 +75,18 @@ export default function AnalyticsConsent() {
     setIsEnglish(window.location.pathname.startsWith('/en'));
   }, []);
 
+  useEffect(() => {
+    if (consent === 'accepted') loadAnalytics();
+  }, [consent]);
+
   function save(value) {
     window.localStorage.setItem(CONSENT_KEY, value);
     setConsent(value);
     setOpen(false);
 
-    if (value === 'rejected') {
+    if (value === 'accepted') {
+      loadAnalytics();
+    } else {
       clearAnalyticsCookies();
       window.setTimeout(() => window.location.reload(), 50);
     }
@@ -91,18 +114,6 @@ export default function AnalyticsConsent() {
 
   return (
     <>
-      {consent === 'accepted' && (
-        <>
-          <Script async src={`https://www.googletagmanager.com/gtag/js?id=${MEASUREMENT_ID}`} strategy="afterInteractive" />
-          <Script id="mbh-ga4" strategy="afterInteractive">{`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${MEASUREMENT_ID}');
-          `}</Script>
-        </>
-      )}
-
       {!open && consent && (
         <button type="button" style={styles.settings} onClick={() => setOpen(true)}>
           {copy.settings}
