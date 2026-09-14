@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import SiteHeader from '../../components/SiteHeader';
 import SiteFooter from '../../components/SiteFooter';
+import { trackCertificationLead } from '../../components/FormSubmissionNotifier';
 import { getSupabaseBrowserClient } from '../../lib/supabase';
 
 const initialForm = {
@@ -115,6 +116,7 @@ export default function ManufacturerPage() {
       return;
     }
 
+    trackCertificationLead('de');
     setForm(initialForm);
     setState({
       loading: false,
