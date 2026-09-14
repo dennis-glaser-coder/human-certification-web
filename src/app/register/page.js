@@ -7,7 +7,7 @@ import SiteFooter from '../../components/SiteFooter';
 import BrandTrace from '../../components/BrandTrace';
 import { getSupabaseBrowserClient } from '../../lib/supabase';
 
-const labels = { under_review: 'In Prüfung', active: 'Aktiv', suspended: 'Ausgesetzt', expired: 'Abgelaufen', revoked: 'Widerrufen' };
+const labels = { under_review: 'In Prüfung', pilot: 'Pilotprüfung', active: 'Aktiv', suspended: 'Ausgesetzt', expired: 'Abgelaufen', revoked: 'Widerrufen' };
 
 function formatDate(value) {
   if (!value) return '—';
@@ -43,30 +43,31 @@ export default function RegisterPage() {
   return (
     <main>
       <SiteHeader />
-      <section className="pageHero shell registerHero"><div className="eyebrow">ÖFFENTLICHES REGISTER</div><BrandTrace compact /><h1>Zertifizierungen öffentlich prüfen.</h1><p className="lead">Jeder Eintrag zeigt Zertifizierungs-ID, Hersteller bzw. Marke, rechtlichen Betreiber soweit abweichend, Produkt, Zertifizierungsumfang, Produktionsorte, Standard, Gültigkeit und aktuellen Status. Bei verbundenen Pilotfällen wird die Verbindung zum Systeminhaber offengelegt.</p></section>
+      <section className="pageHero shell registerHero"><div className="eyebrow">ÖFFENTLICHES REGISTER</div><BrandTrace compact /><h1>Zertifizierungen und Pilotprüfungen öffentlich prüfen.</h1><p className="lead">Reguläre Zertifizierungen und verbundene Pilotprüfungen werden klar voneinander getrennt. Jeder Eintrag zeigt Register-ID, Hersteller bzw. Marke, rechtlichen Betreiber soweit abweichend, Produkt, Umfang, Produktionsorte, Standard und aktuellen Status.</p></section>
 
       <section className="shell registerSection">
-        <div className="registerTrustBar"><div><strong>Zertifizierungs-ID</strong><p>Eindeutige ID für diesen Eintrag.</p></div><div><strong>Produkt & Betreiber</strong><p>Marke, rechtlicher Betreiber und zertifizierter Umfang.</p></div><div><strong>Produktion & Standard</strong><p>Produktionsorte und angewendete Standardfassung.</p></div><div><strong>Status & Gültigkeit</strong><p>Aktueller Status und Gültigkeitszeitraum.</p></div></div>
+        <div className="registerTrustBar"><div><strong>Register-ID</strong><p>Eindeutige ID für diesen Eintrag.</p></div><div><strong>Produkt & Betreiber</strong><p>Marke, rechtlicher Betreiber und geprüfter Umfang.</p></div><div><strong>Produktion & Standard</strong><p>Produktionsorte und angewendete Standardfassung.</p></div><div><strong>Status</strong><p>Zertifizierung oder ausdrücklich gekennzeichnete Pilotprüfung.</p></div></div>
 
         <div className="registerToolbar"><div><span className="sectionNo">REGISTER</span><strong aria-live="polite">{loading ? 'Einträge werden geladen …' : (records.length === 1 ? '1 Eintrag' : records.length + ' Einträge')}</strong></div><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="ID, Hersteller, Betreiber, Produkt oder Standort suchen" aria-label="Register durchsuchen" /></div>
         {message && <div className="registerMessage" role="status" aria-live="polite">{message}</div>}
 
         <div className="registerList">{filtered.map((record) => {
           const manufacturer = record.products?.manufacturers;
+          const isPilot = record.status === 'pilot' || record.certification_context === 'connected_pilot';
           return (
             <article className="registerRow" key={record.public_id}>
-              <div className="registerId"><small>ZERTIFIZIERUNGS-ID</small><strong>{record.public_id}</strong></div>
+              <div className="registerId"><small>REGISTER-ID</small><strong>{record.public_id}</strong></div>
               <div><small>HERSTELLER / MARKE</small><strong>{manufacturer?.name ?? '—'}</strong>{manufacturer?.legal_name && manufacturer.legal_name !== manufacturer.name && <em className="registerSubline">Betreiber: {manufacturer.legal_name}</em>}{record.production_locations?.length > 0 && <em className="registerSubline">{record.production_locations.join(' · ')}</em>}</div>
               <div><small>PRODUKT</small><strong>{record.products?.name ?? '—'}</strong>{record.certification_scope && <em className="registerSubline">{record.certification_scope}</em>}</div>
-              <div><small>STANDARD</small><strong>{record.standard_versions?.version ?? record.standard_versions?.title ?? '—'}</strong>{record.certification_context === 'connected_pilot' && <em className="registerSubline">Verbundener Pilotbetrieb · Hinweis im Eintrag</em>}</div>
-              <div className="registerStatusCell"><small>STATUS / GÜLTIG BIS</small><span className={'statusBadge status-' + record.status + (record.status === 'active' ? ' active' : '')}>{record.public_id?.startsWith('HC-DEMO-') ? 'Demo · keine reale Zertifizierung' : (labels[record.status] ?? record.status)}</span><em>{formatDate(record.valid_until)}</em></div>
+              <div><small>STANDARD</small><strong>{record.standard_versions?.version ?? record.standard_versions?.title ?? '—'}</strong>{isPilot && <em className="registerSubline">Verbundener Pilotbetrieb · keine reguläre Zertifizierung</em>}</div>
+              <div className="registerStatusCell"><small>STATUS / GÜLTIG BIS</small><span className={'statusBadge status-' + record.status + (record.status === 'active' ? ' active' : '')}>{record.public_id?.startsWith('HC-DEMO-') ? 'Demo · keine reale Zertifizierung' : (labels[record.status] ?? record.status)}</span><em>{record.status === 'pilot' ? 'keine Zeichennutzung' : formatDate(record.valid_until)}</em></div>
               <Link href={'/zertifikat/?id=' + encodeURIComponent(record.public_id)} aria-label={record.public_id + ' öffnen'}>Eintrag →</Link>
             </article>
           );
         })}</div>
 
         {!message && filtered.length === 0 && <div className="registerMessage">Keine passenden Einträge gefunden.</div>}
-        <div className="registerDisclosure"><strong>Beispieldatensatz</strong><p>HC-DEMO-0001 ist nur ein Beispiel dafür, wie ein Registereintrag aussieht. Es handelt sich nicht um eine reale Zertifizierung.</p></div>
+        <div className="registerDisclosure"><strong>Klare Trennung</strong><p>Der Status „Pilotprüfung“ kennzeichnet verbundene Testfälle zur Erprobung des Standards. Er ist keine reguläre Made by Human Zertifizierung und berechtigt nicht zur Nutzung des Zertifizierungszeichens. HC-DEMO-0001 ist zusätzlich nur ein technischer Beispieldatensatz.</p></div>
       </section>
       <SiteFooter />
     </main>
