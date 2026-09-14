@@ -6,7 +6,7 @@ import BrandTrace from '../../components/BrandTrace';
 const criteria = [
   ['Produktentstehung', 'Durch menschliche Arbeit entsteht aus Materialien oder Komponenten das verkaufsfertige Endprodukt.'],
   ['Menschliche Ausführung', 'Wesentliche produktprägende Schritte werden tatsächlich durch Menschen ausgeführt oder konkret durch menschliche Entscheidungen bestimmt.'],
-  ['Fachliche Prägung', 'Relevante Schritte erfordern Erfahrung, Fähigkeit oder bewusste menschliche Entscheidungen.'],
+  ['Menschliche Prägung', 'Unmittelbare menschliche Ausführung, Können oder Urteil beeinflussen das Ergebnis; bloßes Starten oder Überwachen eines autonomen Prozesses reicht nicht.'],
   ['Automatisierungsgrenze', 'Maschinen dürfen unterstützen; eine weitgehend autonome Produktentstehung erfüllt den Standard nicht.'],
   ['Rückverfolgbarkeit', 'Produktionsorte und wesentliche Fremdfertigung müssen eindeutig zum zertifizierten Umfang gehören.'],
   ['Nachweisbarkeit', 'Angaben zur Herstellung müssen durch geeignete Belege und die Vor-Ort-Prüfung ausreichend belegt sein.'],
@@ -31,7 +31,7 @@ export default function StandardPage() {
       </div></section>
 
       <section className="shell standardCriteriaSection">
-        <div className="sectionIntro compact"><div><div className="sectionNo">PRÜFBEREICHE</div><h2>Sechs Muss-Kriterien für die Entscheidung.</h2></div><p>Eine Zertifizierung wird nur erteilt, wenn alle für den konkreten Zertifizierungsumfang anwendbaren Muss-Kriterien erfüllt sind.</p></div>
+        <div className="sectionIntro compact"><div><div className="sectionNo">PRÜFBEREICHE</div><h2>Sechs Muss-Kriterien für die Entscheidung.</h2></div><p>Eine reguläre Zertifizierung wird nur erteilt, wenn alle für den konkreten Zertifizierungsumfang anwendbaren Muss-Kriterien erfüllt sind.</p></div>
         <div className="criteriaGrid">{criteria.map(([title, copy]) => <article key={title}><strong>{title}</strong><p>{copy}</p></article>)}</div>
       </section>
 
@@ -39,9 +39,9 @@ export default function StandardPage() {
 
       <section className="decisionRule"><div className="shell decisionRuleInner"><div className="sectionNo">ENTSCHEIDUNGSREGEL</div><p>Würde ohne die menschlichen Herstellungsschritte bereits im Wesentlichen dasselbe verkaufsfertige Produkt vorliegen?</p></div></section>
 
-      <section className="scopeExclusionSection"><div className="shell scopeExclusionGrid"><div><div className="sectionNo">KLARE GRENZEN</div><h2>Was Version 1.0 zusätzlich verbindlich regelt.</h2></div><div className="exclusionList"><span>Vor-Ort-Prüfung</span><span>Änderungspflicht</span><span>12 Monate Gültigkeit</span><span>Verlängerungsprüfung</span><span>Interessenkonflikte</span><span>Aktiver Status für Zeichennutzung</span></div></div></section>
+      <section className="scopeExclusionSection"><div className="shell scopeExclusionGrid"><div><div className="sectionNo">KLARE GRENZEN</div><h2>Was Version 1.0 zusätzlich verbindlich regelt.</h2></div><div className="exclusionList"><span>Vor-Ort-Prüfung</span><span>Änderungspflicht</span><span>12 Monate Gültigkeit</span><span>Verlängerungsprüfung</span><span>Entscheider-Trennung</span><span>Pilot ≠ Zertifizierung</span></div></div></section>
 
-      <section className="standardClose shell"><div><p>Die vollständige Fassung enthält außerdem Regeln zu Fremdfertigung, Nachweisen, Änderungen, verbundenen Unternehmen, Aussagegrenzen und Markennutzung. Version 0.1 bleibt im Dokumentenregister archiviert.</p></div><div className="standardCloseLinks"><Link className="textLink" href="/dokumente/standard-1-0">Standard 1.0 vollständig öffnen →</Link><Link className="textLink" href="/dokumente">Dokumentenregister →</Link></div></section>
+      <section className="standardClose shell"><div><p>Die vollständige Fassung regelt außerdem Produktfamilien, Fremdfertigung, Kompetenz der Beteiligten, verbundene Pilotprüfungen und Markennutzung. Eine eigene oder verbundene Firma kann als Pilot geprüft werden, erhält dadurch aber keine reguläre Zertifizierung und keine Berechtigung zur Zeichennutzung.</p></div><div className="standardCloseLinks"><Link className="textLink" href="/dokumente/standard-1-0">Standard 1.0 vollständig öffnen →</Link><Link className="textLink" href="/dokumente">Dokumentenregister →</Link></div></section>
       <SiteFooter />
     </main>
   );
