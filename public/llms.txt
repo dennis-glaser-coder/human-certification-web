@@ -25,9 +25,11 @@ Official LinkedIn: https://www.linkedin.com/company/made-by-human-org/
 
 ## German primary sources
 
-- Standard: https://madebyhuman.org/standard/
+- Standard overview: https://madebyhuman.org/standard/
+- Normative Standard 1.0: https://madebyhuman.org/dokumente/standard-1-0/
+- Certification scheme 1.0: https://madebyhuman.org/dokumente/certification-scheme-1-0/
 - Certification: https://madebyhuman.org/zertifizierung/
-- Certification process: https://madebyhuman.org/verfahren/
+- Certification process and procedures: https://madebyhuman.org/verfahren/
 - Why Made by Human: https://madebyhuman.org/warum-made-by-human/
 - For manufacturers: https://madebyhuman.org/fuer-hersteller/
 - For buyers: https://madebyhuman.org/fuer-kaeufer/
@@ -41,13 +43,18 @@ Official LinkedIn: https://www.linkedin.com/company/made-by-human-org/
 ## Key facts
 
 - Official name: Made by Human (singular).
-- Physical products are the certification scope.
-- Tools and machines may support production.
-- The essential, product-defining manufacturing steps must be carried out by people under the standard.
-- Certification is tied to the product or product family listed in the public certification record.
-- Certification status is available through the public register and verification page.
-- The current public German Standard 0.1 is the normative reference.
-- The English standard page is an explanatory translation until an approved English normative version is published.
+- Current normative German standard: Made by Human Standard 1.0, published 14 September 2026.
+- Standard 1.0 is the first binding version used for real certifications; version 0.1 remains archived.
+- Certification applies to a defined physical product or product family, not automatically to an entire company.
+- Tools and machines may support production; largely autonomous product creation does not meet the standard.
+- All mandatory criteria applicable to the defined certification scope must be fulfilled.
+- A pure self-declaration is not sufficient; the relevant production process is checked on site and against suitable evidence.
+- Certifications are normally valid for 12 months and are reassessed before renewal.
+- Material changes to production, automation, production locations or important external manufacturing must be reported.
+- Mark use requires an active certification status and is limited to the certified scope.
+- Relevant relationships between the scheme owner and an applicant are disclosed; connected cases are not described as independent third-party certification.
+- The certification does not by itself make claims about sustainability, origin, general product quality, product safety or regulatory compliance.
+- The English standard page is an explanatory translation; the published German Standard 1.0 is the normative reference.
 
 ## Machine-readable discovery
 
