@@ -136,9 +136,7 @@ export default function Home() {
           <div className="homeConsumerCopy">
             <p className="premiumSectionLabel premiumSectionLabelLight">FÜR KÄUFER</p>
             <h2>Ein Zeichen ist nur so glaubwürdig wie der Nachweis dahinter.</h2>
-            <blockquote>
-              {CERTIFIED_STATEMENT}
-            </blockquote>
+            <blockquote>{CERTIFIED_STATEMENT}</blockquote>
           </div>
           <div className="homeVerifyCompact">
             <span>ZERTIFIZIERUNGS-ID ODER QR VORHANDEN?</span>
@@ -155,19 +153,12 @@ export default function Home() {
       <section className="homeFinalCompact">
         <div className="shell">
           <div className="homeStandardLine" style={{ marginTop: 0 }}>
-            <span>Aktuelle Standardfassung: 0.1 · veröffentlicht am 04.09.2026</span>
+            <span>Aktuelle Standardfassung: 1.0 · veröffentlicht am 14.09.2026</span>
             <Link href="/standard">Standard ansehen →</Link>
           </div>
-
           <div className="homeFinalCta">
-            <div>
-              <p className="premiumSectionLabel premiumSectionLabelLight">FÜR HERSTELLER</p>
-              <h2>Passt Ihr Produkt zu Made by Human?</h2>
-            </div>
-            <div>
-              <p>In der ersten Einschätzung klären wir gemeinsam, welches Produkt Sie zertifizieren möchten, wie es hergestellt wird und was genau geprüft werden soll.</p>
-              <Link className="desireFinalButton" href="/fuer-hersteller#zertifizierungsanfrage">Zertifizierung anfragen</Link>
-            </div>
+            <div><p className="premiumSectionLabel premiumSectionLabelLight">FÜR HERSTELLER</p><h2>Passt Ihr Produkt zu Made by Human?</h2></div>
+            <div><p>In der ersten Einschätzung klären wir gemeinsam, welches Produkt Sie zertifizieren möchten, wie es hergestellt wird und was genau geprüft werden soll.</p><Link className="desireFinalButton" href="/fuer-hersteller#zertifizierungsanfrage">Zertifizierung anfragen</Link></div>
           </div>
         </div>
       </section>
