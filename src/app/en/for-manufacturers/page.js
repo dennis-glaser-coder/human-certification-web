@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import SiteHeader from '../../../components/SiteHeader';
 import EnglishFooter from '../../../components/EnglishFooter';
+import { trackCertificationLead } from '../../../components/FormSubmissionNotifier';
 import { getSupabaseBrowserClient } from '../../../lib/supabase';
 
 const initialForm = {
@@ -97,6 +98,7 @@ export default function ManufacturerPage() {
       return;
     }
 
+    trackCertificationLead('en');
     setForm(initialForm);
     setState({ loading: false, success: true, message: 'Thank you. Your certification request has been submitted.' });
   }
