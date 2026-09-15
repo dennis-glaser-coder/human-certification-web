@@ -1,11 +1,11 @@
 # Made by Human
 
-Website und technischer Prototyp für das Made by Human Zertifizierungssystem für physische Produkte mit nachweisbar menschlicher Herstellung.
+Website und technischer Prototyp für das [Made by Human Zertifizierungssystem](https://madebyhuman.org/) für physische Produkte mit nachweisbar menschlicher Herstellung.
 
 ## Aktueller Stand
 
 ### Öffentliche Website
-- Produktion unter `https://madebyhuman.org`
+- Produktion: [madebyhuman.org](https://madebyhuman.org/)
 - HTTPS und Weiterleitung von `www.madebyhuman.org` aktiv
 - Markenauftritt Made by Human nach der verbindlichen CI
 - Startseite sowie Seiten für Hersteller und Käufer
