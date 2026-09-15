@@ -46,6 +46,8 @@ jobs:
         env:
           GITHUB_PAGES: "true"
           NEXT_PUBLIC_SITE_URL: "https://madebyhuman.org"
-          NEXT_PUBLIC_SITE_INDEXABLE: "true"
           NEXT_PUBLIC_BASE_PATH: ""
         run: npm run build
+
+      - name: Validate production SEO
+        run: node scripts/validate_production_seo.mjs
