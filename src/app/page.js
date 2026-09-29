@@ -77,7 +77,10 @@ export default function Home() {
                 <div className="homeProofHangtag" aria-label="Beispiel für eine optionale Produktkennzeichnung">
                   <span className="homeProofCord" aria-hidden="true"></span>
                   <span className="homeProofEyelet" aria-hidden="true"></span>
-                  <img src={assetBase + '/brand/made-by-human-logo.webp?v=20260912-spacing'} alt="Made by Human Zertifizierungszeichen" />
+                  <span className="homeProofSealCrop">
+                    <img src={assetBase + '/brand/made-by-human-logo.webp?v=20260912-spacing'} alt="Made by Human Zertifizierungszeichen" />
+                  </span>
+                  <strong className="homeProofTagWordmark">MADE BY HUMAN</strong>
                   <small className="homeProofTagLabel">ZERTIFIZIERTES PRODUKT</small>
                 </div>
               </div>
