@@ -1,12 +1,19 @@
 import Link from 'next/link';
 import SiteHeader from '../components/SiteHeader';
 import SiteFooter from '../components/SiteFooter';
-import { CERTIFIED_STATEMENT } from '../lib/brand';
 
 const auditFacts = [
-  ['Arbeitsschritte ansehen', 'Wir sehen uns die Schritte an, die das Produkt in der Herstellung wirklich prägen.'],
-  ['Maschinen richtig einordnen', 'Wir prüfen, wo Technik unterstützt und wo die Arbeit des Menschen entscheidend bleibt.'],
-  ['Produkt genau zuordnen', 'Wir gleichen das Produkt, die Produktionsorte und mögliche externe Fertigung mit Ihren Angaben ab.'],
+  ['Arbeitsschritte', 'Welche Schritte prägen das Produkt?'],
+  ['Maschinen', 'Wo unterstützt Technik – und wo bleibt menschliche Arbeit entscheidend?'],
+  ['Produktionsumfang', 'Produkt, Standorte und externe Fertigung werden eindeutig zugeordnet.'],
+];
+
+const processSteps = [
+  ['01', 'Produkt festlegen', 'Wir klären, was genau zertifiziert werden soll.'],
+  ['02', 'Unterlagen prüfen', 'Sie beschreiben Herstellung, Standorte und relevante externe Fertigung.'],
+  ['03', 'Vor Ort prüfen', 'Wir sehen uns die prägenden Herstellungsschritte am Produktionsort an.'],
+  ['04', 'Entscheiden', 'Die Ergebnisse werden gegen den geltenden Standard bewertet.'],
+  ['05', 'Nachweis veröffentlichen', 'Bei erfolgreicher Zertifizierung folgen Zeichen, ID, QR-Code und Registereintrag.'],
 ];
 
 export default function Home() {
@@ -48,22 +55,32 @@ export default function Home() {
       <section className="homeBenefitBand" aria-labelledby="home-benefit-title">
         <div className="shell">
           <div className="homeBenefitBandHead">
-            <p className="premiumSectionLabel">IHR PRODUKTVORTEIL</p>
-            <h2 id="home-benefit-title">Machen Sie aus Ihrer Herstellung einen belegbaren Produktvorteil.</h2>
+            <p className="premiumSectionLabel">NACH ERFOLGREICHER ZERTIFIZIERUNG</p>
+            <h2 id="home-benefit-title">Das erhalten Sie für Ihr Produkt.</h2>
           </div>
           <div className="homeBenefitGrid">
             <article>
-              <strong>Abheben</strong>
-              <p>Zeigen Sie einen Unterschied, den Kunden dem fertigen Produkt sonst nicht ansehen können.</p>
+              <strong>Zertifizierungszeichen</strong>
+              <p>Für das konkret zertifizierte Produkt – am Produkt, auf der Verpackung oder im Onlineshop.</p>
             </article>
             <article>
-              <strong>Belegen</strong>
-              <p>Lassen Sie die Aussage über Ihre Herstellung nach einem öffentlichen Standard prüfen.</p>
+              <strong>Öffentlicher Nachweis</strong>
+              <p>Produkt, Hersteller, zertifizierter Umfang und aktueller Status bleiben nachvollziehbar.</p>
             </article>
             <article>
-              <strong>Am Produkt zeigen</strong>
-              <p>Zertifizierungszeichen, ID und QR-Code führen direkt zum öffentlichen Nachweis.</p>
+              <strong>ID &amp; QR-Code</strong>
+              <p>Die individuelle Zertifizierungs-ID und der QR-Code führen direkt zum öffentlichen Eintrag.</p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="homeProblemBand">
+        <div className="shell homeProblemGrid">
+          <p className="premiumSectionLabel">WARUM DAS WICHTIG IST</p>
+          <div>
+            <h2>Der Herstellungsunterschied ist oft unsichtbar.</h2>
+            <p>Made by Human macht sichtbar und überprüfbar, welche prägenden Schritte Menschen ausführen.</p>
           </div>
         </div>
       </section>
@@ -72,12 +89,10 @@ export default function Home() {
         <div className="shell">
           <div className="desireSectionHead">
             <div>
-              <p className="premiumSectionLabel">DAS ZEICHEN IM EINSATZ</p>
-              <h2>Zeigen Sie Ihren Kunden, was hinter Ihrem Produkt steckt.</h2>
+              <p className="premiumSectionLabel">DER NACHWEIS IM EINSATZ</p>
+              <h2>So wird der Nachweis sichtbar.</h2>
             </div>
-            <p>
-              Nach der Zertifizierung können Sie Ihr Produkt mit dem Made by Human Siegel kennzeichnen – auf der Verpackung, am Produkt und in Ihrem Onlineshop. Über den QR-Code können Kunden die Zertifizierung prüfen.
-            </p>
+            <p>Zeichen, ID und QR-Code verbinden Ihr Produkt direkt mit dem öffentlichen Nachweis.</p>
           </div>
 
           <div className="sealApplicationGrid compactApplicationGrid">
@@ -92,7 +107,7 @@ export default function Home() {
               </div>
               <div className="applicationCopy">
                 <strong>Direkt am Produkt</strong>
-                <p>Als Anhänger oder auf der Verpackung: So könnte das Siegel an Ihrem Produkt aussehen.</p>
+                <p>Als Zeichen am Produkt, auf der Verpackung oder im Onlineshop.</p>
               </div>
             </article>
 
@@ -119,7 +134,10 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-              <div className="applicationCopy"><strong>Digitaler Nachweis</strong><p>Auch online bleiben Zeichen, Produkt und Registereintrag eindeutig miteinander verbunden.</p></div>
+              <div className="applicationCopy">
+                <strong>Digitaler Nachweis</strong>
+                <p>ID und QR-Code führen direkt zum öffentlichen Eintrag.</p>
+              </div>
             </article>
           </div>
 
@@ -141,11 +159,9 @@ export default function Home() {
             />
           </figure>
           <div className="desireAuditCopy">
-            <p className="premiumSectionLabel">VOR-ORT-AUDIT</p>
-            <h2>Vor Ort zeigt sich, wie ein Produkt wirklich entsteht.</h2>
-            <p className="desireAuditLead">
-              Wir sehen uns die Herstellung beim Hersteller an und dokumentieren die Arbeitsschritte, die das Produkt wesentlich prägen.
-            </p>
+            <p className="premiumSectionLabel">VOR-ORT-PRÜFUNG</p>
+            <h2>Geprüft wird vor Ort.</h2>
+            <p className="desireAuditLead">Wir prüfen die prägenden Herstellungsschritte direkt am Produktionsort.</p>
             <div className="desireAuditFacts">
               {auditFacts.map(([title, copy]) => <div key={title}><strong>{title}</strong><p>{copy}</p></div>)}
             </div>
@@ -156,18 +172,40 @@ export default function Home() {
       <section className="homeConsumerVerify">
         <div className="shell homeConsumerVerifyGrid">
           <div className="homeConsumerCopy">
-            <p className="premiumSectionLabel premiumSectionLabelLight">FÜR KÄUFER</p>
-            <h2>Ein Zeichen ist nur so glaubwürdig wie der Nachweis dahinter.</h2>
-            <blockquote>{CERTIFIED_STATEMENT}</blockquote>
+            <p className="premiumSectionLabel premiumSectionLabelLight">ÖFFENTLICH PRÜFBAR</p>
+            <h2>Jeder Nachweis ist öffentlich.</h2>
+            <p>Produkt, Hersteller, zertifizierter Umfang, Produktionsorte, Standard und Status bleiben nachvollziehbar.</p>
           </div>
           <div className="homeVerifyCompact">
             <span>ZERTIFIZIERUNGS-ID ODER QR VORHANDEN?</span>
-            <strong>Nachweis direkt prüfen.</strong>
-            <p>Produkt, Hersteller, Umfang, Status und Standardfassung im öffentlichen Datensatz ansehen.</p>
+            <strong>Zertifizierung prüfen.</strong>
+            <p>ID eingeben oder QR-Code scannen und den öffentlichen Datensatz aufrufen.</p>
             <div>
               <Link className="homeVerifyPrimary" href="/pruefen">Zertifizierung prüfen</Link>
-              <Link className="homeVerifySecondary" href="/fuer-kaeufer">Was das Zeichen bedeutet →</Link>
+              <Link className="homeVerifySecondary" href="/register">Register öffnen →</Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="homeProcessBand" aria-labelledby="home-process-title">
+        <div className="shell">
+          <div className="homeProcessHead">
+            <p className="premiumSectionLabel">DER WEG ZUR ZERTIFIZIERUNG</p>
+            <h2 id="home-process-title">In fünf Schritten zur Zertifizierung.</h2>
+          </div>
+          <div className="homeProcessGrid">
+            {processSteps.map(([number, title, copy]) => (
+              <article key={number}>
+                <span>{number}</span>
+                <strong>{title}</strong>
+                <p>{copy}</p>
+              </article>
+            ))}
+          </div>
+          <div className="homeProcessAction">
+            <p>Die erste Einschätzung klärt, ob Produkt und Herstellungsprozess grundsätzlich zum Standard passen.</p>
+            <Link href="/fuer-hersteller#zertifizierungsanfrage">Erste Einschätzung anfragen →</Link>
           </div>
         </div>
       </section>
@@ -179,8 +217,14 @@ export default function Home() {
             <Link href="/standard">Standard ansehen →</Link>
           </div>
           <div className="homeFinalCta">
-            <div><p className="premiumSectionLabel premiumSectionLabelLight">FÜR HERSTELLER</p><h2>Passt Ihr Produkt zu Made by Human?</h2></div>
-            <div><p>In der ersten Einschätzung klären wir gemeinsam, welches Produkt Sie zertifizieren möchten, wie es hergestellt wird und was genau geprüft werden soll.</p><Link className="desireFinalButton" href="/fuer-hersteller#zertifizierungsanfrage">Zertifizierung anfragen</Link></div>
+            <div>
+              <p className="premiumSectionLabel premiumSectionLabelLight">FÜR HERSTELLER</p>
+              <h2>Passt Ihr Produkt zu Made by Human?</h2>
+            </div>
+            <div>
+              <p>Wir klären zuerst, was Sie zertifizieren möchten und wie Ihr Produkt hergestellt wird.</p>
+              <Link className="desireFinalButton" href="/fuer-hersteller#zertifizierungsanfrage">Zertifizierung anfragen</Link>
+            </div>
           </div>
         </div>
       </section>
