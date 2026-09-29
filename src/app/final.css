@@ -4512,3 +4512,63 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
     font-size:10px !important;
   }
 }
+
+
+/* ===== Desktop hero width and rhythm refinement 2026-09-29 ===== */
+@media(min-width:1201px){
+  .compactHome .desireHeroGrid{
+    width:min(1320px,calc(100% - 64px));
+    grid-template-columns:minmax(0,1.03fr) minmax(0,.97fr);
+  }
+
+  .compactHome .desireHeroCopy{
+    padding-top:42px;
+    padding-bottom:46px;
+    padding-right:48px;
+  }
+
+  .compactHome .desireHeroCopy .premiumEyebrow{
+    margin-bottom:0;
+  }
+
+  .compactHome .desireHeroCopy .brandTrace{
+    width:108px;
+    height:11px;
+    margin:9px 0 11px;
+  }
+
+  .compactHome .desireHeroCopy .brandTrace i:nth-child(1){
+    width:108px;
+  }
+
+  .compactHome .desireHeroCopy .brandTrace i:nth-child(2){
+    top:5px;
+    left:18px;
+    width:72px;
+  }
+
+  .compactHome .desireHeroCopy .brandTrace i:nth-child(3){
+    top:10px;
+    left:45px;
+    width:42px;
+  }
+
+  .compactHome .desireHeroCopy .brandTrace b{
+    width:7px;
+    height:7px;
+    top:-2px;
+  }
+
+  .compactHome .homeBenefitHeroTitle{
+    max-width:665px;
+    margin:8px 0 22px;
+  }
+
+  .compactHome .desireHeroLead{
+    max-width:640px;
+  }
+
+  .compactHome .desireHeroActions{
+    margin-top:28px;
+  }
+}
