@@ -4653,3 +4653,138 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
     line-height:1.7;
   }
 }
+
+
+/* ===== Cross-site desktop spacing rhythm 2026-09-29 ===== */
+@media(min-width:1021px){
+  /* Page openings should feel related when navigating between sections. */
+  .manufacturerHeroArtGrid,
+  .manufacturerHeroArtVisual{
+    min-height:650px;
+  }
+
+  .manufacturerHeroArtCopy{
+    padding-top:72px;
+    padding-bottom:68px;
+  }
+
+  .buyerHero{
+    padding-top:80px;
+    padding-bottom:84px;
+  }
+
+  .pageHero{
+    padding-top:80px;
+    padding-bottom:58px;
+  }
+
+  .aboutStoryHero{
+    padding-top:80px;
+    padding-bottom:58px;
+  }
+
+  .verifyPage{
+    padding-top:76px;
+    padding-bottom:90px;
+  }
+
+  /* Main editorial sections use one calm vertical rhythm. */
+  .manufacturerBenefits,
+  .manufacturerFit,
+  .manufacturerEvidence,
+  .manufacturerProcess,
+  .manufacturerFaq{
+    padding-top:90px;
+    padding-bottom:96px;
+  }
+
+  .manufacturerApplication{
+    padding-top:94px;
+    padding-bottom:102px;
+  }
+
+  .buyerMeaning,
+  .buyerVerify,
+  .buyerBoundary,
+  .buyerFaq{
+    padding-top:88px;
+    padding-bottom:94px;
+  }
+
+  .buyerFinal{
+    padding-top:78px;
+    padding-bottom:84px;
+  }
+
+  .aboutOrigin{
+    padding-top:90px;
+    padding-bottom:96px;
+  }
+
+  .aboutPurpose,
+  .aboutPrinciples{
+    padding-top:86px;
+    padding-bottom:92px;
+  }
+
+  .aboutArchitecture{
+    padding-top:88px;
+    padding-bottom:94px;
+  }
+
+  .aboutBoundaries{
+    padding-top:78px;
+    padding-bottom:84px;
+  }
+
+  .standardCriteriaSection{
+    padding-top:84px;
+    padding-bottom:92px;
+  }
+
+  .auditProcessSection{
+    padding-top:76px;
+    padding-bottom:82px;
+  }
+
+  .scopeExclusionGrid{
+    padding-top:76px;
+    padding-bottom:82px;
+  }
+
+  .standardClose{
+    padding-top:46px;
+    padding-bottom:54px;
+  }
+
+  /* Related two-column layouts share a consistent conversational distance. */
+  .manufacturerEvidenceGrid,
+  .manufacturerFaqGrid,
+  .buyerMeaningLead,
+  .buyerVerifyGrid,
+  .buyerBoundaryGrid,
+  .buyerFaqGrid,
+  .buyerFinalGrid,
+  .aboutOriginGrid,
+  .aboutPurposeGrid,
+  .aboutBoundariesGrid,
+  .scopeExclusionGrid{
+    gap:88px;
+  }
+
+  .manufacturerApplicationGrid{
+    gap:80px;
+  }
+
+  /* Keep heading-to-content spacing steady across long-form pages. */
+  .sectionIntro.compact{
+    margin-bottom:44px;
+  }
+
+  .manufacturerBenefitGrid,
+  .manufacturerFitGrid,
+  .manufacturerProcessGrid,
+  .buyerMeaningGrid{
+    margin-top:48px;
+  }
+}
