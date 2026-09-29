@@ -4690,8 +4690,8 @@ main a img{
   opacity:0;
   transform:translate3d(0,16px,0);
   transition:
-    opacity 450ms var(--mbh-motion-ease) var(--mbh-motion-delay,0ms),
-    transform 450ms var(--mbh-motion-ease) var(--mbh-motion-delay,0ms);
+    opacity 560ms var(--mbh-motion-ease) var(--mbh-motion-delay,0ms),
+    transform 560ms var(--mbh-motion-ease) var(--mbh-motion-delay,0ms);
   will-change:opacity,transform;
 }
 
@@ -4699,9 +4699,9 @@ main a img{
   clip-path:inset(0 0 18% 0);
   transform:translate3d(0,18px,0);
   transition:
-    opacity 500ms var(--mbh-motion-ease) var(--mbh-motion-delay,0ms),
-    transform 500ms var(--mbh-motion-ease) var(--mbh-motion-delay,0ms),
-    clip-path 500ms var(--mbh-motion-ease) var(--mbh-motion-delay,0ms);
+    opacity 600ms var(--mbh-motion-ease) var(--mbh-motion-delay,0ms),
+    transform 600ms var(--mbh-motion-ease) var(--mbh-motion-delay,0ms),
+    clip-path 600ms var(--mbh-motion-ease) var(--mbh-motion-delay,0ms);
 }
 
 .mbh-motion-hero-part.is-visible{
@@ -4718,8 +4718,8 @@ main a img{
   opacity:0;
   transform:translate3d(0,16px,0);
   transition:
-    opacity 400ms var(--mbh-motion-ease),
-    transform 400ms var(--mbh-motion-ease);
+    opacity 500ms var(--mbh-motion-ease),
+    transform 500ms var(--mbh-motion-ease);
   will-change:opacity,transform;
 }
 
@@ -4733,8 +4733,8 @@ main a img{
   opacity:.86;
   clip-path:inset(0 0 16% 0);
   transition:
-    opacity 580ms var(--mbh-motion-ease),
-    clip-path 580ms var(--mbh-motion-ease);
+    opacity 680ms var(--mbh-motion-ease),
+    clip-path 680ms var(--mbh-motion-ease);
   will-change:opacity,clip-path;
   overflow:hidden;
 }
@@ -4742,7 +4742,7 @@ main a img{
 .mbh-motion-media > img,
 .mbh-motion-media figure > img{
   scale:1.025;
-  transition:scale 580ms var(--mbh-motion-ease);
+  transition:scale 680ms var(--mbh-motion-ease);
 }
 
 .mbh-motion-media.is-visible{
