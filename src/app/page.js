@@ -150,16 +150,16 @@ export default function Home() {
         <div className="shell homeConsumerVerifyGrid">
           <div className="homeConsumerCopy">
             <p className="premiumSectionLabel premiumSectionLabelLight">ÖFFENTLICH PRÜFBAR</p>
-            <h2>Jeder Nachweis ist öffentlich.</h2>
-            <p>Produkt, Hersteller, zertifizierter Umfang, Produktionsorte, Standard und Status bleiben nachvollziehbar.</p>
+            <h2>Prüfen Sie selbst, was zertifiziert wurde.</h2>
+            <p>Produkt, Hersteller, zertifizierter Umfang, Produktionsorte, Standard und Status sind öffentlich einsehbar.</p>
           </div>
           <div className="homeVerifyCompact">
-            <span>ZERTIFIZIERUNGS-ID ODER QR VORHANDEN?</span>
-            <strong>Zertifizierung prüfen.</strong>
-            <p>ID eingeben oder QR-Code scannen und den öffentlichen Datensatz aufrufen.</p>
-            <div>
+            <span>ID ODER QR-CODE VORHANDEN?</span>
+            <strong>Nachweis prüfen.</strong>
+            <p>Zertifizierungs-ID eingeben oder QR-Code scannen.</p>
+            <div className="homeVerifyActions">
               <Link className="homeVerifyPrimary" href="/pruefen">Zertifizierung prüfen</Link>
-              <Link className="homeVerifySecondary" href="/register">Register öffnen →</Link>
+              <Link className="homeVerifyRegisterLink" href="/register">Register durchsuchen →</Link>
             </div>
           </div>
         </div>
