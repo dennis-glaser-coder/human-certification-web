@@ -4643,3 +4643,13 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
     line-height:1.02;
   }
 }
+
+
+/* ===== Desktop subpage hero copy consistency 2026-09-29 ===== */
+@media(min-width:1021px){
+  .verifyPageIntro>p,
+  .registerHero .lead{
+    font-size:15px;
+    line-height:1.7;
+  }
+}
