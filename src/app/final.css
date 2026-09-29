@@ -4244,3 +4244,112 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
     line-height:1.55;
   }
 }
+
+
+/* ===== Homepage onsite audit clarity 2026-09-29 ===== */
+@media(min-width:1021px){
+  .compactHome .compactAudit{
+    padding:56px 0;
+  }
+
+  .compactHome .compactAudit .desireAuditGrid{
+    min-height:470px;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  }
+
+  .compactHome .compactAudit .desireAuditCopy{
+    padding:44px 48px 42px;
+  }
+
+  .compactHome .compactAudit .desireAuditCopy h2{
+    max-width:500px;
+    margin-bottom:14px;
+    font-size:clamp(38px,3.15vw,46px);
+  }
+
+  .compactHome .compactAudit .desireAuditLead{
+    max-width:500px;
+    margin-bottom:28px;
+    font-size:16px !important;
+    line-height:1.55 !important;
+  }
+
+  .compactHome .compactAudit .desireAudit figure{
+    min-height:470px;
+  }
+
+  .compactHome .compactAudit .desireAudit figure img{
+    min-height:470px;
+    object-position:88% 50%;
+    transform:scale(1.08);
+    filter:saturate(.58) contrast(1.035) brightness(.98);
+  }
+}
+
+.compactHome .compactAudit .desireAuditFacts{
+  border-top:1px solid rgba(17,24,32,.3);
+}
+
+.compactHome .compactAudit .desireAuditFacts>div{
+  display:grid;
+  grid-template-columns:140px minmax(0,1fr);
+  gap:22px;
+  align-items:baseline;
+  padding:14px 0;
+  border-bottom:1px solid rgba(17,24,32,.16);
+}
+
+.compactHome .compactAudit .desireAuditFacts strong{
+  margin:0;
+  color:var(--ink);
+  font-size:11px !important;
+  line-height:1.35;
+}
+
+.compactHome .compactAudit .desireAuditFacts p{
+  margin:0;
+  color:var(--muted);
+  font-size:15px !important;
+  line-height:1.45 !important;
+}
+
+.compactHome .compactAudit figure{
+  position:relative;
+}
+
+.compactHome .compactAudit figure figcaption{
+  position:absolute;
+  right:16px;
+  bottom:14px;
+  z-index:2;
+  margin:0;
+  padding:5px 7px;
+  color:rgba(255,255,255,.86);
+  background:rgba(17,24,32,.54);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+
+@media(max-width:760px){
+  .compactHome .compactAudit .desireAuditLead{
+    font-size:16px !important;
+    line-height:1.55 !important;
+  }
+
+  .compactHome .compactAudit .desireAuditFacts>div{
+    grid-template-columns:1fr;
+    gap:4px;
+    padding:13px 0;
+  }
+
+  .compactHome .compactAudit .desireAuditFacts p{
+    font-size:15px !important;
+  }
+
+  .compactHome .compactAudit figure figcaption{
+    right:10px;
+    bottom:10px;
+  }
+}
