@@ -21,11 +21,10 @@ export default function Home() {
           <div className="desireHeroCopy">
             <p className="premiumEyebrow">ZERTIFIZIERUNG FÜR PHYSISCHE PRODUKTE</p>
             <div className="brandTrace" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
-            <h1>Von Menschen gemacht.<br />Vor Ort geprüft.</h1>
+            <h1 className="homeBenefitHeroTitle">Geben Sie Kunden einen Grund, sich für Ihr Produkt zu entscheiden.</h1>
             <p className="desireHeroLead">
-              Wir prüfen vor Ort, ob die entscheidenden Herstellungsschritte eines Produkts tatsächlich von Menschen
-              ausgeführt werden. Nach erfolgreicher Zertifizierung machen Zeichen, Zertifizierungs-ID
-              und öffentliches Register diesen Nachweis sichtbar.
+              Zeigen Sie nachvollziehbar, dass die prägenden Herstellungsschritte tatsächlich von Menschen ausgeführt werden.
+              Made by Human prüft vor Ort und macht diesen Unterschied für Ihre Kunden sichtbar und überprüfbar.
             </p>
             <div className="desireHeroActions">
               <Link className="desirePrimary" href="/fuer-hersteller#zertifizierungsanfrage">Zertifizierung anfragen</Link>
@@ -42,6 +41,29 @@ export default function Home() {
               decoding="async"
               alt="Holzhandwerker bei der manuellen Bearbeitung eines Werkstücks"
             />
+          </div>
+        </div>
+      </section>
+
+      <section className="homeBenefitBand" aria-labelledby="home-benefit-title">
+        <div className="shell">
+          <div className="homeBenefitBandHead">
+            <p className="premiumSectionLabel">IHR PRODUKTVORTEIL</p>
+            <h2 id="home-benefit-title">Machen Sie aus Ihrer Herstellung einen belegbaren Produktvorteil.</h2>
+          </div>
+          <div className="homeBenefitGrid">
+            <article>
+              <strong>Abheben</strong>
+              <p>Zeigen Sie einen Unterschied, den Kunden dem fertigen Produkt sonst nicht ansehen können.</p>
+            </article>
+            <article>
+              <strong>Belegen</strong>
+              <p>Lassen Sie die Aussage über Ihre Herstellung nach einem öffentlichen Standard prüfen.</p>
+            </article>
+            <article>
+              <strong>Am Produkt zeigen</strong>
+              <p>Zertifizierungszeichen, ID und QR-Code führen direkt zum öffentlichen Nachweis.</p>
+            </article>
           </div>
         </div>
       </section>
