@@ -123,9 +123,10 @@ function selectWithin(scope, selector) {
 }
 
 function heroDelay(element) {
-  if (element.matches('h1')) return '55ms';
-  if (element.matches('.lead, .desireHeroLead, .buyerHeroLead, .whyHeroLead')) return '105ms';
-  if (element.matches('.desireHeroActions, .manufacturerHeroActions, .buyerHeroActions, .whyHeroActions, .salesHeroActions')) return '150ms';
+  if (element.matches('.brandTrace')) return '65ms';
+  if (element.matches('h1')) return '130ms';
+  if (element.matches('.lead, .desireHeroLead, .buyerHeroLead, .whyHeroLead')) return '195ms';
+  if (element.matches('.desireHeroActions, .manufacturerHeroActions, .buyerHeroActions, .whyHeroActions, .salesHeroActions')) return '260ms';
   return '0ms';
 }
 
@@ -158,8 +159,8 @@ export default function MotionSystem() {
         revealObserver.unobserve(entry.target);
       });
     }, {
-      threshold: 0.14,
-      rootMargin: '0px 0px -8% 0px',
+      threshold: 0.20,
+      rootMargin: '0px 0px -12% 0px',
     });
 
     mediaObserver = new IntersectionObserver((entries) => {
@@ -169,8 +170,8 @@ export default function MotionSystem() {
         mediaObserver.unobserve(entry.target);
       });
     }, {
-      threshold: 0.12,
-      rootMargin: '0px 0px -6% 0px',
+      threshold: 0.16,
+      rootMargin: '0px 0px -10% 0px',
     });
 
     const enhance = (scope = document) => {
