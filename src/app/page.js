@@ -4,9 +4,9 @@ import SiteFooter from '../components/SiteFooter';
 import CertificationQr from '../components/CertificationQr';
 
 const auditFacts = [
-  ['Arbeitsschritte', 'Welche Schritte prägen das Produkt?'],
-  ['Maschinen', 'Wo unterstützt Technik – und wo bleibt menschliche Arbeit entscheidend?'],
-  ['Produktionsumfang', 'Produkt, Standorte und externe Fertigung werden eindeutig zugeordnet.'],
+  ['Arbeitsschritte', 'Was Menschen tatsächlich ausführen.'],
+  ['Maschinen', 'Wo Technik unterstützt.'],
+  ['Produktionsumfang', 'Was zur Zertifizierung gehört.'],
 ];
 
 const processSteps = [
@@ -130,14 +130,15 @@ export default function Home() {
           <figure>
             <img
               src={assetBase + '/brand/IMG_1053.webp'}
-              alt="Vor-Ort-Audit während eines produktprägenden menschlichen Herstellungsschritts"
+              alt="Beispielhafte Darstellung einer Prüfung in einer Produktionsumgebung"
               loading="lazy"
             />
+            <figcaption>Beispielhafte Darstellung</figcaption>
           </figure>
           <div className="desireAuditCopy">
             <p className="premiumSectionLabel">VOR-ORT-PRÜFUNG</p>
             <h2>Geprüft wird vor Ort.</h2>
-            <p className="desireAuditLead">Wir prüfen die prägenden Herstellungsschritte direkt am Produktionsort.</p>
+            <p className="desireAuditLead">Wir prüfen die Herstellung dort, wo das Produkt entsteht.</p>
             <div className="desireAuditFacts">
               {auditFacts.map(([title, copy]) => <div key={title}><strong>{title}</strong><p>{copy}</p></div>)}
             </div>
