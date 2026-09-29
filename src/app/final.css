@@ -4177,3 +4177,70 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
     font-size:16px !important;
   }
 }
+
+
+/* ===== Compact manufacturing difference section 2026-09-29 ===== */
+.homeProblemBand{
+  padding:48px 0 50px;
+}
+
+.homeProblemCompact{
+  display:grid;
+  grid-template-columns:minmax(0,1.25fr) minmax(300px,.75fr);
+  gap:72px;
+  align-items:end;
+}
+
+.homeProblemCompact .premiumSectionLabel{
+  margin:0 0 12px;
+}
+
+.homeProblemCompact h2{
+  max-width:760px;
+  margin:0;
+  font-size:clamp(38px,3.35vw,50px);
+  line-height:1.035;
+  letter-spacing:-.032em;
+}
+
+.homeProblemStatement{
+  max-width:520px;
+  margin:0 0 4px;
+  color:var(--muted);
+  font-size:17px;
+  line-height:1.62;
+}
+
+@media(max-width:900px){
+  .homeProblemCompact{
+    grid-template-columns:1fr;
+    gap:20px;
+    align-items:start;
+  }
+
+  .homeProblemStatement{
+    max-width:680px;
+  }
+}
+
+@media(max-width:760px){
+  .homeProblemBand{
+    padding:36px 0 40px;
+  }
+
+  .homeProblemCompact{
+    gap:16px;
+  }
+
+  .homeProblemCompact h2{
+    max-width:96%;
+    font-size:32px;
+    line-height:1.04;
+  }
+
+  .homeProblemStatement{
+    max-width:96%;
+    font-size:16px;
+    line-height:1.55;
+  }
+}
