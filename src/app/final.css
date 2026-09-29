@@ -3588,3 +3588,18 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
     padding-bottom:6px;
   }
 }
+
+
+/* ===== Homepage hero clarity refinement 2026-09-29 ===== */
+@media (min-width:1021px){
+  .compactHome .homeBenefitHeroTitle{
+    max-width:100%;
+    font-size:clamp(48px,3.65vw,56px);
+    line-height:1.025;
+    letter-spacing:-.038em;
+  }
+
+  .compactHome .desireHeroActions{
+    gap:0;
+  }
+}
