@@ -3564,3 +3564,27 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
     padding-right:16px;
   }
 }
+
+
+/* ===== Desktop header balance refinement 2026-09-29 ===== */
+@media (min-width:1201px){
+  .brandHeaderLogoCrop{
+    width:270px;
+    height:84px;
+  }
+
+  .brandHeaderLogoAsset{
+    left:-67px;
+    top:-25px;
+    width:404px;
+  }
+
+  .premiumHeaderInner{
+    min-height:80px;
+  }
+
+  .compactHome .premiumHeaderInner{
+    padding-top:6px;
+    padding-bottom:6px;
+  }
+}
