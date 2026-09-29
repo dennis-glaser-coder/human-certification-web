@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import SiteHeader from '../components/SiteHeader';
 import SiteFooter from '../components/SiteFooter';
+import CertificationQr from '../components/CertificationQr';
 
 const auditFacts = [
   ['Arbeitsschritte', 'Welche Schritte prägen das Produkt?'],
@@ -61,66 +62,60 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="sealApplications compactApplications">
+      <section className="sealApplications compactApplications homeProofUse">
         <div className="shell">
           <div className="desireSectionHead">
             <div>
-              <p className="premiumSectionLabel">DER NACHWEIS IM EINSATZ</p>
-              <h2>So wird der Nachweis sichtbar.</h2>
+              <p className="premiumSectionLabel">ZERTIFIZIERUNG IM EINSATZ</p>
+              <h2>Am Produkt sichtbar. Online prüfbar.</h2>
             </div>
-            <p>Zeichen, ID und QR-Code verbinden Ihr Produkt direkt mit dem öffentlichen Nachweis.</p>
           </div>
 
-          <div className="sealApplicationGrid compactApplicationGrid">
-            <article className="sealApplicationCard applicationPackage realApplicationCard">
-              <div className="applicationStage applicationStagePhoto realApplicationStage">
-                <img
-                  className="applicationPhoto realApplicationPhoto"
-                  src={assetBase + '/brand/IMG_1047_mbh.webp?v=20260912-spacing'}
-                  alt="Beispielhafte Made by Human Kennzeichnung an einem textilen Produkt mit Verpackung"
-                  loading="lazy"
-                />
-              </div>
-              <div className="applicationCopy">
-                <strong>Direkt am Produkt</strong>
-                <p>Als Zeichen am Produkt, auf der Verpackung oder im Onlineshop.</p>
-              </div>
-            </article>
-
-            <article className="sealApplicationCard applicationDigital">
-              <div className="applicationStage applicationDigitalStage applicationProofStage">
-                <div className="applicationProofPanel">
-                  <div className="applicationProofTop">
-                    <span>ONLINE PRÜFBAR</span>
-                    <img src={assetBase + '/brand/made-by-human-logo.webp?v=20260912-spacing'} alt="" aria-hidden="true" />
-                  </div>
-                  <div className="applicationProofStatement">
-                    <small>NACHWEIS FÜR DIESES PRODUKT</small>
-                    <strong>Made by Human</strong>
-                    <p>Die Kennzeichnung führt zum öffentlichen Eintrag für genau dieses Produkt.</p>
-                  </div>
-                  <div className="applicationProofMeta" aria-label="Bestandteile des digitalen Nachweises">
-                    <span>Produktumfang</span>
-                    <span>Status</span>
-                    <span>Standardfassung</span>
-                  </div>
-                  <Link className="applicationProofAction" href="/zertifikat/?id=HC-DEMO-0001">
-                    <span>Beispieldatensatz ansehen →</span>
-                    <small>Demonstration – keine reale Zertifizierung</small>
-                  </Link>
+          <div className="homeProofUseGrid">
+            <article className="homeProofPhysical">
+              <div className="homeProofObjectStage">
+                <div className="homeProofHangtag" aria-label="Beispiel für eine optionale Produktkennzeichnung">
+                  <span className="homeProofCord" aria-hidden="true"></span>
+                  <span className="homeProofEyelet" aria-hidden="true"></span>
+                  <img src={assetBase + '/brand/made-by-human-logo.webp?v=20260912-spacing'} alt="Made by Human Zertifizierungszeichen" />
+                  <strong>MADE BY HUMAN</strong>
+                  <small>ZERTIFIZIERTES PRODUKT</small>
                 </div>
               </div>
-              <div className="applicationCopy">
-                <strong>Digitaler Nachweis</strong>
-                <p>ID und QR-Code führen direkt zum öffentlichen Eintrag.</p>
+              <div className="homeProofUseCopy">
+                <span>OPTIONALE KENNZEICHNUNG</span>
+                <h3>Das Zeichen am Produkt.</h3>
+                <p>Das Zertifizierungszeichen kann am Produkt, auf der Verpackung oder als Anhänger eingesetzt werden.</p>
+                <Link href="/markennutzung">Markennutzung ansehen →</Link>
               </div>
             </article>
-          </div>
 
-          <div className="compactApplicationFooter">
-            <span>Für ein konkretes Produkt · nur bei gültigem Status · öffentlich prüfbar</span>
-            <span className="applicationSwipeHint">Wischen für weitere Anwendung →</span>
-            <Link href="/markennutzung">Markennutzung im Detail →</Link>
+            <article className="homeProofDigital">
+              <div className="homeDigitalProofCard">
+                <div className="homeDigitalProofHead">
+                  <span>ONLINE PRÜFBAR</span>
+                  <img src={assetBase + '/brand/made-by-human-logo.webp?v=20260912-spacing'} alt="" aria-hidden="true" />
+                </div>
+                <div className="homeDigitalProofBody">
+                  <div className="homeDigitalProofData">
+                    <small>DEMONSTRATION – KEINE REALE ZERTIFIZIERUNG</small>
+                    <h3>Demo-Produkt</h3>
+                    <dl>
+                      <div><dt>Hersteller</dt><dd>Demo Manufaktur</dd></div>
+                      <div><dt>Zertifizierungs-ID</dt><dd>HC-DEMO-0001</dd></div>
+                      <div><dt>Standard</dt><dd>0.1-DEMO</dd></div>
+                    </dl>
+                    <Link href="/zertifikat/?id=HC-DEMO-0001">Öffentlichen Datensatz ansehen →</Link>
+                  </div>
+                  <CertificationQr publicId="HC-DEMO-0001" />
+                </div>
+              </div>
+              <div className="homeProofUseCopy">
+                <span>DIGITALER NACHWEIS</span>
+                <h3>ID und QR-Code führen zum Datensatz.</h3>
+                <p>Kunden können den öffentlichen Nachweis des zertifizierten Produkts direkt aufrufen.</p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
