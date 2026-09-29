@@ -59,16 +59,31 @@ export default function Home() {
           </div>
           <div className="homeBenefitGrid">
             <article>
+              <div className="homeBenefitVisual homeBenefitSealVisual" aria-hidden="true">
+                <img src={assetBase + '/brand/made-by-human-logo.webp?v=20260912-spacing'} alt="" />
+              </div>
               <strong>Zertifizierungszeichen</strong>
-              <p>Für das konkret zertifizierte Produkt – am Produkt, auf der Verpackung oder im Onlineshop.</p>
+              <p>Für das zertifizierte Produkt – am Produkt, auf der Verpackung oder im Onlineshop.</p>
             </article>
+
             <article>
+              <div className="homeBenefitVisual homeBenefitRecordVisual" aria-hidden="true">
+                <span>ÖFFENTLICHER NACHWEIS</span>
+                <div><b>Produkt</b><em>Hersteller</em></div>
+                <small>Umfang · Status · Standard</small>
+              </div>
               <strong>Öffentlicher Nachweis</strong>
-              <p>Produkt, Hersteller, zertifizierter Umfang und aktueller Status bleiben nachvollziehbar.</p>
+              <p>Produkt, Hersteller, zertifizierter Umfang und Status bleiben nachvollziehbar.</p>
             </article>
+
             <article>
+              <div className="homeBenefitVisual homeBenefitIdVisual" aria-hidden="true">
+                <span>BEISPIEL-ID</span>
+                <b>HC-DEMO-0001</b>
+                <i>QR</i>
+              </div>
               <strong>ID &amp; QR-Code</strong>
-              <p>Die individuelle Zertifizierungs-ID und der QR-Code führen direkt zum öffentlichen Eintrag.</p>
+              <p>Beides führt direkt zum öffentlichen Eintrag für das zertifizierte Produkt.</p>
             </article>
           </div>
         </div>
