@@ -4060,3 +4060,65 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
     font-size:27px;
   }
 }
+
+
+/* ===== Physical certification tag refinement 2026-09-29 ===== */
+.homeProofObjectStage{
+  padding:30px 26px;
+}
+
+.homeProofHangtag{
+  width:min(58%,220px);
+  min-height:255px;
+  padding:42px 24px 24px;
+  gap:12px;
+  box-shadow:0 10px 24px rgba(17,24,32,.08);
+  transform:rotate(-1deg);
+}
+
+.homeProofHangtag img{
+  width:108px;
+  height:108px;
+}
+
+.homeProofHangtag strong{
+  display:none;
+}
+
+.homeProofTagLabel{
+  color:var(--muted);
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-align:center;
+}
+
+.homeProofEyelet{
+  top:14px;
+  width:13px;
+  height:13px;
+  border-width:2px;
+}
+
+.homeProofCord{
+  top:-42px;
+  height:56px;
+  background:rgba(84,70,48,.36);
+}
+
+@media(max-width:760px){
+  .homeProofObjectStage{
+    padding:24px 18px;
+  }
+
+  .homeProofHangtag{
+    width:min(72%,220px);
+    min-height:240px;
+    padding:34px 20px 20px;
+  }
+
+  .homeProofHangtag img{
+    width:96px;
+    height:96px;
+  }
+}
