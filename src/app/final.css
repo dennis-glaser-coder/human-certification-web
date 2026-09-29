@@ -4392,3 +4392,57 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
     width:fit-content;
   }
 }
+
+
+/* ===== Homepage process clarity 2026-09-29 ===== */
+.homeProcessBand{
+  padding-top:58px;
+  padding-bottom:60px;
+}
+
+.homeProcessHead{
+  padding-bottom:26px;
+}
+
+.homeProcessGrid article{
+  padding-top:19px;
+  padding-bottom:22px;
+}
+
+.homeProcessGrid span{
+  margin-bottom:10px;
+}
+
+.homeProcessGrid strong{
+  margin-bottom:6px;
+}
+
+.homeProcessGrid p{
+  max-width:190px;
+  font-size:13px !important;
+  line-height:1.45 !important;
+}
+
+@media(max-width:760px){
+  .homeProcessBand{
+    padding-top:42px;
+    padding-bottom:46px;
+  }
+
+  .homeProcessHead{
+    padding-bottom:20px;
+  }
+
+  .homeProcessGrid article,
+  .homeProcessGrid article+article,
+  .homeProcessGrid article:nth-child(odd),
+  .homeProcessGrid article:nth-child(even){
+    padding-top:15px;
+    padding-bottom:17px;
+  }
+
+  .homeProcessGrid p{
+    max-width:100%;
+    font-size:14px !important;
+  }
+}
