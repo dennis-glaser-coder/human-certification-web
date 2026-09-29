@@ -3545,3 +3545,22 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
     width:fit-content;
   }
 }
+
+
+/* ===== Desktop header calm spacing 2026-09-29 ===== */
+@media (min-width:1201px){
+  .premiumMainNav{
+    gap:22px;
+  }
+
+  .desktopNavMenuTrigger{
+    padding-left:2px;
+    padding-right:2px;
+  }
+
+  .premiumMainNav .navVerify{
+    margin-left:4px;
+    padding-left:16px;
+    padding-right:16px;
+  }
+}
