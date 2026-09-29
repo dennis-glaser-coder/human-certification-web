@@ -10,11 +10,11 @@ const auditFacts = [
 ];
 
 const processSteps = [
-  ['01', 'Produkt festlegen', 'Wir klären, was genau zertifiziert werden soll.'],
-  ['02', 'Unterlagen prüfen', 'Sie beschreiben Herstellung, Standorte und relevante externe Fertigung.'],
-  ['03', 'Vor Ort prüfen', 'Wir sehen uns die prägenden Herstellungsschritte am Produktionsort an.'],
-  ['04', 'Entscheiden', 'Die Ergebnisse werden gegen den geltenden Standard bewertet.'],
-  ['05', 'Nachweis veröffentlichen', 'Bei erfolgreicher Zertifizierung folgen Zeichen, ID, QR-Code und Registereintrag.'],
+  ['01', 'Produkt festlegen', 'Was soll zertifiziert werden?'],
+  ['02', 'Unterlagen prüfen', 'Herstellung und Standorte einordnen.'],
+  ['03', 'Vor Ort prüfen', 'Herstellung am Produktionsort ansehen.'],
+  ['04', 'Bewerten', 'Ergebnis mit dem Standard abgleichen.'],
+  ['05', 'Zertifizieren', 'Zeichen, ID und Registereintrag erhalten.'],
 ];
 
 export default function Home() {
@@ -168,8 +168,8 @@ export default function Home() {
       <section className="homeProcessBand" aria-labelledby="home-process-title">
         <div className="shell">
           <div className="homeProcessHead">
-            <p className="premiumSectionLabel">DER WEG ZUR ZERTIFIZIERUNG</p>
-            <h2 id="home-process-title">In fünf Schritten zur Zertifizierung.</h2>
+            <p className="premiumSectionLabel">DER ABLAUF</p>
+            <h2 id="home-process-title">So läuft die Zertifizierung ab.</h2>
           </div>
           <div className="homeProcessGrid">
             {processSteps.map(([number, title, copy]) => (
