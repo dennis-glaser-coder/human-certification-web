@@ -3,7 +3,6 @@ import './globals.css';
 import './final.css';
 import './header-logo-fix.css';
 import './certificate-mobile-fix.css';
-import MotionSystem from '../components/MotionSystem';
 import {
   canonical,
   DEFAULT_DESCRIPTION,
@@ -148,7 +147,6 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify([organizationJsonLd, websiteJsonLd]).replace(/</g, '\\u003c') }}
         />
-        <MotionSystem />
         {children}
       </body>
     </html>
