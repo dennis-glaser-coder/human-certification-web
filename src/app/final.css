@@ -4713,17 +4713,17 @@ main a img{
   clip-path:inset(0 0 0 0);
 }
 
-/* Content groups reveal as groups, never paragraph by paragraph. */
-.mbh-motion-reveal{
+/* Only two deliberate homepage section reveals remain. */
+.mbh-motion-feature{
   opacity:0;
   transform:translate3d(0,16px,0);
   transition:
-    opacity 500ms var(--mbh-motion-ease),
-    transform 500ms var(--mbh-motion-ease);
+    opacity 520ms var(--mbh-motion-ease),
+    transform 520ms var(--mbh-motion-ease);
   will-change:opacity,transform;
 }
 
-.mbh-motion-reveal.is-visible{
+.mbh-motion-feature.is-visible{
   opacity:1;
   transform:translate3d(0,0,0);
 }
@@ -4770,7 +4770,7 @@ main a img{
   }
 
   .mbh-motion-hero-part,
-  .mbh-motion-reveal,
+  .mbh-motion-feature,
   .mbh-motion-media{
     opacity:1 !important;
     transform:none !important;
