@@ -53,12 +53,15 @@ export default function Home() {
       </section>
 
       <section className="homeProblemBand">
-        <div className="shell homeProblemGrid">
-          <p className="premiumSectionLabel">WARUM DAS WICHTIG IST</p>
+        <div className="shell homeProblemCompact">
           <div>
+            <p className="premiumSectionLabel">WARUM MADE BY HUMAN</p>
             <h2>Der Herstellungsunterschied ist oft unsichtbar.</h2>
-            <p>Made by Human macht sichtbar und überprüfbar, welche prägenden Schritte Menschen ausführen.</p>
           </div>
+          <p className="homeProblemStatement">
+            Am fertigen Produkt ist oft nicht erkennbar, welche prägenden Schritte Menschen ausgeführt haben.
+            Made by Human macht genau das nachvollziehbar.
+          </p>
         </div>
       </section>
 
