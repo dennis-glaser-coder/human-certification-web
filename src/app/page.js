@@ -35,7 +35,6 @@ export default function Home() {
             </p>
             <div className="desireHeroActions">
               <Link className="desirePrimary" href="/fuer-hersteller#zertifizierungsanfrage">Zertifizierung anfragen</Link>
-              <Link className="desireSecondary" href="/warum-made-by-human">Warum Made by Human?</Link>
             </div>
           </div>
 
