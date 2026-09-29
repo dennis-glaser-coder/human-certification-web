@@ -4583,3 +4583,63 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
     padding-bottom:4px;
   }
 }
+
+
+/* ===== Cross-site desktop typography normalization 2026-09-29 ===== */
+@media(min-width:1021px){
+  /* Institutional page openings: one stable hierarchy when navigating between pages. */
+  .pageHero h1,
+  .verifyPageIntro h1,
+  .registerHero h1,
+  .aboutStoryHero h1{
+    font-size:clamp(50px,4.25vw,66px);
+    line-height:.99;
+    letter-spacing:-.042em;
+  }
+
+  /* Split-image / benefit-led subpage heroes may be expressive, but should not jump in scale. */
+  .manufacturerHeroArtCopy h1,
+  .buyerHero h1,
+  .whyHeroCopy h1,
+  .salesHeroCopy h1{
+    font-size:clamp(50px,4.15vw,64px);
+    line-height:.98;
+    letter-spacing:-.043em;
+  }
+
+  /* Standard section-heading tier across informational and commercial subpages. */
+  .sectionIntro h2,
+  .manufacturerEvidence h2,
+  .manufacturerFaq h2,
+  .buyerBoundary h2,
+  .buyerAudit h2,
+  .buyerFaq h2,
+  .whySectionHead h2,
+  .whyCustomersIntro h2,
+  .whyBrandValue h2,
+  .whyProof h2,
+  .aboutPurpose h2,
+  .markUseProhibited h2,
+  .procedureIntegrity h2,
+  .procedureRecord h2,
+  .guideDark h2,
+  .guideClose h2,
+  .markUseRealExampleCopy h2{
+    font-size:clamp(38px,3.35vw,50px);
+    line-height:1.04;
+  }
+
+  /* Sections that carry the main argument get one controlled larger tier. */
+  .buyerMeaningLead h2,
+  .buyerVerifyCopy h2,
+  .aboutOriginStatement h2,
+  .salesValueHead h2,
+  .onsiteAuditCopy h2,
+  .auditScopeHead h2,
+  .salesProcessHead h2,
+  .sealOutcomeCopy h2,
+  .salesFinalCta h2{
+    font-size:clamp(40px,3.65vw,54px);
+    line-height:1.02;
+  }
+}
