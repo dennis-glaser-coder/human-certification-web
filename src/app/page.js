@@ -184,10 +184,6 @@ export default function Home() {
 
       <section className="homeFinalCompact">
         <div className="shell">
-          <div className="homeStandardLine" style={{ marginTop: 0 }}>
-            <span>Aktuelle Standardfassung: 1.0 · veröffentlicht am 14.09.2026</span>
-            <Link href="/standard">Standard ansehen →</Link>
-          </div>
           <div className="homeFinalCta">
             <div>
               <p className="premiumSectionLabel premiumSectionLabelLight">FÜR HERSTELLER</p>
