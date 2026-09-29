@@ -168,7 +168,6 @@ export default function Home() {
       <section className="homeProcessBand" aria-labelledby="home-process-title">
         <div className="shell">
           <div className="homeProcessHead">
-            <p className="premiumSectionLabel">DER ABLAUF</p>
             <h2 id="home-process-title">So läuft die Zertifizierung ab.</h2>
           </div>
           <div className="homeProcessGrid">
