@@ -4643,3 +4643,81 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
     line-height:1.02;
   }
 }
+
+
+/* ===== Made by Human premium motion system 2026-09-29 ===== */
+:root{
+  --mbh-motion-fast:180ms;
+  --mbh-motion-ease:cubic-bezier(.22,1,.36,1);
+}
+
+/* Microinteractions stay immediate and restrained. */
+main a,
+main button,
+.premiumMainNav a,
+.desktopNavMenuTrigger,
+.premiumMobileMenu a{
+  transition:
+    color var(--mbh-motion-fast) var(--mbh-motion-ease),
+    background-color var(--mbh-motion-fast) var(--mbh-motion-ease),
+    border-color var(--mbh-motion-fast) var(--mbh-motion-ease),
+    opacity var(--mbh-motion-fast) var(--mbh-motion-ease),
+    transform var(--mbh-motion-fast) var(--mbh-motion-ease);
+}
+
+main a[data-mbh-arrow-link="true"]{
+  display:inline-flex;
+  align-items:center;
+  transform:translateX(0);
+}
+
+main a[data-mbh-arrow-link="true"]:hover,
+main a[data-mbh-arrow-link="true"]:focus-visible{
+  transform:translateX(4px);
+}
+
+/* Existing image links get a single quiet hover language. */
+main a img{
+  transition:transform 220ms var(--mbh-motion-ease);
+}
+
+@media (hover:hover) and (pointer:fine){
+  main a:hover img{
+    transform:scale(1.025);
+  }
+}
+
+/* Motion is progressive enhancement: content remains visible without JS. */
+[data-mbh-motion-managed="true"],
+[data-mbh-media-managed="true"]{
+  will-change:opacity,transform;
+}
+
+[data-mbh-media-managed="true"]{
+  overflow:hidden;
+}
+
+/* Reduced motion removes movement/masks while preserving immediate feedback. */
+@media (prefers-reduced-motion:reduce){
+  html{
+    scroll-behavior:auto;
+  }
+
+  *,
+  *::before,
+  *::after{
+    scroll-behavior:auto !important;
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+  }
+
+  [data-mbh-motion-managed="true"],
+  [data-mbh-media-managed="true"]{
+    opacity:1 !important;
+    translate:none !important;
+    scale:none !important;
+    clip-path:none !important;
+    transform:none !important;
+  }
+}
