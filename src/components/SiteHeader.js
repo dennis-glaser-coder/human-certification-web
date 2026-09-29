@@ -25,11 +25,8 @@ export default function SiteHeader({ lang = 'de' }) {
         </a>
 
         <nav className="mainNav premiumMainNav" aria-label={isEn ? 'Main navigation' : 'Hauptnavigation'}>
-          <Link href={isEn ? '/en/why-made-by-human' : '/warum-made-by-human'}>{isEn ? 'Why Made by Human' : 'Warum Made by Human'}</Link>
           <Link href={isEn ? '/en/for-manufacturers' : '/fuer-hersteller'}>{isEn ? 'For manufacturers' : 'Für Hersteller'}</Link>
-          <Link href={isEn ? '/en/for-buyers' : '/fuer-kaeufer'}>{isEn ? 'For buyers' : 'Für Käufer'}</Link>
-          <Link href={isEn ? '/en/register' : '/register'}>{isEn ? 'Register' : 'Register'}</Link>
-          <Link href={isEn ? '/en/standard' : '/standard'}>{isEn ? 'Standard' : 'Standard'}</Link>
+          <Link href={isEn ? '/en/verify' : '/pruefen'}>{isEn ? 'Verify' : 'Prüfen'}</Link>
 
           <DesktopOrganizationNav lang={lang} />
           <LanguageSwitch lang={lang} />
