@@ -179,10 +179,6 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <div className="homeProcessAction">
-            <p>Die erste Einschätzung klärt, ob Produkt und Herstellungsprozess grundsätzlich zum Standard passen.</p>
-            <Link href="/fuer-hersteller#zertifizierungsanfrage">Erste Einschätzung anfragen →</Link>
-          </div>
         </div>
       </section>
 
