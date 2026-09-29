@@ -29,74 +29,13 @@ const HERO_PARTS = [
   '.salesHeroActions',
 ].join(',');
 
-const REVEAL_GROUPS = [
-  '.homeProblemCompact',
-  '.desireSectionHead',
-  '.homeProofUseGrid',
-  '.desireAuditCopy',
-  '.homeConsumerCopy',
-  '.homeVerifyCompact',
-  '.homeProcessHead',
-  '.homeProcessGrid',
-  '.homeFinalCta',
-  '.sectionIntro',
-  '.manufacturerMetaGrid',
-  '.manufacturerBenefitGrid',
-  '.manufacturerFitGrid',
-  '.manufacturerEvidenceList',
-  '.manufacturerProcessGrid',
-  '.manufacturerFaqGrid',
-  '.manufacturerApplicationGrid',
-  '.buyerMeaningLead',
-  '.buyerMeaningGrid',
-  '.buyerVerifyCopy',
-  '.buyerBoundaryGrid',
-  '.buyerFaqGrid',
-  '.buyerFinalGrid',
-  '.whySectionHead',
-  '.whyBenefitGrid',
-  '.whyCustomersIntro',
-  '.whyCustomerList',
-  '.whyComparisonTable',
-  '.standardMetaBar',
-  '.criteriaGrid',
-  '.decisionRuleInner',
-  '.scopeExclusionGrid',
-  '.standardClose',
-  '.documentProofGrid',
-  '.documentRegistry',
-  '.versionPolicyGrid',
-  '.aboutOriginStatement',
-  '.aboutOriginStory',
-  '.aboutPurposeGrid',
-  '.aboutPrinciplesGrid',
-  '.aboutArchitectureIntro',
-  '.aboutArchitectureGrid',
-  '.aboutBoundariesGrid',
-  '.markUseMetaGrid',
-  '.markUseRealExampleCopy',
-  '.markUseRules',
-  '.markUseRuleGrid',
-  '.markUseApplicationGrid',
-  '.markUseProhibitedGrid',
-  '.procedureMetaGrid',
-  '.procedureGrid',
-  '.procedureIntegrityGrid',
-  '.procedureRecordGrid',
-  '.integrityMetaGrid',
-  '.transparencyPrinciplesGrid',
-  '.integrityRolesIntro',
-  '.integrityRolesGrid',
-  '.governanceDocumentsGrid',
-  '.integrityClaimBoundaryGrid',
-  '.verifyTrustStrip',
-  '.verifySearch',
-  '.verificationRecord',
-  '.registerTrustBar',
-  '.registerToolbar',
-  '.registerList',
+/* Only two deliberate section reveals remain on the homepage. */
+const FEATURE_REVEALS = [
+  '.compactHome .homeProofUseGrid',
+  '.compactHome .homeProcessGrid',
 ].join(',');
 
+/* Large editorial imagery is the recurring Made by Human motion signature. */
 const EDITORIAL_MEDIA = [
   '.desireHeroVisual',
   '.manufacturerHeroArtVisual',
@@ -123,44 +62,42 @@ function selectWithin(scope, selector) {
 }
 
 function heroDelay(element) {
-  if (element.matches('.brandTrace')) return '65ms';
-  if (element.matches('h1')) return '130ms';
-  if (element.matches('.lead, .desireHeroLead, .buyerHeroLead, .whyHeroLead')) return '195ms';
-  if (element.matches('.desireHeroActions, .manufacturerHeroActions, .buyerHeroActions, .whyHeroActions, .salesHeroActions')) return '260ms';
+  if (element.matches('.brandTrace')) return '45ms';
+  if (element.matches('h1')) return '70ms';
+  if (element.matches('.lead, .desireHeroLead, .buyerHeroLead, .whyHeroLead')) return '125ms';
+  if (element.matches('.desireHeroActions, .manufacturerHeroActions, .buyerHeroActions, .whyHeroActions, .salesHeroActions')) return '180ms';
   return '0ms';
 }
 
 export default function MotionSystem() {
   useEffect(() => {
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const prepStyle = document.getElementById('mbh-motion-prep');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-    let revealObserver;
+    let featureObserver;
     let mediaObserver;
     let mutationObserver;
 
-    const showEverything = () => {
+    const revealAll = () => {
       document.querySelectorAll(
-        '.mbh-motion-hero-part, .mbh-motion-reveal, .mbh-motion-media'
+        '.mbh-motion-hero-part, .mbh-motion-feature, .mbh-motion-media'
       ).forEach((element) => element.classList.add('is-visible'));
-
-      prepStyle?.remove();
     };
 
-    if (reduceMotion.matches) {
-      showEverything();
+    if (reducedMotion.matches) {
+      document.documentElement.classList.remove('mbh-motion-ready');
+      revealAll();
       return undefined;
     }
 
-    revealObserver = new IntersectionObserver((entries) => {
+    featureObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         entry.target.classList.add('is-visible');
-        revealObserver.unobserve(entry.target);
+        featureObserver.unobserve(entry.target);
       });
     }, {
-      threshold: 0.20,
-      rootMargin: '0px 0px -12% 0px',
+      threshold: 0.18,
+      rootMargin: '0px 0px -10% 0px',
     });
 
     mediaObserver = new IntersectionObserver((entries) => {
@@ -170,8 +107,8 @@ export default function MotionSystem() {
         mediaObserver.unobserve(entry.target);
       });
     }, {
-      threshold: 0.16,
-      rootMargin: '0px 0px -10% 0px',
+      threshold: 0.14,
+      rootMargin: '0px 0px -8% 0px',
     });
 
     const enhance = (scope = document) => {
@@ -188,20 +125,15 @@ export default function MotionSystem() {
           });
       });
 
-      selectWithin(scope, REVEAL_GROUPS).forEach((element) => {
-        if (
-          element.dataset.mbhRevealReady === 'true' ||
-          element.closest('.desireHero, .manufacturerHeroArt, .whyHero, .buyerHero, .pageHero')
-        ) return;
-
-        element.dataset.mbhRevealReady = 'true';
-        element.classList.add('mbh-motion-reveal');
-        revealObserver.observe(element);
+      selectWithin(scope, FEATURE_REVEALS).forEach((element) => {
+        if (element.dataset.mbhFeatureReady === 'true') return;
+        element.dataset.mbhFeatureReady = 'true';
+        element.classList.add('mbh-motion-feature');
+        featureObserver.observe(element);
       });
 
       selectWithin(scope, EDITORIAL_MEDIA).forEach((element) => {
         if (element.dataset.mbhMediaReady === 'true') return;
-
         element.dataset.mbhMediaReady = 'true';
         element.classList.add('mbh-motion-media');
 
@@ -220,13 +152,6 @@ export default function MotionSystem() {
     };
 
     enhance(document);
-
-    /*
-     * The inline preparation style prevents a flash before hydration.
-     * Once every initial hero node has its persistent motion class,
-     * the temporary style can safely disappear.
-     */
-    prepStyle?.remove();
 
     window.requestAnimationFrame(() => {
       window.requestAnimationFrame(() => {
@@ -250,17 +175,20 @@ export default function MotionSystem() {
     });
 
     const handlePreference = (event) => {
-      if (event.matches) showEverything();
+      if (!event.matches) return;
+      document.documentElement.classList.remove('mbh-motion-ready');
+      revealAll();
+      featureObserver?.disconnect();
+      mediaObserver?.disconnect();
     };
 
-    reduceMotion.addEventListener?.('change', handlePreference);
+    reducedMotion.addEventListener?.('change', handlePreference);
 
     return () => {
-      revealObserver?.disconnect();
+      featureObserver?.disconnect();
       mediaObserver?.disconnect();
       mutationObserver?.disconnect();
-      reduceMotion.removeEventListener?.('change', handlePreference);
-      prepStyle?.remove();
+      reducedMotion.removeEventListener?.('change', handlePreference);
     };
   }, []);
 
