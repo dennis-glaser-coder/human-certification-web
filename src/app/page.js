@@ -78,8 +78,7 @@ export default function Home() {
                   <span className="homeProofCord" aria-hidden="true"></span>
                   <span className="homeProofEyelet" aria-hidden="true"></span>
                   <img src={assetBase + '/brand/made-by-human-logo.webp?v=20260912-spacing'} alt="Made by Human Zertifizierungszeichen" />
-                  <strong>MADE BY HUMAN</strong>
-                  <small>ZERTIFIZIERTES PRODUKT</small>
+                  <small className="homeProofTagLabel">ZERTIFIZIERTES PRODUKT</small>
                 </div>
               </div>
               <div className="homeProofUseCopy">
