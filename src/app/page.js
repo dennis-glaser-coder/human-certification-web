@@ -60,7 +60,9 @@ export default function Home() {
           </div>
           <p className="homeProblemStatement">
             Am fertigen Produkt ist oft nicht erkennbar, welche prägenden Schritte Menschen ausgeführt haben.
-            Made by Human macht genau das nachvollziehbar.
+            Made by Human macht genau das nachvollziehbar. Für Hersteller, die Handarbeit oder handgemachte Produkte
+            belastbar belegen möchten, erklären wir unser <Link href="/handarbeit-siegel">Handarbeit-Siegel</Link> und
+            den Ablauf, um <Link href="/handarbeit-zertifizieren">Handarbeit zertifizieren zu lassen</Link>.
           </p>
         </div>
       </section>
