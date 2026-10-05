@@ -9,6 +9,7 @@ export const metadata = {
     languages: {
       'de-DE': canonical('/fuer-hersteller'),
       en: canonical('/en/for-manufacturers'),
+      'x-default': canonical('/fuer-hersteller'),
     },
   },
   openGraph: {
