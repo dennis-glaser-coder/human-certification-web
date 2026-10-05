@@ -11,7 +11,18 @@ export const metadata = {
 };
 
 export default function Page() {
-  const articleJsonLd = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Handarbeit mit Maschinen – geht das?', mainEntityOfPage: canonical('/wissen/handarbeit-mit-maschinen'), publisher: { '@id': canonical('/') + '#organization' }, inLanguage: 'de-DE' };
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'Handarbeit mit Maschinen – geht das?',
+    mainEntityOfPage: canonical('/wissen/handarbeit-mit-maschinen'),
+    image: [SOCIAL_IMAGE],
+    datePublished: '2026-09-11',
+    dateModified: '2026-10-05',
+    author: { '@type': 'Organization', name: 'Made by Human', url: canonical('/') },
+    publisher: { '@id': canonical('/') + '#organization' },
+    inLanguage: 'de-DE',
+  };
   return (
     <main className="whyPage">
       <SiteHeader />
