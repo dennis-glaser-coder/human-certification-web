@@ -12,9 +12,14 @@ export const metadata = {
 
 export default function Page() {
   const articleJsonLd = {
-    '@context': 'https://schema.org', '@type': 'Article',
+    '@context': 'https://schema.org',
+    '@type': 'Article',
     headline: 'Was bedeutet handgemacht?',
     mainEntityOfPage: canonical('/wissen/was-bedeutet-handgemacht'),
+    image: [SOCIAL_IMAGE],
+    datePublished: '2026-09-11',
+    dateModified: '2026-10-05',
+    author: { '@type': 'Organization', name: 'Made by Human', url: canonical('/') },
     publisher: { '@id': canonical('/') + '#organization' },
     inLanguage: 'de-DE',
   };

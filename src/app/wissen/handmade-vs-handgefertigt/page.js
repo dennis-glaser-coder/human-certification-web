@@ -11,7 +11,18 @@ export const metadata = {
 };
 
 export default function Page() {
-  const articleJsonLd = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Handmade oder handgefertigt?', mainEntityOfPage: canonical('/wissen/handmade-vs-handgefertigt'), publisher: { '@id': canonical('/') + '#organization' }, inLanguage: 'de-DE' };
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'Handmade oder handgefertigt?',
+    mainEntityOfPage: canonical('/wissen/handmade-vs-handgefertigt'),
+    image: [SOCIAL_IMAGE],
+    datePublished: '2026-09-11',
+    dateModified: '2026-10-05',
+    author: { '@type': 'Organization', name: 'Made by Human', url: canonical('/') },
+    publisher: { '@id': canonical('/') + '#organization' },
+    inLanguage: 'de-DE',
+  };
   return (
     <main className="whyPage">
       <SiteHeader />
