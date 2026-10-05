@@ -5,7 +5,7 @@ export const metadata = {
   description: 'Request Made by Human certification for a physical product whose defining production steps are carried out by people.',
   alternates: {
     canonical: canonical('/en/for-manufacturers'),
-    languages: { 'de-DE': canonical('/fuer-hersteller'), en: canonical('/en/for-manufacturers') },
+    languages: { 'de-DE': canonical('/fuer-hersteller'), en: canonical('/en/for-manufacturers'), 'x-default': canonical('/fuer-hersteller') },
   },
   openGraph: {
     title: 'Certification for manufacturers | Made by Human',
