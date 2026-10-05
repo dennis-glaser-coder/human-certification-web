@@ -31,6 +31,11 @@ function canonicalFromHtml(html) {
   return null;
 }
 
+function htmlLang(html) {
+  const match = html.match(/<html\b[^>]*\blang=["']([^"']+)["']/i);
+  return match ? match[1].toLowerCase() : null;
+}
+
 function robotsMetaContent(html) {
   const tags = html.match(/<meta\b[^>]*>/gi) || [];
   const values = [];
@@ -92,6 +97,14 @@ for (const urlString of urls) {
     fail(`${urlString} has no canonical URL`);
   } else if (canonical !== urlString) {
     fail(`${urlString} canonical mismatch: ${canonical}`);
+  }
+
+  const lang = htmlLang(html);
+  const expectedLang = new URL(urlString).pathname.startsWith('/en/') || new URL(urlString).pathname === '/en'
+    ? 'en'
+    : 'de';
+  if (lang !== expectedLang) {
+    fail(`${urlString} html lang mismatch: expected ${expectedLang}, got ${lang || 'missing'}`);
   }
 
   for (const marker of FORBIDDEN_HOST_MARKERS) {

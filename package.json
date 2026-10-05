@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "node scripts/postprocess_static_html.mjs",
     "start": "next start"
   },
   "dependencies": {
