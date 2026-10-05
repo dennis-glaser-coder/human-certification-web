@@ -143,6 +143,9 @@ export default function ManufacturerPage() {
               <a className="button primary" href="#zertifizierungsanfrage">Zertifizierung anfragen</a>
               <a className="button secondary" href="#ablauf">Ablauf ansehen</a>
             </div>
+            <p className="manufacturerHeroRelated">
+              Für Hersteller mit handwerklich geprägten Produkten: <Link href="/human-made-siegel">Human Made Siegel</Link> · <Link href="/manufaktur-siegel">Manufaktur-Siegel</Link>
+            </p>
           </div>
           <div className="manufacturerHeroArtVisual">
             <img
