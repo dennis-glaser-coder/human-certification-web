@@ -19,10 +19,10 @@ export const metadata = {
 };
 
 const suitable = [
-  ['Schmuck & Accessoires', 'Produkte, bei denen Formgebung, Montage, Fassung, Finish oder vergleichbare prägende Schritte von Menschen ausgeführt werden.'],
-  ['Textilien & Mode', 'Produkte, deren wesentliche Fertigungs-, Näh-, Strick-, Veredelungs- oder Montageprozesse nachvollziehbar menschlich geprägt sind.'],
-  ['Möbel & Holzprodukte', 'Produkte mit menschlich ausgeführten Arbeitsschritten wie Zuschnitt, Bearbeitung, Verbindung, Schleifen, Montage oder Oberflächenbehandlung.'],
-  ['Keramik & Dekoration', 'Produkte, bei denen Formgebung, Bearbeitung, Dekoration, Montage oder andere wesentliche Schritte tatsächlich durch Menschen erfolgen.'],
+  ['Schmuck & Accessoires', '/zertifizierung/schmuck', 'Produkte, bei denen Formgebung, Montage, Fassung, Finish oder vergleichbare prägende Schritte von Menschen ausgeführt werden.'],
+  ['Textilien & Mode', '/zertifizierung/textilien', 'Produkte, deren wesentliche Fertigungs-, Näh-, Strick-, Veredelungs- oder Montageprozesse nachvollziehbar menschlich geprägt sind.'],
+  ['Möbel & Holzprodukte', '/zertifizierung/holz-moebel', 'Produkte mit menschlich ausgeführten Arbeitsschritten wie Zuschnitt, Bearbeitung, Verbindung, Schleifen, Montage oder Oberflächenbehandlung.'],
+  ['Keramik & Dekoration', '/zertifizierung/keramik', 'Produkte, bei denen Formgebung, Bearbeitung, Dekoration, Montage oder andere wesentliche Schritte tatsächlich durch Menschen erfolgen.'],
 ];
 
 const certificationSteps = [
@@ -131,10 +131,11 @@ export default function HandarbeitZertifizierenPage() {
           </div>
 
           <div className="whyBenefitGrid">
-            {suitable.map(([title, copy]) => (
+            {suitable.map(([title, href, copy]) => (
               <article key={title}>
                 <strong>{title}</strong>
                 <p>{copy}</p>
+                <Link className="desireTextLink" href={href}>Zertifizierung für {title} →</Link>
               </article>
             ))}
           </div>
