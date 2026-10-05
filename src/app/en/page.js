@@ -8,7 +8,7 @@ export const metadata = {
   description: 'Made by Human verifies on site whether the defining production steps of a physical product are actually carried out by people.',
   alternates: {
     canonical: canonical('/en'),
-    languages: { 'de-DE': canonical('/'), en: canonical('/en') },
+    languages: { 'de-DE': canonical('/'), en: canonical('/en'), 'x-default': canonical('/') },
   },
   openGraph: {
     title: 'Made by Human | Certification for human production',
