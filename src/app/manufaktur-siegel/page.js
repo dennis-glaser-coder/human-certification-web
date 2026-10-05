@@ -4,7 +4,7 @@ import SiteFooter from '../../components/SiteFooter';
 import { canonical, SOCIAL_IMAGE } from '../../lib/seo';
 
 export const metadata = {
-  title: 'Manufaktur-Siegel für handgefertigte Produkte',
+  title: 'Manufaktur-Siegel für Produkte',
   description: 'Manufaktur-Siegel für konkrete Produkte: Made by Human prüft menschlich geprägte Herstellung, Produktionsorte, Nachweise und Zertifizierungsumfang.',
   alternates: { canonical: canonical('/manufaktur-siegel') },
   openGraph: {
