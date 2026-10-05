@@ -124,7 +124,12 @@ export default function IndustryCertificationPage({
               <article key={question}><strong>{question}</strong><p>{answer}</p></article>
             ))}
           </div>
-          <Link className="desireTextLink" href="/handarbeit-zertifizieren">So läuft die Zertifizierung ab →</Link>
+          <div className="manufacturerGuideLinks">
+            <Link href="/handarbeit-zertifizieren">So läuft die Zertifizierung ab →</Link>
+            <Link href="/handarbeit-siegel">Was das Handarbeit-Siegel aussagt →</Link>
+            <Link href="/wissen/was-bedeutet-handgemacht">Was bedeutet „handgemacht“? →</Link>
+            <Link href="/zertifizierung">Weitere Produktarten →</Link>
+          </div>
         </div>
       </section>
 
