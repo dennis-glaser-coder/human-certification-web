@@ -37,7 +37,7 @@ export default function CertificationHubPage() {
             <p className="premiumEyebrow">ZERTIFIZIERUNG NACH PRODUKTART</p>
             <div className="brandTrace" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
             <h1>Menschliche Herstellung produktbezogen zertifizieren.</h1>
-            <p className="whyHeroLead">Made by Human richtet sich an Hersteller physischer Produkte, bei denen menschliche Arbeit die wesentlichen Herstellungsschritte prägt. Die Prüfung wird immer auf das konkrete Produkt oder eine klar abgegrenzte Produktfamilie bezogen.</p>
+            <p className="whyHeroLead">Made by Human richtet sich an Hersteller physischer Produkte, bei denen menschliche Arbeit die wesentlichen Herstellungsschritte prägt. Die Prüfung bezieht sich immer auf das konkrete Produkt oder eine klar abgegrenzte Produktfamilie – zum Beispiel Schmuck, Möbel und Holzprodukte, Textilien, Lederwaren oder Keramik.</p>
             <div className="whyHeroActions">
               <Link className="salesPrimary" href="/fuer-hersteller#zertifizierungsanfrage">Zertifizierung anfragen</Link>
               <Link className="salesSecondary" href="/handarbeit-zertifizieren">Ablauf ansehen</Link>

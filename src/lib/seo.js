@@ -2,7 +2,7 @@ export const SITE_URL = 'https://madebyhuman.org';
 export const SITE_INDEXABLE = true;
 export const SITE_NAME = 'Made by Human';
 export const DEFAULT_DESCRIPTION =
-  'Made by Human ist ein Siegel für physische Produkte mit nachweisbar menschlicher Herstellung. Wir prüfen vor Ort und machen die Zertifizierung öffentlich prüfbar.';
+  'Made by Human zertifiziert physische Produkte mit nachweisbar menschlicher Herstellung. Vor-Ort-Prüfung, klare Kriterien und öffentliches Register.';
 
 export function canonical(path = '/') {
   const value = path.startsWith('/') ? path : `/${path}`;

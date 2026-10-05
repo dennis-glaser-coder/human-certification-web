@@ -8,7 +8,7 @@ export const metadata = {
   description: 'Why Made by Human makes human production visible and verifiable for manufacturers, brands and buyers.',
   alternates: {
     canonical: canonical('/en/why-made-by-human'),
-    languages: { 'de-DE': canonical('/warum-made-by-human'), en: canonical('/en/why-made-by-human') },
+    languages: { 'de-DE': canonical('/warum-made-by-human'), en: canonical('/en/why-made-by-human'), 'x-default': canonical('/warum-made-by-human') },
   },
   openGraph: {
     title: 'Why Made by Human? | Made by Human',

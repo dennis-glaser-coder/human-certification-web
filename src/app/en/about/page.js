@@ -9,7 +9,7 @@ export const metadata = {
   description: 'Why Made by Human exists and how we make human production visible and verifiable.',
   alternates: {
     canonical: canonical('/en/about'),
-    languages: { 'de-DE': canonical('/ueber-uns'), en: canonical('/en/about') },
+    languages: { 'de-DE': canonical('/ueber-uns'), en: canonical('/en/about'), 'x-default': canonical('/ueber-uns') },
   },
 };
 

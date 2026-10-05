@@ -7,7 +7,14 @@ import { canonical, SOCIAL_IMAGE } from '../../lib/seo';
 export const metadata = {
   title: 'Über uns',
   description: 'Warum Made by Human entstanden ist und wie wir menschliche Herstellung sichtbar und überprüfbar machen.',
-  alternates: { canonical: canonical('/ueber-uns') },
+  alternates: {
+    canonical: canonical('/ueber-uns'),
+    languages: {
+      'de-DE': canonical('/ueber-uns'),
+      en: canonical('/en/about'),
+      'x-default': canonical('/ueber-uns'),
+    },
+  },
   openGraph: {
     type: 'website',
     locale: 'de_DE',

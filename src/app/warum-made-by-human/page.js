@@ -6,7 +6,14 @@ import { canonical, SOCIAL_IMAGE } from '../../lib/seo';
 export const metadata = {
   title: 'Warum ein Siegel für menschliche Herstellung?',
   description: 'Warum Made by Human menschliche Herstellung sichtbar macht – für Hersteller, Marken und Käufer.',
-  alternates: { canonical: canonical('/warum-made-by-human') },
+  alternates: {
+    canonical: canonical('/warum-made-by-human'),
+    languages: {
+      'de-DE': canonical('/warum-made-by-human'),
+      en: canonical('/en/why-made-by-human'),
+      'x-default': canonical('/warum-made-by-human'),
+    },
+  },
   openGraph: {
     title: 'Warum ein Siegel für menschliche Herstellung? | Made by Human',
     description: 'Warum menschliche Herstellung sichtbar und überprüfbar sein sollte.',

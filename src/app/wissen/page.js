@@ -45,7 +45,7 @@ export default function WissenPage() {
       <section className="salesFinalCta whyFinalCta">
         <div className="shell salesFinalCtaGrid">
           <div><p className="premiumSectionLabel premiumSectionLabelLight">FÜR HERSTELLER</p><h2>Sie möchten Ihre Herstellung nachvollziehbar belegen?</h2></div>
-          <div><p>Made by Human prüft konkrete Produkte und Produktfamilien nach festgelegten Kriterien.</p><Link className="salesFinalButton" href="/handarbeit-zertifizieren">Zertifizierung kennenlernen</Link><Link className="salesFinalText" href="/zertifizierung">Produktarten ansehen →</Link></div>
+          <div><p>Made by Human prüft konkrete Produkte und Produktfamilien nach festgelegten Kriterien. Lesen Sie auch, was unser <Link href="/handarbeit-siegel">Handarbeit-Siegel</Link> aussagt.</p><Link className="salesFinalButton" href="/handarbeit-zertifizieren">Handarbeit zertifizieren lassen</Link><Link className="salesFinalText" href="/zertifizierung">Zertifizierung nach Produktart →</Link></div>
         </div>
       </section>
       <SiteFooter />
