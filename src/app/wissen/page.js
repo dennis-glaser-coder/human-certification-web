@@ -4,7 +4,7 @@ import SiteFooter from '../../components/SiteFooter';
 import { canonical, SOCIAL_IMAGE } from '../../lib/seo';
 
 export const metadata = {
-  title: 'Wissen zu Handarbeit & menschlicher Herstellung',
+  title: 'Wissen: Handarbeit & menschliche Herstellung',
   description: 'Ratgeber zu Handarbeit, Handmade, handgefertigten Produkten, Maschinen in der Herstellung und nachvollziehbarer Zertifizierung.',
   alternates: { canonical: canonical('/wissen') },
   openGraph: { title: 'Wissen zu Handarbeit & menschlicher Herstellung | Made by Human', description: 'Ratgeber rund um Handarbeit, Handmade und menschliche Herstellung.', url: canonical('/wissen'), images: [SOCIAL_IMAGE] },
