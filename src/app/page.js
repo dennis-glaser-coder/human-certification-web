@@ -63,6 +63,8 @@ export default function Home() {
             Made by Human macht genau das nachvollziehbar. Für Hersteller, die Handarbeit oder handgemachte Produkte
             belastbar belegen möchten, erklären wir unser <Link href="/handarbeit-siegel">Handarbeit-Siegel</Link> und
             den Ablauf, um <Link href="/handarbeit-zertifizieren">Handarbeit zertifizieren zu lassen</Link>.
+            Wer nach einem <Link href="/human-made-siegel">Human Made Siegel</Link> oder einem
+            <Link href="/manufaktur-siegel"> Manufaktur-Siegel</Link> sucht, findet dazu eigene Erklärungen.
           </p>
         </div>
       </section>

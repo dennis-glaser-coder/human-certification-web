@@ -217,6 +217,8 @@ export default function HandarbeitSiegelPage() {
             </p>
             <Link className="salesFinalButton" href="/fuer-hersteller#zertifizierungsanfrage">Zertifizierung anfragen</Link>
             <Link className="salesFinalText" href="/leitfaden/nachweise">Welche Nachweise werden benötigt? →</Link>
+            <Link className="salesFinalText" href="/human-made-siegel">Human Made Siegel →</Link>
+            <Link className="salesFinalText" href="/manufaktur-siegel">Manufaktur-Siegel →</Link>
           </div>
         </div>
       </section>
