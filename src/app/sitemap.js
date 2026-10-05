@@ -8,6 +8,8 @@ const pages = [
   ['/warum-made-by-human', 'monthly', 0.9],
   ['/handarbeit-siegel', 'monthly', 0.9],
   ['/handarbeit-zertifizieren', 'monthly', 0.9],
+  ['/human-made-siegel', 'monthly', 0.9],
+  ['/manufaktur-siegel', 'monthly', 0.9],
   ['/zertifizierung', 'monthly', 0.9],
   ['/zertifizierung/schmuck', 'monthly', 0.8],
   ['/zertifizierung/holz-moebel', 'monthly', 0.8],
