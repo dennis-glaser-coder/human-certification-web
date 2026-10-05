@@ -19,7 +19,7 @@ export default function Page() {
     image: [SOCIAL_IMAGE],
     datePublished: '2026-09-11',
     dateModified: '2026-10-05',
-    author: { '@type': 'Organization', name: 'Made by Human', url: canonical('/') },
+    author: { '@id': canonical('/') + '#organization' },
     publisher: { '@id': canonical('/') + '#organization' },
     inLanguage: 'de-DE',
   };
