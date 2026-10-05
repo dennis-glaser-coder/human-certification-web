@@ -8,7 +8,14 @@ import { CERTIFIED_STATEMENT } from '../../lib/brand';
 export const metadata = {
   title: 'Was das Siegel für Käufer bedeutet',
   description: 'Made by Human einfach erklärt: Was das Zeichen bedeutet, wie wir prüfen und wie Käufer eine Zertifizierung über QR oder ID selbst prüfen können.',
-  alternates: { canonical: canonical('/fuer-kaeufer') },
+  alternates: {
+    canonical: canonical('/fuer-kaeufer'),
+    languages: {
+      'de-DE': canonical('/fuer-kaeufer'),
+      en: canonical('/en/for-buyers'),
+      'x-default': canonical('/fuer-kaeufer'),
+    },
+  },
   openGraph: {
     title: 'Was das Siegel für Käufer bedeutet | Made by Human',
     description: 'Was das Made by Human Zeichen bedeutet – einfach erklärt und öffentlich prüfbar.',
