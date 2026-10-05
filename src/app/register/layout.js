@@ -1,7 +1,7 @@
 import { canonical, SOCIAL_IMAGE } from '../../lib/seo';
 
 export const metadata = {
-  title: 'Öffentliches Register – Zertifizierungen prüfen',
+  title: 'Zertifizierungsregister prüfen',
   description:
     'Öffentliches Register für Made by Human Zertifizierungen. Zertifizierungs-ID, Hersteller, Produkt und aktuellen Status prüfen.',
   alternates: {
@@ -9,6 +9,7 @@ export const metadata = {
     languages: {
       'de-DE': canonical('/register'),
       en: canonical('/en/register'),
+      'x-default': canonical('/register'),
     },
   },
   openGraph: {
