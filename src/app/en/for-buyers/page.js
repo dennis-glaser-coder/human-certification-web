@@ -9,7 +9,7 @@ export const metadata = {
   description: 'Made by Human explained: what the mark means, how verification works and how buyers can check a certification by QR code or ID.',
   alternates: {
     canonical: canonical('/en/for-buyers'),
-    languages: { 'de-DE': canonical('/fuer-kaeufer'), en: canonical('/en/for-buyers') },
+    languages: { 'de-DE': canonical('/fuer-kaeufer'), en: canonical('/en/for-buyers'), 'x-default': canonical('/fuer-kaeufer') },
   },
   openGraph: {
     title: 'What the mark means for buyers | Made by Human',
