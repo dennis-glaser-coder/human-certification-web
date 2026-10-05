@@ -232,6 +232,14 @@ export default function ManufacturerPage() {
           ))}
         </div>
 
+        <div className="manufacturerGuideLinks">
+          <Link href="/zertifizierung/schmuck">Schmuck zertifizieren →</Link>
+          <Link href="/zertifizierung/holz-moebel">Möbel & Holzprodukte zertifizieren →</Link>
+          <Link href="/zertifizierung/textilien">Textilien zertifizieren →</Link>
+          <Link href="/zertifizierung/lederwaren">Lederwaren zertifizieren →</Link>
+          <Link href="/zertifizierung/keramik">Keramik zertifizieren →</Link>
+        </div>
+
         <div className="manufacturerScopeNote">
           <span>DERZEIT NICHT AUFGENOMMEN</span>
           <p>Lebensmittel, Medizinprodukte und andere stark regulierte Kategorien nehmen wir derzeit nicht auf.</p>
