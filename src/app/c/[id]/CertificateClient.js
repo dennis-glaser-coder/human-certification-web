@@ -7,9 +7,11 @@ import SiteHeader from '../../../components/SiteHeader';
 import SiteFooter from '../../../components/SiteFooter';
 import CertificationQr from '../../../components/CertificationQr';
 import { getSupabaseBrowserClient } from '../../../lib/supabase';
+import RelationshipDisclosure from '../../../components/RelationshipDisclosure';
 
 const statusLabels = {
   under_review: 'In Prüfung',
+  pilot: 'Pilotprüfung',
   active: 'Aktiv',
   suspended: 'Ausgesetzt',
   expired: 'Abgelaufen',
@@ -34,6 +36,7 @@ function publicClaim(record) {
   }
 
   const statusMessages = {
+    pilot: 'Diese Pilotprüfung dient der Erprobung. Sie ist keine reguläre Zertifizierung und berechtigt nicht zur Zeichennutzung.',
     under_review: 'Diese Zertifizierung wird noch geprüft. Eine Entscheidung wurde noch nicht getroffen.',
     suspended: 'Diese Zertifizierung ist derzeit ausgesetzt. Der Eintrag bleibt im Register sichtbar.',
     expired: 'Diese Zertifizierung ist abgelaufen. Der Eintrag bleibt im Register sichtbar.',
@@ -72,7 +75,7 @@ export default function CertificateClient({ id }) {
 
       const { data: record, error } = await supabase
         .from('certifications')
-        .select('id,public_id,status,issued_at,valid_until,last_verified_at,public_note,certification_scope,production_locations,products(name,manufacturers(name)),standard_versions(version,title)')
+        .select('id,public_id,status,issued_at,valid_until,last_verified_at,public_note,certification_scope,production_locations,certification_context,relationship_disclosure,products(name,manufacturers(name,legal_name)),standard_versions(version,title)')
         .eq('public_id', id)
         .maybeSingle();
 
@@ -151,6 +154,7 @@ export default function CertificateClient({ id }) {
 
               <dl className="certificateFacts">
                 <div><dt>Hersteller</dt><dd>{state.record.products?.manufacturers?.name ?? '—'}</dd></div>
+                {state.record.products?.manufacturers?.legal_name && state.record.products.manufacturers.legal_name !== state.record.products.manufacturers.name && <div><dt>Rechtlicher Betreiber</dt><dd>{state.record.products.manufacturers.legal_name}</dd></div>}
                 <div><dt>Produkt</dt><dd>{state.record.products?.name ?? '—'}</dd></div>
                 <div><dt>Gilt für</dt><dd>{state.record.certification_scope ?? '—'}</dd></div>
                 <div><dt>Produktionsstandorte</dt><dd>{state.record.production_locations?.length ? state.record.production_locations.join(' · ') : '—'}</dd></div>
@@ -160,6 +164,7 @@ export default function CertificateClient({ id }) {
                 <div><dt>Zuletzt geprüft</dt><dd>{state.record.last_verified_at ? new Date(state.record.last_verified_at).toLocaleDateString('de-DE') : '—'}</dd></div>
               </dl>
 
+              <RelationshipDisclosure record={state.record} className="certificatePublicNote" />
               <CertificationQr publicId={state.record.public_id} />
 
               {state.record.public_note && (

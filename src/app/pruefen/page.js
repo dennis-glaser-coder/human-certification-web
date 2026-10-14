@@ -6,9 +6,11 @@ import SiteHeader from '../../components/SiteHeader';
 import SiteFooter from '../../components/SiteFooter';
 import BrandTrace from '../../components/BrandTrace';
 import { getSupabaseBrowserClient } from '../../lib/supabase';
+import RelationshipDisclosure from '../../components/RelationshipDisclosure';
 
 const statusText = {
   under_review: 'In Prüfung',
+  pilot: 'Pilotprüfung',
   active: 'Aktiv',
   suspended: 'Ausgesetzt',
   expired: 'Abgelaufen',
@@ -41,7 +43,7 @@ export default function VerifyPage() {
 
     const { data, error } = await supabase
       .from('certifications')
-      .select('public_id,status,issued_at,valid_until,last_verified_at,public_note,certification_scope,production_locations,products(name,manufacturers(name)),standard_versions(version,title)')
+      .select('public_id,status,issued_at,valid_until,last_verified_at,public_note,certification_scope,production_locations,certification_context,relationship_disclosure,products(name,manufacturers(name,legal_name)),standard_versions(version,title)')
       .eq('public_id', publicId)
       .maybeSingle();
 
@@ -126,6 +128,7 @@ export default function VerifyPage() {
               <div><dt>Zuletzt geprüft</dt><dd>{state.record.last_verified_at ? new Date(state.record.last_verified_at).toLocaleDateString('de-DE') : '—'}</dd></div>
             </dl>
 
+            <RelationshipDisclosure record={state.record} />
             {state.record.public_note && <div className="publicNote"><strong>HINWEIS</strong><p>{state.record.public_note}</p></div>}
           </article>
         )}

@@ -38,6 +38,8 @@ export default function SchemeDocumentPage() {
           <dl><div><dt>Version</dt><dd>1.0</dd></div><div><dt>Stand</dt><dd>14.09.2026</dd></div><div><dt>Bezug</dt><dd>Standard 1.0</dd></div></dl>
         </header>
 
+        <div className="documentNotice">Archivfassung 1.0 vom 14.09.2026. Für neue Entscheidungen gilt Version 1.1 vom 14.10.2026. <Link href="/dokumente/certification-scheme-1-1">Aktuelle Fassung öffnen</Link></div>
+
         <div className="controlledDocumentActions"><a className="button primary" href={assetBase + '/documents/made-by-human-certification-scheme-1-0.pdf'}>PDF herunterladen</a><Link className="button secondary" href="/dokumente">Dokumentenregister</Link></div>
 
         <section><h2>Zweck</h2><p>Der Produktstandard legt die Anforderungen an die menschliche Herstellung fest. Dieses Zertifizierungsschema beschreibt, wie Antrag, Festlegung des Zertifizierungsumfangs, Prüfung, fachliche Kontrolle, Entscheidung, Gültigkeit, Änderungen, Verlängerung, Register und Zeichennutzung ablaufen.</p></section>

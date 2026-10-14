@@ -10302,3 +10302,6 @@ textarea:focus-visible{
     object-position:center center;
   }
 }
+
+.registerRelationship { grid-column: 1 / -1; padding: 0.75rem 0; font-size: 0.875rem; line-height: 1.6; overflow-wrap: anywhere; }
+.registerRelationship p { margin: 0.25rem 0; }

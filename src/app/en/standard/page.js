@@ -46,7 +46,7 @@ export default function StandardPage() {
 
       <section className="standardMetaBand" aria-label="Standard metadata">
         <div className="shell standardMetaBar">
-          <div><span>STANDARD VERSION</span><strong>1.0</strong></div>
+          <div><span>STANDARD VERSION</span><strong>1.1</strong></div>
           <div><span>SCOPE</span><strong>Physical products</strong></div>
           <div><span>ASSESSMENT AREAS</span><strong>6 criteria areas</strong></div>
           <div><span>DOCUMENTATION</span><strong>Versioned & public</strong></div>
@@ -84,7 +84,7 @@ export default function StandardPage() {
 
       <section className="scopeExclusionSection"><div className="shell scopeExclusionGrid"><div><div className="sectionNo">OUTSIDE THE STANDARD</div><h2>Made by Human deliberately remains limited to human production.</h2></div><div className="exclusionList">{exclusions.map((item) => <span key={item}>{item}</span>)}</div></div></section>
 
-      <section className="standardClose shell"><div><p>Each version of the standard has its own version number. The current public German standard document remains the normative reference until an approved English normative version is published.</p></div><div className="standardCloseLinks"><Link className="textLink" href="/dokumente/standard-1-0">Open Standard 1.0 (German) <span className="linkArrow" aria-hidden="true">→</span></Link><Link className="textLink" href="/en/about">About the system <span className="linkArrow" aria-hidden="true">→</span></Link></div></section>
+      <section className="standardClose shell"><div><p>Products of the scheme owner and related companies can receive regular certification under the same assessment requirements. The relationship is disclosed in the public record; such certification is not an independent third-party assessment. Pilot assessments remain separate and do not authorize use of the certification mark. Each version of the standard has its own version number. The current public German standard document remains the normative reference until an approved English normative version is published.</p></div><div className="standardCloseLinks"><Link className="textLink" href="/dokumente/standard-1-1">Open Standard 1.1 (German) <span className="linkArrow" aria-hidden="true">→</span></Link><Link className="textLink" href="/en/about">About the system <span className="linkArrow" aria-hidden="true">→</span></Link></div></section>
 
       <EnglishFooter />
     </main>
