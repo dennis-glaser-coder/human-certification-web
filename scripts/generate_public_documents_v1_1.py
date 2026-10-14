@@ -1,8 +1,20 @@
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import mm
-from reportlab.platypus import SimpleDocTemplate, Spacer, PageBreak
+from reportlab.lib.styles import ParagraphStyle
+from reportlab.platypus import SimpleDocTemplate, Spacer, PageBreak, Paragraph
 
-from generate_public_documents import OUT, P, callout, criteria_table, title_block, header_footer
+from generate_public_documents import OUT, P, ST, callout, criteria_table, title_block, header_footer
+
+
+SCHEME_STYLES = {
+    **ST,
+    'h1': ParagraphStyle('schemeHeading', parent=ST['h1'], fontSize=16, leading=20, spaceBefore=9, spaceAfter=6, keepWithNext=True),
+    'body': ParagraphStyle('schemeBody', parent=ST['body'], leading=12.5, spaceAfter=5),
+}
+
+
+def scheme_p(text, style='body'):
+    return Paragraph(text, SCHEME_STYLES[style])
 
 
 def version_footer(canvas, doc, doc_id, short_title, status):
@@ -50,12 +62,12 @@ def build_scheme_v1():
     story += title_block('Zertifizierungsschema 1.1', 'Regelwerk für Antrag, Prüfung, Entscheidung, Gültigkeit, Überwachung, Register und Markennutzung.', 'MBH-SCH-1.1', 'Veröffentlicht', [
         ('Version', '1.1'), ('Stand', '14.10.2026'), ('Bezug', 'Made by Human Standard 1.1'), ('Dokumentstatus', 'Veröffentlicht')
     ])
-    story += [P('1  Zweck', 'h1'), P('Das Zertifizierungsschema beschreibt, wie Made by Human Standard 1.1 angewendet wird. Es regelt Antrag, Festlegung des Zertifizierungsumfangs, Prüfung, fachliche Kontrolle, Entscheidung, Gültigkeit, Änderungen, Verlängerung, Register und Zeichennutzung.')]
-    story += [P('2  Rollen und Entscheidungstrennung', 'h1')]
+    story += [scheme_p('1  Zweck', 'h1'), scheme_p('Das Zertifizierungsschema beschreibt, wie Made by Human Standard 1.1 angewendet wird. Es regelt Antrag, Festlegung des Zertifizierungsumfangs, Prüfung, fachliche Kontrolle, Entscheidung, Gültigkeit, Änderungen, Verlängerung, Register und Zeichennutzung.')]
+    story += [scheme_p('2  Rollen und Entscheidungstrennung', 'h1')]
     for name, text in [('Systeminhaber','verantwortet Standard, Marke, Dokumente, Register und Systemregeln.'), ('Prüfung','prüft Produkt und Herstellungsprozess und hält Feststellungen und Belege fest.'), ('Fachprüfung','kontrolliert Vollständigkeit und fachliche Schlüssigkeit des Prüfergebnisses.'), ('Zertifizierungsentscheidung','entscheidet über Freigabe, Ablehnung, Aussetzung, Verlängerung oder Widerruf; bei regulären Zertifizierungen entscheidet nicht allein die Person, die die maßgebliche Vor-Ort-Prüfung durchgeführt hat.'), ('Öffentliches Register','zeigt den veröffentlichten Zertifizierungsumfang und aktuellen Status.')]:
-        story.append(P(f'<b>{name}:</b> {text}'))
-    story += [P('3  Kompetenz', 'h1'), P('Prüfung, Fachprüfung und Entscheidung werden Personen zugewiesen, deren Kenntnisse und Erfahrung für den jeweiligen Produkt- und Herstellungsprozess ausreichend sind. Wenn spezielles Fachwissen erforderlich ist, wird zusätzliche interne oder externe Fachkompetenz einbezogen und dokumentiert.')]
-    story += [P('4  Ablauf', 'h1'), criteria_table([
+        story.append(scheme_p(f'<b>{name}:</b> {text}'))
+    story += [scheme_p('3  Kompetenz', 'h1'), scheme_p('Prüfung, Fachprüfung und Entscheidung werden Personen zugewiesen, deren Kenntnisse und Erfahrung für den jeweiligen Produkt- und Herstellungsprozess ausreichend sind. Wenn spezielles Fachwissen erforderlich ist, wird zusätzliche interne oder externe Fachkompetenz einbezogen und dokumentiert.')]
+    story += [scheme_p('4  Ablauf', 'h1'), criteria_table([
         ('1','Anfrage und Umfang','Produkt oder Produktfamilie, Produktionsorte und wesentliche Fremdfertigung festlegen.'),
         ('2','Herstellung erfassen','Wesentliche Herstellungsschritte und Automatisierungsgrad erfassen.'),
         ('3','Nachweise und Vor-Ort-Prüfung','Unterlagen mit der tatsächlichen Produktion abgleichen.'),
@@ -63,14 +75,14 @@ def build_scheme_v1():
         ('5','Fachprüfung','Prüfergebnis kontrollieren und offene Punkte klären.'),
         ('6','Entscheidung und Register','Entscheidung dokumentieren und bei Freigabe einer regulären Zertifizierung den aktiven Status veröffentlichen.')
     ])]
-    story += [P('5  Gültigkeit und Überwachung', 'h1'), P('Eine positive reguläre Zertifizierung gilt grundsätzlich zwölf Monate ab Ausstellungsdatum. Vor der Verlängerung erfolgt eine erneute Bewertung. Ein vollständiges jährliches Vor-Ort-Audit ist nicht automatisch erforderlich, kann aber je nach Änderungen oder bisherigen Feststellungen verlangt werden.')]
-    story += [P('6  Änderungspflicht', 'h1'), P('Wesentliche Änderungen an Produkt, Herstellungsschritten, Automatisierungsgrad, Produktionsorten oder Fremdfertigung müssen unverzüglich gemeldet werden. Made by Human bewertet die Auswirkungen und entscheidet über Fortbestand, Nachprüfung, Erweiterung oder Aussetzung.')]
-    story += [P('7  Status regulärer Zertifizierungen', 'h1')]
+    story += [scheme_p('5  Gültigkeit und Überwachung', 'h1'), scheme_p('Eine positive reguläre Zertifizierung gilt grundsätzlich zwölf Monate ab Ausstellungsdatum. Vor der Verlängerung erfolgt eine erneute Bewertung. Ein vollständiges jährliches Vor-Ort-Audit ist nicht automatisch erforderlich, kann aber je nach Änderungen oder bisherigen Feststellungen verlangt werden.')]
+    story += [scheme_p('6  Änderungspflicht', 'h1'), scheme_p('Wesentliche Änderungen an Produkt, Herstellungsschritten, Automatisierungsgrad, Produktionsorten oder Fremdfertigung müssen unverzüglich gemeldet werden. Made by Human bewertet die Auswirkungen und entscheidet über Fortbestand, Nachprüfung, Erweiterung oder Aussetzung.')]
+    story += [scheme_p('7  Status regulärer Zertifizierungen', 'h1')]
     for name, text in [('Aktiv','Zertifizierung ist innerhalb des veröffentlichten Umfangs und Zeitraums gültig.'), ('Ausgesetzt','Zeichennutzung ist bis zur Klärung vorübergehend nicht zulässig.'), ('Abgelaufen','Gültigkeitszeitraum ist beendet und nicht verlängert.'), ('Widerrufen','Zertifizierung ist beendet; die Zeichennutzung ist nicht mehr zulässig.')]:
-        story.append(P(f'<b>{name}:</b> {text}'))
-    story += [P('8  Zertifizierung verbundener Unternehmen', 'h1'), P('Auch Produkte des Systeminhabers und von Unternehmen unter gemeinsamer rechtlicher oder wirtschaftlicher Kontrolle können regulär zertifiziert werden. Eine wirtschaftliche, gesellschaftsrechtliche oder personelle Verbindung ist für sich genommen kein Ausschlussgrund. Es gelten dieselben Anforderungen an Herstellung, Nachweise, Vor-Ort-Prüfung, Fachprüfung und Zertifizierungsentscheidung. Die Verbindung wird im öffentlichen Register offengelegt; die Zertifizierung wird nicht als unabhängige Drittprüfung dargestellt. Bei positiver Entscheidung und aktivem Status darf das Zeichen für den zertifizierten Umfang genutzt werden.'), P('Eine Pilotprüfung dient ausschließlich der Erprobung des Standards oder Prüfprozesses, solange keine reguläre Zertifizierungsentscheidung vorliegt. Sie berechtigt nicht zur Zeichennutzung. Eine Unternehmensverbindung allein begründet keinen Pilotstatus. Bestehende Pilotprüfungen werden nicht automatisch in aktive Zertifizierungen umgewandelt.')]
-    story += [P('9  Beschwerden, Einsprüche und Zeichenmissbrauch', 'h1'), P('Beschwerden, Einsprüche gegen Entscheidungen und unberechtigte Zeichennutzung werden getrennt erfasst, auf mögliche Interessenkonflikte geprüft, bewertet und mit Ergebnis dokumentiert. Ein Einspruch wird nicht allein von der Person abschließend beurteilt, die die angefochtene Entscheidung getroffen hat.')]
-    story += [P('10  Öffentliches Register und Markennutzung', 'h1'), P('Reguläre Zertifizierungen und Pilotprüfungen werden im Register klar voneinander unterschieden. Das Zertifizierungszeichen darf nur bei aktivem Status einer regulären Zertifizierung und nur für den zertifizierten Umfang verwendet werden. Made by Human behauptet keine Akkreditierung, solange diese Eigenschaft nicht tatsächlich besteht und belegt werden kann.')]
+        story.append(scheme_p(f'<b>{name}:</b> {text}'))
+    story += [scheme_p('8  Zertifizierung verbundener Unternehmen', 'h1'), scheme_p('Auch Produkte des Systeminhabers und von Unternehmen unter gemeinsamer rechtlicher oder wirtschaftlicher Kontrolle können regulär zertifiziert werden. Eine wirtschaftliche, gesellschaftsrechtliche oder personelle Verbindung ist für sich genommen kein Ausschlussgrund. Es gelten dieselben Anforderungen an Herstellung, Nachweise, Vor-Ort-Prüfung, Fachprüfung und Zertifizierungsentscheidung. Die Verbindung wird im öffentlichen Register offengelegt; die Zertifizierung wird nicht als unabhängige Drittprüfung dargestellt. Bei positiver Entscheidung und aktivem Status darf das Zeichen für den zertifizierten Umfang genutzt werden.'), scheme_p('Eine Pilotprüfung dient ausschließlich der Erprobung des Standards oder Prüfprozesses, solange keine reguläre Zertifizierungsentscheidung vorliegt. Sie berechtigt nicht zur Zeichennutzung. Eine Unternehmensverbindung allein begründet keinen Pilotstatus. Bestehende Pilotprüfungen werden nicht automatisch in aktive Zertifizierungen umgewandelt.')]
+    story += [scheme_p('9  Beschwerden, Einsprüche und Zeichenmissbrauch', 'h1'), scheme_p('Beschwerden, Einsprüche gegen Entscheidungen und unberechtigte Zeichennutzung werden getrennt erfasst, auf mögliche Interessenkonflikte geprüft, bewertet und mit Ergebnis dokumentiert. Ein Einspruch wird nicht allein von der Person abschließend beurteilt, die die angefochtene Entscheidung getroffen hat.')]
+    story += [scheme_p('10  Öffentliches Register und Markennutzung', 'h1'), scheme_p('Reguläre Zertifizierungen und Pilotprüfungen werden im Register klar voneinander unterschieden. Das Zertifizierungszeichen darf nur bei aktivem Status einer regulären Zertifizierung und nur für den zertifizierten Umfang verwendet werden. Made by Human behauptet keine Akkreditierung, solange diese Eigenschaft nicht tatsächlich besteht und belegt werden kann.')]
     doc.build(story, onFirstPage=lambda c,d: version_footer(c,d,'MBH-SCH-1.1','Zertifizierungsschema','Version 1.1 · Veröffentlicht'), onLaterPages=lambda c,d: version_footer(c,d,'MBH-SCH-1.1','Zertifizierungsschema','Version 1.1 · Veröffentlicht'))
 
 
