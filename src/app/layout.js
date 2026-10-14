@@ -5,6 +5,7 @@ import './header-logo-fix.css';
 import './certificate-mobile-fix.css';
 import './motion.css';
 import './refine.css';
+import './direction.css';
 import MotionController from '../components/MotionController';
 import {
   canonical,

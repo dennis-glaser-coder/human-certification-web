@@ -1,0 +1,96 @@
+/* ===== Design direction "Register und Siegel" 2026-10-14 =====
+   Loaded last. Colour carries meaning: Standard Blue marks what can be
+   verified (records, status, the verify band, links). White paper is for
+   content and records, Human Paper is the ground, light stone is for
+   metadata. The register record is the one emphatic element. */
+
+:root {
+  --stone-light: #ECE8DE;
+  --label-ink: rgba(17, 24, 32, .64);
+  --label-light: rgba(255, 255, 255, .70);
+}
+
+
+/* ----- Section labels: quiet, blue is reserved for verification ----- */
+main :is(.premiumEyebrow, .premiumSectionLabel, .eyebrow, .sectionNo) {
+  color: var(--label-ink);
+}
+
+main .premiumSectionLabelLight,
+main :is(.desireManifesto, .whyThesis) .premiumSectionLabel {
+  color: var(--label-light);
+}
+
+
+/* ----- One record frame -----
+   White sheet, hairline frame, 3px top rule. The rule colour is the status
+   (blue = active), as on the certificate page. */
+.homeDigitalProofCard {
+  background: var(--stone-light);
+}
+
+.homeDigitalProofHead,
+.homeDigitalProofBody,
+.homeDigitalProofBody .certificateQr {
+  background: var(--white);
+}
+
+.homeDigitalProofHead,
+.homeDigitalProofBody {
+  border-left-color: var(--line);
+  border-right-color: var(--line);
+}
+
+.homeDigitalProofBody {
+  border-bottom-color: var(--line);
+}
+
+.homeDigitalProofBody .certificateQr {
+  border-color: var(--line);
+}
+
+.buyerProofSpecimen {
+  background: var(--white);
+}
+
+.verificationRecord {
+  border-color: var(--line) !important;
+}
+
+
+/* ----- The one orchestrated moment: the demo record resolves -----
+   The status rule draws across the record, then the facts appear line by
+   line, as if the register lookup were answering. */
+.homeDigitalProofHead {
+  position: relative;
+  border-top-color: transparent !important;
+}
+
+.homeDigitalProofHead::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  right: -1px;
+  top: -3px;
+  height: 3px;
+  background: var(--blue);
+  transform-origin: 0 50%;
+  transition: transform 1.1s var(--ease-soft) calc(var(--reveal-delay, 0ms) + .1s);
+}
+
+html.js-motion .homeDigitalProofHead[data-reveal]:not(.is-revealed)::before {
+  transform: scaleX(0);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .homeDigitalProofBody[data-shown] :is(.homeDigitalProofData > small, .homeDigitalProofData > h3, .homeDigitalProofData dl > div, .homeDigitalProofData > a, .certificateQr) {
+    animation: mbhRise .7s var(--ease-soft) both;
+  }
+
+  .homeDigitalProofBody[data-shown] .homeDigitalProofData > h3 { animation-delay: .08s; }
+  .homeDigitalProofBody[data-shown] .homeDigitalProofData dl > div:nth-child(1) { animation-delay: .2s; }
+  .homeDigitalProofBody[data-shown] .homeDigitalProofData dl > div:nth-child(2) { animation-delay: .3s; }
+  .homeDigitalProofBody[data-shown] .homeDigitalProofData dl > div:nth-child(3) { animation-delay: .4s; }
+  .homeDigitalProofBody[data-shown] .homeDigitalProofData > a { animation-delay: .52s; }
+  .homeDigitalProofBody[data-shown] .certificateQr { animation-delay: .6s; }
+}

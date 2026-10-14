@@ -7738,7 +7738,7 @@ textarea:focus-visible{
 .buyerVerify{padding:94px 0 98px;background:var(--blue);color:var(--white);}
 .buyerVerifyGrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:105px;align-items:center;}
 .buyerVerifyVisual{display:flex;justify-content:center;}
-.buyerPhone{width:310px;min-height:520px;padding:42px 26px 28px;background:#F7F4ED;color:var(--ink);border:8px solid var(--ink);border-radius:30px;box-shadow:0 25px 60px rgba(17,24,32,.20);position:relative;}
+.buyerPhone{width:310px;min-height:520px;padding:42px 26px 28px;background:var(--paper);color:var(--ink);border:8px solid var(--ink);border-radius:30px;box-shadow:0 25px 60px rgba(17,24,32,.20);position:relative;}
 .buyerPhoneTop{position:absolute;top:12px;left:50%;width:72px;height:5px;background:var(--ink);border-radius:9px;transform:translateX(-50%);}
 .buyerPhone>span{display:block;margin-bottom:8px;color:var(--blue);font-size:7px;font-weight:700;letter-spacing:.14em;}
 .buyerPhone>strong{display:block;font-family:var(--font-serif),Georgia,serif;font-size:28px;font-weight:500;}
@@ -7987,7 +7987,7 @@ textarea:focus-visible{
 }
 
 /* Applications: asymmetrical editorial collage, not a 2x2 card wall */
-.sealApplications{padding:108px 0 112px;background:#F7F4ED;}
+.sealApplications{padding:108px 0 112px;background:var(--paper);}
 .sealApplicationGrid{
   display:grid;
   grid-template-columns:repeat(12,1fr);
@@ -8170,7 +8170,7 @@ textarea:focus-visible{
 .desireVerify{padding:102px 0;background:var(--blue);}
 .desireVerifyTool{
   padding:34px;
-  background:#F4F0E6;
+  background:var(--paper);
   border:0;
   box-shadow:18px 18px 0 rgba(17,24,32,.12);
 }
@@ -8474,7 +8474,7 @@ textarea:focus-visible{
   line-height:1.2;
 }
 .manufacturerProcessGrid p{font-size:9px;}
-.manufacturerMarkValue{padding:108px 0 112px;background:#F4F0E6;}
+.manufacturerMarkValue{padding:108px 0 112px;background:var(--paper);}
 .manufacturerMarkGrid{
   display:block;
   margin-top:52px;
@@ -8983,7 +8983,7 @@ textarea:focus-visible{
 
   /* Manufacturer form should feel like editorial paper, not SaaS form */
   .manufacturerApplication{
-    background:#F4F0E6;
+    background:var(--paper);
   }
   .certificationRequestForm{
     margin-left:calc((100vw - 100%)/-2);
@@ -9150,14 +9150,14 @@ textarea:focus-visible{
 }
 .homeVerifyTool{
   padding:24px;
-  background:#F4F0E6;
+  background:var(--paper);
   color:var(--ink);
   box-shadow:14px 14px 0 rgba(17,24,32,.12);
 }
 
 .homeFinalCompact{
   padding:82px 0 0;
-  background:#F4F0E6;
+  background:var(--paper);
 }
 .homeFinalTop{
   display:grid;
@@ -9396,7 +9396,7 @@ textarea:focus-visible{
 /* Compact homepage verification */
 .homeVerifyCompact{
   padding:34px 36px;
-  background:#F4F0E6;
+  background:var(--paper);
   color:var(--ink);
   border:1px solid rgba(255,255,255,.26);
 }

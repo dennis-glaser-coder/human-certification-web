@@ -157,7 +157,7 @@ summary:focus-visible {
 /* Mark use: one calm, real-world application anchor. */
 .markUseRealExample {
   padding: 78px 0 84px;
-  background: #F7F4ED;
+  background: var(--paper);
   border-bottom: 1px solid var(--stone);
 }
 
@@ -680,7 +680,7 @@ summary:focus-visible {
 /* Public proof surfaces use the same visual grammar: blue authority rule, paper field, no app-card styling. */
 .registerTrustBar,
 .verifyTrustStrip{
-  background:#F7F4ED;
+  background:var(--paper);
   border-top:3px solid var(--blue);
   border-bottom:1px solid var(--line);
 }
@@ -696,7 +696,7 @@ summary:focus-visible {
 }
 .documentRegistryRow:hover,
 .registerRow:hover{
-  background:#F7F4ED;
+  background:var(--paper);
 }
 
 .verificationRecord{
@@ -1137,7 +1137,7 @@ summary:focus-visible {
     min-height:46px;
     padding:0 14px;
     border:1px solid var(--line);
-    background:#F7F4ED;
+    background:var(--paper);
   }
   .registerRow{
     gap:22px;
@@ -1436,7 +1436,7 @@ summary:focus-visible {
   padding:26px;
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line-soft);
-  background:#F7F4ED;
+  background:var(--paper);
 }
 
 .markUseMasterLogo img{
@@ -3232,7 +3232,7 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
 
 .homeBenefitBand{
   padding:64px 0 66px;
-  background:#F7F4ED;
+  background:var(--paper);
   border-top:1px solid var(--line-soft);
   border-bottom:1px solid var(--stone);
 }
@@ -3379,7 +3379,7 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
 
 .homeProcessBand{
   padding:72px 0 76px;
-  background:#F7F4ED;
+  background:var(--paper);
   border-top:1px solid var(--stone);
   border-bottom:1px solid var(--stone);
 }
@@ -3783,7 +3783,7 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
   align-items:center;
   justify-content:center;
   gap:14px;
-  background:#F7F4ED;
+  background:var(--paper);
   border:1px solid var(--line);
   box-shadow:0 20px 45px rgba(17,24,32,.10);
   transform:rotate(-2deg);
@@ -3879,7 +3879,7 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
   align-items:center;
   justify-content:space-between;
   gap:20px;
-  background:#F7F4ED;
+  background:var(--paper);
   border-top:3px solid var(--blue);
   border-left:1px solid var(--line);
   border-right:1px solid var(--line);
@@ -3903,7 +3903,7 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
   display:grid;
   grid-template-columns:minmax(0,1fr) 245px;
   gap:0;
-  background:#F7F4ED;
+  background:var(--paper);
   border-left:1px solid var(--line);
   border-right:1px solid var(--line);
   border-bottom:1px solid var(--line);
@@ -3978,7 +3978,7 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
   align-items:center;
   justify-content:center;
   gap:12px;
-  background:#F7F4ED;
+  background:var(--paper);
 }
 
 .homeDigitalProofCard .certificateQrCode{
