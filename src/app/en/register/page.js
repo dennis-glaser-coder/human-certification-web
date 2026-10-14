@@ -100,7 +100,7 @@ export default function RegisterPage() {
               <div><small>PRODUCT</small><strong>{record.products?.name ?? '—'}</strong>{record.certification_scope && <em className="registerSubline">{record.certification_scope}</em>}</div>
               <div><small>STANDARD</small><strong>{record.standard_versions?.version ?? record.standard_versions?.title ?? '—'}</strong></div>
               <div className="registerStatusCell"><small>STATUS / VALID UNTIL</small><span className={'statusBadge status-' + record.status + (record.status === 'active' ? ' active' : '')}>{record.public_id?.startsWith('HC-DEMO-') ? 'Demo · not a real certification' : (labels[record.status] ?? record.status)}</span><em>{formatDate(record.valid_until)}</em></div>
-              <Link href={'/en/verify?id=' + encodeURIComponent(record.public_id)} aria-label={'Open ' + record.public_id}>Record →</Link>
+              <Link href={'/en/verify?id=' + encodeURIComponent(record.public_id)} aria-label={'Open ' + record.public_id}>Record <span className="linkArrow" aria-hidden="true">→</span></Link>
             </article>
           ))}
         </div>

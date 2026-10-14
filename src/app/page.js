@@ -95,7 +95,7 @@ export default function Home() {
                 <span>OPTIONALE KENNZEICHNUNG</span>
                 <h3>Das Zeichen am Produkt.</h3>
                 <p>Das Zertifizierungszeichen kann am Produkt, auf der Verpackung oder als Anhänger eingesetzt werden.</p>
-                <Link href="/markennutzung">Markennutzung ansehen →</Link>
+                <Link href="/markennutzung">Markennutzung ansehen <span className="linkArrow" aria-hidden="true">→</span></Link>
               </div>
             </article>
 
@@ -114,7 +114,7 @@ export default function Home() {
                       <div><dt>Zertifizierungs-ID</dt><dd>HC-DEMO-0001</dd></div>
                       <div><dt>Standard</dt><dd>0.1-DEMO</dd></div>
                     </dl>
-                    <Link href="/zertifikat/?id=HC-DEMO-0001">Öffentlichen Datensatz ansehen →</Link>
+                    <Link href="/zertifikat/?id=HC-DEMO-0001">Öffentlichen Datensatz ansehen <span className="linkArrow" aria-hidden="true">→</span></Link>
                   </div>
                   <CertificationQr publicId="HC-DEMO-0001" />
                 </div>
@@ -163,7 +163,7 @@ export default function Home() {
             <p>Zertifizierungs-ID eingeben oder QR-Code scannen.</p>
             <div className="homeVerifyActions">
               <Link className="homeVerifyPrimary" href="/pruefen">Zertifizierung prüfen</Link>
-              <Link className="homeVerifyRegisterLink" href="/register">Register durchsuchen →</Link>
+              <Link className="homeVerifyRegisterLink" href="/register">Register durchsuchen <span className="linkArrow" aria-hidden="true">→</span></Link>
             </div>
           </div>
         </div>

@@ -103,9 +103,9 @@ export default function SchemeDocumentPage() {
             Für Markennutzung, Beschwerden, Einsprüche, Zeichenmissbrauch und mögliche Interessenkonflikte gibt es eigene Regeln mit festen Zuständigkeiten und Versionsstand.
           </p>
           <div className="inlineDocLinks">
-            <Link href="/markennutzung">Markennutzungsgrundsätze →</Link>
-            <Link href="/verfahren">Beschwerden, Einsprüche & Zeichenmissbrauch →</Link>
-            <Link href="/transparenz">Transparenz & Integrität →</Link>
+            <Link href="/markennutzung">Markennutzungsgrundsätze <span className="linkArrow" aria-hidden="true">→</span></Link>
+            <Link href="/verfahren">Beschwerden, Einsprüche & Zeichenmissbrauch <span className="linkArrow" aria-hidden="true">→</span></Link>
+            <Link href="/transparenz">Transparenz & Integrität <span className="linkArrow" aria-hidden="true">→</span></Link>
           </div>
         </section>
 

@@ -111,7 +111,7 @@ export default function CertificateClient({ id }) {
       <section className="certificatePage shell">
         <div className="certificateBar">
           <span>ÖFFENTLICHES REGISTER</span>
-          <Link href="/register">Zur Registersuche →</Link>
+          <Link href="/register">Zur Registersuche <span className="linkArrow" aria-hidden="true">→</span></Link>
         </div>
 
         {state.loading && <div className="certificateMessage">Eintrag wird geladen …</div>}

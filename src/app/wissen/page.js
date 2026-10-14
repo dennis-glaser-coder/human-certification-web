@@ -36,7 +36,7 @@ export default function WissenPage() {
           <div className="whySectionHead"><div><p className="premiumSectionLabel">THEMEN</p><h2>Grundlagen rund um Handarbeit und Zertifizierung.</h2></div></div>
           <div className="whyBenefitGrid">
             {articles.map(([title, href, copy]) => (
-              <article key={href}><strong>{title}</strong><p>{copy}</p><Link className="desireTextLink" href={href}>Artikel lesen →</Link></article>
+              <article key={href}><strong>{title}</strong><p>{copy}</p><Link className="desireTextLink" href={href}>Artikel lesen <span className="linkArrow" aria-hidden="true">→</span></Link></article>
             ))}
           </div>
         </div>
@@ -45,7 +45,7 @@ export default function WissenPage() {
       <section className="salesFinalCta whyFinalCta">
         <div className="shell salesFinalCtaGrid">
           <div><p className="premiumSectionLabel premiumSectionLabelLight">FÜR HERSTELLER</p><h2>Sie möchten Ihre Herstellung nachvollziehbar belegen?</h2></div>
-          <div><p>Made by Human prüft konkrete Produkte und Produktfamilien nach festgelegten Kriterien. Lesen Sie auch, was unser <Link href="/handarbeit-siegel">Handarbeit-Siegel</Link> aussagt.</p><Link className="salesFinalButton" href="/handarbeit-zertifizieren">Handarbeit zertifizieren lassen</Link><Link className="salesFinalText" href="/zertifizierung">Zertifizierung nach Produktart →</Link></div>
+          <div><p>Made by Human prüft konkrete Produkte und Produktfamilien nach festgelegten Kriterien. Lesen Sie auch, was unser <Link href="/handarbeit-siegel">Handarbeit-Siegel</Link> aussagt.</p><Link className="salesFinalButton" href="/handarbeit-zertifizieren">Handarbeit zertifizieren lassen</Link><Link className="salesFinalText" href="/zertifizierung">Zertifizierung nach Produktart <span className="linkArrow" aria-hidden="true">→</span></Link></div>
         </div>
       </section>
       <SiteFooter />

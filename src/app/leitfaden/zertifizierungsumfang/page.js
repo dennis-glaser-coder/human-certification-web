@@ -135,7 +135,7 @@ export default function ScopeGuidePage() {
           </p>
           <div className="guideLinks">
             <Link className="button primary" href="/fuer-hersteller#zertifizierungsanfrage">Zertifizierung anfragen</Link>
-            <Link className="textLink" href="/leitfaden/nachweise">Nachweise verstehen →</Link>
+            <Link className="textLink" href="/leitfaden/nachweise">Nachweise verstehen <span className="linkArrow" aria-hidden="true">→</span></Link>
           </div>
         </div>
       </section>

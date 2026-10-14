@@ -51,7 +51,7 @@ export default function MarkUsePage() {
 
       <section className="markUseProhibited"><div className="shell markUseProhibitedGrid"><div><div className="sectionNo light">NICHT ZULÄSSIG</div><h2>Das Zeichen darf keine weitergehende Zertifizierung vortäuschen.</h2></div><div className="markUseProhibitedList">{prohibited.map(([title, copy]) => <article key={title}><div><strong>{title}</strong><p>{copy}</p></div></article>)}</div></div></section>
 
-      <section className="shell standardClose"><p>Markennutzungsregeln Version 1.0 · Stand 14.09.2026. Sie gelten zusammen mit dem zertifizierten Umfang, dem öffentlichen Registereintrag und dem aktuellen Zertifizierungsstatus.</p><div className="standardCloseLinks"><Link className="textLink" href="/dokumente">Dokumentenregister →</Link><Link className="textLink" href="/verfahren">Verfahren bei Zeichenmissbrauch →</Link></div></section>
+      <section className="shell standardClose"><p>Markennutzungsregeln Version 1.0 · Stand 14.09.2026. Sie gelten zusammen mit dem zertifizierten Umfang, dem öffentlichen Registereintrag und dem aktuellen Zertifizierungsstatus.</p><div className="standardCloseLinks"><Link className="textLink" href="/dokumente">Dokumentenregister <span className="linkArrow" aria-hidden="true">→</span></Link><Link className="textLink" href="/verfahren">Verfahren bei Zeichenmissbrauch <span className="linkArrow" aria-hidden="true">→</span></Link></div></section>
       <SiteFooter />
     </main>
   );

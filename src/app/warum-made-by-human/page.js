@@ -131,7 +131,7 @@ export default function WhyPage() {
                 </article>
               ))}
             </div>
-            <Link className="desireTextLink desireTextLinkLight" href="/fuer-kaeufer">Was das Zeichen für Käufer bedeutet →</Link>
+            <Link className="desireTextLink desireTextLinkLight" href="/fuer-kaeufer">Was das Zeichen für Käufer bedeutet <span className="linkArrow" aria-hidden="true">→</span></Link>
           </div>
         </div>
       </section>
@@ -164,7 +164,7 @@ export default function WhyPage() {
               </div>
             ))}
           </div>
-          <Link className="desireTextLink" href="/standard">Kriterien und Grenzen des Standards →</Link>
+          <Link className="desireTextLink" href="/standard">Kriterien und Grenzen des Standards <span className="linkArrow" aria-hidden="true">→</span></Link>
         </div>
       </section>
 
@@ -179,7 +179,7 @@ export default function WhyPage() {
               In der ersten Einschätzung klären wir, ob Ihr Produkt grundsätzlich zum Standard passt und was genau zertifiziert werden soll.
             </p>
             <Link className="salesFinalButton" href="/fuer-hersteller#zertifizierungsanfrage">Zertifizierung anfragen</Link>
-            <Link className="salesFinalText" href="/fuer-hersteller">Ablauf der Zertifizierung ansehen →</Link>
+            <Link className="salesFinalText" href="/fuer-hersteller">Ablauf der Zertifizierung ansehen <span className="linkArrow" aria-hidden="true">→</span></Link>
           </div>
         </div>
       </section>

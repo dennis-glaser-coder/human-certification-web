@@ -155,9 +155,9 @@ export default function AboutPage() {
           </div>
 
           <div className="aboutArchitectureLinks">
-            <Link href="/standard">Standard ansehen →</Link>
-            <Link href="/dokumente">Dokumente öffnen →</Link>
-            <Link href="/transparenz">Transparenz & Integrität →</Link>
+            <Link href="/standard">Standard ansehen <span className="linkArrow" aria-hidden="true">→</span></Link>
+            <Link href="/dokumente">Dokumente öffnen <span className="linkArrow" aria-hidden="true">→</span></Link>
+            <Link href="/transparenz">Transparenz & Integrität <span className="linkArrow" aria-hidden="true">→</span></Link>
           </div>
         </div>
       </section>

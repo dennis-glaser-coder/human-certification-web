@@ -1,0 +1,491 @@
+/* ===== Motion & interaction layer 2026-10-14 =====
+   Loaded last. Only movement, timing and interaction states live here;
+   layout, colors and content stay where they are. Everything that moves
+   is switched off for prefers-reduced-motion. */
+
+:root {
+  --ease-out: cubic-bezier(.22, .61, .36, 1);
+  --ease-soft: cubic-bezier(.16, 1, .3, 1);
+  --motion-fast: .18s;
+  --motion-base: .35s;
+  --motion-slow: .7s;
+  --error: #A33A2B;
+}
+
+html {
+  scrollbar-gutter: stable;
+  scroll-padding-top: 96px;
+}
+
+@media (max-width: 1200px) {
+  html { scroll-padding-top: 112px; }
+}
+
+@media (max-width: 760px) {
+  html { scroll-padding-top: 88px; }
+}
+
+html.menu-open {
+  overflow: hidden;
+}
+
+
+/* ----- Header: tightens after the first scroll (desktop) -----
+   The header box keeps its height, it slides up by the amount the logo
+   shrinks. No layout shift for the content below. */
+.premiumSiteHeader {
+  background-color: var(--paper);
+}
+
+@media (min-width: 1201px) {
+  .premiumSiteHeader {
+    transition: top .5s var(--ease-soft);
+  }
+
+  .premiumSiteHeader .premiumHeaderInner {
+    transition: padding-top .5s var(--ease-soft);
+  }
+
+  .premiumBrandLockup .brandHeaderLogoCrop {
+    transition: width .5s var(--ease-soft), height .5s var(--ease-soft);
+  }
+
+  html.is-scrolled .premiumSiteHeader {
+    top: -28px;
+  }
+
+  html.is-scrolled .premiumSiteHeader .premiumHeaderInner {
+    padding-top: 32px;
+  }
+
+  html.is-scrolled .premiumBrandLockup .brandHeaderLogoCrop {
+    width: 210px;
+    height: 66px;
+  }
+}
+
+/* Reading progress as a thin rule under the header. */
+@supports (animation-timeline: scroll()) {
+  .premiumSiteHeader::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 2px;
+    background: var(--blue);
+    transform-origin: 0 50%;
+    transform: scaleX(0);
+    pointer-events: none;
+    animation: mbhProgress linear both;
+    animation-timeline: scroll(root block);
+  }
+}
+
+@keyframes mbhProgress {
+  to { transform: scaleX(1); }
+}
+
+
+/* ----- Mobile header: everything fits on small phones ----- */
+@media (max-width: 760px) {
+  .premiumHeaderInner {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .premiumBrandLockup .brandHeaderLogoCrop,
+  .compactHome .premiumBrandLockup .brandHeaderLogoCrop {
+    width: 150px;
+    height: 47px;
+  }
+
+  .premiumMobileHeaderActions {
+    gap: 6px !important;
+  }
+
+  .premiumMobileHeaderActions .mobileVerify {
+    padding: 0 6px !important;
+  }
+
+  .premiumMobileHeaderActions .mobileMenuToggle {
+    margin-right: -12px;
+  }
+}
+
+@media (max-width: 370px) {
+  .premiumBrandLockup .brandHeaderLogoCrop,
+  .compactHome .premiumBrandLockup .brandHeaderLogoCrop {
+    width: 138px;
+    height: 43px;
+  }
+}
+
+
+/* ----- Desktop "Mehr" menu ----- */
+.desktopNavMenuPanel {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition:
+    opacity var(--motion-fast) ease,
+    transform var(--motion-base) var(--ease-soft),
+    visibility 0s linear var(--motion-base);
+}
+
+.desktopNavMenuPanel[data-open="true"] {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition:
+    opacity .22s ease,
+    transform .4s var(--ease-soft),
+    visibility 0s;
+}
+
+.desktopNavMenuPanel a {
+  transition: background-color var(--motion-fast) ease, color var(--motion-fast) ease;
+}
+
+
+/* ----- Mobile menu ----- */
+.mobileMenuToggle span {
+  transition: transform .4s var(--ease-soft), opacity var(--motion-fast) ease;
+}
+
+.mobileMenuToggle[aria-expanded="true"] span:first-child {
+  transform: translateY(3px) rotate(45deg);
+}
+
+.mobileMenuToggle[aria-expanded="true"] span:last-child {
+  transform: translateY(-3px) rotate(-45deg);
+}
+
+.premiumMobileMenu {
+  top: var(--mobile-menu-top, 69px) !important;
+  max-height: calc(100dvh - var(--mobile-menu-top, 69px)) !important;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  visibility: hidden;
+  clip-path: inset(0 0 100% 0);
+  transition:
+    clip-path .4s var(--ease-soft),
+    visibility 0s linear .4s;
+}
+
+.premiumMobileMenu[data-open="true"] {
+  visibility: visible;
+  clip-path: inset(0 0 0 0);
+  transition:
+    clip-path .55s var(--ease-soft),
+    visibility 0s;
+}
+
+.premiumMobileMenu a {
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity .2s ease, transform .3s var(--ease-soft);
+}
+
+.premiumMobileMenu[data-open="true"] a {
+  opacity: 1;
+  transform: none;
+  transition: opacity .4s ease, transform .55s var(--ease-soft);
+}
+
+.premiumMobileMenu[data-open="true"] a:nth-child(1) { transition-delay: .04s; }
+.premiumMobileMenu[data-open="true"] a:nth-child(2) { transition-delay: .07s; }
+.premiumMobileMenu[data-open="true"] a:nth-child(3) { transition-delay: .1s; }
+.premiumMobileMenu[data-open="true"] a:nth-child(4) { transition-delay: .13s; }
+.premiumMobileMenu[data-open="true"] a:nth-child(5) { transition-delay: .16s; }
+.premiumMobileMenu[data-open="true"] a:nth-child(6) { transition-delay: .19s; }
+.premiumMobileMenu[data-open="true"] a:nth-child(7) { transition-delay: .22s; }
+.premiumMobileMenu[data-open="true"] a:nth-child(8) { transition-delay: .25s; }
+.premiumMobileMenu[data-open="true"] a:nth-child(9) { transition-delay: .28s; }
+.premiumMobileMenu[data-open="true"] a:nth-child(n+10) { transition-delay: .31s; }
+
+.mobileMenuBackdrop {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: var(--mobile-menu-top, 69px);
+  z-index: 55;
+  padding: 0;
+  border: 0;
+  background: rgba(17, 24, 32, .32);
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  transition: opacity var(--motion-base) ease, visibility 0s linear var(--motion-base);
+}
+
+.mobileMenuBackdrop[data-open="true"] {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .45s ease, visibility 0s;
+}
+
+
+/* ----- FAQ and form disclosures: open and close softly ----- */
+@supports selector(::details-content) {
+  main details,
+  .premiumFooterNavMobile details {
+    interpolate-size: allow-keywords;
+  }
+
+  main details::details-content,
+  .premiumFooterNavMobile details::details-content {
+    block-size: 0;
+    overflow: clip;
+    overflow-clip-margin: 6px;
+    opacity: 0;
+    transition:
+      block-size .45s var(--ease-soft),
+      opacity .3s ease,
+      content-visibility .45s allow-discrete;
+  }
+
+  main details[open]::details-content,
+  .premiumFooterNavMobile details[open]::details-content {
+    block-size: auto;
+    opacity: 1;
+  }
+}
+
+/* Plus turns into minus instead of swapping characters. */
+:is(.manufacturerFaqList, .buyerFaqList) summary::after,
+.optionalFormDetails > summary::after,
+.premiumFooterNavMobile summary::after {
+  content: "" !important;
+  width: 12px;
+  height: 12px;
+  background:
+    linear-gradient(currentColor, currentColor) center / 100% 1.5px no-repeat,
+    linear-gradient(currentColor, currentColor) center / 1.5px 100% no-repeat;
+  transition: transform .45s var(--ease-soft), background-size .45s var(--ease-soft);
+}
+
+:is(.manufacturerFaqList, .buyerFaqList) summary::after {
+  top: 50%;
+  margin-top: -6px;
+}
+
+.premiumFooterNavMobile summary::after {
+  margin-top: -6px;
+  transform: none;
+}
+
+:is(.manufacturerFaqList, .buyerFaqList) details[open] > summary::after,
+.optionalFormDetails[open] > summary::after,
+.premiumFooterNavMobile details[open] > summary::after {
+  background-size: 100% 1.5px, 1.5px 0;
+  transform: rotate(180deg);
+}
+
+:is(.manufacturerFaqList, .buyerFaqList) summary {
+  transition: color var(--motion-fast) ease;
+}
+
+:is(.manufacturerFaqList, .buyerFaqList) summary:hover {
+  color: var(--blue);
+}
+
+
+/* ----- Links and buttons ----- */
+.linkArrow {
+  display: inline-block;
+  transition: transform var(--motion-base) var(--ease-soft);
+}
+
+a:hover .linkArrow,
+a:focus-visible .linkArrow {
+  transform: translateX(3px);
+}
+
+main :is(.button, .desirePrimary, .desireSecondary, .desireFinalButton, .homeVerifyPrimary, .premiumHeroPrimary, .salesPrimary),
+.premiumMainNav .navVerify {
+  transition:
+    background-color var(--motion-fast) ease,
+    border-color var(--motion-fast) ease,
+    color var(--motion-fast) ease,
+    transform var(--motion-fast) ease;
+}
+
+main :is(.button, .desirePrimary, .desireSecondary, .desireFinalButton, .homeVerifyPrimary, .premiumHeroPrimary, .salesPrimary):active,
+.premiumMainNav .navVerify:active {
+  transform: translateY(1px);
+}
+
+.premiumMainNav a:not(.navVerify)::after {
+  transition: right var(--motion-base) var(--ease-soft);
+}
+
+
+/* ----- Forms ----- */
+main :is(input, textarea, select) {
+  transition: border-color var(--motion-fast) ease, background-color var(--motion-fast) ease;
+}
+
+main form :is(input, textarea, select):user-invalid {
+  border-color: var(--error);
+  background-color: #FBF4F1;
+}
+
+@media (min-width: 1021px) {
+  .manufacturerApplicationIntro {
+    position: sticky;
+    top: 100px;
+    align-self: start;
+  }
+}
+
+
+/* ----- Verify result appears instead of popping in ----- */
+.verificationRecord,
+.verificationEmpty {
+  animation: mbhRise .6s var(--ease-soft) both;
+}
+
+
+/* ----- Reveal on scroll (tagged by MotionController) ----- */
+html.js-motion [data-reveal]:not(.is-revealed) {
+  opacity: 0;
+}
+
+html.js-motion [data-reveal="rise"]:not(.is-revealed) {
+  transform: translate3d(0, 18px, 0);
+}
+
+html.js-motion [data-reveal].is-revealed {
+  opacity: 1;
+  transition: opacity .65s var(--ease-out) var(--reveal-delay, 0ms);
+}
+
+html.js-motion [data-reveal="rise"].is-revealed {
+  transform: none;
+  transition:
+    opacity .65s var(--ease-out) var(--reveal-delay, 0ms),
+    transform .9s var(--ease-soft) var(--reveal-delay, 0ms);
+}
+
+@media print {
+  html.js-motion [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Process steps: the rule above the steps turns blue step by step. */
+.homeProcessGrid article {
+  position: relative;
+}
+
+.homeProcessGrid article::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1px;
+  height: 1px;
+  background: var(--blue);
+  transform-origin: 0 50%;
+  transition: transform 1s var(--ease-soft) calc(var(--reveal-delay, 0ms) + .15s);
+}
+
+html.js-motion .homeProcessGrid article[data-reveal]:not(.is-revealed)::before {
+  transform: scaleX(0);
+}
+
+/* Hang tag settles on its cord when it comes into view. */
+.homeProofHangtag {
+  transform-origin: 50% -40px;
+}
+
+[data-shown] .homeProofHangtag {
+  animation: mbhSettle 1.8s var(--ease-soft) both .1s;
+}
+
+
+/* ----- First section of every page: quiet entrance ----- */
+@media (prefers-reduced-motion: no-preference) {
+  main > section:first-of-type :is(.premiumEyebrow, .eyebrow, .sectionNo):first-child {
+    animation: mbhRise .9s var(--ease-soft) both .05s;
+  }
+
+  main > section:first-of-type h1 {
+    animation: mbhRise 1s var(--ease-soft) both .1s;
+  }
+
+  main > section:first-of-type h1 ~ :is(p, div, form) {
+    animation: mbhRise 1s var(--ease-soft) both .22s;
+  }
+
+  main > section:first-of-type h1 ~ :is(div, form) {
+    animation-delay: .32s;
+  }
+
+  .desireHeroVisual img {
+    animation: mbhImageSettle 1.8s var(--ease-soft) both;
+  }
+
+  .brandTrace i {
+    transform-origin: 0 50%;
+    animation: mbhDraw 1.1s var(--ease-soft) both .2s;
+  }
+
+  .brandTrace i:nth-child(2) { animation-delay: .3s; }
+  .brandTrace i:nth-child(3) { animation-delay: .4s; }
+
+  .brandTrace b {
+    animation: mbhFade .6s ease both .85s;
+  }
+}
+
+@keyframes mbhRise {
+  from { opacity: 0; transform: translate3d(0, 14px, 0); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes mbhFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes mbhDraw {
+  from { transform: scaleX(0); }
+}
+
+@keyframes mbhImageSettle {
+  from { transform: scale(1.05); }
+  to { transform: scale(1); }
+}
+
+@keyframes mbhSettle {
+  0% { transform: rotate(3deg); }
+  40% { transform: rotate(-2.2deg); }
+  70% { transform: rotate(-.6deg); }
+  100% { transform: rotate(-1deg); }
+}
+
+
+/* ----- Reduced motion: no movement, instant states ----- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    transition-delay: 0s !important;
+  }
+
+  .premiumSiteHeader::after {
+    display: none;
+  }
+}

@@ -145,9 +145,9 @@ export default function HumanMadeSealPage() {
             <p>Ob ein Produkt geeignet ist, hängt nicht allein von der Branche ab. Entscheidend sind die tatsächlichen produktprägenden Arbeitsschritte.</p>
           </div>
           <div className="whyBenefitGrid">
-            <article><strong>Schmuck & Accessoires</strong><p>Formgebung, Fassen, Löten, Montieren, Gravieren und Finish können wesentliche menschliche Schritte sein.</p><Link className="desireTextLink" href="/zertifizierung/schmuck">Schmuck zertifizieren →</Link></article>
-            <article><strong>Möbel & Holzprodukte</strong><p>Zuschnitt, Verbindung, Montage, Schleifen und Oberflächenbearbeitung können die menschliche Prägung bestimmen.</p><Link className="desireTextLink" href="/zertifizierung/holz-moebel">Holz & Möbel zertifizieren →</Link></article>
-            <article><strong>Textilien & Lederwaren</strong><p>Zuschnitt, Nähen, Fügen, Veredelung und Finish können für den Zertifizierungsumfang entscheidend sein.</p><Link className="desireTextLink" href="/zertifizierung">Weitere Produktarten →</Link></article>
+            <article><strong>Schmuck & Accessoires</strong><p>Formgebung, Fassen, Löten, Montieren, Gravieren und Finish können wesentliche menschliche Schritte sein.</p><Link className="desireTextLink" href="/zertifizierung/schmuck">Schmuck zertifizieren <span className="linkArrow" aria-hidden="true">→</span></Link></article>
+            <article><strong>Möbel & Holzprodukte</strong><p>Zuschnitt, Verbindung, Montage, Schleifen und Oberflächenbearbeitung können die menschliche Prägung bestimmen.</p><Link className="desireTextLink" href="/zertifizierung/holz-moebel">Holz & Möbel zertifizieren <span className="linkArrow" aria-hidden="true">→</span></Link></article>
+            <article><strong>Textilien & Lederwaren</strong><p>Zuschnitt, Nähen, Fügen, Veredelung und Finish können für den Zertifizierungsumfang entscheidend sein.</p><Link className="desireTextLink" href="/zertifizierung">Weitere Produktarten <span className="linkArrow" aria-hidden="true">→</span></Link></article>
           </div>
         </div>
       </section>
@@ -173,7 +173,7 @@ export default function HumanMadeSealPage() {
           <div>
             <p>Beschreiben Sie Produkt, Produktionsorte und wesentliche Herstellungsschritte. Wir klären, ob und in welchem Umfang eine Zertifizierung möglich ist.</p>
             <Link className="salesFinalButton" href="/fuer-hersteller#zertifizierungsanfrage">Zertifizierung anfragen</Link>
-            <Link className="salesFinalText" href="/handarbeit-siegel">Mehr zum Handarbeit-Siegel →</Link>
+            <Link className="salesFinalText" href="/handarbeit-siegel">Mehr zum Handarbeit-Siegel <span className="linkArrow" aria-hidden="true">→</span></Link>
           </div>
         </div>
       </section>

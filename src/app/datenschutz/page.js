@@ -48,7 +48,7 @@ export default function DatenschutzPage() {
               <div><dt>E-Mail</dt><dd><a href="mailto:info@madebyhuman.org">info@madebyhuman.org</a></dd></div>
               <div><dt>Telefon</dt><dd><a href="tel:+49525154491922">05251 / 54491922</a></dd></div>
             </dl>
-            <Link href="/impressum">Zum Impressum →</Link>
+            <Link href="/impressum">Zum Impressum <span className="linkArrow" aria-hidden="true">→</span></Link>
           </div>
           <p>
             Datenschutzbezogene Anliegen können per E-Mail, telefonisch oder schriftlich an die oben

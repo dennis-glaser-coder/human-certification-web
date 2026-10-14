@@ -69,7 +69,7 @@ export default function CertificationHubPage() {
               <article key={name}>
                 <strong>{name}</strong>
                 <p>{copy}</p>
-                <Link className="desireTextLink" href={href}>Mehr zu {name} →</Link>
+                <Link className="desireTextLink" href={href}>Mehr zu {name} <span className="linkArrow" aria-hidden="true">→</span></Link>
               </article>
             ))}
           </div>

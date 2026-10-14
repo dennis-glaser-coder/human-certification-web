@@ -38,7 +38,7 @@ export default function HeroVerify() {
 
       <div className="verifyModuleFoot">
         <span>Gültigkeit und Umfang öffentlich nachvollziehen.</span>
-        <Link href="/register">Register öffnen →</Link>
+        <Link href="/register">Register öffnen <span className="linkArrow" aria-hidden="true">→</span></Link>
       </div>
     </div>
   );

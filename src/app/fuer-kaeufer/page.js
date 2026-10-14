@@ -129,7 +129,7 @@ export default function BuyerPage() {
               <span>Status & Gültigkeit</span>
               <span>angewendete Standardfassung</span>
             </div>
-            <Link className="desireTextLink desireTextLinkLight" href="/pruefen">Zertifizierungs-ID prüfen →</Link>
+            <Link className="desireTextLink desireTextLinkLight" href="/pruefen">Zertifizierungs-ID prüfen <span className="linkArrow" aria-hidden="true">→</span></Link>
           </div>
         </div>
       </section>
@@ -165,7 +165,7 @@ export default function BuyerPage() {
             <p>
               Vor Ort prüfen wir, welche Arbeitsschritte Menschen ausführen, welche Maschinen eingesetzt werden, wo produziert wird und ob wichtige Schritte von anderen Betrieben übernommen werden.
             </p>
-            <Link className="desireTextLink" href="/standard">Prüfkriterien ansehen →</Link>
+            <Link className="desireTextLink" href="/standard">Prüfkriterien ansehen <span className="linkArrow" aria-hidden="true">→</span></Link>
           </div>
         </div>
       </section>

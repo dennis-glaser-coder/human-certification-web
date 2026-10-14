@@ -209,7 +209,7 @@ export default function ManufacturerPage() {
                 <div key={title}><strong>{title}</strong><p>{copy}</p></div>
               ))}
             </div>
-            <Link href="/markennutzung">Regeln zur Markennutzung →</Link>
+            <Link href="/markennutzung">Regeln zur Markennutzung <span className="linkArrow" aria-hidden="true">→</span></Link>
           </div>
         </div>
       </section>
@@ -236,11 +236,11 @@ export default function ManufacturerPage() {
         </div>
 
         <div className="manufacturerGuideLinks">
-          <Link href="/zertifizierung/schmuck">Schmuck zertifizieren →</Link>
-          <Link href="/zertifizierung/holz-moebel">Möbel & Holzprodukte zertifizieren →</Link>
-          <Link href="/zertifizierung/textilien">Textilien zertifizieren →</Link>
-          <Link href="/zertifizierung/lederwaren">Lederwaren zertifizieren →</Link>
-          <Link href="/zertifizierung/keramik">Keramik zertifizieren →</Link>
+          <Link href="/zertifizierung/schmuck">Schmuck zertifizieren <span className="linkArrow" aria-hidden="true">→</span></Link>
+          <Link href="/zertifizierung/holz-moebel">Möbel & Holzprodukte zertifizieren <span className="linkArrow" aria-hidden="true">→</span></Link>
+          <Link href="/zertifizierung/textilien">Textilien zertifizieren <span className="linkArrow" aria-hidden="true">→</span></Link>
+          <Link href="/zertifizierung/lederwaren">Lederwaren zertifizieren <span className="linkArrow" aria-hidden="true">→</span></Link>
+          <Link href="/zertifizierung/keramik">Keramik zertifizieren <span className="linkArrow" aria-hidden="true">→</span></Link>
         </div>
 
         <div className="manufacturerScopeNote">
@@ -281,8 +281,8 @@ export default function ManufacturerPage() {
               ))}
             </div>
             <div className="manufacturerGuideLinks">
-              <Link href="/leitfaden/nachweise">Leitfaden Prüfnachweise →</Link>
-              <Link href="/leitfaden/zertifizierungsumfang">Was genau zertifiziert wird →</Link>
+              <Link href="/leitfaden/nachweise">Leitfaden Prüfnachweise <span className="linkArrow" aria-hidden="true">→</span></Link>
+              <Link href="/leitfaden/zertifizierungsumfang">Was genau zertifiziert wird <span className="linkArrow" aria-hidden="true">→</span></Link>
             </div>
           </div>
         </div>

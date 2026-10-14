@@ -104,7 +104,7 @@ export default function VerifyPage() {
 
             <div className="verificationIdentity">
               <div><small>CERTIFICATION ID</small><h2>{state.record.public_id}</h2></div>
-              <Link className="recordOpenLink" href={'/en/register'}>Open public register →</Link>
+              <Link className="recordOpenLink" href={'/en/register'}>Open public register <span className="linkArrow" aria-hidden="true">→</span></Link>
             </div>
 
             <dl className="verificationDetails">

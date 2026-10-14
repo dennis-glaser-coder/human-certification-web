@@ -106,7 +106,7 @@ export default function EvidenceGuidePage() {
           </p>
           <div className="guideLinks">
             <Link className="button primary" href="/fuer-hersteller#zertifizierungsanfrage">Zertifizierung anfragen</Link>
-            <Link className="textLink" href="/leitfaden/zertifizierungsumfang">Was genau zertifiziert wird →</Link>
+            <Link className="textLink" href="/leitfaden/zertifizierungsumfang">Was genau zertifiziert wird <span className="linkArrow" aria-hidden="true">→</span></Link>
           </div>
         </div>
       </section>

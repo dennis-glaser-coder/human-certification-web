@@ -60,7 +60,7 @@ export default function AboutPage() {
       <section className="aboutArchitecture">
         <div className="shell">
           <div className="sectionIntro compact aboutArchitectureIntro"><div><div className="sectionNo light">HOW THE SYSTEM WORKS</div><h2>Standard, verification, decision and register remain connected.</h2></div><p>Trust comes from the evidence behind the mark, not from the mark alone.</p></div>
-          <div className="aboutArchitectureLinks"><Link href="/en/standard">View standard →</Link><Link href="/en/register">Open register →</Link><Link href="/en/verify">Verify a certification →</Link></div>
+          <div className="aboutArchitectureLinks"><Link href="/en/standard">View standard <span className="linkArrow" aria-hidden="true">→</span></Link><Link href="/en/register">Open register <span className="linkArrow" aria-hidden="true">→</span></Link><Link href="/en/verify">Verify a certification <span className="linkArrow" aria-hidden="true">→</span></Link></div>
         </div>
       </section>
 

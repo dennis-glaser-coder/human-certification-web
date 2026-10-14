@@ -96,7 +96,7 @@ export default function StandardDocumentPage() {
           <p>
             Standardversion, Dokument-ID und Datum werden festgehalten. Ändern sich Kriterien, Anforderungen an Belege oder Entscheidungsregeln, wird eine neue Version veröffentlicht.
           </p>
-          <Link className="textLink" href="/dokumente">Zur Dokumentenübersicht →</Link>
+          <Link className="textLink" href="/dokumente">Zur Dokumentenübersicht <span className="linkArrow" aria-hidden="true">→</span></Link>
         </section>
       </article>
 

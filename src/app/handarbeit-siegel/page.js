@@ -153,7 +153,7 @@ export default function HandarbeitSiegelPage() {
               Nicht passend ist dagegen eine Produktion, bei der das verkaufsfertige Produkt im Wesentlichen
               autonom entsteht und der Mensch nur überwacht, startet oder entnimmt.
             </p>
-            <Link className="desireTextLink desireTextLinkLight" href="/standard">Zum Made by Human Standard →</Link>
+            <Link className="desireTextLink desireTextLinkLight" href="/standard">Zum Made by Human Standard <span className="linkArrow" aria-hidden="true">→</span></Link>
           </div>
         </div>
       </section>
@@ -180,7 +180,7 @@ export default function HandarbeitSiegelPage() {
             ))}
           </div>
 
-          <Link className="desireTextLink" href="/fuer-hersteller">Zertifizierungsablauf für Hersteller →</Link>
+          <Link className="desireTextLink" href="/fuer-hersteller">Zertifizierungsablauf für Hersteller <span className="linkArrow" aria-hidden="true">→</span></Link>
         </div>
       </section>
 
@@ -216,9 +216,9 @@ export default function HandarbeitSiegelPage() {
               Wir klären im ersten Schritt, ob das Produkt grundsätzlich zum Made by Human Standard passt.
             </p>
             <Link className="salesFinalButton" href="/fuer-hersteller#zertifizierungsanfrage">Zertifizierung anfragen</Link>
-            <Link className="salesFinalText" href="/leitfaden/nachweise">Welche Nachweise werden benötigt? →</Link>
-            <Link className="salesFinalText" href="/human-made-siegel">Human Made Siegel →</Link>
-            <Link className="salesFinalText" href="/manufaktur-siegel">Manufaktur-Siegel →</Link>
+            <Link className="salesFinalText" href="/leitfaden/nachweise">Welche Nachweise werden benötigt? <span className="linkArrow" aria-hidden="true">→</span></Link>
+            <Link className="salesFinalText" href="/human-made-siegel">Human Made Siegel <span className="linkArrow" aria-hidden="true">→</span></Link>
+            <Link className="salesFinalText" href="/manufaktur-siegel">Manufaktur-Siegel <span className="linkArrow" aria-hidden="true">→</span></Link>
           </div>
         </div>
       </section>

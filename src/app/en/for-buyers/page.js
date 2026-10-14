@@ -87,7 +87,7 @@ export default function BuyerPage() {
             <h2>The product and current status can be checked publicly.</h2>
             <p>Using the QR code or certification ID, buyers can open the public register and see which product is covered and whether the certification is currently valid.</p>
             <div className="buyerVerifyChecks"><span>Product & manufacturer</span><span>Certification scope</span><span>Declared production locations</span><span>Status & validity</span><span>Applicable standard version</span></div>
-            <Link className="desireTextLink desireTextLinkLight" href="/en/verify">Verify certification ID →</Link>
+            <Link className="desireTextLink desireTextLinkLight" href="/en/verify">Verify certification ID <span className="linkArrow" aria-hidden="true">→</span></Link>
           </div>
         </div>
       </section>
@@ -102,7 +102,7 @@ export default function BuyerPage() {
       <section className="buyerAudit">
         <div className="shell buyerAuditGrid">
           <figure><img src={assetBase + '/photography/buyer-production.webp'} alt="Human work in a production workshop" loading="lazy" /></figure>
-          <div><p className="premiumSectionLabel">HOW DO WE VERIFY?</p><h2>Verification happens where the product is made.</h2><p>On site, we review which steps are carried out by people, which machines are used, where production takes place and whether important steps are performed by external manufacturers.</p><Link className="desireTextLink" href="/en/standard">See the criteria →</Link></div>
+          <div><p className="premiumSectionLabel">HOW DO WE VERIFY?</p><h2>Verification happens where the product is made.</h2><p>On site, we review which steps are carried out by people, which machines are used, where production takes place and whether important steps are performed by external manufacturers.</p><Link className="desireTextLink" href="/en/standard">See the criteria <span className="linkArrow" aria-hidden="true">→</span></Link></div>
         </div>
       </section>
 

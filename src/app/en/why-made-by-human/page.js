@@ -91,7 +91,7 @@ export default function WhyPage() {
             <div className="whyCustomerList">
               {customerBenefits.map(([title, copy]) => <article key={title}><div><strong>{title}</strong><p>{copy}</p></div></article>)}
             </div>
-            <Link className="desireTextLink desireTextLinkLight" href="/en/for-buyers">What the mark means for buyers →</Link>
+            <Link className="desireTextLink desireTextLinkLight" href="/en/for-buyers">What the mark means for buyers <span className="linkArrow" aria-hidden="true">→</span></Link>
           </div>
         </div>
       </section>
@@ -106,14 +106,14 @@ export default function WhyPage() {
             <div className="whyComparisonHead" role="row"><span role="columnheader">CLAIM</span><span role="columnheader">BASIS</span><span role="columnheader">VERIFICATION</span><span role="columnheader">PUBLICLY CHECKABLE</span></div>
             {claimComparison.map(([claim, basis, check, verification]) => <div className="whyComparisonRow" role="row" key={claim}><strong role="cell">{claim}</strong><span role="cell">{basis}</span><span role="cell">{check}</span><span role="cell">{verification}</span></div>)}
           </div>
-          <Link className="desireTextLink" href="/en/standard">Criteria and boundaries of the standard →</Link>
+          <Link className="desireTextLink" href="/en/standard">Criteria and boundaries of the standard <span className="linkArrow" aria-hidden="true">→</span></Link>
         </div>
       </section>
 
       <section className="salesFinalCta whyFinalCta">
         <div className="shell salesFinalCtaGrid">
           <div><p className="premiumSectionLabel premiumSectionLabelLight">FOR MANUFACTURERS</p><h2>See whether your product could fit the standard.</h2></div>
-          <div><p>In an initial assessment, we clarify whether the product is broadly suitable and what exactly should be certified.</p><Link className="salesFinalButton" href="/en/for-manufacturers#certification-request">Request certification</Link><Link className="salesFinalText" href="/en/for-manufacturers">See the certification process →</Link></div>
+          <div><p>In an initial assessment, we clarify whether the product is broadly suitable and what exactly should be certified.</p><Link className="salesFinalButton" href="/en/for-manufacturers#certification-request">Request certification</Link><Link className="salesFinalText" href="/en/for-manufacturers">See the certification process <span className="linkArrow" aria-hidden="true">→</span></Link></div>
         </div>
       </section>
 

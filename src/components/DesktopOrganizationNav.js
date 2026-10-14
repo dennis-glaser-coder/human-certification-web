@@ -50,19 +50,18 @@ export default function DesktopOrganizationNav({ lang = 'de' }) {
         <span className="desktopNavChevron" aria-hidden="true"></span>
       </button>
 
-      {open && (
-        <div className="desktopNavMenuPanel" role="menu">
-          <Link href={isEn ? '/en/for-buyers' : '/fuer-kaeufer'} role="menuitem" onClick={close}>{isEn ? 'For buyers' : 'Für Käufer'}</Link>
-          <Link href={isEn ? '/en/register' : '/register'} role="menuitem" onClick={close}>Register</Link>
-          <Link href={isEn ? '/en/standard' : '/standard'} role="menuitem" onClick={close}>Standard</Link>
-          <Link href={isEn ? '/en/why-made-by-human' : '/warum-made-by-human'} role="menuitem" onClick={close}>{isEn ? 'Why Made by Human' : 'Warum Made by Human'}</Link>
-          <Link href={isEn ? '/en/about' : '/ueber-uns'} role="menuitem" onClick={close}>{isEn ? 'About us' : 'Über uns'}</Link>
-          {isEn ? null : <Link href="/dokumente" role="menuitem" onClick={close}>Dokumente</Link>}
-          {isEn ? null : <Link href="/transparenz" role="menuitem" onClick={close}>Transparenz & Integrität</Link>}
-          {isEn ? null : <Link href="/verfahren" role="menuitem" onClick={close}>Beschwerden & Einsprüche</Link>}
-          {isEn ? <Link href="/impressum" role="menuitem" onClick={close}>Legal notice</Link> : null}
-        </div>
-      )}
+      {/* Stays mounted so it can fade in and out; inert keeps it out of reach while closed. */}
+      <div className="desktopNavMenuPanel" role="menu" data-open={open} inert={!open}>
+        <Link href={isEn ? '/en/for-buyers' : '/fuer-kaeufer'} role="menuitem" onClick={close}>{isEn ? 'For buyers' : 'Für Käufer'}</Link>
+        <Link href={isEn ? '/en/register' : '/register'} role="menuitem" onClick={close}>Register</Link>
+        <Link href={isEn ? '/en/standard' : '/standard'} role="menuitem" onClick={close}>Standard</Link>
+        <Link href={isEn ? '/en/why-made-by-human' : '/warum-made-by-human'} role="menuitem" onClick={close}>{isEn ? 'Why Made by Human' : 'Warum Made by Human'}</Link>
+        <Link href={isEn ? '/en/about' : '/ueber-uns'} role="menuitem" onClick={close}>{isEn ? 'About us' : 'Über uns'}</Link>
+        {isEn ? null : <Link href="/dokumente" role="menuitem" onClick={close}>Dokumente</Link>}
+        {isEn ? null : <Link href="/transparenz" role="menuitem" onClick={close}>Transparenz & Integrität</Link>}
+        {isEn ? null : <Link href="/verfahren" role="menuitem" onClick={close}>Beschwerden & Einsprüche</Link>}
+        {isEn ? <Link href="/impressum" role="menuitem" onClick={close}>Legal notice</Link> : null}
+      </div>
     </div>
   );
 }

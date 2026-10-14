@@ -61,7 +61,7 @@ export default function RegisterPage() {
               <div><small>PRODUKT</small><strong>{record.products?.name ?? '—'}</strong>{record.certification_scope && <em className="registerSubline">{record.certification_scope}</em>}</div>
               <div><small>STANDARD</small><strong>{record.standard_versions?.version ?? record.standard_versions?.title ?? '—'}</strong>{isPilot && <em className="registerSubline">Verbundener Pilotbetrieb · keine reguläre Zertifizierung</em>}</div>
               <div className="registerStatusCell"><small>STATUS / GÜLTIG BIS</small><span className={'statusBadge status-' + record.status + (record.status === 'active' ? ' active' : '')}>{record.public_id?.startsWith('HC-DEMO-') ? 'Demo · keine reale Zertifizierung' : (labels[record.status] ?? record.status)}</span><em>{record.status === 'pilot' ? 'keine Zeichennutzung' : formatDate(record.valid_until)}</em></div>
-              <Link href={'/zertifikat/?id=' + encodeURIComponent(record.public_id)} aria-label={record.public_id + ' öffnen'}>Eintrag →</Link>
+              <Link href={'/zertifikat/?id=' + encodeURIComponent(record.public_id)} aria-label={record.public_id + ' öffnen'}>Eintrag <span className="linkArrow" aria-hidden="true">→</span></Link>
             </article>
           );
         })}</div>

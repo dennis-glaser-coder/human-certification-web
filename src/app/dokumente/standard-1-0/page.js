@@ -70,7 +70,7 @@ export default function StandardDocumentPage() {
 
         <section><h2>Status und Markennutzung</h2><p>Nur eine aktive reguläre Zertifizierung berechtigt zur Nutzung des Made by Human Zeichens für den ausdrücklich zertifizierten Umfang. Eine verbundene Pilotprüfung sowie eine ausgesetzte, abgelaufene oder widerrufene Zertifizierung berechtigen nicht zur Zeichennutzung.</p></section>
 
-        <section><h2>Versionen & Änderungen</h2><p>Standardversion, Dokument-ID und Datum werden festgehalten. Änderungen an Geltungsbereich, Kriterien, Beleganforderungen oder Entscheidungsregeln werden versioniert. Version 1.0 ist die erste verbindliche Fassung für reale Zertifizierungen.</p><div className="inlineDocLinks"><Link className="textLink" href="/dokumente">Zur Dokumentenübersicht →</Link><Link className="textLink" href="/dokumente/standard-0-1">Frühere Fassung 0.1 →</Link></div></section>
+        <section><h2>Versionen & Änderungen</h2><p>Standardversion, Dokument-ID und Datum werden festgehalten. Änderungen an Geltungsbereich, Kriterien, Beleganforderungen oder Entscheidungsregeln werden versioniert. Version 1.0 ist die erste verbindliche Fassung für reale Zertifizierungen.</p><div className="inlineDocLinks"><Link className="textLink" href="/dokumente">Zur Dokumentenübersicht <span className="linkArrow" aria-hidden="true">→</span></Link><Link className="textLink" href="/dokumente/standard-0-1">Frühere Fassung 0.1 <span className="linkArrow" aria-hidden="true">→</span></Link></div></section>
       </article>
       <SiteFooter />
     </main>

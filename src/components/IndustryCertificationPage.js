@@ -125,10 +125,10 @@ export default function IndustryCertificationPage({
             ))}
           </div>
           <div className="manufacturerGuideLinks">
-            <Link href="/handarbeit-zertifizieren">So läuft die Zertifizierung ab →</Link>
-            <Link href="/handarbeit-siegel">Was das Handarbeit-Siegel aussagt →</Link>
-            <Link href="/wissen/was-bedeutet-handgemacht">Was bedeutet „handgemacht“? →</Link>
-            <Link href="/zertifizierung">Weitere Produktarten →</Link>
+            <Link href="/handarbeit-zertifizieren">So läuft die Zertifizierung ab <span className="linkArrow" aria-hidden="true">→</span></Link>
+            <Link href="/handarbeit-siegel">Was das Handarbeit-Siegel aussagt <span className="linkArrow" aria-hidden="true">→</span></Link>
+            <Link href="/wissen/was-bedeutet-handgemacht">Was bedeutet „handgemacht“? <span className="linkArrow" aria-hidden="true">→</span></Link>
+            <Link href="/zertifizierung">Weitere Produktarten <span className="linkArrow" aria-hidden="true">→</span></Link>
           </div>
         </div>
       </section>
@@ -142,7 +142,7 @@ export default function IndustryCertificationPage({
           <div>
             <p>Beschreiben Sie uns Produkt, Herstellungsprozess und Produktionsorte. Wir klären, was konkret zertifiziert werden kann und welche Nachweise dafür benötigt werden.</p>
             <Link className="salesFinalButton" href="/fuer-hersteller#zertifizierungsanfrage">Zertifizierung anfragen</Link>
-            <Link className="salesFinalText" href="/standard">Standard ansehen →</Link>
+            <Link className="salesFinalText" href="/standard">Standard ansehen <span className="linkArrow" aria-hidden="true">→</span></Link>
           </div>
         </div>
       </section>

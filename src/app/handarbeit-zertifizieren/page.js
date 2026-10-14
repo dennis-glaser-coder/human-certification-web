@@ -135,7 +135,7 @@ export default function HandarbeitZertifizierenPage() {
               <article key={title}>
                 <strong>{title}</strong>
                 <p>{copy}</p>
-                <Link className="desireTextLink" href={href}>Zertifizierung für {title} →</Link>
+                <Link className="desireTextLink" href={href}>Zertifizierung für {title} <span className="linkArrow" aria-hidden="true">→</span></Link>
               </article>
             ))}
           </div>
@@ -233,7 +233,7 @@ export default function HandarbeitZertifizierenPage() {
               was konkret zertifiziert werden soll und welche Nachweise dafür benötigt werden.
             </p>
             <Link className="salesFinalButton" href="/fuer-hersteller#zertifizierungsanfrage">Zertifizierung anfragen</Link>
-            <Link className="salesFinalText" href="/handarbeit-siegel">Mehr zum Handarbeit-Siegel →</Link>
+            <Link className="salesFinalText" href="/handarbeit-siegel">Mehr zum Handarbeit-Siegel <span className="linkArrow" aria-hidden="true">→</span></Link>
           </div>
         </div>
       </section>

@@ -136,7 +136,7 @@ export default function ManufakturSealPage() {
               Entscheidend ist nicht, ob Maschinen vorhanden sind, sondern welche Schritte das fertige Produkt
               wesentlich prägen und wie Menschen diese Arbeit tatsächlich ausführen oder konkret bestimmen.
             </p>
-            <Link className="desireTextLink desireTextLinkLight" href="/wissen/handarbeit-mit-maschinen">Handarbeit mit Maschinen erklärt →</Link>
+            <Link className="desireTextLink desireTextLinkLight" href="/wissen/handarbeit-mit-maschinen">Handarbeit mit Maschinen erklärt <span className="linkArrow" aria-hidden="true">→</span></Link>
           </div>
         </div>
       </section>
@@ -151,9 +151,9 @@ export default function ManufakturSealPage() {
             <p>Die genaue Eignung wird immer anhand des konkreten Herstellungsprozesses geprüft.</p>
           </div>
           <div className="whyBenefitGrid">
-            <article><strong>Schmuck</strong><p>Goldschmiede, Schmuckmanufakturen und Accessoire-Hersteller mit menschlich geprägter Formgebung, Montage oder Finish.</p><Link className="desireTextLink" href="/zertifizierung/schmuck">Schmuck zertifizieren →</Link></article>
-            <article><strong>Möbel & Holz</strong><p>Tischlereien, Möbelmanufakturen und Holzwerkstätten mit nachvollziehbarer Bearbeitung, Verbindung, Montage und Oberfläche.</p><Link className="desireTextLink" href="/zertifizierung/holz-moebel">Holz & Möbel zertifizieren →</Link></article>
-            <article><strong>Textilien, Leder & Keramik</strong><p>Produktgruppen mit menschlich geprägtem Zuschnitt, Nähen, Formgebung, Dekor, Montage oder Finish.</p><Link className="desireTextLink" href="/zertifizierung">Alle Produktarten ansehen →</Link></article>
+            <article><strong>Schmuck</strong><p>Goldschmiede, Schmuckmanufakturen und Accessoire-Hersteller mit menschlich geprägter Formgebung, Montage oder Finish.</p><Link className="desireTextLink" href="/zertifizierung/schmuck">Schmuck zertifizieren <span className="linkArrow" aria-hidden="true">→</span></Link></article>
+            <article><strong>Möbel & Holz</strong><p>Tischlereien, Möbelmanufakturen und Holzwerkstätten mit nachvollziehbarer Bearbeitung, Verbindung, Montage und Oberfläche.</p><Link className="desireTextLink" href="/zertifizierung/holz-moebel">Holz & Möbel zertifizieren <span className="linkArrow" aria-hidden="true">→</span></Link></article>
+            <article><strong>Textilien, Leder & Keramik</strong><p>Produktgruppen mit menschlich geprägtem Zuschnitt, Nähen, Formgebung, Dekor, Montage oder Finish.</p><Link className="desireTextLink" href="/zertifizierung">Alle Produktarten ansehen <span className="linkArrow" aria-hidden="true">→</span></Link></article>
           </div>
         </div>
       </section>
@@ -179,7 +179,7 @@ export default function ManufakturSealPage() {
           <div>
             <p>Beschreiben Sie das konkrete Produkt, die wesentlichen Arbeitsschritte und Produktionsorte. Wir klären, welcher Zertifizierungsumfang sinnvoll ist.</p>
             <Link className="salesFinalButton" href="/fuer-hersteller#zertifizierungsanfrage">Produkt prüfen lassen</Link>
-            <Link className="salesFinalText" href="/human-made-siegel">Human Made Siegel verstehen →</Link>
+            <Link className="salesFinalText" href="/human-made-siegel">Human Made Siegel verstehen <span className="linkArrow" aria-hidden="true">→</span></Link>
           </div>
         </div>
       </section>
