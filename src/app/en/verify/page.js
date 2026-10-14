@@ -6,9 +6,11 @@ import SiteHeader from '../../../components/SiteHeader';
 import EnglishFooter from '../../../components/EnglishFooter';
 import BrandTrace from '../../../components/BrandTrace';
 import { getSupabaseBrowserClient } from '../../../lib/supabase';
+import RelationshipDisclosure from '../../../components/RelationshipDisclosure';
 
 const statusText = {
   under_review: 'Under review',
+  pilot: 'Pilot assessment',
   active: 'Active',
   suspended: 'Suspended',
   expired: 'Expired',
@@ -41,7 +43,7 @@ export default function VerifyPage() {
 
     const { data, error } = await supabase
       .from('certifications')
-      .select('public_id,status,issued_at,valid_until,last_verified_at,public_note,certification_scope,production_locations,products(name,manufacturers(name)),standard_versions(version,title)')
+      .select('public_id,status,issued_at,valid_until,last_verified_at,public_note,certification_scope,production_locations,certification_context,relationship_disclosure,products(name,manufacturers(name,legal_name)),standard_versions(version,title)')
       .eq('public_id', publicId)
       .maybeSingle();
 
@@ -104,7 +106,7 @@ export default function VerifyPage() {
 
             <div className="verificationIdentity">
               <div><small>CERTIFICATION ID</small><h2>{state.record.public_id}</h2></div>
-              <Link className="recordOpenLink" href={'/en/register'}>Open public register <span className="linkArrow" aria-hidden="true">→</span></Link>
+              <Link className="recordOpenLink" href={'/zertifikat/?id=' + encodeURIComponent(state.record.public_id)}>Open public register <span className="linkArrow" aria-hidden="true">→</span></Link>
             </div>
 
             <dl className="verificationDetails">
@@ -118,6 +120,7 @@ export default function VerifyPage() {
               <div><dt>Last verified</dt><dd>{formatDate(state.record.last_verified_at)}</dd></div>
             </dl>
 
+            <RelationshipDisclosure record={state.record} lang="en" />
             {state.record.public_note && <div className="publicNote"><strong>NOTE</strong><p>{state.record.public_note}</p></div>}
           </article>
         )}

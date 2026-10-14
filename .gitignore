@@ -4,3 +4,8 @@ node_modules
 .env*.local
 .DS_Store
 npm-debug.log*
+
+supabase/.temp/
+out/
+__pycache__/
+public/documents/

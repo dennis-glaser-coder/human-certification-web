@@ -38,7 +38,7 @@ export default function ProceduresPage() {
 
       <section className="procedureRecord"><div className="shell procedureRecordGrid"><div><div className="sectionNo">DOKUMENTATION</div><h2>Diese fünf Punkte halten wir zu jedem Vorgang fest.</h2></div><div className="procedureRecordList">{recordFields.map(([title, copy]) => <article key={title}><div><strong>{title}</strong><p>{copy}</p></div></article>)}</div></div></section>
 
-      <section className="shell standardClose"><p>Verfahrensregeln Version 1.0 · Stand 14.09.2026. Änderungen werden mit einer neuen Fassung dokumentiert.</p><div className="standardCloseLinks"><Link className="textLink" href="/dokumente">Dokumentenregister <span className="linkArrow" aria-hidden="true">→</span></Link><Link className="textLink" href="/dokumente/certification-scheme-1-0">Zertifizierungsschema 1.0 <span className="linkArrow" aria-hidden="true">→</span></Link></div></section>
+      <section className="shell standardClose"><p>Verfahrensregeln Version 1.0 · Stand 14.09.2026. Änderungen werden mit einer neuen Fassung dokumentiert.</p><div className="standardCloseLinks"><Link className="textLink" href="/dokumente">Dokumentenregister <span className="linkArrow" aria-hidden="true">→</span></Link><Link className="textLink" href="/dokumente/certification-scheme-1-1">Zertifizierungsschema 1.1 <span className="linkArrow" aria-hidden="true">→</span></Link></div></section>
       <SiteFooter />
     </main>
   );

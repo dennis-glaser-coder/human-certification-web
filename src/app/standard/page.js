@@ -20,11 +20,11 @@ export default function StandardPage() {
         <div className="eyebrow">STANDARD</div>
         <BrandTrace compact />
         <h1>Der Standard für nachweisbar menschliche Herstellung.</h1>
-        <p className="lead">Version 1.0 legt verbindlich fest, wann menschliche Arbeit ein physisches Produkt wesentlich prägt und wie diese Herstellung geprüft wird.</p>
+        <p className="lead">Version 1.1 legt verbindlich fest, wann menschliche Arbeit ein physisches Produkt wesentlich prägt und wie diese Herstellung geprüft wird.</p>
       </section>
 
       <section className="standardMetaBand"><div className="shell standardMetaBar">
-        <div><span>STANDARDVERSION</span><strong>1.0</strong></div>
+        <div><span>STANDARDVERSION</span><strong>1.1</strong></div>
         <div><span>GELTUNGSBEREICH</span><strong>Aufgenommene physische Produkte</strong></div>
         <div><span>PRÜFBEREICHE</span><strong>6 Muss-Kriterien</strong></div>
         <div><span>GÜLTIGKEIT</span><strong>Grundsätzlich 12 Monate</strong></div>
@@ -39,9 +39,9 @@ export default function StandardPage() {
 
       <section className="decisionRule"><div className="shell decisionRuleInner"><div className="sectionNo">ENTSCHEIDUNGSREGEL</div><p>Würde ohne die menschlichen Herstellungsschritte bereits im Wesentlichen dasselbe verkaufsfertige Produkt vorliegen?</p></div></section>
 
-      <section className="scopeExclusionSection"><div className="shell scopeExclusionGrid"><div><div className="sectionNo">KLARE GRENZEN</div><h2>Was Version 1.0 zusätzlich verbindlich regelt.</h2></div><div className="exclusionList"><span>Vor-Ort-Prüfung</span><span>Änderungspflicht</span><span>12 Monate Gültigkeit</span><span>Verlängerungsprüfung</span><span>Entscheider-Trennung</span><span>Pilot ≠ Zertifizierung</span></div></div></section>
+      <section className="scopeExclusionSection"><div className="shell scopeExclusionGrid"><div><div className="sectionNo">KLARE GRENZEN</div><h2>Was Version 1.1 zusätzlich verbindlich regelt.</h2></div><div className="exclusionList"><span>Vor-Ort-Prüfung</span><span>Änderungspflicht</span><span>12 Monate Gültigkeit</span><span>Verlängerungsprüfung</span><span>Entscheider-Trennung</span><span>Pilot ≠ Zertifizierung</span></div></div></section>
 
-      <section className="standardClose shell"><div><p>Die vollständige Fassung regelt außerdem Produktfamilien, Fremdfertigung, Kompetenz der Beteiligten, verbundene Pilotprüfungen und Markennutzung. Eine eigene oder verbundene Firma kann als Pilot geprüft werden, erhält dadurch aber keine reguläre Zertifizierung und keine Berechtigung zur Zeichennutzung.</p></div><div className="standardCloseLinks"><Link className="textLink" href="/dokumente/standard-1-0">Standard 1.0 vollständig öffnen <span className="linkArrow" aria-hidden="true">→</span></Link><Link className="textLink" href="/handarbeit-siegel">Handarbeit-Siegel verstehen <span className="linkArrow" aria-hidden="true">→</span></Link><Link className="textLink" href="/handarbeit-zertifizieren">Handarbeit zertifizieren lassen <span className="linkArrow" aria-hidden="true">→</span></Link><Link className="textLink" href="/zertifizierung">Zertifizierung nach Produktart <span className="linkArrow" aria-hidden="true">→</span></Link><Link className="textLink" href="/dokumente">Dokumentenregister <span className="linkArrow" aria-hidden="true">→</span></Link></div></section>
+      <section className="standardClose shell"><div><p>Auch Produkte eigener oder verbundener Unternehmen können regulär zertifiziert werden. Für sie gelten dieselben Prüfanforderungen. Die Verbindung wird im Register offengelegt; diese Zertifizierung ist keine unabhängige Drittprüfung. Pilotprüfungen zur Erprobung bleiben von regulären Zertifizierungen getrennt.</p></div><div className="standardCloseLinks"><Link className="textLink" href="/dokumente/standard-1-1">Standard 1.1 vollständig öffnen <span className="linkArrow" aria-hidden="true">→</span></Link><Link className="textLink" href="/handarbeit-siegel">Handarbeit-Siegel verstehen <span className="linkArrow" aria-hidden="true">→</span></Link><Link className="textLink" href="/handarbeit-zertifizieren">Handarbeit zertifizieren lassen <span className="linkArrow" aria-hidden="true">→</span></Link><Link className="textLink" href="/zertifizierung">Zertifizierung nach Produktart <span className="linkArrow" aria-hidden="true">→</span></Link><Link className="textLink" href="/dokumente">Dokumentenregister <span className="linkArrow" aria-hidden="true">→</span></Link></div></section>
       <SiteFooter />
     </main>
   );

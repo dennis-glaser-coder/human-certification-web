@@ -10,6 +10,7 @@ Website und technischer Prototyp für das [Made by Human Zertifizierungssystem](
 - Markenauftritt Made by Human nach der verbindlichen CI
 - Startseite sowie Seiten für Hersteller und Käufer
 - öffentlicher Standard und Dokumentenregister
+- Standard und Zertifizierungsschema 1.1: reguläre Zertifizierung verbundener Unternehmen bei gleichen Anforderungen und öffentlicher Offenlegung; bisherige Fassungen bleiben archiviert
 - öffentliches Zertifizierungsregister
 - Zertifizierungs-ID prüfen
 - öffentliche Zertifikatsansicht
@@ -29,6 +30,10 @@ Website und technischer Prototyp für das [Made by Human Zertifizierungssystem](
 - öffentliche Registerdaten lesbar
 - Hersteller-Anfragen öffentlich nur schreibbar, nicht lesbar
 - technischer Demodatensatz: `HC-DEMO-0001`
+- `connected_standard` für reguläre Zertifizierungen verbundener Unternehmen; `connected_pilot` bleibt für bestehende Pilotfälle erhalten
+- öffentliche Offenlegung bei verbundenen Unternehmen ist durch eine Datenbankbedingung verpflichtend
+
+Die Verwaltung des ersten realen Registereintrags ist in `docs/CERTIFICATION_OPERATIONS.md` beschrieben. Die Regeländerung stellt keine Zertifizierung eines konkreten Produkts aus.
 
 ### SEO / Launch
 - Canonicals, Sitemap, Open Graph und QR-Ziele verwenden `https://madebyhuman.org`
