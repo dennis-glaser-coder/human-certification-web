@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import AnalyticsConsent from './AnalyticsConsent';
+import ConsentSettingsLink from './ConsentSettingsLink';
 
 const socialLinks = [
   {
@@ -153,6 +154,7 @@ export default function SiteFooter() {
           <div className="footerLegalMeta">
             <Link href="/impressum">Impressum</Link>
             <Link href="/datenschutz">Datenschutz</Link>
+            <ConsentSettingsLink />
             <span>Made by Human</span>
           </div>
         </div>

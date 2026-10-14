@@ -460,7 +460,7 @@ summary:focus-visible {
   padding-top:15px;
   padding-bottom:15px;
   border-top:1px solid rgba(17,24,32,.34);
-  border-bottom:1px solid rgba(17,24,32,.14);
+  border-bottom:1px solid var(--line);
 }
 .compactHome .homeStandardLine span{
   font-size:8px;
@@ -526,9 +526,9 @@ summary:focus-visible {
   margin:auto;
   background:var(--paper);
   border-top:3px solid var(--blue);
-  border-left:1px solid rgba(17,24,32,.18);
-  border-right:1px solid rgba(17,24,32,.18);
-  border-bottom:1px solid rgba(17,24,32,.18);
+  border-left:1px solid var(--line);
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
 }
 .applicationProofTop{
   min-height:78px;
@@ -537,7 +537,7 @@ summary:focus-visible {
   align-items:center;
   justify-content:space-between;
   gap:20px;
-  border-bottom:1px solid rgba(17,24,32,.18);
+  border-bottom:1px solid var(--line);
 }
 .applicationProofTop span{
   color:var(--blue);
@@ -580,8 +580,8 @@ summary:focus-visible {
 .applicationProofMeta{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  border-top:1px solid rgba(17,24,32,.18);
-  border-bottom:1px solid rgba(17,24,32,.18);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
 }
 .applicationProofMeta span{
   min-height:52px;
@@ -593,7 +593,7 @@ summary:focus-visible {
   font-weight:600;
 }
 .applicationProofMeta span+span{
-  border-left:1px solid rgba(17,24,32,.18);
+  border-left:1px solid var(--line);
 }
 .applicationProofAction{
   padding:14px 16px;
@@ -638,7 +638,7 @@ summary:focus-visible {
   }
   .applicationProofMeta span+span{
     border-left:0;
-    border-top:1px solid rgba(17,24,32,.14);
+    border-top:1px solid var(--line);
   }
   .applicationProofAction{
     font-size:10px;
@@ -673,8 +673,8 @@ summary:focus-visible {
 .integrityMetaBand,
 .aboutMetaBand{
   background:#ECE8DE;
-  border-top:1px solid rgba(17,24,32,.18);
-  border-bottom:1px solid rgba(17,24,32,.18);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
 }
 
 /* Public proof surfaces use the same visual grammar: blue authority rule, paper field, no app-card styling. */
@@ -682,11 +682,11 @@ summary:focus-visible {
 .verifyTrustStrip{
   background:#F7F4ED;
   border-top:3px solid var(--blue);
-  border-bottom:1px solid rgba(17,24,32,.18);
+  border-bottom:1px solid var(--line);
 }
 .registerTrustBar>div,
 .verifyTrustStrip>div{
-  border-color:rgba(17,24,32,.16)!important;
+  border-color:var(--line)!important;
 }
 
 .documentRegistryRow,
@@ -709,7 +709,7 @@ summary:focus-visible {
 .verificationIdentity,
 .verificationDetails>div,
 .publicNote{
-  border-color:rgba(17,24,32,.16)!important;
+  border-color:var(--line)!important;
 }
 
 /* Controlled-document and certification labels become a recognizable micro-language. */
@@ -755,9 +755,9 @@ summary:focus-visible {
   background:var(--paper);
   color:var(--ink);
   border-top:3px solid var(--blue);
-  border-left:1px solid rgba(17,24,32,.18);
-  border-right:1px solid rgba(17,24,32,.18);
-  border-bottom:1px solid rgba(17,24,32,.18);
+  border-left:1px solid var(--line);
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
 }
 .buyerProofAuthority{
   min-height:62px;
@@ -766,7 +766,7 @@ summary:focus-visible {
   align-items:center;
   justify-content:space-between;
   gap:20px;
-  border-bottom:1px solid rgba(17,24,32,.18);
+  border-bottom:1px solid var(--line);
 }
 .buyerProofAuthority span{
   color:var(--blue);
@@ -785,7 +785,7 @@ summary:focus-visible {
   align-items:flex-start;
   justify-content:space-between;
   gap:18px;
-  border-bottom:1px solid rgba(17,24,32,.18);
+  border-bottom:1px solid var(--line);
 }
 .buyerProofIdentity small{
   display:block;
@@ -809,7 +809,7 @@ summary:focus-visible {
   display:grid;
   grid-template-columns:.8fr 1.2fr;
   gap:22px;
-  border-bottom:1px solid rgba(17,24,32,.14);
+  border-bottom:1px solid var(--line);
 }
 .buyerProofFacts dt{
   color:var(--muted-soft);
@@ -953,7 +953,7 @@ summary:focus-visible {
   position:relative;
   overflow:hidden;
   background:var(--paper);
-  border-top:1px solid rgba(17,24,32,.14);
+  border-top:1px solid var(--line);
   border-bottom:1px solid rgba(17,24,32,.24);
 }
 .brandAuthorityRail::before{
@@ -999,7 +999,7 @@ summary:focus-visible {
   display:grid;
   grid-template-columns:repeat(3,1fr);
   align-items:center;
-  border-left:1px solid rgba(17,24,32,.18);
+  border-left:1px solid var(--line);
 }
 .brandAuthorityPillars span{
   min-height:48px;
@@ -1015,7 +1015,7 @@ summary:focus-visible {
   line-height:1.4;
 }
 .brandAuthorityPillars span+span{
-  border-left:1px solid rgba(17,24,32,.18);
+  border-left:1px solid var(--line);
 }
 
 @media(max-width:1020px){
@@ -1027,7 +1027,7 @@ summary:focus-visible {
   }
   .brandAuthorityPillars{
     border-left:0;
-    border-top:1px solid rgba(17,24,32,.18);
+    border-top:1px solid var(--line);
     padding-top:16px;
   }
 }
@@ -1136,7 +1136,7 @@ summary:focus-visible {
     max-width:none;
     min-height:46px;
     padding:0 14px;
-    border:1px solid rgba(17,24,32,.22);
+    border:1px solid var(--line);
     background:#F7F4ED;
   }
   .registerRow{
@@ -1355,9 +1355,9 @@ summary:focus-visible {
     padding:8px 0;
     background:var(--paper);
     border-top:2px solid var(--blue);
-    border-left:1px solid rgba(17,24,32,.16);
-    border-right:1px solid rgba(17,24,32,.16);
-    border-bottom:1px solid rgba(17,24,32,.16);
+    border-left:1px solid var(--line);
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
     box-shadow:0 18px 40px rgba(17,24,32,.12);
   }
 
@@ -1434,8 +1434,8 @@ summary:focus-visible {
   width:min(360px,100%);
   margin-top:32px;
   padding:26px;
-  border-top:1px solid rgba(17,24,32,.22);
-  border-bottom:1px solid rgba(17,24,32,.12);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line-soft);
   background:#F7F4ED;
 }
 
@@ -1615,7 +1615,7 @@ summary:focus-visible {
 .statusBadge.status-demo{
   background:#ECE8DE;
   color:var(--ink);
-  border-color:rgba(17,24,32,.22);
+  border-color:var(--line);
 }
 
 .applicationProofAction{
@@ -1823,7 +1823,7 @@ summary:focus-visible {
     letter-spacing:.075em;
   }
   .brandAuthorityPillars span+span{
-    border-left:1px solid rgba(17,24,32,.18);
+    border-left:1px solid var(--line);
   }
 }
 
@@ -2617,7 +2617,7 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
 
   .registerRow>div+div{
     padding-top:15px;
-    border-top:1px solid rgba(17,24,32,.12);
+    border-top:1px solid var(--line-soft);
   }
 
   .registerRow small{
@@ -2795,9 +2795,9 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
   padding:7px 0;
   background:var(--paper);
   border-top:2px solid var(--blue);
-  border-left:1px solid rgba(17,24,32,.16);
-  border-right:1px solid rgba(17,24,32,.16);
-  border-bottom:1px solid rgba(17,24,32,.16);
+  border-left:1px solid var(--line);
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
   box-shadow:0 18px 40px rgba(17,24,32,.12);
 }
 
@@ -3233,7 +3233,7 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
 .homeBenefitBand{
   padding:64px 0 66px;
   background:#F7F4ED;
-  border-top:1px solid rgba(17,24,32,.12);
+  border-top:1px solid var(--line-soft);
   border-bottom:1px solid var(--stone);
 }
 
@@ -3270,7 +3270,7 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
 
 .homeBenefitGrid article+article{
   padding-left:30px;
-  border-left:1px solid rgba(17,24,32,.16);
+  border-left:1px solid var(--line);
 }
 
 .homeBenefitGrid strong{
@@ -3332,7 +3332,7 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
   }
 
   .homeBenefitGrid article+article{
-    border-top:1px solid rgba(17,24,32,.14);
+    border-top:1px solid var(--line);
   }
 
   .homeBenefitGrid strong{
@@ -3408,7 +3408,7 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
   display:grid;
   grid-template-columns:repeat(5,minmax(0,1fr));
   border-top:1px solid rgba(17,24,32,.26);
-  border-bottom:1px solid rgba(17,24,32,.16);
+  border-bottom:1px solid var(--line);
 }
 
 .homeProcessGrid article{
@@ -3418,7 +3418,7 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
 
 .homeProcessGrid article+article{
   padding-left:22px;
-  border-left:1px solid rgba(17,24,32,.14);
+  border-left:1px solid var(--line);
 }
 
 .homeProcessGrid span{
@@ -3479,11 +3479,11 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
 
   .homeProcessGrid article:nth-child(even){
     padding-left:22px;
-    border-left:1px solid rgba(17,24,32,.14);
+    border-left:1px solid var(--line);
   }
 
   .homeProcessGrid article:nth-child(n+3){
-    border-top:1px solid rgba(17,24,32,.14);
+    border-top:1px solid var(--line);
   }
 }
 
@@ -3532,7 +3532,7 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
 
   .homeProcessGrid article+article,
   .homeProcessGrid article:nth-child(n+2){
-    border-top:1px solid rgba(17,24,32,.14);
+    border-top:1px solid var(--line);
   }
 
   .homeProcessAction{
@@ -3649,7 +3649,7 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
   justify-content:space-between;
   gap:16px;
   padding-top:9px;
-  border-top:1px solid rgba(17,24,32,.2);
+  border-top:1px solid var(--line);
 }
 
 .homeBenefitRecordVisual b{
@@ -3763,7 +3763,7 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
 .homeDigitalProofCard{
   min-height:430px;
   background:#ECE8DE;
-  border:1px solid rgba(17,24,32,.14);
+  border:1px solid var(--line);
 }
 
 .homeProofObjectStage{
@@ -3784,7 +3784,7 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
   justify-content:center;
   gap:14px;
   background:#F7F4ED;
-  border:1px solid rgba(17,24,32,.18);
+  border:1px solid var(--line);
   box-shadow:0 20px 45px rgba(17,24,32,.10);
   transform:rotate(-2deg);
 }
@@ -3881,9 +3881,9 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
   gap:20px;
   background:#F7F4ED;
   border-top:3px solid var(--blue);
-  border-left:1px solid rgba(17,24,32,.18);
-  border-right:1px solid rgba(17,24,32,.18);
-  border-bottom:1px solid rgba(17,24,32,.18);
+  border-left:1px solid var(--line);
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
 }
 
 .homeDigitalProofHead span{
@@ -3904,15 +3904,15 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
   grid-template-columns:minmax(0,1fr) 245px;
   gap:0;
   background:#F7F4ED;
-  border-left:1px solid rgba(17,24,32,.18);
-  border-right:1px solid rgba(17,24,32,.18);
-  border-bottom:1px solid rgba(17,24,32,.18);
+  border-left:1px solid var(--line);
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
 }
 
 .homeDigitalProofData{
   min-width:0;
   padding:24px 22px;
-  border-right:1px solid rgba(17,24,32,.16);
+  border-right:1px solid var(--line);
 }
 
 .homeDigitalProofData>small{
@@ -3934,7 +3934,7 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
 
 .homeDigitalProofData dl{
   margin:0;
-  border-top:1px solid rgba(17,24,32,.15);
+  border-top:1px solid var(--line);
 }
 
 .homeDigitalProofData dl>div{
@@ -3942,7 +3942,7 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
   grid-template-columns:120px 1fr;
   gap:14px;
   padding:10px 0;
-  border-bottom:1px solid rgba(17,24,32,.12);
+  border-bottom:1px solid var(--line-soft);
 }
 
 .homeDigitalProofData dt{
@@ -3984,7 +3984,7 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
 .homeDigitalProofCard .certificateQrCode{
   padding:10px;
   background:#fff;
-  border:1px solid rgba(17,24,32,.14);
+  border:1px solid var(--line);
 }
 
 .homeDigitalProofCard .certificateQrCopy{
@@ -4048,7 +4048,7 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
 
   .homeDigitalProofData{
     border-right:0;
-    border-bottom:1px solid rgba(17,24,32,.16);
+    border-bottom:1px solid var(--line);
   }
 
   .homeDigitalProofData dl>div{
@@ -4296,7 +4296,7 @@ main :is(.registerDisclosure,.brandAuthorityPillars) span,
   gap:22px;
   align-items:baseline;
   padding:14px 0;
-  border-bottom:1px solid rgba(17,24,32,.16);
+  border-bottom:1px solid var(--line);
 }
 
 .compactHome .compactAudit .desireAuditFacts strong{

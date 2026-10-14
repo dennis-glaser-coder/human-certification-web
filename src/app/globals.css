@@ -2561,7 +2561,7 @@ textarea:focus-visible{
   left:0;
   right:-100vw;
   background:var(--white);
-  border-left:1px solid rgba(17,24,32,.10);
+  border-left:1px solid var(--line-soft);
   box-shadow:-18px 0 34px rgba(17,24,32,.035);
 }
 .premiumSealField img{
@@ -3479,7 +3479,7 @@ textarea:focus-visible{
 .premiumSiteHeader{
   background:var(--paper);
   backdrop-filter:none;
-  border-bottom:1px solid rgba(17,24,32,.22);
+  border-bottom:1px solid var(--line);
 }
 .premiumHeaderInner{
   min-height:72px;
@@ -3577,7 +3577,7 @@ textarea:focus-visible{
 .premiumSealField::before{
   background:transparent;
   box-shadow:none;
-  border-left:1px solid rgba(17,24,32,.12);
+  border-left:1px solid var(--line-soft);
 }
 .premiumSealField img{
   filter:none;
@@ -7594,7 +7594,7 @@ textarea:focus-visible{
 .applicationCopy strong{display:block;margin-bottom:9px;font-size:11px;}
 .applicationCopy p{max-width:510px;margin:0;color:var(--muted);font-size:9px;line-height:1.65;}
 
-.mockPackage{width:260px;height:330px;padding:28px 24px;background:#F8F6F0;border:1px solid rgba(17,24,32,.18);box-shadow:0 24px 48px rgba(17,24,32,.10);display:flex;flex-direction:column;position:relative;}
+.mockPackage{width:260px;height:330px;padding:28px 24px;background:#F8F6F0;border:1px solid var(--line);box-shadow:0 24px 48px rgba(17,24,32,.10);display:flex;flex-direction:column;position:relative;}
 .mockBrand{font-family:var(--font-serif),Georgia,serif;font-size:26px;letter-spacing:.02em;}
 .mockDescriptor{margin-top:5px;color:var(--muted-soft);font-size:7px;letter-spacing:.13em;}
 .mockSealLockup{margin-top:auto;padding-top:18px;border-top:1px solid var(--ink);display:grid;grid-template-columns:68px 1fr;gap:13px;align-items:center;}
@@ -7602,14 +7602,14 @@ textarea:focus-visible{
 .mockSealLockup span{font-size:9px;font-weight:700;line-height:1.45;}
 
 .applicationTag .applicationStage{background:#D8D0C1;}
-.mockTag{width:210px;min-height:330px;padding:42px 24px 28px;background:#F6F1E7;border:1px solid rgba(17,24,32,.20);box-shadow:0 22px 44px rgba(17,24,32,.12);display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;transform:rotate(-2deg);}
+.mockTag{width:210px;min-height:330px;padding:42px 24px 28px;background:#F6F1E7;border:1px solid var(--line);box-shadow:0 22px 44px rgba(17,24,32,.12);display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;transform:rotate(-2deg);}
 .mockTagHole{position:absolute;top:15px;left:50%;width:11px;height:11px;border:1px solid rgba(17,24,32,.4);border-radius:50%;transform:translateX(-50%);}
 .mockTag>img{width:118px;height:118px;margin:28px 0 24px;}
 .mockTag strong{font-size:10px;letter-spacing:.13em;}
 .mockTag span{max-width:150px;margin-top:9px;color:var(--muted);font-size:8px;line-height:1.5;}
 
 .applicationDigital .applicationStage{background:#ECEEF0;}
-.mockBrowser{width:min(100%,500px);background:var(--white);border:1px solid rgba(17,24,32,.18);box-shadow:0 24px 50px rgba(17,24,32,.10);}
+.mockBrowser{width:min(100%,500px);background:var(--white);border:1px solid var(--line);box-shadow:0 24px 50px rgba(17,24,32,.10);}
 .mockBrowserBar{height:28px;padding:0 10px;border-bottom:1px solid var(--stone);display:flex;align-items:center;gap:5px;}
 .mockBrowserBar i{width:5px;height:5px;border:1px solid var(--muted-soft);border-radius:50%;}
 .mockProduct{display:grid;grid-template-columns:1fr 1.15fr;min-height:250px;}
@@ -7899,7 +7899,7 @@ textarea:focus-visible{
 .premiumSiteHeader{
   background:rgba(243,240,232,.99);
   backdrop-filter:none;
-  border-bottom:1px solid rgba(17,24,32,.16);
+  border-bottom:1px solid var(--line);
 }
 .premiumHeaderInner{min-height:78px;}
 .premiumBrandLockup .brandName{font-size:11px;letter-spacing:.225em;}
@@ -7997,7 +7997,7 @@ textarea:focus-visible{
   border:0;
 }
 .sealApplicationCard{
-  border:1px solid rgba(17,24,32,.14);
+  border:1px solid var(--line);
   background:var(--white);
   overflow:hidden;
 }
@@ -8193,7 +8193,7 @@ textarea:focus-visible{
   width:72%;
   min-height:390px;
   padding:28px;
-  border:1px solid rgba(17,24,32,.18);
+  border:1px solid var(--line);
   background:#ECE6D9;
   box-shadow:0 26px 54px rgba(17,24,32,.12);
 }
@@ -8540,7 +8540,7 @@ textarea:focus-visible{
 .certificationRequestForm select,
 .certificationRequestForm textarea{
   border-radius:0;
-  border-color:rgba(17,24,32,.22);
+  border-color:var(--line);
   background:#FBFAF6;
 }
 
@@ -8712,7 +8712,7 @@ textarea:focus-visible{
 .desireSectionHead,
 .whySectionHead,
 .sectionIntro.compact{
-  border-top:1px solid rgba(17,24,32,.18);
+  border-top:1px solid var(--line);
   padding-top:18px;
 }
 .manufacturerDesire .desireSectionHead,
@@ -8949,7 +8949,7 @@ textarea:focus-visible{
 
   /* Make mobile application examples feel like campaign frames */
   .sealApplicationCard{
-    border-color:rgba(17,24,32,.10);
+    border-color:var(--line-soft);
   }
   .applicationCopy{
     min-height:0;
@@ -9800,7 +9800,7 @@ textarea:focus-visible{
 
 /* Buyer verification: flatter and more institutional */
 .homeVerifyCompact{
-  border-color:rgba(17,24,32,.12);
+  border-color:var(--line-soft);
   box-shadow:none;
 }
 .homeVerifyCompact>strong{font-size:28px;}
@@ -9813,7 +9813,7 @@ textarea:focus-visible{
 
 /* Mobile: refine rather than enlarge */
 @media(max-width:760px){
-  .premiumSiteHeader{border-bottom-color:rgba(17,24,32,.12);}
+  .premiumSiteHeader{border-bottom-color:var(--line-soft);}
   .premiumHeaderInner{min-height:52px;}
   .premiumBrandLockup .brandName{
     font-size:10px;

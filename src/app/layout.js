@@ -4,6 +4,7 @@ import './final.css';
 import './header-logo-fix.css';
 import './certificate-mobile-fix.css';
 import './motion.css';
+import './refine.css';
 import MotionController from '../components/MotionController';
 import {
   canonical,
@@ -80,9 +81,10 @@ const ibmPlexSans = IBM_Plex_Sans({
   display: 'swap',
 });
 
+// Variable font with the optical-size axis: large headlines get the finer display cut.
 const sourceSerif = Source_Serif_4({
   subsets: ['latin'],
-  weight: ['400', '500', '600'],
+  axes: ['opsz'],
   variable: '--font-serif',
   display: 'swap',
 });

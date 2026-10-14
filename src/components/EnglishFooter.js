@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ConsentSettingsLink from './ConsentSettingsLink';
 
 const socialLinks = [
   ['Instagram', 'https://www.instagram.com/madebyhuman.verify/'],
@@ -79,6 +80,7 @@ export default function EnglishFooter() {
         <div className="footerLegalMeta">
           <Link href="/impressum">Legal notice</Link>
           <Link href="/datenschutz">Privacy</Link>
+          <ConsentSettingsLink lang="en" />
           <span>Made by Human</span>
         </div>
       </div>

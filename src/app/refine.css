@@ -1,0 +1,144 @@
+/* ===== Visual refinement layer 2026-10-14 =====
+   Loaded after motion.css. Legibility, typographic detail and consistent
+   rules. No content changes. */
+
+:root {
+  --line-soft: rgba(17, 24, 32, .10);
+  --label-size: 11px;
+  --meta-size: 12px;
+  --link-size: 14px;
+}
+
+
+/* ----- Legibility floor -----
+   The site had 94 places with text between 6.5 and 10px. Every role gets a
+   readable minimum: labels 11px, meta 12px, links and buttons 14px. */
+
+main :is(.premiumEyebrow, .premiumSectionLabel, .eyebrow, .sectionNo),
+main :is(
+  .homeProofUseCopy, .homeDigitalProofHead, .homeVerifyCompact, .buyerProofAuthority,
+  .aboutOriginThesis, .certificateBar, .certificateClaim, .certificateQrCopy, .legalPrimary,
+  .privacySection, .compactApplicationFooter, .homeStandardLine, .caseTableHead,
+  .whyComparisonHead, .procedureGrid > article, .governanceDocumentsGrid > a,
+  .manufacturerMarkSummary > div, .manufacturerHeroCredential > div
+) > span:not(.linkArrow),
+main :is(.homeDigitalProofData, .buyerProofAuthority, .buyerProofIdentity > div) > small,
+main :is(.standardMetaBar > div, .whyCustomerList > article, .legalGrid > article, .whySealTag > div, .timelineEvent > div) > span,
+main .documentRegistryRow small,
+main .verifySearch > label,
+main .buyerProofFoot {
+  font-size: var(--label-size) !important;
+  line-height: 1.45 !important;
+  letter-spacing: .12em !important;
+}
+
+main :is(.homeDigitalProofData dt, figcaption),
+main.compactHome .compactAudit figure figcaption,
+main .documentRegistryRow > :is(span, time),
+main .timelineEvent > time {
+  font-size: var(--meta-size) !important;
+  line-height: 1.45 !important;
+}
+
+main :is(.desireTextLink, .salesFinalText, .aboutArchitectureLinks a, .certificateBar > a, .certificateQrCopy > a, .compactApplicationFooter > a, .homeStandardLine > a),
+main .governanceDocumentsGrid > a > small,
+main :is(.desirePrimary, .desireFinalButton, .salesPrimary, .salesSecondary, .salesFinalButton) {
+  font-size: var(--link-size) !important;
+  line-height: 1.35 !important;
+}
+
+main .demoButton {
+  font-size: 13px !important;
+}
+
+main .procedureGrid ol > li,
+main :is(.standardDocumentCriteria, .auditProcessGrid) strong {
+  font-size: 15px !important;
+  line-height: 1.5 !important;
+}
+
+main :is(.buyerVerifyChecks, .whyComparisonRow, .caseRow) > span {
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+}
+
+@media (max-width: 760px) {
+  /* Inputs stay at 16px; only the label text grows. */
+  main form label:not(.honeypot) {
+    font-size: 12px !important;
+    letter-spacing: .08em !important;
+  }
+
+  main :is(.desirePrimary, .desireFinalButton) {
+    min-height: 48px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+
+/* ----- Photos: a matching tone instead of a black box while loading ----- */
+.desireHeroVisual {
+  background-color: #715E54;
+}
+
+.manufacturerHeroArtVisual {
+  background-color: #6E6F65;
+}
+
+
+/* ----- Optical size of Source Serif 4 -----
+   Running text keeps the cut it had before (opsz 14). Large headings use a
+   finer display cut (opsz 28) with tracking opened up by the same amount the
+   cut narrows, so line breaks stay where they were. */
+body {
+  font-optical-sizing: none;
+  font-variation-settings: "opsz" 14;
+}
+
+main h1 {
+  font-variation-settings: "opsz" 28;
+  letter-spacing: -.01em !important;
+}
+
+main h2 {
+  font-variation-settings: "opsz" 28;
+  letter-spacing: 0 !important;
+}
+
+
+/* ----- Typographic detail ----- */
+main :is(dd, time, .documentRegistryRow, .registerRow, .verificationDetails, .certificateFacts, .timelineEvent, .homeDigitalProofData dl) {
+  font-variant-numeric: tabular-nums slashed-zero;
+}
+
+main p {
+  text-wrap: pretty;
+}
+
+::selection {
+  background: rgba(41, 76, 119, .22);
+  color: inherit;
+}
+
+
+/* ----- Footer: privacy settings as a quiet link instead of a floating button ----- */
+.footerConsentLink {
+  appearance: none;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: rgba(255, 255, 255, .62);
+  font: inherit;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: .08em;
+  text-transform: inherit;
+  cursor: pointer;
+  transition: color var(--motion-fast) ease;
+}
+
+.footerConsentLink:hover,
+.footerConsentLink:focus-visible {
+  color: var(--white);
+}

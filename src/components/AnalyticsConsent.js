@@ -6,33 +6,28 @@ import Link from 'next/link';
 const CONSENT_KEY = 'mbh_analytics_consent';
 const MEASUREMENT_ID = 'G-NHR0W4Z7GR';
 const SCRIPT_ID = 'mbh-ga4-script';
+export const CONSENT_SETTINGS_EVENT = 'mbh:consent-settings';
 
 const styles = {
-  settings: {
-    position: 'fixed', bottom: 14, left: 14, zIndex: 9997,
-    border: '1px solid rgba(17,24,32,.18)', background: '#F3F0E8', color: '#111820',
-    borderRadius: 999, padding: '8px 12px', font: '500 12px/1.2 var(--font-sans)', cursor: 'pointer'
-  },
   backdrop: {
     position: 'fixed', inset: 0, zIndex: 9998, background: 'rgba(17,24,32,.38)',
     display: 'flex', alignItems: 'flex-end', justifyContent: 'center', padding: 18
   },
   panel: {
     width: 'min(760px, 100%)', background: '#F3F0E8', color: '#111820',
-    border: '1px solid rgba(17,24,32,.16)', borderRadius: 18, padding: '24px',
-    boxShadow: '0 22px 70px rgba(17,24,32,.22)'
+    border: '1px solid rgba(17,24,32,.18)', borderTop: '2px solid #294C77', borderRadius: 0, padding: '26px 28px'
   },
-  eyebrow: { margin: '0 0 8px', font: '600 11px/1.2 var(--font-sans)', letterSpacing: '.12em' },
-  title: { margin: '0 0 10px', font: '500 clamp(24px,4vw,34px)/1.08 var(--font-serif)' },
-  copy: { margin: '0 0 16px', font: '400 14px/1.55 var(--font-sans)', maxWidth: 650 },
+  eyebrow: { margin: '0 0 10px', font: '600 11px/1.2 var(--font-sans)', letterSpacing: '.12em', color: '#294C77' },
+  title: { margin: '0 0 10px', font: '400 clamp(24px,4vw,32px)/1.12 var(--font-serif)' },
+  copy: { margin: '0 0 20px', font: '400 15px/1.6 var(--font-sans)', maxWidth: 650 },
   actions: { display: 'flex', gap: 10, flexWrap: 'wrap' },
   accept: {
-    border: 0, borderRadius: 999, padding: '11px 16px', background: '#294C77', color: '#fff',
-    font: '600 13px/1.2 var(--font-sans)', cursor: 'pointer'
+    border: '1px solid #111820', borderRadius: 0, padding: '13px 18px', background: '#111820', color: '#fff',
+    font: '600 14px/1.2 var(--font-sans)', cursor: 'pointer'
   },
   reject: {
-    border: '1px solid rgba(17,24,32,.26)', borderRadius: 999, padding: '10px 16px',
-    background: 'transparent', color: '#111820', font: '600 13px/1.2 var(--font-sans)', cursor: 'pointer'
+    border: '1px solid rgba(17,24,32,.32)', borderRadius: 0, padding: '13px 18px',
+    background: 'transparent', color: '#111820', font: '600 14px/1.2 var(--font-sans)', cursor: 'pointer'
   },
   link: { color: '#294C77', textDecoration: 'underline', textUnderlineOffset: 3 }
 };
@@ -73,6 +68,11 @@ export default function AnalyticsConsent() {
     setConsent(saved);
     setOpen(!saved);
     setIsEnglish(window.location.pathname.startsWith('/en'));
+
+    // The footer link reopens the dialog; there is no floating button over the content.
+    const openSettings = () => setOpen(true);
+    window.addEventListener(CONSENT_SETTINGS_EVENT, openSettings);
+    return () => window.removeEventListener(CONSENT_SETTINGS_EVENT, openSettings);
   }, []);
 
   useEffect(() => {
@@ -94,7 +94,6 @@ export default function AnalyticsConsent() {
 
   const copy = isEnglish
     ? {
-        settings: 'Privacy settings',
         eyebrow: 'PRIVACY',
         title: 'May we collect usage statistics?',
         text: 'We use Google Analytics to understand how our website is used and which channels bring visitors to us. Tracking is loaded only after your consent. More information is available in our',
@@ -103,7 +102,6 @@ export default function AnalyticsConsent() {
         reject: 'Necessary only'
       }
     : {
-        settings: 'Datenschutz-Einstellungen',
         eyebrow: 'DATENSCHUTZ',
         title: 'Dürfen wir Nutzungsstatistiken erfassen?',
         text: 'Mit Google Analytics möchten wir verstehen, wie unsere Website genutzt wird und über welche Kanäle Besucher zu uns kommen. Das Tracking wird erst nach Ihrer Zustimmung geladen. Mehr dazu in unserer',
@@ -114,12 +112,6 @@ export default function AnalyticsConsent() {
 
   return (
     <>
-      {!open && consent && (
-        <button type="button" style={styles.settings} onClick={() => setOpen(true)}>
-          {copy.settings}
-        </button>
-      )}
-
       {open && (
         <div style={styles.backdrop}>
           <section style={styles.panel} role="dialog" aria-modal="true" aria-labelledby="mbh-consent-title">
